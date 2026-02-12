@@ -1,131 +1,122 @@
-# Gênesis 3 — A Ruptura e a Promessa
-
-## 1. Introdução
-
-Gênesis 3 marca a transição da harmonia original para a ruptura moral e espiritual.  
-Não é apenas a história de uma desobediência, mas o momento em que a humanidade redefine sua relação com Deus, com a criação e consigo mesma.
-
-Aqui nascem:
-
-- A consciência do mal  
-- A alienação  
-- O medo  
-- A culpa  
-- A primeira promessa de redenção  
-
 ---
 
-## 2. Estrutura Literária do Capítulo
+# Exposição Versículo por Versículo
 
-- **3:1–5** → A tentação  
-- **3:6** → A transgressão  
-- **3:7–8** → A consciência da culpa  
-- **3:9–13** → O confronto divino  
-- **3:14–19** → As consequências  
-- **3:20–21** → Sinais de graça  
-- **3:22–24** → Expulsão e proteção  
+## Gênesis 3:1
 
----
+> "Mas a serpente, mais astuta que todos os animais do campo que o Senhor Deus tinha feito, disse à mulher: É assim que Deus disse: Não comereis de toda árvore do jardim?"
 
-## 3. Observação Histórica
+### Observação
 
-O relato está inserido no contexto do Antigo Oriente Próximo, onde a serpente possuía simbolismos variados (sabedoria, fertilidade, caos).
+- A serpente é apresentada como criatura.
+- Sua característica principal é a astúcia.
+- O diálogo inicia com questionamento da Palavra.
 
-Contudo, o texto bíblico não mitologiza.  
-Ele moraliza.
+### Exposição
 
-A queda não é explicada como acidente cósmico, mas como escolha consciente.
+O texto não apresenta a serpente como força autônoma divina, mas como criatura dentro da criação.
 
----
+A estratégia não começa com negação direta, mas com distorção sutil.
 
-## 4. Observação Literária
+O primeiro ataque não é contra o homem, mas contra a interpretação da Palavra.
 
-O diálogo é o centro da narrativa.
+### Perguntas Estruturadas
 
-A progressão textual mostra:
-
-1. Questionamento da palavra divina  
-2. Distorção da palavra  
-3. Negação da palavra  
-4. Apropriação da autonomia  
-
-O pecado começa na interpretação antes de se manifestar na ação.
-
----
-
-## 5. Observação Teológica
-
-### 5.1 A Natureza da Tentação
-
-> "Foi assim que Deus disse?"
-
-O ataque começa na autoridade da Palavra.
-
----
-
-### 5.2 A Essência do Pecado
-
-Não foi apenas comer do fruto.  
-Foi assumir autonomia moral.
-
-O pecado é deslocamento de autoridade.
-
----
-
-### 5.3 O Protoevangelho (3:15)
-
-> "Porei inimizade entre ti e a mulher..."
-
-Tradicionalmente compreendido como a primeira promessa messiânica.
-
-A narrativa da redenção começa aqui.
-
----
-
-## 6. Perguntas Estruturadas
-
-### 6.1 Pergunta de Observação
 **O que o texto afirma claramente?**  
-Que o homem e a mulher desobedeceram à ordem divina e experimentaram consequências imediatas.
+Que a serpente inicia diálogo questionando o que Deus havia dito.
+
+**Qual o movimento da tentação?**  
+Gerar dúvida sobre a clareza e intenção da Palavra.
+
+**Aplicação teológica:**  
+O afastamento da adoração começa quando a revelação é reinterpretada.
 
 ---
 
-### 6.2 Pergunta de Sentido
-**O que este texto revela sobre Deus e a adoração?**  
-Que a adoração depende da confiança na Palavra.  
-Quando a revelação é relativizada, a relação é rompida.
+## Gênesis 3:2
+
+> "Respondeu-lhe a mulher: Do fruto das árvores do jardim podemos comer."
+
+### Observação
+
+- A mulher conhece a ordem divina.
+- Não há ignorância inicial.
+
+### Exposição
+
+A resposta demonstra que a instrução foi compreendida.
+
+O problema não é desconhecimento, mas diálogo prolongado com a dúvida.
+
+### Perguntas
+
+**O que se revela aqui?**  
+Que a tentação opera mesmo onde há conhecimento correto.
 
 ---
 
-### 6.3 Pergunta Histórica
-**Qual sua relevância no contexto antigo?**  
-Apresenta responsabilidade humana, diferindo das mitologias que culpam conflitos divinos.
+## Gênesis 3:3
+
+> "Mas do fruto da árvore que está no meio do jardim, disse Deus: Não comereis dele, nem nele tocareis, para que não morrais."
+
+### Observação
+
+- Há acréscimo à palavra original ("nem nele tocareis").
+
+### Exposição
+
+O acréscimo pode indicar:
+- Interpretação ampliada
+- Tradição oral
+- Exagero protetivo
+
+A Palavra começa a sofrer modificação antes da transgressão.
+
+### Pergunta
+
+**O que aprendemos?**  
+Que tanto a retirada quanto o acréscimo à Palavra alteram sua autoridade.
 
 ---
 
-### 6.4 Pergunta Teológica
-**Como este texto se conecta ao restante da Escritura?**  
-Inaugura o drama redentivo que culmina na vitória final sobre o mal.
+## Gênesis 3:4
+
+> "Então a serpente disse à mulher: Certamente não morrereis."
+
+### Observação
+
+- Aqui ocorre negação direta.
+
+### Exposição
+
+A progressão é clara:
+
+1. Questionamento  
+2. Distorção  
+3. Negação  
+
+A serpente confronta frontalmente a veracidade divina.
 
 ---
 
-### 6.5 Pergunta de Consciência
-**Onde essa narrativa toca a humanidade atual?**  
-Na tendência de redefinir bem e mal segundo critérios próprios.
+## Gênesis 3:5
 
----
+> "Porque Deus sabe que no dia em que dele comerdes se abrirão os vossos olhos, e sereis como Deus, conhecendo o bem e o mal."
 
-### 6.6 Pergunta de Síntese
-**Qual o ponto central do capítulo?**  
-O pecado rompe, mas a graça inicia o plano de restauração.
+### Observação
 
----
+- Surge acusação implícita contra Deus.
+- A tentação envolve autonomia moral.
 
-## 7. Conclusão Redentiva
+### Exposição
 
-Gênesis 3 não termina em desespero.  
-Termina em promessa.
+O pecado não é apenas desejo de conhecimento,
+mas desejo de independência.
 
-A expulsão não é abandono, mas preservação.  
-A história da graça começa no momento da queda.
+A ruptura é autoridade deslocada.
 
+### Síntese 3:1–5
+
+A tentação começa na mente,
+opera na interpretação,
+e culmina na redefinição da autoridade.
