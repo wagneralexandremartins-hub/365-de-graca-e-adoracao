@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR" data-md="" data-page-title="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-title>Leitura • 365</title>
+
+  <!-- CSS: como esta página está dentro de /genesis, usa ../ -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <!-- MARKED (renderizador de Markdown) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <style>
+    /* Ajustes de leitura */
+    .wrap { max-width: 980px; margin: 0 auto; padding: 18px 16px 40px; }
+    .topbar { position: sticky; top: 0; backdrop-filter: blur(10px); background: rgba(11,15,25,.88); border-bottom: 1px solid rgba(255,255,255,.10); }
+    .inner { max-width: 980px; margin: 0 auto; padding: 14px 16px; display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap; }
+    .nav a { color: #aab6d6; text-decoration:none; font-size:13px; padding:8px 10px; border:1px solid rgba(255,255,255,.10); border-radius: 999px; }
+    .nav a:hover { border-color: rgba(106,169,255,.35); color:#eaf0ff; }
+    article { line-height: 1.65; }
+    article h1, article h2, article h3 { margin-top: 22px; }
+    article pre { overflow:auto; padding: 12px; border:1px solid rgba(255,255,255,.10); border-radius: 14px; background: rgba(255,255,255,.03); }
+    article code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+    .meta { opacity:.65; font-size:12px; margin-top:6px; }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="inner">
+      <div>
+        <strong data-title>Leitura</strong>
+        <div class="meta">Fonte: <span data-meta></span></div>
+      </div>
+
+      <nav class="nav" aria-label="Navegação">
+        <a href="../index.html">Início</a>
+        <a href="./index.html">Gênesis</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <article data-content>Carregando…</article>
+  </main>
+
+  <script src="../assets/js/md-viewer.js"></script>
+</body>
+</html>
