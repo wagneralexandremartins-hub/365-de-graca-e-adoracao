@@ -174,3 +174,246 @@ body{
 @media (min-width:900px){
   .hero .content{grid-template-columns: 1.3fr .7fr; align-items:center}
 }
+
+
+/* Hero Main - Página Inicial */
+.hero-main {
+  padding: 60px 0;
+}
+
+.hero-main .subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--accent2);
+  margin: 10px 0 20px;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 700px;
+  margin-bottom: 30px;
+}
+
+.quote-main {
+  border-left: 4px solid var(--accent);
+  padding-left: 20px;
+  margin: 30px 0;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--accent2);
+  font-weight: 500;
+}
+
+/* Blocks Grid */
+.blocks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.block-card .poster {
+  position: relative;
+  height: 140px;
+  background: linear-gradient(135deg, var(--panel2) 0%, var(--panel) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.block-number {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--accent);
+  opacity: 0.3;
+  line-height: 1;
+}
+
+.block-card .tag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+/* Principles Section */
+.section-principles {
+  background: var(--panel2);
+  border-radius: var(--radius);
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.principle-card {
+  text-align: center;
+  padding: 20px;
+}
+
+.principle-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.principle-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: var(--accent2);
+}
+
+.principle-card p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Questions Section */
+.section-questions {
+  margin-top: 60px;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, rgba(0,168,225,.05) 0%, rgba(91,231,196,.05) 100%);
+  border-radius: var(--radius);
+}
+
+.content-centered {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.questions-list {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.question-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: var(--panel);
+  border-radius: 12px;
+  text-align: left;
+}
+
+.question-number {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--accent);
+  opacity: 0.4;
+  min-width: 60px;
+  text-align: center;
+}
+
+.question-item h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--text);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .blocks-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-main .subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .quote-main {
+    font-size: 1rem;
+  }
+  
+  .question-item {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* Navigation between blocks */
+.navigation-blocks {
+  margin-top: 60px;
+}
+
+.nav-blocks {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.nav-block-link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 25px;
+  background: var(--panel);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.3s ease;
+  flex: 1;
+  max-width: 400px;
+}
+
+.nav-block-link:hover {
+  background: var(--panel2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.3);
+}
+
+.nav-block-link.prev {
+  justify-content: flex-start;
+}
+
+.nav-block-link.next {
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.nav-arrow {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+.nav-label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 5px;
+}
+
+.nav-title {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .nav-blocks {
+    flex-direction: column;
+  }
+  
+  .nav-block-link {
+    max-width: 100%;
+  }
+  
+  .nav-block-link.next {
+    margin-left: 0;
+  }
+}
