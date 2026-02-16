@@ -2,22 +2,111 @@
 <html lang="pt-BR"
   data-md="../conteudo/01_pentateuco/genesis/00-o-principio-de-tudo.md"
   data-page-title="O Princípio de Tudo">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>O Princípio de Tudo</title>
 
+  <title>Projeto 365 • Leitura</title>
+
+  <!-- CSS (como este arquivo está em /genesis, sobe 1 nível) -->
   <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <!-- Marked (renderizador de Markdown) -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <style>
+    /* Pequenos ajustes para leitura (não quebra seu style.css) */
+    .reader {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 18px 16px 40px;
+    }
+    .reader .paper {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      border-radius: 16px;
+      padding: 18px;
+    }
+    .reader h1 {
+      margin: 0 0 10px;
+      font-size: 28px;
+      letter-spacing: -0.3px;
+    }
+    .reader .meta {
+      opacity: .75;
+      font-size: 12px;
+      margin-bottom: 14px;
+    }
+    .reader .content :where(h2,h3) { margin-top: 22px; }
+    .reader .content :where(p,li) { line-height: 1.75; }
+    .reader .content blockquote {
+      border-left: 3px solid rgba(255,255,255,.15);
+      padding-left: 12px;
+      opacity: .95;
+      margin-left: 0;
+    }
+    .reader .content pre {
+      overflow: auto;
+      padding: 12px;
+      border-radius: 12px;
+      background: rgba(0,0,0,.25);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .reader .content a { text-decoration: underline; }
+  </style>
 </head>
 
 <body>
-  <main class="wrap">
-    <h1 data-title></h1>
-    <article data-content>Carregando...</article>
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="inner">
+      <div class="brand">
+        <span class="dot"></span><span>Projeto 365</span>
+      </div>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="../index.html">Início</a>
+        <a href="./index.html">Gênesis</a>
+        <a href="./linha-do-tempo.html">Linha do Tempo</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Conteúdo -->
+  <main class="reader">
+    <section class="paper">
+      <h1 data-title>Carregando…</h1>
+      <div class="meta" data-meta></div>
+      <div class="content" data-content>Carregando conteúdo…</div>
+    </section>
+
+    <div class="footer">Projeto 365 • Gênesis</div>
   </main>
 
+  <!-- Seu viewer -->
   <script src="../assets/js/md-viewer.js"></script>
+
+  <!-- Disparo garantido -->
+  <script>
+    (function () {
+      const mdPath = document.documentElement.dataset.md;
+      const title = document.documentElement.dataset.pageTitle || "";
+
+      if (!mdPath) {
+        document.querySelector("[data-title]").textContent = "Erro: data-md não definido";
+        document.querySelector("[data-content]").textContent = "Defina o caminho do arquivo .md no topo do HTML.";
+        return;
+      }
+
+      if (typeof window.renderMarkdown !== "function") {
+        document.querySelector("[data-title]").textContent = "Erro: md-viewer.js não carregou";
+        document.querySelector("[data-content]").textContent =
+          "Confira se existe: /assets/js/md-viewer.js e se o caminho no script está correto.";
+        return;
+      }
+
+      window.renderMarkdown(mdPath, title);
+    })();
+  </script>
 </body>
 </html>
