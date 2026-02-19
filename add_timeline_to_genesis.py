@@ -305,7 +305,7 @@ def get_timeline_for_chapter(chapter_num):
                 <h3>🗺️ Geografia Bíblica</h3>
                 
                 <div class="map-container">
-                    <img src="/assets/img/mapa-oriente-proximo.jpg" alt="Monte Ararate">
+                    <img src="/assets/img/mapa-eden.jpg" alt="Monte Ararate">
                     <p class="map-caption">Monte Ararate (atual Turquia) onde a arca repousou</p>
                 </div>
                 
@@ -360,7 +360,7 @@ def get_timeline_for_chapter(chapter_num):
                 <h3>🗺️ Geografia Bíblica</h3>
                 
                 <div class="map-container">
-                    <img src="/assets/img/mapa-oriente-proximo.jpg" alt="Planície de Sinear e dispersão">
+                    <img src="/assets/img/mapa-dispersao-nacoes.jpg" alt="Planície de Sinear e dispersão">
                     <p class="map-caption">Planície de Sinear (Babilônia) e dispersão das nações</p>
                 </div>
                 
@@ -421,7 +421,7 @@ def get_timeline_for_chapter(chapter_num):
                 <h3>🗺️ Geografia Bíblica</h3>
                 
                 <div class="map-container">
-                    <img src="/assets/img/mapa-oriente-proximo.jpg" alt="Jornada dos Patriarcas">
+                    <img src="/assets/img/mapa-patriarcas.jpg" alt="Jornada dos Patriarcas">
                     <p class="map-caption">Rota: Ur → Harã → Canaã → Egito (Crescente Fértil)</p>
                 </div>
                 
