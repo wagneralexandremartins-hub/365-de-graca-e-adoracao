@@ -1,12 +1,17 @@
 :root{
-  --bg:#0b0c10;
+  --bg:#070a12;                 /* levemente mais confortável que #0b0c10 */
   --panel:#12141b;
   --panel2:#0f1117;
-  --text:#ffffff;
-  --muted:#d4d6e0;
+
+  /* menos ofuscante que #fff */
+  --text:#f1f5f9;               /* branco suave */
+  --muted:#cbd5e1;              /* cinza legível */
+
   --line:rgba(255,255,255,.10);
-  --accent:#00a8e1;   /* “Prime blue” */
+
+  --accent:#00a8e1;             /* “Prime blue” */
   --accent2:#5be7c4;
+
   --radius:16px;
   --shadow:0 16px 40px rgba(0,0,0,.45);
   --max:1180px;
@@ -14,6 +19,7 @@
 
 *{box-sizing:border-box}
 html,body{height:100%}
+
 body{
   margin:0;
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
@@ -22,6 +28,12 @@ body{
     radial-gradient(1200px 600px at 10% -10%, rgba(0,168,225,.20), transparent 60%),
     radial-gradient(900px 450px at 100% 0%, rgba(91,231,196,.10), transparent 55%),
     var(--bg);
+}
+
+/* Melhor seleção de texto (ajuda MUITO na leitura) */
+::selection{
+  background: rgba(0,168,225,.35);
+  color: #ffffff;
 }
 
 /* Layout */
@@ -56,7 +68,18 @@ body{
   padding:8px 10px; border-radius:999px;
 }
 .nav a:hover{color:var(--text); background:rgba(255,255,255,.06)}
-.nav a.active{color:var(--text); background:rgba(0,168,225,.18); border:1px solid rgba(0,168,225,.22)}
+.nav a.active{
+  color:var(--text);
+  background:rgba(0,168,225,.18);
+  border:1px solid rgba(0,168,225,.22)
+}
+
+/* Foco visível (mouse/teclado) */
+a:focus-visible, button:focus-visible{
+  outline: 3px solid rgba(0,168,225,.55);
+  outline-offset: 3px;
+  border-radius: 10px;
+}
 
 /* Hero */
 .hero{
@@ -74,9 +97,15 @@ body{
   padding:26px 22px;
   display:grid; gap:16px;
 }
-.hero h1{margin:0; font-size:clamp(1.6rem, 3vw, 2.4rem); letter-spacing:-.02em}
+.hero h1{
+  margin:0;
+  font-size:clamp(1.6rem, 3vw, 2.4rem);
+  letter-spacing:-.02em;
+  color:#fff;
+}
 .hero p{margin:0; color:var(--muted); max-width:72ch}
 .hero .actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:6px}
+
 .btn{
   display:inline-flex; align-items:center; gap:10px;
   padding:10px 14px;
@@ -110,7 +139,7 @@ body{
   display:flex; align-items:end; justify-content:space-between; gap:12px; flex-wrap:wrap;
   margin-bottom:12px;
 }
-.section-title{margin:0; font-size:1.15rem}
+.section-title{margin:0; font-size:1.15rem; color:#fff}
 .section-sub{margin:0; color:var(--muted); font-size:.95rem}
 
 /* Horizontal row “Prime style” */
@@ -122,6 +151,7 @@ body{
 }
 .row::-webkit-scrollbar{height:10px}
 .row::-webkit-scrollbar-thumb{background:rgba(255,255,255,.12); border-radius:999px}
+
 .card{
   flex:0 0 auto;
   width:210px;
@@ -138,6 +168,7 @@ body{
   border-color: rgba(0,168,225,.35);
   box-shadow: 0 18px 44px rgba(0,0,0,.5);
 }
+
 .poster{
   height:122px;
   background:
@@ -154,13 +185,20 @@ body{
   background: rgba(0,0,0,.38);
   border:1px solid rgba(255,255,255,.12);
 }
+
 .card .body{padding:12px}
-.card h3{margin:0 0 6px; font-size:1.02rem}
+.card h3{margin:0 0 6px; font-size:1.02rem; color:#fff}
 .card p{margin:0; color:var(--muted); font-size:.92rem; line-height:1.35}
+
+/* Link dentro do card */
 .card a{
-  display:inline-flex; margin-top:10px;
-  color:var(--accent); text-decoration:none; font-weight:800;
+  display:inline-flex;
+  margin-top:10px;
+  color:#7dd3fc;               /* mais legível no dark */
+  text-decoration:none;
+  font-weight:800;
 }
+.card a:hover{ color:#fde047; }
 
 /* Footer */
 .footer{
@@ -175,11 +213,8 @@ body{
   .hero .content{grid-template-columns: 1.3fr .7fr; align-items:center}
 }
 
-
 /* Hero Main - Página Inicial */
-.hero-main {
-  padding: 60px 0;
-}
+.hero-main { padding: 60px 0; }
 
 .hero-main .subtitle {
   font-size: 1.5rem;
@@ -193,6 +228,7 @@ body{
   line-height: 1.7;
   max-width: 700px;
   margin-bottom: 30px;
+  color: var(--text);
 }
 
 .quote-main {
@@ -243,6 +279,7 @@ body{
   border-radius: var(--radius);
   padding: 40px 20px;
   margin-top: 60px;
+  border: 1px solid rgba(255,255,255,.06);
 }
 
 .principles-grid {
@@ -252,15 +289,9 @@ body{
   margin-top: 30px;
 }
 
-.principle-card {
-  text-align: center;
-  padding: 20px;
-}
+.principle-card { text-align: center; padding: 20px; }
 
-.principle-icon {
-  font-size: 3rem;
-  margin-bottom: 15px;
-}
+.principle-icon { font-size: 3rem; margin-bottom: 15px; }
 
 .principle-card h3 {
   font-size: 1.2rem;
@@ -280,6 +311,7 @@ body{
   padding: 60px 20px;
   background: linear-gradient(135deg, rgba(0,168,225,.05) 0%, rgba(91,231,196,.05) 100%);
   border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,.06);
 }
 
 .content-centered {
@@ -301,6 +333,7 @@ body{
   gap: 20px;
   padding: 20px;
   background: var(--panel);
+  border: 1px solid rgba(255,255,255,.06);
   border-radius: 12px;
   text-align: left;
 }
@@ -317,38 +350,20 @@ body{
 .question-item h3 {
   margin: 0;
   font-size: 1.3rem;
-  color: var(--text);
+  color: #fff;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .blocks-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .principles-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .hero-main .subtitle {
-    font-size: 1.2rem;
-  }
-  
-  .quote-main {
-    font-size: 1rem;
-  }
-  
-  .question-item {
-    flex-direction: column;
-    text-align: center;
-  }
+  .blocks-grid { grid-template-columns: 1fr; }
+  .principles-grid { grid-template-columns: 1fr; }
+  .hero-main .subtitle { font-size: 1.2rem; }
+  .quote-main { font-size: 1rem; }
+  .question-item { flex-direction: column; text-align: center; }
 }
-
 
 /* Navigation between blocks */
-.navigation-blocks {
-  margin-top: 60px;
-}
+.navigation-blocks { margin-top: 60px; }
 
 .nav-blocks {
   display: flex;
@@ -362,6 +377,7 @@ body{
   gap: 15px;
   padding: 20px 25px;
   background: var(--panel);
+  border: 1px solid rgba(255,255,255,.06);
   border-radius: 12px;
   text-decoration: none;
   color: var(--text);
@@ -376,19 +392,10 @@ body{
   box-shadow: 0 8px 20px rgba(0,0,0,.3);
 }
 
-.nav-block-link.prev {
-  justify-content: flex-start;
-}
+.nav-block-link.prev { justify-content: flex-start; }
+.nav-block-link.next { justify-content: flex-end; margin-left: auto; }
 
-.nav-block-link.next {
-  justify-content: flex-end;
-  margin-left: auto;
-}
-
-.nav-arrow {
-  font-size: 1.5rem;
-  color: var(--accent);
-}
+.nav-arrow { font-size: 1.5rem; color: var(--accent); }
 
 .nav-label {
   display: block;
@@ -401,19 +408,83 @@ body{
   display: block;
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--text);
+  color: #fff;
 }
 
 @media (max-width: 768px) {
-  .nav-blocks {
-    flex-direction: column;
-  }
-  
-  .nav-block-link {
-    max-width: 100%;
-  }
-  
-  .nav-block-link.next {
-    margin-left: 0;
-  }
+  .nav-blocks { flex-direction: column; }
+  .nav-block-link { max-width: 100%; }
+  .nav-block-link.next { margin-left: 0; }
+}
+
+/* =========================================================
+   MODO LEITURA (resolve ofuscamento em páginas de texto longo)
+   Use no HTML: <main class="wrap reading"><div class="panel">...</div></main>
+   ========================================================= */
+.reading{
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 22px 18px 70px;
+}
+
+.reading .panel{
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+}
+
+.reading h1, .reading h2, .reading h3{
+  color:#fff;
+  line-height:1.2;
+}
+
+.reading h2{
+  margin-top: 26px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.reading p,
+.reading li{
+  color: var(--text);
+  font-size: 1.08rem;
+  line-height: 1.85;
+  letter-spacing: .2px;
+}
+
+.reading a{
+  color:#7dd3fc;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.reading a:hover{ color:#fde047; }
+
+/* =========================================================
+   VERSÍCULOS (padrão Bíblia)
+   Estrutura:
+   <div class="verses">
+     <div class="verse"><div class="vnum">1</div><div class="vtext">...</div></div>
+   </div>
+   ========================================================= */
+.verses{ margin-top: 18px; }
+.verse{
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 12px;
+  padding: 10px 8px;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.verse:hover{
+  background: rgba(255,255,255,.03);
+  border-radius: 12px;
+}
+.vnum{
+  color: var(--accent);
+  font-weight: 900;
+  text-align: right;
+  opacity: .95;
+}
+.vtext{
+  color: var(--text);
 }
