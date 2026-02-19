@@ -1,200 +1,435 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Bíblia Sagrada ACF — 365 de Graça & Adoração</title>
-  <meta name="description" content="Leia a Bíblia Sagrada completa na versão Almeida Corrigida Fiel (ACF) - 66 livros, 1189 capítulos">
-
-  <!-- ✅ CSS CORRETO -->
-  <link rel="stylesheet" href="../assets/css/style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bíblia Sagrada ACF — 365 de Graça & Adoração</title>
+    <meta name="description" content="Leia a Bíblia Sagrada completa na versão Almeida Corrigida Fiel (ACF) - 66 livros, 1189 capítulos">
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        .bible-index {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+        .bible-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .bible-title {
+            font-size: 2.5rem;
+            color: #4a90e2;
+            margin-bottom: 0.5rem;
+        }
+        .bible-subtitle {
+            font-size: 1.2rem;
+            color: #888;
+        }
+        .testament {
+            margin-bottom: 3rem;
+        }
+        .testament-title {
+            font-size: 1.8rem;
+            color: #4a90e2;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #4a90e2;
+        }
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .book-card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s;
+        }
+        .book-card:hover {
+            border-color: #4a90e2;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
+        }
+        .book-name {
+            font-size: 1.2rem;
+            color: #4a90e2;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        .book-chapters {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .chapter-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .chapter-link {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            background: #2a2a2a;
+            color: #e0e0e0;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+        .chapter-link:hover {
+            background: #4a90e2;
+            color: white;
+        }
+    </style>
 </head>
-
 <body>
-
-<!-- TOPO PADRÃO -->
-<header class="topbar">
-  <div class="inner">
-    <div class="brand">
-      <span class="dot"></span>
-      365 de Graça & Adoração
-    </div>
-
-    <nav class="nav">
-      <a href="/index.html">Início</a>
-      <a href="/sobre/index.html">Sobre</a>
-      <a href="/biblia/index.html" class="active">Bíblia</a>
+    <nav>
+        <div class="logo">📖 365 de Graça & Adoração</div>
+        <ul>
+            <li><a href="/index.html">Início</a></li>
+            <li><a href="/sobre/index.html">Sobre</a></li>
+            <li><a href="/sobre/fontes/index.html">Referências</a></li>
+            <li><a href="/biblia/">Bíblia</a></li>
+            <li><a href="/biblia/index.html">Bíblia</a></li>
+        </ul>
     </nav>
-  </div>
-</header>
-
-<!-- CONTEÚDO -->
-<main class="wrap">
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="content">
-      <div>
-        <h1>📖 Bíblia Sagrada</h1>
-        <p>
-          Almeida Corrigida Fiel (ACF) • 66 Livros • 1.189 Capítulos  
-          Explore as Escrituras com leitura clara, organizada e profunda.
-        </p>
-      </div>
+    <div class="bible-index">
+        <div class="bible-header">
+            <h1 class="bible-title">📖 Bíblia Sagrada</h1>
+            <p class="bible-subtitle">Almeida Corrigida Fiel (ACF) • 66 Livros • 1.189 Capítulos</p>
+        </div>
+        <!-- ANTIGO TESTAMENTO -->
+        <div class="testament">
+            <h2 class="testament-title">Antigo Testamento</h2>
+            <h3 style="color: #4a90e2; margin: 2rem 0 1rem;">Pentateuco (Lei)</h3>
+            <div class="book-grid">
+                <div class="book-card">
+                    <div class="book-name">Gênesis</div>
+                    <div class="book-chapters">50 capítulos</div>
+                    <div class="chapter-links">
+                        <a href="/biblia/gn/gn-01.html" class="chapter-link">1</a>
+                        <a href="/biblia/gn/gn-02.html" class="chapter-link">2</a>
+                        <a href="/biblia/gn/gn-03.html" class="chapter-link">3</a>
+                        <a href="/biblia/gn/gn-04.html" class="chapter-link">4</a>
+                        <a href="/biblia/gn/gn-05.html" class="chapter-link">5</a>
+                        <a href="/biblia/gn/gn-06.html" class="chapter-link">6</a>
+                        <a href="/biblia/gn/gn-07.html" class="chapter-link">7</a>
+                        <a href="/biblia/gn/gn-08.html" class="chapter-link">8</a>
+                        <a href="/biblia/gn/gn-09.html" class="chapter-link">9</a>
+                        <a href="/biblia/gn/gn-10.html" class="chapter-link">10</a>
+                        <a href="/biblia/gn/gn-50.html" class="chapter-link">...50</a>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Êxodo</div>
+                    <div class="book-chapters">40 capítulos</div>
+                    <div class="chapter-links">
+                        <a href="/biblia/ex/ex-01.html" class="chapter-link">1-40</a>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Levítico</div>
+                    <div class="book-chapters">27 capítulos</div>
+                    <div class="chapter-links">
+                        <a href="/biblia/lv/lv-01.html" class="chapter-link">1-27</a>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Números</div>
+                    <div class="book-chapters">36 capítulos</div>
+                    <div class="chapter-links">
+                        <a href="/biblia/nm/nm-01.html" class="chapter-link">1-36</a>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Deuteronômio</div>
+                    <div class="book-chapters">34 capítulos</div>
+                    <div class="chapter-links">
+                        <a href="/biblia/dt/dt-01.html" class="chapter-link">1-34</a>
+                    </div>
+                </div>
+            </div>
+            <h3 style="color: #4a90e2; margin: 2rem 0 1rem;">Livros Históricos</h3>
+            <div class="book-grid">
+                <div class="book-card">
+                    <div class="book-name">Josué</div>
+                    <div class="book-chapters">24 capítulos</div>
+                    <div class="chapter-links">
+                        <a href="/biblia/js/js-01.html" class="chapter-link">1-24</a>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Juízes</div>
+                    <div class="book-chapters">21 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Rute</div>
+                    <div class="book-chapters">4 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">1 Samuel</div>
+                    <div class="book-chapters">31 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">2 Samuel</div>
+                    <div class="book-chapters">24 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">1 Reis</div>
+                    <div class="book-chapters">22 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">2 Reis</div>
+                    <div class="book-chapters">25 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">1 Crônicas</div>
+                    <div class="book-chapters">29 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">2 Crônicas</div>
+                    <div class="book-chapters">36 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Esdras</div>
+                    <div class="book-chapters">10 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Neemias</div>
+                    <div class="book-chapters">13 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Ester</div>
+                    <div class="book-chapters">10 capítulos</div>
+                </div>
+            </div>
+            <h3 style="color: #4a90e2; margin: 2rem 0 1rem;">Livros Poéticos</h3>
+            <div class="book-grid">
+                <div class="book-card">
+                    <div class="book-name">Jó</div>
+                    <div class="book-chapters">42 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Salmos</div>
+                    <div class="book-chapters">150 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Provérbios</div>
+                    <div class="book-chapters">31 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Eclesiastes</div>
+                    <div class="book-chapters">12 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Cânticos</div>
+                    <div class="book-chapters">8 capítulos</div>
+                </div>
+            </div>
+            <h3 style="color: #4a90e2; margin: 2rem 0 1rem;">Profetas Maiores</h3>
+            <div class="book-grid">
+                <div class="book-card">
+                    <div class="book-name">Isaías</div>
+                    <div class="book-chapters">66 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Jeremias</div>
+                    <div class="book-chapters">52 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Lamentações</div>
+                    <div class="book-chapters">5 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Ezequiel</div>
+                    <div class="book-chapters">48 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Daniel</div>
+                    <div class="book-chapters">12 capítulos</div>
+                </div>
+            </div>
+            <h3 style="color: #4a90e2; margin: 2rem 0 1rem;">Profetas Menores</h3>
+            <div class="book-grid">
+                <div class="book-card">
+                    <div class="book-name">Oséias</div>
+                    <div class="book-chapters">14 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Joel</div>
+                    <div class="book-chapters">3 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Amós</div>
+                    <div class="book-chapters">9 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Obadias</div>
+                    <div class="book-chapters">1 capítulo</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Jonas</div>
+                    <div class="book-chapters">4 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Miquéias</div>
+                    <div class="book-chapters">7 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Naum</div>
+                    <div class="book-chapters">3 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Habacuque</div>
+                    <div class="book-chapters">3 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Sofonias</div>
+                    <div class="book-chapters">3 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Ageu</div>
+                    <div class="book-chapters">2 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Zacarias</div>
+                    <div class="book-chapters">14 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Malaquias</div>
+                    <div class="book-chapters">4 capítulos</div>
+                </div>
+            </div>
+        </div>
+        <!-- NOVO TESTAMENTO -->
+        <div class="testament">
+            <h2 class="testament-title">Novo Testamento</h2>
+            <h3 style="color: #4a90e2; margin: 2rem 0 1rem;">Evangelhos</h3>
+            <div class="book-grid">
+                <div class="book-card">
+                    <div class="book-name">Mateus</div>
+                    <div class="book-chapters">28 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Marcos</div>
+                    <div class="book-chapters">16 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Lucas</div>
+                    <div class="book-chapters">24 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">João</div>
+                    <div class="book-chapters">21 capítulos</div>
+                </div>
+            </div>
+            <h3 style="color: #4a90e2; margin: 2rem 0 1rem;">História da Igreja</h3>
+            <div class="book-grid">
+                <div class="book-card">
+                    <div class="book-name">Atos</div>
+                    <div class="book-chapters">28 capítulos</div>
+                </div>
+            </div>
+            <h3 style="color: #4a90e2; margin: 2rem 0 1rem;">Epístolas Paulinas</h3>
+            <div class="book-grid">
+                <div class="book-card">
+                    <div class="book-name">Romanos</div>
+                    <div class="book-chapters">16 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">1 Coríntios</div>
+                    <div class="book-chapters">16 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">2 Coríntios</div>
+                    <div class="book-chapters">13 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Gálatas</div>
+                    <div class="book-chapters">6 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Efésios</div>
+                    <div class="book-chapters">6 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Filipenses</div>
+                    <div class="book-chapters">4 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Colossenses</div>
+                    <div class="book-chapters">4 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">1 Tessalonicenses</div>
+                    <div class="book-chapters">5 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">2 Tessalonicenses</div>
+                    <div class="book-chapters">3 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">1 Timóteo</div>
+                    <div class="book-chapters">6 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">2 Timóteo</div>
+                    <div class="book-chapters">4 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Tito</div>
+                    <div class="book-chapters">3 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Filemom</div>
+                    <div class="book-chapters">1 capítulo</div>
+                </div>
+            </div>
+            <h3 style="color: #4a90e2; margin: 2rem 0 1rem;">Epístolas Gerais</h3>
+            <div class="book-grid">
+                <div class="book-card">
+                    <div class="book-name">Hebreus</div>
+                    <div class="book-chapters">13 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Tiago</div>
+                    <div class="book-chapters">5 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">1 Pedro</div>
+                    <div class="book-chapters">5 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">2 Pedro</div>
+                    <div class="book-chapters">3 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">1 João</div>
+                    <div class="book-chapters">5 capítulos</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">2 João</div>
+                    <div class="book-chapters">1 capítulo</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">3 João</div>
+                    <div class="book-chapters">1 capítulo</div>
+                </div>
+                <div class="book-card">
+                    <div class="book-name">Judas</div>
+                    <div class="book-chapters">1 capítulo</div>
+                </div>
+            </div>
+            <h3 style="color: #4a90e2; margin: 2rem 0 1rem;">Profecia</h3>
+            <div class="book-grid">
+                <div class="book-card">
+                    <div class="book-name">Apocalipse</div>
+                    <div class="book-chapters">22 capítulos</div>
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
-
-  <!-- ANTIGO TESTAMENTO -->
-  <section class="section">
-    <div class="section-header">
-      <h2 class="section-title">Antigo Testamento</h2>
-      <p class="section-sub">Pentateuco (Lei)</p>
-    </div>
-
-    <div class="row">
-
-      <!-- GÊNESIS -->
-      <div class="card">
-        <div class="poster">
-          <span class="tag">50 capítulos</span>
-        </div>
-        <div class="body">
-          <h3>Gênesis</h3>
-          <p>O princípio de tudo</p>
-
-          <a href="/biblia/gn/gn-01.html">Ler capítulo 1 →</a>
-        </div>
-      </div>
-
-      <!-- ÊXODO -->
-      <div class="card">
-        <div class="poster">
-          <span class="tag">40 capítulos</span>
-        </div>
-        <div class="body">
-          <h3>Êxodo</h3>
-          <p>A libertação do povo</p>
-
-          <a href="/biblia/ex/ex-01.html">Ler capítulo 1 →</a>
-        </div>
-      </div>
-
-      <!-- LEVÍTICO -->
-      <div class="card">
-        <div class="poster">
-          <span class="tag">27 capítulos</span>
-        </div>
-        <div class="body">
-          <h3>Levítico</h3>
-          <p>Leis e santidade</p>
-        </div>
-      </div>
-
-      <!-- NÚMEROS -->
-      <div class="card">
-        <div class="poster">
-          <span class="tag">36 capítulos</span>
-        </div>
-        <div class="body">
-          <h3>Números</h3>
-          <p>O caminho no deserto</p>
-        </div>
-      </div>
-
-      <!-- DEUTERONÔMIO -->
-      <div class="card">
-        <div class="poster">
-          <span class="tag">34 capítulos</span>
-        </div>
-        <div class="body">
-          <h3>Deuteronômio</h3>
-          <p>Reafirmação da Lei</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- HISTÓRICOS -->
-  <section class="section">
-    <div class="section-header">
-      <h2 class="section-title">Livros Históricos</h2>
-    </div>
-
-    <div class="row">
-
-      <div class="card">
-        <div class="poster"><span class="tag">24 capítulos</span></div>
-        <div class="body">
-          <h3>Josué</h3>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="poster"><span class="tag">21 capítulos</span></div>
-        <div class="body">
-          <h3>Juízes</h3>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="poster"><span class="tag">4 capítulos</span></div>
-        <div class="body">
-          <h3>Rute</h3>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- NOVO TESTAMENTO -->
-  <section class="section">
-    <div class="section-header">
-      <h2 class="section-title">Novo Testamento</h2>
-      <p class="section-sub">Evangelhos</p>
-    </div>
-
-    <div class="row">
-
-      <div class="card">
-        <div class="poster"><span class="tag">28 capítulos</span></div>
-        <div class="body">
-          <h3>Mateus</h3>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="poster"><span class="tag">16 capítulos</span></div>
-        <div class="body">
-          <h3>Marcos</h3>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="poster"><span class="tag">24 capítulos</span></div>
-        <div class="body">
-          <h3>Lucas</h3>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="poster"><span class="tag">21 capítulos</span></div>
-        <div class="body">
-          <h3>João</h3>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-</main>
-
-<!-- RODAPÉ -->
-<footer class="footer">
-  © 2026 — Projeto 365 Graça & Adoração • Wagner Martins
-</footer>
-
 </body>
 </html>
