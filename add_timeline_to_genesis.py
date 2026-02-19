@@ -305,7 +305,7 @@ def get_timeline_for_chapter(chapter_num):
                 <h3>🗺️ Geografia Bíblica</h3>
                 
                 <div class="map-container">
-                    <img src="/assets/img/mapa-eden.jpg" alt="Monte Ararate">
+                    <img src="/assets/img/mapa-monte-ararate.jpg" alt="Monte Ararate">
                     <p class="map-caption">Monte Ararate (atual Turquia) onde a arca repousou</p>
                 </div>
                 
