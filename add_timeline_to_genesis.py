@@ -443,6 +443,7 @@ def extract_chapter_number(filename):
         r'genesis[_\s](\d+)',
         r'(\d+)_Genesis',
         r'(\d+)_genesis',
+        r'^(\d+)_',  # 01_Criacao.html, 02_Genesis_1_1_2.html
     ]
     
     for pattern in patterns:
