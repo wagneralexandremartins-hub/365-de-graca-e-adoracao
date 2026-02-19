@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca — 365 de Graça & Adoração</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+        body {
+            background: #0a0e1a;
+            color: #e8e8e8;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 1.5rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: #4a90e2;
+        }
+
+        header nav {
+            margin-top: 1rem;
+        }
+
+        header nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-right: 1.5rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #4a90e2;
+        }
+
+        .search-container {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .search-box {
+            background: #1a2332;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.1rem;
+            border: 2px solid #2a3a52;
+            border-radius: 8px;
+            background: #0a0e1a;
+            color: #e8e8e8;
+            transition: border-color 0.3s;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #4a90e2;
+        }
+
+        .search-stats {
+            margin-top: 1rem;
+            color: #a0a0a0;
+            font-size: 0.9rem;
+        }
+
+        .results {
+            margin-top: 2rem;
+        }
+
+        .result-item {
+            background: #1a2332;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #4a90e2;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .result-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
+        }
+
+        .result-item h3 {
+            margin: 0 0 0.5rem 0;
+            color: #5dade2;
+        }
+
+        .result-item h3 a {
+            color: #5dade2;
+            text-decoration: none;
+        }
+
+        .result-item h3 a:hover {
+            color: #7ec8f3;
+        }
+
+        .result-type {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: rgba(74, 144, 226, 0.2);
+            color: #4a90e2;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-description {
+            color: #c0c0c0;
+            line-height: 1.6;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            color: #a0a0a0;
+        }
+
+        .category-section {
+            margin-top: 3rem;
+        }
+
+        .category-title {
+            color: #4a90e2;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #2a3a52;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🔍 365 de Graça & Adoração</h1>
+        <nav>
+            <a href="/">Início</a>
+            <a href="/sobre">Sobre</a>
+            <a href="/sobre/fontes">Referências</a>
+            <a href="/biblia/">Bíblia</a>
+        </nav>
+    </header>
+
+    <div class="search-container">
+        <div class="search-box">
+            <input type="text" 
+                   id="searchInput" 
+                   class="search-input" 
+                   placeholder="Buscar estudos, capítulos da Bíblia, temas..."
+                   autofocus>
+            <div class="search-stats" id="searchStats">
+                Digite para buscar em mais de 1.200 páginas de conteúdo bíblico
+            </div>
+        </div>
+
+        <div id="results" class="results"></div>
+
+        <div id="categories" style="display: none;">
+            <div class="category-section">
+                <h2 class="category-title">📚 Estudos do Pentateuco</h2>
+                <div id="estudos-list"></div>
+            </div>
+
+            <div class="category-section">
+                <h2 class="category-title">📖 Bíblia Completa (ACF)</h2>
+                <div id="biblia-list"></div>
+            </div>
+
+            <div class="category-section">
+                <h2 class="category-title">ℹ️ Páginas Institucionais</h2>
+                <div id="institucional-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Índice de conteúdos
+        const contentIndex = [
+            // Gênesis (50 capítulos)
+            ...Array.from({length: 50}, (_, i) => ({
+                title: `Gênesis ${i + 1}`,
+                url: `/02-pentateuco/genesis/estudos/genesis-${String(i + 1).padStart(2, '0')}.html`,
+                type: 'Estudo',
+                description: `Estudo profundo de Gênesis capítulo ${i + 1}`
+            })),
+            
+            // Êxodo (6 blocos)
+            {title: 'Êxodo - Bloco 01: O Chamado e a Missão', url: '/02-pentateuco/exodo/bloco-01/', type: 'Estudo', description: 'Êxodo 1-4: Opressão, nascimento de Moisés, sarça ardente'},
+            {title: 'Êxodo - Bloco 02: As Pragas e o Confronto', url: '/02-pentateuco/exodo/bloco-02/', type: 'Estudo', description: 'Êxodo 5-11: As dez pragas sobre o Egito'},
+            {title: 'Êxodo - Bloco 03: A Libertação e o Mar', url: '/02-pentateuco/exodo/bloco-03/', type: 'Estudo', description: 'Êxodo 12-15: Páscoa, saída do Egito, Mar Vermelho'},
+            {title: 'Êxodo - Bloco 04: Provações no Deserto', url: '/02-pentateuco/exodo/bloco-04/', type: 'Estudo', description: 'Êxodo 16-18: Maná, água da rocha, Amaleque'},
+            {title: 'Êxodo - Bloco 05: A Aliança no Sinai', url: '/02-pentateuco/exodo/bloco-05/', type: 'Estudo', description: 'Êxodo 19-24: Dez Mandamentos, Livro da Aliança'},
+            {title: 'Êxodo - Bloco 06: O Tabernáculo e a Presença', url: '/02-pentateuco/exodo/bloco-06/', type: 'Estudo', description: 'Êxodo 25-40: Tabernáculo, bezerro de ouro, glória de Deus'},
+            
+            // Páginas institucionais
+            {title: 'Página Inicial', url: '/', type: 'Institucional', description: 'Bem-vindo ao 365 de Graça & Adoração'},
+            {title: 'Sobre o Projeto', url: '/sobre/', type: 'Institucional', description: 'Conheça a missão e visão do projeto'},
+            {title: 'Fontes e Referências', url: '/sobre/fontes/', type: 'Institucional', description: 'Bibliografia e referências acadêmicas'},
+            {title: 'Contexto Histórico', url: '/contexto-historico.html', type: 'Institucional', description: 'Linha do tempo bíblica e contexto histórico'},
+            {title: 'Bíblia ACF Completa', url: '/biblia/', type: 'Bíblia', description: '66 livros, 1.189 capítulos da Bíblia Almeida Corrigida Fiel'}
+        ];
+
+        const searchInput = document.getElementById('searchInput');
+        const resultsDiv = document.getElementById('results');
+        const searchStats = document.getElementById('searchStats');
+
+        // Função de busca
+        function search(query) {
+            query = query.toLowerCase().trim();
+            
+            if (query.length === 0) {
+                resultsDiv.innerHTML = '';
+                searchStats.textContent = 'Digite para buscar em mais de 1.200 páginas de conteúdo bíblico';
+                return;
+            }
+
+            const results = contentIndex.filter(item => 
+                item.title.toLowerCase().includes(query) ||
+                item.description.toLowerCase().includes(query)
+            );
+
+            if (results.length === 0) {
+                resultsDiv.innerHTML = '<div class="no-results">Nenhum resultado encontrado para "' + query + '"</div>';
+                searchStats.textContent = '0 resultados encontrados';
+                return;
+            }
+
+            searchStats.textContent = `${results.length} resultado${results.length > 1 ? 's' : ''} encontrado${results.length > 1 ? 's' : ''}`;
+
+            resultsDiv.innerHTML = results.map(item => `
+                <div class="result-item">
+                    <span class="result-type">${item.type}</span>
+                    <h3><a href="${item.url}">${item.title}</a></h3>
+                    <p class="result-description">${item.description}</p>
+                </div>
+            `).join('');
+        }
+
+        // Event listener para busca em tempo real
+        searchInput.addEventListener('input', (e) => {
+            search(e.target.value);
+        });
+
+        // Buscar ao carregar se houver query string
+        const urlParams = new URLSearchParams(window.location.search);
+        const queryParam = urlParams.get('q');
+        if (queryParam) {
+            searchInput.value = queryParam;
+            search(queryParam);
+        }
+    </script>
+</body>
+</html>
