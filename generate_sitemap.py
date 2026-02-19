@@ -7,6 +7,7 @@ para o projeto 365 de Graça & Adoração
 import os
 from datetime import datetime
 from pathlib import Path
+import html
 
 # Configurações
 BASE_URL = "https://365-de-graca-e-adoracao.vercel.app"
@@ -94,6 +95,9 @@ def generate_sitemap():
             url = BASE_URL + '/' + url_path.replace('/index.html', '/')
         else:
             url = BASE_URL + '/' + url_path
+        
+        # Escapar caracteres especiais XML
+        url = html.escape(url, quote=True)
         
         priority, changefreq = get_page_info(filepath)
         
