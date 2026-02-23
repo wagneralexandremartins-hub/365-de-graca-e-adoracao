@@ -1,11 +1,11 @@
 # Robots.txt para 365 de Graça & Adoração
-# https://365-de-graca-e-adoracao.vercel.app
+# https://365gracaeadoracao.com
 
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://365-de-graca-e-adoracao.vercel.app/sitemap.xml
+Sitemap: https://365gracaeadoracao.com/sitemap.xml
 
 # Páginas importantes para priorizar
 Allow: /sobre/
@@ -16,9 +16,6 @@ Allow: /02-pentateuco/genesis/
 Allow: /01-principio/
 
 # Bloquear arquivos desnecessários
-Disallow: /assets/
-Disallow: /*.js$
-Disallow: /*.css$
 Disallow: /node_modules/
 Disallow: /.git/
 
@@ -27,5 +24,4 @@ User-agent: Googlebot-Image
 Allow: /assets/images/
 Allow: /images/
 
-# Crawl-delay (opcional, para não sobrecarregar o servidor)
-Crawl-delay: 1
+
