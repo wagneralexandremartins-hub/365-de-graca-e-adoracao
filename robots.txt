@@ -1,0 +1,27 @@
+# Robots.txt para 365 de Graça & Adoração
+# https://365gracaeadoracao.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://365gracaeadoracao.com/sitemap.xml
+
+# Páginas importantes para priorizar
+Allow: /sobre/
+Allow: /sobre/fontes/
+Allow: /sobre/proposito/
+Allow: /contexto/
+Allow: /02-pentateuco/genesis/
+Allow: /01-principio/
+
+# Bloquear arquivos desnecessários
+Disallow: /node_modules/
+Disallow: /.git/
+
+# Permitir rastreamento de imagens
+User-agent: Googlebot-Image
+Allow: /assets/images/
+Allow: /images/
+
+
