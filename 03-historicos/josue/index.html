@@ -4,15 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Josué — 365 de Graça & Adoração</title>
-  <meta name="description" content="Estudo do livro de Josué.">
+  <meta name="description" content="Estudo completo do livro de Josué no projeto 365 de Graça & Adoração. 24 capítulos com análise versículo por versículo, contexto histórico, mapas e aplicação teológica.">
   <link rel="stylesheet" href="/assets/css/style.css">
-  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+    .hero-josue { background: linear-gradient(135deg, #1a3a2a 0%, #2d6a4f 60%, #1b4332 100%); color: white; padding: 60px 20px; text-align: center; }
+    .hero-josue h1 { font-size: 3em; margin-bottom: 8px; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); }
+    .hero-josue .sub { font-size: 1.2em; opacity: 0.85; margin-bottom: 24px; }
+    .hero-josue blockquote { font-style: italic; font-size: 1.05em; opacity: 0.9; max-width: 680px; margin: 0 auto; border-left: 4px solid #74c69d; padding-left: 20px; text-align: left; }
+    .info-bar { display: flex; justify-content: center; gap: 40px; background: #081c15; padding: 18px; flex-wrap: wrap; }
+    .info-item { text-align: center; color: white; }
+    .info-item .num { font-size: 2em; font-weight: bold; color: #74c69d; }
+    .info-item .label { font-size: 0.8em; opacity: 0.65; }
+    .container-main { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+    .intro-box { background: #f0fdf4; border-left: 5px solid #52b788; padding: 25px 30px; border-radius: 0 12px 12px 0; margin-bottom: 40px; }
+    .intro-box h2 { color: #1b4332; margin-top: 0; }
+    .intro-box p { color: #2d3748; line-height: 1.8; margin: 0; }
+    .bloco { background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 36px; overflow: hidden; }
+    .bloco-header { background: linear-gradient(90deg, #1b4332, #2d6a4f); color: white; padding: 18px 28px; }
+    .bloco-header h2 { margin: 0; font-size: 1.3em; }
+    .bloco-header .bloco-sub { opacity: 0.78; font-size: 0.88em; margin-top: 4px; }
+    .caps-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px; padding: 22px; }
+    .cap-card { background: #f8fffe; border: 1px solid #d8f3dc; border-radius: 8px; padding: 14px; text-decoration: none; color: #1b4332; transition: all 0.2s; display: block; }
+    .cap-card:hover { background: #d8f3dc; border-color: #52b788; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .cap-card .num { font-size: 1.4em; font-weight: bold; color: #2d6a4f; }
+    .cap-card .titulo { font-size: 0.82em; margin-top: 5px; color: #40916c; }
+    .nav-livros { display: flex; justify-content: space-between; margin-top: 40px; gap: 15px; flex-wrap: wrap; }
+    .nav-livros a { background: #1b4332; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: background 0.2s; }
+    .nav-livros a:hover { background: #2d6a4f; }
+  </style>
 </head>
-
 <body>
-  <!-- Topbar -->
   <div class="topbar">
     <div class="inner">
       <div class="brand">
@@ -21,7 +44,6 @@
           <span>365 de Graça &amp; Adoração</span>
         </a>
       </div>
-
       <nav class="nav" aria-label="Navegação principal">
         <a href="/">Início</a>
         <a href="/03-historicos/index.html">Livros Históricos</a>
@@ -30,21 +52,103 @@
     </div>
   </div>
 
-  <main class="wrap">
-    <section class="hero">
-      <div class="content">
-        <div>
-          <span class="pill">📜 Livro de Josué</span>
-          <h1>Josué</h1>
-          <p class="hero-description">Em breve, estudos sobre o livro de Josué.</p>
-        </div>
-      </div>
-    </section>
+  <div class="hero-josue">
+    <h1>📖 Josué</h1>
+    <p class="sub">O Livro da Conquista e da Fidelidade de Deus</p>
+    <blockquote>
+      "Não te afastes desta lei; medita nela de dia e de noite, para que guardes e faças tudo quanto nela está escrito; porque então farás prosperar o teu caminho, e serás bem-sucedido."
+      <br><strong>— Josué 1:8</strong>
+    </blockquote>
+  </div>
 
-    <div class="footer">
-      365 de Graça & Adoração • Livro de Josué • © 2026
+  <div class="info-bar">
+    <div class="info-item"><div class="num">24</div><div class="label">Capítulos</div></div>
+    <div class="info-item"><div class="num">658</div><div class="label">Versículos</div></div>
+    <div class="info-item"><div class="num">~1400 a.C.</div><div class="label">Período Histórico</div></div>
+    <div class="info-item"><div class="num">4</div><div class="label">Blocos Temáticos</div></div>
+  </div>
+
+  <div class="container-main">
+
+    <div class="intro-box">
+      <h2>Sobre o Livro de Josué</h2>
+      <p>O livro de Josué narra a entrada e a conquista da terra de Canaã pelo povo de Israel, sob a liderança de Josué, filho de Num, sucessor de Moisés. É um livro de transição: do deserto para a terra prometida, da peregrinação para o estabelecimento, da promessa para o cumprimento. Cada batalha vencida, cada cidade conquistada e cada pedaço de terra distribuído é um testemunho do Deus que cumpre Sua Palavra. O clímax teológico do livro é a declaração em 21:45: <em>"Palavra alguma falhou de todas as boas palavras que o Senhor falara à casa de Israel; tudo se cumpriu."</em></p>
     </div>
-  </main>
+
+    <!-- BLOCO 1 -->
+    <div class="bloco">
+      <div class="bloco-header">
+        <h2>Bloco 1 — Preparação e Entrada em Canaã</h2>
+        <div class="bloco-sub">Capítulos 1 ao 5 · A comissão de Josué, os espias em Jericó, a travessia do Jordão e a renovação da aliança</div>
+      </div>
+      <div class="caps-grid">
+        <a href="capitulos/capitulo-01.html" class="cap-card"><div class="num">Cap. 1</div><div class="titulo">A Comissão de Josué — "Sê forte e corajoso"</div></a>
+        <a href="capitulos/capitulo-02.html" class="cap-card"><div class="num">Cap. 2</div><div class="titulo">Raabe e os Espias — O cordão escarlate</div></a>
+        <a href="capitulos/capitulo-03.html" class="cap-card"><div class="num">Cap. 3</div><div class="titulo">A Travessia do Jordão — As águas se abrem</div></a>
+        <a href="capitulos/capitulo-04.html" class="cap-card"><div class="num">Cap. 4</div><div class="titulo">As Doze Pedras — Memorial da travessia</div></a>
+        <a href="capitulos/capitulo-05.html" class="cap-card"><div class="num">Cap. 5</div><div class="titulo">Gilgal — Circuncisão, Páscoa e o Maná cessa</div></a>
+      </div>
+    </div>
+
+    <!-- BLOCO 2 -->
+    <div class="bloco">
+      <div class="bloco-header">
+        <h2>Bloco 2 — A Conquista de Canaã</h2>
+        <div class="bloco-sub">Capítulos 6 ao 12 · Jericó, Ai, Gabaão, as campanhas do Sul e do Norte</div>
+      </div>
+      <div class="caps-grid">
+        <a href="capitulos/capitulo-06.html" class="cap-card"><div class="num">Cap. 6</div><div class="titulo">A Queda de Jericó — Os muros desabam</div></a>
+        <a href="capitulos/capitulo-07.html" class="cap-card"><div class="num">Cap. 7</div><div class="titulo">O Pecado de Acã — A derrota em Ai</div></a>
+        <a href="capitulos/capitulo-08.html" class="cap-card"><div class="num">Cap. 8</div><div class="titulo">A Conquista de Ai — Estratégia e vitória</div></a>
+        <a href="capitulos/capitulo-09.html" class="cap-card"><div class="num">Cap. 9</div><div class="titulo">O Engano dos Gabaonitas — A aliança precipitada</div></a>
+        <a href="capitulos/capitulo-10.html" class="cap-card"><div class="num">Cap. 10</div><div class="titulo">O Sol Parou — A campanha do Sul</div></a>
+        <a href="capitulos/capitulo-11.html" class="cap-card"><div class="num">Cap. 11</div><div class="titulo">A Campanha do Norte — A coalizão de Hazor</div></a>
+        <a href="capitulos/capitulo-12.html" class="cap-card"><div class="num">Cap. 12</div><div class="titulo">Lista dos Reis Vencidos — 31 reis derrotados</div></a>
+      </div>
+    </div>
+
+    <!-- BLOCO 3 -->
+    <div class="bloco">
+      <div class="bloco-header">
+        <h2>Bloco 3 — A Divisão da Terra</h2>
+        <div class="bloco-sub">Capítulos 13 ao 21 · A herança de cada tribo, as filhas de Zelofeade, as cidades de refúgio e as cidades levíticas</div>
+      </div>
+      <div class="caps-grid">
+        <a href="capitulos/capitulo-13.html" class="cap-card"><div class="num">Cap. 13</div><div class="titulo">Terras a Conquistar — Herança da Transjordânia</div></a>
+        <a href="capitulos/capitulo-14.html" class="cap-card"><div class="num">Cap. 14</div><div class="titulo">Calebe em Hebrom — "Ainda sou forte"</div></a>
+        <a href="capitulos/capitulo-15.html" class="cap-card"><div class="num">Cap. 15</div><div class="titulo">A Herança de Judá — Acsa e as fontes de água</div></a>
+        <a href="capitulos/capitulo-16.html" class="cap-card"><div class="num">Cap. 16</div><div class="titulo">A Herança de Efraim — Gezer não expulsa</div></a>
+        <a href="capitulos/capitulo-17.html" class="cap-card"><div class="num">Cap. 17</div><div class="titulo">A Herança de Manassés — Filhas de Zelofeade</div></a>
+        <a href="capitulos/capitulo-18.html" class="cap-card"><div class="num">Cap. 18</div><div class="titulo">Siló e Benjamim — "Até quando sereis remissos?"</div></a>
+        <a href="capitulos/capitulo-19.html" class="cap-card"><div class="num">Cap. 19</div><div class="titulo">As Seis Tribos Restantes — A herança de Josué</div></a>
+        <a href="capitulos/capitulo-20.html" class="cap-card"><div class="num">Cap. 20</div><div class="titulo">Cidades de Refúgio — Graça para o homicida</div></a>
+        <a href="capitulos/capitulo-21.html" class="cap-card"><div class="num">Cap. 21</div><div class="titulo">Cidades Levíticas — "Tudo se cumpriu"</div></a>
+      </div>
+    </div>
+
+    <!-- BLOCO 4 -->
+    <div class="bloco">
+      <div class="bloco-header">
+        <h2>Bloco 4 — Epílogo e Discursos de Despedida</h2>
+        <div class="bloco-sub">Capítulos 22 ao 24 · O altar de testemunho, as exortações finais e a renovação da aliança em Siquém</div>
+      </div>
+      <div class="caps-grid">
+        <a href="capitulos/capitulo-22.html" class="cap-card"><div class="num">Cap. 22</div><div class="titulo">O Altar de Testemunho — A crise evitada</div></a>
+        <a href="capitulos/capitulo-23.html" class="cap-card"><div class="num">Cap. 23</div><div class="titulo">Primeiro Discurso — Advertência e fidelidade</div></a>
+        <a href="capitulos/capitulo-24.html" class="cap-card"><div class="num">Cap. 24</div><div class="titulo">Aliança em Siquém — "Eu e minha casa serviremos ao Senhor"</div></a>
+      </div>
+    </div>
+
+    <div class="nav-livros">
+      <a href="/03-historicos/index.html">← Livros Históricos</a>
+      <a href="/03-historicos/juizes/index.html">Próximo: Juízes →</a>
+    </div>
+
+  </div>
+
+  <footer style="background:#081c15; color:#74c69d; text-align:center; padding:20px; margin-top:40px; font-size:0.9em;">
+    <p>365 de Graça &amp; Adoração · Projeto de Estudo Bíblico Completo</p>
+  </footer>
 
   <script src="/assets/js/script.js"></script>
 </body>
