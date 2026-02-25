@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contexto Histórico — 365 de Graça & Adoração</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 40px auto;
+    }
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+    }
+    .timeline-item {
+      padding: 20px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: -10px;
+      background-color: var(--bg);
+      border: 4px solid var(--accent);
+      top: 25px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .left {
+      left: 0;
+    }
+    .right {
+      left: 50%;
+    }
+    .left::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 28px;
+      width: 0;
+      z-index: 1;
+      right: 30px;
+      border: medium solid var(--card-bg);
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent var(--card-bg);
+    }
+    .right::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 28px;
+      width: 0;
+      z-index: 1;
+      left: 30px;
+      border: medium solid var(--card-bg);
+      border-width: 10px 10px 10px 0;
+      border-color: transparent var(--card-bg) transparent transparent;
+    }
+    .right::after {
+      left: -10px;
+    }
+    .timeline-content {
+      padding: 20px 30px;
+      background: rgba(0,0,0,.18);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      position: relative;
+    }
+    .period-badge {
+      display: inline-block;
+      padding: 5px 15px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .map-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .map-card {
+      background: rgba(0,0,0,.18);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 20px;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .map-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+    }
+    .map-placeholder {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, rgba(0,168,225,.1), rgba(91,231,196,.1));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+    }
+    @media screen and (max-width: 768px) {
+      .timeline::after {
+        left: 31px;
+      }
+      .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      .timeline-item::before {
+        left: 60px;
+        border: medium solid var(--card-bg);
+        border-width: 10px 10px 10px 0;
+        border-color: transparent var(--card-bg) transparent transparent;
+      }
+      .left::after, .right::after {
+        left: 21px;
+      }
+      .right {
+        left: 0%;
+      }
+    }
+  </style>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="inner">
+      <div class="brand">
+        <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;">
+          <img src="/assets/img/logo-header.png" alt="365 de Graça &amp; Adoração" style="height:48px;width:auto;" />
+          <span>365 de Graça &amp; Adoração</span>
+        </a>
+      </div>
+      <nav class="nav">
+        <a href="/">Início</a>
+        <a href="/sobre/">Sobre</a>
+        <a href="/referencias/">Referências</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="wrap">
+    <!-- Breadcrumb -->
+    <div style="margin-bottom: 20px; color: var(--muted); font-size: 0.9rem;">
+      <a href="/" style="color: var(--muted); text-decoration: none;">Início</a> / 
+      <span style="color: var(--text);">Contexto Histórico</span>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="content" style="display: block;">
+        <h1>🗺️ Contexto Histórico</h1>
+        <p style="font-size: 1.1rem; color: var(--accent2); margin-top: 10px;">
+          Da Eternidade ao Éden: Compreendendo a História por Trás da Narrativa Bíblica
+        </p>
+      </div>
+    </div>
+
+    <!-- Introduction -->
+    <div class="section">
+      <div style="background: linear-gradient(135deg, rgba(0,168,225,.15), rgba(91,231,196,.10)); border: 1px solid var(--accent); border-radius: 18px; padding: 30px; margin-bottom: 40px;">
+        <h2 style="color: var(--accent2); margin-top: 0;">📜 Por Que o Contexto Histórico Importa?</h2>
+        <p style="line-height: 1.8; font-size: 1.05rem;">
+          A Bíblia não foi escrita em um vácuo. Cada evento, cada profecia, cada ensinamento está profundamente enraizado em um <strong>contexto histórico, geográfico e cultural específico</strong>. Compreender esse contexto é essencial para interpretar corretamente a Palavra de Deus.
+        </p>
+        <p style="line-height: 1.8; font-size: 1.05rem;">
+          Esta seção oferece uma <strong>linha do tempo visual</strong> e <strong>mapas históricos</strong> que situam os eventos bíblicos em seu contexto real, desde antes da criação até o estabelecimento da Igreja.
+        </p>
+      </div>
+    </div>
+
+    <!-- Timeline Section -->
+    <div class="section">
+      <h2 style="color: var(--accent); text-align: center; margin-bottom: 40px;">⏳ Linha do Tempo Bíblica</h2>
+      
+      <div class="timeline">
+        <!-- Período 1: Eternidade Passada -->
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <span class="period-badge">Eternidade Passada</span>
+            <h3 style="color: var(--accent2); margin-top: 10px;">Antes da Criação</h3>
+            <p style="line-height: 1.7; color: var(--muted);">
+              <strong>Contexto:</strong> A eternidade antes do tempo. Deus existe em perfeita comunhão trinitária. O conselho divino delibera sobre a criação.
+            </p>
+            <p style="line-height: 1.7; font-size: 0.95rem;">
+              <strong>Eventos-chave:</strong><br>
+              • A rebelião de Lúcifer e dos anjos caídos<br>
+              • O plano da redenção estabelecido antes da fundação do mundo<br>
+              • A decisão de criar o universo e a humanidade
+            </p>
+            <p style="line-height: 1.7; font-size: 0.9rem; color: var(--muted); margin-top: 10px;">
+              <strong>Referências:</strong> Jó 38:4-7; Isaías 14:12-15; Ezequiel 28:12-17; Efésios 1:4; 1 Pedro 1:20
+            </p>
+          </div>
+        </div>
+
+        <!-- Período 2: Criação -->
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <span class="period-badge">~4000 a.C.</span>
+            <h3 style="color: var(--accent2); margin-top: 10px;">A Criação (Gênesis 1-2)</h3>
+            <p style="line-height: 1.7; color: var(--muted);">
+              <strong>Contexto:</strong> Deus cria o universo, a terra e a humanidade em seis dias, descansando no sétimo. O Éden é estabelecido como o primeiro santuário.
+            </p>
+            <p style="line-height: 1.7; font-size: 0.95rem;">
+              <strong>Eventos-chave:</strong><br>
+              • Criação do céu, terra, luz, águas, vegetação<br>
+              • Criação dos luminares, animais marinhos e terrestres<br>
+              • Criação do homem à imagem de Deus<br>
+              • Estabelecimento do Jardim do Éden
+            </p>
+            <p style="line-height: 1.7; font-size: 0.9rem; color: var(--muted); margin-top: 10px;">
+              <strong>Geografia:</strong> Localização provável do Éden: Mesopotâmia (região dos rios Tigre e Eufrates)
+            </p>
+          </div>
+        </div>
+
+        <!-- Período 3: Pré-Dilúvio -->
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <span class="period-badge">~4000-2400 a.C.</span>
+            <h3 style="color: var(--accent2); margin-top: 10px;">Era Pré-Diluviana (Gênesis 3-6)</h3>
+            <p style="line-height: 1.7; color: var(--muted);">
+              <strong>Contexto:</strong> A Queda, expansão da humanidade, corrupção crescente. Duas linhagens: Caim (mundana) e Sete (piedosa).
+            </p>
+            <p style="line-height: 1.7; font-size: 0.95rem;">
+              <strong>Eventos-chave:</strong><br>
+              • A Queda e expulsão do Éden (Gn 3)<br>
+              • Caim mata Abel (Gn 4:1-16)<br>
+              • Nascimento de Sete e invocação ao Senhor (Gn 4:25-26)<br>
+              • Enoque caminha com Deus e é transladado (Gn 5:21-24)<br>
+              • Corrupção da humanidade e os Nefilins (Gn 6:1-4)
+            </p>
+            <p style="line-height: 1.7; font-size: 0.9rem; color: var(--muted); margin-top: 10px;">
+              <strong>Cultura:</strong> Desenvolvimento da agricultura, pecuária, metalurgia e música (Gn 4:17-22)
+            </p>
+          </div>
+        </div>
+
+        <!-- Período 4: Dilúvio -->
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <span class="period-badge">~2400 a.C.</span>
+            <h3 style="color: var(--accent2); margin-top: 10px;">O Dilúvio (Gênesis 6-9)</h3>
+            <p style="line-height: 1.7; color: var(--muted);">
+              <strong>Contexto:</strong> Juízo global sobre a humanidade corrupta. Noé e sua família preservados na arca. Recomeço da civilização.
+            </p>
+            <p style="line-height: 1.7; font-size: 0.95rem;">
+              <strong>Eventos-chave:</strong><br>
+              • Construção da arca (120 anos)<br>
+              • O Dilúvio (40 dias e 40 noites)<br>
+              • Aliança Noética (Gn 9:8-17)<br>
+              • Bênção e mandato cultural renovado
+            </p>
+            <p style="line-height: 1.7; font-size: 0.9rem; color: var(--muted); margin-top: 10px;">
+              <strong>Geografia:</strong> Mudanças geológicas massivas. A arca repousa no Monte Ararate (atual Turquia)
+            </p>
+          </div>
+        </div>
+
+        <!-- Período 5: Pós-Dilúvio -->
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <span class="period-badge">~2400-2100 a.C.</span>
+            <h3 style="color: var(--accent2); margin-top: 10px;">Dispersão das Nações (Gênesis 10-11)</h3>
+            <p style="line-height: 1.7; color: var(--muted);">
+              <strong>Contexto:</strong> Multiplicação dos descendentes de Noé. Rebelião na Torre de Babel. Dispersão e formação das nações.
+            </p>
+            <p style="line-height: 1.7; font-size: 0.95rem;">
+              <strong>Eventos-chave:</strong><br>
+              • Tábua das Nações (Gn 10)<br>
+              • Torre de Babel e confusão das línguas (Gn 11:1-9)<br>
+              • Genealogia de Sem a Abraão (Gn 11:10-26)
+            </p>
+            <p style="line-height: 1.7; font-size: 0.9rem; color: var(--muted); margin-top: 10px;">
+              <strong>Geografia:</strong> Planície de Sinear (Babilônia). Dispersão para África, Europa, Ásia
+            </p>
+          </div>
+        </div>
+
+        <!-- Período 6: Patriarcas -->
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <span class="period-badge">~2100-1800 a.C.</span>
+            <h3 style="color: var(--accent2); margin-top: 10px;">Era Patriarcal (Gênesis 12-50)</h3>
+            <p style="line-height: 1.7; color: var(--muted);">
+              <strong>Contexto:</strong> Deus chama Abraão e estabelece a aliança. Promessa de terra, descendência e bênção. Formação do povo de Israel.
+            </p>
+            <p style="line-height: 1.7; font-size: 0.95rem;">
+              <strong>Eventos-chave:</strong><br>
+              • Chamado de Abraão (Gn 12)<br>
+              • Aliança Abraâmica (Gn 15, 17)<br>
+              • Sacrifício de Isaque (Gn 22)<br>
+              • Jacó e as 12 tribos (Gn 25-35)<br>
+              • José no Egito (Gn 37-50)
+            </p>
+            <p style="line-height: 1.7; font-size: 0.9rem; color: var(--muted); margin-top: 10px;">
+              <strong>Geografia:</strong> Ur dos Caldeus → Harã → Canaã → Egito. Crescente Fértil.
+            </p>
+          </div>
+        </div>
+
+        <!-- Período 7: Êxodo -->
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <span class="period-badge">~1446 a.C.</span>
+            <h3 style="color: var(--accent2); margin-top: 10px;">Êxodo e Peregrinação (Êxodo-Deuteronômio)</h3>
+            <p style="line-height: 1.7; color: var(--muted);">
+              <strong>Contexto:</strong> Libertação do Egito. Lei dada no Sinai. 40 anos no deserto. Preparação para Canaã.
+            </p>
+            <p style="line-height: 1.7; font-size: 0.95rem;">
+              <strong>Eventos-chave:</strong><br>
+              • As 10 pragas e a Páscoa<br>
+              • Travessia do Mar Vermelho<br>
+              • Lei no Monte Sinai<br>
+              • Construção do Tabernáculo<br>
+              • 40 anos no deserto
+            </p>
+            <p style="line-height: 1.7; font-size: 0.9rem; color: var(--muted); margin-top: 10px;">
+              <strong>Geografia:</strong> Egito → Península do Sinai → Deserto de Parã → Planícies de Moabe
+            </p>
+          </div>
+        </div>
+
+        <!-- Período 8: Conquista -->
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <span class="period-badge">~1406-1390 a.C.</span>
+            <h3 style="color: var(--accent2); margin-top: 10px;">Conquista de Canaã (Josué)</h3>
+            <p style="line-height: 1.7; color: var(--muted);">
+              <strong>Contexto:</strong> Entrada na Terra Prometida. Conquista militar sob Josué. Divisão da terra entre as tribos.
+            </p>
+            <p style="line-height: 1.7; font-size: 0.95rem;">
+              <strong>Eventos-chave:</strong><br>
+              • Travessia do Jordão<br>
+              • Queda de Jericó<br>
+              • Conquista de Ai e do sul de Canaã<br>
+              • Aliança com os gibeonitas<br>
+              • Divisão da terra
+            </p>
+            <p style="line-height: 1.7; font-size: 0.9rem; color: var(--muted); margin-top: 10px;">
+              <strong>Geografia:</strong> Canaã (atual Israel/Palestina). Cidades-estado cananitas
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Maps Section -->
+    <div class="section" style="margin-top: 60px;">
+      <h2 style="color: var(--accent); text-align: center; margin-bottom: 40px;">🗺️ Mapas Históricos</h2>
+      
+      <div class="map-grid">
+        <div class="map-card">
+          <img src="/contexto/mapas/eden-location.jpg" alt="Mapa do Jardim do Éden" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+          <h3 style="color: var(--accent2); margin-top: 0;">O Jardim do Éden</h3>
+          <p style="line-height: 1.7; font-size: 0.95rem;">
+            Localização provável na Mesopotâmia, região dos rios Tigre e Eufrates. Primeiro santuário de Deus na terra.
+          </p>
+        </div>
+
+        <div class="map-card">
+          <div class="map-placeholder">
+            🌊 Mundo Pré-Diluviano<br>Geografia Antiga
+          </div>
+          <h3 style="color: var(--accent2); margin-top: 0;">Mundo Pré-Diluviano</h3>
+          <p style="line-height: 1.7; font-size: 0.95rem;">
+            Geografia antes do Dilúvio. Possível continente único (Pangeia). Clima subtropical global.
+          </p>
+        </div>
+
+        <div class="map-card">
+          <div class="map-placeholder">
+            🗼 Torre de Babel<br>Planície de Sinear
+          </div>
+          <h3 style="color: var(--accent2); margin-top: 0;">Torre de Babel e Dispersão</h3>
+          <p style="line-height: 1.7; font-size: 0.95rem;">
+            Planície de Sinear (Babilônia). Dispersão das nações para África, Europa e Ásia após confusão das línguas.
+          </p>
+        </div>
+
+        <div class="map-card">
+          <img src="/contexto/mapas/ancient-near-east.gif" alt="Mapa do Antigo Oriente Próximo" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+          <h3 style="color: var(--accent2); margin-top: 0;">Jornada dos Patriarcas</h3>
+          <p style="line-height: 1.7; font-size: 0.95rem;">
+            Rota: Ur → Harã → Canaã → Egito. Crescente Fértil. Impérios da época: Egito, Babilônia, Assíria.
+          </p>
+        </div>
+
+        <div class="map-card">
+          <div class="map-placeholder">
+            🔴 Rota do Êxodo<br>Egito ao Sinai
+          </div>
+          <h3 style="color: var(--accent2); margin-top: 0;">Êxodo e Peregrinação</h3>
+          <p style="line-height: 1.7; font-size: 0.95rem;">
+            Saída do Egito, travessia do Mar Vermelho, Monte Sinai, 40 anos no deserto até Canaã.
+          </p>
+        </div>
+
+        <div class="map-card">
+          <div class="map-placeholder">
+            ⚔️ Conquista de Canaã<br>Campanhas Militares
+          </div>
+          <h3 style="color: var(--accent2); margin-top: 0;">Conquista de Canaã</h3>
+          <p style="line-height: 1.7; font-size: 0.95rem;">
+            Campanhas militares: Central (Jericó, Ai), Sul (Hebrom), Norte (Hazor). Divisão tribal da terra.
+          </p>
+        </div>
+      </div>
+
+      <div style="margin-top: 40px; padding: 20px; background: rgba(0,0,0,.18); border: 1px solid var(--line); border-radius: 12px; text-align: center;">
+        <p style="color: var(--muted); font-size: 0.9rem; margin: 0;">
+          💡 <strong>Nota:</strong> Mapas detalhados em alta resolução serão adicionados em breve. Esta seção está em desenvolvimento contínuo.
+        </p>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div style="margin-top: 40px; padding: 20px; background: rgba(0,0,0,.18); border: 1px solid var(--line); border-radius: 18px;">
+      <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+        <a href="/" class="btn">← Voltar ao Início</a>
+        <a href="/02-pentateuco/genesis/" class="btn primary">Começar em Gênesis →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2025 365 de Graça & Adoração. Todos os direitos reservados.</p>
+  </div>
+</body>
+</html>

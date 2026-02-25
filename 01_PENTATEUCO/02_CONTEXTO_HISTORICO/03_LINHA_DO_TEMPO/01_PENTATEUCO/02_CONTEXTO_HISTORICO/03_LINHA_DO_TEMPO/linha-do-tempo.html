@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linha do Tempo — Adão até Noé (Gênesis 1–5)</title>
+    <meta
+      name="description"
+      content="Linha do tempo bíblica de Gênesis 1–5: criação, queda, primeiras gerações e genealogia de Sete até Noé, com leitura teológica e reflexões."
+    />
+    <style>
+      :root {
+        --bg: #0b0c10;
+        --card: #12141b;
+        --text: #e8e8ea;
+        --muted: #b7b9c4;
+        --line: rgba(255, 255, 255, 0.12);
+        --accent: #f5d06f;
+        --ok: #7ee787;
+        --warn: #ffb86b;
+        --danger: #ff6b6b;
+        --radius: 18px;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        --max: 980px;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        background: radial-gradient(1200px 600px at 20% -10%, rgba(245, 208, 111, 0.10), transparent 60%),
+                    radial-gradient(900px 500px at 100% 0%, rgba(126, 231, 135, 0.08), transparent 55%),
+                    var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      a { color: inherit; text-decoration: none; }
+      .wrap { max-width: var(--max); margin: 0 auto; padding: 26px 18px 60px; }
+
+      header {
+        padding: 18px 0 10px;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 12px;
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.03);
+        border-radius: 999px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .title {
+        margin: 14px 0 6px;
+        font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+        letter-spacing: -0.02em;
+      }
+      .subtitle {
+        margin: 0 0 18px;
+        color: var(--muted);
+        max-width: 65ch;
+      }
+
+      .grid {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 18px;
+      }
+
+      .card h2 {
+        margin: 0 0 10px;
+        font-size: 1.15rem;
+        letter-spacing: -0.01em;
+      }
+
+      .muted { color: var(--muted); }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+      }
+      .chip {
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(0,0,0,0.18);
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      /* Timeline */
+      .timeline {
+        position: relative;
+        margin: 10px 0 0;
+        padding-left: 18px;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 6px;
+        top: 6px;
+        bottom: 6px;
+        width: 2px;
+        background: var(--line);
+      }
+      .event {
+        position: relative;
+        padding: 14px 14px 14px 18px;
+        margin: 12px 0;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: rgba(0,0,0,0.18);
+      }
+      .event::before {
+        content: "";
+        position: absolute;
+        left: -16px;
+        top: 18px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 0 6px rgba(245, 208, 111, 0.10);
+      }
+      .event h3 {
+        margin: 0 0 6px;
+        font-size: 1.02rem;
+      }
+      .tag {
+        display: inline-block;
+        margin-left: 8px;
+        padding: 2px 8px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        font-size: 0.82rem;
+        color: var(--muted);
+        vertical-align: middle;
+      }
+      .tag.ok { border-color: rgba(126,231,135,0.35); color: var(--ok); }
+      .tag.warn { border-color: rgba(255,184,107,0.35); color: var(--warn); }
+      .tag.danger { border-color: rgba(255,107,107,0.35); color: var(--danger); }
+
+      ul { margin: 10px 0 0; padding-left: 18px; }
+      li { margin: 6px 0; }
+
+      /* Table */
+      .table-wrap {
+        overflow-x: auto;
+        border-radius: 14px;
+        border: 1px solid var(--line);
+        background: rgba(0,0,0,0.18);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 560px;
+      }
+      th, td {
+        padding: 12px 12px;
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+      }
+      th {
+        color: var(--muted);
+        font-weight: 600;
+        font-size: 0.92rem;
+      }
+      tr:last-child td { border-bottom: none; }
+
+      footer {
+        margin-top: 18px;
+        color: var(--muted);
+        font-size: 0.92rem;
+        text-align: center;
+      }
+
+      @media (min-width: 860px) {
+        .grid {
+          grid-template-columns: 1.15fr 0.85fr;
+          align-items: start;
+        }
+      }
+
+      /* Print */
+      @media print {
+        body { background: #fff; color: #000; }
+        .card, .event, .table-wrap { box-shadow: none; background: #fff; }
+        .badge, .chip, .tag { border-color: #ccc; color: #333; }
+      }
+    </style>
+    <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+
+  <body>
+    <main class="wrap">
+      <header>
+        <div class="badge">
+          <span>📖 Gênesis 1–5</span>
+          <span class="muted">• Período Antediluviano</span>
+          <span class="muted">• Adão → Noé</span>
+        </div>
+
+        <h1 class="title">Linha do Tempo — De Adão até Noé</h1>
+        <p class="subtitle">
+          Uma leitura histórica e teológica dos primeiros capítulos de Gênesis:
+          criação, queda, primeiras gerações, preservação da linhagem de Sete e a
+          transição para o juízo do dilúvio.
+        </p>
+      </header>
+
+      <section class="grid">
+        <!-- Coluna principal -->
+        <article class="card">
+          <h2>🕰️ Visão Geral</h2>
+          <p class="muted">
+            Este recorte cobre o caminho de Gênesis 1–5 até a chegada de Noé,
+            preparando a transição para Gênesis 6 (dilúvio).
+          </p>
+
+          <div class="chips" aria-label="Resumo rápido">
+            <span class="chip">Criação</span>
+            <span class="chip">Queda</span>
+            <span class="chip">Corrupção</span>
+            <span class="chip">Preservação</span>
+            <span class="chip">Juízo iminente</span>
+          </div>
+
+          <div class="timeline" aria-label="Linha do tempo">
+            <div class="event">
+              <h3>1) Criação e ordem (Gn 1–2) <span class="tag ok">início</span></h3>
+              <ul>
+                <li>Criação do homem e da mulher</li>
+                <li>Jardim do Éden e comunhão direta com Deus</li>
+                <li>Missão humana: cultivar, guardar e obedecer</li>
+              </ul>
+            </div>
+
+            <div class="event">
+              <h3>2) Queda e ruptura (Gn 3) <span class="tag danger">queda</span></h3>
+              <ul>
+                <li>Entrada do pecado e separação espiritual</li>
+                <li>Início da morte como consequência</li>
+                <li>Primeiro anúncio de esperança: promessa (Gn 3:15)</li>
+              </ul>
+            </div>
+
+            <div class="event">
+              <h3>3) Primeira violência (Gn 4) <span class="tag danger">corrupção</span></h3>
+              <ul>
+                <li>Caim mata Abel: pecado se intensifica</li>
+                <li>Linhagem de Caim: cultura e avanço humano com crise moral</li>
+                <li>Nascimento de Sete: continuidade da promessa</li>
+              </ul>
+            </div>
+
+            <div class="event">
+              <h3>4) Início da adoração pública (Gn 4:26) <span class="tag ok">marco</span></h3>
+              <ul>
+                <li>“Então se começou a invocar o nome do Senhor”</li>
+                <li>Sinal de busca e identidade espiritual em meio ao caos</li>
+              </ul>
+            </div>
+
+            <div class="event">
+              <h3>5) Genealogia de Sete até Noé (Gn 5) <span class="tag warn">ponte</span></h3>
+              <ul>
+                <li>Adão → Sete → Enos → Cainã → Maalalel → Jarede → Enoque → Matusalém → Lameque → Noé</li>
+                <li>Repetição “viveu… gerou… e morreu” destaca a realidade da morte</li>
+                <li>Exceção: Enoque “andou com Deus” e foi tomado por Deus</li>
+              </ul>
+            </div>
+
+            <div class="event">
+              <h3>6) Transição para o juízo (Gn 6) <span class="tag warn">transição</span></h3>
+              <ul>
+                <li>Humanidade cresce e o pecado se expande</li>
+                <li>Noé surge como figura-chave para o novo ciclo histórico</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Coluna lateral -->
+        <aside class="card">
+          <h2>📜 Dados Cronológicos (Gn 5)</h2>
+          <p class="muted">Idade ao gerar o próximo da linhagem (conforme o texto bíblico).</p>
+
+          <div class="table-wrap" role="region" aria-label="Tabela cronológica" tabindex="0">
+            <table>
+              <thead>
+                <tr>
+                  <th>Personagem</th>
+                  <th>Idade ao gerar</th>
+                  <th>Destaque</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Adão</td><td>130</td><td>Pós-queda</td></tr>
+                <tr><td>Sete</td><td>105</td><td>Linha da promessa</td></tr>
+                <tr><td>Enos</td><td>90</td><td>Invocação do Senhor</td></tr>
+                <tr><td>Cainã</td><td>70</td><td>Continuidade</td></tr>
+                <tr><td>Maalalel</td><td>65</td><td>—</td></tr>
+                <tr><td>Jarede</td><td>162</td><td>—</td></tr>
+                <tr><td>Enoque</td><td>65</td><td>Andou com Deus</td></tr>
+                <tr><td>Matusalém</td><td>187</td><td>Maior longevidade</td></tr>
+                <tr><td>Lameque</td><td>182</td><td>Pai de Noé</td></tr>
+                <tr><td>Noé</td><td>500</td><td>Pré-dilúvio</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 style="margin-top:16px;">🧠 Leitura Teológica</h2>
+          <ul>
+            <li><strong>Progressão do pecado:</strong> desobediência → violência → corrupção.</li>
+            <li><strong>Fidelidade de Deus:</strong> a linhagem é preservada, a promessa continua.</li>
+            <li><strong>Dois caminhos:</strong> Caim vs. Sete (rebelião vs. busca por Deus).</li>
+            <li><strong>Tempo e juízo:</strong> Deus é paciente, mas justo.</li>
+          </ul>
+
+          <h2 style="margin-top:16px;">🔥 Reflexões</h2>
+          <ol>
+            <li>Estou vivendo ou andando com Deus?</li>
+            <li>Qual legado estou deixando?</li>
+            <li>Minha fé é real ou apenas herdada?</li>
+            <li>Estou atento aos sinais espirituais?</li>
+            <li>Estou construindo algo eterno?</li>
+            <li>Minha vida reflete Deus ou o mundo?</li>
+            <li>Estou preparado para o encontro com Deus?</li>
+            <li>Estou rompendo ciclos ou repetindo erros?</li>
+            <li>Minha geração será lembrada por quê?</li>
+            <li>Deus encontraria fé em mim hoje?</li>
+          </ol>
+        </aside>
+      </section>
+<div style="margin-top:30px; display:flex; justify-content:space-between;">
+  <a href="../02_Genesis_Historico/02_Linha_Genealogica_Genesis_5.html">
+
+    ← Capítulo anterior
+  </a>
+
+  <a href="../03_Resumo_Teologico/Resumo_Genesis_1_5.html">
+    Próximo → 
+  </a>
+</div>
+      <footer>
+        <p>Projeto 365 Graça &amp; Adoração • Gênesis 1–5 • Linha do Tempo até Noé</p>
+      </footer>
+    </main>
+  </body>
+</html>

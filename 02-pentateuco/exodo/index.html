@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Êxodo — 365 de Graça & Adoração</title>
+  <meta name="description" content="Estudos profundos do livro de Êxodo: 40 capítulos com análise versículo por versículo, contexto histórico e mapas">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    .exodus-index {
+      max-width: 1400px;
+      margin: 2rem auto;
+      padding: 2rem;
+    }
+    .exodus-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      border-radius: 15px;
+    }
+    .exodus-title {
+      font-size: 3rem;
+      color: #4a90e2;
+      margin-bottom: 1rem;
+    }
+    .exodus-subtitle {
+      font-size: 1.3rem;
+      color: #b0b0b0;
+      margin-bottom: 1.5rem;
+    }
+    .exodus-description {
+      font-size: 1.1rem;
+      color: #e0e0e0;
+      line-height: 1.8;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .study-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    
+    .option-card {
+      background: linear-gradient(135deg, #1a2332 0%, #2a3f5f 100%);
+      border: 2px solid #4a90e2;
+      border-radius: 12px;
+      padding: 2.5rem;
+      text-align: center;
+      transition: all 0.3s;
+    }
+    
+    .option-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(74, 144, 226, 0.4);
+    }
+    
+    .option-icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+    
+    .option-title {
+      font-size: 1.8rem;
+      color: #5dade2;
+      margin-bottom: 1rem;
+    }
+    
+    .option-description {
+      color: #e0e0e0;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    
+    .chapters-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    
+    .chapter-link {
+      display: block;
+      padding: 1.5rem 1rem;
+      background: linear-gradient(135deg, #1a2332 0%, #0f1a2e 100%);
+      border: 2px solid #2a3f5f;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    
+    .chapter-link:hover {
+      background: linear-gradient(135deg, #2a3f5f 0%, #1a2332 100%);
+      border-color: #4a90e2;
+      transform: scale(1.05);
+    }
+    
+    .chapter-number {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #4a90e2;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    
+    .chapter-label {
+      font-size: 0.9rem;
+      color: #b0b0b0;
+    }
+    
+    .blocks-section {
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 2px solid #2a3f5f;
+    }
+    
+    .section-title {
+      font-size: 2rem;
+      color: #5dade2;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    
+    .blocks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .block-card {
+      background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+      border: 2px solid #4a90e2;
+      border-radius: 12px;
+      padding: 2rem;
+      transition: all 0.3s;
+    }
+    
+    .block-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(74, 144, 226, 0.3);
+    }
+    
+    .block-number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #4a90e2;
+      opacity: 0.3;
+      margin-bottom: 0.5rem;
+    }
+    
+    .block-title {
+      font-size: 1.6rem;
+      color: #4a90e2;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+    
+    .block-chapters {
+      font-size: 1rem;
+      color: #888;
+      margin-bottom: 1rem;
+    }
+    
+    .block-description {
+      color: #e0e0e0;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    
+    .block-link {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: #4a90e2;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+    
+    .block-link:hover {
+      background: #5aa3f0;
+    }
+    
+    @media (max-width: 768px) {
+      .chapters-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 0.75rem;
+      }
+      .chapter-link {
+        padding: 1rem 0.5rem;
+      }
+      .chapter-number {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/" class="logo">📖 365 de Graça & Adoração</a>
+      <div class="nav-links">
+        <a href="/">Início</a>
+        <a href="/sobre.html">Sobre</a>
+        <a href="/referencias.html">Referências</a>
+        <a href="/biblia/index.html">Bíblia</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="exodus-index">
+    <div class="exodus-header">
+      <h1 class="exodus-title">📜 ÊXODO</h1>
+      <p class="exodus-subtitle">O Livro da Libertação e da Aliança</p>
+      <p class="exodus-description">
+        Êxodo narra a história da libertação de Israel da escravidão egípcia, a revelação da Lei no Monte Sinai 
+        e a construção do Tabernáculo. É um livro fundamental sobre redenção, aliança e a presença de Deus entre Seu povo.
+      </p>
+    </div>
+
+    <div class="study-options">
+      <div class="option-card">
+        <div class="option-icon">📖</div>
+        <h2 class="option-title">Estudos por Capítulo</h2>
+        <p class="option-description">
+          Análise versículo por versículo de cada capítulo, com contexto histórico detalhado, 
+          mapas das localidades e aplicações práticas.
+        </p>
+      </div>
+      
+      <div class="option-card">
+        <div class="option-icon">🎯</div>
+        <h2 class="option-title">Estudos por Blocos Temáticos</h2>
+        <p class="option-description">
+          Visão panorâmica organizada em 6 blocos temáticos que agrupam os capítulos 
+          por assuntos principais e eventos históricos.
+        </p>
+      </div>
+    </div>
+
+    <h2 class="section-title">📚 Todos os 40 Capítulos de Êxodo</h2>
+    <p style="text-align: center; color: #b0b0b0; margin-bottom: 2rem;">
+      Clique em qualquer capítulo para acessar o estudo completo versículo por versículo
+    </p>
+    
+    <div class="chapters-grid">
+      <a href="/02-pentateuco/exodo/capitulo-01/index.html" class="chapter-link">
+        <span class="chapter-number">1</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-02/index.html" class="chapter-link">
+        <span class="chapter-number">2</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-03/index.html" class="chapter-link">
+        <span class="chapter-number">3</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-04/index.html" class="chapter-link">
+        <span class="chapter-number">4</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-05/index.html" class="chapter-link">
+        <span class="chapter-number">5</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-06/index.html" class="chapter-link">
+        <span class="chapter-number">6</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-07/index.html" class="chapter-link">
+        <span class="chapter-number">7</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-08/index.html" class="chapter-link">
+        <span class="chapter-number">8</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-09/index.html" class="chapter-link">
+        <span class="chapter-number">9</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-10/index.html" class="chapter-link">
+        <span class="chapter-number">10</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-11/index.html" class="chapter-link">
+        <span class="chapter-number">11</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-12/index.html" class="chapter-link">
+        <span class="chapter-number">12</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-13/index.html" class="chapter-link">
+        <span class="chapter-number">13</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-14/index.html" class="chapter-link">
+        <span class="chapter-number">14</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-15/index.html" class="chapter-link">
+        <span class="chapter-number">15</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-16/index.html" class="chapter-link">
+        <span class="chapter-number">16</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-17/index.html" class="chapter-link">
+        <span class="chapter-number">17</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-18/index.html" class="chapter-link">
+        <span class="chapter-number">18</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-19/index.html" class="chapter-link">
+        <span class="chapter-number">19</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-20/index.html" class="chapter-link">
+        <span class="chapter-number">20</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-21/index.html" class="chapter-link">
+        <span class="chapter-number">21</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-22/index.html" class="chapter-link">
+        <span class="chapter-number">22</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-23/index.html" class="chapter-link">
+        <span class="chapter-number">23</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-24/index.html" class="chapter-link">
+        <span class="chapter-number">24</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-25/index.html" class="chapter-link">
+        <span class="chapter-number">25</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-26/index.html" class="chapter-link">
+        <span class="chapter-number">26</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-27/index.html" class="chapter-link">
+        <span class="chapter-number">27</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-28/index.html" class="chapter-link">
+        <span class="chapter-number">28</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-29/index.html" class="chapter-link">
+        <span class="chapter-number">29</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-30/index.html" class="chapter-link">
+        <span class="chapter-number">30</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-31/index.html" class="chapter-link">
+        <span class="chapter-number">31</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-32/index.html" class="chapter-link">
+        <span class="chapter-number">32</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-33/index.html" class="chapter-link">
+        <span class="chapter-number">33</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-34/index.html" class="chapter-link">
+        <span class="chapter-number">34</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-35/index.html" class="chapter-link">
+        <span class="chapter-number">35</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-36/index.html" class="chapter-link">
+        <span class="chapter-number">36</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-37/index.html" class="chapter-link">
+        <span class="chapter-number">37</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-38/index.html" class="chapter-link">
+        <span class="chapter-number">38</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-39/index.html" class="chapter-link">
+        <span class="chapter-number">39</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+      <a href="/02-pentateuco/exodo/capitulo-40/index.html" class="chapter-link">
+        <span class="chapter-number">40</span>
+        <span class="chapter-label">Capítulo</span>
+      </a>
+    </div>
+
+    <div class="blocks-section">
+      <h2 class="section-title">🎯 Estudos por Blocos Temáticos</h2>
+      <p style="text-align: center; color: #b0b0b0; margin-bottom: 2rem;">
+        Visão panorâmica dos principais temas e eventos de Êxodo
+      </p>
+      
+      <div class="blocks-grid">
+        <div class="block-card">
+          <div class="block-number">01</div>
+          <h3 class="block-title">O Chamado e a Missão</h3>
+          <p class="block-chapters">Êxodo 1-4</p>
+          <p class="block-description">
+            A opressão no Egito, o nascimento de Moisés e seu chamado divino na sarça ardente.
+          </p>
+          <a href="/02-pentateuco/exodo/bloco-01/index.html" class="block-link">Estudar Bloco 01 →</a>
+        </div>
+
+        <div class="block-card">
+          <div class="block-number">02</div>
+          <h3 class="block-title">As Pragas e o Confronto</h3>
+          <p class="block-chapters">Êxodo 5-11</p>
+          <p class="block-description">
+            O confronto com Faraó e as dez pragas que demonstram o poder de Deus sobre o Egito.
+          </p>
+          <a href="/02-pentateuco/exodo/bloco-02/index.html" class="block-link">Estudar Bloco 02 →</a>
+        </div>
+
+        <div class="block-card">
+          <div class="block-number">03</div>
+          <h3 class="block-title">A Libertação e o Mar Vermelho</h3>
+          <p class="block-chapters">Êxodo 12-15</p>
+          <p class="block-description">
+            A Páscoa, a saída do Egito e a travessia milagrosa do Mar Vermelho.
+          </p>
+          <a href="/02-pentateuco/exodo/bloco-03/index.html" class="block-link">Estudar Bloco 03 →</a>
+        </div>
+
+        <div class="block-card">
+          <div class="block-number">04</div>
+          <h3 class="block-title">As Provações no Deserto</h3>
+          <p class="block-chapters">Êxodo 16-18</p>
+          <p class="block-description">
+            O maná, a água da rocha e as primeiras lições de fé no deserto.
+          </p>
+          <a href="/02-pentateuco/exodo/bloco-04/index.html" class="block-link">Estudar Bloco 04 →</a>
+        </div>
+
+        <div class="block-card">
+          <div class="block-number">05</div>
+          <h3 class="block-title">A Aliança no Sinai</h3>
+          <p class="block-chapters">Êxodo 19-24</p>
+          <p class="block-description">
+            A revelação da Lei, os Dez Mandamentos e a ratificação da aliança com Israel.
+          </p>
+          <a href="/02-pentateuco/exodo/bloco-05/index.html" class="block-link">Estudar Bloco 05 →</a>
+        </div>
+
+        <div class="block-card">
+          <div class="block-number">06</div>
+          <h3 class="block-title">O Tabernáculo e a Presença Divina</h3>
+          <p class="block-chapters">Êxodo 25-40</p>
+          <p class="block-description">
+            As instruções detalhadas para o Tabernáculo e a manifestação da glória de Deus.
+          </p>
+          <a href="/02-pentateuco/exodo/bloco-06/index.html" class="block-link">Estudar Bloco 06 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer style="margin-top: 4rem; padding: 2rem; background: #141824; border-top: 1px solid #2a3f5f; text-align: center; color: #b0b0b0;">
+    <p>© 2025 365 de Graça & Adoração | Estudos Bíblicos Profundos</p>
+    <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+      <a href="/biblia/index.html" style="color: #5dade2; text-decoration: none;">Bíblia Completa (ACF)</a> | 
+      <a href="/referencias.html" style="color: #5dade2; text-decoration: none;">Referências</a>
+    </p>
+  </footer>
+</body>
+</html>
