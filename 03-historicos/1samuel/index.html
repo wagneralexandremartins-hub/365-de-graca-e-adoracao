@@ -3,12 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>1 Samuel — 365 de Graça &amp; Adoração</title>
-  <meta name="description" content="Estudo completo do livro de 1 Samuel — em desenvolvimento no projeto 365 de Graça &amp; Adoração.">
+  <meta name="description" content="Estudo do livro de 1 Samuel no Projeto 365 de Graça &amp; Adoração: contexto histórico, linha do tempo, personagens, temas teológicos e capítulos (em desenvolvimento).">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+
+  <link rel="canonical" href="https://365gracaeadoracao.com/03-historicos/1samuel/" />
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="365 de Graça & Adoração">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="1 Samuel — 365 de Graça & Adoração">
+  <meta property="og:description" content="Contexto histórico, linha do tempo, personagens, temas e capítulos do livro de 1 Samuel (em desenvolvimento).">
+  <meta property="og:url" content="https://365gracaeadoracao.com/03-historicos/1samuel/">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="1 Samuel — 365 de Graça & Adoração">
+  <meta name="twitter:description" content="Contexto histórico, linha do tempo, personagens, temas e capítulos do livro de 1 Samuel (em desenvolvimento).">
+
+  <!-- JSON-LD (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"1 Samuel — 365 de Graça & Adoração",
+    "url":"https://365gracaeadoracao.com/03-historicos/1samuel/",
+    "description":"Contexto histórico, linha do tempo, personagens, temas teológicos e capítulos do livro de 1 Samuel (em desenvolvimento).",
+    "isPartOf":{
+      "@type":"WebSite",
+      "name":"365 de Graça & Adoração",
+      "url":"https://365gracaeadoracao.com/"
+    }
+  }
+  </script>
+
   <style>
+    /* Seus estilos locais (mantidos e melhorados) */
     .em-breve-badge {
       display: inline-block;
       background: linear-gradient(135deg, #f4a261, #e76f51);
@@ -27,16 +61,16 @@
       border-radius: 16px;
       padding: 40px;
       text-align: center;
-      margin: 40px 0;
+      margin: 32px 0;
     }
     .em-breve-box h2 { font-size: 1.8rem; margin-bottom: 12px; }
-    .em-breve-box p { opacity: 0.8; max-width: 600px; margin: 0 auto 20px; line-height: 1.7; }
+    .em-breve-box p { opacity: 0.86; max-width: 760px; margin: 0 auto 14px; line-height: 1.7; }
     .progresso-bar {
       background: rgba(255,255,255,0.1);
       border-radius: 8px;
       height: 8px;
-      margin: 20px auto;
-      max-width: 400px;
+      margin: 18px auto 10px;
+      max-width: 420px;
       overflow: hidden;
     }
     .progresso-fill {
@@ -45,34 +79,120 @@
       width: 15%;
       border-radius: 8px;
     }
+
+    /* NOVO: Bloco de conteúdo real (para indexação/credibilidade) */
+    .content-box {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 16px;
+      padding: 26px;
+      margin: 26px 0 18px;
+    }
+    .content-box h2 {
+      margin: 0 0 10px;
+      font-size: 1.25rem;
+      letter-spacing: .2px;
+    }
+    .content-box p {
+      margin: 0 0 12px;
+      opacity: .88;
+      line-height: 1.8;
+      max-width: 900px;
+    }
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+      margin-top: 12px;
+    }
+    .mini-card {
+      grid-column: span 6;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 14px;
+      padding: 16px;
+    }
+    .mini-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+    .mini-card ul {
+      margin: 0;
+      padding-left: 18px;
+      opacity: .88;
+      line-height: 1.8;
+    }
+    @media (max-width: 820px) {
+      .mini-card { grid-column: span 12; }
+      .em-breve-box { padding: 26px; }
+      .content-box { padding: 20px; }
+    }
+
+    /* Capítulos: agora com botões clicáveis (disabled) */
     .caps-preview {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
       gap: 10px;
-      margin-top: 30px;
-      opacity: 0.5;
+      margin-top: 16px;
     }
     .cap-preview-item {
-      background: rgba(255,255,255,0.08);
-      border-radius: 8px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 10px;
       padding: 12px 8px;
       text-align: center;
       font-size: 0.85rem;
-      border: 1px solid rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.10);
+      transition: transform .15s ease, border-color .15s ease, background .15s ease;
+      user-select: none;
     }
-    .cap-preview-item .num { font-weight: 700; font-size: 1rem; }
+    .cap-preview-item .num { font-weight: 800; font-size: 1rem; }
+    .cap-preview-item .status { opacity: .75; }
+
+    .cap-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      outline: none;
+    }
+    .cap-link:focus-visible .cap-preview-item {
+      border-color: rgba(244,162,97,0.75);
+      box-shadow: 0 0 0 3px rgba(244,162,97,0.18);
+    }
+    .cap-preview-item:hover {
+      transform: translateY(-1px);
+      background: rgba(255,255,255,0.075);
+      border-color: rgba(255,255,255,0.18);
+    }
+    /* Estado "em breve": mantém bonito e impede clique */
+    .cap-link[aria-disabled="true"] {
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+    .cap-link[aria-disabled="true"] .cap-preview-item {
+      opacity: 0.55;
+    }
+
+    /* Breadcrumb simples */
+    .breadcrumbs {
+      margin: 16px 0 0;
+      font-size: 0.95rem;
+      opacity: .85;
+    }
+    .breadcrumbs a { color: inherit; text-decoration: none; border-bottom: 1px dotted rgba(255,255,255,.25); }
+    .breadcrumbs a:hover { border-bottom-color: rgba(255,255,255,.55); }
   </style>
 </head>
+
 <body>
   <div class="topbar">
     <div class="inner">
-      <a href="/" class="brand">
+      <a href="/" class="brand" aria-label="Voltar para a página inicial">
         <img src="/assets/img/logo-header.png" alt="365 Graça &amp; Adoração" style="height:48px;width:auto;display:block;">
       </a>
       <nav class="nav" aria-label="Navegação principal">
         <a href="/">Início</a>
         <a href="/03-historicos/index.html">Livros Históricos</a>
-        <a class="active" href="/03-historicos/1samuel/index.html">1 Samuel</a>
+        <a class="active" href="/03-historicos/1samuel/index.html" aria-current="page">1 Samuel</a>
       </nav>
     </div>
   </div>
@@ -84,14 +204,21 @@
           <span class="pill">👑 Livros Históricos</span>
           <h1>1 Samuel</h1>
           <p class="hero-description">Do Último Juiz ao Primeiro Rei de Israel</p>
-          <blockquote style="border-left:4px solid rgba(255,255,255,0.4);padding-left:16px;margin:20px 0;font-style:italic;color:rgba(255,255,255,0.85);">
+
+          <div class="breadcrumbs" aria-label="Caminho de navegação">
+            <a href="/">Início</a> &nbsp;›&nbsp;
+            <a href="/03-historicos/index.html">Livros Históricos</a> &nbsp;›&nbsp;
+            <span>1 Samuel</span>
+          </div>
+
+          <blockquote style="border-left:4px solid rgba(255,255,255,0.4);padding-left:16px;margin:20px 0 0;font-style:italic;color:rgba(255,255,255,0.85);">
             "Falai, Senhor, porque o vosso servo ouve." — 1 Samuel 3:10
           </blockquote>
         </div>
       </div>
     </section>
 
-    <div class="info-bar">
+    <div class="info-bar" role="region" aria-label="Informações rápidas do livro">
       <div class="info-item"><div class="num">31</div><div class="label">Capítulos</div></div>
       <div class="info-item"><div class="num">810</div><div class="label">Versículos</div></div>
       <div class="info-item"><div class="num">~1100–1010 a.C.</div><div class="label">Período Histórico</div></div>
@@ -99,50 +226,172 @@
     </div>
 
     <div class="container-main">
+
+      <!-- ✅ NOVO: Conteúdo real (para SEO + credibilidade) -->
+      <section class="content-box" aria-label="Contexto e visão geral de 1 Samuel">
+        <h2>📜 Contexto Histórico</h2>
+        <p>
+          O livro de <strong>1 Samuel</strong> registra uma das transições mais decisivas da história de Israel:
+          a passagem do período dos juízes para a monarquia. Em meio a instabilidade espiritual e política,
+          Deus levanta <strong>Samuel</strong> como profeta e líder, conduzindo o povo a ouvir novamente a voz do Senhor.
+        </p>
+        <p>
+          O texto apresenta a ascensão de <strong>Saul</strong>, o primeiro rei, e também prepara o caminho para
+          <strong>Davi</strong>, evidenciando que a liderança em Israel não depende apenas de aparência, força ou
+          estratégia — mas de <strong>obediência</strong> e <strong>temor</strong> ao Senhor.
+        </p>
+
+        <div class="content-grid" role="list">
+          <div class="mini-card" role="listitem">
+            <h3>🧭 Linha geral do livro</h3>
+            <ul>
+              <li>Samuel: nascimento, chamado e liderança espiritual</li>
+              <li>Saul: unção, início do reinado e queda por desobediência</li>
+              <li>Davi: unção e primeiros passos rumo ao reino</li>
+            </ul>
+          </div>
+          <div class="mini-card" role="listitem">
+            <h3>✝️ Temas teológicos</h3>
+            <ul>
+              <li>A soberania de Deus sobre reis e nações</li>
+              <li>Obediência acima de religiosidade vazia</li>
+              <li>Liderança segundo o coração de Deus</li>
+              <li>Discernimento espiritual em tempos de crise</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seu bloco "Em desenvolvimento" (mantido) -->
       <div class="em-breve-box">
         <div class="em-breve-badge">Em Desenvolvimento</div>
         <h2>Estudo Completo em Preparação</h2>
-        <p>O estudo detalhado do livro de <strong>1 Samuel</strong> está sendo preparado com análise versículo por versículo, contexto histórico aprofundado, mapas das localidades e dissertações teológicas extensas — seguindo o mesmo padrão dos livros já publicados.</p>
-        <p>Em breve todos os <strong>31 capítulos</strong> estarão disponíveis com conteúdo completo. Acompanhe o progresso do projeto!</p>
-        <div class="progresso-bar"><div class="progresso-fill"></div></div>
-        <p style="font-size:0.85rem;opacity:0.6;">Conteúdo em desenvolvimento — volte em breve</p>
+        <p>
+          O estudo detalhado do livro de <strong>1 Samuel</strong> está sendo preparado com análise versículo por versículo,
+          contexto histórico aprofundado, mapas das localidades e dissertações teológicas extensas — seguindo o mesmo padrão
+          dos livros já publicados.
+        </p>
+        <p>
+          Em breve todos os <strong>31 capítulos</strong> estarão disponíveis com conteúdo completo.
+          Acompanhe o progresso do projeto!
+        </p>
+        <div class="progresso-bar" aria-label="Barra de progresso do conteúdo">
+          <div class="progresso-fill" aria-label="Progresso: 15%"></div>
+        </div>
+        <p style="font-size:0.85rem;opacity:0.65;">Conteúdo em desenvolvimento — volte em breve</p>
       </div>
 
       <div class="intro-box">
         <h2>Prévia dos Capítulos</h2>
-        <p>Quando concluído, este livro contará com <strong>31 capítulos</strong> de estudo completo, cada um com texto bíblico integral, contexto histórico, exegese versículo por versículo e aplicação prática.</p>
-        <div class="caps-preview">
-          <div class="cap-preview-item"><div class="num">Cap. 1</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 2</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 3</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 4</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 5</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 6</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 7</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 8</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 9</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 10</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 11</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 12</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 13</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 14</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 15</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 16</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 17</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 18</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 19</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 20</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 21</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 22</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 23</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 24</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 25</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 26</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 27</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 28</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 29</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 30</div><div>Em breve</div></div>
-          <div class="cap-preview-item"><div class="num">Cap. 31</div><div>Em breve</div></div>
+        <p>
+          Quando concluído, este livro contará com <strong>31 capítulos</strong> de estudo completo, cada um com texto bíblico
+          integral, contexto histórico, exegese versículo por versículo e aplicação prática.
+        </p>
+
+        <!-- ✅ Melhorado: já deixa “pronto” para virar link quando você criar os arquivos -->
+        <div class="caps-preview" aria-label="Lista de capítulos">
+          <!-- DICA: quando criar cap-01.html, só remova aria-disabled e pronto -->
+          <a class="cap-link" href="./cap-01.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 1</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-02.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 2</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-03.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 3</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-04.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 4</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-05.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 5</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-06.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 6</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-07.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 7</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-08.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 8</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-09.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 9</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-10.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 10</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-11.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 11</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-12.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 12</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-13.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 13</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-14.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 14</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-15.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 15</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-16.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 16</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-17.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 17</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-18.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 18</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-19.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 19</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-20.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 20</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-21.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 21</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-22.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 22</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-23.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 23</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-24.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 24</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-25.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 25</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-26.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 26</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-27.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 27</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-28.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 28</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-29.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 29</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-30.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 30</div><div class="status">Em breve</div></div>
+          </a>
+          <a class="cap-link" href="./cap-31.html" aria-disabled="true" title="Em breve">
+            <div class="cap-preview-item"><div class="num">Cap. 31</div><div class="status">Em breve</div></div>
+          </a>
+        </div>
+
+        <!-- ✅ CTA simples (ajuda muito em UX) -->
+        <div style="margin-top:18px; opacity:.85; line-height:1.7;">
+          <p style="margin:0;">
+            Quer começar por onde faz mais sentido?
+            <strong>Eu recomendo: Cap. 1</strong> (quando você publicar, ele vira o primeiro “pilar” de tráfego).
+          </p>
         </div>
       </div>
 
@@ -155,6 +404,7 @@
   <footer style="background:#0d1117; color:#8b949e; text-align:center; padding:20px; margin-top:40px; font-size:0.9em;">
     <p>365 de Graça &amp; Adoração · Projeto de Estudo Bíblico Completo</p>
   </footer>
+
   <script src="/assets/js/script.js"></script>
 </body>
 </html>
