@@ -164,13 +164,11 @@
       border-color: rgba(255,255,255,0.18);
     }
     /* Estado "em breve": mantém bonito e impede clique */
-    .cap-link[aria-disabled="true"] {
-      cursor: not-allowed;
-      pointer-events: none;
-    }
-    .cap-link[aria-disabled="true"] .cap-preview-item {
-      opacity: 0.55;
-    }
+  <a class="cap-link" href="./cap-01.html" title="Abrir Capítulo 1">
+  <div class="cap-preview-item">
+    <div class="num">Cap. 1</div><div class="status">Disponível</div>
+  </div>
+</a>
 
     /* Breadcrumb simples */
     .breadcrumbs {
