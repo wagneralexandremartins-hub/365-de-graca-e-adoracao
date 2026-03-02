@@ -488,3 +488,36 @@ a:focus-visible, button:focus-visible{
 .vtext{
   color: var(--text);
 }
+/* =========================================================
+   MAPA DAS LOCALIDADES
+   ========================================================= */
+.map-container {
+  margin: 28px 0;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  padding: 20px;
+}
+.map-container h3 {
+  margin: 0 0 14px;
+  font-size: 1.1rem;
+  color: var(--accent);
+  letter-spacing: .3px;
+}
+.map-container img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto 12px;
+  border: 1px solid rgba(255,255,255,0.10);
+}
+.map-caption {
+  font-size: 0.88rem;
+  opacity: 0.72;
+  text-align: center;
+  margin: 0;
+  line-height: 1.6;
+  font-style: italic;
+}
