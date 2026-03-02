@@ -521,3 +521,30 @@ a:focus-visible, button:focus-visible{
   line-height: 1.6;
   font-style: italic;
 }
+
+/* =========================================================
+   GRADE DE CAPÍTULOS
+   ========================================================= */
+.caps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+.cap-item {
+  background: rgba(255,255,255,0.08);
+  border-radius: 8px;
+  padding: 12px 8px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.2s ease;
+}
+.cap-item:hover {
+  background: rgba(0,168,225,.18);
+  border-color: rgba(0,168,225,.3);
+  transform: translateY(-2px);
+}
