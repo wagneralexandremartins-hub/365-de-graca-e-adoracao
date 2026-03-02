@@ -25,6 +25,13 @@
     { "source": "/03-historicos/capitulos/capitulo-21", "destination": "/03-historicos/josue/capitulos/capitulo-21", "permanent": true },
     { "source": "/03-historicos/capitulos/capitulo-22", "destination": "/03-historicos/josue/capitulos/capitulo-22", "permanent": true },
     { "source": "/03-historicos/capitulos/capitulo-23", "destination": "/03-historicos/josue/capitulos/capitulo-23", "permanent": true },
-    { "source": "/03-historicos/capitulos/capitulo-24", "destination": "/03-historicos/josue/capitulos/capitulo-24", "permanent": true }
+    { "source": "/03-historicos/capitulos/capitulo-24", "destination": "/03-historicos/josue/capitulos/capitulo-24", "permanent": true },
+    { "source": "/03-historicos/capitulos/capitulo-25", "destination": "/03-historicos/1samuel/capitulos/capitulo-25", "permanent": true },
+    { "source": "/03-historicos/capitulos/capitulo-26", "destination": "/03-historicos/1samuel/capitulos/capitulo-26", "permanent": true },
+    { "source": "/03-historicos/capitulos/capitulo-27", "destination": "/03-historicos/1samuel/capitulos/capitulo-27", "permanent": true },
+    { "source": "/03-historicos/capitulos/capitulo-28", "destination": "/03-historicos/1samuel/capitulos/capitulo-28", "permanent": true },
+    { "source": "/03-historicos/capitulos/capitulo-29", "destination": "/03-historicos/1samuel/capitulos/capitulo-29", "permanent": true },
+    { "source": "/03-historicos/capitulos/capitulo-30", "destination": "/03-historicos/1samuel/capitulos/capitulo-30", "permanent": true },
+    { "source": "/03-historicos/capitulos/capitulo-31", "destination": "/03-historicos/1samuel/capitulos/capitulo-31", "permanent": true }
   ]
 }
