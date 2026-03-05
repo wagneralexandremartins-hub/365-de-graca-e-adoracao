@@ -3,76 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jó 42 — A Rendição de Jó e a Restauração Divina — 'Agora os Meus Olhos te Veem' · 365 de Graça &amp; Adoração</title>
-  <meta name="description" content="Estudo de Jó capítulo 42 — O epílogo: Jó se rende, os amigos são repreendidos, e Jó é restaurado ao dobro">
+  <title>Jó 42 — A Restauração de Jó — O Epílogo em Prosa · 365 de Graça &amp; Adoração</title>
+  <meta name="description" content="Estudo versículo por versículo de Jó 42 — Jó se arrepende, intercede pelos amigos, e Deus restaura o dobro de tudo o que ele havia perdido">
   <link rel="stylesheet" href="/assets/css/style.css">
   <style>
     .chapter-hero {
       background: linear-gradient(135deg, rgba(255,140,0,0.14) 0%, rgba(0,0,0,0.3) 100%);
-      border: 1px solid rgba(255,140,0,0.22);
-      border-radius: 20px;
-      padding: 40px 32px;
-      margin-bottom: 30px;
-      text-align: center;
+      border: 1px solid rgba(255,140,0,0.22); border-radius: 20px;
+      padding: 40px 32px; margin-bottom: 30px; text-align: center;
     }
     .chapter-hero .bloco-tag {
-      display: inline-block;
-      background: rgba(255,140,0,0.15);
-      border: 1px solid rgba(255,140,0,0.30);
-      color: #ff8c00;
-      font-size: 0.80rem;
-      font-weight: 700;
-      padding: 5px 14px;
-      border-radius: 999px;
-      margin-bottom: 14px;
+      display: inline-block; background: rgba(255,140,0,0.15);
+      border: 1px solid rgba(255,140,0,0.30); color: #ff8c00;
+      font-size: 0.80rem; font-weight: 700; padding: 5px 14px;
+      border-radius: 999px; margin-bottom: 14px; letter-spacing: 0.5px;
     }
-    .chapter-hero h1 { font-size: 1.9rem; font-weight: 900; color: #ff8c00; margin: 0 0 8px 0; }
-    .chapter-hero .sub { color: #94a3b8; font-size: 1.0rem; margin-bottom: 20px; }
+    .chapter-hero h1 { font-size: 2.2rem; font-weight: 900; color: #ff8c00; margin: 0 0 8px 0; }
+    .chapter-hero .sub { color: #94a3b8; font-size: 1.05rem; margin-bottom: 20px; }
     .chapter-hero blockquote {
-      background: rgba(255,140,0,0.07);
-      border-left: 4px solid #ff8c00;
-      border-radius: 8px;
-      padding: 14px 20px;
-      margin: 0 auto;
-      max-width: 600px;
-      font-style: italic;
-      color: #e2e8f0;
-      font-size: 0.95rem;
-      line-height: 1.7;
+      background: rgba(255,140,0,0.07); border-left: 4px solid #ff8c00;
+      border-radius: 8px; padding: 14px 20px; margin: 0 auto; max-width: 640px;
+      font-style: italic; color: #e2e8f0; font-size: 0.98rem; line-height: 1.7;
     }
-    .content-box {
-      background: rgba(255,255,255,0.02);
-      border: 1px solid rgba(255,140,0,0.10);
-      border-radius: 16px;
-      padding: 30px;
-      margin-bottom: 24px;
+    .context-box {
+      background: rgba(0,168,225,0.05); border: 1px solid rgba(0,168,225,0.15);
+      border-radius: 14px; padding: 24px 28px; margin-bottom: 28px;
     }
-    .content-box h2 { font-size: 1.2rem; color: #ff8c00; margin-bottom: 16px; }
-    .content-box p { color: #cbd5e1; line-height: 1.85; margin-bottom: 14px; font-size: 0.95rem; }
-    .content-box p:last-child { margin-bottom: 0; }
+    .context-box h3 { color: #00a8e1; font-size: 1.08rem; margin: 0 0 14px 0; }
+    .context-box p { color: #cbd5e1; line-height: 1.88; margin-bottom: 12px; font-size: 0.96rem; }
+    .context-box p:last-child { margin-bottom: 0; }
+    .mapa-box {
+      background: rgba(91,231,196,0.04); border: 1px solid rgba(91,231,196,0.15);
+      border-radius: 14px; padding: 22px 26px; margin-bottom: 28px;
+    }
+    .mapa-box h3 { color: #5be7c4; font-size: 1.05rem; margin: 0 0 12px 0; }
+    .mapa-box p { color: #cbd5e1; line-height: 1.82; font-size: 0.95rem; margin-bottom: 10px; }
+    .section-block {
+      background: rgba(255,255,255,0.02); border: 1px solid rgba(255,140,0,0.10);
+      border-radius: 16px; padding: 30px; margin-bottom: 26px;
+    }
+    .section-block h2 {
+      font-size: 1.28rem; color: #ff8c00;
+      border-bottom: 1px solid rgba(255,140,0,0.15);
+      padding-bottom: 12px; margin-bottom: 22px;
+    }
+    .verse-block {
+      margin-bottom: 34px; padding-bottom: 34px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .verse-block:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .verse-block h3 { font-size: 1.08rem; color: #ff8c00; margin-bottom: 12px; }
+    .verse-text {
+      background: rgba(255,140,0,0.06); border-left: 4px solid #ff8c00;
+      border-radius: 0 10px 10px 0; padding: 14px 20px; margin-bottom: 16px;
+      font-style: italic; color: #e2e8f0; font-size: 0.97rem; line-height: 1.82;
+    }
+    .analysis-item { margin-bottom: 14px; }
+    .analysis-label {
+      display: inline-block; font-size: 0.74rem; font-weight: 800;
+      padding: 3px 11px; border-radius: 999px; margin-bottom: 7px;
+      letter-spacing: 0.5px; text-transform: uppercase;
+    }
+    .label-exegese { background: rgba(255,140,0,0.15); color: #ff8c00; }
+    .label-teologia { background: rgba(91,231,196,0.15); color: #5be7c4; }
+    .label-aplicacao { background: rgba(0,168,225,0.15); color: #00a8e1; }
+    .label-hebraico { background: rgba(180,100,255,0.15); color: #c084fc; }
+    .label-nt { background: rgba(255,200,80,0.15); color: #ffc850; }
+    .label-historia { background: rgba(255,80,80,0.15); color: #f87171; }
+    .analysis-item p { color: #cbd5e1; line-height: 1.88; font-size: 0.96rem; margin: 0; }
+    .personagem-box {
+      background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px; padding: 20px 24px; margin-bottom: 18px;
+    }
+    .personagem-box h4 { color: #f1f5f9; font-size: 1.02rem; margin-bottom: 10px; }
+    .personagem-box p { color: #94a3b8; font-size: 0.92rem; line-height: 1.78; margin: 0; }
+    .tabela-tematica { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 0.92rem; }
+    .tabela-tematica th {
+      background: rgba(255,140,0,0.12); color: #ff8c00;
+      padding: 10px 14px; text-align: left; border-bottom: 1px solid rgba(255,140,0,0.20);
+    }
+    .tabela-tematica td {
+      padding: 10px 14px; color: #cbd5e1; border-bottom: 1px solid rgba(255,255,255,0.05);
+      line-height: 1.65;
+    }
+    .tabela-tematica tr:hover td { background: rgba(255,140,0,0.04); }
+    .destaque-box {
+      background: rgba(255,200,80,0.07); border: 1px solid rgba(255,200,80,0.20);
+      border-radius: 12px; padding: 18px 22px; margin: 20px 0;
+    }
+    .destaque-box p { color: #e2e8f0; line-height: 1.82; font-size: 0.95rem; margin: 0; }
     .nav-buttons {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      margin-top: 40px;
-      padding-top: 28px;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      flex-wrap: wrap;
+      display: flex; justify-content: space-between; gap: 12px;
+      margin-top: 44px; padding-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.08); flex-wrap: wrap;
     }
     .nav-buttons a {
-      background: rgba(255,140,0,0.10);
-      border: 1px solid rgba(255,140,0,0.22);
-      color: #ff8c00;
-      padding: 12px 22px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.92rem;
-      transition: all 0.2s;
+      background: rgba(255,140,0,0.10); border: 1px solid rgba(255,140,0,0.22);
+      color: #ff8c00; padding: 13px 24px; border-radius: 10px;
+      text-decoration: none; font-weight: 700; font-size: 0.93rem; transition: all 0.2s;
     }
-    .nav-buttons a:hover { background: rgba(255,140,0,0.20); }
-    .nav-buttons a.center { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.12); color: #94a3b8; }
-  </style>
+    .nav-buttons a:hover { background: rgba(255,140,0,0.22); }
+    .nav-buttons a.disabled { opacity: 0.35; pointer-events: none; }
+    .nav-buttons a.center {
+      background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.12); color: #94a3b8;
+    }
+</style>
 </head>
 <body>
   <div class="topbar">
@@ -88,27 +123,93 @@
       </nav>
     </div>
   </div>
-
   <div class="wrap">
     <div class="chapter-hero">
-      <span class="bloco-tag">⚡ Jó · Capítulo 42 · Bloco 6 — Epílogo: A Restauração de Jó</span>
-      <h1>A Rendição de Jó e a Restauração Divina — 'Agora os Meus Olhos te Veem'</h1>
-      <p class="sub">O epílogo: Jó se rende, os amigos são repreendidos, e Jó é restaurado ao dobro</p>
-      <blockquote>"Eu te conhecia só de ouvido; mas agora os meus olhos te veem." — Jó 42:5</blockquote>
+      <span class="bloco-tag">⚡ Jó · Capítulo 42 · Bloco 8 — Epílogo em Prosa (Cap. 42)</span>
+      <h1>A Restauração de Jó — O Epílogo em Prosa</h1>
+      <p class="sub">Jó se arrepende, intercede pelos amigos, e Deus restaura o dobro de tudo o que ele havia perdido</p>
+      <blockquote>"E o Senhor restaurou a sorte de Jó, quando este orou pelos seus amigos; e o Senhor deu a Jó o dobro de tudo o que ele tinha antes." — Jó 42:10</blockquote>
     </div>
+    
+      <div class="context-box">
+        <h3>🗺️ Contexto Histórico e Literário — Jó 42</h3>
+        <p>O capítulo 42 de Jó pertence ao <strong>Bloco 8 — Epílogo em Prosa (Cap. 42)</strong> do livro. Este capítulo representa um momento crucial no desenvolvimento do drama poético de Jó — o mais longo e complexo livro de sabedoria do Antigo Testamento. Para compreendê-lo adequadamente, é necessário situá-lo dentro da estrutura literária maior do livro e dentro do contexto histórico e cultural do Antigo Oriente Próximo.</p>
+        <p>O Livro de Jó é frequentemente classificado como parte da literatura sapiencial (<em>Wisdom Literature</em>) do Antigo Testamento, ao lado de Provérbios e Eclesiastes. Mas Jó é único dentro deste gênero: enquanto Provérbios afirma a ordem moral do universo e Eclesiastes questiona o sentido da existência, Jó questiona a própria justiça de Deus diante do sofrimento do inocente. É um livro de perguntas mais do que de respostas — e as perguntas que ele levanta são as mais profundas que um ser humano pode fazer.</p>
+        <p>O capítulo 42 deve ser lido em seu contexto imediato — o que veio antes e o que virá depois — mas também em seu contexto teológico mais amplo: a questão da teodiceia (a justiça de Deus diante do sofrimento), a natureza da fé autêntica, e a possibilidade de um relacionamento honesto com Deus que inclua dúvida, questionamento e lamento. O livro de Jó não apenas permite estas dimensões da fé — ele as celebra como parte de uma espiritualidade madura e genuína.</p>
+        <p>A linguagem poética deste capítulo é de uma riqueza extraordinária. O hebraico de Jó é considerado pelos linguistas como o mais difícil e mais belo de toda a Bíblia — repleto de hapax legomena (palavras que aparecem apenas uma vez em todo o Antigo Testamento), de arabismos e aramaísmos que sugerem uma origem muito antiga, e de imagens poéticas de uma força e originalidade incomparáveis. Traduzir Jó é sempre uma aproximação — a plenitude do original hebraico escapa a qualquer versão.</p>
+      </div>
 
-    <div class="content-box">
-      <h2>📖 Estudo do Capítulo 42</h2>
-      <p>O capítulo 42 é o epílogo em prosa que encerra o drama. Jó se rende diante da revelação de Deus — não porque foi convencido de que pecou, mas porque encontrou Deus face a face. Sua rendição não é uma capitulação intelectual, mas uma transformação espiritual: 'Eu te conhecia só de ouvido; mas agora os meus olhos te veem.' Deus então repreende os três amigos e vincula a restauração de Jó à sua intercessão por eles. Jó é restaurado ao dobro do que tinha antes — uma restauração que não é apenas material, mas espiritual e relacional.</p>
-      <p>Este capítulo faz parte do grande drama poético do Livro de Jó, que explora a questão mais profunda da experiência humana: o sofrimento do justo diante de um Deus soberano. Cada discurso, cada resposta, cada lamento contribui para a construção de uma teologia do sofrimento que não oferece respostas fáceis, mas aponta para o encontro transformador com Deus.</p>
-      <p>A análise versículo por versículo deste capítulo revela camadas de significado teológico, linguístico e pastoral que enriquecem nossa compreensão tanto do texto bíblico quanto da experiência humana do sofrimento. O paralelismo poético hebraico — a marca literária dos Livros Poéticos — convida o leitor a meditar em cada linha, encontrando ressonâncias e contrastes que aprofundam o significado.</p>
-      <p>Ao estudar este capítulo, somos convidados a nos identificar com Jó — não apenas em seu sofrimento, mas em sua busca corajosa por Deus. Sua recusa em aceitar respostas fáceis, sua insistência em manter a integridade mesmo no sofrimento, e seu desejo ardente de encontrar Deus face a face são modelos de uma fé madura que não teme o questionamento honesto.</p>
-    </div>
+      <div class="section-block">
+        <h2>📖 Análise Versículo por Versículo — Jó 42</h2>
+
+        <div class="verse-block">
+          <h3>O Versículo Central do Capítulo 42</h3>
+          <div class="verse-text">"E o Senhor restaurou a sorte de Jó, quando este orou pelos seus amigos; e o Senhor deu a Jó o dobro de tudo o que ele tinha antes." — Jó 42:10</div>
+          <div class="analysis-item">
+            <span class="analysis-label label-exegese">Exegese</span>
+            <p>Este versículo central do capítulo 42 captura a essência da contribuição deste capítulo ao drama maior do livro de Jó. A poesia hebraica de Jó trabalha com imagens de uma intensidade e originalidade extraordinárias — cada metáfora não é apenas decorativa, mas revela algo sobre a natureza do sofrimento humano, a transcendência de Deus, e a possibilidade de uma fé que não se rende às circunstâncias. O versículo deve ser lido em seu contexto imediato e em sua ressonância com os temas centrais do livro: a questão da teodiceia, a integridade de Jó, e a soberania de Deus sobre toda a experiência humana.</p>
+          </div>
+          <div class="analysis-item">
+            <span class="analysis-label label-hebraico">Vocabulário Hebraico</span>
+            <p>O hebraico de Jó é reconhecidamente o mais difícil e mais rico de toda a Bíblia. Este capítulo contém vocabulário que é único ou raro no Antigo Testamento — palavras que os tradutores têm debatido por séculos. A riqueza lexical do livro reflete sua antiguidade e seu caráter internacional: Jó não é um israelita, e o livro usa uma linguagem que transcende as fronteiras do hebraico bíblico padrão. Termos como <em>Shaddai</em> (o Todo-Poderoso), <em>Eloah</em> (Deus — forma singular rara), e <em>Goel</em> (Redentor/Vingador) têm em Jó uma profundidade semântica que vai além de seu uso em outros livros bíblicos.</p>
+          </div>
+          <div class="analysis-item">
+            <span class="analysis-label label-teologia">Teologia</span>
+            <p>Teologicamente, o capítulo 42 contribui para o desenvolvimento da grande questão do livro: como pode um Deus justo e poderoso permitir o sofrimento de um homem inocente? Esta questão — a teodiceia — é uma das mais antigas e mais persistentes da filosofia e da teologia. O livro de Jó não oferece uma resposta filosófica satisfatória; em vez disso, ele oferece uma resposta existencial: a experiência de encontrar Deus no meio do sofrimento, de ser ouvido por Deus mesmo quando as perguntas não têm resposta, de descobrir que a fé pode sobreviver — e até aprofundar-se — no fogo da provação.</p>
+          </div>
+          <div class="analysis-item">
+            <span class="analysis-label label-historia">Contexto do Antigo Oriente Próximo</span>
+            <p>O tema do sofrimento do justo não é exclusivo da Bíblia — ele aparece em várias obras da literatura do Antigo Oriente Próximo. O texto babilônico conhecido como "O Jó Babilônico" (<em>Ludlul bel nemeqi</em> — "Louvarei ao Senhor da Sabedoria") descreve um homem que sofre inexplicavelmente e é finalmente restaurado pelos deuses. O texto sumério "O Homem e seu Deus" apresenta situação semelhante. A originalidade do Livro de Jó está em que ele vai muito além destes paralelos: ele não apenas descreve o sofrimento e a restauração, mas questiona radicalmente as premissas teológicas que explicariam o sofrimento como punição divina.</p>
+          </div>
+          <div class="analysis-item">
+            <span class="analysis-label label-nt">Conexão com o Novo Testamento</span>
+            <p>O Novo Testamento cita ou alude ao Livro de Jó em várias passagens importantes. Tiago 5:11 menciona explicitamente "a paciência de Jó" como modelo de perseverança na fé. Paulo cita Jó 5:13 em 1 Coríntios 3:19. O próprio Jesus, em seus momentos de maior sofrimento — especialmente no Getsêmani e na cruz — ecoa os lamentos de Jó. A pergunta de Jesus na cruz — "Deus meu, Deus meu, por que me abandonaste?" (Mateus 27:46, citando o Salmo 22) — ressoa com os clamores de Jó ao longo do livro. Cristo é o Jó definitivo: o único verdadeiramente inocente que sofreu a morte injusta, e cuja ressurreição é a resposta definitiva à questão da teodiceia.</p>
+          </div>
+          <div class="analysis-item">
+            <span class="analysis-label label-aplicacao">Aplicação</span>
+            <p>Para o leitor contemporâneo, o capítulo 42 de Jó oferece uma palavra de profunda relevância. Vivemos em uma cultura que frequentemente promete que a fé em Deus protege do sofrimento — que a prosperidade é sinal de bênção divina e o sofrimento é sinal de pecado ou falta de fé. O Livro de Jó é a refutação mais poderosa desta teologia. Ele nos ensina que o sofrimento pode atingir os mais piedosos; que as perguntas honestas diante de Deus são mais agradáveis a ele do que as respostas fáceis dos amigos de Jó; e que a fé madura não é a fé que nunca questiona, mas a fé que questiona e ainda assim confia.</p>
+          </div>
+        </div>
+
+        <div class="verse-block">
+          <h3>Temas Teológicos Centrais do Capítulo 42</h3>
+          <div class="verse-text">"Eis que o temor do Senhor é a sabedoria, e apartar-se do mal é o entendimento." — Jó 28:28</div>
+          <div class="analysis-item">
+            <span class="analysis-label label-teologia">A Questão da Teodiceia</span>
+            <p>A teodiceia — a defesa da justiça de Deus diante da existência do mal e do sofrimento — é o tema central do Livro de Jó. O capítulo 42 contribui para este debate de uma forma específica: seja pela voz de Jó, que clama por justiça; seja pela voz dos amigos, que defendem uma teologia de retribuição mecânica; seja pela voz de Eliú, que propõe uma teologia do sofrimento como disciplina; ou pela voz de YHWH, que responde com perguntas sobre a criação que transcendem a capacidade humana de compreensão. Nenhuma dessas vozes oferece uma resposta completa — e é precisamente esta incompletude que torna o livro tão honesto e tão poderoso.</p>
+          </div>
+          <div class="analysis-item">
+            <span class="analysis-label label-exegese">A Estrutura dos Discursos</span>
+            <p>O Livro de Jó é estruturado em ciclos de discursos: Jó fala, um amigo responde, Jó responde ao amigo, e assim por diante. Esta estrutura dialógica é única na literatura bíblica e reflete a natureza da questão que o livro está explorando: o sofrimento não tem uma resposta monológica — ele exige diálogo, debate, confronto. O capítulo 42 deve ser lido dentro deste contexto dialógico: quem está falando? Para quem? Em resposta a quê? E como sua fala avança (ou não avança) a compreensão do problema central do livro?</p>
+          </div>
+          <div class="analysis-item">
+            <span class="analysis-label label-aplicacao">A Espiritualidade do Lamento</span>
+            <p>Um dos maiores presentes do Livro de Jó para a espiritualidade cristã é a legitimação do lamento como forma de oração. Jó não aceita passivamente seu sofrimento — ele clama, questiona, exige respostas, acusa Deus de injustiça. E no final, é Jó quem recebe o veredito divino: "Vós não falastes de mim o que era reto, como o meu servo Jó" (42:7). Deus prefere a honestidade dolorosa de Jó à piedade superficial dos amigos. Esta é uma lição profunda para todos que sofrem: é melhor trazer nossas dúvidas e nossa raiva a Deus do que suprimi-las em nome de uma piedade aparente.</p>
+          </div>
+        </div>
+
+        <div class="verse-block">
+          <h3>O Lugar deste Capítulo na Estrutura do Livro</h3>
+          <div class="verse-text">"Eu sei que o meu Redentor vive, e que por fim se levantará sobre o pó; e depois de se desfazer esta minha pele, ainda em minha carne verei a Deus." — Jó 19:25-26</div>
+          <div class="analysis-item">
+            <span class="analysis-label label-exegese">Estrutura Literária</span>
+            <p>O capítulo 42 ocupa um lugar específico na estrutura literária do Livro de Jó. O livro pode ser dividido em oito grandes blocos: (1) Prólogo em Prosa (cap. 1–2); (2) Primeiro Ciclo de Discursos (cap. 3–14); (3) Segundo Ciclo de Discursos (cap. 15–21); (4) Terceiro Ciclo de Discursos (cap. 22–26); (5) Monólogos de Jó (cap. 27–31); (6) Discursos de Eliú (cap. 32–37); (7) Discursos de YHWH (cap. 38–41); e (8) Epílogo em Prosa (cap. 42). Cada bloco contribui de forma distinta para o desenvolvimento do tema central, e o capítulo 42 deve ser interpretado à luz de sua posição dentro desta estrutura maior.</p>
+          </div>
+          <div class="analysis-item">
+            <span class="analysis-label label-teologia">O Arco Narrativo</span>
+            <p>O arco narrativo do Livro de Jó é um dos mais poderosos da literatura mundial: de uma prosperidade completa, passando por uma perda total, por um debate teológico intenso, por um encontro transformador com Deus, e chegando a uma restauração que é mais do que a simples recuperação do que foi perdido. Jó no final do livro é um homem diferente — não apenas mais rico, mas mais profundo, mais sábio, mais próximo de Deus. O sofrimento não o destruiu; ele o transformou. Esta é a promessa implícita do livro para todos que sofrem: o sofrimento pode ser o caminho para um conhecimento de Deus que a prosperidade nunca poderia proporcionar.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="destaque-box">
+        <p><strong>Síntese do Capítulo 42:</strong> Este capítulo avança o drama de Jó de uma forma específica e significativa. Seja pela intensidade do lamento, pela profundidade da acusação, pela beleza da proclamação de fé, ou pela grandeza da revelação divina, o capítulo 42 é uma peça essencial do mosaico literário e teológico que é o Livro de Jó. Lê-lo com atenção é ser convidado a uma das conversas mais honestas e mais profundas que a Bíblia oferece — uma conversa sobre sofrimento, fé, justiça e a natureza de Deus que nunca perde sua relevância.</p>
+      </div>
 
     <div class="nav-buttons">
-      <a href="/04-poeticos/jo/capitulos/capitulo-41.html">← Capítulo 41</a>
-      <a href="/04-poeticos/jo/index.html" class="center">Índice de Jó</a>
-      <a href="#" style="opacity:0.3;pointer-events:none;">Próximo Capítulo →</a>
+      <a href="/04-poeticos/jo/capitulos/capitulo-41.html" >← Capítulo 41</a>
+      <a href="/04-poeticos/jo/index.html" class="center">📖 Índice de Jó</a>
+      <a href="/04-poeticos/jo/capitulos/capitulo-42.html" class="disabled">Capítulo 42 →</a>
     </div>
   </div>
 </body>
