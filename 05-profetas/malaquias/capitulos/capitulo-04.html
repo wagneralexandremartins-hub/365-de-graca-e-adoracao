@@ -3,72 +3,40 @@
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Malaquias 4 — O Sol de Justiça — O Último Capítulo do AT · 365 de Graça &amp; Adoração</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <style>
+  <link rel="stylesheet" href="/assets/css/style.css"><style>
     body { background:#0f172a; color:#e2e8f0; font-family:'Segoe UI',sans-serif; margin:0; padding:0; }
     .wrap { max-width:860px; margin:0 auto; padding:32px 20px 60px; }
     .topbar { background:rgba(15,23,42,0.95); border-bottom:1px solid rgba(255,255,255,0.08); padding:0 24px; }
     .topbar .inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; height:60px; }
     .topbar a { color:#94a3b8; text-decoration:none; font-size:0.9rem; }
     .topbar .nav { display:flex; gap:20px; }
-    .topbar .active { color:#d97706; font-weight:700; }
-    .chapter-hero {
-      background: linear-gradient(135deg, rgba(217,119,6,0.14) 0%, rgba(0,0,0,0.3) 100%);
-      border: 1px solid rgba(217,119,6,0.22); border-radius: 20px;
-      padding: 36px 28px; margin-bottom: 28px; text-align: center;
-    }
-    .chapter-hero .tag {
-      display:inline-block; background:rgba(217,119,6,0.15); border:1px solid rgba(217,119,6,0.30);
-      color:#d97706; font-size:0.78rem; font-weight:700; padding:4px 14px;
-      border-radius:999px; margin-bottom:12px; letter-spacing:0.5px;
-    }
-    .chapter-hero h1 { font-size:2rem; font-weight:900; color:#d97706; margin:0 0 8px 0; }
+    .topbar .active { color:#f59e0b; font-weight:700; }
+    .chapter-hero { background: linear-gradient(135deg, rgba(245,158,11,0.14) 0%, rgba(0,0,0,0.3) 100%); border: 1px solid rgba(245,158,11,0.22); border-radius: 20px; padding: 36px 28px; margin-bottom: 28px; text-align: center; }
+    .chapter-hero .tag { display:inline-block; background:rgba(245,158,11,0.15); border:1px solid rgba(245,158,11,0.30); color:#f59e0b; font-size:0.78rem; font-weight:700; padding:4px 14px; border-radius:999px; margin-bottom:12px; }
+    .chapter-hero h1 { font-size:2rem; font-weight:900; color:#f59e0b; margin:0 0 8px 0; }
     .chapter-hero .sub { color:#94a3b8; font-size:1rem; margin-bottom:18px; }
-    .chapter-hero blockquote {
-      background:rgba(217,119,6,0.07); border-left:4px solid #d97706;
-      border-radius:8px; padding:14px 20px; margin:0 auto; max-width:680px;
-      font-style:italic; color:#e2e8f0; font-size:0.96rem; line-height:1.7;
-    }
-    .context-box {
-      background:rgba(217,119,6,0.05); border:1px solid rgba(217,119,6,0.15);
-      border-radius:14px; padding:22px 26px; margin-bottom:24px;
-    }
-    .context-box h3 { color:#d97706; font-size:1.05rem; margin:0 0 12px 0; }
+    .chapter-hero blockquote { background:rgba(245,158,11,0.07); border-left:4px solid #f59e0b; border-radius:8px; padding:14px 20px; margin:0 auto; max-width:680px; font-style:italic; color:#e2e8f0; font-size:0.96rem; line-height:1.7; }
+    .context-box { background:rgba(245,158,11,0.05); border:1px solid rgba(245,158,11,0.15); border-radius:14px; padding:22px 26px; margin-bottom:24px; }
+    .context-box h3 { color:#f59e0b; font-size:1.05rem; margin:0 0 12px 0; }
     .context-box p { color:#cbd5e1; line-height:1.88; margin-bottom:12px; font-size:0.95rem; }
     .context-box p:last-child { margin-bottom:0; }
-    .section-block {
-      background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.07);
-      border-radius:14px; padding:22px 26px; margin-bottom:20px;
-    }
-    .section-block h3 { color:#d97706; font-size:1.05rem; margin:0 0 14px 0; border-bottom:1px solid rgba(217,119,6,0.15); padding-bottom:10px; }
+    .section-block { background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.07); border-radius:14px; padding:22px 26px; margin-bottom:20px; }
+    .section-block h3 { color:#f59e0b; font-size:1.05rem; margin:0 0 14px 0; border-bottom:1px solid rgba(245,158,11,0.15); padding-bottom:10px; }
     .section-block p { color:#cbd5e1; line-height:1.88; margin-bottom:12px; font-size:0.94rem; }
-    .hebraico-box {
-      background:rgba(251,191,36,0.06); border:1px solid rgba(251,191,36,0.18);
-      border-radius:10px; padding:14px 18px; margin:12px 0;
-    }
+    .hebraico-box { background:rgba(251,191,36,0.06); border:1px solid rgba(251,191,36,0.18); border-radius:10px; padding:14px 18px; margin:12px 0; }
     .hebraico-box .termo { font-weight:800; color:#fbbf24; font-size:0.95rem; }
     .hebraico-box p { color:#94a3b8; font-size:0.90rem; line-height:1.7; margin:4px 0 0 0; }
-    .aplicacao-box {
-      background:rgba(34,197,94,0.05); border:1px solid rgba(34,197,94,0.15);
-      border-radius:10px; padding:14px 18px; margin:12px 0;
-    }
+    .aplicacao-box { background:rgba(34,197,94,0.05); border:1px solid rgba(34,197,94,0.15); border-radius:10px; padding:14px 18px; margin:12px 0; }
     .aplicacao-box h4 { color:#22c55e; font-size:0.88rem; font-weight:800; margin:0 0 8px 0; }
     .aplicacao-box p { color:#94a3b8; font-size:0.91rem; line-height:1.75; margin:0; }
-    .sintese-box {
-      background:linear-gradient(135deg, rgba(217,119,6,0.10) 0%, rgba(0,0,0,0.2) 100%);
-      border:1px solid rgba(217,119,6,0.20); border-radius:14px; padding:22px 26px; margin:24px 0;
-    }
-    .sintese-box h3 { color:#d97706; font-size:1.05rem; margin:0 0 14px 0; }
+    .nt-box { background:rgba(59,130,246,0.05); border:1px solid rgba(59,130,246,0.18); border-radius:10px; padding:14px 18px; margin:12px 0; }
+    .nt-box .termo { font-weight:800; color:#60a5fa; font-size:0.95rem; }
+    .nt-box p { color:#94a3b8; font-size:0.90rem; line-height:1.7; margin:4px 0 0 0; }
+    .sintese-box { background:linear-gradient(135deg, rgba(245,158,11,0.10) 0%, rgba(0,0,0,0.2) 100%); border:1px solid rgba(245,158,11,0.20); border-radius:14px; padding:22px 26px; margin:24px 0; }
+    .sintese-box h3 { color:#f59e0b; font-size:1.05rem; margin:0 0 14px 0; }
     .sintese-box p { color:#cbd5e1; line-height:1.88; font-size:0.95rem; margin-bottom:10px; }
-    .nav-buttons {
-      display:flex; gap:12px; justify-content:space-between; margin-top:40px;
-      padding-top:24px; border-top:1px solid rgba(255,255,255,0.08);
-    }
-    .nav-buttons a {
-      background:rgba(217,119,6,0.10); border:1px solid rgba(217,119,6,0.22);
-      color:#d97706; padding:12px 22px; border-radius:10px;
-      text-decoration:none; font-weight:700; font-size:0.90rem;
-    }
+    .nav-buttons { display:flex; gap:12px; justify-content:space-between; margin-top:40px; padding-top:24px; border-top:1px solid rgba(255,255,255,0.08); }
+    .nav-buttons a { background:rgba(245,158,11,0.10); border:1px solid rgba(245,158,11,0.22); color:#f59e0b; padding:12px 22px; border-radius:10px; text-decoration:none; font-weight:700; font-size:0.90rem; }
     .nav-buttons a.disabled { opacity:0.35; pointer-events:none; }
     .nav-buttons a.center { background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.12); color:#94a3b8; }
 </style>
@@ -80,34 +48,29 @@
     <a class="active" href="#">Cap. 4</a></div></div></div>
   <div class="wrap">
     <div class="chapter-hero">
-      <span class="tag">🌅 Malaquias · Capítulo 4 de 4 · Profetas Menores</span>
+      <span class="tag">☀️ Malaquias · Capítulo 4 de 4 · Profeta Menor</span>
       <h1>Malaquias 4</h1><p class="sub">O Sol de Justiça — O Último Capítulo do AT</p>
-      <blockquote>"Para vós outros, porém, que temeis o meu nome, nascerá o sol de justiça, e a saúde estará nas suas asas." — Malaquias 4:2</blockquote>
+      <blockquote>"Mas para vós outros que temeis o meu nome, nascerá o Sol de Justiça, e a saúde virá nas suas asas." — Malaquias 4:2</blockquote>
     </div>
     <div class="context-box">
       <h3>📜 Contexto Histórico e Literário</h3>
-      <p>Malaquias 4 é o último capítulo do Antigo Testamento — e termina de forma extraordinária: com a promessa do 'sol de justiça' que nascerá com cura nas asas, e com a promessa do retorno de Elias antes do grande e terrível Dia do SENHOR.</p><p>O contexto é o contraste entre os que temem a Deus e os que não temem: para os ímpios, o Dia do SENHOR será como forno ardente; para os que temem o nome de Deus, será como o nascer do sol com cura nas asas.</p><p>O livro termina com uma referência a Moisés (a Lei) e Elias (os Profetas) — os dois pilares da revelação do AT. E então o silêncio: 400 anos sem voz profética, até que João Batista clama no deserto. Malaquias 4 é a última página do AT antes do NT.</p>
+      <p>Malaquias 4 é o último capítulo do Antigo Testamento — e termina com uma promessa extraordinária: o 'Sol de Justiça' que nascerá para os que temem o nome de Deus. Esta é a última palavra do AT antes do silêncio de 400 anos que precede o NT.</p><p>O capítulo proclama o 'Dia do SENHOR' — um dia de julgamento para os arrogantes e de cura para os que temem a Deus. A imagem do 'Sol de Justiça' é uma das mais belas do AT para descrever a vinda do Messias.</p><p>O capítulo termina com a promessa de Elias — o profeta que virá antes do 'grande e terrível Dia do SENHOR'. Jesus identifica João Batista como o 'Elias' que Malaquias prometeu (Mt 11:14; 17:12).</p>
     </div>
     
     <div class="section-block">
-      <h3>📖 4:1-6 — O Sol de Justiça e a Promessa de Elias</h3>
-      <p>O 'sol de justiça' (<em>shemesh tzedaqah</em>) é uma das imagens mais belas do AT para o Messias. O sol que nasce com 'cura nas asas' — as asas são os raios do sol, que trazem calor e vida. O Messias é o sol que dissipa as trevas e traz cura.</p>
-      <div class="hebraico-box">
-        <div class="termo">📚 Vocabulário Hebraico e Contexto Linguístico</div>
-        <p>O hebraico <em>marpe biknafeiha</em> (cura nas suas asas) usa <em>marpe</em> — cura, saúde, restauração. As asas do sol são os raios que se espalham em todas as direções. O Messias traz cura em todas as direções — física, espiritual, relacional, social.</p>
-      </div>
-      <p>A promessa de Elias (v. 5-6) é identificada pelo NT com João Batista (Mt 11:14; 17:12; Lc 1:17). João Batista vem 'no espírito e poder de Elias' para preparar o caminho do Senhor. O AT termina apontando para o NT: o último profeta anuncia o precursor do Messias.</p>
-      <div class="aplicacao-box">
-        <h4>✅ Aplicação Contemporânea</h4>
-        <p>Malaquias 4 é a última palavra do AT — e ela aponta para frente. O AT não é um livro fechado em si mesmo; é uma promessa que aguarda cumprimento. O 'sol de justiça' que Malaquias anuncia é Jesus Cristo, o 'Sol da Justiça' que nasceu em Belém e cuja luz ilumina toda a humanidade.</p>
-      </div>
-    </div>
+          <h3>📖 O Sol de Justiça e a Promessa de Elias</h3>
+          <p>O versículo 2 é um dos mais belos do AT: 'Mas para vós outros que temeis o meu nome, nascerá o Sol de Justiça, e a saúde virá nas suas asas; e saireis, e saltareis como bezerros da estrebaria.' A imagem do Sol de Justiça é uma das mais poderosas para descrever o Messias — Ele é a luz que dissipa as trevas, o calor que cura, a energia que anima.</p>
+          <div class="hebraico-box"><div class="termo">📚 Vocabulário Hebraico</div><p><em>Shemesh tzedaqah</em> (Sol de Justiça) — <em>shemesh</em> é o sol físico, mas aqui é uma metáfora para o Messias. <em>Tzedaqah</em> (justiça, retidão) é o atributo central do Messias. <em>Marpe</em> (saúde, cura) nas asas do sol — a imagem de um sol com asas era comum no Oriente Médio antigo. O Messias traz cura em sua própria presença.</p></div>
+          <p>Os versículos 4-6 são o encerramento do AT: 'Lembrai-vos da lei de Moisés... Eis que eu vos enviarei o profeta Elias, antes que venha o grande e terrível Dia do SENHOR.' O AT termina com dois mandatos: lembrar da Lei (o passado) e esperar por Elias (o futuro). O NT começa com o cumprimento de ambos: Jesus cumpre a Lei e João Batista é o 'Elias' prometido.</p>
+          <div class="nt-box"><div class="termo">📖 Conexão com o NT</div><p>Malaquias 4 é o elo entre o AT e o NT. A promessa de Elias (v. 5) é cumprida em João Batista (Mt 11:14; 17:12; Mc 9:11-13; Lc 1:17). O 'Sol de Justiça' (v. 2) é identificado com Jesus Cristo — o 'sol nascente' que visitou seu povo (Lc 1:78). O AT termina com uma promessa; o NT começa com o cumprimento.</p></div>
+          <div class="aplicacao-box"><h4>✅ Aplicação Contemporânea</h4><p>Malaquias 4 nos ensina a viver entre a promessa e o cumprimento. O AT termina esperando; o NT começa cumprindo. A Igreja vive entre o primeiro e o segundo advento de Cristo — esperando o cumprimento final de todas as promessas. Como os que esperavam o Sol de Justiça, esperamos o retorno glorioso de Cristo.</p></div>
+        </div>
     <div class="sintese-box">
-      <h3>🔑 Síntese Teológica</h3>
-      <p>Malaquias 4 é um dos capítulos mais importantes do livro. Sua mensagem aponta para Jesus Cristo e para a redenção que Ele operou na história.</p>
-      <p>A Palavra de Deus é viva e eficaz (Hb 4:12). O mesmo Espírito que inspirou Malaquias ilumina nossa leitura hoje.</p>
+      <h3>🔑 Síntese Teológica do Capítulo 4</h3>
+      <p>Malaquias 4 contribui de forma significativa para a mensagem do livro e da Bíblia. Os temas desenvolvidos aqui apontam para a fidelidade de Deus ao seu povo e ao seu plano redentor que culmina em Jesus Cristo.</p>
+      <p>A Palavra de Deus é viva e eficaz (Hb 4:12). O mesmo Espírito que inspirou Malaquias ilumina nossa leitura hoje e transforma nossa vida pela fé em Jesus Cristo.</p>
     </div>
-    <div class="nav-buttons"><a href="/05-profetas/malaquias/capitulos/capitulo-03.html">← Capítulo 3</a>
+    <div class="nav-buttons"><a href="capitulo-03.html">← Capítulo 3</a>
       <a class="center" href="/05-profetas/malaquias/index.html">Índice de Malaquias</a>
       <a class="disabled" href="#">Próximo →</a></div>
   </div>

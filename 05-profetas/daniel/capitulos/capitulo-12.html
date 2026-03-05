@@ -1,144 +1,88 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Daniel 12 — Visões Apocalípticas · 365 de Graça &amp; Adoração</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <style>
+  <link rel="stylesheet" href="/assets/css/style.css"><style>
     body { background:#0f172a; color:#e2e8f0; font-family:'Segoe UI',sans-serif; margin:0; padding:0; }
     .wrap { max-width:860px; margin:0 auto; padding:32px 20px 60px; }
     .topbar { background:rgba(15,23,42,0.95); border-bottom:1px solid rgba(255,255,255,0.08); padding:0 24px; }
     .topbar .inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; height:60px; }
     .topbar a { color:#94a3b8; text-decoration:none; font-size:0.9rem; }
-    .topbar a:hover { color:#e2e8f0; }
     .topbar .nav { display:flex; gap:20px; }
     .topbar .active { color:#f59e0b; font-weight:700; }
-    .chapter-hero {
-      background: linear-gradient(135deg, rgba(245,158,11,0.14) 0%, rgba(0,0,0,0.3) 100%);
-      border: 1px solid rgba(245,158,11,0.22); border-radius: 20px;
-      padding: 36px 28px; margin-bottom: 28px; text-align: center;
-    }
-    .chapter-hero .tag {
-      display:inline-block; background:rgba(245,158,11,0.15); border:1px solid rgba(245,158,11,0.30);
-      color:#f59e0b; font-size:0.78rem; font-weight:700; padding:4px 14px;
-      border-radius:999px; margin-bottom:12px; letter-spacing:0.5px;
-    }
+    .chapter-hero { background: linear-gradient(135deg, rgba(245,158,11,0.14) 0%, rgba(0,0,0,0.3) 100%); border: 1px solid rgba(245,158,11,0.22); border-radius: 20px; padding: 36px 28px; margin-bottom: 28px; text-align: center; }
+    .chapter-hero .tag { display:inline-block; background:rgba(245,158,11,0.15); border:1px solid rgba(245,158,11,0.30); color:#f59e0b; font-size:0.78rem; font-weight:700; padding:4px 14px; border-radius:999px; margin-bottom:12px; }
     .chapter-hero h1 { font-size:2rem; font-weight:900; color:#f59e0b; margin:0 0 8px 0; }
     .chapter-hero .sub { color:#94a3b8; font-size:1rem; margin-bottom:18px; }
-    .chapter-hero blockquote {
-      background:rgba(245,158,11,0.07); border-left:4px solid #f59e0b;
-      border-radius:8px; padding:14px 20px; margin:0 auto; max-width:680px;
-      font-style:italic; color:#e2e8f0; font-size:0.96rem; line-height:1.7;
-    }
-    .context-box {
-      background:rgba(245,158,11,0.05); border:1px solid rgba(245,158,11,0.15);
-      border-radius:14px; padding:22px 26px; margin-bottom:24px;
-    }
+    .chapter-hero blockquote { background:rgba(245,158,11,0.07); border-left:4px solid #f59e0b; border-radius:8px; padding:14px 20px; margin:0 auto; max-width:680px; font-style:italic; color:#e2e8f0; font-size:0.96rem; line-height:1.7; }
+    .context-box { background:rgba(245,158,11,0.05); border:1px solid rgba(245,158,11,0.15); border-radius:14px; padding:22px 26px; margin-bottom:24px; }
     .context-box h3 { color:#f59e0b; font-size:1.05rem; margin:0 0 12px 0; }
     .context-box p { color:#cbd5e1; line-height:1.88; margin-bottom:12px; font-size:0.95rem; }
     .context-box p:last-child { margin-bottom:0; }
-    .section-block {
-      background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.07);
-      border-radius:14px; padding:22px 26px; margin-bottom:20px;
-    }
+    .section-block { background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.07); border-radius:14px; padding:22px 26px; margin-bottom:20px; }
     .section-block h3 { color:#f59e0b; font-size:1.05rem; margin:0 0 14px 0; border-bottom:1px solid rgba(245,158,11,0.15); padding-bottom:10px; }
     .section-block p { color:#cbd5e1; line-height:1.88; margin-bottom:12px; font-size:0.94rem; }
-    .hebraico-box {
-      background:rgba(251,191,36,0.06); border:1px solid rgba(251,191,36,0.18);
-      border-radius:10px; padding:14px 18px; margin:12px 0;
-    }
+    .hebraico-box { background:rgba(251,191,36,0.06); border:1px solid rgba(251,191,36,0.18); border-radius:10px; padding:14px 18px; margin:12px 0; }
     .hebraico-box .termo { font-weight:800; color:#fbbf24; font-size:0.95rem; }
     .hebraico-box p { color:#94a3b8; font-size:0.90rem; line-height:1.7; margin:4px 0 0 0; }
-    .aplicacao-box {
-      background:rgba(34,197,94,0.05); border:1px solid rgba(34,197,94,0.15);
-      border-radius:10px; padding:14px 18px; margin:12px 0;
-    }
+    .aplicacao-box { background:rgba(34,197,94,0.05); border:1px solid rgba(34,197,94,0.15); border-radius:10px; padding:14px 18px; margin:12px 0; }
     .aplicacao-box h4 { color:#22c55e; font-size:0.88rem; font-weight:800; margin:0 0 8px 0; }
     .aplicacao-box p { color:#94a3b8; font-size:0.91rem; line-height:1.75; margin:0; }
-    .sintese-box {
-      background:linear-gradient(135deg, rgba(245,158,11,0.10) 0%, rgba(0,0,0,0.2) 100%);
-      border:1px solid rgba(245,158,11,0.20); border-radius:14px; padding:22px 26px; margin:24px 0;
-    }
+    .nt-box { background:rgba(59,130,246,0.05); border:1px solid rgba(59,130,246,0.18); border-radius:10px; padding:14px 18px; margin:12px 0; }
+    .nt-box .termo { font-weight:800; color:#60a5fa; font-size:0.95rem; }
+    .nt-box p { color:#94a3b8; font-size:0.90rem; line-height:1.7; margin:4px 0 0 0; }
+    .sintese-box { background:linear-gradient(135deg, rgba(245,158,11,0.10) 0%, rgba(0,0,0,0.2) 100%); border:1px solid rgba(245,158,11,0.20); border-radius:14px; padding:22px 26px; margin:24px 0; }
     .sintese-box h3 { color:#f59e0b; font-size:1.05rem; margin:0 0 14px 0; }
     .sintese-box p { color:#cbd5e1; line-height:1.88; font-size:0.95rem; margin-bottom:10px; }
-    .nav-buttons {
-      display:flex; gap:12px; justify-content:space-between; margin-top:40px;
-      padding-top:24px; border-top:1px solid rgba(255,255,255,0.08);
-    }
-    .nav-buttons a {
-      background:rgba(245,158,11,0.10); border:1px solid rgba(245,158,11,0.22);
-      color:#f59e0b; padding:12px 22px; border-radius:10px;
-      text-decoration:none; font-weight:700; font-size:0.90rem; transition:all 0.2s;
-    }
-    .nav-buttons a:hover { background:rgba(245,158,11,0.20); }
+    .nav-buttons { display:flex; gap:12px; justify-content:space-between; margin-top:40px; padding-top:24px; border-top:1px solid rgba(255,255,255,0.08); }
+    .nav-buttons a { background:rgba(245,158,11,0.10); border:1px solid rgba(245,158,11,0.22); color:#f59e0b; padding:12px 22px; border-radius:10px; text-decoration:none; font-weight:700; font-size:0.90rem; }
     .nav-buttons a.disabled { opacity:0.35; pointer-events:none; }
     .nav-buttons a.center { background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.12); color:#94a3b8; }
+    .mapa-box { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.10); border-radius: 14px; padding: 20px; margin: 24px 0; text-align: center; }
+    .mapa-box h4 { color: #94a3b8; font-size: 0.88rem; font-weight: 700; margin: 0 0 14px 0; text-transform: uppercase; }
+    .mapa-box img { max-width: 100%; border-radius: 10px; }
+    .mapa-box p { color: #64748b; font-size: 0.85rem; margin: 12px 0 0 0; line-height: 1.6; font-style: italic; }
 </style>
 </head>
 <body>
-  <div class="topbar">
-    <div class="inner">
-      <a href="/">Início</a>
-      <div class="nav">
-        <a href="/05-profetas/index.html">Profetas</a>
-        <a href="/05-profetas/daniel/index.html">Daniel</a>
-        <a class="active" href="#">Capítulo 12</a>
-      </div>
-    </div>
-  </div>
+  <div class="topbar"><div class="inner"><a href="/">Início</a>
+    <div class="nav"><a href="/05-profetas/index.html">Profetas</a>
+    <a href="/05-profetas/daniel/index.html">Daniel</a>
+    <a class="active" href="#">Cap. 12</a></div></div></div>
   <div class="wrap">
     <div class="chapter-hero">
-      <span class="tag">🦁 Daniel · Capítulo 12 de 12 · Profetas Maiores</span>
+      <span class="tag">🦁 Daniel · Capítulo 12 de 12 · Profeta Maior</span>
       <h1>Daniel 12</h1>
       <p class="sub">Visões Apocalípticas</p>
-      <blockquote>"A Palavra do SENHOR permanece para sempre." — Isaías 40:8</blockquote>
+      <blockquote>"O Deus do céu suscitará um reino que jamais será destruído." — Daniel 2:44</blockquote>
     </div>
-
     <div class="context-box">
       <h3>📜 Contexto Histórico e Literário</h3>
-      <p>O capítulo 12 de Daniel está na seção apocalíptica do livro (caps. 7-12), que contém as visões proféticas sobre os reinos da história e o fim dos tempos. Esta seção usa linguagem simbólica e imagens extraordinárias para revelar o plano soberano de Deus.</p>
-      <p>As visões de Daniel abrangem os grandes impérios da história (Babilônia, Medo-Pérsia, Grécia, Roma) e apontam para o reino eterno de Deus que substituirá todos os reinos humanos. O 'Filho do Homem' que recebe este reino eterno é identificado pelo NT com Jesus Cristo.</p>
-      <p>A teologia apocalíptica de Daniel é a teologia da soberania: Deus controla a história. Os impérios sobem e caem de acordo com seu plano. O povo de Deus pode sofrer, mas a vitória final pertence a Deus e ao seu ungido.</p>
+      <p>Daniel recebe visões proféticas sobre os reinos da história e o fim dos tempos.</p><p>As visões de Daniel abrangem os grandes impérios da história e apontam para o reino eterno de Deus.</p><p>A teologia apocalíptica de Daniel é a teologia da soberania: Deus controla a história.</p>
+      <p>O capítulo 12 de Daniel está inserido neste contexto mais amplo. Daniel é o profeta da soberania de Deus sobre a história — ele demonstra, tanto através de narrativas de fidelidade quanto de visões apocalípticas, que Deus está no controle de todos os reinos humanos e que seu reino eterno prevalecerá.</p>
     </div>
-
     <div class="section-block">
-      <h3>📖 Daniel 12 — Proclamação Profética</h3>
-      <p>O capítulo 12 de Daniel continua o desenvolvimento da grande mensagem profética do livro. O profeta, movido pelo Espírito de Deus, proclama a Palavra de YHWH com autoridade e clareza. Cada versículo contribui para o quadro mais amplo da teologia de Daniel sobre a santidade de Deus, o pecado de Israel, e a promessa de redenção que culmina em Jesus Cristo.</p>
-      <p>A análise exegética deste capítulo revela múltiplas camadas de significado: o sentido histórico imediato (a mensagem para o povo de Daniel's tempo), o sentido tipológico (como este texto aponta para Cristo), e o sentido aplicativo (como esta mensagem fala à nossa situação hoje). A Palavra de Deus é multidimensional — ela fala ao passado, ao presente e ao futuro simultaneamente.</p>
+      <h3>📖 Daniel 12 — Análise Exegética</h3>
+      <p>O capítulo 12 de Daniel proclama a soberania de Deus sobre a história e sobre os reinos humanos. Daniel, levado ao exílio em Babilônia (~605 a.C.), serve na corte dos maiores impérios do mundo antigo — Babilônia e Medo-Pérsia — mantendo sua fidelidade a Deus sem se isolar do mundo.</p>
+      <p>A análise exegética deste capítulo revela a profundidade da revelação divina em Daniel. O livro combina narrativas de fidelidade (caps. 1-6) com visões apocalípticas (caps. 7-12), demonstrando que a fé prática e a esperança escatológica são inseparáveis. Cada capítulo contribui para o quadro mais amplo da teologia de Daniel sobre a soberania de Deus.</p>
       <div class="hebraico-box">
-        <div class="termo">📚 Vocabulário Hebraico e Contexto Linguístico</div>
-        <p>O vocabulário hebraico deste capítulo reflete a riqueza da língua bíblica. Termos como <em>YHWH Tzvaot</em> (SENHOR dos Exércitos), <em>nabi</em> (profeta — aquele que é chamado), <em>mishpat</em> (justiça), <em>tzedaqah</em> (retidão) e <em>chesed</em> (amor leal) são centrais para a teologia profética. A compreensão destes termos em seu contexto original é fundamental para uma interpretação fiel do texto.</p>
+        <div class="termo">📚 Vocabulário Hebraico e Aramaico</div>
+        <p>Daniel usa tanto hebraico quanto aramaico. O aramaico (caps. 2-7) era a língua internacional da época — ao usar aramaico, Daniel proclama a mensagem de Deus para todas as nações. Termos centrais incluem: <em>malchut</em> (reino), <em>alam</em> (eternidade), <em>bar enash</em> (filho do homem), <em>qadishin</em> (santos), e <em>raz</em> (mistério/segredo). A revelação dos mistérios divinos é um tema central de Daniel.</p>
       </div>
-      <p>A teologia sistemática deste capítulo contribui para os grandes temas de Daniel: a soberania de Deus sobre a história, a responsabilidade humana diante do pacto, o julgamento como consequência da infidelidade, e a graça redentora que sempre acompanha o julgamento. O profeta não proclama apenas julgamento — ele proclama a possibilidade de restauração para os que se arrependem.</p>
+      <p>A dimensão messiânica de Daniel é extraordinária. O 'Filho do Homem' de Daniel 7 é o título que Jesus mais usa para si mesmo. As 'setenta semanas' de Daniel 9 são uma das profecias messiânicas mais precisas do AT. A 'pedra que não foi cortada por mãos humanas' de Daniel 2 é identificada com Cristo. Daniel é o livro do AT que mais diretamente aponta para a segunda vinda de Cristo.</p>
       <div class="aplicacao-box">
         <h4>✅ Aplicação Contemporânea</h4>
-        <p>A mensagem de Daniel 12 é tão relevante hoje quanto era no século VII-VI a.C. Vivemos em um mundo que, como o mundo de Daniel, frequentemente escolhe a autossuficiência em vez da dependência de Deus, a injustiça em vez da retidão, e a religiosidade superficial em vez do relacionamento genuíno com o Criador. A voz profética nos chama ao arrependimento, à confiança em Deus e à esperança na redenção que Ele prometeu e cumpriu em Jesus Cristo.</p>
+        <p>A mensagem de Daniel 12 é profundamente relevante para a Igreja contemporânea que vive sob pressão secular. Como Daniel, somos chamados a ser fiéis a Deus em um ambiente que frequentemente exige lealdade exclusiva a outros valores. A soberania de Deus sobre a história — que Daniel demonstra tão claramente — é o fundamento da nossa esperança e da nossa coragem.</p>
       </div>
     </div>
-
-    <div class="section-block">
-      <h3>📖 Análise Exegética Aprofundada</h3>
-      <p>Uma leitura cuidadosa de Daniel 12 revela a consistência da mensagem profética com o restante do livro e com o cânon bíblico como um todo. O profeta não fala de forma isolada — ele está inserido em uma tradição profética que vai de Moisés a Malaquias, e que encontra seu cumprimento em Jesus Cristo.</p>
-      <p>O contexto literário imediato é crucial para a interpretação: o que precede e o que segue este capítulo ilumina seu significado. A profecia bíblica não é uma coleção de oráculos isolados — é uma narrativa coerente sobre o relacionamento de Deus com seu povo, com suas crises, seus julgamentos, suas restaurações e sua esperança final.</p>
-      <p>A dimensão messiânica deste capítulo, embora nem sempre explícita, está presente na estrutura da revelação progressiva. O NT frequentemente cita os profetas para mostrar como Jesus cumpriu as expectativas proféticas do AT. Cada capítulo de Daniel contribui para o quadro mais amplo que o NT identifica com Jesus Cristo.</p>
-      <div class="hebraico-box">
-        <div class="termo">📚 Conexão com o Novo Testamento</div>
-        <p>Os temas deste capítulo encontram seu cumprimento no NT: o julgamento que Daniel anuncia é o julgamento que Cristo absorveu na cruz; a restauração que Daniel promete é a restauração que Cristo opera pela ressurreição; a Nova Aliança que Daniel vislumbra é a aliança que Cristo estabeleceu em seu sangue. Ler Daniel à luz do NT é ler o AT como ele foi escrito — como preparação para a revelação definitiva em Jesus Cristo.</p>
-      </div>
-    </div>
-
     <div class="sintese-box">
       <h3>🔑 Síntese Teológica do Capítulo 12</h3>
-      <p>Daniel 12 contribui de forma significativa para a grande narrativa do livro e da Bíblia como um todo. Os temas desenvolvidos neste capítulo apontam para a fidelidade de Deus ao seu povo e ao seu plano redentor que culmina em Jesus Cristo.</p>
-      <p>A mensagem deste capítulo não é apenas histórica; ela é viva e atual. O mesmo Deus que falou a Daniel e ao povo de sua época fala a nós hoje através destas palavras. A Palavra de Deus é viva e eficaz (Hb 4:12), e o Espírito que inspirou Daniel é o mesmo que ilumina nossa leitura e transforma nossa vida.</p>
+      <p>Daniel 12 contribui para a grande narrativa do livro e da Bíblia. Os temas desenvolvidos aqui apontam para a soberania de Deus sobre a história e para o reino eterno que Jesus Cristo estabeleceu e consumará.</p>
+      <p>A Palavra de Deus é viva e eficaz (Hb 4:12). O mesmo Deus que sustentou Daniel na corte babilônica sustenta a Igreja hoje em sua missão no mundo.</p>
     </div>
-
-    <div class="nav-buttons">
-      <a href="/05-profetas/daniel/capitulos/capitulo-11.html">← Capítulo 11</a>
+    <div class="nav-buttons"><a href="capitulo-11.html">← Capítulo 11</a>
       <a class="center" href="/05-profetas/daniel/index.html">Índice de Daniel</a>
-      <a class="disabled" href="#">Próximo →</a>
-    </div>
+      <a class="disabled" href="#">Próximo →</a></div>
   </div>
-</body>
-</html>
+</body></html>
