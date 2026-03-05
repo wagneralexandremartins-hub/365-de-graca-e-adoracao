@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Livros Proféticos — 365 de Graça &amp; Adoração</title>
+  <meta name="description" content="Os 17 livros proféticos do Antigo Testamento: Isaías, Jeremias, Lamentações, Ezequiel, Daniel e os 12 Profetas Menores. Contexto histórico, mapas e análise versículo por versículo.">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    .tag-profeta {
+      background: rgba(239,68,68,0.18);
+      border-color: rgba(239,68,68,0.35);
+      color: #ef4444;
+    }
+    .profeta-note {
+      background: rgba(239,68,68,0.06);
+      border: 1px solid rgba(239,68,68,0.20);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 14px;
+      color: #cbd5e1;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .profeta-note strong { color: #ef4444; }
+    .hero-profetas {
+      background: linear-gradient(135deg, rgba(239,68,68,0.12) 0%, rgba(251,146,60,0.08) 100%);
+      border: 1px solid rgba(239,68,68,0.20);
+      border-radius: 24px;
+      padding: 48px 36px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .hero-profetas h1 {
+      font-size: 2.6rem; font-weight: 900; color: #ef4444;
+      margin: 0 0 12px 0; letter-spacing: -1px;
+    }
+    .hero-profetas .sub { font-size: 1.15rem; color: #cbd5e1; margin-bottom: 24px; }
+    .hero-profetas blockquote {
+      background: rgba(239,68,68,0.07); border-left: 4px solid #ef4444;
+      border-radius: 8px; padding: 16px 22px; margin: 0 auto; max-width: 720px;
+      font-style: italic; color: #e2e8f0; font-size: 1.05rem; line-height: 1.7;
+    }
+    .info-bar {
+      display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;
+    }
+    .info-chip {
+      background: rgba(239,68,68,0.10); border: 1px solid rgba(239,68,68,0.22);
+      color: #ef4444; padding: 7px 18px; border-radius: 999px;
+      font-size: 0.85rem; font-weight: 700;
+    }
+    .section-title {
+      font-size: 1.5rem; font-weight: 800; color: #ef4444;
+      border-bottom: 2px solid rgba(239,68,68,0.20);
+      padding-bottom: 12px; margin: 40px 0 24px 0;
+    }
+    .section-subtitle {
+      font-size: 1.1rem; font-weight: 700; color: #fb923c;
+      margin: 32px 0 16px 0;
+    }
+    .livros-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 18px; margin-bottom: 32px;
+    }
+    .livro-card {
+      background: rgba(255,255,255,0.03); border: 1px solid rgba(239,68,68,0.14);
+      border-radius: 16px; padding: 22px 24px; transition: all 0.2s;
+      text-decoration: none; display: block;
+    }
+    .livro-card:hover {
+      background: rgba(239,68,68,0.07); border-color: rgba(239,68,68,0.30);
+      transform: translateY(-2px);
+    }
+    .livro-card .livro-num {
+      font-size: 0.75rem; font-weight: 800; color: #ef4444;
+      text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;
+    }
+    .livro-card h3 { font-size: 1.15rem; font-weight: 800; color: #f1f5f9; margin: 0 0 6px 0; }
+    .livro-card .livro-meta {
+      font-size: 0.82rem; color: #64748b; margin-bottom: 10px;
+    }
+    .livro-card p { font-size: 0.90rem; color: #94a3b8; line-height: 1.6; margin: 0 0 14px 0; }
+    .livro-card .livro-link {
+      font-size: 0.85rem; font-weight: 700; color: #ef4444;
+    }
+    .contexto-box {
+      background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.15);
+      border-radius: 16px; padding: 28px 32px; margin-bottom: 32px;
+    }
+    .contexto-box h3 { color: #ef4444; font-size: 1.1rem; margin: 0 0 16px 0; }
+    .contexto-box p { color: #cbd5e1; line-height: 1.88; font-size: 0.96rem; margin-bottom: 14px; }
+    .contexto-box p:last-child { margin-bottom: 0; }
+    .linha-tempo {
+      display: flex; flex-direction: column; gap: 0; margin: 24px 0;
+    }
+    .lt-item {
+      display: flex; gap: 16px; align-items: flex-start; padding: 14px 0;
+      border-bottom: 1px solid rgba(239,68,68,0.08);
+    }
+    .lt-item:last-child { border-bottom: none; }
+    .lt-data {
+      min-width: 110px; font-size: 0.82rem; font-weight: 800;
+      color: #ef4444; padding-top: 2px;
+    }
+    .lt-desc { font-size: 0.90rem; color: #94a3b8; line-height: 1.6; }
+    .lt-desc strong { color: #cbd5e1; }
+    .tabela-profetas { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.90rem; }
+    .tabela-profetas th {
+      background: rgba(239,68,68,0.12); color: #ef4444;
+      padding: 10px 14px; text-align: left; border-bottom: 1px solid rgba(239,68,68,0.20);
+    }
+    .tabela-profetas td {
+      padding: 10px 14px; color: #cbd5e1; border-bottom: 1px solid rgba(255,255,255,0.05);
+      line-height: 1.6;
+    }
+    .tabela-profetas tr:hover td { background: rgba(239,68,68,0.04); }
+    .tabela-profetas a { color: #ef4444; text-decoration: none; font-weight: 600; }
+    .tabela-profetas a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="inner">
+      <a href="/" class="brand">
+        <img src="/assets/img/logo-header.png" alt="365 de Graça &amp; Adoração" style="height:48px;width:auto;" />
+      </a>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="/">Início</a>
+        <a class="active" href="/05-profetas/index.html">Livros Proféticos</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="hero-profetas">
+      <span style="display:inline-block;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.30);color:#ef4444;font-size:0.80rem;font-weight:700;padding:5px 14px;border-radius:999px;margin-bottom:14px;letter-spacing:0.5px;">🔥 Bloco 05 · Livros Proféticos · 17 Livros · 250 Capítulos</span>
+      <h1>Os Profetas de Israel</h1>
+      <p class="sub">A voz de Deus na história — chamado ao arrependimento, justiça, graça e esperança messiânica</p>
+      <blockquote>"Certamente o Senhor DEUS não fará coisa alguma, sem ter revelado o seu segredo aos seus servos, os profetas." — Amós 3:7</blockquote>
+    </div>
+
+    <div class="info-bar">
+      <span class="info-chip">📚 17 Livros Proféticos</span>
+      <span class="info-chip">📖 250 Capítulos</span>
+      <span class="info-chip">⚡ 5 Profetas Maiores</span>
+      <span class="info-chip">📜 12 Profetas Menores</span>
+      <span class="info-chip">🗺️ Mapas Históricos</span>
+      <span class="info-chip">🕊️ Contexto Versículo por Versículo</span>
+    </div>
+
+    <div class="contexto-box">
+      <h3>🔥 O Que é a Profecia Bíblica?</h3>
+      <p>Os livros proféticos do Antigo Testamento representam uma das contribuições mais originais e poderosas de Israel à história da religião e da espiritualidade humana. Os profetas não eram simplesmente "adivinhos" que previam o futuro — eles eram <strong>porta-vozes de Deus</strong>, homens e mulheres chamados por YHWH para comunicar sua palavra ao povo em momentos críticos da história. A palavra hebraica para profeta é <em>nabi</em> — "aquele que é chamado" ou "aquele que proclama" — e ela captura bem a essência do ministério profético: o profeta não fala por iniciativa própria, mas porque foi chamado e enviado por Deus.</p>
+      <p>A profecia bíblica tem duas dimensões inseparáveis: a <strong>dimensão histórica</strong> (o profeta fala a uma situação concreta de seu tempo — política, social, religiosa) e a <strong>dimensão escatológica</strong> (o profeta aponta para além de seu tempo, para a consumação do plano redentor de Deus). Esta dupla dimensão é o que torna os livros proféticos ao mesmo tempo historicamente situados e eternamente relevantes. Eles falam ao Israel do século VIII a.C. e ao cristão do século XXI com a mesma autoridade e urgência.</p>
+      <p>Os profetas do Antigo Testamento atuaram em um período de aproximadamente <strong>400 anos</strong> — do século IX ao século V a.C. — que corresponde ao período mais turbulento da história de Israel: a divisão do reino, a ameaça assíria, a queda do Reino do Norte (722 a.C.), a ameaça babilônica, a queda de Jerusalém e a destruição do Templo (586 a.C.), o exílio na Babilônia, e o retorno à terra prometida. É neste contexto de crise e esperança que os profetas proclamaram a palavra de Deus.</p>
+    </div>
+
+    <h2 class="section-title">🗓️ Linha do Tempo dos Profetas</h2>
+    <div class="linha-tempo">
+      <div class="lt-item"><div class="lt-data">~850 a.C.</div><div class="lt-desc"><strong>Período Pré-Clássico:</strong> Elias e Eliseu — profetas de ação, não de escrita</div></div>
+      <div class="lt-item"><div class="lt-data">~760 a.C.</div><div class="lt-desc"><strong>Amós e Oséias</strong> — primeiros profetas escritores, ao Reino do Norte (Israel)</div></div>
+      <div class="lt-item"><div class="lt-data">~740 a.C.</div><div class="lt-desc"><strong>Isaías e Miquéias</strong> — ao Reino do Sul (Judá), sob a ameaça assíria</div></div>
+      <div class="lt-item"><div class="lt-data">~627 a.C.</div><div class="lt-desc"><strong>Jeremias</strong> — o profeta do choro, sob a ameaça babilônica</div></div>
+      <div class="lt-item"><div class="lt-data">~622 a.C.</div><div class="lt-desc"><strong>Sofonias, Naum, Habacuque</strong> — no período da reforma de Josias</div></div>
+      <div class="lt-item"><div class="lt-data">~593 a.C.</div><div class="lt-desc"><strong>Ezequiel</strong> — profeta no exílio babilônico (Babilônia)</div></div>
+      <div class="lt-item"><div class="lt-data">~605 a.C.</div><div class="lt-desc"><strong>Daniel</strong> — sábio e profeta na corte babilônica e persa</div></div>
+      <div class="lt-item"><div class="lt-data">~520 a.C.</div><div class="lt-desc"><strong>Ageu e Zacarias</strong> — profetas pós-exílicos, incentivam a reconstrução do Templo</div></div>
+      <div class="lt-item"><div class="lt-data">~450 a.C.</div><div class="lt-desc"><strong>Malaquias</strong> — o último profeta do AT, antes do silêncio de 400 anos</div></div>
+    </div>
+
+    <h2 class="section-title">📚 Profetas Maiores</h2>
+    <p class="profeta-note">Os "Profetas Maiores" são assim chamados não por importância, mas pelo <strong>tamanho de seus livros</strong>. Eles cobrem o período do século VIII ao V a.C. e contêm as mais extensas e profundas revelações proféticas do Antigo Testamento.</p>
+
+    <div class="livros-grid">
+      <a href="/05-profetas/isaias/index.html" class="livro-card">
+        <div class="livro-num">Profeta Maior · 66 Capítulos</div>
+        <h3>📜 Isaías</h3>
+        <div class="livro-meta">~740–700 a.C. · Judá · Reinado de Uzias a Ezequias</div>
+        <p>O "Evangelho do AT": o profeta da santidade de Deus e da esperança messiânica. O Servo Sofredor de Isaías 53 é a profecia mais citada no NT.</p>
+        <span class="livro-link">Estudar Isaías →</span>
+      </a>
+      <a href="/05-profetas/jeremias/index.html" class="livro-card">
+        <div class="livro-num">Profeta Maior · 52 Capítulos</div>
+        <h3>😢 Jeremias</h3>
+        <div class="livro-meta">~627–586 a.C. · Judá/Egito · Queda de Jerusalém</div>
+        <p>O profeta do choro: chamado antes de nascer, perseguido por toda a vida, testemunha da destruição de Jerusalém. A Nova Aliança (Jr 31) é seu legado eterno.</p>
+        <span class="livro-link">Estudar Jeremias →</span>
+      </a>
+      <a href="/05-profetas/lamentacoes/index.html" class="livro-card">
+        <div class="livro-num">Profeta Maior · 5 Capítulos</div>
+        <h3>💔 Lamentações</h3>
+        <div class="livro-meta">~586 a.C. · Jerusalém destruída</div>
+        <p>Cinco poemas acrósticos sobre a destruição de Jerusalém. O lamento mais profundo da Bíblia — e a esperança que persiste: "As misericórdias do SENHOR nunca cessam."</p>
+        <span class="livro-link">Estudar Lamentações →</span>
+      </a>
+      <a href="/05-profetas/ezequiel/index.html" class="livro-card">
+        <div class="livro-num">Profeta Maior · 48 Capítulos</div>
+        <h3>🌀 Ezequiel</h3>
+        <div class="livro-meta">~593–571 a.C. · Babilônia · Exílio</div>
+        <p>O profeta das visões: a carruagem de fogo, o vale dos ossos secos, o novo Templo. Ezequiel proclama a glória de Deus no exílio e a promessa da restauração.</p>
+        <span class="livro-link">Estudar Ezequiel →</span>
+      </a>
+      <a href="/05-profetas/daniel/index.html" class="livro-card">
+        <div class="livro-num">Profeta Maior · 12 Capítulos</div>
+        <h3>🦁 Daniel</h3>
+        <div class="livro-meta">~605–535 a.C. · Babilônia e Pérsia</div>
+        <p>Fé na corte pagã: Daniel na cova dos leões, os três jovens na fornalha, as visões apocalípticas do Filho do Homem e dos reinos da história.</p>
+        <span class="livro-link">Estudar Daniel →</span>
+      </a>
+    </div>
+
+    <h2 class="section-title">📜 Os Doze Profetas Menores</h2>
+    <p class="profeta-note">Os "Doze" (<em>Tré Asar</em> em hebraico) formavam um único rolo no cânon hebraico. São chamados "menores" apenas pelo tamanho — sua mensagem teológica é tão profunda quanto a dos profetas maiores.</p>
+
+    <div class="livros-grid">
+      <a href="/05-profetas/oseias/index.html" class="livro-card">
+        <div class="livro-num">Profeta Menor · 14 Capítulos</div>
+        <h3>💍 Oséias</h3>
+        <div class="livro-meta">~750–720 a.C. · Reino do Norte (Israel)</div>
+        <p>O amor de Deus como amor conjugal: Oséias casa com Gômer para ilustrar o amor fiel de Deus por um Israel infiel. "Voltai ao SENHOR vosso Deus."</p>
+        <span class="livro-link">Estudar Oséias →</span>
+      </a>
+      <a href="/05-profetas/joel/index.html" class="livro-card">
+        <div class="livro-num">Profeta Menor · 3 Capítulos</div>
+        <h3>🦗 Joel</h3>
+        <div class="livro-meta">~835 ou ~400 a.C. · Judá</div>
+        <p>A praga de gafanhotos como juízo de Deus e o derramamento do Espírito sobre toda a carne. Citado por Pedro em Pentecostes (At 2).</p>
+        <span class="livro-link">Estudar Joel →</span>
+      </a>
+      <a href="/05-profetas/amos/index.html" class="livro-card">
+        <div class="livro-num">Profeta Menor · 9 Capítulos</div>
+        <h3>⚖️ Amós</h3>
+        <div class="livro-meta">~760 a.C. · Reino do Norte (Israel)</div>
+        <p>O profeta da justiça social: pastor de Tecoa que clama contra a opressão dos pobres. "Que corra o direito como as águas, e a justiça como ribeiro perene."</p>
+        <span class="livro-link">Estudar Amós →</span>
+      </a>
+      <a href="/05-profetas/obadias/index.html" class="livro-card">
+        <div class="livro-num">Profeta Menor · 1 Capítulo</div>
+        <h3>🏔️ Obadias</h3>
+        <div class="livro-meta">~586 a.C. · Contra Edom</div>
+        <p>O livro mais curto do AT: julgamento contra Edom por sua traição a Judá na queda de Jerusalém. A soberania de Deus sobre as nações.</p>
+        <span class="livro-link">Estudar Obadias →</span>
+      </a>
+      <a href="/05-profetas/jonas/index.html" class="livro-card">
+        <div class="livro-num">Profeta Menor · 4 Capítulos</div>
+        <h3>🐋 Jonas</h3>
+        <div class="livro-meta">~760 a.C. · Nínive (Assíria)</div>
+        <p>O profeta relutante: foge de Deus, é engolido por um grande peixe, e prega em Nínive. A misericórdia de Deus que se estende além das fronteiras de Israel.</p>
+        <span class="livro-link">Estudar Jonas →</span>
+      </a>
+      <a href="/05-profetas/miqueias/index.html" class="livro-card">
+        <div class="livro-num">Profeta Menor · 7 Capítulos</div>
+        <h3>⚔️ Miquéias</h3>
+        <div class="livro-meta">~735–700 a.C. · Judá</div>
+        <p>Contemporâneo de Isaías: anuncia o nascimento do Messias em Belém e resume a ética bíblica: "Fazer justiça, amar a misericórdia e andar humildemente com o teu Deus."</p>
+        <span class="livro-link">Estudar Miquéias →</span>
+      </a>
+      <a href="/05-profetas/naum/index.html" class="livro-card">
+        <div class="livro-num">Profeta Menor · 3 Capítulos</div>
+        <h3>💥 Naum</h3>
+        <div class="livro-meta">~663–612 a.C. · Contra Nínive</div>
+        <p>O complemento de Jonas: enquanto Jonas pregou misericórdia a Nínive, Naum anuncia seu julgamento final. A queda do Império Assírio como ato de justiça divina.</p>
+        <span class="livro-link">Estudar Naum →</span>
+      </a>
+      <a href="/05-profetas/habacuque/index.html" class="livro-card">
+        <div class="livro-num">Profeta Menor · 3 Capítulos</div>
+        <h3>🤔 Habacuque</h3>
+        <div class="livro-meta">~605 a.C. · Judá</div>
+        <p>O profeta que questiona Deus: "Por que permites a injustiça?" A resposta divina: "O justo viverá pela sua fé." A base da teologia da justificação pela fé.</p>
+        <span class="livro-link">Estudar Habacuque →</span>
+      </a>
+      <a href="/05-profetas/sofonias/index.html" class="livro-card">
+        <div class="livro-num">Profeta Menor · 3 Capítulos</div>
+        <h3>🌊 Sofonias</h3>
+        <div class="livro-meta">~630 a.C. · Judá · Reinado de Josias</div>
+        <p>O Dia do SENHOR como juízo e purificação. Termina com uma das mais belas promessas do AT: "O SENHOR teu Deus está no meio de ti, poderoso para salvar."</p>
+        <span class="livro-link">Estudar Sofonias →</span>
+      </a>
+      <a href="/05-profetas/ageu/index.html" class="livro-card">
+        <div class="livro-num">Profeta Menor · 2 Capítulos</div>
+        <h3>🏛️ Ageu</h3>
+        <div class="livro-meta">~520 a.C. · Judá pós-exílica</div>
+        <p>O profeta da reconstrução: incentiva o povo retornado do exílio a reconstruir o Templo. "A glória desta última casa será maior do que a da primeira."</p>
+        <span class="livro-link">Estudar Ageu →</span>
+      </a>
+      <a href="/05-profetas/zacarias/index.html" class="livro-card">
+        <div class="livro-num">Profeta Menor · 14 Capítulos</div>
+        <h3>🕊️ Zacarias</h3>
+        <div class="livro-meta">~520–480 a.C. · Judá pós-exílica</div>
+        <p>O mais messiânico dos profetas menores: oito visões noturnas, o Rei que entra em Jerusalém sobre um jumento, os 30 siclos de prata, o Espírito derramado.</p>
+        <span class="livro-link">Estudar Zacarias →</span>
+      </a>
+      <a href="/05-profetas/malaquias/index.html" class="livro-card">
+        <div class="livro-num">Profeta Menor · 4 Capítulos</div>
+        <h3>🌅 Malaquias</h3>
+        <div class="livro-meta">~450–430 a.C. · Judá · Último profeta do AT</div>
+        <p>O último profeta antes do silêncio de 400 anos: contra a tibieza religiosa e a infidelidade conjugal. Anuncia o mensageiro que preparará o caminho do Senhor.</p>
+        <span class="livro-link">Estudar Malaquias →</span>
+      </a>
+    </div>
+
+    <h2 class="section-title">📊 Visão Geral dos Livros Proféticos</h2>
+    <table class="tabela-profetas">
+      <thead>
+        <tr><th>Livro</th><th>Período</th><th>Contexto</th><th>Caps.</th><th>Tema Central</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><a href="/05-profetas/isaias/index.html">Isaías</a></td><td>~740–700 a.C.</td><td>Ameaça assíria / Judá</td><td>66</td><td>Santidade de Deus e Servo Sofredor</td></tr>
+        <tr><td><a href="/05-profetas/jeremias/index.html">Jeremias</a></td><td>~627–586 a.C.</td><td>Queda de Jerusalém</td><td>52</td><td>Nova Aliança e julgamento babilônico</td></tr>
+        <tr><td><a href="/05-profetas/lamentacoes/index.html">Lamentações</a></td><td>~586 a.C.</td><td>Pós-destruição de Jerusalém</td><td>5</td><td>Lamento e esperança na misericórdia</td></tr>
+        <tr><td><a href="/05-profetas/ezequiel/index.html">Ezequiel</a></td><td>~593–571 a.C.</td><td>Exílio babilônico</td><td>48</td><td>Glória de Deus e restauração de Israel</td></tr>
+        <tr><td><a href="/05-profetas/daniel/index.html">Daniel</a></td><td>~605–535 a.C.</td><td>Babilônia e Pérsia</td><td>12</td><td>Soberania de Deus sobre os reinos</td></tr>
+        <tr><td><a href="/05-profetas/oseias/index.html">Oséias</a></td><td>~750–720 a.C.</td><td>Reino do Norte</td><td>14</td><td>Amor fiel de Deus por Israel infiel</td></tr>
+        <tr><td><a href="/05-profetas/joel/index.html">Joel</a></td><td>~835 ou ~400 a.C.</td><td>Judá</td><td>3</td><td>Dia do SENHOR e derramamento do Espírito</td></tr>
+        <tr><td><a href="/05-profetas/amos/index.html">Amós</a></td><td>~760 a.C.</td><td>Reino do Norte</td><td>9</td><td>Justiça social e julgamento das nações</td></tr>
+        <tr><td><a href="/05-profetas/obadias/index.html">Obadias</a></td><td>~586 a.C.</td><td>Contra Edom</td><td>1</td><td>Julgamento de Edom e restauração de Israel</td></tr>
+        <tr><td><a href="/05-profetas/jonas/index.html">Jonas</a></td><td>~760 a.C.</td><td>Nínive / Assíria</td><td>4</td><td>Misericórdia universal de Deus</td></tr>
+        <tr><td><a href="/05-profetas/miqueias/index.html">Miquéias</a></td><td>~735–700 a.C.</td><td>Judá</td><td>7</td><td>Justiça, misericórdia e Messias em Belém</td></tr>
+        <tr><td><a href="/05-profetas/naum/index.html">Naum</a></td><td>~663–612 a.C.</td><td>Contra Nínive</td><td>3</td><td>Queda do Império Assírio</td></tr>
+        <tr><td><a href="/05-profetas/habacuque/index.html">Habacuque</a></td><td>~605 a.C.</td><td>Judá / Ameaça babilônica</td><td>3</td><td>O justo viverá pela fé</td></tr>
+        <tr><td><a href="/05-profetas/sofonias/index.html">Sofonias</a></td><td>~630 a.C.</td><td>Judá / Reforma de Josias</td><td>3</td><td>Dia do SENHOR e remanescente fiel</td></tr>
+        <tr><td><a href="/05-profetas/ageu/index.html">Ageu</a></td><td>~520 a.C.</td><td>Judá pós-exílica</td><td>2</td><td>Reconstrução do Templo</td></tr>
+        <tr><td><a href="/05-profetas/zacarias/index.html">Zacarias</a></td><td>~520–480 a.C.</td><td>Judá pós-exílica</td><td>14</td><td>Visões messiânicas e restauração</td></tr>
+        <tr><td><a href="/05-profetas/malaquias/index.html">Malaquias</a></td><td>~450–430 a.C.</td><td>Judá pós-exílica</td><td>4</td><td>Fidelidade a Deus e ao pacto</td></tr>
+      </tbody>
+    </table>
+
+    <div style="text-align:center;margin-top:40px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.08);">
+      <a href="/" style="background:rgba(239,68,68,0.10);border:1px solid rgba(239,68,68,0.22);color:#ef4444;padding:13px 28px;border-radius:10px;text-decoration:none;font-weight:700;">← Voltar ao Início</a>
+    </div>
+  </div>
+</body>
+</html>
