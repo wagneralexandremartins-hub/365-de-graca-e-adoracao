@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloco 12 — Apocalipse Aprofundado | 365 de Graça & Adoração</title>
+  <meta name="description" content="O Apocalipse de João versículo por versículo — as 7 igrejas, os 7 selos, as 7 trombetas, a Besta, Babilônia, o Milênio e a Nova Jerusalém.">
+  <link rel="icon" href="/favicon.ico">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0a0a14; color: #e2e8f0; font-family: 'Georgia', serif; line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    .topbar { background: rgba(10,10,20,0.97); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
+    .topbar .inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .topbar a { font-size: 0.82rem; color: #94a3b8; font-weight: 600; transition: color 0.2s; }
+    .topbar a:hover { color: #c084fc; }
+    .hero { background: linear-gradient(135deg, #0a0a14 0%, #0d0520 40%, #0a0a14 100%); padding: 72px 24px 56px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.07); position: relative; overflow: hidden; }
+    .hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(192,132,252,0.15) 0%, transparent 70%); pointer-events: none; }
+    .bloco-badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(192,132,252,0.1); border: 1px solid rgba(192,132,252,0.3); border-radius: 999px; padding: 6px 18px; margin-bottom: 20px; }
+    .bloco-num { font-size: 0.72rem; font-weight: 900; color: #c084fc; text-transform: uppercase; letter-spacing: 1.5px; }
+    .hero h1 { font-size: 2.8rem; font-weight: 900; color: #f1f5f9; margin-bottom: 16px; line-height: 1.15; max-width: 700px; margin-left: auto; margin-right: auto; }
+    .hero p { color: #94a3b8; font-size: 1.05rem; max-width: 640px; margin: 0 auto 32px; line-height: 1.8; }
+    .hero-tags { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+    .hero-tag { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 5px 14px; font-size: 0.78rem; color: #94a3b8; font-weight: 600; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 700px; margin: 0 auto; }
+    .stat-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 20px 16px; text-align: center; }
+    .stat-card .num { font-size: 1.8rem; font-weight: 900; color: #c084fc; }
+    .stat-card .label { font-size: 0.78rem; color: #64748b; margin-top: 4px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 48px 24px 80px; }
+    h2 { font-size: 1.4rem; font-weight: 800; color: #f1f5f9; margin: 40px 0 16px; }
+    p { color: #94a3b8; font-size: 0.95rem; line-height: 1.8; margin-bottom: 16px; }
+    .intro-box { background: rgba(192,132,252,0.05); border: 1px solid rgba(192,132,252,0.15); border-radius: 14px; padding: 28px 32px; margin-bottom: 40px; }
+    .intro-box h3 { color: #c084fc; font-size: 1.05rem; font-weight: 800; margin-bottom: 12px; }
+    .intro-box p { color: #94a3b8; font-size: 0.93rem; line-height: 1.82; margin-bottom: 12px; }
+    .intro-box p:last-child { margin-bottom: 0; }
+    .secao-titulo { font-size: 1.1rem; font-weight: 800; color: #c084fc; text-transform: uppercase; letter-spacing: 1px; margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 1px solid rgba(192,132,252,0.2); }
+    .modulos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; margin-bottom: 40px; }
+    .modulo-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; padding: 22px; transition: all 0.25s; display: flex; flex-direction: column; }
+    .modulo-card:hover { background: rgba(255,255,255,0.05); transform: translateY(-3px); }
+    .mod-icon { font-size: 1.8rem; margin-bottom: 10px; }
+    .mod-tag { display: inline-block; font-size: 0.68rem; font-weight: 800; padding: 3px 10px; border-radius: 999px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.8px; }
+    .mod-title { font-size: 1rem; font-weight: 800; color: #f1f5f9; margin-bottom: 8px; line-height: 1.3; }
+    .mod-ref { font-size: 0.78rem; color: #64748b; margin-bottom: 8px; font-weight: 600; }
+    .mod-desc { font-size: 0.85rem; color: #64748b; line-height: 1.7; flex: 1; margin-bottom: 16px; }
+    .mod-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; font-weight: 700; padding: 8px 16px; border-radius: 8px; transition: all 0.2s; }
+    .a1 .mod-tag,.a1 .mod-link { background: rgba(192,132,252,0.1); border: 1px solid rgba(192,132,252,0.3); color: #c084fc; }
+    .a1:hover { border-color: rgba(192,132,252,0.3); } .a1 .mod-link:hover { background: rgba(192,132,252,0.2); }
+    .a2 .mod-tag,.a2 .mod-link { background: rgba(251,191,36,0.1); border: 1px solid rgba(251,191,36,0.3); color: #fbbf24; }
+    .a2:hover { border-color: rgba(251,191,36,0.3); } .a2 .mod-link:hover { background: rgba(251,191,36,0.2); }
+    .a3 .mod-tag,.a3 .mod-link { background: rgba(34,211,238,0.1); border: 1px solid rgba(34,211,238,0.3); color: #22d3ee; }
+    .a3:hover { border-color: rgba(34,211,238,0.3); } .a3 .mod-link:hover { background: rgba(34,211,238,0.2); }
+    .a4 .mod-tag,.a4 .mod-link { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); color: #ef4444; }
+    .a4:hover { border-color: rgba(239,68,68,0.3); } .a4 .mod-link:hover { background: rgba(239,68,68,0.2); }
+    .a5 .mod-tag,.a5 .mod-link { background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.3); color: #f97316; }
+    .a5:hover { border-color: rgba(249,115,22,0.3); } .a5 .mod-link:hover { background: rgba(249,115,22,0.2); }
+    .a6 .mod-tag,.a6 .mod-link { background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.3); color: #a855f7; }
+    .a6:hover { border-color: rgba(168,85,247,0.3); } .a6 .mod-link:hover { background: rgba(168,85,247,0.2); }
+    .a7 .mod-tag,.a7 .mod-link { background: rgba(220,38,38,0.1); border: 1px solid rgba(220,38,38,0.3); color: #dc2626; }
+    .a7:hover { border-color: rgba(220,38,38,0.3); } .a7 .mod-link:hover { background: rgba(220,38,38,0.2); }
+    .a8 .mod-tag,.a8 .mod-link { background: rgba(100,116,139,0.12); border: 1px solid rgba(100,116,139,0.3); color: #94a3b8; }
+    .a8:hover { border-color: rgba(100,116,139,0.3); } .a8 .mod-link:hover { background: rgba(100,116,139,0.2); }
+    .a9 .mod-tag,.a9 .mod-link { background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); color: #22c55e; }
+    .a9:hover { border-color: rgba(34,197,94,0.3); } .a9 .mod-link:hover { background: rgba(34,197,94,0.2); }
+    .a10 .mod-tag,.a10 .mod-link { background: rgba(14,165,233,0.1); border: 1px solid rgba(14,165,233,0.3); color: #0ea5e9; }
+    .a10:hover { border-color: rgba(14,165,233,0.3); } .a10 .mod-link:hover { background: rgba(14,165,233,0.2); }
+    .a11 .mod-tag,.a11 .mod-link { background: rgba(251,191,36,0.15); border: 1px solid rgba(251,191,36,0.4); color: #fbbf24; }
+    .a11:hover { border-color: rgba(251,191,36,0.4); } .a11 .mod-link:hover { background: rgba(251,191,36,0.25); }
+    .a12 .mod-tag,.a12 .mod-link { background: rgba(192,132,252,0.15); border: 1px solid rgba(192,132,252,0.4); color: #c084fc; }
+    .a12:hover { border-color: rgba(192,132,252,0.4); } .a12 .mod-link:hover { background: rgba(192,132,252,0.25); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.87rem; margin-bottom: 40px; }
+    th { background: rgba(192,132,252,0.10); color: #c084fc; padding: 10px 14px; text-align: left; font-weight: 700; border-bottom: 1px solid rgba(192,132,252,0.20); }
+    td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+    @media (max-width: 768px) { .stats { grid-template-columns: repeat(2, 1fr); } .hero h1 { font-size: 2rem; } }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="inner">
+      <a href="/">365 de Graça & Adoração</a>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="/12-apocalipse/sete-igrejas">7 Igrejas</a>
+        <a href="/12-apocalipse/visao-trono">Trono</a>
+        <a href="/12-apocalipse/sete-selos">7 Selos</a>
+        <a href="/12-apocalipse/sete-trombetas">7 Trombetas</a>
+        <a href="/12-apocalipse/mulher-dragao">Mulher/Dragão</a>
+        <a href="/12-apocalipse/sete-tacas">7 Taças</a>
+        <a href="/12-apocalipse/babilonia">Babilônia</a>
+        <a href="/12-apocalipse/nova-jerusalem">Nova Jerusalém</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="bloco-badge">
+      <span class="bloco-num">Bloco 12 · Profecia · Escatologia</span>
+    </div>
+    <h1>Apocalipse Aprofundado</h1>
+    <p>O último livro da Bíblia — a revelação de Jesus Cristo a João em Patmos. Visões, símbolos, profecias e esperança. Um estudo versículo por versículo dos 22 capítulos do Apocalipse, com contexto histórico, análise simbólica e aplicação pastoral.</p>
+    <div class="hero-tags">
+      <span class="hero-tag">João em Patmos</span>
+      <span class="hero-tag">7 Igrejas da Ásia</span>
+      <span class="hero-tag">O Cordeiro e o Trono</span>
+      <span class="hero-tag">7 Selos</span>
+      <span class="hero-tag">7 Trombetas</span>
+      <span class="hero-tag">Mulher e Dragão</span>
+      <span class="hero-tag">666 — A Besta</span>
+      <span class="hero-tag">7 Taças</span>
+      <span class="hero-tag">Babilônia</span>
+      <span class="hero-tag">Milênio</span>
+      <span class="hero-tag">Nova Jerusalém</span>
+      <span class="hero-tag">Hermenêutica</span>
+    </div>
+    <div class="stats">
+      <div class="stat-card"><div class="num">22</div><div class="label">Capítulos</div></div>
+      <div class="stat-card"><div class="num">404</div><div class="label">Versículos</div></div>
+      <div class="stat-card"><div class="num">278</div><div class="label">Alusões ao AT</div></div>
+      <div class="stat-card"><div class="num">96</div><div class="label">d.C. — Data</div></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="intro-box">
+      <h3>📖 O Que é o Apocalipse?</h3>
+      <p>O Apocalipse (do grego <em>apokalypsis</em> — "revelação", "desvelamento") é o último livro da Bíblia e um dos mais fascinantes e mal compreendidos de toda a Escritura. Escrito pelo apóstolo João durante seu exílio na ilha de Patmos (c. 95–96 d.C.), durante a perseguição do Imperador Domiciano, ele é ao mesmo tempo uma carta pastoral às sete igrejas da Ásia Menor, uma obra profética sobre o conflito entre o Reino de Deus e os poderes do mundo, e uma visão escatológica do triunfo final de Cristo e da renovação de toda a criação.</p>
+      <p>O Apocalipse pertence ao gênero literário da <strong>apocalíptica</strong> — um gênero judaico e cristão que usa visões, símbolos, números e imagens cósmicas para revelar realidades espirituais ocultas e comunicar esperança em tempos de perseguição. Para interpretar o Apocalipse corretamente, é preciso entender este gênero — não ler o livro como um jornal do futuro, mas como uma carta pastoral escrita em código para cristãos perseguidos, usando a linguagem simbólica que eles entendiam e que seus perseguidores não entendiam.</p>
+      <p>O Apocalipse tem <strong>278 alusões ao Antigo Testamento</strong> — mais do que qualquer outro livro do NT. Sem conhecer o AT — especialmente Daniel, Ezequiel, Isaías e Zacarias — é impossível entender o Apocalipse. Ele não é um livro independente: é a conclusão e o clímax de toda a narrativa bíblica, o ponto em que todas as promessas de Deus convergem e são cumpridas.</p>
+    </div>
+
+    <div class="secao-titulo">📚 Módulos do Bloco 12</div>
+
+    <div class="secao-titulo" style="font-size:0.85rem;color:#64748b;border:none;margin-top:0;padding-top:0;">Introdução e Contexto</div>
+    <div class="modulos-grid">
+      <div class="modulo-card a1">
+        <div class="mod-icon">📜</div>
+        <span class="mod-tag">Introdução</span>
+        <div class="mod-title">Introdução ao Apocalipse</div>
+        <div class="mod-ref">Cap. 1 · Autor · Data · Gênero · Estrutura</div>
+        <div class="mod-desc">Quem escreveu, quando, para quem e por quê. O gênero apocalíptico. As quatro escolas de interpretação. A estrutura literária dos 22 capítulos. Como ler o Apocalipse com sabedoria.</div>
+        <a href="/12-apocalipse/introducao" class="mod-link">Estudar →</a>
+      </div>
+      <div class="modulo-card a2">
+        <div class="mod-icon">🏝️</div>
+        <span class="mod-tag">Cap. 1</span>
+        <div class="mod-title">João em Patmos — A Visão do Filho do Homem</div>
+        <div class="mod-ref">Ap 1:1–20 · Patmos · Cristo Glorificado</div>
+        <div class="mod-desc">O exílio de João em Patmos. A visão do Cristo glorificado — cabelos brancos, olhos de chama, voz como muitas águas, espada de dois gumes. Os 7 candeeiros e as 7 estrelas. "Eu sou o Primeiro e o Último."</div>
+        <a href="/12-apocalipse/joao-patmos" class="mod-link">Estudar →</a>
+      </div>
+      <div class="modulo-card a12">
+        <div class="mod-icon">🔍</div>
+        <span class="mod-tag">Hermenêutica</span>
+        <div class="mod-title">Como Interpretar o Apocalipse</div>
+        <div class="mod-ref">Preterismo · Historicismo · Futurismo · Idealismo</div>
+        <div class="mod-desc">As quatro grandes escolas de interpretação do Apocalipse. O papel dos símbolos e números. A linguagem do AT no Apocalipse. Princípios para uma leitura responsável e fiel.</div>
+        <a href="/12-apocalipse/hermeneutica" class="mod-link">Estudar →</a>
+      </div>
+    </div>
+
+    <div class="secao-titulo" style="font-size:0.85rem;color:#64748b;border:none;margin-top:0;padding-top:0;">As 7 Igrejas e a Visão do Trono</div>
+    <div class="modulos-grid">
+      <div class="modulo-card a3">
+        <div class="mod-icon">⛪</div>
+        <span class="mod-tag">Caps. 2–3</span>
+        <div class="mod-title">As 7 Igrejas da Ásia Menor</div>
+        <div class="mod-ref">Éfeso · Esmirna · Pérgamo · Tiatira · Sardes · Filadélfia · Laodiceia</div>
+        <div class="mod-desc">As cartas às 7 igrejas — diagnóstico espiritual, elogio, repreensão e promessa para cada uma. O padrão das cartas. O significado histórico e tipológico de cada igreja. "Quem tem ouvidos, ouça."</div>
+        <a href="/12-apocalipse/sete-igrejas" class="mod-link">Estudar →</a>
+      </div>
+      <div class="modulo-card a2">
+        <div class="mod-icon">👑</div>
+        <span class="mod-tag">Caps. 4–5</span>
+        <div class="mod-title">A Visão do Trono e o Cordeiro</div>
+        <div class="mod-ref">Ap 4–5 · O Trono · Os 24 Anciãos · O Cordeiro Imolado</div>
+        <div class="mod-desc">A porta aberta no céu. O Trono e o que está sentado nele. Os 4 seres viventes e os 24 anciãos. O livro selado com 7 selos. O Leão que é o Cordeiro. O hino de adoração universal — "Digno és Tu."</div>
+        <a href="/12-apocalipse/visao-trono" class="mod-link">Estudar →</a>
+      </div>
+    </div>
+
+    <div class="secao-titulo" style="font-size:0.85rem;color:#64748b;border:none;margin-top:0;padding-top:0;">Os Julgamentos Progressivos</div>
+    <div class="modulos-grid">
+      <div class="modulo-card a4">
+        <div class="mod-icon">🔓</div>
+        <span class="mod-tag">Caps. 6–8</span>
+        <div class="mod-title">Os 7 Selos</div>
+        <div class="mod-ref">Os 4 Cavaleiros · Mártires · Sinais Cósmicos · Silêncio no Céu</div>
+        <div class="mod-desc">Os 4 Cavaleiros do Apocalipse (branco, vermelho, preto, amarelo). O 5º selo — os mártires sob o altar. O 6º selo — sinais cósmicos. O 7º selo — silêncio no céu por meia hora. Os 144.000 selados.</div>
+        <a href="/12-apocalipse/sete-selos" class="mod-link">Estudar →</a>
+      </div>
+      <div class="modulo-card a5">
+        <div class="mod-icon">🎺</div>
+        <span class="mod-tag">Caps. 8–11</span>
+        <div class="mod-title">As 7 Trombetas</div>
+        <div class="mod-ref">Pragas · Gafanhotos · Eufrates · Os Dois Testemunhos</div>
+        <div class="mod-desc">As 7 trombetas e as pragas que anunciam. Os gafanhotos do abismo. O exército do Eufrates. O livrinho amargo. Os Dois Testemunhos — morte, ressurreição e ascensão. A 7ª trombeta: "O reino do mundo se tornou de nosso Senhor."</div>
+        <a href="/12-apocalipse/sete-trombetas" class="mod-link">Estudar →</a>
+      </div>
+      <div class="modulo-card a6">
+        <div class="mod-icon">🐉</div>
+        <span class="mod-tag">Caps. 12–14</span>
+        <div class="mod-title">A Mulher, o Dragão e as Bestas</div>
+        <div class="mod-ref">Mulher Vestida de Sol · Dragão · Besta do Mar · 666 · Cordeiro no Sião</div>
+        <div class="mod-desc">A Mulher vestida de sol. O Dragão vermelho — Satanás. A guerra no céu. A Besta do mar (o Anticristo). A Besta da terra (o falso profeta). O número 666. O Cordeiro no Monte Sião com os 144.000.</div>
+        <a href="/12-apocalipse/mulher-dragao" class="mod-link">Estudar →</a>
+      </div>
+      <div class="modulo-card a7">
+        <div class="mod-icon">🏺</div>
+        <span class="mod-tag">Caps. 15–16</span>
+        <div class="mod-title">As 7 Taças da Ira de Deus</div>
+        <div class="mod-ref">Pragas Finais · Armagedom · Fim de Babilônia</div>
+        <div class="mod-desc">As 7 taças — as pragas finais e mais severas. Úlceras, mar de sangue, rios de sangue, sol escaldante, trevas, Eufrates seco, Armagedom. O maior terremoto da história. "Está feito!"</div>
+        <a href="/12-apocalipse/sete-tacas" class="mod-link">Estudar →</a>
+      </div>
+    </div>
+
+    <div class="secao-titulo" style="font-size:0.85rem;color:#64748b;border:none;margin-top:0;padding-top:0;">O Fim e a Nova Criação</div>
+    <div class="modulos-grid">
+      <div class="modulo-card a8">
+        <div class="mod-icon">🏛️</div>
+        <span class="mod-tag">Caps. 17–18</span>
+        <div class="mod-title">Babilônia — A Grande Prostituta</div>
+        <div class="mod-ref">Ap 17–18 · Roma · Poder Mundial · Queda de Babilônia</div>
+        <div class="mod-desc">A Grande Prostituta sentada sobre as águas. Babilônia como símbolo de Roma e de todo poder mundano que se opõe a Deus. "Caiu, caiu a grande Babilônia!" O lamento dos reis e mercadores. O chamado: "Saí dela, povo meu."</div>
+        <a href="/12-apocalipse/babilonia" class="mod-link">Estudar →</a>
+      </div>
+      <div class="modulo-card a9">
+        <div class="mod-icon">⚔️</div>
+        <span class="mod-tag">Caps. 19–20</span>
+        <div class="mod-title">O Milênio e o Julgamento Final</div>
+        <div class="mod-ref">Ap 19–20 · Cavaleiro Branco · Milênio · Satanás · Juízo Final</div>
+        <div class="mod-desc">O Cavaleiro Branco — Cristo vitorioso. A batalha final. O Milênio — 1.000 anos de reinado. As 4 interpretações (pré, pós, amilenarismo, pré-tribulacionismo). Satanás solto e derrotado. O Grande Trono Branco — o Juízo Final.</div>
+        <a href="/12-apocalipse/milenio" class="mod-link">Estudar →</a>
+      </div>
+      <div class="modulo-card a11">
+        <div class="mod-icon">🌟</div>
+        <span class="mod-tag">Caps. 21–22</span>
+        <div class="mod-title">A Nova Jerusalém — A Nova Criação</div>
+        <div class="mod-ref">Ap 21–22 · Novo Céu · Nova Terra · Tabernáculo de Deus · Rios de Vida</div>
+        <div class="mod-desc">O novo céu e a nova terra. A Nova Jerusalém descendo do céu. "Eis que faço novas todas as coisas." As dimensões da cidade. O Rio da Vida. A Árvore da Vida. "Maranata — vem, Senhor Jesus!" A esperança cristã final.</div>
+        <a href="/12-apocalipse/nova-jerusalem" class="mod-link">Estudar →</a>
+      </div>
+    </div>
+
+    <h2>📊 Estrutura do Apocalipse</h2>
+    <table>
+      <tr><th>Seção</th><th>Capítulos</th><th>Conteúdo</th><th>Tema Central</th></tr>
+      <tr><td>Prólogo</td><td>1:1–8</td><td>Apresentação e saudação</td><td>Revelação de Jesus Cristo</td></tr>
+      <tr><td>Visão Inaugural</td><td>1:9–20</td><td>Cristo glorificado em Patmos</td><td>O Senhor da Igreja</td></tr>
+      <tr><td>7 Cartas</td><td>2–3</td><td>Mensagens às 7 igrejas</td><td>Diagnóstico e chamado</td></tr>
+      <tr><td>Visão do Trono</td><td>4–5</td><td>Trono celestial e o Cordeiro</td><td>Adoração e soberania</td></tr>
+      <tr><td>7 Selos</td><td>6–8:1</td><td>Abertura dos selos</td><td>Julgamentos e proteção</td></tr>
+      <tr><td>7 Trombetas</td><td>8:2–11:19</td><td>Anjos tocam trombetas</td><td>Advertências e pragas</td></tr>
+      <tr><td>Visões Centrais</td><td>12–14</td><td>Mulher, Dragão, Bestas</td><td>O conflito cósmico</td></tr>
+      <tr><td>7 Taças</td><td>15–16</td><td>Ira final de Deus</td><td>Julgamento completo</td></tr>
+      <tr><td>Queda de Babilônia</td><td>17–18</td><td>A Grande Prostituta</td><td>Fim do poder mundano</td></tr>
+      <tr><td>Vitória de Cristo</td><td>19–20</td><td>Cavaleiro Branco, Milênio, Juízo</td><td>Triunfo definitivo</td></tr>
+      <tr><td>Nova Criação</td><td>21–22:5</td><td>Novo céu, nova terra, Nova Jerusalém</td><td>Restauração e comunhão</td></tr>
+      <tr><td>Epílogo</td><td>22:6–21</td><td>Conclusão e promessa</td><td>"Vem, Senhor Jesus!"</td></tr>
+    </table>
+
+    <h2>🔢 Os Números Simbólicos do Apocalipse</h2>
+    <table>
+      <tr><th>Número</th><th>Significado Simbólico</th><th>Ocorrências no Apocalipse</th></tr>
+      <tr><td>7</td><td>Perfeição, completude, plenitude divina</td><td>54 vezes — igrejas, selos, trombetas, taças, espíritos, estrelas</td></tr>
+      <tr><td>4</td><td>A terra, os quatro pontos cardeais, a criação</td><td>Cavaleiros, seres viventes, anjos dos 4 ventos</td></tr>
+      <tr><td>12</td><td>O povo de Deus (12 tribos + 12 apóstolos)</td><td>Portas, fundamentos, frutos da Árvore da Vida</td></tr>
+      <tr><td>144.000</td><td>12 × 12 × 1.000 — a plenitude do povo de Deus</td><td>Os selados (cap. 7) e os com o Cordeiro (cap. 14)</td></tr>
+      <tr><td>1.000</td><td>Grande quantidade, período longo, plenitude</td><td>O Milênio (cap. 20)</td></tr>
+      <tr><td>3½</td><td>Metade de 7 — tempo limitado de tribulação</td><td>42 meses = 1.260 dias = tempo, tempos e metade de um tempo</td></tr>
+      <tr><td>666</td><td>Imperfeição humana triplicada — o homem sem Deus</td><td>O número da Besta (cap. 13)</td></tr>
+    </table>
+  </div>
+</body>
+</html>
