@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O Saque de Constantinopla (1204) | Bloco 10 — 365 de Graça & Adoração</title>
+  <link rel="icon" href="/favicon.ico">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0f172a; color: #e2e8f0; font-family: 'Georgia', serif; line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    .topbar { background: rgba(15,23,42,0.97); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
+    .topbar .inner { max-width: 900px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .topbar a { font-size: 0.85rem; color: #94a3b8; font-weight: 600; }
+    .hero { padding: 64px 24px 48px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .tag { display: inline-block; font-size: 0.72rem; font-weight: 800; padding: 4px 14px; border-radius: 999px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+    .hero h1 { font-size: 2.4rem; font-weight: 900; color: #f1f5f9; margin-bottom: 12px; line-height: 1.2; }
+    .hero .ref { font-size: 0.88rem; color: #64748b; margin-bottom: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+    .hero blockquote { font-style: italic; color: #cbd5e1; font-size: 1rem; padding-left: 20px; max-width: 620px; margin: 0 auto; text-align: left; }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
+    .sb { margin-bottom: 40px; }
+    .sb h2 { font-size: 1.3rem; font-weight: 800; color: #f1f5f9; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .sb p { color: #94a3b8; font-size: 0.95rem; line-height: 1.85; margin-bottom: 16px; }
+    .bloco { border-left-width: 3px; border-left-style: solid; border-radius: 0 12px 12px 0; padding: 18px 20px; margin-bottom: 16px; background: rgba(255,255,255,0.02); border-top: 1px solid rgba(255,255,255,0.07); border-right: 1px solid rgba(255,255,255,0.07); border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .bt { font-size: 0.85rem; font-weight: 800; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .bx { color: #94a3b8; font-size: 0.92rem; line-height: 1.82; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.87rem; margin: 20px 0 32px; }
+    td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+    .nav-mod { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.07); flex-wrap: wrap; gap: 10px; }
+    .nav-mod a { padding: 10px 20px; border-radius: 8px; font-size: 0.88rem; font-weight: 700; transition: all 0.2s; }
+    .reflexao { border-radius: 12px; padding: 22px 26px; margin-top: 32px; background: rgba(34,197,94,0.05); border: 1px solid rgba(34,197,94,0.15); }
+    .reflexao h3 { color: #22c55e; font-size: 0.95rem; font-weight: 800; margin-bottom: 10px; }
+    .reflexao p { color: #94a3b8; font-size: 0.9rem; line-height: 1.8; margin-bottom: 10px; }
+    .reflexao p:last-child { margin-bottom: 0; }
+    .pers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; margin: 20px 0 32px; }
+    .pers-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 16px; }
+    .pers-nome { font-size: 0.95rem; font-weight: 800; margin-bottom: 4px; }
+    .pers-datas { font-size: 0.72rem; color: #64748b; margin-bottom: 8px; font-weight: 600; }
+    .pers-desc { font-size: 0.83rem; color: #94a3b8; line-height: 1.6; }
+    .aviso { border-radius: 12px; padding: 20px 24px; margin: 20px 0 28px; background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.15); }
+    .aviso h4 { color: #ef4444; font-size: 0.9rem; font-weight: 800; margin-bottom: 8px; }
+    .aviso p { color: #94a3b8; font-size: 0.88rem; line-height: 1.75; margin-bottom: 0; }
+
+    .topbar a:hover { color: #a855f7; }
+    .hero { background: linear-gradient(135deg, #0f172a 0%, #0d001a 50%, #0f172a 100%); }
+    .tag { background: #a855f718; border: 1px solid #a855f740; color: #a855f7; }
+    .hero blockquote { border-left: 3px solid #a855f7; }
+    .bloco { border-left-color: #a855f7; }
+    .bt { color: #a855f7; }
+    table th { background: #a855f718; color: #a855f7; border-bottom: 1px solid #a855f730; }
+    .nav-mod a { background: #a855f718; border: 1px solid #a855f730; color: #a855f7; }
+    .nav-mod a:hover { background: #a855f730; }
+    .pers-nome { color: #a855f7; }
+    </style>
+</head>
+<body>
+  <div class="topbar"><div class="inner">
+    <a href="/10-cruzadas/index.html">← Bloco 10</a>
+    <a href="/">365 de Graça & Adoração</a>
+  </div></div>
+  <div class="hero">
+    <span class="tag">🔥 Quarta Cruzada · 1204</span>
+    <h1>O Saque de Constantinopla (1204)</h1>
+    <div class="ref">Desvio Veneziano · Enrico Dandolo · Império Latino · Ferida Ecumênica</div>
+    <blockquote>Os sarracenos são mais misericordiosos e humanos do que estes homens que carregam a Cruz de Cristo no ombro.<br><small style="color:#64748b;font-size:0.8rem;font-style:normal;">— Nicetas Choniates, cronista bizantino, sobre o saque de Constantinopla pelos cruzados (1204)</small></blockquote>
+  </div>
+  <div class="wrap">
+    
+<div class="sb">
+  <h2>🔥 A Quarta Cruzada — O Desvio Fatal</h2>
+  <p>A Quarta Cruzada (1202–1204) é o episódio mais vergonhoso das Cruzadas — e um dos mais reveladores sobre a natureza real do movimento cruzadístico. Convocada pelo Papa Inocêncio III com o objetivo de conquistar o Egito (a base do poder muçulmano no Oriente Médio) e de lá libertar Jerusalém, ela terminou com o saque da maior cidade cristã do mundo — Constantinopla, capital do Império Bizantino — por cruzados ocidentais.</p>
+  <p>O desvio começou com problemas financeiros: os cruzados não tinham dinheiro suficiente para pagar os venezianos pelo transporte marítimo. Veneza, liderada pelo ancião e cego Doge Enrico Dandolo (que tinha 90 anos e ainda assim liderou pessoalmente o ataque a Constantinopla), propôs um acordo: em vez de dinheiro, os cruzados ajudariam Veneza a reconquistar a cidade de Zara (atual Zadar, na Croácia) — uma cidade cristã que havia se rebelado contra Veneza. O Papa Inocêncio III proibiu o ataque a Zara — mas os cruzados o fizeram assim mesmo. Inocêncio os excomungou — e depois levantou a excomunhão para não perder o controle da Cruzada.</p>
+</div>
+<div class="sb">
+  <h2>🏛️ O Saque de Constantinopla (1204)</h2>
+  <div class="bloco">
+    <div class="bt">As Circunstâncias do Saque</div>
+    <div class="bx">Após Zara, os cruzados foram desviados para Constantinopla por um pretendente ao trono bizantino — Aleixo Ângelo — que prometeu recompensas generosas se o ajudassem a recuperar o trono de seu pai. Os cruzados instalaram Aleixo IV no trono (1203) — mas ele não conseguiu cumprir suas promessas. Uma revolta popular derrubou Aleixo IV e instalou um novo imperador hostil aos ocidentais. Os cruzados, sem dinheiro e sem alternativa, decidiram tomar a cidade pela força.</div>
+  </div>
+  <div class="bloco">
+    <div class="bt">O Saque</div>
+    <div class="bx">O saque de Constantinopla (abril de 1204) durou três dias. Os cruzados roubaram tudo o que podiam carregar — ouro, prata, relíquias, obras de arte, manuscritos. Igrejas foram profanadas. Freiras foram estupradas. A Hagia Sofia — a maior catedral do mundo cristão — foi saqueada e uma prostituta foi colocada no trono do Patriarca. O cronista Nicetas Choniates, que sobreviveu ao saque, escreveu: "Os sarracenos são mais misericordiosos e humanos do que estes homens que carregam a Cruz de Cristo no ombro." A Quarta Cruzada não chegou à Terra Santa — ela destruiu o maior baluarte cristão do Oriente.</div>
+  </div>
+  <div class="bloco">
+    <div class="bt">O Império Latino de Constantinopla</div>
+    <div class="bx">Após o saque, os cruzados dividiram o Império Bizantino entre si e estabeleceram o "Império Latino de Constantinopla" (1204–1261). Balduíno de Flandres foi coroado Imperador. Veneza ficou com os portos e ilhas estratégicas. O Patriarca latino substituiu o Patriarca ortodoxo. Este "Império Latino" foi uma criação artificial e frágil — nunca controlou mais do que uma fração do território bizantino e foi constantemente ameaçado pelos estados gregos que sobreviveram ao saque. Em 1261, o Imperador Miguel VIII Paleólogo reconquistou Constantinopla e restaurou o Império Bizantino.</div>
+  </div>
+</div>
+<div class="sb">
+  <h2>💔 A Ferida que Nunca Cicatrizou</h2>
+  <p>O saque de Constantinopla em 1204 é considerado pela Igreja Ortodoxa como o evento mais traumático de sua história — mais do que a conquista turca de 1453. Ele aprofundou o Cisma de 1054 de forma irreparável: antes de 1204, havia esperança de reconciliação entre Roma e Constantinopla; depois de 1204, esta esperança foi destruída por gerações. O Papa João Paulo II pediu perdão pelo saque em 2001, durante uma visita à Grécia — um gesto significativo, mas que não apagou séculos de memória dolorosa.</p>
+  <p>O saque de Constantinopla também teve consequências geopolíticas devastadoras: ele enfraqueceu o Império Bizantino de forma irreversível. Quando os Turcos Otomanos ameaçaram Constantinopla no século XIV e XV, o Império estava tão enfraquecido pelo saque de 1204 e suas consequências que não conseguiu resistir. A queda de Constantinopla para os otomanos em 1453 foi, em parte, uma consequência tardia da Quarta Cruzada.</p>
+  <div class="reflexao">
+    <h3>🙏 Reflexão: Quando a Fé se Torna Pretexto</h3>
+    <p>A Quarta Cruzada é o exemplo mais claro de como a fé pode ser instrumentalizada para fins que nada têm a ver com ela. Os cruzados usaram a linguagem da guerra santa para justificar o que era, na realidade, uma operação de saque e conquista movida por interesses políticos e econômicos venezianos. O Papa Inocêncio III, que havia convocado a Cruzada com as melhores intenções, viu-a escapar completamente de seu controle e ser usada para destruir o que pretendia defender. Esta lição é permanentemente relevante: quando a fé é instrumentalizada pelo poder, ela não apenas falha em seus objetivos religiosos — ela se torna uma ferramenta de destruição. "Nem todo aquele que me diz: Senhor, Senhor, entrará no reino dos céus" (Mt 7:21).</p>
+  </div>
+</div>
+
+    <div class="nav-mod">
+      <a href="/10-cruzadas/cruzadas-seguintes">← Cruzadas Seguintes</a>
+      <a href="/10-cruzadas/index.html">📋 Índice</a>
+      <a href="/10-cruzadas/cruzadas-nordeste">Cruzadas do Norte →</a>
+    </div>
+  </div>
+</body>
+</html>

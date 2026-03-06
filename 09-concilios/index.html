@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloco 09 — Concílios e História da Igreja | 365 de Graça & Adoração</title>
+  <meta name="description" content="Os grandes Concílios Ecumênicos que definiram a doutrina cristã — de Niceia ao Vaticano II. Organização institucional, liturgia e autoridade.">
+  <link rel="icon" href="/favicon.ico">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0f172a; color: #e2e8f0; font-family: 'Georgia', serif; line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    .topbar { background: rgba(15,23,42,0.97); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
+    .topbar .inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .topbar a { font-size: 0.82rem; color: #94a3b8; font-weight: 600; transition: color 0.2s; }
+    .topbar a:hover { color: #818cf8; }
+    .hero { background: linear-gradient(135deg, #0f172a 0%, #0a0a1f 40%, #0f172a 100%); padding: 72px 24px 56px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.07); position: relative; overflow: hidden; }
+    .hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(129,140,248,0.12) 0%, transparent 70%); pointer-events: none; }
+    .bloco-badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(129,140,248,0.1); border: 1px solid rgba(129,140,248,0.25); border-radius: 999px; padding: 6px 18px; margin-bottom: 20px; }
+    .bloco-num { font-size: 0.72rem; font-weight: 900; color: #818cf8; text-transform: uppercase; letter-spacing: 1.5px; }
+    .hero h1 { font-size: 2.8rem; font-weight: 900; color: #f1f5f9; margin-bottom: 16px; line-height: 1.15; max-width: 700px; margin-left: auto; margin-right: auto; }
+    .hero p { color: #94a3b8; font-size: 1.05rem; max-width: 620px; margin: 0 auto 32px; line-height: 1.8; }
+    .hero-tags { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+    .hero-tag { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 5px 14px; font-size: 0.78rem; color: #94a3b8; font-weight: 600; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 700px; margin: 0 auto; }
+    .stat-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 20px 16px; text-align: center; }
+    .stat-card .num { font-size: 1.8rem; font-weight: 900; color: #818cf8; }
+    .stat-card .label { font-size: 0.78rem; color: #64748b; margin-top: 4px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 48px 24px 80px; }
+    h2 { font-size: 1.4rem; font-weight: 800; color: #f1f5f9; margin: 40px 0 16px; }
+    p { color: #94a3b8; font-size: 0.95rem; line-height: 1.8; margin-bottom: 16px; }
+    .intro-box { background: rgba(129,140,248,0.05); border: 1px solid rgba(129,140,248,0.15); border-radius: 14px; padding: 28px 32px; margin-bottom: 40px; }
+    .intro-box h3 { color: #818cf8; font-size: 1.05rem; font-weight: 800; margin-bottom: 12px; }
+    .intro-box p { color: #94a3b8; font-size: 0.93rem; line-height: 1.82; margin-bottom: 12px; }
+    .intro-box p:last-child { margin-bottom: 0; }
+    .modulos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; margin-bottom: 48px; }
+    .modulo-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; padding: 24px; transition: all 0.25s; display: flex; flex-direction: column; }
+    .mod-icon { font-size: 2rem; margin-bottom: 12px; }
+    .mod-tag { display: inline-block; font-size: 0.68rem; font-weight: 800; padding: 3px 10px; border-radius: 999px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.8px; }
+    .mod-title { font-size: 1.05rem; font-weight: 800; color: #f1f5f9; margin-bottom: 8px; line-height: 1.3; }
+    .mod-desc { font-size: 0.87rem; color: #64748b; line-height: 1.7; flex: 1; margin-bottom: 16px; }
+    .mod-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; font-weight: 700; padding: 8px 16px; border-radius: 8px; transition: all 0.2s; }
+    .m1 .mod-tag,.m1 .mod-link { background: rgba(129,140,248,0.1); border: 1px solid rgba(129,140,248,0.25); color: #818cf8; }
+    .m1:hover { border-color: rgba(129,140,248,0.3); }
+    .m1 .mod-link:hover { background: rgba(129,140,248,0.2); }
+    .m2 .mod-tag,.m2 .mod-link { background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.25); color: #f59e0b; }
+    .m2:hover { border-color: rgba(245,158,11,0.3); }
+    .m2 .mod-link:hover { background: rgba(245,158,11,0.2); }
+    .m3 .mod-tag,.m3 .mod-link { background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.25); color: #22c55e; }
+    .m3:hover { border-color: rgba(34,197,94,0.3); }
+    .m3 .mod-link:hover { background: rgba(34,197,94,0.2); }
+    .m4 .mod-tag,.m4 .mod-link { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.25); color: #ef4444; }
+    .m4:hover { border-color: rgba(239,68,68,0.3); }
+    .m4 .mod-link:hover { background: rgba(239,68,68,0.2); }
+    .m5 .mod-tag,.m5 .mod-link { background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.25); color: #a855f7; }
+    .m5:hover { border-color: rgba(168,85,247,0.3); }
+    .m5 .mod-link:hover { background: rgba(168,85,247,0.2); }
+    .m6 .mod-tag,.m6 .mod-link { background: rgba(34,211,238,0.1); border: 1px solid rgba(34,211,238,0.25); color: #22d3ee; }
+    .m6:hover { border-color: rgba(34,211,238,0.3); }
+    .m6 .mod-link:hover { background: rgba(34,211,238,0.2); }
+    .m7 .mod-tag,.m7 .mod-link { background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.25); color: #f97316; }
+    .m7:hover { border-color: rgba(249,115,22,0.3); }
+    .m7 .mod-link:hover { background: rgba(249,115,22,0.2); }
+    .m8 .mod-tag,.m8 .mod-link { background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.25); color: #10b981; }
+    .m8:hover { border-color: rgba(16,185,129,0.3); }
+    .m8 .mod-link:hover { background: rgba(16,185,129,0.2); }
+    .modulo-card:hover { background: rgba(255,255,255,0.05); transform: translateY(-3px); }
+    .timeline { position: relative; padding-left: 36px; margin-bottom: 48px; }
+    .timeline::before { content: ""; position: absolute; left: 10px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #818cf8, #f59e0b, #22c55e, #f97316); }
+    .tl-item { position: relative; margin-bottom: 28px; }
+    .tl-item::before { content: ""; position: absolute; left: -30px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: #818cf8; border: 2px solid #0f172a; }
+    .tl-date { font-size: 0.78rem; font-weight: 800; color: #818cf8; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .tl-title { font-size: 1rem; font-weight: 700; color: #e2e8f0; margin-bottom: 6px; }
+    .tl-desc { font-size: 0.88rem; color: #64748b; line-height: 1.65; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.87rem; margin-bottom: 40px; }
+    th { background: rgba(129,140,248,0.10); color: #818cf8; padding: 10px 14px; text-align: left; font-weight: 700; border-bottom: 1px solid rgba(129,140,248,0.20); }
+    td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+    @media (max-width: 768px) { .stats { grid-template-columns: repeat(2, 1fr); } .hero h1 { font-size: 2rem; } }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="inner">
+      <a href="/">365 de Graça & Adoração</a>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <a href="/09-concilios/niceia">Niceia</a>
+        <a href="/09-concilios/constantinopla">Constantinopla</a>
+        <a href="/09-concilios/efeso-calcedonia">Éfeso/Calcedônia</a>
+        <a href="/09-concilios/trento">Trento</a>
+        <a href="/09-concilios/vaticano-i">Vaticano I</a>
+        <a href="/09-concilios/vaticano-ii">Vaticano II</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="bloco-badge">
+      <span class="bloco-num">Bloco 09 · Organização</span>
+    </div>
+    <h1>Concílios e História da Igreja</h1>
+    <p>Os grandes Concílios Ecumênicos que definiram a fé cristã — de Niceia (325) ao Vaticano II (1965). Como a Igreja organizou sua doutrina, liturgia e autoridade ao longo dos séculos.</p>
+    <div class="hero-tags">
+      <span class="hero-tag">Niceia (325)</span>
+      <span class="hero-tag">Constantinopla (381)</span>
+      <span class="hero-tag">Éfeso (431)</span>
+      <span class="hero-tag">Calcedônia (451)</span>
+      <span class="hero-tag">Trento (1545–63)</span>
+      <span class="hero-tag">Vaticano I (1869–70)</span>
+      <span class="hero-tag">Vaticano II (1962–65)</span>
+      <span class="hero-tag">Patrística</span>
+    </div>
+    <div class="stats">
+      <div class="stat-card"><div class="num">21</div><div class="label">Concílios Ecumênicos</div></div>
+      <div class="stat-card"><div class="num">325</div><div class="label">Ano de Niceia</div></div>
+      <div class="stat-card"><div class="num">1700</div><div class="label">Anos de História</div></div>
+      <div class="stat-card"><div class="num">2.500</div><div class="label">Bispos no Vaticano II</div></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="intro-box">
+      <h3>⛪ Por que estudar os Concílios?</h3>
+      <p>Os Concílios Ecumênicos são os momentos em que a Igreja, reunida em assembleia representativa, definiu sua fé diante de desafios teológicos e históricos. Eles não criaram a doutrina cristã — eles a articularam, defenderam e transmitiram. Sem o Concílio de Niceia (325), a divindade de Cristo poderia ter sido negada pelo Arianismo. Sem o Concílio de Calcedônia (451), a natureza humana de Cristo poderia ter sido absorvida pela divina. Sem o Concílio de Trento (1545-63), a Igreja Católica não teria se reformado internamente após o choque da Reforma Protestante.</p>
+      <p>Estudar os Concílios é estudar como a Igreja pensou sua fé — com que instrumentos intelectuais, em que contexto histórico, diante de que desafios. É também estudar as limitações humanas da Igreja: os Concílios foram marcados por intrigas políticas, pressões imperiais, exclusões injustas e até violência. A história dos Concílios é a história da fé humana — gloriosa e falível ao mesmo tempo.</p>
+      <p>Para o cristão evangélico, os Concílios têm autoridade derivada — eles são valiosos na medida em que articulam fielmente o ensinamento das Escrituras. As definições trinitárias e cristológicas dos primeiros quatro Concílios (Niceia, Constantinopla, Éfeso, Calcedônia) são aceitas por praticamente todas as tradições cristãs como expressões fiéis da revelação bíblica. Os Concílios posteriores são mais controversos — mas todos merecem ser estudados com atenção e discernimento.</p>
+    </div>
+
+    <h2>📚 Módulos do Bloco 09</h2>
+    <div class="modulos-grid">
+      <div class="modulo-card m1">
+        <div class="mod-icon">📜</div>
+        <span class="mod-tag">Visão Geral</span>
+        <div class="mod-title">Os 21 Concílios Ecumênicos</div>
+        <div class="mod-desc">Panorama completo dos 21 Concílios reconhecidos pela Igreja Católica — dos 7 primeiros (aceitos por todos) aos medievais e modernos. Critérios de ecumenicidade e autoridade conciliar.</div>
+        <a href="/09-concilios/concilios-ecumenicos" class="mod-link">Estudar →</a>
+      </div>
+      <div class="modulo-card m2">
+        <div class="mod-icon">⭐</div>
+        <span class="mod-tag">325 d.C.</span>
+        <div class="mod-title">Concílio de Niceia — A Divindade de Cristo</div>
+        <div class="mod-desc">O primeiro Concílio Ecumênico (325 d.C.). O debate com Ário sobre a divindade de Cristo. O Credo Niceno. Constantino e a política imperial. O <em>homoousios</em> — "da mesma substância."</div>
+        <a href="/09-concilios/niceia" class="mod-link">Estudar →</a>
+      </div>
+      <div class="modulo-card m3">
+        <div class="mod-icon">🕊️</div>
+        <span class="mod-tag">381 d.C.</span>
+        <div class="mod-title">Constantinopla I — O Espírito Santo</div>
+        <div class="mod-desc">A divindade do Espírito Santo contra os Pneumatômacos. Completação do Credo Niceno-Constantinopolitano. Gregório de Nazianzo e os Capadócios. A Trindade como doutrina definitiva.</div>
+        <a href="/09-concilios/constantinopla" class="mod-link">Estudar →</a>
+      </div>
+      <div class="modulo-card m4">
+        <div class="mod-icon">✝️</div>
+        <span class="mod-tag">431 · 451 d.C.</span>
+        <div class="mod-title">Éfeso e Calcedônia — As Duas Naturezas</div>
+        <div class="mod-desc">Maria como <em>Theotokos</em> (Mãe de Deus) contra Nestório. A definição de Calcedônia: Cristo é uma pessoa em duas naturezas — plenamente divino e plenamente humano. Monofisismo e suas consequências.</div>
+        <a href="/09-concilios/efeso-calcedonia" class="mod-link">Estudar →</a>
+      </div>
+      <div class="modulo-card m5">
+        <div class="mod-icon">🏰</div>
+        <span class="mod-tag">1545–1563</span>
+        <div class="mod-title">Concílio de Trento — A Resposta Católica</div>
+        <div class="mod-desc">A resposta da Igreja Católica à Reforma Protestante. Justificação, Escritura e Tradição, os sete sacramentos, o purgatório, a Missa como sacrifício. Reforma disciplinar e criação dos seminários.</div>
+        <a href="/09-concilios/trento" class="mod-link">Estudar →</a>
+      </div>
+      <div class="modulo-card m6">
+        <div class="mod-icon">👑</div>
+        <span class="mod-tag">1869–1870</span>
+        <div class="mod-title">Vaticano I — A Infalibilidade Papal</div>
+        <div class="mod-desc">A definição da infalibilidade papal (<em>Pastor Aeternus</em>). O contexto do Risorgimento italiano e a perda dos Estados Pontifícios. O Concílio interrompido pela guerra franco-prussiana. Consequências ecumênicas.</div>
+        <a href="/09-concilios/vaticano-i" class="mod-link">Estudar →</a>
+      </div>
+      <div class="modulo-card m7">
+        <div class="mod-icon">🌍</div>
+        <span class="mod-tag">1962–1965</span>
+        <div class="mod-title">Vaticano II — A Igreja no Mundo Moderno</div>
+        <div class="mod-desc">O maior Concílio da história moderna. João XXIII e o <em>aggiornamento</em>. A liturgia em vernáculo, o ecumenismo, a liberdade religiosa, a Igreja como "Povo de Deus." Quatro constituições fundamentais.</div>
+        <a href="/09-concilios/vaticano-ii" class="mod-link">Estudar →</a>
+      </div>
+      <div class="modulo-card m8">
+        <div class="mod-icon">📖</div>
+        <span class="mod-tag">Séc. II–V</span>
+        <div class="mod-title">Os Pais da Igreja e a Patrística</div>
+        <div class="mod-desc">Inácio, Policarpo, Justino Mártir, Ireneu, Tertuliano, Orígenes, Atanásio, Agostinho. Como os Pais da Igreja desenvolveram a teologia cristã e defenderam a fé contra as heresias.</div>
+        <a href="/09-concilios/patristica" class="mod-link">Estudar →</a>
+      </div>
+    </div>
+
+    <h2>📅 Linha do Tempo dos Concílios Ecumênicos</h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">325 d.C.</div>
+        <div class="tl-title">Niceia I — Divindade de Cristo contra o Arianismo</div>
+        <div class="tl-desc">Convocado pelo Imperador Constantino. Definiu que Cristo é <em>homoousios</em> (da mesma substância) com o Pai. Condenou o Arianismo de Ário. Produziu o primeiro Credo Niceno.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">381 d.C.</div>
+        <div class="tl-title">Constantinopla I — Divindade do Espírito Santo</div>
+        <div class="tl-desc">Completou o Credo Niceno com a afirmação da divindade do Espírito Santo. Condenou o Macedonianismo (que negava a divindade do Espírito). Definiu a doutrina trinitária clássica.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">431 d.C.</div>
+        <div class="tl-title">Éfeso — Maria como Theotokos</div>
+        <div class="tl-desc">Condenou o Nestorianismo (que separava as duas naturezas de Cristo em duas pessoas). Definiu Maria como <em>Theotokos</em> (Mãe de Deus) — não porque Maria seja divina, mas porque o filho que ela gerou é Deus.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">451 d.C.</div>
+        <div class="tl-title">Calcedônia — As Duas Naturezas de Cristo</div>
+        <div class="tl-desc">A definição mais precisa da cristologia: Cristo é uma pessoa em duas naturezas — divina e humana — "sem confusão, sem mudança, sem divisão, sem separação." Condenou o Monofisismo (que fundia as duas naturezas em uma).</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">553 d.C.</div>
+        <div class="tl-title">Constantinopla II — Os Três Capítulos</div>
+        <div class="tl-desc">Condenou os escritos de Teodoro de Mopsuéstia, Teodoreto de Ciro e Iba de Edessa (os "Três Capítulos") para reconciliar os monofisitas. Controverso e rejeitado pelo Papa Vigílio inicialmente.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">680–681 d.C.</div>
+        <div class="tl-title">Constantinopla III — Duas Vontades em Cristo</div>
+        <div class="tl-desc">Condenou o Monotelismo (que afirmava que Cristo tinha apenas uma vontade). Definiu que Cristo tem duas vontades — divina e humana — em harmonia perfeita. Condenou o Papa Honório I por heresia.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">787 d.C.</div>
+        <div class="tl-title">Niceia II — A Veneração de Ícones</div>
+        <div class="tl-desc">Último Concílio aceito por todas as igrejas (católica, ortodoxa e algumas protestantes). Definiu a legitimidade da veneração (não adoração) de ícones contra o Iconoclasmo. Distinguiu <em>latria</em> (adoração, só a Deus) de <em>proskynesis</em> (veneração, às imagens).</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1545–1563</div>
+        <div class="tl-title">Trento — Resposta à Reforma Protestante</div>
+        <div class="tl-desc">O Concílio mais longo da história (18 anos). Definiu a doutrina católica sobre justificação, sacramentos, Escritura e Tradição. Promoveu a Reforma Católica interna. Estabeleceu o catecismo, o missal e o breviário romanos.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1869–1870</div>
+        <div class="tl-title">Vaticano I — Infalibilidade Papal</div>
+        <div class="tl-desc">Definiu a infalibilidade papal <em>ex cathedra</em> e o primado de jurisdição do Papa sobre toda a Igreja. Interrompido pela invasão italiana de Roma. Causou o cisma dos Velhos Católicos.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1962–1965</div>
+        <div class="tl-title">Vaticano II — A Igreja no Mundo Moderno</div>
+        <div class="tl-desc">O maior Concílio da história: 2.500 bispos de todo o mundo. Produziu 16 documentos sobre liturgia, ecumenismo, liberdade religiosa, revelação, Igreja e mundo moderno. Transformou a Igreja Católica do século XX.</div>
+      </div>
+    </div>
+
+    <h2>📊 Os 7 Primeiros Concílios — Aceitos por Todos</h2>
+    <table>
+      <tr><th>Concílio</th><th>Ano</th><th>Heresia Combatida</th><th>Definição Doutrinária</th></tr>
+      <tr><td>Niceia I</td><td>325</td><td>Arianismo (Cristo é criatura)</td><td>Cristo é <em>homoousios</em> — da mesma substância do Pai</td></tr>
+      <tr><td>Constantinopla I</td><td>381</td><td>Macedonianismo (Espírito é criatura)</td><td>Espírito Santo é Deus — Trindade completa</td></tr>
+      <tr><td>Éfeso</td><td>431</td><td>Nestorianismo (dois sujeitos em Cristo)</td><td>Maria é <em>Theotokos</em> — Cristo é uma pessoa</td></tr>
+      <tr><td>Calcedônia</td><td>451</td><td>Monofisismo (uma natureza em Cristo)</td><td>Cristo: uma pessoa, duas naturezas — sem confusão nem divisão</td></tr>
+      <tr><td>Constantinopla II</td><td>553</td><td>Nestorianismo residual</td><td>Condenação dos Três Capítulos</td></tr>
+      <tr><td>Constantinopla III</td><td>680–681</td><td>Monotelismo (uma vontade em Cristo)</td><td>Cristo tem duas vontades — divina e humana</td></tr>
+      <tr><td>Niceia II</td><td>787</td><td>Iconoclasmo (proibição de ícones)</td><td>Legitimidade da veneração de ícones</td></tr>
+    </table>
+  </div>
+</body>
+</html>

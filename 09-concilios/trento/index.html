@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concílio de Trento (1545–1563) | Bloco 09 — 365 de Graça & Adoração</title>
+  <link rel="icon" href="/favicon.ico">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0f172a; color: #e2e8f0; font-family: 'Georgia', serif; line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    .topbar { background: rgba(15,23,42,0.97); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
+    .topbar .inner { max-width: 900px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .topbar a { font-size: 0.85rem; color: #94a3b8; font-weight: 600; }
+    .hero { padding: 64px 24px 48px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .tag { display: inline-block; font-size: 0.72rem; font-weight: 800; padding: 4px 14px; border-radius: 999px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+    .hero h1 { font-size: 2.4rem; font-weight: 900; color: #f1f5f9; margin-bottom: 12px; line-height: 1.2; }
+    .hero .ref { font-size: 0.88rem; color: #64748b; margin-bottom: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+    .hero blockquote { font-style: italic; color: #cbd5e1; font-size: 1rem; padding-left: 20px; max-width: 620px; margin: 0 auto; text-align: left; }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
+    .sb { margin-bottom: 40px; }
+    .sb h2 { font-size: 1.3rem; font-weight: 800; color: #f1f5f9; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .sb p { color: #94a3b8; font-size: 0.95rem; line-height: 1.85; margin-bottom: 16px; }
+    .bloco { border-left-width: 3px; border-left-style: solid; border-radius: 0 12px 12px 0; padding: 18px 20px; margin-bottom: 16px; background: rgba(255,255,255,0.02); border-top: 1px solid rgba(255,255,255,0.07); border-right: 1px solid rgba(255,255,255,0.07); border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .bt { font-size: 0.85rem; font-weight: 800; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .bx { color: #94a3b8; font-size: 0.92rem; line-height: 1.82; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.87rem; margin: 20px 0 32px; }
+    td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+    .nav-mod { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.07); flex-wrap: wrap; gap: 10px; }
+    .nav-mod a { padding: 10px 20px; border-radius: 8px; font-size: 0.88rem; font-weight: 700; transition: all 0.2s; }
+    .reflexao { border-radius: 12px; padding: 22px 26px; margin-top: 32px; background: rgba(34,197,94,0.05); border: 1px solid rgba(34,197,94,0.15); }
+    .reflexao h3 { color: #22c55e; font-size: 0.95rem; font-weight: 800; margin-bottom: 10px; }
+    .reflexao p { color: #94a3b8; font-size: 0.9rem; line-height: 1.8; margin-bottom: 10px; }
+    .reflexao p:last-child { margin-bottom: 0; }
+    .pers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; margin: 20px 0 32px; }
+    .pers-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 16px; }
+    .pers-nome { font-size: 0.95rem; font-weight: 800; margin-bottom: 4px; }
+    .pers-datas { font-size: 0.72rem; color: #64748b; margin-bottom: 8px; font-weight: 600; }
+    .pers-desc { font-size: 0.83rem; color: #94a3b8; line-height: 1.6; }
+    .credo-box { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 24px 28px; margin: 20px 0 32px; font-style: italic; color: #cbd5e1; font-size: 0.92rem; line-height: 1.9; }
+    .credo-box .credo-titulo { font-style: normal; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 14px; }
+
+    .topbar a:hover { color: #a855f7; }
+    .hero { background: linear-gradient(135deg, #0f172a 0%, #0d001a 50%, #0f172a 100%); }
+    .tag { background: #a855f718; border: 1px solid #a855f740; color: #a855f7; }
+    .hero blockquote { border-left: 3px solid #a855f7; }
+    .bloco { border-left-color: #a855f7; }
+    .bt { color: #a855f7; }
+    table th { background: #a855f718; color: #a855f7; border-bottom: 1px solid #a855f730; }
+    .nav-mod a { background: #a855f718; border: 1px solid #a855f730; color: #a855f7; }
+    .nav-mod a:hover { background: #a855f730; }
+    .pers-nome { color: #a855f7; }
+    .credo-box .credo-titulo { color: #a855f7; }
+    </style>
+</head>
+<body>
+  <div class="topbar"><div class="inner">
+    <a href="/09-concilios/index.html">← Bloco 09</a>
+    <a href="/">365 de Graça & Adoração</a>
+  </div></div>
+  <div class="hero">
+    <span class="tag">🏰 Trento · 1545–1563</span>
+    <h1>Concílio de Trento (1545–1563)</h1>
+    <div class="ref">Resposta à Reforma · Justificação · Sacramentos · Reforma Disciplinar</div>
+    <blockquote>Se alguém disser que o homem é justificado pela fé somente, de modo que se entenda que nada mais é requerido para cooperar para a obtenção da graça da justificação — seja anátema.<br><small style="color:#64748b;font-size:0.8rem;font-style:normal;">— Cânon IX do Decreto sobre a Justificação, Concílio de Trento (1547)</small></blockquote>
+  </div>
+  <div class="wrap">
+    
+<div class="sb">
+  <h2>🏰 O Contexto de Trento</h2>
+  <p>O Concílio de Trento (1545–1563) foi a resposta da Igreja Católica à Reforma Protestante — o maior desafio que a Igreja havia enfrentado desde as heresias cristológicas do século V. Convocado pelo Papa Paulo III, o Concílio se reuniu em três períodos distintos ao longo de 18 anos na cidade de Trento (atual Trento, norte da Itália). Foi o Concílio mais longo da história e o que produziu o maior volume de definições dogmáticas e reformas disciplinares.</p>
+  <p>O Concílio de Trento foi ao mesmo tempo uma resposta à Reforma e uma reforma genuína da Igreja Católica. Ele reafirmou as doutrinas contestadas pelos protestantes — mas também reconheceu os abusos que haviam provocado a Reforma e promoveu reformas disciplinares significativas. Trento não foi apenas uma reação defensiva — foi uma renovação que transformou o Catolicismo para os séculos seguintes.</p>
+</div>
+<div class="sb">
+  <h2>⚖️ As Grandes Definições Dogmáticas de Trento</h2>
+  <div class="bloco">
+    <div class="bt">Escritura e Tradição</div>
+    <div class="bx">Contra a <em>Sola Scriptura</em> protestante, Trento afirmou que a revelação divina está contida tanto nas Escrituras quanto na Tradição apostólica não escrita, e que ambas devem ser recebidas "com igual afeto de piedade e reverência." A Vulgata latina foi declarada a versão oficial da Bíblia para uso litúrgico e teológico. O Cânon bíblico católico (incluindo os deuterocanônicos/apócrifos) foi definido. Esta decisão aprofundou o fosso com os protestantes, que aceitam apenas o Cânon hebraico (sem os deuterocanônicos).</div>
+  </div>
+  <div class="bloco">
+    <div class="bt">Justificação — A Questão Central</div>
+    <div class="bx">O decreto sobre a justificação (Sessão VI, 1547) foi o mais elaborado e teologicamente rico de Trento. Contra a <em>Sola Fide</em> protestante, Trento afirmou que a justificação envolve tanto a fé quanto as obras — não como mérito independente, mas como cooperação com a graça. A justificação não é apenas a declaração forense de que o pecador é justo (posição protestante), mas a renovação interior do pecador pela graça. A graça é necessária e suficiente para a salvação — mas o ser humano coopera com ela livremente. Esta posição rejeita tanto o Pelagianismo (salvação pelas obras sem graça) quanto o que Trento entendia ser o determinismo protestante (salvação sem cooperação humana).</div>
+  </div>
+  <div class="bloco">
+    <div class="bt">Os Sete Sacramentos</div>
+    <div class="bx">Contra a redução protestante a dois sacramentos (Batismo e Ceia do Senhor), Trento reafirmou os sete sacramentos: Batismo, Confirmação, Eucaristia, Penitência, Unção dos Enfermos, Ordem e Matrimônio. A transubstanciação — a doutrina de que o pão e o vinho se tornam o corpo e o sangue de Cristo na Eucaristia — foi reafirmada com precisão filosófica. A Missa foi definida como sacrifício propiciatório — não uma repetição do sacrifício da cruz, mas uma representação sacramental do único sacrifício de Cristo.</div>
+  </div>
+  <div class="bloco">
+    <div class="bt">Purgatório, Indulgências e Invocação dos Santos</div>
+    <div class="bx">Trento reafirmou a doutrina do purgatório e a legitimidade das indulgências — mas proibiu o comércio de indulgências que havia provocado a ira de Lutero. A invocação dos santos e a veneração de relíquias e imagens foram reafirmadas como práticas legítimas, mas com advertências contra os abusos. Estas definições aprofundaram as divisões com os protestantes, que rejeitam o purgatório e a invocação dos santos como sem fundamento bíblico.</div>
+  </div>
+</div>
+<div class="sb">
+  <h2>🔧 As Reformas Disciplinares de Trento</h2>
+  <p>Além das definições dogmáticas, Trento promoveu reformas disciplinares que transformaram a Igreja Católica. A criação de seminários diocesanos para a formação do clero foi talvez a reforma mais importante: antes de Trento, muitos padres eram ignorantes e mal formados; depois de Trento, a formação clerical tornou-se sistemática e rigorosa. O absenteísmo episcopal foi combatido: bispos foram obrigados a residir em suas dioceses. O nepotismo e a simonia foram proibidos. O casamento foi regulamentado: passou a exigir a presença de um padre e duas testemunhas para ser válido.</p>
+  <p>O Catecismo Romano (1566), o Missal Romano (1570) e o Breviário Romano (1568) — todos produzidos após Trento — padronizaram a liturgia e o ensino católico em todo o mundo. Esta padronização foi tanto uma força (unidade e clareza) quanto uma fraqueza (rigidez e uniformidade que sufocou a diversidade legítima). O Missal de Trento permaneceu em uso por quase 400 anos, até ser reformado pelo Concílio Vaticano II.</p>
+  <div class="reflexao">
+    <h3>🙏 Reflexão: Reforma e Contra-Reforma</h3>
+    <p>O Concílio de Trento é um exemplo de como a crise pode ser um catalisador de renovação. A Reforma Protestante foi um choque para a Igreja Católica — mas também foi um espelho que revelou seus pecados e fraquezas. Trento não teria acontecido sem Lutero. A renovação que Trento promoveu — seminários, residência episcopal, fim do comércio de indulgências — era necessária e legítima. O paradoxo é que muitas das reformas que Lutero pediu foram implementadas por Trento — mas tarde demais para evitar a divisão. Esta lição histórica é relevante para qualquer instituição: a reforma interna é sempre preferível à ruptura — mas só é possível quando há humildade suficiente para reconhecer os próprios erros.</p>
+  </div>
+</div>
+
+    <div class="nav-mod">
+      <a href="/09-concilios/efeso-calcedonia">← Éfeso e Calcedônia</a>
+      <a href="/09-concilios/index.html">📋 Índice</a>
+      <a href="/09-concilios/vaticano-i">Vaticano I →</a>
+    </div>
+  </div>
+</body>
+</html>

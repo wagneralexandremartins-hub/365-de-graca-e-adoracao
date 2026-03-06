@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Os Pais da Igreja e a Patrística | Bloco 09 — 365 de Graça & Adoração</title>
+  <link rel="icon" href="/favicon.ico">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0f172a; color: #e2e8f0; font-family: 'Georgia', serif; line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    .topbar { background: rgba(15,23,42,0.97); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
+    .topbar .inner { max-width: 900px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .topbar a { font-size: 0.85rem; color: #94a3b8; font-weight: 600; }
+    .hero { padding: 64px 24px 48px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .tag { display: inline-block; font-size: 0.72rem; font-weight: 800; padding: 4px 14px; border-radius: 999px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+    .hero h1 { font-size: 2.4rem; font-weight: 900; color: #f1f5f9; margin-bottom: 12px; line-height: 1.2; }
+    .hero .ref { font-size: 0.88rem; color: #64748b; margin-bottom: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+    .hero blockquote { font-style: italic; color: #cbd5e1; font-size: 1rem; padding-left: 20px; max-width: 620px; margin: 0 auto; text-align: left; }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
+    .sb { margin-bottom: 40px; }
+    .sb h2 { font-size: 1.3rem; font-weight: 800; color: #f1f5f9; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .sb p { color: #94a3b8; font-size: 0.95rem; line-height: 1.85; margin-bottom: 16px; }
+    .bloco { border-left-width: 3px; border-left-style: solid; border-radius: 0 12px 12px 0; padding: 18px 20px; margin-bottom: 16px; background: rgba(255,255,255,0.02); border-top: 1px solid rgba(255,255,255,0.07); border-right: 1px solid rgba(255,255,255,0.07); border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .bt { font-size: 0.85rem; font-weight: 800; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .bx { color: #94a3b8; font-size: 0.92rem; line-height: 1.82; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.87rem; margin: 20px 0 32px; }
+    td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+    .nav-mod { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.07); flex-wrap: wrap; gap: 10px; }
+    .nav-mod a { padding: 10px 20px; border-radius: 8px; font-size: 0.88rem; font-weight: 700; transition: all 0.2s; }
+    .reflexao { border-radius: 12px; padding: 22px 26px; margin-top: 32px; background: rgba(34,197,94,0.05); border: 1px solid rgba(34,197,94,0.15); }
+    .reflexao h3 { color: #22c55e; font-size: 0.95rem; font-weight: 800; margin-bottom: 10px; }
+    .reflexao p { color: #94a3b8; font-size: 0.9rem; line-height: 1.8; margin-bottom: 10px; }
+    .reflexao p:last-child { margin-bottom: 0; }
+    .pers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; margin: 20px 0 32px; }
+    .pers-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 16px; }
+    .pers-nome { font-size: 0.95rem; font-weight: 800; margin-bottom: 4px; }
+    .pers-datas { font-size: 0.72rem; color: #64748b; margin-bottom: 8px; font-weight: 600; }
+    .pers-desc { font-size: 0.83rem; color: #94a3b8; line-height: 1.6; }
+    .credo-box { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 24px 28px; margin: 20px 0 32px; font-style: italic; color: #cbd5e1; font-size: 0.92rem; line-height: 1.9; }
+    .credo-box .credo-titulo { font-style: normal; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 14px; }
+
+    .topbar a:hover { color: #10b981; }
+    .hero { background: linear-gradient(135deg, #0f172a 0%, #001a0e 50%, #0f172a 100%); }
+    .tag { background: #10b98118; border: 1px solid #10b98140; color: #10b981; }
+    .hero blockquote { border-left: 3px solid #10b981; }
+    .bloco { border-left-color: #10b981; }
+    .bt { color: #10b981; }
+    table th { background: #10b98118; color: #10b981; border-bottom: 1px solid #10b98130; }
+    .nav-mod a { background: #10b98118; border: 1px solid #10b98130; color: #10b981; }
+    .nav-mod a:hover { background: #10b98130; }
+    .pers-nome { color: #10b981; }
+    .credo-box .credo-titulo { color: #10b981; }
+    </style>
+</head>
+<body>
+  <div class="topbar"><div class="inner">
+    <a href="/09-concilios/index.html">← Bloco 09</a>
+    <a href="/">365 de Graça & Adoração</a>
+  </div></div>
+  <div class="hero">
+    <span class="tag">📖 Patrística · Séc. I–VIII</span>
+    <h1>Os Pais da Igreja e a Patrística</h1>
+    <div class="ref">Inácio · Justino · Ireneu · Tertuliano · Orígenes · Atanásio · Agostinho</div>
+    <blockquote>Aquele que lê muito e compreende muito, esse é o homem culto. Aquele que lê pouco e compreende muito, esse é o homem sábio.<br><small style="color:#64748b;font-size:0.8rem;font-style:normal;">— Agostinho de Hipona</small></blockquote>
+  </div>
+  <div class="wrap">
+    
+<div class="sb">
+  <h2>📖 O Que é a Patrística?</h2>
+  <p>A Patrística (do latim <em>pater</em> — pai) é o estudo dos escritos e do pensamento dos Pais da Igreja — os teólogos e líderes cristãos dos primeiros séculos que desenvolveram a teologia cristã e defenderam a fé contra as heresias. O período patrístico se estende aproximadamente do século I ao século VIII — dos escritos apostólicos até João Damasceno no Oriente e Isidoro de Sevilha no Ocidente. Os Pais da Igreja não são infalíveis — eles erraram em questões individuais — mas representam a tradição teológica mais próxima dos apóstolos e são testemunhas preciosas da fé da Igreja primitiva.</p>
+  <p>A Patrística é dividida em períodos: os Pais Apostólicos (discípulos diretos dos apóstolos, séc. I–II), os Apologistas (séc. II), os Pais Antenicenos (séc. II–III), os Pais Nicenos (séc. IV) e os Pais Pós-Nicenos (séc. V–VIII). Ela também é dividida geograficamente: os Pais Gregos (Oriente) e os Pais Latinos (Ocidente) — uma divisão que reflete as diferenças culturais e linguísticas que eventualmente contribuiriam para o Cisma de 1054.</p>
+</div>
+<div class="sb">
+  <h2>👤 Os Grandes Pais da Igreja</h2>
+  <div class="pers-grid">
+    <div class="pers-card">
+      <div class="pers-nome">Inácio de Antioquia</div>
+      <div class="pers-datas">c. 35–108 d.C. · Síria</div>
+      <div class="pers-desc">Discípulo do apóstolo João. Bispo de Antioquia. Escreveu sete cartas às igrejas durante sua viagem a Roma para ser martirizado. Primeiro a usar o termo "Igreja Católica." Defensor da autoridade episcopal e da Eucaristia como "remédio da imortalidade."</div>
+    </div>
+    <div class="pers-card">
+      <div class="pers-nome">Justino Mártir</div>
+      <div class="pers-datas">c. 100–165 d.C. · Palestina/Roma</div>
+      <div class="pers-desc">Filósofo convertido ao Cristianismo. Primeiro grande Apologista — defensor intelectual da fé cristã diante dos imperadores romanos. Desenvolveu a doutrina do <em>Logos</em> como semente de verdade em toda a humanidade. Martirizado em Roma.</div>
+    </div>
+    <div class="pers-card">
+      <div class="pers-nome">Ireneu de Lyon</div>
+      <div class="pers-datas">c. 130–202 d.C. · Ásia Menor/França</div>
+      <div class="pers-desc">Bispo de Lyon. Seu <em>Contra as Heresias</em> é a primeira grande obra de teologia sistemática cristã — uma refutação do Gnosticismo. Desenvolveu a doutrina da <em>recapitulação</em>: Cristo recapitula (resume e restaura) toda a história humana.</div>
+    </div>
+    <div class="pers-card">
+      <div class="pers-nome">Tertuliano</div>
+      <div class="pers-datas">c. 155–220 d.C. · Cartago</div>
+      <div class="pers-desc">Primeiro grande teólogo latino. Criou o vocabulário trinitário latino: <em>trinitas</em>, <em>persona</em>, <em>substantia</em>. Sua frase "O sangue dos mártires é a semente da Igreja" é célebre. Converteu-se ao Montanismo no final da vida.</div>
+    </div>
+    <div class="pers-card">
+      <div class="pers-nome">Orígenes</div>
+      <div class="pers-datas">c. 185–254 d.C. · Alexandria</div>
+      <div class="pers-desc">O maior erudito bíblico da Antiguidade. Produziu a <em>Hexapla</em> — seis versões paralelas do AT. Desenvolveu a exegese alegórica. Algumas de suas posições foram condenadas postumamente (pré-existência das almas, apocatástase). Influência enorme na teologia posterior.</div>
+    </div>
+    <div class="pers-card">
+      <div class="pers-nome">Atanásio de Alexandria</div>
+      <div class="pers-datas">296–373 d.C. · Egito</div>
+      <div class="pers-desc">O grande defensor de Niceia. Exilado cinco vezes por imperadores arianos. Seu tratado <em>Sobre a Encarnação</em> é um dos mais belos da teologia patrística. Atribuiu-se a ele o Cânon do NT que usamos hoje.</div>
+    </div>
+    <div class="pers-card">
+      <div class="pers-nome">João Crisóstomo</div>
+      <div class="pers-datas">347–407 d.C. · Antioquia/Constantinopla</div>
+      <div class="pers-desc">O maior pregador da Antiguidade — <em>Crisóstomo</em> significa "boca de ouro." Patriarca de Constantinopla. Seus comentários bíblicos são modelos de exegese histórico-gramatical. Exilado por criticar a Imperatriz Eudóxia.</div>
+    </div>
+    <div class="pers-card">
+      <div class="pers-nome">Agostinho de Hipona</div>
+      <div class="pers-datas">354–430 d.C. · Norte da África</div>
+      <div class="pers-desc">O maior teólogo do Ocidente. Suas <em>Confissões</em> são o primeiro grande texto autobiográfico da literatura ocidental. <em>A Cidade de Deus</em> é a primeira filosofia da história cristã. Sua teologia da graça, do pecado original e da predestinação moldou o
+ Ocidente cristão até hoje.</div>
+    </div>
+  </div>
+</div>
+<div class="sb">
+  <h2>📚 As Grandes Contribuições da Patrística</h2>
+  <div class="bloco">
+    <div class="bt">O Cânon Bíblico</div>
+    <div class="bx">Os Pais da Igreja foram os responsáveis pela formação do Cânon do Novo Testamento. Não houve um único Concílio que "criou" o Cânon — foi um processo gradual de discernimento em que a Igreja reconheceu quais escritos eram apostólicos, usados universalmente e conformes à regra de fé. Atanásio, em sua Carta Pascal de 367 d.C., foi o primeiro a listar os 27 livros do NT exatamente como os temos hoje. Os Concílios de Hipona (393) e Cartago (397) confirmaram este Cânon.</div>
+  </div>
+  <div class="bloco">
+    <div class="bt">A Regra de Fé</div>
+    <div class="bx">Os Pais desenvolveram a <em>regula fidei</em> — a regra de fé — como critério para distinguir o ensinamento apostólico das heresias. A regra de fé era um resumo dos pontos centrais da fé cristã (criação, encarnação, morte, ressurreição, juízo) que servia como chave hermenêutica para a interpretação das Escrituras. Ireneu e Tertuliano foram os principais desenvolvedores desta doutrina. A regra de fé não é uma alternativa às Escrituras — é o resumo do seu ensinamento central, transmitido pela tradição apostólica.</div>
+  </div>
+  <div class="bloco">
+    <div class="bt">A Teologia Trinitária e Cristológica</div>
+    <div class="bx">A maior contribuição dos Pais foi o desenvolvimento da teologia trinitária e cristológica que culminou nos Concílios de Niceia e Calcedônia. Eles usaram a filosofia grega — não para helenizar o Evangelho, mas para expressar com precisão verdades bíblicas que a linguagem cotidiana não conseguia articular com suficiente clareza. O vocabulário que eles criaram — <em>ousia</em>, <em>hypostasis</em>, <em>persona</em>, <em>natura</em>, <em>homoousios</em> — tornou-se o instrumento pelo qual a Igreja articulou sua fé por séculos.</div>
+  </div>
+  <div class="reflexao">
+    <h3>🙏 Reflexão: Os Pais da Igreja e Nós</h3>
+    <p>Os Pais da Igreja não são autoridades infalíveis — eles erraram em questões individuais e foram condicionados por seu contexto histórico e cultural. Mas eles são testemunhas preciosas da fé da Igreja primitiva — a Igreja mais próxima dos apóstolos. Estudar os Pais é ouvir vozes que beberam diretamente da fonte apostólica e que enfrentaram desafios teológicos que, em formas diferentes, ainda enfrentamos hoje. Calvino chamava os Pais de "testemunhas aprovadas" — não árbitros supremos, mas guias confiáveis na interpretação das Escrituras. Esta é uma posição sábia: nem ignorar os Pais (como faz o fundamentalismo que rejeita toda tradição) nem idolatrá-los (como faz o catolicismo que os equipara à Escritura), mas aprender com eles com discernimento e gratidão.</p>
+  </div>
+</div>
+
+    <div class="nav-mod">
+      <a href="/09-concilios/vaticano-ii">← Vaticano II</a>
+      <a href="/09-concilios/index.html">📋 Índice</a>
+      <a href="/09-concilios/index.html">Índice Bloco 09 →</a>
+    </div>
+  </div>
+</body>
+</html>

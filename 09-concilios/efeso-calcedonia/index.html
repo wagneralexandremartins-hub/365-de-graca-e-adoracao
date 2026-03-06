@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Éfeso (431) e Calcedônia (451) | Bloco 09 — 365 de Graça & Adoração</title>
+  <link rel="icon" href="/favicon.ico">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0f172a; color: #e2e8f0; font-family: 'Georgia', serif; line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    .topbar { background: rgba(15,23,42,0.97); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
+    .topbar .inner { max-width: 900px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .topbar a { font-size: 0.85rem; color: #94a3b8; font-weight: 600; }
+    .hero { padding: 64px 24px 48px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .tag { display: inline-block; font-size: 0.72rem; font-weight: 800; padding: 4px 14px; border-radius: 999px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+    .hero h1 { font-size: 2.4rem; font-weight: 900; color: #f1f5f9; margin-bottom: 12px; line-height: 1.2; }
+    .hero .ref { font-size: 0.88rem; color: #64748b; margin-bottom: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+    .hero blockquote { font-style: italic; color: #cbd5e1; font-size: 1rem; padding-left: 20px; max-width: 620px; margin: 0 auto; text-align: left; }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
+    .sb { margin-bottom: 40px; }
+    .sb h2 { font-size: 1.3rem; font-weight: 800; color: #f1f5f9; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .sb p { color: #94a3b8; font-size: 0.95rem; line-height: 1.85; margin-bottom: 16px; }
+    .bloco { border-left-width: 3px; border-left-style: solid; border-radius: 0 12px 12px 0; padding: 18px 20px; margin-bottom: 16px; background: rgba(255,255,255,0.02); border-top: 1px solid rgba(255,255,255,0.07); border-right: 1px solid rgba(255,255,255,0.07); border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .bt { font-size: 0.85rem; font-weight: 800; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .bx { color: #94a3b8; font-size: 0.92rem; line-height: 1.82; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.87rem; margin: 20px 0 32px; }
+    td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+    .nav-mod { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.07); flex-wrap: wrap; gap: 10px; }
+    .nav-mod a { padding: 10px 20px; border-radius: 8px; font-size: 0.88rem; font-weight: 700; transition: all 0.2s; }
+    .reflexao { border-radius: 12px; padding: 22px 26px; margin-top: 32px; background: rgba(34,197,94,0.05); border: 1px solid rgba(34,197,94,0.15); }
+    .reflexao h3 { color: #22c55e; font-size: 0.95rem; font-weight: 800; margin-bottom: 10px; }
+    .reflexao p { color: #94a3b8; font-size: 0.9rem; line-height: 1.8; margin-bottom: 10px; }
+    .reflexao p:last-child { margin-bottom: 0; }
+    .pers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; margin: 20px 0 32px; }
+    .pers-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 16px; }
+    .pers-nome { font-size: 0.95rem; font-weight: 800; margin-bottom: 4px; }
+    .pers-datas { font-size: 0.72rem; color: #64748b; margin-bottom: 8px; font-weight: 600; }
+    .pers-desc { font-size: 0.83rem; color: #94a3b8; line-height: 1.6; }
+    .credo-box { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 24px 28px; margin: 20px 0 32px; font-style: italic; color: #cbd5e1; font-size: 0.92rem; line-height: 1.9; }
+    .credo-box .credo-titulo { font-style: normal; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 14px; }
+
+    .topbar a:hover { color: #ef4444; }
+    .hero { background: linear-gradient(135deg, #0f172a 0%, #1a0000 50%, #0f172a 100%); }
+    .tag { background: #ef444418; border: 1px solid #ef444440; color: #ef4444; }
+    .hero blockquote { border-left: 3px solid #ef4444; }
+    .bloco { border-left-color: #ef4444; }
+    .bt { color: #ef4444; }
+    table th { background: #ef444418; color: #ef4444; border-bottom: 1px solid #ef444430; }
+    .nav-mod a { background: #ef444418; border: 1px solid #ef444430; color: #ef4444; }
+    .nav-mod a:hover { background: #ef444430; }
+    .pers-nome { color: #ef4444; }
+    .credo-box .credo-titulo { color: #ef4444; }
+    </style>
+</head>
+<body>
+  <div class="topbar"><div class="inner">
+    <a href="/09-concilios/index.html">← Bloco 09</a>
+    <a href="/">365 de Graça & Adoração</a>
+  </div></div>
+  <div class="hero">
+    <span class="tag">✝️ Éfeso · Calcedônia · Séc. V</span>
+    <h1>Éfeso (431) e Calcedônia (451)</h1>
+    <div class="ref">As Duas Naturezas de Cristo · Theotokos · Definição Calcedoniana</div>
+    <blockquote>Um e o mesmo Cristo, Filho, Senhor, Unigênito, em duas naturezas, sem confusão, sem mudança, sem divisão, sem separação.<br><small style="color:#64748b;font-size:0.8rem;font-style:normal;">— Definição do Concílio de Calcedônia (451 d.C.)</small></blockquote>
+  </div>
+  <div class="wrap">
+    
+<div class="sb">
+  <h2>✝️ A Questão Cristológica</h2>
+  <p>Após Niceia e Constantinopla definirem que Cristo é verdadeiramente Deus e que o Espírito Santo é verdadeiramente Deus, a questão seguinte era inevitável: como o Filho de Deus eterno se relaciona com o homem Jesus de Nazaré? Como a divindade e a humanidade coexistem em uma única pessoa? Esta questão cristológica dominou o século V e produziu dois Concílios fundamentais: Éfeso (431) e Calcedônia (451).</p>
+  <p>As heresias cristológicas do século V não eram invenções maliciosas — eram tentativas sinceras de resolver um paradoxo genuíno. Como pode o eterno ser temporal? Como pode o imutável sofrer? Como pode o onipresente estar localizado em um corpo? As respostas heréticas simplificavam o paradoxo: ou separando as duas naturezas em duas pessoas (Nestorianismo), ou fundindo-as em uma única natureza (Monofisismo). A resposta ortodoxa de Calcedônia manteve o paradoxo — e foi acusada de ser incoerente por isso.</p>
+</div>
+<div class="sb">
+  <h2>⚡ O Nestorianismo e o Concílio de Éfeso (431)</h2>
+  <div class="bloco">
+    <div class="bt">Nestório e o Problema de Maria</div>
+    <div class="bx">Nestório (c. 386–451), Patriarca de Constantinopla, recusou o título de <em>Theotokos</em> ("Mãe de Deus") para Maria, preferindo <em>Christotokos</em> ("Mãe de Cristo"). Para Nestório, Maria deu à luz o homem Jesus — não o Deus eterno. Ele temia que chamar Maria de "Mãe de Deus" fosse confundir as duas naturezas de Cristo. Sua posição implicava que havia dois sujeitos em Cristo: o Filho de Deus eterno e o homem Jesus — unidos moralmente, mas não ontologicamente.</div>
+  </div>
+  <div class="bloco">
+    <div class="bt">Cirilo de Alexandria e a Resposta Ortodoxa</div>
+    <div class="bx">Cirilo de Alexandria (376–444) foi o grande adversário de Nestório. Para Cirilo, a unidade de Cristo é real e ontológica — não apenas moral. O sujeito que nasceu de Maria, que cresceu, que sofreu, que morreu e ressuscitou é o mesmo sujeito: o Filho eterno de Deus. Por isso, Maria é legitimamente chamada de <em>Theotokos</em> — não porque ela seja a origem da divindade de Cristo, mas porque o filho que ela gerou é o Filho de Deus encarnado. A comunicação de idiomas (<em>communicatio idiomatum</em>) — a atribuição das propriedades de uma natureza ao sujeito único — é a consequência lógica desta unidade.</div>
+  </div>
+  <div class="bloco">
+    <div class="bt">O Concílio de Éfeso (431)</div>
+    <div class="bx">O Concílio de Éfeso foi marcado por intrigas políticas e até violência. Cirilo chegou com seus bispos egípcios antes da delegação de Nestório e abriu o Concílio sem esperar pelos orientais. Nestório foi condenado e exilado. Quando os bispos orientais chegaram, abriram seu próprio concílio e condenaram Cirilo. O Imperador Teodósio II prendeu ambos os líderes. Eventualmente, um compromisso foi alcançado: o "Símbolo de União" (433) afirmou que Cristo é "perfeito em divindade e perfeito em humanidade" e que Maria é legitimamente chamada de <em>Theotokos</em>.</div>
+  </div>
+</div>
+<div class="sb">
+  <h2>⚡ O Monofisismo e o Concílio de Calcedônia (451)</h2>
+  <div class="bloco">
+    <div class="bt">Eutiques e o Monofisismo</div>
+    <div class="bx">Eutiques (c. 380–456), arquimandrita de Constantinopla, foi ao extremo oposto de Nestório. Para ele, após a encarnação, Cristo tinha apenas uma natureza — a divina havia absorvido a humana "como uma gota de mel no oceano." Esta posição — o Monofisismo (do grego <em>monos</em> = um, <em>physis</em> = natureza) — preservava a unidade de Cristo, mas ao custo de sua humanidade real. Se Cristo não é verdadeiramente humano, ele não pode ser nosso representante e substituto; sua morte não seria a morte de um ser humano.</div>
+  </div>
+  <div class="bloco">
+    <div class="bt">A Definição de Calcedônia</div>
+    <div class="bx">O Concílio de Calcedônia (451), com cerca de 600 bispos, produziu a definição cristológica mais precisa da história: Cristo é "uma e a mesma pessoa em duas naturezas, sem confusão, sem mudança, sem divisão, sem separação." Os quatro advérbios negativos são o coração da definição: <em>sem confusão</em> (contra o Monofisismo — as naturezas não se fundem); <em>sem mudança</em> (contra o Monofisismo — a natureza humana não é transformada em divina); <em>sem divisão</em> (contra o Nestorianismo — não há dois sujeitos); <em>sem separação</em> (contra o Nestorianismo — as naturezas não são independentes). A definição é apofática — diz o que Cristo não é, mais do que o que ele é.</div>
+  </div>
+</div>
+<div class="sb">
+  <h2>📊 As Divisões Cristológicas e Suas Consequências</h2>
+  <table>
+    <tr><th>Posição</th><th>Naturezas</th><th>Pessoas</th><th>Heresia</th><th>Igrejas Hoje</th></tr>
+    <tr><td>Nestorianismo</td><td>Duas separadas</td><td>Duas</td><td>Sim — Éfeso 431</td><td>Igreja Assíria do Oriente</td></tr>
+    <tr><td>Monofisismo</td><td>Uma (divina)</td><td>Uma</td><td>Sim — Calcedônia 451</td><td>Copta, Etíope, Armênia, Síria Ocidental</td></tr>
+    <tr><td>Calcedônia (Ortodoxia)</td><td>Duas unidas</td><td>Uma</td><td>Não</td><td>Católica, Ortodoxa, Protestante</td></tr>
+  </table>
+  <div class="reflexao">
+    <h3>🙏 Reflexão: Por Que a Humanidade de Cristo Importa?</h3>
+    <p>A definição de Calcedônia afirma que Cristo é "perfeito em humanidade, verdadeiramente homem, composto de alma racional e corpo." Esta afirmação não é apenas teológica — é pastoral. Hebreus 4:15 diz: "Não temos um sumo sacerdote que não possa compadecer-se das nossas fraquezas; pelo contrário, temos um que foi tentado em tudo como nós, mas sem pecado." Cristo não apenas sabe sobre o sofrimento humano — ele o viveu. Ele chorou diante do túmulo de Lázaro (Jo 11:35). Ele sentiu fome, cansaço, solidão, abandono. Quando oramos a Cristo em nosso sofrimento, oramos a alguém que sabe por experiência própria o que é sofrer. Calcedônia protegeu esta verdade consoladora.</p>
+  </div>
+</div>
+
+    <div class="nav-mod">
+      <a href="/09-concilios/constantinopla">← Constantinopla I</a>
+      <a href="/09-concilios/index.html">📋 Índice</a>
+      <a href="/09-concilios/trento">Concílio de Trento →</a>
+    </div>
+  </div>
+</body>
+</html>

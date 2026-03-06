@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constantinopla I (381) | Bloco 09 — 365 de Graça & Adoração</title>
+  <link rel="icon" href="/favicon.ico">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0f172a; color: #e2e8f0; font-family: 'Georgia', serif; line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    .topbar { background: rgba(15,23,42,0.97); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
+    .topbar .inner { max-width: 900px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .topbar a { font-size: 0.85rem; color: #94a3b8; font-weight: 600; }
+    .hero { padding: 64px 24px 48px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .tag { display: inline-block; font-size: 0.72rem; font-weight: 800; padding: 4px 14px; border-radius: 999px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+    .hero h1 { font-size: 2.4rem; font-weight: 900; color: #f1f5f9; margin-bottom: 12px; line-height: 1.2; }
+    .hero .ref { font-size: 0.88rem; color: #64748b; margin-bottom: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+    .hero blockquote { font-style: italic; color: #cbd5e1; font-size: 1rem; padding-left: 20px; max-width: 620px; margin: 0 auto; text-align: left; }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
+    .sb { margin-bottom: 40px; }
+    .sb h2 { font-size: 1.3rem; font-weight: 800; color: #f1f5f9; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .sb p { color: #94a3b8; font-size: 0.95rem; line-height: 1.85; margin-bottom: 16px; }
+    .bloco { border-left-width: 3px; border-left-style: solid; border-radius: 0 12px 12px 0; padding: 18px 20px; margin-bottom: 16px; background: rgba(255,255,255,0.02); border-top: 1px solid rgba(255,255,255,0.07); border-right: 1px solid rgba(255,255,255,0.07); border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .bt { font-size: 0.85rem; font-weight: 800; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .bx { color: #94a3b8; font-size: 0.92rem; line-height: 1.82; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.87rem; margin: 20px 0 32px; }
+    td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+    .nav-mod { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.07); flex-wrap: wrap; gap: 10px; }
+    .nav-mod a { padding: 10px 20px; border-radius: 8px; font-size: 0.88rem; font-weight: 700; transition: all 0.2s; }
+    .reflexao { border-radius: 12px; padding: 22px 26px; margin-top: 32px; background: rgba(34,197,94,0.05); border: 1px solid rgba(34,197,94,0.15); }
+    .reflexao h3 { color: #22c55e; font-size: 0.95rem; font-weight: 800; margin-bottom: 10px; }
+    .reflexao p { color: #94a3b8; font-size: 0.9rem; line-height: 1.8; margin-bottom: 10px; }
+    .reflexao p:last-child { margin-bottom: 0; }
+    .pers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; margin: 20px 0 32px; }
+    .pers-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 16px; }
+    .pers-nome { font-size: 0.95rem; font-weight: 800; margin-bottom: 4px; }
+    .pers-datas { font-size: 0.72rem; color: #64748b; margin-bottom: 8px; font-weight: 600; }
+    .pers-desc { font-size: 0.83rem; color: #94a3b8; line-height: 1.6; }
+    .credo-box { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 24px 28px; margin: 20px 0 32px; font-style: italic; color: #cbd5e1; font-size: 0.92rem; line-height: 1.9; }
+    .credo-box .credo-titulo { font-style: normal; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 14px; }
+
+    .topbar a:hover { color: #22c55e; }
+    .hero { background: linear-gradient(135deg, #0f172a 0%, #001a08 50%, #0f172a 100%); }
+    .tag { background: #22c55e18; border: 1px solid #22c55e40; color: #22c55e; }
+    .hero blockquote { border-left: 3px solid #22c55e; }
+    .bloco { border-left-color: #22c55e; }
+    .bt { color: #22c55e; }
+    table th { background: #22c55e18; color: #22c55e; border-bottom: 1px solid #22c55e30; }
+    .nav-mod a { background: #22c55e18; border: 1px solid #22c55e30; color: #22c55e; }
+    .nav-mod a:hover { background: #22c55e30; }
+    .pers-nome { color: #22c55e; }
+    .credo-box .credo-titulo { color: #22c55e; }
+    </style>
+</head>
+<body>
+  <div class="topbar"><div class="inner">
+    <a href="/09-concilios/index.html">← Bloco 09</a>
+    <a href="/">365 de Graça & Adoração</a>
+  </div></div>
+  <div class="hero">
+    <span class="tag">🕊️ Constantinopla · 381 d.C.</span>
+    <h1>Constantinopla I (381)</h1>
+    <div class="ref">A Divindade do Espírito Santo · Os Capadócios · Credo Niceno-Constantinopolitano</div>
+    <blockquote>O Espírito Santo é Senhor e dá a vida; com o Pai e o Filho é adorado e glorificado conjuntamente.<br><small style="color:#64748b;font-size:0.8rem;font-style:normal;">— Credo Niceno-Constantinopolitano (381 d.C.)</small></blockquote>
+  </div>
+  <div class="wrap">
+    
+<div class="sb">
+  <h2>🕊️ O Contexto de Constantinopla I (381)</h2>
+  <p>O Concílio de Constantinopla I (381 d.C.) foi convocado pelo Imperador Teodósio I para completar a obra de Niceia. Embora menor que Niceia em número de participantes (cerca de 150 bispos, todos do Oriente), foi de importância teológica igual. Seu principal resultado foi a completação do Credo Niceno com a afirmação da divindade do Espírito Santo e a condenação do Macedonianismo (também chamado de Pneumatômaco — "lutadores contra o Espírito").</p>
+  <p>O contexto histórico é o de uma Igreja que havia passado por décadas de turbulência ariana. O Imperador Constâncio II (filho de Constantino) era ariano e havia perseguido os defensores de Niceia. Atanásio de Alexandria foi exilado cinco vezes. Apenas com a morte de Constâncio e a ascensão de Teodósio I — um cristão niceno convicto — a ortodoxia trinitária foi restaurada como posição oficial do Império.</p>
+</div>
+<div class="sb">
+  <h2>⚡ O Macedonianismo — A Heresia do Espírito</h2>
+  <div class="bloco">
+    <div class="bt">A Posição Macedoniana</div>
+    <div class="bx">Os Macedonianos (seguidores do Bispo Macedônio de Constantinopla, deposto em 360) aceitavam a divindade do Filho conforme definida em Niceia, mas negavam a divindade do Espírito Santo. Para eles, o Espírito era uma criatura — inferior ao Pai e ao Filho, um ministro ou servo divino, mas não Deus. Esta posição era atraente para quem havia aceitado Niceia mas resistia ao que parecia ser uma "trindade de deuses." Se o Filho é Deus, e o Espírito é Deus, não teríamos três deuses?</div>
+  </div>
+  <div class="bloco">
+    <div class="bt">A Resposta dos Capadócios</div>
+    <div class="bx">A resposta teológica ao Macedonianismo foi desenvolvida pelos três grandes teólogos capadócios: Basílio de Cesareia, Gregório de Nissa (seu irmão) e Gregório de Nazianzo. Eles desenvolveram a distinção crucial entre <em>ousia</em> (essência ou substância — o que Deus é) e <em>hypostasis</em> (pessoa — quem Deus é). Há uma única <em>ousia</em> divina (Deus é um), mas três <em>hypostaseis</em> (o Pai, o Filho e o Espírito Santo são três pessoas distintas). Esta distinção permitiu afirmar tanto a unidade de Deus quanto a distinção real das três pessoas — sem cair no triteísmo (três deuses) nem no modalismo (um Deus que se manifesta de três formas).</div>
+  </div>
+</div>
+<div class="sb">
+  <h2>👤 Gregório de Nazianzo — O Teólogo da Trindade</h2>
+  <div class="pers-grid">
+    <div class="pers-card">
+      <div class="pers-nome">Basílio de Cesareia</div>
+      <div class="pers-datas">330–379 d.C. · Capadócia</div>
+      <div class="pers-desc">Bispo de Cesareia, organizador do monaquismo oriental. Seu tratado <em>Sobre o Espírito Santo</em> (375) foi a defesa mais rigorosa da divindade do Espírito antes do Concílio. Morreu antes de ver a vitória em Constantinopla.</div>
+    </div>
+    <div class="pers-card">
+      <div class="pers-nome">Gregório de Nazianzo</div>
+      <div class="pers-datas">329–390 d.C. · Capadócia</div>
+      <div class="pers-desc">Chamado "o Teólogo" pela tradição ortodoxa — título dado apenas a João Evangelista e a ele. Presidiu o início do Concílio de Constantinopla. Seus cinco Discursos Teológicos são a exposição mais brilhante da doutrina trinitária da Antiguidade.</div>
+    </div>
+    <div class="pers-card">
+      <div class="pers-nome">Gregório de Nissa</div>
+      <div class="pers-datas">335–395 d.C. · Capadócia</div>
+      <div class="pers-desc">Irmão de Basílio, o mais especulativo dos três Capadócios. Desenvolveu a distinção <em>ousia/hypostasis</em> com maior rigor filosófico. Sua obra <em>Contra Eunômio</em> é a refutação mais completa do Arianismo radical.</div>
+    </div>
+    <div class="pers-card">
+      <div class="pers-nome">Atanásio de Alexandria</div>
+      <div class="pers-datas">296–373 d.C. · Egito</div>
+      <div class="pers-desc">O grande herói de Niceia. Exilado cinco vezes por imperadores arianos. Sua frase <em>Athanasius contra mundum</em> ("Atanásio contra o mundo") resume sua resistência solitária. Não viveu para ver Constantinopla, mas sua obra preparou o caminho.</div>
+    </div>
+  </div>
+</div>
+<div class="sb">
+  <h2>📜 O Credo Niceno-Constantinopolitano</h2>
+  <div class="credo-box">
+    <div class="credo-titulo">Credo Niceno-Constantinopolitano (381 d.C.) — usado até hoje</div>
+    Creio em um só Deus, Pai todo-poderoso, criador do céu e da terra, de todas as coisas visíveis e invisíveis.<br><br>
+    Creio em um só Senhor, Jesus Cristo, Filho Unigênito de Deus, nascido do Pai antes de todos os séculos: Deus de Deus, Luz da Luz, Deus verdadeiro de Deus verdadeiro; gerado, não criado, <strong>consubstancial ao Pai</strong>. Por ele todas as coisas foram feitas. E por nós, homens, e para nossa salvação, desceu dos céus: e se encarnou pelo Espírito Santo, no seio da Virgem Maria, e se fez homem. Também por nós foi crucificado sob Pôncio Pilatos; padeceu e foi sepultado. Ressuscitou ao terceiro dia, conforme as Escrituras; subiu aos céus, está sentado à direita do Pai. E de novo há de vir, em sua glória, para julgar os vivos e os mortos; e o seu reino não terá fim.<br><br>
+    <strong>Creio no Espírito Santo, Senhor que dá a vida, e procede do Pai [e do Filho*]; com o Pai e o Filho é adorado e glorificado conjuntamente; ele que falou pelos profetas.</strong><br><br>
+    Creio na Igreja una, santa, católica e apostólica. Professo um só batismo para a remissão dos pecados. Espero a ressurreição dos mortos e a vida do século vindouro. Amém.<br><br>
+    <em>* O "e do Filho" (Filioque) foi adicionado pelo Ocidente no séc. VI — causa do Cisma de 1054.</em>
+  </div>
+  <div class="reflexao">
+    <h3>🙏 Reflexão: O Espírito Santo é Deus</h3>
+    <p>A afirmação de que o Espírito Santo é "Senhor que dá a vida" e deve ser "adorado e glorificado conjuntamente" com o Pai e o Filho é uma das mais importantes da fé cristã. Ela significa que quando o Espírito age em nós — convencendo-nos do pecado, regenerando-nos, habitando em nós, guiando-nos — é o próprio Deus que age. A vida cristã não é apenas imitação de Cristo (o que uma criatura poderia fazer); é participação na vida trinitária de Deus pelo Espírito Santo. "Não sabeis que sois templo de Deus e que o Espírito de Deus habita em vós?" (1 Co 3:16) — esta afirmação de Paulo só faz sentido pleno se o Espírito é Deus.</p>
+  </div>
+</div>
+
+    <div class="nav-mod">
+      <a href="/09-concilios/niceia">← Niceia</a>
+      <a href="/09-concilios/index.html">📋 Índice</a>
+      <a href="/09-concilios/efeso-calcedonia">Éfeso e Calcedônia →</a>
+    </div>
+  </div>
+</body>
+</html>

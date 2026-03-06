@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloco 10 — Cruzadas e Guerras Religiosas | 365 de Graça & Adoração</title>
+  <meta name="description" content="As Cruzadas: fé, violência, política e legado. Da convocação de Urbano II ao encontro de Francisco de Assis com o sultão. Consequências para a cristandade.">
+  <link rel="icon" href="/favicon.ico">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0f172a; color: #e2e8f0; font-family: 'Georgia', serif; line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    .topbar { background: rgba(15,23,42,0.97); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
+    .topbar .inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .topbar a { font-size: 0.82rem; color: #94a3b8; font-weight: 600; transition: color 0.2s; }
+    .topbar a:hover { color: #dc2626; }
+    .hero { background: linear-gradient(135deg, #0f172a 0%, #1a0000 40%, #0f172a 100%); padding: 72px 24px 56px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.07); position: relative; overflow: hidden; }
+    .hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(220,38,38,0.12) 0%, transparent 70%); pointer-events: none; }
+    .bloco-badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(220,38,38,0.1); border: 1px solid rgba(220,38,38,0.25); border-radius: 999px; padding: 6px 18px; margin-bottom: 20px; }
+    .bloco-num { font-size: 0.72rem; font-weight: 900; color: #dc2626; text-transform: uppercase; letter-spacing: 1.5px; }
+    .hero h1 { font-size: 2.8rem; font-weight: 900; color: #f1f5f9; margin-bottom: 16px; line-height: 1.15; max-width: 700px; margin-left: auto; margin-right: auto; }
+    .hero p { color: #94a3b8; font-size: 1.05rem; max-width: 620px; margin: 0 auto 32px; line-height: 1.8; }
+    .hero-tags { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+    .hero-tag { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 5px 14px; font-size: 0.78rem; color: #94a3b8; font-weight: 600; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 700px; margin: 0 auto; }
+    .stat-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 20px 16px; text-align: center; }
+    .stat-card .num { font-size: 1.8rem; font-weight: 900; color: #dc2626; }
+    .stat-card .label { font-size: 0.78rem; color: #64748b; margin-top: 4px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 48px 24px 80px; }
+    h2 { font-size: 1.4rem; font-weight: 800; color: #f1f5f9; margin: 40px 0 16px; }
+    p { color: #94a3b8; font-size: 0.95rem; line-height: 1.8; margin-bottom: 16px; }
+    .intro-box { background: rgba(220,38,38,0.05); border: 1px solid rgba(220,38,38,0.15); border-radius: 14px; padding: 28px 32px; margin-bottom: 40px; }
+    .intro-box h3 { color: #dc2626; font-size: 1.05rem; font-weight: 800; margin-bottom: 12px; }
+    .intro-box p { color: #94a3b8; font-size: 0.93rem; line-height: 1.82; margin-bottom: 12px; }
+    .modulos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; margin-bottom: 48px; }
+    .modulo-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; padding: 24px; transition: all 0.25s; display: flex; flex-direction: column; }
+    .modulo-card:hover { background: rgba(255,255,255,0.05); transform: translateY(-3px); }
+    .mod-icon { font-size: 2rem; margin-bottom: 12px; }
+    .mod-tag { display: inline-block; font-size: 0.68rem; font-weight: 800; padding: 3px 10px; border-radius: 999px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.8px; }
+    .mod-title { font-size: 1.05rem; font-weight: 800; color: #f1f5f9; margin-bottom: 8px; line-height: 1.3; }
+    .mod-desc { font-size: 0.87rem; color: #64748b; line-height: 1.7; flex: 1; margin-bottom: 16px; }
+    .mod-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; font-weight: 700; padding: 8px 16px; border-radius: 8px; transition: all 0.2s; }
+    .c1 .mod-tag,.c1 .mod-link { background: rgba(220,38,38,0.1); border: 1px solid rgba(220,38,38,0.25); color: #dc2626; }
+    .c1:hover { border-color: rgba(220,38,38,0.3); } .c1 .mod-link:hover { background: rgba(220,38,38,0.2); }
+    .c2 .mod-tag,.c2 .mod-link { background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.25); color: #f59e0b; }
+    .c2:hover { border-color: rgba(245,158,11,0.3); } .c2 .mod-link:hover { background: rgba(245,158,11,0.2); }
+    .c3 .mod-tag,.c3 .mod-link { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.25); color: #ef4444; }
+    .c3:hover { border-color: rgba(239,68,68,0.3); } .c3 .mod-link:hover { background: rgba(239,68,68,0.2); }
+    .c4 .mod-tag,.c4 .mod-link { background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.25); color: #a855f7; }
+    .c4:hover { border-color: rgba(168,85,247,0.3); } .c4 .mod-link:hover { background: rgba(168,85,247,0.2); }
+    .c5 .mod-tag,.c5 .mod-link { background: rgba(34,211,238,0.1); border: 1px solid rgba(34,211,238,0.25); color: #22d3ee; }
+    .c5:hover { border-color: rgba(34,211,238,0.3); } .c5 .mod-link:hover { background: rgba(34,211,238,0.2); }
+    .c6 .mod-tag,.c6 .mod-link { background: rgba(129,140,248,0.1); border: 1px solid rgba(129,140,248,0.25); color: #818cf8; }
+    .c6:hover { border-color: rgba(129,140,248,0.3); } .c6 .mod-link:hover { background: rgba(129,140,248,0.2); }
+    .c7 .mod-tag,.c7 .mod-link { background: rgba(100,116,139,0.12); border: 1px solid rgba(100,116,139,0.3); color: #94a3b8; }
+    .c7:hover { border-color: rgba(100,116,139,0.3); } .c7 .mod-link:hover { background: rgba(100,116,139,0.2); }
+    .c8 .mod-tag,.c8 .mod-link { background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.25); color: #22c55e; }
+    .c8:hover { border-color: rgba(34,197,94,0.3); } .c8 .mod-link:hover { background: rgba(34,197,94,0.2); }
+    .timeline { position: relative; padding-left: 36px; margin-bottom: 48px; }
+    .timeline::before { content: ""; position: absolute; left: 10px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #dc2626, #f59e0b, #22c55e); }
+    .tl-item { position: relative; margin-bottom: 28px; }
+    .tl-item::before { content: ""; position: absolute; left: -30px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: #dc2626; border: 2px solid #0f172a; }
+    .tl-date { font-size: 0.78rem; font-weight: 800; color: #dc2626; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .tl-title { font-size: 1rem; font-weight: 700; color: #e2e8f0; margin-bottom: 6px; }
+    .tl-desc { font-size: 0.88rem; color: #64748b; line-height: 1.65; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.87rem; margin-bottom: 40px; }
+    th { background: rgba(220,38,38,0.10); color: #dc2626; padding: 10px 14px; text-align: left; font-weight: 700; border-bottom: 1px solid rgba(220,38,38,0.20); }
+    td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+    @media (max-width: 768px) { .stats { grid-template-columns: repeat(2, 1fr); } .hero h1 { font-size: 2rem; } }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="inner">
+      <a href="/">365 de Graça & Adoração</a>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <a href="/10-cruzadas/contexto-historico">Contexto</a>
+        <a href="/10-cruzadas/primeira-cruzada">1ª Cruzada</a>
+        <a href="/10-cruzadas/cruzadas-seguintes">Cruzadas 2–4</a>
+        <a href="/10-cruzadas/saque-constantinopla">Saque de CP</a>
+        <a href="/10-cruzadas/ordens-militares">Ordens Militares</a>
+        <a href="/10-cruzadas/francisco-sultan">Francisco e o Sultão</a>
+        <a href="/10-cruzadas/consequencias">Consequências</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="bloco-badge">
+      <span class="bloco-num">Bloco 10 · Conflito</span>
+    </div>
+    <h1>Cruzadas e Guerras Religiosas</h1>
+    <p>Fé misturada com conquista. As Cruzadas foram um dos episódios mais complexos e controversos da história cristã — marcados por devoção genuína, violência brutal, política imperial e consequências duradouras para as relações entre o Ocidente e o Oriente.</p>
+    <div class="hero-tags">
+      <span class="hero-tag">Urbano II (1095)</span>
+      <span class="hero-tag">Primeira Cruzada</span>
+      <span class="hero-tag">Saladino</span>
+      <span class="hero-tag">Saque de Constantinopla</span>
+      <span class="hero-tag">Ordens Militares</span>
+      <span class="hero-tag">Francisco e o Sultão</span>
+      <span class="hero-tag">Cruzadas do Norte</span>
+      <span class="hero-tag">Legado e Consequências</span>
+    </div>
+    <div class="stats">
+      <div class="stat-card"><div class="num">8</div><div class="label">Cruzadas Principais</div></div>
+      <div class="stat-card"><div class="num">200</div><div class="label">Anos de Cruzadas</div></div>
+      <div class="stat-card"><div class="num">1099</div><div class="label">Conquista de Jerusalém</div></div>
+      <div class="stat-card"><div class="num">1291</div><div class="label">Queda de Acre</div></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="intro-box">
+      <h3>⚔️ As Cruzadas — Uma Avaliação Honesta</h3>
+      <p>As Cruzadas são um dos temas mais mal compreendidos da história. Elas são frequentemente apresentadas de duas formas opostas e igualmente distorcidas: como uma agressão imperialista ocidental sem justificativa (a narrativa secular progressista) ou como uma defesa legítima da cristandade contra a expansão islâmica (a narrativa apologética conservadora). A realidade é mais complexa e mais perturbadora do que qualquer uma destas narrativas simplificadas.</p>
+      <p>As Cruzadas foram motivadas por uma mistura de fatores: devoção religiosa genuína (a peregrinação à Terra Santa era o ato de piedade supremo), política imperial (os papas usavam as Cruzadas para expandir sua autoridade), ganância econômica (os cavaleiros buscavam terras e riquezas), e resposta a uma ameaça real (o Islã havia conquistado dois terços do mundo cristão em menos de um século). Nenhum destes fatores, isoladamente, explica as Cruzadas — apenas a sua combinação complexa o faz.</p>
+      <p>Para o cristão, as Cruzadas são um lembrete doloroso de que a fé pode ser corrompida e instrumentalizada para fins de violência e dominação. O grito de guerra "Deus lo vult!" ("Deus quer!") — com que Urbano II lançou a Primeira Cruzada — foi usado para justificar massacres de judeus, cristãos orientais e muçulmanos. Esta é uma das páginas mais sombrias da história da Igreja, que deve ser estudada com honestidade histórica e humildade teológica.</p>
+    </div>
+
+    <h2>📚 Módulos do Bloco 10</h2>
+    <div class="modulos-grid">
+      <div class="modulo-card c1">
+        <div class="mod-icon">🗺️</div>
+        <span class="mod-tag">Contexto</span>
+        <div class="mod-title">Contexto Histórico das Cruzadas</div>
+        <div class="mod-desc">O mundo em 1095: a expansão islâmica, o Cisma de 1054, o apelo de Aleixo I Comneno, o poder do Papado reformado. Por que as Cruzadas foram possíveis naquele momento histórico específico.</div>
+        <a href="/10-cruzadas/contexto-historico" class="mod-link">Estudar →</a>
+      </div>
+      <div class="modulo-card c2">
+        <div class="mod-icon">⚔️</div>
+        <span class="mod-tag">1095–1099</span>
+        <div class="mod-title">A Primeira Cruzada</div>
+        <div class="mod-desc">O discurso de Urbano II em Clermont. A Cruzada Popular de Pedro, o Eremita. A Cruzada dos Príncipes. O cerco de Niceia e Antioquia. A conquista de Jerusalém (1099) e o massacre que a acompanhou.</div>
+        <a href="/10-cruzadas/primeira-cruzada" class="mod-link">Estudar →</a>
+      </div>
+      <div class="modulo-card c3">
+        <div class="mod-icon">🏰</div>
+        <span class="mod-tag">1147–1192</span>
+        <div class="mod-title">As Cruzadas Seguintes (2ª a 4ª)</div>
+        <div class="mod-desc">A Segunda Cruzada e o fracasso em Damasco. Saladino e a reconquista de Jerusalém (1187). A Terceira Cruzada: Ricardo Coração de Leão vs. Saladino. O Tratado de Jaffa e o acesso aos Lugares Santos.</div>
+        <a href="/10-cruzadas/cruzadas-seguintes" class="mod-link">Estudar →</a>
+      </div>
+      <div class="modulo-card c4">
+        <div class="mod-icon">🔥</div>
+        <span class="mod-tag">1204</span>
+        <div class="mod-title">O Saque de Constantinopla (1204)</div>
+        <div class="mod-desc">A Quarta Cruzada que nunca chegou à Terra Santa. O desvio para Constantinopla. O saque da capital cristã oriental por cruzados ocidentais. O Império Latino de Constantinopla. A ferida que nunca cicatrizou.</div>
+        <a href="/10-cruzadas/saque-constantinopla" class="mod-link">Estudar →</a>
+      </div>
+      <div class="modulo-card c5">
+        <div class="mod-icon">🌲</div>
+        <span class="mod-tag">Séc. XII–XIII</span>
+        <div class="mod-title">As Cruzadas do Norte e do Interior</div>
+        <div class="mod-desc">As Cruzadas contra os eslavos pagãos no Báltico. A Cruzada Albigense contra os Cátaros no sul da França. A Inquisição Medieval. Quando a Cruzada foi usada contra cristãos dissidentes.</div>
+        <a href="/10-cruzadas/cruzadas-nordeste" class="mod-link">Estudar →</a>
+      </div>
+      <div class="modulo-card c6">
+        <div class="mod-icon">🛡️</div>
+        <span class="mod-tag">Séc. XII–XIV</span>
+        <div class="mod-title">As Ordens Militares</div>
+        <div class="mod-desc">Templários, Hospitalários e Teutônicos — os monges-guerreiros das Cruzadas. Sua organização, espiritualidade e poder. A dissolução dos Templários (1312) e o julgamento de Jacques de Molay.</div>
+        <a href="/10-cruzadas/ordens-militares" class="mod-link">Estudar →</a>
+      </div>
+      <div class="modulo-card c7">
+        <div class="mod-icon">🕊️</div>
+        <span class="mod-tag">1219</span>
+        <div class="mod-title">Francisco de Assis e o Sultão</div>
+        <div class="mod-desc">O encontro mais surpreendente das Cruzadas: Francisco de Assis atravessando as linhas inimigas para dialogar com o Sultão Al-Kamil. Uma alternativa ao modelo cruzadístico — o testemunho desarmado.</div>
+        <a href="/10-cruzadas/francisco-sultan" class="mod-link">Estudar →</a>
+      </div>
+      <div class="modulo-card c8">
+        <div class="mod-icon">🌍</div>
+        <span class="mod-tag">Legado</span>
+        <div class="mod-title">Consequências e Legado das Cruzadas</div>
+        <div class="mod-desc">O fracasso militar das Cruzadas. O legado cultural (intercâmbio intelectual, comércio, arquitetura). O legado espiritual (peregrinação, martírio, ordens religiosas). As Cruzadas na memória islâmica e cristã hoje.</div>
+        <a href="/10-cruzadas/consequencias" class="mod-link">Estudar →</a>
+      </div>
+    </div>
+
+    <h2>📅 Linha do Tempo das Cruzadas</h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">1095</div>
+        <div class="tl-title">Concílio de Clermont — Urbano II convoca a Primeira Cruzada</div>
+        <div class="tl-desc">O Papa Urbano II faz um discurso inflamado em Clermont, França, convocando os cavaleiros cristãos a libertar a Terra Santa do domínio muçulmano. O grito de resposta da multidão: "Deus lo vult!" ("Deus quer!").</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1096</div>
+        <div class="tl-title">Cruzada Popular — Massacres de judeus no Reno</div>
+        <div class="tl-desc">Antes mesmo de chegar à Terra Santa, as hordas da Cruzada Popular massacram comunidades judaicas nas cidades do Reno (Worms, Maguncia, Colônia). Milhares de judeus são mortos ou forçados ao batismo.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1099</div>
+        <div class="tl-title">Conquista de Jerusalém — Massacre de muçulmanos e judeus</div>
+        <div class="tl-desc">Os cruzados conquistam Jerusalém após um cerco de cinco semanas. O cronista Raimundo de Aguilers descreve os cruzados "andando pelo sangue até os tornozelos" no Templo de Salomão. Milhares de muçulmanos e judeus são massacrados.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1147–1149</div>
+        <div class="tl-title">Segunda Cruzada — Fracasso em Damasco</div>
+        <div class="tl-desc">Convocada pelo Papa Eugênio III e pregada por Bernardo de Claraval. Termina em fracasso humilhante diante de Damasco. A divisão entre os cruzados e os francos estabelecidos na Terra Santa contribui para o desastre.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1187</div>
+        <div class="tl-title">Saladino reconquista Jerusalém — Batalha de Hattin</div>
+        <div class="tl-desc">O sultão aiúbida Saladino derrota o exército cruzado na Batalha de Hattin e reconquista Jerusalém. Ao contrário dos cruzados em 1099, Saladino permite que os cristãos saiam em paz — um contraste que o mundo islâmico ainda recorda.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1189–1192</div>
+        <div class="tl-title">Terceira Cruzada — Ricardo vs. Saladino</div>
+        <div class="tl-desc">A mais famosa das Cruzadas, com Ricardo I da Inglaterra ("Coração de Leão") e Filipe II da França. Ricardo reconquista Acre mas não consegue retomar Jerusalém. O Tratado de Jaffa (1192) garante acesso cristão aos Lugares Santos.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1204</div>
+        <div class="tl-title">Quarta Cruzada — Saque de Constantinopla</div>
+        <div class="tl-desc">A Quarta Cruzada, desviada por interesses venezianos, saqueia Constantinopla — a maior cidade cristã do mundo. Relíquias, obras de arte e riquezas são roubadas. O Patriarca é deposto. Um Imperador latino é instalado. A ferida mais profunda entre Oriente e Ocidente.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1209–1229</div>
+        <div class="tl-title">Cruzada Albigense — Contra os Cátaros na França</div>
+        <div class="tl-desc">O Papa Inocêncio III convoca uma Cruzada contra os Cátaros (hereges dualistas) no sul da França. O massacre de Béziers (1209): "Matai todos — Deus reconhecerá os seus" (atribuído ao legado papal Arnaldo Amaury). 20.000 mortos.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1219</div>
+        <div class="tl-title">Francisco de Assis visita o Sultão Al-Kamil</div>
+        <div class="tl-desc">Durante a Quinta Cruzada, Francisco de Assis atravessa as linhas inimigas e encontra-se com o Sultão Al-Kamil do Egito. O sultão o recebe com respeito e permite que parta em paz. Um modelo alternativo de missão: o testemunho desarmado.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1291</div>
+        <div class="tl-title">Queda de Acre — Fim das Cruzadas na Terra Santa</div>
+        <div class="tl-desc">A queda de Acre para os mamelucos egípcios marca o fim da presença cruzada na Terra Santa. Os últimos defensores cristãos são massacrados ou escravizados. Dois séculos de Cruzadas terminam sem o objetivo principal — a posse permanente de Jerusalém.</div>
+      </div>
+    </div>
+
+    <h2>📊 As 8 Cruzadas Principais</h2>
+    <table>
+      <tr><th>#</th><th>Período</th><th>Líderes</th><th>Objetivo</th><th>Resultado</th></tr>
+      <tr><td>1ª</td><td>1096–1099</td><td>Godofredo de Bulhão, Raimundo de Toulouse</td><td>Libertar Jerusalém</td><td>Sucesso — Jerusalém conquistada (1099)</td></tr>
+      <tr><td>2ª</td><td>1147–1149</td><td>Luís VII, Conrado III</td><td>Reconquistar Edessa</td><td>Fracasso — derrota em Damasco</td></tr>
+      <tr><td>3ª</td><td>1189–1192</td><td>Ricardo I, Filipe II, Frederico I</td><td>Reconquistar Jerusalém</td><td>Parcial — Acre reconquistada; acesso aos Lugares Santos</td></tr>
+      <tr><td>4ª</td><td>1202–1204</td><td>Bonifácio de Monferrato</td><td>Egito (desviada)</td><td>Desastre — Saque de Constantinopla</td></tr>
+      <tr><td>5ª</td><td>1217–1221</td><td>André II, João de Brienne</td><td>Egito → Jerusalém</td><td>Fracasso — derrota no Egito</td></tr>
+      <tr><td>6ª</td><td>1228–1229</td><td>Frederico II</td><td>Jerusalém (diplomacia)</td><td>Sucesso diplomático — Tratado com Al-Kamil</td></tr>
+      <tr><td>7ª</td><td>1248–1254</td><td>Luís IX (São Luís)</td><td>Egito → Jerusalém</td><td>Fracasso — Luís IX capturado no Egito</td></tr>
+      <tr><td>8ª</td><td>1270</td><td>Luís IX (São Luís)</td><td>Tunísia</td><td>Fracasso — Luís IX morre de peste em Tunísia</td></tr>
+    </table>
+  </div>
+</body>
+</html>

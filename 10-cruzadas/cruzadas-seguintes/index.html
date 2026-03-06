@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>As Cruzadas Seguintes (2ª a 3ª) | Bloco 10 — 365 de Graça & Adoração</title>
+  <link rel="icon" href="/favicon.ico">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0f172a; color: #e2e8f0; font-family: 'Georgia', serif; line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    .topbar { background: rgba(15,23,42,0.97); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
+    .topbar .inner { max-width: 900px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .topbar a { font-size: 0.85rem; color: #94a3b8; font-weight: 600; }
+    .hero { padding: 64px 24px 48px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .tag { display: inline-block; font-size: 0.72rem; font-weight: 800; padding: 4px 14px; border-radius: 999px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+    .hero h1 { font-size: 2.4rem; font-weight: 900; color: #f1f5f9; margin-bottom: 12px; line-height: 1.2; }
+    .hero .ref { font-size: 0.88rem; color: #64748b; margin-bottom: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+    .hero blockquote { font-style: italic; color: #cbd5e1; font-size: 1rem; padding-left: 20px; max-width: 620px; margin: 0 auto; text-align: left; }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
+    .sb { margin-bottom: 40px; }
+    .sb h2 { font-size: 1.3rem; font-weight: 800; color: #f1f5f9; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .sb p { color: #94a3b8; font-size: 0.95rem; line-height: 1.85; margin-bottom: 16px; }
+    .bloco { border-left-width: 3px; border-left-style: solid; border-radius: 0 12px 12px 0; padding: 18px 20px; margin-bottom: 16px; background: rgba(255,255,255,0.02); border-top: 1px solid rgba(255,255,255,0.07); border-right: 1px solid rgba(255,255,255,0.07); border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .bt { font-size: 0.85rem; font-weight: 800; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .bx { color: #94a3b8; font-size: 0.92rem; line-height: 1.82; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.87rem; margin: 20px 0 32px; }
+    td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+    .nav-mod { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.07); flex-wrap: wrap; gap: 10px; }
+    .nav-mod a { padding: 10px 20px; border-radius: 8px; font-size: 0.88rem; font-weight: 700; transition: all 0.2s; }
+    .reflexao { border-radius: 12px; padding: 22px 26px; margin-top: 32px; background: rgba(34,197,94,0.05); border: 1px solid rgba(34,197,94,0.15); }
+    .reflexao h3 { color: #22c55e; font-size: 0.95rem; font-weight: 800; margin-bottom: 10px; }
+    .reflexao p { color: #94a3b8; font-size: 0.9rem; line-height: 1.8; margin-bottom: 10px; }
+    .reflexao p:last-child { margin-bottom: 0; }
+    .pers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; margin: 20px 0 32px; }
+    .pers-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 16px; }
+    .pers-nome { font-size: 0.95rem; font-weight: 800; margin-bottom: 4px; }
+    .pers-datas { font-size: 0.72rem; color: #64748b; margin-bottom: 8px; font-weight: 600; }
+    .pers-desc { font-size: 0.83rem; color: #94a3b8; line-height: 1.6; }
+    .aviso { border-radius: 12px; padding: 20px 24px; margin: 20px 0 28px; background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.15); }
+    .aviso h4 { color: #ef4444; font-size: 0.9rem; font-weight: 800; margin-bottom: 8px; }
+    .aviso p { color: #94a3b8; font-size: 0.88rem; line-height: 1.75; margin-bottom: 0; }
+
+    .topbar a:hover { color: #ef4444; }
+    .hero { background: linear-gradient(135deg, #0f172a 0%, #1a0000 50%, #0f172a 100%); }
+    .tag { background: #ef444418; border: 1px solid #ef444440; color: #ef4444; }
+    .hero blockquote { border-left: 3px solid #ef4444; }
+    .bloco { border-left-color: #ef4444; }
+    .bt { color: #ef4444; }
+    table th { background: #ef444418; color: #ef4444; border-bottom: 1px solid #ef444430; }
+    .nav-mod a { background: #ef444418; border: 1px solid #ef444430; color: #ef4444; }
+    .nav-mod a:hover { background: #ef444430; }
+    .pers-nome { color: #ef4444; }
+    </style>
+</head>
+<body>
+  <div class="topbar"><div class="inner">
+    <a href="/10-cruzadas/index.html">← Bloco 10</a>
+    <a href="/">365 de Graça & Adoração</a>
+  </div></div>
+  <div class="hero">
+    <span class="tag">🏰 2ª e 3ª Cruzadas · 1147–1192</span>
+    <h1>As Cruzadas Seguintes (2ª a 3ª)</h1>
+    <div class="ref">Bernardo de Claraval · Saladino · Hattin · Ricardo Coração de Leão</div>
+    <blockquote>Vim ver um homem honrado e encontrei mais do que isso.<br><small style="color:#64748b;font-size:0.8rem;font-style:normal;">— Saladino, sobre Ricardo Coração de Leão, segundo os cronistas medievais</small></blockquote>
+  </div>
+  <div class="wrap">
+    
+<div class="sb">
+  <h2>🏰 A Segunda Cruzada (1147–1149) — O Fracasso em Damasco</h2>
+  <p>A Segunda Cruzada foi convocada pelo Papa Eugênio III após a queda do Condado de Edessa para o atabegue Zengi de Mossul (1144). Foi pregada com eloquência incomparável por Bernardo de Claraval — o monge mais influente da Europa, fundador da Ordem Cisterciense e conselheiro de papas e reis. Bernardo recrutou os dois maiores reis da Europa: Luís VII da França e Conrado III da Alemanha. A expectativa era enorme — e o fracasso foi correspondentemente humilhante.</p>
+  <p>Os exércitos alemão e francês sofreram pesadas perdas na Anatólia antes mesmo de chegar à Terra Santa. Quando finalmente chegaram, os líderes cruzados tomaram a decisão incompreensível de atacar Damasco — a cidade muçulmana que era aliada dos francos estabelecidos na Terra Santa contra Zengi. O cerco de Damasco (1148) durou apenas quatro dias antes de ser abandonado em circunstâncias humilhantes. A Segunda Cruzada terminou sem nenhuma conquista e com a reputação das Cruzadas seriamente abalada.</p>
+</div>
+<div class="sb">
+  <h2>⚔️ Saladino e a Queda de Jerusalém (1187)</h2>
+  <div class="bloco">
+    <div class="bt">Saladino — O Grande Adversário</div>
+    <div class="bx">Saladino (Salah ad-Din Yusuf ibn Ayyub, 1137–1193) foi o maior líder muçulmano das Cruzadas e um dos estadistas mais notáveis da Idade Média. Curdo de origem, ele unificou o Egito e a Síria sob seu comando e transformou a jihad contra os cruzados em uma causa pan-islâmica. Era conhecido por sua generosidade, sua palavra honrada e seu tratamento relativamente humano dos prisioneiros — qualidades que o tornaram admirado mesmo por seus inimigos cristãos. O cronista cruzado Guilherme de Tiro o descreveu como "um homem de grande generosidade e clemência."</div>
+  </div>
+  <div class="bloco">
+    <div class="bt">A Batalha de Hattin (1187)</div>
+    <div class="bx">A Batalha de Hattin (4 de julho de 1187) foi a maior derrota da história dos estados cruzados. O Rei Guido de Lusignan, provocado pelo fanático Reinaldo de Chatillon, levou o exército cruzado para o deserto em pleno verão para socorrer o Castelo de Tiberíades. Saladino cortou o acesso à água e cercou o exército exausto e desidratado nos "Chifres de Hattin" — duas colinas vulcânicas. O exército cruzado foi aniquilado. O Rei Guido foi capturado. Reinaldo de Chatillon foi executado pessoalmente por Saladino — que havia jurado matá-lo por ter atacado uma caravana de peregrinos muçulmanos. A Verdadeira Cruz (a relíquia mais sagrada dos cruzados) foi capturada e nunca mais foi vista.</div>
+  </div>
+  <div class="bloco">
+    <div class="bt">A Reconquista de Jerusalém</div>
+    <div class="bx">Após Hattin, Saladino conquistou sistematicamente os castelos e cidades cruzados. Jerusalém se rendeu em outubro de 1187. Ao contrário dos cruzados em 1099, Saladino não massacrou a população: ele permitiu que os cristãos saíssem mediante resgate. Aqueles que não podiam pagar o resgate foram escravizados — mas Saladino libertou muitos deles por generosidade pessoal. Este contraste entre o comportamento de Saladino em 1187 e o dos cruzados em 1099 tornou-se um símbolo poderoso na memória islâmica das Cruzadas.</div>
+  </div>
+</div>
+<div class="sb">
+  <h2>⚔️ A Terceira Cruzada (1189–1192) — Ricardo vs. Saladino</h2>
+  <p>A notícia da queda de Jerusalém chocou a Europa. O Papa Gregório VIII morreu de desgosto (segundo a tradição). O Papa Clemente III convocou a Terceira Cruzada, que reuniu os três maiores reis da Europa: Frederico I Barbarossa da Alemanha (que morreu afogado num rio na Anatólia antes de chegar à Terra Santa), Filipe II Augusto da França e Ricardo I "Coração de Leão" da Inglaterra. A rivalidade entre Ricardo e Filipe — aliados e inimigos ao mesmo tempo — marcou toda a Cruzada.</p>
+  <p>Ricardo I foi o maior guerreiro das Cruzadas — um rei-cavaleiro de coragem extraordinária e talento militar excepcional. Ele reconquistou Acre após um longo cerco (1191), derrotou Saladino na Batalha de Arsuf e avançou até a vista de Jerusalém — mas nunca a atacou. Duas vezes ele chegou perto o suficiente para ver a cidade; duas vezes recuou, reconhecendo que não tinha forças suficientes para tomá-la e mantê-la. O Tratado de Jaffa (setembro de 1192) encerrou a Terceira Cruzada: Saladino manteve Jerusalém, mas garantiu aos cristãos o livre acesso aos Lugares Santos. Ricardo partiu sem ter reconquistado Jerusalém — mas com a reputação de ser o maior guerreiro da cristandade.</p>
+  <div class="reflexao">
+    <h3>🙏 Reflexão: A Admiração Mútua de Ricardo e Saladino</h3>
+    <p>Um dos aspectos mais fascinantes da Terceira Cruzada é a admiração mútua entre Ricardo e Saladino — dois homens que nunca se encontraram pessoalmente, mas que trocaram mensageiros, presentes e gestos de cavalheirismo ao longo de toda a campanha. Quando Ricardo adoeceu, Saladino lhe enviou frutas e neve das montanhas para refrescá-lo. Quando o cavalo de Ricardo foi morto em batalha, Saladino lhe enviou dois cavalos de reposição. Esta admiração mútua não impediu que eles se combatessem com toda a ferocidade — mas ela revela que mesmo no contexto da guerra religiosa, a humanidade comum pode criar pontes inesperadas. É uma lição que permanece relevante hoje.</p>
+  </div>
+</div>
+
+    <div class="nav-mod">
+      <a href="/10-cruzadas/primeira-cruzada">← Primeira Cruzada</a>
+      <a href="/10-cruzadas/index.html">📋 Índice</a>
+      <a href="/10-cruzadas/saque-constantinopla">Saque de Constantinopla →</a>
+    </div>
+  </div>
+</body>
+</html>

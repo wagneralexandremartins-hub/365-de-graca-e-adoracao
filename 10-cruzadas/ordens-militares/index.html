@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>As Ordens Militares | Bloco 10 — 365 de Graça & Adoração</title>
+  <link rel="icon" href="/favicon.ico">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0f172a; color: #e2e8f0; font-family: 'Georgia', serif; line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    .topbar { background: rgba(15,23,42,0.97); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
+    .topbar .inner { max-width: 900px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .topbar a { font-size: 0.85rem; color: #94a3b8; font-weight: 600; }
+    .hero { padding: 64px 24px 48px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .tag { display: inline-block; font-size: 0.72rem; font-weight: 800; padding: 4px 14px; border-radius: 999px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+    .hero h1 { font-size: 2.4rem; font-weight: 900; color: #f1f5f9; margin-bottom: 12px; line-height: 1.2; }
+    .hero .ref { font-size: 0.88rem; color: #64748b; margin-bottom: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+    .hero blockquote { font-style: italic; color: #cbd5e1; font-size: 1rem; padding-left: 20px; max-width: 620px; margin: 0 auto; text-align: left; }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
+    .sb { margin-bottom: 40px; }
+    .sb h2 { font-size: 1.3rem; font-weight: 800; color: #f1f5f9; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .sb p { color: #94a3b8; font-size: 0.95rem; line-height: 1.85; margin-bottom: 16px; }
+    .bloco { border-left-width: 3px; border-left-style: solid; border-radius: 0 12px 12px 0; padding: 18px 20px; margin-bottom: 16px; background: rgba(255,255,255,0.02); border-top: 1px solid rgba(255,255,255,0.07); border-right: 1px solid rgba(255,255,255,0.07); border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .bt { font-size: 0.85rem; font-weight: 800; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .bx { color: #94a3b8; font-size: 0.92rem; line-height: 1.82; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.87rem; margin: 20px 0 32px; }
+    td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+    .nav-mod { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.07); flex-wrap: wrap; gap: 10px; }
+    .nav-mod a { padding: 10px 20px; border-radius: 8px; font-size: 0.88rem; font-weight: 700; transition: all 0.2s; }
+    .reflexao { border-radius: 12px; padding: 22px 26px; margin-top: 32px; background: rgba(34,197,94,0.05); border: 1px solid rgba(34,197,94,0.15); }
+    .reflexao h3 { color: #22c55e; font-size: 0.95rem; font-weight: 800; margin-bottom: 10px; }
+    .reflexao p { color: #94a3b8; font-size: 0.9rem; line-height: 1.8; margin-bottom: 10px; }
+    .reflexao p:last-child { margin-bottom: 0; }
+    .pers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; margin: 20px 0 32px; }
+    .pers-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 16px; }
+    .pers-nome { font-size: 0.95rem; font-weight: 800; margin-bottom: 4px; }
+    .pers-datas { font-size: 0.72rem; color: #64748b; margin-bottom: 8px; font-weight: 600; }
+    .pers-desc { font-size: 0.83rem; color: #94a3b8; line-height: 1.6; }
+    .aviso { border-radius: 12px; padding: 20px 24px; margin: 20px 0 28px; background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.15); }
+    .aviso h4 { color: #ef4444; font-size: 0.9rem; font-weight: 800; margin-bottom: 8px; }
+    .aviso p { color: #94a3b8; font-size: 0.88rem; line-height: 1.75; margin-bottom: 0; }
+
+    .topbar a:hover { color: #818cf8; }
+    .hero { background: linear-gradient(135deg, #0f172a 0%, #0a0a1f 50%, #0f172a 100%); }
+    .tag { background: #818cf818; border: 1px solid #818cf840; color: #818cf8; }
+    .hero blockquote { border-left: 3px solid #818cf8; }
+    .bloco { border-left-color: #818cf8; }
+    .bt { color: #818cf8; }
+    table th { background: #818cf818; color: #818cf8; border-bottom: 1px solid #818cf830; }
+    .nav-mod a { background: #818cf818; border: 1px solid #818cf830; color: #818cf8; }
+    .nav-mod a:hover { background: #818cf830; }
+    .pers-nome { color: #818cf8; }
+    </style>
+</head>
+<body>
+  <div class="topbar"><div class="inner">
+    <a href="/10-cruzadas/index.html">← Bloco 10</a>
+    <a href="/">365 de Graça & Adoração</a>
+  </div></div>
+  <div class="hero">
+    <span class="tag">🛡️ Templários · Hospitalários · Teutônicos</span>
+    <h1>As Ordens Militares</h1>
+    <div class="ref">Monges-Guerreiros · Bernardo de Claraval · Jacques de Molay · Cavaleiros de Malta</div>
+    <blockquote>O cavaleiro de Cristo mata com segurança e morre com mais segurança ainda. Ele serve a Cristo quando mata, e serve a si mesmo quando é morto.<br><small style="color:#64748b;font-size:0.8rem;font-style:normal;">— Bernardo de Claraval, De laude novae militiae — defesa teológica das Ordens Militares</small></blockquote>
+  </div>
+  <div class="wrap">
+    
+<div class="sb">
+  <h2>🛡️ O Paradoxo do Monge-Guerreiro</h2>
+  <p>As Ordens Militares foram uma das criações mais originais — e mais paradoxais — das Cruzadas. Elas combinavam dois ideais que pareciam incompatíveis: o monge, que renunciava ao mundo e à violência, e o guerreiro, cuja profissão era a violência. Bernardo de Claraval, o grande teólogo das Cruzadas, defendeu este paradoxo em seu tratado <em>De laude novae militiae</em> ("Em louvor da nova cavalaria"): o monge-guerreiro não mata por ódio ou ganância, mas por obediência e amor à Igreja. Ele não é um homicida (<em>homicida</em>) mas um "malicida" (<em>malicida</em>) — um matador do mal. Esta distinção teológica era sofisticada — mas não convenceu a todos, e a história das Ordens Militares mostrou que a linha entre "malicida" e homicida era frequentemente cruzada.</p>
+</div>
+<div class="sb">
+  <h2>⚔️ As Três Grandes Ordens Militares</h2>
+  <div class="pers-grid">
+    <div class="pers-card">
+      <div class="pers-nome">Ordem dos Templários</div>
+      <div class="pers-datas">Fund. 1119 · Dissolvida 1312</div>
+      <div class="pers-desc">Fundada por Hugo de Payns para proteger os peregrinos na Terra Santa. Nome oficial: "Pobres Cavaleiros de Cristo e do Templo de Salomão." Tornaram-se a ordem mais rica e poderosa da Europa medieval, com castelos, bancos e propriedades em toda a cristandade. Dissolvida pelo Papa Clemente V sob pressão do Rei Filipe IV da França.</div>
+    </div>
+    <div class="pers-card">
+      <div class="pers-nome">Ordem dos Hospitalários</div>
+      <div class="pers-datas">Fund. c. 1099 · Ativa até hoje</div>
+      <div class="pers-desc">Fundada para cuidar dos peregrinos doentes em Jerusalém. Tornou-se também uma ordem militar. Após a queda da Terra Santa, transferiu-se para Rodes (1310) e depois para Malta (1530) — daí "Cavaleiros de Malta." Ainda existe como organização humanitária: a Ordem de Malta.</div>
+    </div>
+    <div class="pers-card">
+      <div class="pers-nome">Ordem Teutônica</div>
+      <div class="pers-datas">Fund. 1190 · Ativa até hoje</div>
+      <div class="pers-desc">Fundada durante o cerco de Acre para cuidar dos cruzados alemães doentes. Tornou-se uma ordem militar e foi transferida para o Báltico em 1226, onde conduziu as Cruzadas contra os pagãos prussianos e lituanos. Estabeleceu um estado monástico-militar na Prússia que durou até 1525. Ainda existe como ordem religiosa na Áustria.</div>
+    </div>
+    <div class="pers-card">
+      <div class="pers-nome">Ordem de Santiago</div>
+      <div class="pers-datas">Fund. 1170 · Ativa até hoje</div>
+      <div class="pers-desc">Fundada na Espanha para a Reconquista — a guerra cristã contra os mouros na Península Ibérica. Uma das várias ordens militares ibéricas (junto com Calatrava, Alcântara e Avis). Protegia os peregrinos no Caminho de Santiago de Compostela. Ainda existe como ordem honorífica espanhola.</div>
+    </div>
+  </div>
+</div>
+<div class="sb">
+  <h2>⚖️ O Julgamento dos Templários (1307–1312)</h2>
+  <p>A dissolução da Ordem dos Templários é um dos episódios mais dramáticos da história medieval. Em outubro de 1307, o Rei Filipe IV da França ("o Belo") ordenou a prisão simultânea de todos os Templários na França — cerca de 2.000 homens. Eles foram acusados de heresia, apostasia, sodomia, adoração de um ídolo chamado "Baphomet" e de cuspir na Cruz durante os rituais de iniciação. Sob tortura, muitos Templários confessaram estas acusações — e depois as retrataram.</p>
+  <p>O processo foi claramente motivado por razões políticas e financeiras: Filipe IV estava profundamente endividado com os Templários e queria se apropriar de seus bens. O Papa Clemente V — um francês que residia em Avignon sob a influência do rei francês — cedeu às pressões de Filipe e dissolveu a Ordem no Concílio de Viena (1312). O último Grão-Mestre dos Templários, Jacques de Molay, foi queimado na fogueira em Paris em 1314. Segundo a tradição, antes de morrer, ele amaldiçoou o Papa e o Rei — ambos morreram no mesmo ano.</p>
+  <div class="reflexao">
+    <h3>🙏 Reflexão: Poder, Riqueza e Corrupção</h3>
+    <p>A história das Ordens Militares é uma parábola sobre o que acontece quando instituições religiosas acumulam poder e riqueza excessivos. Os Templários começaram como "pobres cavaleiros de Cristo" — e terminaram como a maior potência financeira da Europa medieval. Esta trajetória — da pobreza evangélica ao poder institucional — é uma tentação recorrente na história da Igreja. Jesus disse: "Não podeis servir a Deus e a Mamom" (Mt 6:24). As Ordens Militares tentaram servir a ambos — e a tensão entre estes dois senhores eventualmente as destruiu. A lição não é que a Igreja não deve ter recursos — mas que os recursos devem servir à missão, não a missão servir aos recursos.</p>
+  </div>
+</div>
+
+    <div class="nav-mod">
+      <a href="/10-cruzadas/cruzadas-nordeste">← Cruzadas do Norte</a>
+      <a href="/10-cruzadas/index.html">📋 Índice</a>
+      <a href="/10-cruzadas/francisco-sultan">Francisco e o Sultão →</a>
+    </div>
+  </div>
+</body>
+</html>
