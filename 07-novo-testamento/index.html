@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bloco 07 — Os Evangelhos · 365 de Graça &amp; Adoração</title>
+  <meta name="description" content="Estudo aprofundado dos quatro Evangelhos: Mateus, Marcos, Lucas e João — análise versículo por versículo, contexto histórico e mapas.">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    body { background: #0f172a; color: #e2e8f0; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; }
+    .topbar { background: rgba(15,23,42,0.97); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0 24px; position: sticky; top: 0; z-index: 100; }
+    .topbar .inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    .topbar a { color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    .topbar a:hover { color: #f59e0b; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 48px 24px 100px; }
+
+    /* HERO */
+    .hero { background: linear-gradient(135deg, rgba(245,158,11,0.13) 0%, rgba(239,68,68,0.08) 50%, rgba(0,0,0,0.5) 100%); border: 1px solid rgba(245,158,11,0.25); border-radius: 24px; padding: 56px 40px; margin-bottom: 48px; text-align: center; }
+    .hero .bloco-tag { display: inline-block; background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.35); color: #f59e0b; font-size: 0.80rem; font-weight: 800; padding: 5px 18px; border-radius: 999px; margin-bottom: 18px; letter-spacing: 1px; text-transform: uppercase; }
+    .hero h1 { font-size: 3rem; font-weight: 900; color: #f59e0b; margin: 0 0 12px 0; line-height: 1.1; }
+    .hero .sub { color: #94a3b8; font-size: 1.1rem; line-height: 1.75; max-width: 720px; margin: 0 auto 28px; }
+    .hero blockquote { background: rgba(245,158,11,0.07); border-left: 4px solid #f59e0b; border-radius: 8px; padding: 16px 24px; max-width: 680px; margin: 0 auto; font-style: italic; color: #e2e8f0; font-size: 1rem; line-height: 1.75; }
+
+    /* STATS */
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+    .stat-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 20px; text-align: center; }
+    .stat-card .num { font-size: 2rem; font-weight: 900; color: #f59e0b; }
+    .stat-card .label { color: #64748b; font-size: 0.82rem; margin-top: 4px; }
+
+    /* EVANGELHOS CARDS */
+    .evangelhos-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-bottom: 48px; }
+    .ev-card { border-radius: 20px; padding: 32px 28px; text-decoration: none; display: block; transition: transform 0.2s, box-shadow 0.2s; position: relative; overflow: hidden; }
+    .ev-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+    .ev-card .ev-icon { font-size: 2.8rem; margin-bottom: 14px; display: block; }
+    .ev-card h2 { font-size: 1.6rem; font-weight: 900; margin: 0 0 6px 0; }
+    .ev-card .ev-autor { font-size: 0.80rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; opacity: 0.7; }
+    .ev-card p { font-size: 0.93rem; line-height: 1.7; opacity: 0.85; margin: 0 0 18px 0; }
+    .ev-card .ev-meta { display: flex; gap: 12px; flex-wrap: wrap; }
+    .ev-card .ev-badge { font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; }
+    .ev-card .btn { display: inline-block; font-size: 0.88rem; font-weight: 700; padding: 10px 20px; border-radius: 10px; margin-top: 16px; }
+
+    /* Mateus */
+    .ev-mateus { background: linear-gradient(135deg, rgba(245,158,11,0.14) 0%, rgba(0,0,0,0.5) 100%); border: 1px solid rgba(245,158,11,0.25); color: #fde68a; }
+    .ev-mateus h2 { color: #f59e0b; }
+    .ev-mateus .ev-badge { background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.30); color: #f59e0b; }
+    .ev-mateus .btn { background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.30); color: #f59e0b; }
+
+    /* Marcos */
+    .ev-marcos { background: linear-gradient(135deg, rgba(239,68,68,0.12) 0%, rgba(0,0,0,0.5) 100%); border: 1px solid rgba(239,68,68,0.22); color: #fecaca; }
+    .ev-marcos h2 { color: #ef4444; }
+    .ev-marcos .ev-badge { background: rgba(239,68,68,0.12); border: 1px solid rgba(239,68,68,0.25); color: #ef4444; }
+    .ev-marcos .btn { background: rgba(239,68,68,0.12); border: 1px solid rgba(239,68,68,0.25); color: #ef4444; }
+
+    /* Lucas */
+    .ev-lucas { background: linear-gradient(135deg, rgba(34,197,94,0.10) 0%, rgba(0,0,0,0.5) 100%); border: 1px solid rgba(34,197,94,0.20); color: #bbf7d0; }
+    .ev-lucas h2 { color: #22c55e; }
+    .ev-lucas .ev-badge { background: rgba(34,197,94,0.10); border: 1px solid rgba(34,197,94,0.22); color: #22c55e; }
+    .ev-lucas .btn { background: rgba(34,197,94,0.10); border: 1px solid rgba(34,197,94,0.22); color: #22c55e; }
+
+    /* João */
+    .ev-joao { background: linear-gradient(135deg, rgba(99,102,241,0.12) 0%, rgba(0,0,0,0.5) 100%); border: 1px solid rgba(99,102,241,0.22); color: #c7d2fe; }
+    .ev-joao h2 { color: #818cf8; }
+    .ev-joao .ev-badge { background: rgba(99,102,241,0.12); border: 1px solid rgba(99,102,241,0.22); color: #818cf8; }
+    .ev-joao .btn { background: rgba(99,102,241,0.12); border: 1px solid rgba(99,102,241,0.22); color: #818cf8; }
+
+    /* COMPARATIVO */
+    .section-title { font-size: 1.3rem; font-weight: 800; color: #e2e8f0; margin: 0 0 20px 0; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .compare-table { width: 100%; border-collapse: collapse; margin-bottom: 40px; }
+    .compare-table th { background: rgba(245,158,11,0.10); color: #f59e0b; font-size: 0.82rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; padding: 12px 16px; text-align: left; border-bottom: 1px solid rgba(245,158,11,0.20); }
+    .compare-table td { padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; font-size: 0.90rem; vertical-align: top; }
+    .compare-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+    /* LINHA DO TEMPO */
+    .timeline { position: relative; padding-left: 32px; margin-bottom: 48px; }
+    .timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #f59e0b, #818cf8); }
+    .tl-item { position: relative; margin-bottom: 28px; }
+    .tl-item::before { content: ''; position: absolute; left: -28px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: #f59e0b; border: 2px solid #0f172a; }
+    .tl-item .tl-date { font-size: 0.78rem; font-weight: 800; color: #f59e0b; text-transform: uppercase; margin-bottom: 4px; }
+    .tl-item .tl-title { font-size: 1rem; font-weight: 700; color: #e2e8f0; margin-bottom: 4px; }
+    .tl-item .tl-desc { font-size: 0.88rem; color: #64748b; line-height: 1.6; }
+
+    /* INFO BOX */
+    .info-box { background: rgba(99,102,241,0.06); border: 1px solid rgba(99,102,241,0.18); border-radius: 14px; padding: 24px 28px; margin-bottom: 32px; }
+    .info-box h3 { color: #818cf8; font-size: 1rem; margin: 0 0 12px 0; }
+    .info-box p { color: #94a3b8; font-size: 0.92rem; line-height: 1.78; margin: 0 0 10px 0; }
+    .info-box p:last-child { margin-bottom: 0; }
+
+    @media (max-width: 768px) {
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .evangelhos-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="inner">
+      <a href="/">365 de Graça &amp; Adoração</a>
+      <div style="display:flex;gap:20px;">
+        <a href="/07-novo-testamento/mateus/index.html">Mateus</a>
+        <a href="/07-novo-testamento/marcos/index.html">Marcos</a>
+        <a href="/07-novo-testamento/lucas/index.html">Lucas</a>
+        <a href="/07-novo-testamento/joao/index.html">João</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+
+    <!-- HERO -->
+    <div class="hero">
+      <span class="bloco-tag">✝️ Bloco 07 · Novo Testamento</span>
+      <h1>Os Quatro Evangelhos</h1>
+      <p class="sub">A vida, morte e ressurreição de Jesus Cristo narrada por quatro testemunhos distintos — cada um revelando uma faceta única do mesmo Salvador. Análise versículo por versículo com contexto histórico, vocabulário grego e mapas geográficos.</p>
+      <blockquote>"No princípio era o Verbo, e o Verbo estava com Deus, e o Verbo era Deus... E o Verbo se fez carne e habitou entre nós." — João 1:1,14</blockquote>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats">
+      <div class="stat-card">
+        <div class="num">4</div>
+        <div class="label">Evangelhos</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">89</div>
+        <div class="label">Capítulos no total</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">~3.779</div>
+        <div class="label">Versículos</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">~30 d.C.</div>
+        <div class="label">Período narrado</div>
+      </div>
+    </div>
+
+    <!-- CARDS DOS 4 EVANGELHOS -->
+    <h2 class="section-title">Os Quatro Evangelhos</h2>
+    <div class="evangelhos-grid">
+
+      <a href="/07-novo-testamento/mateus/index.html" class="ev-card ev-mateus">
+        <span class="ev-icon">📜</span>
+        <h2>Mateus</h2>
+        <div class="ev-autor">Mateus (Levi) · Apóstolo e Publicano</div>
+        <p>O Evangelho do Rei — escrito para judeus, apresenta Jesus como o Messias prometido, o cumprimento da Lei e dos Profetas. Contém o Sermão do Monte, as parábolas do Reino e a Grande Comissão.</p>
+        <div class="ev-meta">
+          <span class="ev-badge">28 capítulos</span>
+          <span class="ev-badge">1.071 versículos</span>
+          <span class="ev-badge">~50–70 d.C.</span>
+          <span class="ev-badge">Audiência: Judeus</span>
+        </div>
+        <span class="btn">Estudar Mateus →</span>
+      </a>
+
+      <a href="/07-novo-testamento/marcos/index.html" class="ev-card ev-marcos">
+        <span class="ev-icon">⚡</span>
+        <h2>Marcos</h2>
+        <div class="ev-autor">João Marcos · Discípulo de Pedro</div>
+        <p>O Evangelho do Servo — o mais curto e dinâmico dos quatro. Escrito para romanos, enfatiza as ações de Jesus mais do que seus discursos. A palavra "imediatamente" aparece 41 vezes. Jesus como Servo que age com poder.</p>
+        <div class="ev-meta">
+          <span class="ev-badge">16 capítulos</span>
+          <span class="ev-badge">678 versículos</span>
+          <span class="ev-badge">~55–65 d.C.</span>
+          <span class="ev-badge">Audiência: Romanos</span>
+        </div>
+        <span class="btn">Estudar Marcos →</span>
+      </a>
+
+      <a href="/07-novo-testamento/lucas/index.html" class="ev-card ev-lucas">
+        <span class="ev-icon">🌍</span>
+        <h2>Lucas</h2>
+        <div class="ev-autor">Lucas · Médico e Companheiro de Paulo</div>
+        <p>O Evangelho do Filho do Homem — escrito para gregos e gentios, apresenta Jesus como o Salvador universal. O mais longo dos Evangelhos, com ênfase nos pobres, mulheres, samaritanos e excluídos. Contém as parábolas do Filho Pródigo e do Bom Samaritano.</p>
+        <div class="ev-meta">
+          <span class="ev-badge">24 capítulos</span>
+          <span class="ev-badge">1.151 versículos</span>
+          <span class="ev-badge">~60–80 d.C.</span>
+          <span class="ev-badge">Audiência: Gentios</span>
+        </div>
+        <span class="btn">Estudar Lucas →</span>
+      </a>
+
+      <a href="/07-novo-testamento/joao/index.html" class="ev-card ev-joao">
+        <span class="ev-icon">✨</span>
+        <h2>João</h2>
+        <div class="ev-autor">João, filho de Zebedeu · O Discípulo Amado</div>
+        <p>O Evangelho do Filho de Deus — o mais teológico dos quatro. Escrito para toda a Igreja, revela a divindade de Jesus através dos 7 "Eu Sou", 7 sinais e 7 discursos. Contém o prólogo do Logos, a conversa com Nicodemos e o discurso do pão da vida.</p>
+        <div class="ev-meta">
+          <span class="ev-badge">21 capítulos</span>
+          <span class="ev-badge">879 versículos</span>
+          <span class="ev-badge">~85–95 d.C.</span>
+          <span class="ev-badge">Audiência: Igreja Universal</span>
+        </div>
+        <span class="btn">Estudar João →</span>
+      </a>
+
+    </div>
+
+    <!-- TABELA COMPARATIVA -->
+    <h2 class="section-title">Tabela Comparativa dos Quatro Evangelhos</h2>
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Característica</th>
+          <th>📜 Mateus</th>
+          <th>⚡ Marcos</th>
+          <th>🌍 Lucas</th>
+          <th>✨ João</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Símbolo</strong></td><td>Leão (Rei)</td><td>Boi (Servo)</td><td>Homem (Humanidade)</td><td>Águia (Divindade)</td></tr>
+        <tr><td><strong>Abertura</strong></td><td>Genealogia (Abraão)</td><td>Batismo de João</td><td>Nascimento de João Batista</td><td>O Logos eterno</td></tr>
+        <tr><td><strong>Ênfase</strong></td><td>Jesus como Messias/Rei</td><td>Jesus como Servo poderoso</td><td>Jesus como Salvador universal</td><td>Jesus como Filho de Deus</td></tr>
+        <tr><td><strong>Audiência original</strong></td><td>Judeus cristãos</td><td>Cristãos romanos</td><td>Cristãos gentios (Teófilo)</td><td>Igreja universal</td></tr>
+        <tr><td><strong>Palavra-chave</strong></td><td>"Cumprido" (17x)</td><td>"Imediatamente" (41x)</td><td>"Filho do Homem" (25x)</td><td>"Crer" (98x)</td></tr>
+        <tr><td><strong>Parábolas exclusivas</strong></td><td>11 (Dez virgens, Talentos...)</td><td>1 (Semente que cresce)</td><td>18 (Filho Pródigo, Bom Samaritano...)</td><td>0 parábolas formais</td></tr>
+        <tr><td><strong>Milagres exclusivos</strong></td><td>3</td><td>2</td><td>6</td><td>7 sinais</td></tr>
+        <tr><td><strong>Discursos extensos</strong></td><td>5 grandes discursos</td><td>Poucos discursos</td><td>Discursos em viagem</td><td>7 grandes discursos</td></tr>
+        <tr><td><strong>Infância de Jesus</strong></td><td>Sim (Magos, Egito)</td><td>Não</td><td>Sim (Pastores, Simeão, Ana)</td><td>Não (começa na eternidade)</td></tr>
+        <tr><td><strong>Ressurreição</strong></td><td>Maria Madalena e outra Maria</td><td>Maria Madalena e outras</td><td>Mulheres e discípulos</td><td>Maria Madalena e discípulos</td></tr>
+      </tbody>
+    </table>
+
+    <!-- LINHA DO TEMPO -->
+    <h2 class="section-title">Linha do Tempo: Da Composição à Canonização</h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">~30 d.C.</div>
+        <div class="tl-title">Ministério, morte e ressurreição de Jesus</div>
+        <div class="tl-desc">Os eventos narrados pelos quatro Evangelhos ocorrem durante o governo de Pôncio Pilatos (26–36 d.C.), no reinado de Herodes Antipas na Galileia.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">~50–65 d.C.</div>
+        <div class="tl-title">Composição de Marcos e Mateus</div>
+        <div class="tl-desc">Marcos é provavelmente o primeiro Evangelho escrito, baseado nas pregações de Pedro em Roma. Mateus expande Marcos com material exclusivo (fonte Q e material M).</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">~60–80 d.C.</div>
+        <div class="tl-title">Composição de Lucas</div>
+        <div class="tl-desc">Lucas, médico e companheiro de Paulo, escreve para Teófilo um relato ordenado baseado em testemunhas oculares. Também escreve Atos dos Apóstolos como continuação.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">~85–95 d.C.</div>
+        <div class="tl-title">Composição de João</div>
+        <div class="tl-desc">O último Evangelho, escrito em Éfeso pelo apóstolo João na velhice. Pressupõe o conhecimento dos Evangelhos Sinóticos e os complementa com material teológico único.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">~367 d.C.</div>
+        <div class="tl-title">Canonização definitiva</div>
+        <div class="tl-desc">A Carta Pascal de Atanásio de Alexandria lista os 27 livros do NT, incluindo os quatro Evangelhos, como canônicos. Os concílios de Hipona (393) e Cartago (397) confirmam este cânon.</div>
+      </div>
+    </div>
+
+    <!-- INFO BOX: PROBLEMA SINÓTICO -->
+    <div class="info-box">
+      <h3>📚 O Problema Sinótico</h3>
+      <p>Mateus, Marcos e Lucas são chamados de "Evangelhos Sinóticos" (do grego <em>synopsis</em> — "visão conjunta") porque compartilham grande quantidade de material em comum. Cerca de 90% de Marcos aparece em Mateus ou Lucas. Esta sobreposição levanta a questão: qual foi escrito primeiro? Como se relacionam entre si?</p>
+      <p>A hipótese mais aceita é a "hipótese das duas fontes": Marcos foi o primeiro Evangelho escrito, e Mateus e Lucas o usaram como fonte, além de uma segunda fonte hipotética chamada "Q" (do alemão <em>Quelle</em> — "fonte") que conteria os ditos de Jesus comuns a Mateus e Lucas mas ausentes em Marcos. Cada evangelista também tinha material exclusivo (chamado "M" para Mateus e "L" para Lucas).</p>
+      <p>João é independente dos Sinóticos — ele conhecia a tradição oral e talvez alguns dos Evangelhos, mas escreveu de forma autônoma, complementando e aprofundando o que os outros narraram.</p>
+    </div>
+
+    <!-- VOLTAR -->
+    <div style="text-align:center; margin-top: 48px;">
+      <a href="/" style="background:rgba(245,158,11,0.10);border:1px solid rgba(245,158,11,0.22);color:#f59e0b;padding:12px 28px;border-radius:12px;text-decoration:none;font-weight:700;">← Voltar ao Início</a>
+    </div>
+
+  </div>
+</body>
+</html>
