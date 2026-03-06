@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloco 11 — Conflitos Religiosos Contemporâneos | 365 de Graça & Adoração</title>
+  <meta name="description" content="Heranças históricas, feridas abertas e reconciliação à luz do Reino de Deus. Do Cisma do Oriente às perseguições do século XXI.">
+  <link rel="icon" href="/favicon.ico">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0f172a; color: #e2e8f0; font-family: 'Georgia', serif; line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    .topbar { background: rgba(15,23,42,0.97); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
+    .topbar .inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .topbar a { font-size: 0.82rem; color: #94a3b8; font-weight: 600; transition: color 0.2s; }
+    .topbar a:hover { color: #ef4444; }
+    .hero { background: linear-gradient(135deg, #0f172a 0%, #1a0505 40%, #0f172a 100%); padding: 72px 24px 56px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.07); position: relative; overflow: hidden; }
+    .hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(239,68,68,0.12) 0%, transparent 70%); pointer-events: none; }
+    .bloco-badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.25); border-radius: 999px; padding: 6px 18px; margin-bottom: 20px; }
+    .bloco-num { font-size: 0.72rem; font-weight: 900; color: #ef4444; text-transform: uppercase; letter-spacing: 1.5px; }
+    .hero h1 { font-size: 2.8rem; font-weight: 900; color: #f1f5f9; margin-bottom: 16px; line-height: 1.15; max-width: 700px; margin-left: auto; margin-right: auto; }
+    .hero p { color: #94a3b8; font-size: 1.05rem; max-width: 600px; margin: 0 auto 32px; line-height: 1.8; }
+    .hero-tags { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+    .hero-tag { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 5px 14px; font-size: 0.78rem; color: #94a3b8; font-weight: 600; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 700px; margin: 0 auto; }
+    .stat-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 20px 16px; text-align: center; }
+    .stat-card .num { font-size: 1.8rem; font-weight: 900; color: #ef4444; }
+    .stat-card .label { font-size: 0.78rem; color: #64748b; margin-top: 4px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 48px 24px 80px; }
+    h2 { font-size: 1.4rem; font-weight: 800; color: #f1f5f9; margin: 40px 0 16px; }
+    p { color: #94a3b8; font-size: 0.95rem; line-height: 1.8; margin-bottom: 16px; }
+    .intro-box { background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.15); border-radius: 14px; padding: 28px 32px; margin-bottom: 40px; }
+    .intro-box h3 { color: #ef4444; font-size: 1.05rem; font-weight: 800; margin-bottom: 12px; }
+    .intro-box p { color: #94a3b8; font-size: 0.93rem; line-height: 1.82; margin-bottom: 12px; }
+    .intro-box p:last-child { margin-bottom: 0; }
+    .modulos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; margin-bottom: 48px; }
+    .modulo-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; padding: 24px; transition: all 0.25s; display: flex; flex-direction: column; }
+    .modulo-card:hover { background: rgba(255,255,255,0.05); transform: translateY(-3px); }
+    .mod-icon { font-size: 2rem; margin-bottom: 12px; }
+    .mod-tag { display: inline-block; font-size: 0.68rem; font-weight: 800; padding: 3px 10px; border-radius: 999px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.8px; }
+    .mod-title { font-size: 1.05rem; font-weight: 800; color: #f1f5f9; margin-bottom: 8px; line-height: 1.3; }
+    .mod-desc { font-size: 0.87rem; color: #64748b; line-height: 1.7; flex: 1; margin-bottom: 16px; }
+    .mod-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; font-weight: 700; padding: 8px 16px; border-radius: 8px; transition: all 0.2s; }
+    /* Cores por módulo */
+    .m-cisma .mod-tag { background: rgba(168,85,247,0.12); border: 1px solid rgba(168,85,247,0.25); color: #a855f7; }
+    .m-cisma .mod-link { background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.25); color: #a855f7; }
+    .m-cisma .mod-link:hover { background: rgba(168,85,247,0.2); }
+    .m-cisma:hover { border-color: rgba(168,85,247,0.3); }
+    .m-reforma .mod-tag { background: rgba(245,158,11,0.12); border: 1px solid rgba(245,158,11,0.25); color: #f59e0b; }
+    .m-reforma .mod-link { background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.25); color: #f59e0b; }
+    .m-reforma .mod-link:hover { background: rgba(245,158,11,0.2); }
+    .m-reforma:hover { border-color: rgba(245,158,11,0.3); }
+    .m-guerras .mod-tag { background: rgba(239,68,68,0.12); border: 1px solid rgba(239,68,68,0.25); color: #ef4444; }
+    .m-guerras .mod-link { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.25); color: #ef4444; }
+    .m-guerras .mod-link:hover { background: rgba(239,68,68,0.2); }
+    .m-guerras:hover { border-color: rgba(239,68,68,0.3); }
+    .m-seculo .mod-tag { background: rgba(100,116,139,0.15); border: 1px solid rgba(100,116,139,0.3); color: #94a3b8; }
+    .m-seculo .mod-link { background: rgba(100,116,139,0.1); border: 1px solid rgba(100,116,139,0.25); color: #94a3b8; }
+    .m-seculo .mod-link:hover { background: rgba(100,116,139,0.2); }
+    .m-seculo:hover { border-color: rgba(100,116,139,0.3); }
+    .m-ecum .mod-tag { background: rgba(34,211,238,0.12); border: 1px solid rgba(34,211,238,0.25); color: #22d3ee; }
+    .m-ecum .mod-link { background: rgba(34,211,238,0.1); border: 1px solid rgba(34,211,238,0.25); color: #22d3ee; }
+    .m-ecum .mod-link:hover { background: rgba(34,211,238,0.2); }
+    .m-ecum:hover { border-color: rgba(34,211,238,0.3); }
+    .m-perseg .mod-tag { background: rgba(239,68,68,0.12); border: 1px solid rgba(239,68,68,0.25); color: #f87171; }
+    .m-perseg .mod-link { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.25); color: #f87171; }
+    .m-perseg .mod-link:hover { background: rgba(239,68,68,0.2); }
+    .m-perseg:hover { border-color: rgba(239,68,68,0.3); }
+    .m-islam .mod-tag { background: rgba(16,185,129,0.12); border: 1px solid rgba(16,185,129,0.25); color: #10b981; }
+    .m-islam .mod-link { background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.25); color: #10b981; }
+    .m-islam .mod-link:hover { background: rgba(16,185,129,0.2); }
+    .m-islam:hover { border-color: rgba(16,185,129,0.3); }
+    .m-recon .mod-tag { background: rgba(34,197,94,0.12); border: 1px solid rgba(34,197,94,0.25); color: #22c55e; }
+    .m-recon .mod-link { background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.25); color: #22c55e; }
+    .m-recon .mod-link:hover { background: rgba(34,197,94,0.2); }
+    .m-recon:hover { border-color: rgba(34,197,94,0.3); }
+    .timeline { position: relative; padding-left: 36px; margin-bottom: 48px; }
+    .timeline::before { content: ""; position: absolute; left: 10px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #a855f7, #ef4444, #22c55e); }
+    .tl-item { position: relative; margin-bottom: 32px; }
+    .tl-item::before { content: ""; position: absolute; left: -30px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: #ef4444; border: 2px solid #0f172a; }
+    .tl-date { font-size: 0.78rem; font-weight: 800; color: #ef4444; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .tl-title { font-size: 1rem; font-weight: 700; color: #e2e8f0; margin-bottom: 6px; }
+    .tl-desc { font-size: 0.88rem; color: #64748b; line-height: 1.65; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.87rem; margin-bottom: 40px; }
+    th { background: rgba(239,68,68,0.10); color: #ef4444; padding: 10px 14px; text-align: left; font-weight: 700; border-bottom: 1px solid rgba(239,68,68,0.20); }
+    td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+    .reflexao-box { background: linear-gradient(135deg, rgba(34,197,94,0.06), rgba(16,185,129,0.04)); border: 1px solid rgba(34,197,94,0.18); border-radius: 14px; padding: 28px 32px; margin-top: 40px; }
+    .reflexao-box h3 { color: #22c55e; font-size: 1.05rem; font-weight: 800; margin-bottom: 14px; }
+    .reflexao-box p { color: #94a3b8; font-size: 0.93rem; line-height: 1.82; margin-bottom: 12px; }
+    .reflexao-box p:last-child { margin-bottom: 0; }
+    @media (max-width: 768px) { .stats { grid-template-columns: repeat(2, 1fr); } .hero h1 { font-size: 2rem; } }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="inner">
+      <a href="/">365 de Graça & Adoração</a>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <a href="/11-conflitos-contemporaneos/cisma-oriente">Cisma</a>
+        <a href="/11-conflitos-contemporaneos/reforma-protestante">Reforma</a>
+        <a href="/11-conflitos-contemporaneos/guerras-religiao">Guerras</a>
+        <a href="/11-conflitos-contemporaneos/secularismo">Secularismo</a>
+        <a href="/11-conflitos-contemporaneos/perseguicao-atual">Perseguição</a>
+        <a href="/11-conflitos-contemporaneos/reconciliacao">Reconciliação</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="bloco-badge">
+      <span class="bloco-num">Bloco 11 · Reflexão</span>
+    </div>
+    <h1>Conflitos Religiosos Contemporâneos</h1>
+    <p>Heranças históricas, feridas abertas e o desafio da reconciliação à luz do Reino de Deus. Do Cisma do Oriente às perseguições do século XXI.</p>
+    <div class="hero-tags">
+      <span class="hero-tag">Cisma do Oriente</span>
+      <span class="hero-tag">Reforma Protestante</span>
+      <span class="hero-tag">Guerras de Religião</span>
+      <span class="hero-tag">Secularismo</span>
+      <span class="hero-tag">Ecumenismo</span>
+      <span class="hero-tag">Perseguição Atual</span>
+      <span class="hero-tag">Islamismo & Cristandade</span>
+      <span class="hero-tag">Reconciliação</span>
+    </div>
+    <div class="stats">
+      <div class="stat-card"><div class="num">8</div><div class="label">Módulos</div></div>
+      <div class="stat-card"><div class="num">1054</div><div class="label">Anos de Cisma</div></div>
+      <div class="stat-card"><div class="num">500+</div><div class="label">Anos de Reforma</div></div>
+      <div class="stat-card"><div class="num">360M</div><div class="label">Perseguidos Hoje</div></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="intro-box">
+      <h3>⚔️ Por que estudar os Conflitos Religiosos?</h3>
+      <p>A história da Igreja é uma história de glória e vergonha, de fidelidade e traição, de amor e violência. Estudar os conflitos religiosos não é um exercício de autopunição ou de crítica destrutiva — é um ato de honestidade histórica que nos permite aprender com os erros do passado, compreender as feridas do presente e trabalhar pela reconciliação do futuro.</p>
+      <p>Jesus orou "para que todos sejam um" (Jo 17:21) — mas a história da Igreja é uma história de divisões crescentes. O Cisma do Oriente (1054) dividiu a Igreja em Ocidente e Oriente. A Reforma Protestante (1517) fragmentou o Ocidente em centenas de denominações. As Guerras de Religião (séculos XVI-XVII) ensanguentaram a Europa em nome de Cristo. O secularismo moderno desafia a relevância da fé na esfera pública. As perseguições contemporâneas atingem 360 milhões de cristãos em todo o mundo.</p>
+      <p>Este bloco não busca distribuir culpa ou declarar vencedores. Busca compreender — com honestidade histórica, rigor teológico e esperança evangélica — como chegamos até aqui e para onde podemos ir. À luz do Reino de Deus, os conflitos religiosos não têm a última palavra: a reconciliação é possível porque Cristo reconciliou todas as coisas (Cl 1:20).</p>
+    </div>
+
+    <h2>📚 Módulos do Bloco 11</h2>
+    <div class="modulos-grid">
+
+      <div class="modulo-card m-cisma">
+        <div class="mod-icon">⛪</div>
+        <span class="mod-tag">1054 d.C.</span>
+        <div class="mod-title">O Cisma do Oriente</div>
+        <div class="mod-desc">A grande divisão de 1054 que separou Roma de Constantinopla. Causas teológicas, políticas e culturais. O Filioque, o primado papal e as diferenças litúrgicas. Consequências para a cristandade mundial.</div>
+        <a href="/11-conflitos-contemporaneos/cisma-oriente" class="mod-link">Estudar →</a>
+      </div>
+
+      <div class="modulo-card m-reforma">
+        <div class="mod-icon">📜</div>
+        <span class="mod-tag">1517 d.C.</span>
+        <div class="mod-title">A Reforma Protestante</div>
+        <div class="mod-desc">Lutero, Calvino, Zuínglio e a fragmentação do Ocidente cristão. As 95 Teses, a justificação pela fé, a autoridade das Escrituras. Reforma Católica e Contrarreforma. Legado e divisões.</div>
+        <a href="/11-conflitos-contemporaneos/reforma-protestante" class="mod-link">Estudar →</a>
+      </div>
+
+      <div class="modulo-card m-guerras">
+        <div class="mod-icon">⚔️</div>
+        <span class="mod-tag">Séc. XVI–XVII</span>
+        <div class="mod-title">Guerras de Religião</div>
+        <div class="mod-desc">As Guerras Huguenotes, a Guerra dos Trinta Anos, a Noite de São Bartolomeu. Quando a fé se tornou justificativa para a violência. Consequências para a relação entre religião e Estado.</div>
+        <a href="/11-conflitos-contemporaneos/guerras-religiao" class="mod-link">Estudar →</a>
+      </div>
+
+      <div class="modulo-card m-seculo">
+        <div class="mod-icon">🏛️</div>
+        <span class="mod-tag">Séc. XVIII–XXI</span>
+        <div class="mod-title">Secularismo e Laicidade</div>
+        <div class="mod-desc">O Iluminismo, a Revolução Francesa e o nascimento do Estado laico. Secularismo como ideologia e como arranjo político. O desafio da fé na esfera pública contemporânea.</div>
+        <a href="/11-conflitos-contemporaneos/secularismo" class="mod-link">Estudar →</a>
+      </div>
+
+      <div class="modulo-card m-ecum">
+        <div class="mod-icon">🕊️</div>
+        <span class="mod-tag">Séc. XX–XXI</span>
+        <div class="mod-title">Ecumenismo e Diálogo</div>
+        <div class="mod-desc">O Movimento Ecumênico, o Conselho Mundial de Igrejas, o Concílio Vaticano II. Avanços e limites do diálogo inter-cristão. Ecumenismo espiritual vs. ecumenismo institucional.</div>
+        <a href="/11-conflitos-contemporaneos/ecumenismo" class="mod-link">Estudar →</a>
+      </div>
+
+      <div class="modulo-card m-perseg">
+        <div class="mod-icon">🔥</div>
+        <span class="mod-tag">Hoje</span>
+        <div class="mod-title">Perseguição Contemporânea</div>
+        <div class="mod-desc">360 milhões de cristãos perseguidos no mundo hoje. Coreia do Norte, China, Oriente Médio, África Subsaariana. Testemunhos, dados e a teologia do sofrimento como testemunho.</div>
+        <a href="/11-conflitos-contemporaneos/perseguicao-atual" class="mod-link">Estudar →</a>
+      </div>
+
+      <div class="modulo-card m-islam">
+        <div class="mod-icon">🌙</div>
+        <span class="mod-tag">Séc. VII–XXI</span>
+        <div class="mod-title">Islamismo e Cristandade</div>
+        <div class="mod-desc">Quatorze séculos de encontro, conflito e coexistência. As Cruzadas, a Reconquista, o Império Otomano, o fundamentalismo contemporâneo. O desafio do diálogo islamo-cristão.</div>
+        <a href="/11-conflitos-contemporaneos/islamismo-cristandade" class="mod-link">Estudar →</a>
+      </div>
+
+      <div class="modulo-card m-recon">
+        <div class="mod-icon">🤝</div>
+        <span class="mod-tag">Esperança</span>
+        <div class="mod-title">Reconciliação e Esperança</div>
+        <div class="mod-desc">A teologia da reconciliação em Paulo e João. Iniciativas concretas de reconciliação inter-cristã e inter-religiosa. O papel da Igreja na construção da paz. "Para que todos sejam um" (Jo 17:21).</div>
+        <a href="/11-conflitos-contemporaneos/reconciliacao" class="mod-link">Estudar →</a>
+      </div>
+
+    </div>
+
+    <h2>📅 Linha do Tempo dos Conflitos Religiosos</h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">622 d.C.</div>
+        <div class="tl-title">Hégira — Nascimento do Islamismo</div>
+        <div class="tl-desc">Muhammad foge de Meca para Medina, marcando o início da era islâmica. O Islã se expande rapidamente pelo Oriente Médio, Norte da África e Península Ibérica, criando o primeiro grande desafio externo à cristandade.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1054 d.C.</div>
+        <div class="tl-title">Grande Cisma — Divisão entre Roma e Constantinopla</div>
+        <div class="tl-desc">O Cardeal Humberto e o Patriarca Miguel Cerulário trocam excomunhões mútuas, formalizando a divisão entre a Igreja Católica Romana e a Igreja Ortodoxa Oriental. A divisão persiste até hoje, embora as excomunhões tenham sido levantadas em 1964.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1095–1291 d.C.</div>
+        <div class="tl-title">As Cruzadas — Fé e Violência</div>
+        <div class="tl-desc">Oito cruzadas principais tentam recuperar a Terra Santa do controle muçulmano. Massacres de judeus, cristãos orientais e muçulmanos. O Saque de Constantinopla (1204) aprofunda o cisma entre Oriente e Ocidente.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1517 d.C.</div>
+        <div class="tl-title">Reforma Protestante — As 95 Teses de Lutero</div>
+        <div class="tl-desc">Martinho Lutero afixa suas 95 Teses em Wittenberg, desencadeando a Reforma que fragmenta o Ocidente cristão. Surgem o Luteranismo, o Calvinismo, o Anglicanismo e dezenas de outras tradições protestantes.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1562–1598 d.C.</div>
+        <div class="tl-title">Guerras Huguenotes — França em Chamas</div>
+        <div class="tl-desc">Oito guerras civis religiosas na França entre católicos e protestantes (huguenotes). A Noite de São Bartolomeu (1572) resulta no massacre de 5.000-30.000 protestantes. O Édito de Nantes (1598) traz paz temporária.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1618–1648 d.C.</div>
+        <div class="tl-title">Guerra dos Trinta Anos — O Maior Conflito Religioso Europeu</div>
+        <div class="tl-desc">A guerra mais devastadora da Europa até as Guerras Mundiais. Começa como conflito religioso entre católicos e protestantes, torna-se guerra política. A Paz de Vestfália (1648) estabelece o princípio da soberania estatal e inicia a era secular.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1789 d.C.</div>
+        <div class="tl-title">Revolução Francesa — Nascimento do Secularismo</div>
+        <div class="tl-desc">A Revolução Francesa derruba a monarquia e a Igreja como instituições de poder. A laicidade torna-se princípio constitucional. O secularismo como ideologia política se espalha pela Europa e pelo mundo.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1910 d.C.</div>
+        <div class="tl-title">Conferência de Edimburgo — Nascimento do Ecumenismo</div>
+        <div class="tl-desc">A Conferência Missionária Mundial de Edimburgo marca o início do Movimento Ecumênico moderno. Em 1948, o Conselho Mundial de Igrejas é fundado em Amsterdã. O Concílio Vaticano II (1962-65) abre a Igreja Católica ao diálogo ecumênico.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2001–hoje</div>
+        <div class="tl-title">Fundamentalismo e Perseguição no Século XXI</div>
+        <div class="tl-desc">Os ataques de 11 de setembro intensificam as tensões entre o Ocidente cristão e o mundo islâmico. O Estado Islâmico (ISIS) persegue cristãos no Oriente Médio. Hoje, 360 milhões de cristãos vivem em países com alto nível de perseguição.</div>
+      </div>
+    </div>
+
+    <h2>📊 Panorama dos Conflitos por Região</h2>
+    <table>
+      <tr>
+        <th>Região</th>
+        <th>Conflito Principal</th>
+        <th>Período</th>
+        <th>Impacto na Igreja</th>
+      </tr>
+      <tr>
+        <td>Europa Ocidental</td>
+        <td>Reforma Protestante e Guerras de Religião</td>
+        <td>1517–1648</td>
+        <td>Fragmentação denominacional, secularismo</td>
+      </tr>
+      <tr>
+        <td>Europa Oriental</td>
+        <td>Cisma do Oriente, Império Otomano</td>
+        <td>1054–1923</td>
+        <td>Divisão Católico-Ortodoxa, perseguição islâmica</td>
+      </tr>
+      <tr>
+        <td>Oriente Médio</td>
+        <td>Cruzadas, Conquista Árabe, ISIS</td>
+        <td>632–hoje</td>
+        <td>Declínio do Cristianismo Oriental, êxodo</td>
+      </tr>
+      <tr>
+        <td>África do Norte</td>
+        <td>Islamização, perseguição atual</td>
+        <td>Séc. VII–hoje</td>
+        <td>Desaparecimento das antigas igrejas</td>
+      </tr>
+      <tr>
+        <td>América Latina</td>
+        <td>Conquista espanhola, conflitos sociais</td>
+        <td>1492–hoje</td>
+        <td>Sincretismo, violência contra indígenas</td>
+      </tr>
+      <tr>
+        <td>Ásia (China, Coreia do Norte)</td>
+        <td>Comunismo ateu, perseguição estatal</td>
+        <td>Séc. XX–hoje</td>
+        <td>Igreja perseguida e crescente</td>
+      </tr>
+      <tr>
+        <td>África Subsaariana</td>
+        <td>Boko Haram, Al-Shabaab, conflitos tribais</td>
+        <td>Séc. XX–hoje</td>
+        <td>Martírio, deslocamento, crescimento da fé</td>
+      </tr>
+    </table>
+
+    <div class="reflexao-box">
+      <h3>🕊️ Reflexão Teológica: Conflito e Reconciliação</h3>
+      <p>O apóstolo Paulo afirma que Deus "reconciliou consigo mesmo todas as coisas, quer as que estão na terra, quer as que estão nos céus, fazendo a paz pelo sangue da sua cruz" (Cl 1:20). Esta reconciliação cósmica é o fundamento da esperança cristã diante dos conflitos religiosos. Os conflitos são reais, as feridas são profundas, as divisões são históricas — mas a reconciliação em Cristo é mais profunda que qualquer divisão humana.</p>
+      <p>A oração sacerdotal de Jesus em João 17 — "para que todos sejam um, como tu, ó Pai, és em mim, e eu em ti; que também eles sejam um em nós, para que o mundo creia que tu me enviaste" — revela que a unidade da Igreja não é apenas um ideal eclesiástico, mas um testemunho missionário. A divisão da Igreja enfraquece o testemunho do Evangelho; a unidade da Igreja o fortalece.</p>
+      <p>Estudar os conflitos religiosos com honestidade histórica é um ato de humildade e esperança. Humildade: reconhecer que a Igreja cometeu erros graves em nome de Cristo. Esperança: crer que o Espírito Santo pode curar feridas históricas e construir pontes onde havia muros. O Bloco 11 é um convite a esta jornada de honestidade, humildade e esperança.</p>
+    </div>
+  </div>
+</body>
+</html>
