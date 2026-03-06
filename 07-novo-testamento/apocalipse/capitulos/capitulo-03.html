@@ -3,153 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apocalipse 3 — Capítulo 3 · 365 de Graça & Adoração</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <title>Apocalipse 3 — As 7 Igrejas (Parte 2) | 365 de Graça & Adoração</title>
+  <link rel="icon" href="/favicon.ico">
   <style>
-    body { background: #0f172a; color: #e2e8f0; font-family: "Segoe UI", sans-serif; margin: 0; padding: 0; }
-    .topbar { background: rgba(15,23,42,0.97); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0 24px; position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; height: 56px; flex-wrap: wrap; gap: 8px; }
-    .topbar a { color: #94a3b8; text-decoration: none; font-size: 0.82rem; font-weight: 600; transition: color 0.2s; }
-    .topbar a:hover { color: #f87171; }
-    .wrap { max-width: 860px; margin: 0 auto; padding: 48px 24px 100px; }
-    .hero { background: linear-gradient(135deg, #f8717118 0%, rgba(0,0,0,0.6) 100%); border: 1px solid #f8717133; border-radius: 20px; padding: 48px 36px; margin-bottom: 40px; text-align: center; }
-    .hero .tag { display: inline-block; background: #f8717122; border: 1px solid #f8717144; color: #f87171; font-size: 0.78rem; font-weight: 800; padding: 4px 16px; border-radius: 999px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
-    .hero h1 { font-size: 2.2rem; font-weight: 900; color: #f87171; margin: 0 0 10px; line-height: 1.2; }
-    .hero .sub { color: #94a3b8; font-size: 0.95rem; line-height: 1.7; max-width: 600px; margin: 0 auto 20px; }
-    .hero blockquote { background: #f8717111; border-left: 4px solid #f87171; border-radius: 8px; padding: 14px 22px; max-width: 620px; margin: 0 auto; font-style: italic; color: #e2e8f0; font-size: 0.95rem; line-height: 1.75; }
-    .section-block { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 28px 32px; margin-bottom: 28px; }
-    .section-block h2 { font-size: 1.15rem; font-weight: 800; color: #f87171; margin: 0 0 16px; padding-bottom: 10px; border-bottom: 1px solid #f8717122; }
-    .section-block h3 { font-size: 1rem; font-weight: 700; color: #f1f5f9; margin: 20px 0 10px; }
-    .section-block p { color: #94a3b8; line-height: 1.8; margin: 0 0 14px; font-size: 0.93rem; }
-    .versiculo-box { background: #f871710d; border: 1px solid #f8717122; border-radius: 10px; padding: 16px 20px; margin: 16px 0; }
-    .versiculo-ref { font-size: 0.78rem; font-weight: 800; color: #f87171; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
-    .versiculo-texto { font-style: italic; color: #e2e8f0; line-height: 1.75; font-size: 0.95rem; }
-    .vocab-item { background: rgba(255,255,255,0.03); border-radius: 10px; padding: 14px 18px; margin-bottom: 12px; border-left: 3px solid #f87171; }
-    .vocab-termo { font-weight: 800; color: #f87171; font-size: 0.95rem; }
-    .vocab-def { color: #94a3b8; font-size: 0.88rem; line-height: 1.7; margin-top: 6px; }
-    .nav-caps { display: flex; justify-content: space-between; align-items: center; margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); }
-    .nav-caps a { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.10); color: #94a3b8; padding: 10px 20px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 0.88rem; transition: all 0.2s; }
-    .nav-caps a:hover { background: #f8717122; border-color: #f8717144; color: #f87171; }
-    .nav-caps .center { background: #f8717115; border-color: #f8717133; color: #f87171; }
-  </style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0f172a; color: #e2e8f0; font-family: 'Georgia', serif; line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    .topbar { background: rgba(15,23,42,0.97); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
+    .topbar .inner { max-width: 900px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .topbar a { font-size: 0.85rem; color: #94a3b8; font-weight: 600; transition: color 0.2s; }
+    .topbar a:hover { color: #a855f7; }
+    .hero { background: linear-gradient(135deg, #0f172a 0%, #0d001a 50%, #0f172a 100%); padding: 64px 24px 48px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .tag { display: inline-block; background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.25); color: #a855f7; font-size: 0.72rem; font-weight: 800; padding: 4px 14px; border-radius: 999px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+    .hero h1 { font-size: 2.4rem; font-weight: 900; color: #f1f5f9; margin-bottom: 12px; line-height: 1.2; }
+    .hero .ref { font-size: 0.88rem; color: #64748b; margin-bottom: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+    .hero blockquote { font-style: italic; color: #cbd5e1; font-size: 1rem; border-left: 3px solid #a855f7; padding-left: 20px; max-width: 600px; margin: 0 auto; text-align: left; }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
+    .section-block { margin-bottom: 40px; }
+    .section-block h2 { font-size: 1.3rem; font-weight: 800; color: #f1f5f9; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .section-block p { color: #94a3b8; font-size: 0.95rem; line-height: 1.85; margin-bottom: 16px; }
+    .versiculo-bloco { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-left: 3px solid #a855f7; border-radius: 0 12px 12px 0; padding: 18px 20px; margin-bottom: 16px; }
+    .ref-v { font-size: 0.8rem; font-weight: 800; color: #a855f7; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .texto-v { font-style: italic; color: #cbd5e1; font-size: 0.95rem; margin-bottom: 10px; line-height: 1.7; }
+    .analise-v { color: #94a3b8; font-size: 0.9rem; line-height: 1.8; }
+    .igreja-card { background: rgba(168,85,247,0.05); border: 1px solid rgba(168,85,247,0.25); border-radius: 14px; padding: 24px; margin-bottom: 24px; }
+    .igreja-nome { font-size: 1.2rem; font-weight: 900; color: #a855f7; margin-bottom: 4px; }
+    .igreja-ref { font-size: 0.78rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 14px; }
+    .igreja-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+    @media (max-width: 600px) { .igreja-grid { grid-template-columns: 1fr; } }
+    .ig-item { background: rgba(255,255,255,0.02); border-radius: 8px; padding: 10px 14px; }
+    .ig-label { font-size: 0.72rem; font-weight: 800; color: #a855f7; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .ig-val { font-size: 0.88rem; color: #cbd5e1; line-height: 1.6; }
+    .ig-analise { font-size: 0.9rem; color: #94a3b8; line-height: 1.8; }
+    .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin-top: 16px; }
+    .vocab-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 14px 16px; }
+    .termo { font-size: 1.1rem; font-weight: 800; color: #a855f7; font-family: 'Georgia', serif; }
+    .transl { font-size: 0.78rem; color: #64748b; font-style: italic; margin: 2px 0 6px; }
+    .def { font-size: 0.85rem; color: #94a3b8; line-height: 1.65; }
+    .nav-cap { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.07); }
+    .nav-cap a { background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.25); color: #a855f7; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-size: 0.88rem; font-weight: 700; transition: all 0.2s; }
+    .nav-cap a:hover { background: rgba(168,85,247,0.2); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.87rem; margin: 20px 0 32px; }
+    th { background: rgba(168,85,247,0.1); color: #a855f7; padding: 10px 14px; text-align: left; font-weight: 700; border-bottom: 1px solid rgba(168,85,247,0.25); }
+    td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+</style>
 </head>
 <body>
-  <div class="topbar">
-    <a href="/07-novo-testamento/apocalipse">← Apocalipse</a>
-    <span style="color:#475569">Apocalipse · Capítulo 3 de 22</span>
-    <a href="/07-novo-testamento">Novo Testamento</a>
+  <div class="topbar"><div class="inner">
+    <a href="/07-novo-testamento/apocalipse/index.html">← Apocalipse</a>
+    <a href="/07-novo-testamento/index.html">Novo Testamento</a>
+  </div></div>
+  <div class="hero">
+    <span class="tag">🔥 Apocalipse 3 · As 7 Igrejas</span>
+    <h1>Apocalipse 3 — As 7 Igrejas (Parte 2)</h1>
+    <div class="ref">Apocalipse 3:1-22 · João · c. 95-96 d.C. · Ilha de Patmos</div>
+    <blockquote>Eis que estou à porta e bato; se alguém ouvir a minha voz e abrir a porta, entrarei em sua casa e cearei com ele, e ele comigo. — Apocalipse 3:20</blockquote>
   </div>
-
   <div class="wrap">
-    <div class="hero">
-      <span class="tag">Apocalipse · Capítulo 3 de 22</span>
-      <h1>Capítulo 3</h1>
-      <p class="sub">Análise exegética aprofundada de Apocalipse 3</p>
-    </div>
-
-    <!-- CONTEXTO HISTÓRICO -->
     <div class="section-block">
-      <h2>📜 Contexto Histórico e Literário</h2>
-      <h3>Patmos, ~95-96 d.C. — A Perseguição de Domiciano</h3>
-      <p>João escreve o Apocalipse do exílio na ilha de Patmos, no mar Egeu, durante a perseguição do imperador Domiciano (81-96 d.C.). Domiciano exigia ser chamado 'Senhor e Deus' (Dominus et Deus) — um conflito direto com a confissão cristã de que Jesus é Senhor. As sete igrejas da Ásia (Ap 2-3) enfrentavam pressão para participar do culto imperial, das guildas comerciais ligadas a deuses pagãos e da hostilidade das sinagogas judaicas.</p>
-      <h3>O Gênero Literário — Apocalipse, Profecia e Carta</h3>
-      <p>O Apocalipse é simultaneamente três gêneros: (1) Apocalipse (apokalypsis — revelação) — literatura de visões simbólicas que revela realidades celestiais e futuras; (2) Profecia — uma palavra de Deus para a situação presente das igrejas; (3) Carta circular — endereçada às sete igrejas da Ásia. O gênero apocalíptico usa linguagem simbólica, numérica e imagética — os números, cores e imagens têm significados convencionais que o leitor do século I reconheceria.</p>
-      <h3>A Mensagem Central — O Cordeiro Vence</h3>
-      <p>A mensagem central do Apocalipse é: o Cordeiro que foi morto venceu e está vencendo. As igrejas perseguidas precisam de uma perspectiva celestial para perseverar. João revela que por trás das perseguições terrenas há uma guerra cósmica entre Deus e Satanás — mas o resultado já está determinado. Cristo ressurreto reina sobre os reis da terra (Ap 1:5). O convite final é: 'Vem, Senhor Jesus!' (Ap 22:20).</p>
+      <h2>🕯️ As Três Últimas Igrejas</h2>
+      
+    <div class="igreja-card">
+      <div class="igreja-nome">Sardes — A Igreja que Parece Viva mas está Morta</div>
+      <div class="igreja-ref">Apocalipse 3:1-6</div>
+      <p style="color:#94a3b8;font-size:0.9rem;line-height:1.8;margin-bottom:14px;">Sardes (atual Sart, Turquia) foi uma das cidades mais ricas e poderosas do mundo antigo — capital do reino da Lídia, onde o rei Creso acumulou lendária riqueza. A cidade tinha uma história de complacência: foi tomada de surpresa duas vezes (por Ciro em 547 a.C. e por Antíoco III em 214 a.C.) porque seus guardas adormeceram. Esta história de complacência é o pano de fundo da carta.</p>
+      <div class="igreja-grid">
+        <div class="ig-item"><div class="ig-label">✅ Elogio</div><div class="ig-val">Tem alguns poucos nomes que não mancharam as suas vestes.</div></div>
+        <div class="ig-item"><div class="ig-label">⚠️ Crítica</div><div class="ig-val">Tem nome de que vive, mas está morta. As obras não são perfeitas diante de Deus.</div></div>
+        <div class="ig-item"><div class="ig-label">📣 Chamado</div><div class="ig-val">Sê vigilante, confirma o que resta e que estava para morrer; lembra, guarda e arrepende-te.</div></div>
+        <div class="ig-item"><div class="ig-label">🏆 Promessa</div><div class="ig-val">Vestiduras brancas; nome não apagado do livro da vida; confissão diante do Pai.</div></div>
+      </div>
+      <div class="ig-analise">Sardes é a Igreja com reputação de vida mas realidade de morte — a Igreja que vive de sua glória passada. Não há elogio substancial, não há perseguição externa, não há falsa doutrina mencionada — apenas a morte espiritual que se instalou silenciosamente. A metáfora da vigilância ecoa a história da cidade: Sardes foi tomada porque seus guardas adormeceram. Cristo usa a mesma imagem: 'serei como um ladrão' — virei de surpresa se não houver vigilância. Os 'poucos nomes que não mancharam as suas vestes' (<em>oligous onomata en Sardesi hoi ouk emolunan ta himatia autōn</em>) são os remanescentes fiéis dentro de uma Igreja majoritariamente morta. A promessa das 'vestiduras brancas' (<em>en himatiois leukois</em>) contrasta com as vestes manchadas da maioria — pureza e vitória para os que perseveram.</div>
     </div>
-
-    <!-- ANÁLISE VERSÍCULO POR VERSÍCULO -->
+    <div class="igreja-card">
+      <div class="igreja-nome">Filadélfia — A Igreja da Porta Aberta</div>
+      <div class="igreja-ref">Apocalipse 3:7-13</div>
+      <p style="color:#94a3b8;font-size:0.9rem;line-height:1.8;margin-bottom:14px;">Filadélfia (atual Alaşehir, Turquia) era uma cidade jovem, fundada por Átalo II Filadelfo (189-138 a.C.) como porta de entrada para a Ásia Central. Era uma cidade missionária por natureza — sua posição geográfica a tornava um ponto de difusão da cultura grega para o interior. A cidade sofria frequentes terremotos — o grande terremoto de 17 d.C. destruiu a cidade e a região.</p>
+      <div class="igreja-grid">
+        <div class="ig-item"><div class="ig-label">✅ Elogio</div><div class="ig-val">Tem pouca força, mas guardou a palavra de Cristo e não negou o seu nome.</div></div>
+        <div class="ig-item"><div class="ig-label">⚠️ Crítica</div><div class="ig-val">Nenhuma crítica. Filadélfia é a segunda Igreja sem repreensão (junto com Esmirna).</div></div>
+        <div class="ig-item"><div class="ig-label">📣 Chamado</div><div class="ig-val">Guardar o que tem.</div></div>
+        <div class="ig-item"><div class="ig-label">🏆 Promessa</div><div class="ig-val">Porta aberta que ninguém pode fechar; proteção na hora da provação; coluna no templo de Deus; nome novo.</div></div>
+      </div>
+      <div class="ig-analise">Filadélfia é a Igreja fraca que é fiel — 'tens pouca força' (<em>mikran echeis dynamin</em>), mas guardou a Palavra e não negou o nome de Cristo. A 'porta aberta' (<em>thyran ēneōgmenēn</em>) é provavelmente uma oportunidade missionária — Cristo abre portas que ninguém pode fechar. A promessa de proteção na 'hora da provação' (<em>tēs hōras tou peirasmou</em>) é debatida: refere-se à proteção durante a tribulação ou ao arrebatamento antes dela? O texto diz 'guardar fora da hora da provação' (<em>tērēsō ek tēs hōras</em>) — a preposição <em>ek</em> pode indicar proteção dentro ou remoção antes. A promessa de se tornar 'coluna no templo de Deus' (<em>stylon en tō naō tou Theou mou</em>) é especialmente significativa para uma cidade que sofreu terremotos — as colunas eram o que permanecia de pé após os tremores.</div>
+    </div>
+    <div class="igreja-card">
+      <div class="igreja-nome">Laodiceia — A Igreja Morna</div>
+      <div class="igreja-ref">Apocalipse 3:14-22</div>
+      <p style="color:#94a3b8;font-size:0.9rem;line-height:1.8;margin-bottom:14px;">Laodiceia (atual Denizli, Turquia) era uma das cidades mais ricas da Ásia Menor — um centro bancário, produtor de lã preta e de colírio para os olhos. Após o terremoto de 60 d.C., a cidade recusou a ajuda imperial e se reconstruiu com seus próprios recursos. A cidade não tinha fonte de água própria — recebia água quente de Hierápolis (via aqueduto) e água fria de Colossos; a água chegava morna.</p>
+      <div class="igreja-grid">
+        <div class="ig-item"><div class="ig-label">✅ Elogio</div><div class="ig-val">Nenhum elogio.</div></div>
+        <div class="ig-item"><div class="ig-label">⚠️ Crítica</div><div class="ig-val">É morna — não fria nem quente. Diz 'sou rico, enriqueci e não tenho necessidade de coisa alguma', mas é miserável, pobre, cega e nua.</div></div>
+        <div class="ig-item"><div class="ig-label">📣 Chamado</div><div class="ig-val">Comprar ouro refinado, vestiduras brancas e colírio; ser zelosa e arrepender-se.</div></div>
+        <div class="ig-item"><div class="ig-label">🏆 Promessa</div><div class="ig-val">Cristo jantará com quem abrir a porta; sentar com Cristo no seu trono.</div></div>
+      </div>
+      <div class="ig-analise">Laodiceia é a Igreja autossuficiente e morna — a mais severamente repreendida das sete. A metáfora da água morna é poderosa: a água quente de Hierápolis era medicinal; a água fria de Colossos era refrescante; a água morna que chegava a Laodiceia era inútil e provocava náusea. Uma Igreja morna não é nem curativa nem refrescante — é inútil e nauseante. O diagnóstico de Cristo inverte o autodiagnóstico da Igreja: ela se acha rica e sem necessidade, mas Cristo a vê como miserável, pobre, cega e nua. As três curas correspondem às três glórias de Laodiceia: ouro refinado (em vez da riqueza bancária), vestiduras brancas (em vez da lã preta famosa), colírio (em vez do colírio medicinal produzido localmente). A imagem de Cristo batendo à porta (v. 20) é frequentemente usada evangelisticamente, mas no contexto é uma mensagem à Igreja — Cristo está do lado de fora de sua própria Igreja, pedindo para entrar.</div>
+    </div>
+    </div>
     <div class="section-block">
-      <h2>📖 Análise Versículo por Versículo</h2>
-
-      <h3>Versículos de Abertura — Apocalipse 3:1-5</h3>
-      <div class="versiculo-box">
-        <div class="versiculo-ref">Apocalipse 3:1-5</div>
-        <div class="versiculo-texto">A abertura deste capítulo estabelece o tema central que será desenvolvido ao longo de toda a seção. O apóstolo introduz os conceitos fundamentais que serão aprofundados nos versículos seguintes, conectando a revelação divina com a experiência prática da comunidade de fé.</div>
+      <h2>📚 Vocabulário Essencial</h2>
+      <div class="vocab-grid">
+        <div class="vocab-card"><div class="termo">χλιαρός</div><div class="transl">chliaros</div><div class="def">Morno, tepido. A temperatura da água que chegava a Laodiceia — nem quente (medicinal) nem fria (refrescante), mas inútil e nauseante. Descreve a Igreja autossuficiente e sem ardor espiritual.</div></div>
+        <div class="vocab-card"><div class="termo">θύρα</div><div class="transl": "thyra</div><div class="def">Porta. Em Ap 3:20, Cristo está à porta da Igreja batendo — imagem da Igreja que excluiu Cristo de sua própria vida. A porta é aberta por dentro, por escolha individual.</div></div>
+        <div class="vocab-card"><div class="termo">στῦλος</div><div class="transl">stylos</div><div class="def">Coluna. A promessa a Filadélfia — ser coluna no templo de Deus. Para uma cidade que sofreu terremotos, as colunas representavam permanência e estabilidade.</div></div>
+        <div class="vocab-card"><div class="termo">βιβλίον ζωῆς</div><div class="transl">biblion zōēs</div><div class="def">Livro da vida. O registro dos que pertencem a Deus. A promessa a Sardes — o nome do vencedor não será apagado do livro da vida.</div></div>
       </div>
-      <p>A análise exegética destes versículos iniciais revela a profundidade teológica do pensamento apostólico. O vocabulário grego utilizado carrega nuances semânticas que a tradução portuguesa nem sempre consegue capturar completamente. O contexto histórico e cultural do século I ilumina o significado original das palavras e conceitos apresentados.</p>
-      <p>O autor estabelece aqui os fundamentos sobre os quais toda a argumentação do capítulo será construída. Cada palavra é escolhida com precisão teológica, refletindo tanto a tradição judaica do Antigo Testamento quanto a nova realidade inaugurada pela morte e ressurreição de Jesus Cristo.</p>
-
-      <h3>Desenvolvimento Central — Apocalipse 3:6-12</h3>
-      <div class="versiculo-box">
-        <div class="versiculo-ref">Apocalipse 3:6-12</div>
-        <div class="versiculo-texto">O desenvolvimento central do capítulo aprofunda os temas introduzidos na abertura, apresentando a argumentação teológica com rigor e clareza. O autor utiliza recursos retóricos característicos da literatura epistolar do século I para convencer e transformar seus leitores.</div>
-      </div>
-      <p>Esta seção central é o coração teológico do capítulo. Aqui o apóstolo desenvolve sua argumentação principal, respondendo às questões e desafios que a comunidade enfrentava. A lógica do texto segue um padrão de afirmação, fundamentação e aplicação que é característico do estilo paulino e apostólico.</p>
-      <p>O uso do Antigo Testamento nesta seção é particularmente significativo. O autor cita, alude ou ecoa textos da Lei, dos Profetas e dos Escritos para demonstrar que a mensagem cristã não é uma novidade radical, mas o cumprimento das promessas feitas a Israel ao longo de séculos de revelação progressiva.</p>
-
-      <h3>Aplicação Prática — Apocalipse 3:13-20</h3>
-      <div class="versiculo-box">
-        <div class="versiculo-ref">Apocalipse 3:13-20</div>
-        <div class="versiculo-texto">A seção prática do capítulo traduz as verdades teológicas em imperativos concretos para a vida cristã. O autor não separa doutrina de prática — a teologia correta deve produzir vida correta. Esta integração entre crença e comportamento é uma das marcas distintivas da ética cristã do Novo Testamento.</div>
-      </div>
-      <p>A transição da teologia para a ética neste capítulo segue o padrão característico das epístolas do Novo Testamento: o indicativo (o que Deus fez em Cristo) fundamenta o imperativo (como devemos viver em resposta). A vida cristã não é esforço para ganhar o favor de Deus, mas resposta grata ao favor já concedido em Cristo.</p>
-      <p>As instruções práticas aqui apresentadas são ao mesmo tempo culturalmente específicas e universalmente aplicáveis. O intérprete deve distinguir entre o princípio eterno e a aplicação histórica específica, perguntando: qual é a verdade teológica permanente que está sendo expressa nesta instrução particular?</p>
-
-      <h3>Conclusão do Capítulo — Apocalipse 3:21-fim</h3>
-      <div class="versiculo-box">
-        <div class="versiculo-ref">Apocalipse 3:21-fim</div>
-        <div class="versiculo-texto">A conclusão do capítulo recapitula os temas principais e aponta para o desenvolvimento que virá nos capítulos seguintes. O autor encerra com uma nota de esperança, louvor ou exortação que resume o espírito de toda a seção.</div>
-      </div>
-      <p>A conclusão deste capítulo não é apenas um encerramento formal, mas uma síntese teológica que integra todos os temas desenvolvidos anteriormente. O autor demonstra que cada parte do capítulo contribui para um argumento coerente e progressivo que culmina nesta conclusão.</p>
     </div>
-
-    <!-- VOCABULÁRIO GREGO -->
     <div class="section-block">
-      <h2>🔤 Vocabulário Grego — Termos-Chave</h2>
-
-      <div class="vocab-item">
-        <div class="vocab-termo">Charis (χάρις) — Graça</div>
-        <div class="vocab-def">O termo central do evangelho — a favor imerecido de Deus. Diferente do conceito greco-romano de charis (favor recíproco entre iguais), a graça bíblica é unilateral: Deus age a favor de quem não merece e não pode retribuir. Paulo usa este termo mais de 100 vezes em suas cartas, tornando-o o conceito-chave de sua teologia.</div>
-      </div>
-
-      <div class="vocab-item">
-        <div class="vocab-termo">Pistis (πίστις) — Fé/Confiança</div>
-        <div class="vocab-def">Fé no NT não é crença intelectual abstrata, mas confiança pessoal e comprometida. O substantivo pistis e o verbo pisteuō (crer) implicam entrega e lealdade, não apenas assentimento mental. A fé que salva é a fé que confia em Cristo como Senhor e Salvador — uma fé que necessariamente produz obras (Tg 2:17).</div>
-      </div>
-
-      <div class="vocab-item">
-        <div class="vocab-termo">Dikaiosynē (δικαιοσύνη) — Justiça/Retidão</div>
-        <div class="vocab-def">A justiça de Deus é tanto um atributo divino (Deus é justo) quanto um dom divino (Deus justifica o pecador). A justificação (dikaiōsis) é o ato forense pelo qual Deus declara o pecador justo com base na obra de Cristo — não com base nas obras humanas. Este conceito é central para a teologia paulina e para a Reforma Protestante.</div>
-      </div>
-
-      <div class="vocab-item">
-        <div class="vocab-termo">Agapē (ἀγάπη) — Amor</div>
-        <div class="vocab-def">O NT usa predominantemente agapē (não eros ou philia) para descrever o amor de Deus e o amor cristão. Agapē é amor que se doa sem esperar retorno — amor que age em favor do outro independentemente de mérito ou reciprocidade. É o amor que Deus demonstrou ao enviar seu Filho (Jo 3:16) e que os cristãos devem praticar uns pelos outros (Jo 13:34-35).</div>
-      </div>
+      <h2>🏛️ Aplicação Contemporânea das 7 Cartas</h2>
+      <p>As sete igrejas são um espelho para a Igreja em todas as épocas. Cada comunidade cristã pode se reconhecer em uma ou mais destas igrejas: a ortodoxia sem amor de Éfeso, a fidelidade na pobreza de Esmirna, a tolerância do erro de Pérgamo e Tiatira, a reputação sem realidade de Sardes, a fidelidade fraca de Filadélfia, a autossuficiência morna de Laodiceia.</p>
+      <p>A mensagem de Laodiceia é talvez a mais urgente para a Igreja contemporânea ocidental. A prosperidade material pode criar a ilusão de autossuficiência espiritual — "sou rico, enriqueci e não tenho necessidade de coisa alguma" (3:17). A Igreja que tem belos edifícios, programas eficientes, orçamentos equilibrados e boa reputação pode estar, aos olhos de Cristo, miserável, pobre, cega e nua. O remédio não é mais programas ou recursos — é abrir a porta para Cristo.</p>
     </div>
-
-    <!-- TEOLOGIA SISTEMÁTICA -->
-    <div class="section-block">
-      <h2>🏛️ Teologia Sistemática</h2>
-      <h3>Contribuição à Cristologia</h3>
-      <p>Este capítulo contribui significativamente para a compreensão da pessoa e obra de Jesus Cristo. A cristologia do Novo Testamento é progressiva — cada livro e cada capítulo adiciona nuances à compreensão de quem Jesus é e o que ele fez. Este capítulo em particular ilumina aspectos da natureza divina e humana de Cristo, de seu ministério sacerdotal, profético e real, e de sua obra redentora.</p>
-      <h3>Contribuição à Soteriologia</h3>
-      <p>A soteriologia (doutrina da salvação) recebe contribuições importantes neste capítulo. Os temas da eleição, chamado, justificação, santificação e glorificação são abordados direta ou indiretamente. A salvação bíblica é apresentada como obra exclusiva de Deus — iniciada na eternidade, realizada na história e consumada na escatologia.</p>
-      <h3>Contribuição à Eclesiologia</h3>
-      <p>A eclesiologia (doutrina da Igreja) é enriquecida pelas instruções e reflexões deste capítulo. A Igreja do Novo Testamento é apresentada como comunidade de crentes unidos em Cristo, dotados pelo Espírito, chamados à missão e à santidade. As tensões e desafios da Igreja primitiva iluminam os desafios perenes da comunidade cristã em qualquer época.</p>
-    </div>
-
-    <!-- CONEXÃO COM O AT -->
-    <div class="section-block">
-      <h2>🔗 Conexão com o Antigo Testamento</h2>
-      <p>O Novo Testamento não pode ser compreendido sem o Antigo Testamento — cada livro, cada capítulo, cada versículo do NT está enraizado na revelação progressiva do AT. Este capítulo cita, alude ou ecoa múltiplos textos do AT, demonstrando que a mensagem cristã é o cumprimento das promessas feitas a Abraão, Moisés, Davi e os profetas.</p>
-      <p>A hermenêutica tipológica é particularmente importante aqui: pessoas, eventos e instituições do AT funcionam como tipos (typos) que apontam para realidades maiores no NT. Jesus é o novo Adão, o novo Moisés, o novo Davi, o novo Templo, o novo Sacrifício — cada tipo do AT encontra seu cumprimento (antítipo) em Cristo.</p>
-      <p>A leitura cristológica do AT não é uma imposição externa, mas uma interpretação que o próprio Jesus autorizou: "Escrutinais as Escrituras, porque vós cuidais ter nelas a vida eterna; e são elas que testificam de mim" (Jo 5:39). Os apóstolos seguiram este método hermenêutico ao interpretar o AT à luz de Cristo.</p>
-    </div>
-
-    <!-- APLICAÇÃO CONTEMPORÂNEA -->
-    <div class="section-block">
-      <h2>🌉 Aplicação Contemporânea</h2>
-      <p>As verdades reveladas neste capítulo transcendem o contexto histórico do século I e falam diretamente à condição humana em qualquer época. A aplicação contemporânea não é uma adição externa ao texto, mas o desdobramento natural das verdades eternas que o texto contém. O Espírito Santo que inspirou a Escritura também ilumina o leitor para compreender e aplicar sua mensagem.</p>
-      <p>Para o crente individual, este capítulo oferece fundamentos sólidos para a fé, esperança e amor. As promessas de Deus aqui reveladas são tão válidas hoje quanto eram no século I — porque o Deus que as fez é imutável, e as promessas são fundamentadas na obra acabada de Cristo, não na fidelidade humana.</p>
-      <p>Para a comunidade da Igreja, este capítulo oferece orientação para a vida em comunidade, o exercício dos dons, a resolução de conflitos e a missão no mundo. A Igreja que leva a sério as instruções apostólicas será uma comunidade que reflete o caráter de Cristo e atrai os que estão fora para o reino de Deus.</p>
-    </div>
-
-    <!-- NAVEGAÇÃO -->
-    <div class="nav-caps">
-      <a href="/07-novo-testamento/apocalipse/capitulos/capitulo-02">← Cap. 2</a>
-      <a class="center" href="/07-novo-testamento/apocalipse">Índice de Apocalipse</a>
-      <a href="/07-novo-testamento/apocalipse/capitulos/capitulo-04">Cap. 4 →</a>
+    <div class="nav-cap">
+      <a href="/07-novo-testamento/apocalipse/capitulos/capitulo-02.html">← Apocalipse 2</a>
+      <a href="/07-novo-testamento/apocalipse/index.html">📋 Índice</a>
+      <a href="/07-novo-testamento/apocalipse/capitulos/capitulo-04.html">Apocalipse 4 →</a>
     </div>
   </div>
 </body>

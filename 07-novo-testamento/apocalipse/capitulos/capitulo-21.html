@@ -3,153 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apocalipse 21 — A Nova Jerusalém — Todas as Coisas Novas · 365 de Graça & Adoração</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <title>Apocalipse 21 — A Nova Jerusalém | 365 de Graça & Adoração</title>
+  <link rel="icon" href="/favicon.ico">
   <style>
-    body { background: #0f172a; color: #e2e8f0; font-family: "Segoe UI", sans-serif; margin: 0; padding: 0; }
-    .topbar { background: rgba(15,23,42,0.97); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0 24px; position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; height: 56px; flex-wrap: wrap; gap: 8px; }
-    .topbar a { color: #94a3b8; text-decoration: none; font-size: 0.82rem; font-weight: 600; transition: color 0.2s; }
-    .topbar a:hover { color: #f87171; }
-    .wrap { max-width: 860px; margin: 0 auto; padding: 48px 24px 100px; }
-    .hero { background: linear-gradient(135deg, #f8717118 0%, rgba(0,0,0,0.6) 100%); border: 1px solid #f8717133; border-radius: 20px; padding: 48px 36px; margin-bottom: 40px; text-align: center; }
-    .hero .tag { display: inline-block; background: #f8717122; border: 1px solid #f8717144; color: #f87171; font-size: 0.78rem; font-weight: 800; padding: 4px 16px; border-radius: 999px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
-    .hero h1 { font-size: 2.2rem; font-weight: 900; color: #f87171; margin: 0 0 10px; line-height: 1.2; }
-    .hero .sub { color: #94a3b8; font-size: 0.95rem; line-height: 1.7; max-width: 600px; margin: 0 auto 20px; }
-    .hero blockquote { background: #f8717111; border-left: 4px solid #f87171; border-radius: 8px; padding: 14px 22px; max-width: 620px; margin: 0 auto; font-style: italic; color: #e2e8f0; font-size: 0.95rem; line-height: 1.75; }
-    .section-block { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 28px 32px; margin-bottom: 28px; }
-    .section-block h2 { font-size: 1.15rem; font-weight: 800; color: #f87171; margin: 0 0 16px; padding-bottom: 10px; border-bottom: 1px solid #f8717122; }
-    .section-block h3 { font-size: 1rem; font-weight: 700; color: #f1f5f9; margin: 20px 0 10px; }
-    .section-block p { color: #94a3b8; line-height: 1.8; margin: 0 0 14px; font-size: 0.93rem; }
-    .versiculo-box { background: #f871710d; border: 1px solid #f8717122; border-radius: 10px; padding: 16px 20px; margin: 16px 0; }
-    .versiculo-ref { font-size: 0.78rem; font-weight: 800; color: #f87171; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
-    .versiculo-texto { font-style: italic; color: #e2e8f0; line-height: 1.75; font-size: 0.95rem; }
-    .vocab-item { background: rgba(255,255,255,0.03); border-radius: 10px; padding: 14px 18px; margin-bottom: 12px; border-left: 3px solid #f87171; }
-    .vocab-termo { font-weight: 800; color: #f87171; font-size: 0.95rem; }
-    .vocab-def { color: #94a3b8; font-size: 0.88rem; line-height: 1.7; margin-top: 6px; }
-    .nav-caps { display: flex; justify-content: space-between; align-items: center; margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); }
-    .nav-caps a { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.10); color: #94a3b8; padding: 10px 20px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 0.88rem; transition: all 0.2s; }
-    .nav-caps a:hover { background: #f8717122; border-color: #f8717144; color: #f87171; }
-    .nav-caps .center { background: #f8717115; border-color: #f8717133; color: #f87171; }
-  </style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0f172a; color: #e2e8f0; font-family: 'Georgia', serif; line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    .topbar { background: rgba(15,23,42,0.97); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
+    .topbar .inner { max-width: 900px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .topbar a { font-size: 0.85rem; color: #94a3b8; font-weight: 600; transition: color 0.2s; }
+    .topbar a:hover { color: #a855f7; }
+    .hero { background: linear-gradient(135deg, #0f172a 0%, #0d001a 50%, #0f172a 100%); padding: 64px 24px 48px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .tag { display: inline-block; background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.25); color: #a855f7; font-size: 0.72rem; font-weight: 800; padding: 4px 14px; border-radius: 999px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+    .hero h1 { font-size: 2.4rem; font-weight: 900; color: #f1f5f9; margin-bottom: 12px; line-height: 1.2; }
+    .hero .ref { font-size: 0.88rem; color: #64748b; margin-bottom: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+    .hero blockquote { font-style: italic; color: #cbd5e1; font-size: 1rem; border-left: 3px solid #a855f7; padding-left: 20px; max-width: 600px; margin: 0 auto; text-align: left; }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
+    .section-block { margin-bottom: 40px; }
+    .section-block h2 { font-size: 1.3rem; font-weight: 800; color: #f1f5f9; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .section-block p { color: #94a3b8; font-size: 0.95rem; line-height: 1.85; margin-bottom: 16px; }
+    .versiculo-bloco { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-left: 3px solid #a855f7; border-radius: 0 12px 12px 0; padding: 18px 20px; margin-bottom: 16px; }
+    .ref-v { font-size: 0.8rem; font-weight: 800; color: #a855f7; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .texto-v { font-style: italic; color: #cbd5e1; font-size: 0.95rem; margin-bottom: 10px; line-height: 1.7; }
+    .analise-v { color: #94a3b8; font-size: 0.9rem; line-height: 1.8; }
+    .igreja-card { background: rgba(168,85,247,0.05); border: 1px solid rgba(168,85,247,0.25); border-radius: 14px; padding: 24px; margin-bottom: 24px; }
+    .igreja-nome { font-size: 1.2rem; font-weight: 900; color: #a855f7; margin-bottom: 4px; }
+    .igreja-ref { font-size: 0.78rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 14px; }
+    .igreja-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+    @media (max-width: 600px) { .igreja-grid { grid-template-columns: 1fr; } }
+    .ig-item { background: rgba(255,255,255,0.02); border-radius: 8px; padding: 10px 14px; }
+    .ig-label { font-size: 0.72rem; font-weight: 800; color: #a855f7; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .ig-val { font-size: 0.88rem; color: #cbd5e1; line-height: 1.6; }
+    .ig-analise { font-size: 0.9rem; color: #94a3b8; line-height: 1.8; }
+    .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin-top: 16px; }
+    .vocab-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 14px 16px; }
+    .termo { font-size: 1.1rem; font-weight: 800; color: #a855f7; font-family: 'Georgia', serif; }
+    .transl { font-size: 0.78rem; color: #64748b; font-style: italic; margin: 2px 0 6px; }
+    .def { font-size: 0.85rem; color: #94a3b8; line-height: 1.65; }
+    .nav-cap { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.07); }
+    .nav-cap a { background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.25); color: #a855f7; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-size: 0.88rem; font-weight: 700; transition: all 0.2s; }
+    .nav-cap a:hover { background: rgba(168,85,247,0.2); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.87rem; margin: 20px 0 32px; }
+    th { background: rgba(168,85,247,0.1); color: #a855f7; padding: 10px 14px; text-align: left; font-weight: 700; border-bottom: 1px solid rgba(168,85,247,0.25); }
+    td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+</style>
 </head>
 <body>
-  <div class="topbar">
-    <a href="/07-novo-testamento/apocalipse">← Apocalipse</a>
-    <span style="color:#475569">Apocalipse · Capítulo 21 de 22</span>
-    <a href="/07-novo-testamento">Novo Testamento</a>
+  <div class="topbar"><div class="inner">
+    <a href="/07-novo-testamento/apocalipse/index.html">← Apocalipse</a>
+    <a href="/07-novo-testamento/index.html">Novo Testamento</a>
+  </div></div>
+  <div class="hero">
+    <span class="tag">🌟 Apocalipse 21 · A Nova Criação</span>
+    <h1>Apocalipse 21 — A Nova Jerusalém</h1>
+    <div class="ref">Apocalipse 21:1-27 · João · c. 95-96 d.C. · Ilha de Patmos</div>
+    <blockquote>E ouvi uma grande voz do trono, dizendo: Eis o tabernáculo de Deus com os homens; pois com eles habitará, e eles serão o seu povo, e o próprio Deus estará com eles. — Apocalipse 21:3</blockquote>
   </div>
-
   <div class="wrap">
-    <div class="hero">
-      <span class="tag">Apocalipse · Capítulo 21 de 22</span>
-      <h1>A Nova Jerusalém — Todas as Coisas Novas</h1>
-      <p class="sub">Eis que faço novas todas as coisas. A Nova Jerusalém descendo do céu — sem templo, sem sol, sem morte.</p>
-    </div>
-
-    <!-- CONTEXTO HISTÓRICO -->
     <div class="section-block">
-      <h2>📜 Contexto Histórico e Literário</h2>
-      <h3>Patmos, ~95-96 d.C. — A Perseguição de Domiciano</h3>
-      <p>João escreve o Apocalipse do exílio na ilha de Patmos, no mar Egeu, durante a perseguição do imperador Domiciano (81-96 d.C.). Domiciano exigia ser chamado 'Senhor e Deus' (Dominus et Deus) — um conflito direto com a confissão cristã de que Jesus é Senhor. As sete igrejas da Ásia (Ap 2-3) enfrentavam pressão para participar do culto imperial, das guildas comerciais ligadas a deuses pagãos e da hostilidade das sinagogas judaicas.</p>
-      <h3>O Gênero Literário — Apocalipse, Profecia e Carta</h3>
-      <p>O Apocalipse é simultaneamente três gêneros: (1) Apocalipse (apokalypsis — revelação) — literatura de visões simbólicas que revela realidades celestiais e futuras; (2) Profecia — uma palavra de Deus para a situação presente das igrejas; (3) Carta circular — endereçada às sete igrejas da Ásia. O gênero apocalíptico usa linguagem simbólica, numérica e imagética — os números, cores e imagens têm significados convencionais que o leitor do século I reconheceria.</p>
-      <h3>A Mensagem Central — O Cordeiro Vence</h3>
-      <p>A mensagem central do Apocalipse é: o Cordeiro que foi morto venceu e está vencendo. As igrejas perseguidas precisam de uma perspectiva celestial para perseverar. João revela que por trás das perseguições terrenas há uma guerra cósmica entre Deus e Satanás — mas o resultado já está determinado. Cristo ressurreto reina sobre os reis da terra (Ap 1:5). O convite final é: 'Vem, Senhor Jesus!' (Ap 22:20).</p>
+      <h2>📜 Contexto: O Clímax da Revelação</h2>
+      <p>Apocalipse 21 é o clímax de toda a narrativa bíblica — a consumação de tudo o que Deus prometeu desde o Éden. Após o julgamento do grande trono branco (cap. 20), João vê "um novo céu e uma nova terra" (<em>ouranon kainon kai gēn kainēn</em>) — a criação renovada e restaurada. A Nova Jerusalém descendo do céu é a imagem da habitação de Deus com a humanidade — o cumprimento definitivo do propósito da criação.</p>
+      <p>O capítulo 21 inverte as maldições do Éden: não mais morte (v. 4), não mais dor (v. 4), não mais maldição (22:3), não mais noite (v. 25), não mais mar (v. 1 — o mar era símbolo de caos e morte no mundo antigo). A Nova Jerusalém não é um lugar onde os salvos vão — é um lugar que desce do céu para a terra. A escatologia bíblica não é a fuga da terra para o céu, mas a renovação da terra pelo céu.</p>
     </div>
-
-    <!-- ANÁLISE VERSÍCULO POR VERSÍCULO -->
     <div class="section-block">
-      <h2>📖 Análise Versículo por Versículo</h2>
-
-      <h3>Versículos de Abertura — Apocalipse 21:1-5</h3>
-      <div class="versiculo-box">
-        <div class="versiculo-ref">Apocalipse 21:1-5</div>
-        <div class="versiculo-texto">A abertura deste capítulo estabelece o tema central que será desenvolvido ao longo de toda a seção. O apóstolo introduz os conceitos fundamentais que serão aprofundados nos versículos seguintes, conectando a revelação divina com a experiência prática da comunidade de fé.</div>
+      <h2>🔍 Análise Versículo por Versículo</h2>
+      <div class="versiculo-bloco">
+        <div class="ref-v">21:1-4 — Todas as Coisas Novas</div>
+        <div class="texto-v">"E vi um novo céu e uma nova terra; porque o primeiro céu e a primeira terra passaram, e o mar já não existe. E eu, João, vi a santa cidade, a nova Jerusalém, descer do céu da parte de Deus, adornada como uma noiva ataviada para o seu marido."</div>
+        <div class="analise-v">O "novo céu e nova terra" (<em>ouranon kainon kai gēn kainēn</em>) ecoa Isaías 65:17 e 66:22. O adjetivo "novo" (<em>kainos</em>) não significa "completamente diferente" (isso seria <em>neos</em>), mas "renovado, restaurado, de qualidade superior". A nova criação não é a destruição da criação original e a criação de algo completamente diferente — é a transformação e renovação da criação original. A Nova Jerusalém "descendo do céu" (<em>katabainousa ek tou ouranou</em>) é a imagem da habitação de Deus com a humanidade — não os salvos subindo ao céu, mas o céu descendo à terra. A voz do trono (v. 3) anuncia o cumprimento de toda a história da redenção: "Eis o tabernáculo de Deus com os homens" (<em>hē skēnē tou Theou meta tōn anthrōpōn</em>) — o tabernáculo, o templo, a encarnação de Cristo, a habitação do Espírito nos crentes — tudo isso era antecipação desta habitação definitiva e perfeita.</div>
       </div>
-      <p>A análise exegética destes versículos iniciais revela a profundidade teológica do pensamento apostólico. O vocabulário grego utilizado carrega nuances semânticas que a tradução portuguesa nem sempre consegue capturar completamente. O contexto histórico e cultural do século I ilumina o significado original das palavras e conceitos apresentados.</p>
-      <p>O autor estabelece aqui os fundamentos sobre os quais toda a argumentação do capítulo será construída. Cada palavra é escolhida com precisão teológica, refletindo tanto a tradição judaica do Antigo Testamento quanto a nova realidade inaugurada pela morte e ressurreição de Jesus Cristo.</p>
-
-      <h3>Desenvolvimento Central — Apocalipse 21:6-12</h3>
-      <div class="versiculo-box">
-        <div class="versiculo-ref">Apocalipse 21:6-12</div>
-        <div class="versiculo-texto">O desenvolvimento central do capítulo aprofunda os temas introduzidos na abertura, apresentando a argumentação teológica com rigor e clareza. O autor utiliza recursos retóricos característicos da literatura epistolar do século I para convencer e transformar seus leitores.</div>
+      <div class="versiculo-bloco">
+        <div class="ref-v">21:5-8 — "Eis que Faço Novas Todas as Coisas"</div>
+        <div class="texto-v">"E o que estava assentado no trono disse: Eis que faço novas todas as coisas. E disse-me: Escreve, porque estas palavras são fiéis e verdadeiras... Eu sou o Alfa e o Ômega, o princípio e o fim. A quem tiver sede darei de graça da fonte da água da vida."</div>
+        <div class="analise-v">"Eis que faço novas todas as coisas" (<em>idou kaina poiō panta</em>) — esta é a única vez no Apocalipse que Deus fala diretamente em primeira pessoa. A renovação de todas as coisas é a declaração mais abrangente da escatologia bíblica — não apenas a salvação das almas, mas a renovação do cosmos inteiro. "Estas palavras são fiéis e verdadeiras" (<em>houtoi hoi logoi pistoi kai alēthinoi eisin</em>) — a confiabilidade da promessa é garantida pelo caráter de Deus. "Alfa e Ômega, princípio e fim" — Deus que iniciou a criação a completará. A promessa da "fonte da água da vida" (<em>tēs pēgēs tou hydatos tēs zōēs</em>) ecoa a promessa de Jesus à samaritana (Jo 4:14) e ao último dia da festa dos tabernáculos (Jo 7:37-38) — a sede espiritual da humanidade será satisfeita definitivamente na nova criação.</div>
       </div>
-      <p>Esta seção central é o coração teológico do capítulo. Aqui o apóstolo desenvolve sua argumentação principal, respondendo às questões e desafios que a comunidade enfrentava. A lógica do texto segue um padrão de afirmação, fundamentação e aplicação que é característico do estilo paulino e apostólico.</p>
-      <p>O uso do Antigo Testamento nesta seção é particularmente significativo. O autor cita, alude ou ecoa textos da Lei, dos Profetas e dos Escritos para demonstrar que a mensagem cristã não é uma novidade radical, mas o cumprimento das promessas feitas a Israel ao longo de séculos de revelação progressiva.</p>
-
-      <h3>Aplicação Prática — Apocalipse 21:13-20</h3>
-      <div class="versiculo-box">
-        <div class="versiculo-ref">Apocalipse 21:13-20</div>
-        <div class="versiculo-texto">A seção prática do capítulo traduz as verdades teológicas em imperativos concretos para a vida cristã. O autor não separa doutrina de prática — a teologia correta deve produzir vida correta. Esta integração entre crença e comportamento é uma das marcas distintivas da ética cristã do Novo Testamento.</div>
+      <div class="versiculo-bloco">
+        <div class="ref-v">21:9-21 — As Dimensões da Nova Jerusalém</div>
+        <div class="texto-v">"E a cidade está posta em quadrado, e o seu comprimento é tanto como a sua largura; e ele mediu a cidade com a cana, doze mil estádios; o comprimento, a largura e a altura são iguais. E mediu o seu muro, cento e quarenta e quatro côvados."</div>
+        <div class="analise-v">As dimensões da Nova Jerusalém são simbólicas, não literais. 12.000 estádios (aproximadamente 2.400 km) em cada dimensão — comprimento, largura e altura iguais — formam um cubo perfeito. O único outro cubo na Bíblia é o Santo dos Santos do Templo de Salomão (1 Rs 6:20) — 20 côvados em cada dimensão. A Nova Jerusalém é o Santo dos Santos cósmico — o lugar da presença de Deus expandido para abranger toda a nova criação. O número 12 permeia toda a descrição: 12 portas com os nomes das 12 tribos de Israel, 12 fundamentos com os nomes dos 12 apóstolos, 12.000 estádios, 144 côvados (12 × 12). O 12 é o número do povo de Deus — a Nova Jerusalém é a habitação definitiva do povo de Deus em sua plenitude.</div>
       </div>
-      <p>A transição da teologia para a ética neste capítulo segue o padrão característico das epístolas do Novo Testamento: o indicativo (o que Deus fez em Cristo) fundamenta o imperativo (como devemos viver em resposta). A vida cristã não é esforço para ganhar o favor de Deus, mas resposta grata ao favor já concedido em Cristo.</p>
-      <p>As instruções práticas aqui apresentadas são ao mesmo tempo culturalmente específicas e universalmente aplicáveis. O intérprete deve distinguir entre o princípio eterno e a aplicação histórica específica, perguntando: qual é a verdade teológica permanente que está sendo expressa nesta instrução particular?</p>
-
-      <h3>Conclusão do Capítulo — Apocalipse 21:21-fim</h3>
-      <div class="versiculo-box">
-        <div class="versiculo-ref">Apocalipse 21:21-fim</div>
-        <div class="versiculo-texto">A conclusão do capítulo recapitula os temas principais e aponta para o desenvolvimento que virá nos capítulos seguintes. O autor encerra com uma nota de esperança, louvor ou exortação que resume o espírito de toda a seção.</div>
+      <div class="versiculo-bloco">
+        <div class="ref-v">21:22-27 — Sem Templo, Sem Sol, Sem Noite</div>
+        <div class="texto-v">"E não vi nenhum templo nela, porque o Senhor Deus Todo-Poderoso é o seu templo, e o Cordeiro. E a cidade não necessita do sol nem da lua para lhe darem claridade; porque a glória de Deus a iluminou, e o Cordeiro é a sua lâmpada."</div>
+        <div class="analise-v">A ausência de templo na Nova Jerusalém é surpreendente — o templo era o coração da religião bíblica. Mas o templo era o lugar onde Deus habitava de forma especial; na Nova Jerusalém, Deus habita em toda parte — "o Senhor Deus Todo-Poderoso é o seu templo, e o Cordeiro" (<em>ho gar Kyrios ho Theos ho pantokratōr naos autēs estin kai to arnion</em>). O templo era o meio; a habitação direta de Deus é o fim. A ausência de sol e lua não é cosmológica — é teológica: a glória de Deus é a fonte de toda luz. "As nações andarão na sua luz" (<em>ta ethnē peripatēsousin dia tou phōtos autēs</em>) — a Nova Jerusalém não é exclusiva para Israel ou para os cristãos; as nações trazem sua glória para ela (v. 24,26). A nova criação é a consumação da promessa abraâmica de que todas as nações seriam abençoadas.</div>
       </div>
-      <p>A conclusão deste capítulo não é apenas um encerramento formal, mas uma síntese teológica que integra todos os temas desenvolvidos anteriormente. O autor demonstra que cada parte do capítulo contribui para um argumento coerente e progressivo que culmina nesta conclusão.</p>
     </div>
-
-    <!-- VOCABULÁRIO GREGO -->
     <div class="section-block">
-      <h2>🔤 Vocabulário Grego — Termos-Chave</h2>
-
-      <div class="vocab-item">
-        <div class="vocab-termo">Charis (χάρις) — Graça</div>
-        <div class="vocab-def">O termo central do evangelho — a favor imerecido de Deus. Diferente do conceito greco-romano de charis (favor recíproco entre iguais), a graça bíblica é unilateral: Deus age a favor de quem não merece e não pode retribuir. Paulo usa este termo mais de 100 vezes em suas cartas, tornando-o o conceito-chave de sua teologia.</div>
-      </div>
-
-      <div class="vocab-item">
-        <div class="vocab-termo">Pistis (πίστις) — Fé/Confiança</div>
-        <div class="vocab-def">Fé no NT não é crença intelectual abstrata, mas confiança pessoal e comprometida. O substantivo pistis e o verbo pisteuō (crer) implicam entrega e lealdade, não apenas assentimento mental. A fé que salva é a fé que confia em Cristo como Senhor e Salvador — uma fé que necessariamente produz obras (Tg 2:17).</div>
-      </div>
-
-      <div class="vocab-item">
-        <div class="vocab-termo">Dikaiosynē (δικαιοσύνη) — Justiça/Retidão</div>
-        <div class="vocab-def">A justiça de Deus é tanto um atributo divino (Deus é justo) quanto um dom divino (Deus justifica o pecador). A justificação (dikaiōsis) é o ato forense pelo qual Deus declara o pecador justo com base na obra de Cristo — não com base nas obras humanas. Este conceito é central para a teologia paulina e para a Reforma Protestante.</div>
-      </div>
-
-      <div class="vocab-item">
-        <div class="vocab-termo">Agapē (ἀγάπη) — Amor</div>
-        <div class="vocab-def">O NT usa predominantemente agapē (não eros ou philia) para descrever o amor de Deus e o amor cristão. Agapē é amor que se doa sem esperar retorno — amor que age em favor do outro independentemente de mérito ou reciprocidade. É o amor que Deus demonstrou ao enviar seu Filho (Jo 3:16) e que os cristãos devem praticar uns pelos outros (Jo 13:34-35).</div>
+      <h2>📚 Vocabulário Essencial</h2>
+      <div class="vocab-grid">
+        <div class="vocab-card"><div class="termo">καινός</div><div class="transl">kainos</div><div class="def">Novo (de qualidade superior, renovado). O novo céu e nova terra não são uma criação completamente diferente, mas a criação original renovada e transformada. A escatologia bíblica é renovação, não substituição.</div></div>
+        <div class="vocab-card"><div class="termo">σκηνή</div><div class="transl">skēnē</div><div class="def">Tabernáculo, tenda. 'O tabernáculo de Deus com os homens' — a habitação definitiva de Deus com a humanidade. Ecoa o tabernáculo do deserto, o templo de Salomão, e a encarnação de Cristo (Jo 1:14 — 'habitou entre nós', lit. 'tabernaculou').</div></div>
+        <div class="vocab-card"><div class="termo">ναός</div><div class="transl">naos</div><div class="def">Templo (o santuário interior). Na Nova Jerusalém, não há templo porque Deus e o Cordeiro são o templo. O meio (templo) é substituído pelo fim (habitação direta de Deus).</div></div>
+        <div class="vocab-card"><div class="termo">δόξα</div><div class="transl">doxa</div><div class="def">Glória. A glória de Deus ilumina a Nova Jerusalém — não há necessidade de sol ou lua. A glória divina, que habitou no tabernáculo e no templo, agora preenche toda a nova criação.</div></div>
       </div>
     </div>
-
-    <!-- TEOLOGIA SISTEMÁTICA -->
     <div class="section-block">
-      <h2>🏛️ Teologia Sistemática</h2>
-      <h3>Contribuição à Cristologia</h3>
-      <p>Este capítulo contribui significativamente para a compreensão da pessoa e obra de Jesus Cristo. A cristologia do Novo Testamento é progressiva — cada livro e cada capítulo adiciona nuances à compreensão de quem Jesus é e o que ele fez. Este capítulo em particular ilumina aspectos da natureza divina e humana de Cristo, de seu ministério sacerdotal, profético e real, e de sua obra redentora.</p>
-      <h3>Contribuição à Soteriologia</h3>
-      <p>A soteriologia (doutrina da salvação) recebe contribuições importantes neste capítulo. Os temas da eleição, chamado, justificação, santificação e glorificação são abordados direta ou indiretamente. A salvação bíblica é apresentada como obra exclusiva de Deus — iniciada na eternidade, realizada na história e consumada na escatologia.</p>
-      <h3>Contribuição à Eclesiologia</h3>
-      <p>A eclesiologia (doutrina da Igreja) é enriquecida pelas instruções e reflexões deste capítulo. A Igreja do Novo Testamento é apresentada como comunidade de crentes unidos em Cristo, dotados pelo Espírito, chamados à missão e à santidade. As tensões e desafios da Igreja primitiva iluminam os desafios perenes da comunidade cristã em qualquer época.</p>
+      <h2>🏛️ Teologia da Nova Criação</h2>
+      <p>Apocalipse 21 apresenta a escatologia bíblica em sua forma mais completa. A esperança cristã não é a fuga da terra para um céu imaterial — é a renovação da terra pela glória de Deus. A Nova Jerusalém descendo do céu é a imagem da criação restaurada, da humanidade redimida, e da habitação definitiva de Deus com seu povo.</p>
+      <p>A estrutura da Nova Jerusalém revela a continuidade entre a criação original e a nova criação: as 12 tribos de Israel e os 12 apóstolos são os fundamentos da cidade — a história da redenção não é apagada, mas consumada. Os que foram redimidos "de toda tribo, língua, povo e nação" (5:9) habitam juntos na cidade — a diversidade humana não é eliminada, mas glorificada na nova criação.</p>
     </div>
-
-    <!-- CONEXÃO COM O AT -->
     <div class="section-block">
-      <h2>🔗 Conexão com o Antigo Testamento</h2>
-      <p>O Novo Testamento não pode ser compreendido sem o Antigo Testamento — cada livro, cada capítulo, cada versículo do NT está enraizado na revelação progressiva do AT. Este capítulo cita, alude ou ecoa múltiplos textos do AT, demonstrando que a mensagem cristã é o cumprimento das promessas feitas a Abraão, Moisés, Davi e os profetas.</p>
-      <p>A hermenêutica tipológica é particularmente importante aqui: pessoas, eventos e instituições do AT funcionam como tipos (typos) que apontam para realidades maiores no NT. Jesus é o novo Adão, o novo Moisés, o novo Davi, o novo Templo, o novo Sacrifício — cada tipo do AT encontra seu cumprimento (antítipo) em Cristo.</p>
-      <p>A leitura cristológica do AT não é uma imposição externa, mas uma interpretação que o próprio Jesus autorizou: "Escrutinais as Escrituras, porque vós cuidais ter nelas a vida eterna; e são elas que testificam de mim" (Jo 5:39). Os apóstolos seguiram este método hermenêutico ao interpretar o AT à luz de Cristo.</p>
+      <h2>✨ Aplicação Contemporânea</h2>
+      <p>A visão da Nova Jerusalém é o fundamento da esperança cristã e o critério para a ação presente. Porque Deus promete renovar toda a criação, o cuidado com a criação presente tem valor escatológico. Porque a Nova Jerusalém acolhe pessoas de todas as nações, a missão transcultural é urgente. Porque "não haverá mais morte, nem pranto, nem clamor, nem dor" (21:4), o trabalho de cura, justiça e compaixão no presente é antecipação da nova criação.</p>
+      <p>A promessa "eis que faço novas todas as coisas" (21:5) é o fundamento da esperança cristã no sofrimento. Quando a dor parece permanente, quando a injustiça parece invencível, quando a morte parece ter a última palavra — esta promessa afirma que Deus está fazendo novas todas as coisas. A nova criação não é um sonho distante — é a realidade futura que já começa a irromper no presente através do Espírito Santo e da comunidade dos redimidos.</p>
     </div>
-
-    <!-- APLICAÇÃO CONTEMPORÂNEA -->
-    <div class="section-block">
-      <h2>🌉 Aplicação Contemporânea</h2>
-      <p>As verdades reveladas neste capítulo transcendem o contexto histórico do século I e falam diretamente à condição humana em qualquer época. A aplicação contemporânea não é uma adição externa ao texto, mas o desdobramento natural das verdades eternas que o texto contém. O Espírito Santo que inspirou a Escritura também ilumina o leitor para compreender e aplicar sua mensagem.</p>
-      <p>Para o crente individual, este capítulo oferece fundamentos sólidos para a fé, esperança e amor. As promessas de Deus aqui reveladas são tão válidas hoje quanto eram no século I — porque o Deus que as fez é imutável, e as promessas são fundamentadas na obra acabada de Cristo, não na fidelidade humana.</p>
-      <p>Para a comunidade da Igreja, este capítulo oferece orientação para a vida em comunidade, o exercício dos dons, a resolução de conflitos e a missão no mundo. A Igreja que leva a sério as instruções apostólicas será uma comunidade que reflete o caráter de Cristo e atrai os que estão fora para o reino de Deus.</p>
-    </div>
-
-    <!-- NAVEGAÇÃO -->
-    <div class="nav-caps">
-      <a href="/07-novo-testamento/apocalipse/capitulos/capitulo-20">← Cap. 20</a>
-      <a class="center" href="/07-novo-testamento/apocalipse">Índice de Apocalipse</a>
-      <a href="/07-novo-testamento/apocalipse/capitulos/capitulo-22">Cap. 22 →</a>
+    <div class="nav-cap">
+      <a href="/07-novo-testamento/apocalipse/capitulos/capitulo-20.html">← Apocalipse 20</a>
+      <a href="/07-novo-testamento/apocalipse/index.html">📋 Índice</a>
+      <a href="/07-novo-testamento/apocalipse/capitulos/capitulo-22.html">Apocalipse 22 →</a>
     </div>
   </div>
 </body>
