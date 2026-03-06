@@ -581,14 +581,20 @@ a:focus-visible, button:focus-visible{
 
 /* Bloco 06–06b: Índigo */
 .card[data-bloco="06"] .block-number,
-.card[data-bloco="06b"] .block-number { color: #6366f1; opacity: 0.6; }
+.card[data-bloco="06b"] .block-number { color: #6366f1 !important; opacity: 0.6; }
 .card[data-bloco="06"] .poster,
 .card[data-bloco="06b"] .poster {
-  background: linear-gradient(135deg, #06060f 0%, #0a0a1a 100%);
-  border-bottom: 1px solid rgba(99,102,241,0.18);
+  background: linear-gradient(135deg, #06060f 0%, #0a0a1a 100%) !important;
+  border-bottom: 1px solid rgba(99,102,241,0.18) !important;
 }
 .card[data-bloco="06"]:hover,
-.card[data-bloco="06b"]:hover { border-color: rgba(99,102,241,0.40); }
+.card[data-bloco="06b"]:hover { border-color: rgba(99,102,241,0.40) !important; }
+/* Seletor extra para garantir 06b em todos os navegadores */
+article[data-bloco="06b"] .poster {
+  background: linear-gradient(135deg, #06060f 0%, #0a0a1a 100%) !important;
+  border-bottom: 1px solid rgba(99,102,241,0.18) !important;
+}
+article[data-bloco="06b"] .block-number { color: #6366f1 !important; opacity: 0.6; }
 
 /* Bloco 07–08: Azul Celeste */
 .card[data-bloco="07"] .block-number,
