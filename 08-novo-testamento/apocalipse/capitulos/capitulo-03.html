@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apocalipse 3 — As 7 Igrejas (Parte 2) | 365 de Graça & Adoração</title>
+  <link rel="icon" href="/favicon.ico">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0f172a; color: #e2e8f0; font-family: 'Georgia', serif; line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    .topbar { background: rgba(15,23,42,0.97); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
+    .topbar .inner { max-width: 900px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .topbar a { font-size: 0.85rem; color: #94a3b8; font-weight: 600; transition: color 0.2s; }
+    .topbar a:hover { color: #a855f7; }
+    .hero { background: linear-gradient(135deg, #0f172a 0%, #0d001a 50%, #0f172a 100%); padding: 64px 24px 48px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .tag { display: inline-block; background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.25); color: #a855f7; font-size: 0.72rem; font-weight: 800; padding: 4px 14px; border-radius: 999px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+    .hero h1 { font-size: 2.4rem; font-weight: 900; color: #f1f5f9; margin-bottom: 12px; line-height: 1.2; }
+    .hero .ref { font-size: 0.88rem; color: #64748b; margin-bottom: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+    .hero blockquote { font-style: italic; color: #cbd5e1; font-size: 1rem; border-left: 3px solid #a855f7; padding-left: 20px; max-width: 600px; margin: 0 auto; text-align: left; }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
+    .section-block { margin-bottom: 40px; }
+    .section-block h2 { font-size: 1.3rem; font-weight: 800; color: #f1f5f9; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .section-block p { color: #94a3b8; font-size: 0.95rem; line-height: 1.85; margin-bottom: 16px; }
+    .versiculo-bloco { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-left: 3px solid #a855f7; border-radius: 0 12px 12px 0; padding: 18px 20px; margin-bottom: 16px; }
+    .ref-v { font-size: 0.8rem; font-weight: 800; color: #a855f7; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .texto-v { font-style: italic; color: #cbd5e1; font-size: 0.95rem; margin-bottom: 10px; line-height: 1.7; }
+    .analise-v { color: #94a3b8; font-size: 0.9rem; line-height: 1.8; }
+    .igreja-card { background: rgba(168,85,247,0.05); border: 1px solid rgba(168,85,247,0.25); border-radius: 14px; padding: 24px; margin-bottom: 24px; }
+    .igreja-nome { font-size: 1.2rem; font-weight: 900; color: #a855f7; margin-bottom: 4px; }
+    .igreja-ref { font-size: 0.78rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 14px; }
+    .igreja-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+    @media (max-width: 600px) { .igreja-grid { grid-template-columns: 1fr; } }
+    .ig-item { background: rgba(255,255,255,0.02); border-radius: 8px; padding: 10px 14px; }
+    .ig-label { font-size: 0.72rem; font-weight: 800; color: #a855f7; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .ig-val { font-size: 0.88rem; color: #cbd5e1; line-height: 1.6; }
+    .ig-analise { font-size: 0.9rem; color: #94a3b8; line-height: 1.8; }
+    .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin-top: 16px; }
+    .vocab-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 14px 16px; }
+    .termo { font-size: 1.1rem; font-weight: 800; color: #a855f7; font-family: 'Georgia', serif; }
+    .transl { font-size: 0.78rem; color: #64748b; font-style: italic; margin: 2px 0 6px; }
+    .def { font-size: 0.85rem; color: #94a3b8; line-height: 1.65; }
+    .nav-cap { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.07); }
+    .nav-cap a { background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.25); color: #a855f7; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-size: 0.88rem; font-weight: 700; transition: all 0.2s; }
+    .nav-cap a:hover { background: rgba(168,85,247,0.2); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.87rem; margin: 20px 0 32px; }
+    th { background: rgba(168,85,247,0.1); color: #a855f7; padding: 10px 14px; text-align: left; font-weight: 700; border-bottom: 1px solid rgba(168,85,247,0.25); }
+    td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+</style>
+  <link rel="stylesheet" href="/assets/css/bloco.css">
+  <style>
+    :root {
+      --accent: #0ea5e9;
+      --accent-rgb: 14, 165, 233;
+    }
+  </style>
+</head>
+<body class="bloco-09">
+  <div class="topbar"><div class="inner">
+    <a href="/08-novo-testamento/apocalipse/index.html">← Apocalipse</a>
+    <a href="/08-novo-testamento/index.html">Novo Testamento</a>
+  </div></div>
+  <div class="hero">
+    <span class="tag">🔥 Apocalipse 3 · As 7 Igrejas</span>
+    <h1>Apocalipse 3 — As 7 Igrejas (Parte 2)</h1>
+    <div class="ref">Apocalipse 3:1-22 · João · c. 95-96 d.C. · Ilha de Patmos</div>
+    <blockquote>Eis que estou à porta e bato; se alguém ouvir a minha voz e abrir a porta, entrarei em sua casa e cearei com ele, e ele comigo. — Apocalipse 3:20</blockquote>
+  </div>
+  <div class="wrap">
+    <div class="section-block">
+      <h2>🕯️ As Três Últimas Igrejas</h2>
+      
+    <div class="igreja-card">
+      <div class="igreja-nome">Sardes — A Igreja que Parece Viva mas está Morta</div>
+      <div class="igreja-ref">Apocalipse 3:1-6</div>
+      <p style="color:#94a3b8;font-size:0.9rem;line-height:1.8;margin-bottom:14px;">Sardes (atual Sart, Turquia) foi uma das cidades mais ricas e poderosas do mundo antigo — capital do reino da Lídia, onde o rei Creso acumulou lendária riqueza. A cidade tinha uma história de complacência: foi tomada de surpresa duas vezes (por Ciro em 547 a.C. e por Antíoco III em 214 a.C.) porque seus guardas adormeceram. Esta história de complacência é o pano de fundo da carta.</p>
+      <div class="igreja-grid">
+        <div class="ig-item"><div class="ig-label">✅ Elogio</div><div class="ig-val">Tem alguns poucos nomes que não mancharam as suas vestes.</div></div>
+        <div class="ig-item"><div class="ig-label">⚠️ Crítica</div><div class="ig-val">Tem nome de que vive, mas está morta. As obras não são perfeitas diante de Deus.</div></div>
+        <div class="ig-item"><div class="ig-label">📣 Chamado</div><div class="ig-val">Sê vigilante, confirma o que resta e que estava para morrer; lembra, guarda e arrepende-te.</div></div>
+        <div class="ig-item"><div class="ig-label">🏆 Promessa</div><div class="ig-val">Vestiduras brancas; nome não apagado do livro da vida; confissão diante do Pai.</div></div>
+      </div>
+      <div class="ig-analise">Sardes é a Igreja com reputação de vida mas realidade de morte — a Igreja que vive de sua glória passada. Não há elogio substancial, não há perseguição externa, não há falsa doutrina mencionada — apenas a morte espiritual que se instalou silenciosamente. A metáfora da vigilância ecoa a história da cidade: Sardes foi tomada porque seus guardas adormeceram. Cristo usa a mesma imagem: 'serei como um ladrão' — virei de surpresa se não houver vigilância. Os 'poucos nomes que não mancharam as suas vestes' (<em>oligous onomata en Sardesi hoi ouk emolunan ta himatia autōn</em>) são os remanescentes fiéis dentro de uma Igreja majoritariamente morta. A promessa das 'vestiduras brancas' (<em>en himatiois leukois</em>) contrasta com as vestes manchadas da maioria — pureza e vitória para os que perseveram.</div>
+    </div>
+    <div class="igreja-card">
+      <div class="igreja-nome">Filadélfia — A Igreja da Porta Aberta</div>
+      <div class="igreja-ref">Apocalipse 3:7-13</div>
+      <p style="color:#94a3b8;font-size:0.9rem;line-height:1.8;margin-bottom:14px;">Filadélfia (atual Alaşehir, Turquia) era uma cidade jovem, fundada por Átalo II Filadelfo (189-138 a.C.) como porta de entrada para a Ásia Central. Era uma cidade missionária por natureza — sua posição geográfica a tornava um ponto de difusão da cultura grega para o interior. A cidade sofria frequentes terremotos — o grande terremoto de 17 d.C. destruiu a cidade e a região.</p>
+      <div class="igreja-grid">
+        <div class="ig-item"><div class="ig-label">✅ Elogio</div><div class="ig-val">Tem pouca força, mas guardou a palavra de Cristo e não negou o seu nome.</div></div>
+        <div class="ig-item"><div class="ig-label">⚠️ Crítica</div><div class="ig-val">Nenhuma crítica. Filadélfia é a segunda Igreja sem repreensão (junto com Esmirna).</div></div>
+        <div class="ig-item"><div class="ig-label">📣 Chamado</div><div class="ig-val">Guardar o que tem.</div></div>
+        <div class="ig-item"><div class="ig-label">🏆 Promessa</div><div class="ig-val">Porta aberta que ninguém pode fechar; proteção na hora da provação; coluna no templo de Deus; nome novo.</div></div>
+      </div>
+      <div class="ig-analise">Filadélfia é a Igreja fraca que é fiel — 'tens pouca força' (<em>mikran echeis dynamin</em>), mas guardou a Palavra e não negou o nome de Cristo. A 'porta aberta' (<em>thyran ēneōgmenēn</em>) é provavelmente uma oportunidade missionária — Cristo abre portas que ninguém pode fechar. A promessa de proteção na 'hora da provação' (<em>tēs hōras tou peirasmou</em>) é debatida: refere-se à proteção durante a tribulação ou ao arrebatamento antes dela? O texto diz 'guardar fora da hora da provação' (<em>tērēsō ek tēs hōras</em>) — a preposição <em>ek</em> pode indicar proteção dentro ou remoção antes. A promessa de se tornar 'coluna no templo de Deus' (<em>stylon en tō naō tou Theou mou</em>) é especialmente significativa para uma cidade que sofreu terremotos — as colunas eram o que permanecia de pé após os tremores.</div>
+    </div>
+    <div class="igreja-card">
+      <div class="igreja-nome">Laodiceia — A Igreja Morna</div>
+      <div class="igreja-ref">Apocalipse 3:14-22</div>
+      <p style="color:#94a3b8;font-size:0.9rem;line-height:1.8;margin-bottom:14px;">Laodiceia (atual Denizli, Turquia) era uma das cidades mais ricas da Ásia Menor — um centro bancário, produtor de lã preta e de colírio para os olhos. Após o terremoto de 60 d.C., a cidade recusou a ajuda imperial e se reconstruiu com seus próprios recursos. A cidade não tinha fonte de água própria — recebia água quente de Hierápolis (via aqueduto) e água fria de Colossos; a água chegava morna.</p>
+      <div class="igreja-grid">
+        <div class="ig-item"><div class="ig-label">✅ Elogio</div><div class="ig-val">Nenhum elogio.</div></div>
+        <div class="ig-item"><div class="ig-label">⚠️ Crítica</div><div class="ig-val">É morna — não fria nem quente. Diz 'sou rico, enriqueci e não tenho necessidade de coisa alguma', mas é miserável, pobre, cega e nua.</div></div>
+        <div class="ig-item"><div class="ig-label">📣 Chamado</div><div class="ig-val">Comprar ouro refinado, vestiduras brancas e colírio; ser zelosa e arrepender-se.</div></div>
+        <div class="ig-item"><div class="ig-label">🏆 Promessa</div><div class="ig-val">Cristo jantará com quem abrir a porta; sentar com Cristo no seu trono.</div></div>
+      </div>
+      <div class="ig-analise">Laodiceia é a Igreja autossuficiente e morna — a mais severamente repreendida das sete. A metáfora da água morna é poderosa: a água quente de Hierápolis era medicinal; a água fria de Colossos era refrescante; a água morna que chegava a Laodiceia era inútil e provocava náusea. Uma Igreja morna não é nem curativa nem refrescante — é inútil e nauseante. O diagnóstico de Cristo inverte o autodiagnóstico da Igreja: ela se acha rica e sem necessidade, mas Cristo a vê como miserável, pobre, cega e nua. As três curas correspondem às três glórias de Laodiceia: ouro refinado (em vez da riqueza bancária), vestiduras brancas (em vez da lã preta famosa), colírio (em vez do colírio medicinal produzido localmente). A imagem de Cristo batendo à porta (v. 20) é frequentemente usada evangelisticamente, mas no contexto é uma mensagem à Igreja — Cristo está do lado de fora de sua própria Igreja, pedindo para entrar.</div>
+    </div>
+    </div>
+    <div class="section-block">
+      <h2>📚 Vocabulário Essencial</h2>
+      <div class="vocab-grid">
+        <div class="vocab-card"><div class="termo">χλιαρός</div><div class="transl">chliaros</div><div class="def">Morno, tepido. A temperatura da água que chegava a Laodiceia — nem quente (medicinal) nem fria (refrescante), mas inútil e nauseante. Descreve a Igreja autossuficiente e sem ardor espiritual.</div></div>
+        <div class="vocab-card"><div class="termo">θύρα</div><div class="transl": "thyra</div><div class="def">Porta. Em Ap 3:20, Cristo está à porta da Igreja batendo — imagem da Igreja que excluiu Cristo de sua própria vida. A porta é aberta por dentro, por escolha individual.</div></div>
+        <div class="vocab-card"><div class="termo">στῦλος</div><div class="transl">stylos</div><div class="def">Coluna. A promessa a Filadélfia — ser coluna no templo de Deus. Para uma cidade que sofreu terremotos, as colunas representavam permanência e estabilidade.</div></div>
+        <div class="vocab-card"><div class="termo">βιβλίον ζωῆς</div><div class="transl">biblion zōēs</div><div class="def">Livro da vida. O registro dos que pertencem a Deus. A promessa a Sardes — o nome do vencedor não será apagado do livro da vida.</div></div>
+      </div>
+    </div>
+    <div class="section-block">
+      <h2>🏛️ Aplicação Contemporânea das 7 Cartas</h2>
+      <p>As sete igrejas são um espelho para a Igreja em todas as épocas. Cada comunidade cristã pode se reconhecer em uma ou mais destas igrejas: a ortodoxia sem amor de Éfeso, a fidelidade na pobreza de Esmirna, a tolerância do erro de Pérgamo e Tiatira, a reputação sem realidade de Sardes, a fidelidade fraca de Filadélfia, a autossuficiência morna de Laodiceia.</p>
+      <p>A mensagem de Laodiceia é talvez a mais urgente para a Igreja contemporânea ocidental. A prosperidade material pode criar a ilusão de autossuficiência espiritual — "sou rico, enriqueci e não tenho necessidade de coisa alguma" (3:17). A Igreja que tem belos edifícios, programas eficientes, orçamentos equilibrados e boa reputação pode estar, aos olhos de Cristo, miserável, pobre, cega e nua. O remédio não é mais programas ou recursos — é abrir a porta para Cristo.</p>
+    </div>
+    <div class="nav-cap">
+      <a href="/08-novo-testamento/apocalipse/capitulos/capitulo-02.html">← Apocalipse 2</a>
+      <a href="/08-novo-testamento/apocalipse/index.html">📋 Índice</a>
+      <a href="/08-novo-testamento/apocalipse/capitulos/capitulo-04.html">Apocalipse 4 →</a>
+    </div>
+  </div>
+</body>
+</html>

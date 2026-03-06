@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apocalipse 2 — As 7 Igrejas (Parte 1) | 365 de Graça & Adoração</title>
+  <link rel="icon" href="/favicon.ico">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0f172a; color: #e2e8f0; font-family: 'Georgia', serif; line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    .topbar { background: rgba(15,23,42,0.97); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
+    .topbar .inner { max-width: 900px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .topbar a { font-size: 0.85rem; color: #94a3b8; font-weight: 600; transition: color 0.2s; }
+    .topbar a:hover { color: #a855f7; }
+    .hero { background: linear-gradient(135deg, #0f172a 0%, #0d001a 50%, #0f172a 100%); padding: 64px 24px 48px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .tag { display: inline-block; background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.25); color: #a855f7; font-size: 0.72rem; font-weight: 800; padding: 4px 14px; border-radius: 999px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+    .hero h1 { font-size: 2.4rem; font-weight: 900; color: #f1f5f9; margin-bottom: 12px; line-height: 1.2; }
+    .hero .ref { font-size: 0.88rem; color: #64748b; margin-bottom: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+    .hero blockquote { font-style: italic; color: #cbd5e1; font-size: 1rem; border-left: 3px solid #a855f7; padding-left: 20px; max-width: 600px; margin: 0 auto; text-align: left; }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
+    .section-block { margin-bottom: 40px; }
+    .section-block h2 { font-size: 1.3rem; font-weight: 800; color: #f1f5f9; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .section-block p { color: #94a3b8; font-size: 0.95rem; line-height: 1.85; margin-bottom: 16px; }
+    .versiculo-bloco { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-left: 3px solid #a855f7; border-radius: 0 12px 12px 0; padding: 18px 20px; margin-bottom: 16px; }
+    .ref-v { font-size: 0.8rem; font-weight: 800; color: #a855f7; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .texto-v { font-style: italic; color: #cbd5e1; font-size: 0.95rem; margin-bottom: 10px; line-height: 1.7; }
+    .analise-v { color: #94a3b8; font-size: 0.9rem; line-height: 1.8; }
+    .igreja-card { background: rgba(168,85,247,0.05); border: 1px solid rgba(168,85,247,0.25); border-radius: 14px; padding: 24px; margin-bottom: 24px; }
+    .igreja-nome { font-size: 1.2rem; font-weight: 900; color: #a855f7; margin-bottom: 4px; }
+    .igreja-ref { font-size: 0.78rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 14px; }
+    .igreja-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+    @media (max-width: 600px) { .igreja-grid { grid-template-columns: 1fr; } }
+    .ig-item { background: rgba(255,255,255,0.02); border-radius: 8px; padding: 10px 14px; }
+    .ig-label { font-size: 0.72rem; font-weight: 800; color: #a855f7; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .ig-val { font-size: 0.88rem; color: #cbd5e1; line-height: 1.6; }
+    .ig-analise { font-size: 0.9rem; color: #94a3b8; line-height: 1.8; }
+    .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin-top: 16px; }
+    .vocab-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 14px 16px; }
+    .termo { font-size: 1.1rem; font-weight: 800; color: #a855f7; font-family: 'Georgia', serif; }
+    .transl { font-size: 0.78rem; color: #64748b; font-style: italic; margin: 2px 0 6px; }
+    .def { font-size: 0.85rem; color: #94a3b8; line-height: 1.65; }
+    .nav-cap { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.07); }
+    .nav-cap a { background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.25); color: #a855f7; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-size: 0.88rem; font-weight: 700; transition: all 0.2s; }
+    .nav-cap a:hover { background: rgba(168,85,247,0.2); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.87rem; margin: 20px 0 32px; }
+    th { background: rgba(168,85,247,0.1); color: #a855f7; padding: 10px 14px; text-align: left; font-weight: 700; border-bottom: 1px solid rgba(168,85,247,0.25); }
+    td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+</style>
+  <link rel="stylesheet" href="/assets/css/bloco.css">
+  <style>
+    :root {
+      --accent: #0ea5e9;
+      --accent-rgb: 14, 165, 233;
+    }
+  </style>
+</head>
+<body class="bloco-09">
+  <div class="topbar"><div class="inner">
+    <a href="/08-novo-testamento/apocalipse/index.html">← Apocalipse</a>
+    <a href="/08-novo-testamento/index.html">Novo Testamento</a>
+  </div></div>
+  <div class="hero">
+    <span class="tag">🔥 Apocalipse 2 · As 7 Igrejas</span>
+    <h1>Apocalipse 2 — As 7 Igrejas (Parte 1)</h1>
+    <div class="ref">Apocalipse 2:1-29 · João · c. 95-96 d.C. · Ilha de Patmos</div>
+    <blockquote>Quem tem ouvidos, ouça o que o Espírito diz às igrejas. — Apocalipse 2:7,11,17,29</blockquote>
+  </div>
+  <div class="wrap">
+    <div class="section-block">
+      <h2>📜 Introdução às 7 Cartas</h2>
+      <p>Os capítulos 2 e 3 do Apocalipse contêm sete cartas a sete igrejas da Ásia Menor — Éfeso, Esmirna, Pérgamo, Tiatira, Sardes, Filadélfia e Laodiceia. Estas não são apenas cartas históricas a comunidades do século I — são mensagens do Cristo ressuscitado e glorificado a sua Igreja em todas as épocas. Cada carta segue uma estrutura comum: (1) identificação do remetente — Cristo descrito com atributos da visão do capítulo 1; (2) "Eu sei" — Cristo conhece a situação de cada Igreja; (3) elogio (quando presente); (4) crítica (quando presente); (5) chamado ao arrependimento ou perseverança; (6) promessa ao vencedor; (7) "Quem tem ouvidos, ouça o que o Espírito diz às igrejas."</p>
+      <p>As sete igrejas formam um circuito geográfico no sentido horário a partir de Éfeso — provavelmente a rota que um mensageiro seguiria ao entregar a carta. Elas representam a diversidade da Igreja: igrejas perseguidas e igrejas prósperas, igrejas ortodoxas e igrejas comprometidas, igrejas ardentes e igrejas mornas. Esta diversidade é intencional — as sete cartas cobrem o espectro completo das situações que a Igreja pode enfrentar.</p>
+      <table>
+        <tr><th>Igreja</th><th>Situação</th><th>Elogio Principal</th><th>Crítica Principal</th></tr>
+        <tr><td>Éfeso</td><td>Ortodoxa mas fria</td><td>Perseverança, discernimento</td><td>Perdeu o primeiro amor</td></tr>
+        <tr><td>Esmirna</td><td>Perseguida e pobre</td><td>Rica em fé</td><td>Nenhuma</td></tr>
+        <tr><td>Pérgamo</td><td>Fiel mas tolerante</td><td>Mantém o nome de Cristo</td><td>Tolera heresias</td></tr>
+        <tr><td>Tiatira</td><td>Crescendo mas comprometida</td><td>Obras crescentes</td><td>Tolera Jezabel</td></tr>
+        <tr><td>Sardes</td><td>Reputação sem realidade</td><td>Alguns fiéis</td><td>Morta por dentro</td></tr>
+        <tr><td>Filadélfia</td><td>Fraca mas fiel</td><td>Guardou a Palavra</td><td>Nenhuma</td></tr>
+        <tr><td>Laodiceia</td><td>Rica e autossuficiente</td><td>Nenhum</td><td>Morna, cega, nua</td></tr>
+      </table>
+    </div>
+    <div class="section-block">
+      <h2>🕯️ As Quatro Primeiras Igrejas</h2>
+      
+    <div class="igreja-card">
+      <div class="igreja-nome">Éfeso — A Igreja que Perdeu o Primeiro Amor</div>
+      <div class="igreja-ref">Apocalipse 2:1-7</div>
+      <p style="color:#94a3b8;font-size:0.9rem;line-height:1.8;margin-bottom:14px;">Éfeso era a maior cidade da Ásia Menor, capital da província romana da Ásia, com população estimada de 200.000-500.000 habitantes. Era um centro comercial, cultural e religioso — lar do templo de Ártemis, uma das sete maravilhas do mundo. A Igreja em Éfeso foi fundada por Paulo (At 19) e pastoreada por Timóteo e, segundo a tradição, pelo apóstolo João.</p>
+      <div class="igreja-grid">
+        <div class="ig-item"><div class="ig-label">✅ Elogio</div><div class="ig-val">Obras, trabalho, perseverança; intolerância com os maus; testou os falsos apóstolos; odeiam as obras dos nicolaítas.</div></div>
+        <div class="ig-item"><div class="ig-label">⚠️ Crítica</div><div class="ig-val">Abandonou o primeiro amor — a devoção fervorosa e apaixonada a Cristo que caracterizava seus primeiros anos.</div></div>
+        <div class="ig-item"><div class="ig-label">📣 Chamado</div><div class="ig-val">Lembra de onde caíste, arrepende-te e faze as primeiras obras.</div></div>
+        <div class="ig-item"><div class="ig-label">🏆 Promessa</div><div class="ig-val">Comer da árvore da vida no paraíso de Deus.</div></div>
+      </div>
+      <div class="ig-analise">Éfeso é a Igreja ortodoxa sem amor — correta em doutrina, diligente em obras, intolerante com o erro, mas fria em devoção. O "primeiro amor" (<em>tēn agapēn sou tēn prōtēn</em>) é a devoção apaixonada a Cristo que caracterizava os primeiros dias da fé — a alegria da salvação, o ardor da oração, o deleite na Palavra. Esta devoção pode ser perdida gradualmente, substituída pela eficiência religiosa. O remédio é triplo: lembrar (<em>mnēmoneue</em>), arrepender-se (<em>metanoēson</em>), e fazer (<em>poiēson</em>). A ameaça é grave: se não houver arrependimento, Cristo removerá o candelabro — a Igreja perderá sua função de ser luz no mundo. A promessa — comer da árvore da vida — ecoa o Éden (Gn 2:9) e antecipa a Nova Jerusalém (Ap 22:2).</div>
+    </div>
+    <div class="igreja-card">
+      <div class="igreja-nome">Esmirna — A Igreja Perseguida</div>
+      <div class="igreja-ref">Apocalipse 2:8-11</div>
+      <p style="color:#94a3b8;font-size:0.9rem;line-height:1.8;margin-bottom:14px;">Esmirna (atual Izmir, Turquia) era uma das cidades mais belas e prósperas da Ásia Menor, rival de Éfeso pelo título de 'primeira cidade da Ásia'. Era um centro do culto imperial — tinha um templo a Roma e ao Imperador desde 195 a.C. A Igreja em Esmirna sofria perseguição tanto das autoridades romanas quanto da comunidade judaica local.</p>
+      <div class="igreja-grid">
+        <div class="ig-item"><div class="ig-label">✅ Elogio</div><div class="ig-val">Tribulação, pobreza (mas é rica!); suporta a blasfêmia dos que se dizem judeus mas são sinagoga de Satanás.</div></div>
+        <div class="ig-item"><div class="ig-label">⚠️ Crítica</div><div class="ig-val">Nenhuma crítica. Esmirna é uma das duas igrejas sem repreensão (junto com Filadélfia).</div></div>
+        <div class="ig-item"><div class="ig-label">📣 Chamado</div><div class="ig-val">Não temas o que estás para sofrer; sê fiel até à morte.</div></div>
+        <div class="ig-item"><div class="ig-label">🏆 Promessa</div><div class="ig-val">A coroa da vida; não será ferida pela segunda morte.</div></div>
+      </div>
+      <div class="ig-analise">Esmirna é a Igreja pobre que é rica — pobre em bens materiais, mas rica em fé e em Cristo. O paradoxo é deliberado: aos olhos do mundo, a Igreja de Esmirna era miserável; aos olhos de Cristo, era rica. A "sinagoga de Satanás" (<em>synagōgē tou Satana</em>) refere-se à comunidade judaica que colaborava com as autoridades romanas na perseguição dos cristãos — não uma condenação do judaísmo como tal, mas de judeus específicos que se tornaram instrumentos de perseguição. A promessa da "coroa da vida" (<em>ton stephanon tēs zōēs</em>) usa a imagem da coroa do atleta vitorioso — Esmirna era famosa por seus jogos atléticos. A "segunda morte" (<em>ho deuteros thanatos</em>) é a morte eterna, o lago de fogo (Ap 20:14) — os que são fiéis até a morte física não serão feridos pela morte espiritual.</div>
+    </div>
+    <div class="igreja-card">
+      <div class="igreja-nome">Pérgamo — A Igreja que Tolera o Erro</div>
+      <div class="igreja-ref">Apocalipse 2:12-17</div>
+      <p style="color:#94a3b8;font-size:0.9rem;line-height:1.8;margin-bottom:14px;">Pérgamo (atual Bergama, Turquia) era a capital oficial da província romana da Ásia e um grande centro cultural — tinha a segunda maior biblioteca do mundo antigo (200.000 volumes), rivalizando com Alexandria. Era também um centro do culto imperial e do culto de Zeus, Atena, Dionísio e Asclépio. O 'trono de Satanás' pode referir-se ao altar de Zeus, ao templo de Augusto, ou à presença do culto imperial.</p>
+      <div class="igreja-grid">
+        <div class="ig-item"><div class="ig-label">✅ Elogio</div><div class="ig-val">Mantém o nome de Cristo e não negou a fé, mesmo onde Satanás tem o seu trono; Antipas, fiel mártir.</div></div>
+        <div class="ig-item"><div class="ig-label">⚠️ Crítica</div><div class="ig-val">Tolera os que seguem a doutrina de Balaão (comer coisas sacrificadas a ídolos e praticar fornicação) e os nicolaítas.</div></div>
+        <div class="ig-item"><div class="ig-label">📣 Chamado</div><div class="ig-val">Arrepende-te.</div></div>
+        <div class="ig-item"><div class="ig-label">🏆 Promessa</div><div class="ig-val">Maná escondido e uma pedra branca com nome novo.</div></div>
+      </div>
+      <div class="ig-analise">Pérgamo é a Igreja que persevera na confissão mas tolera o erro doutrinário e moral. A doutrina de Balaão (<em>tēn didachēn Balaam</em>) refere-se ao conselho de Balaão a Balaque de seduzir Israel através da idolatria e imoralidade (Nm 25; 31:16). Os nicolaítas (mencionados também em Éfeso) provavelmente ensinavam que os cristãos podiam participar nos banquetes pagãos e nas práticas sexuais associadas ao culto — uma forma de acomodação ao mundo. A "pedra branca com nome novo" é enigmática — pode referir-se a um voto de absolvição (pedra branca era usada em votações de absolvição em tribunais romanos), a um bilhete de entrada para o banquete celestial, ou ao nome novo que Cristo dará a cada vencedor — uma identidade nova e secreta conhecida apenas por Deus e pelo crente.</div>
+    </div>
+    <div class="igreja-card">
+      <div class="igreja-nome">Tiatira — A Igreja que Tolera a Jezabel</div>
+      <div class="igreja-ref">Apocalipse 2:18-29</div>
+      <p style="color:#94a3b8;font-size:0.9rem;line-height:1.8;margin-bottom:14px;">Tiatira (atual Akhisar, Turquia) era uma cidade comercial conhecida por suas guildas de artesãos e comerciantes — incluindo a guilda dos tintureiros de púrpura (Lídia, convertida por Paulo em Filipos, era de Tiatira — At 16:14). As guildas comerciais tinham práticas religiosas pagãs associadas, criando dilemas para os cristãos que precisavam participar para sobreviver economicamente.</p>
+      <div class="igreja-grid">
+        <div class="ig-item"><div class="ig-label">✅ Elogio</div><div class="ig-val">Obras, amor, fé, serviço, perseverança; as últimas obras são maiores que as primeiras.</div></div>
+        <div class="ig-item"><div class="ig-label">⚠️ Crítica</div><div class="ig-val">Tolera a mulher Jezabel, que se diz profetisa e ensina e seduz os servos de Cristo a praticarem fornicação e comer coisas sacrificadas a ídolos.</div></div>
+        <div class="ig-item"><div class="ig-label">📣 Chamado</div><div class="ig-val">Segurar o que têm até que Cristo venha.</div></div>
+        <div class="ig-item"><div class="ig-label">🏆 Promessa</div><div class="ig-val">Poder sobre as nações e a estrela da manhã.</div></div>
+      </div>
+      <div class="ig-analise">Tiatira é a Igreja com crescimento espiritual real ('as últimas obras são maiores que as primeiras') mas com tolerância de falsa profecia. 'Jezabel' é um nome simbólico — evoca a rainha fenícia que introduziu o culto de Baal em Israel (1 Rs 16:31-33). Esta profetisa em Tiatira ensinava que os cristãos podiam participar nas práticas das guildas pagãs — provavelmente argumentando que os ídolos não são nada (cf. 1 Co 8) e que o cristão maduro pode participar sem ser contaminado. Cristo deu-lhe tempo para se arrepender, mas ela não se arrependeu. O julgamento é severo: tribulação para ela e seus seguidores, morte para seus filhos. A promessa da 'estrela da manhã' (<em>ton astera ton prōinon</em>) é identificada em Ap 22:16 com o próprio Cristo — o vencedor recebe Cristo como sua recompensa suprema.</div>
+    </div>
+    </div>
+    <div class="section-block">
+      <h2>📚 Vocabulário Essencial</h2>
+      <div class="vocab-grid">
+        <div class="vocab-card"><div class="termo">ἀγάπη πρώτη</div><div class="transl">agapē prōtē</div><div class="def">Primeiro amor. A devoção apaixonada e fervorosa a Cristo que caracteriza os primeiros dias da fé. Pode ser perdida gradualmente pela rotina religiosa.</div></div>
+        <div class="vocab-card"><div class="termo">νικάω</div><div class="transl">nikaō</div><div class="def">Vencer, conquistar. O 'vencedor' (ho nikōn) é o crente que persevera na fé até o fim. Cada carta tem uma promessa específica ao vencedor.</div></div>
+        <div class="vocab-card"><div class="termo">μετανοέω</div><div class="transl">metanoeō</div><div class="def">Arrepender-se. Mudança de mente e direção. Cinco das sete igrejas são chamadas ao arrependimento — o arrependimento é o caminho de volta à fidelidade.</div></div>
+        <div class="vocab-card"><div class="termo">συναγωγή Σατανᾶ</div><div class="transl">synagōgē Satana</div><div class="def">Sinagoga de Satanás. Judeus que colaboravam com as autoridades romanas na perseguição dos cristãos em Esmirna e Filadélfia.</div></div>
+      </div>
+    </div>
+    <div class="section-block">
+      <h2>🏛️ Teologia das 7 Cartas</h2>
+      <p>As sete cartas revelam a visão de Cristo sobre sua Igreja — uma visão que é simultaneamente realista e esperançosa. Cristo conhece a situação de cada Igreja em seus detalhes mais íntimos: "Eu sei as tuas obras" (<em>oida sou ta erga</em>) é a abertura de cada carta. Não há nada oculto de Cristo — ele vê a ortodoxia e a heresia, o amor e a frieza, a fidelidade e o compromisso.</p>
+      <p>A estrutura das cartas revela a pedagogia de Cristo: ele elogia antes de criticar (exceto em Laodiceia, que não recebe elogio), e critica antes de ameaçar. O objetivo não é condenação, mas restauração — "sê zeloso e arrepende-te" (3:19). O chamado ao arrependimento é uma expressão de amor: "eu repreendo e disciplino a todos quantos amo" (3:19).</p>
+    </div>
+    <div class="nav-cap">
+      <a href="/08-novo-testamento/apocalipse/capitulos/capitulo-01.html">← Apocalipse 1</a>
+      <a href="/08-novo-testamento/apocalipse/index.html">📋 Índice</a>
+      <a href="/08-novo-testamento/apocalipse/capitulos/capitulo-03.html">Apocalipse 3 →</a>
+    </div>
+  </div>
+</body>
+</html>

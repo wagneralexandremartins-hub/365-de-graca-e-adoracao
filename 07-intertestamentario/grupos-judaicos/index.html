@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grupos Judaicos — Intertestamentário · 365 de Graça &amp; Adoração</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    body { background:#0f172a; color:#e2e8f0; font-family:'Segoe UI',sans-serif; margin:0; padding:0; }
+    .topbar { background:rgba(15,23,42,0.97); border-bottom:1px solid rgba(255,255,255,0.08); padding:0 24px; position:sticky; top:0; z-index:100; }
+    .topbar .inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; height:60px; }
+    .topbar a { color:#94a3b8; text-decoration:none; font-size:0.9rem; }
+    .topbar .nav { display:flex; gap:20px; }
+    .topbar .active { color:#fb923c; font-weight:700; }
+    .wrap { max-width:900px; margin:0 auto; padding:40px 24px 80px; }
+    .hero { background:linear-gradient(135deg,rgba(251,146,60,0.13) 0%,rgba(0,0,0,0.35) 100%); border:1px solid rgba(251,146,60,0.22); border-radius:20px; padding:40px 32px; margin-bottom:36px; text-align:center; }
+    .hero .tag { display:inline-block; background:rgba(251,146,60,0.15); border:1px solid rgba(251,146,60,0.30); color:#fb923c; font-size:0.78rem; font-weight:700; padding:4px 14px; border-radius:999px; margin-bottom:14px; }
+    .hero h1 { font-size:2.4rem; font-weight:900; color:#fb923c; margin:0 0 10px 0; }
+    .hero .sub { color:#94a3b8; font-size:1.05rem; margin-bottom:20px; line-height:1.7; }
+    .section-block { background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.07); border-radius:16px; padding:28px 32px; margin-bottom:24px; }
+    .section-block h2 { font-size:1.2rem; margin:0 0 16px 0; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:12px; }
+    .section-block p { color:#cbd5e1; line-height:1.88; margin-bottom:14px; font-size:0.95rem; }
+    .section-block p:last-child { margin-bottom:0; }
+    .grupo-full { border-radius:16px; padding:28px; margin-bottom:20px; border:1px solid; }
+    .grupo-full .g-header { display:flex; align-items:center; gap:16px; margin-bottom:16px; }
+    .grupo-full .g-icon { font-size:2.2rem; }
+    .grupo-full .g-name { font-size:1.3rem; font-weight:900; }
+    .grupo-full .g-origin { font-size:0.82rem; font-weight:600; opacity:0.7; margin-top:2px; }
+    .grupo-full h3 { font-size:0.95rem; font-weight:800; text-transform:uppercase; letter-spacing:0.04em; margin:16px 0 8px 0; opacity:0.8; }
+    .grupo-full p { color:#cbd5e1; line-height:1.85; margin-bottom:12px; font-size:0.93rem; }
+    .grupo-full .nt-ref { background:rgba(59,130,246,0.08); border:1px solid rgba(59,130,246,0.20); border-radius:8px; padding:12px 16px; margin-top:12px; }
+    .grupo-full .nt-ref .label { font-size:0.75rem; font-weight:800; color:#60a5fa; text-transform:uppercase; margin-bottom:6px; }
+    .grupo-full .nt-ref p { color:#94a3b8; font-size:0.90rem; margin:0; }
+    /* Fariseus */
+    .g-fariseus { background:rgba(var(--accent-rgb),0.04); border-color:rgba(var(--accent-rgb),0.20); }
+    .g-fariseus .g-name { color:var(--accent); }
+    .g-fariseus h3 { color:var(--accent); }
+    /* Saduceus */
+    .g-saduceus { background:rgba(248,113,113,0.04); border-color:rgba(248,113,113,0.20); }
+    .g-saduceus .g-name { color:#f87171; }
+    .g-saduceus h3 { color:#f87171; }
+    /* Essênios */
+    .g-essenios { background:rgba(52,211,153,0.04); border-color:rgba(52,211,153,0.20); }
+    .g-essenios .g-name { color:#34d399; }
+    .g-essenios h3 { color:#34d399; }
+    /* Zelotes */
+    .g-zelotes { background:rgba(251,146,60,0.04); border-color:rgba(251,146,60,0.20); }
+    .g-zelotes .g-name { color:#fb923c; }
+    .g-zelotes h3 { color:#fb923c; }
+    /* Escribas */
+    .g-escribas { background:rgba(96,165,250,0.04); border-color:rgba(96,165,250,0.20); }
+    .g-escribas .g-name { color:#60a5fa; }
+    .g-escribas h3 { color:#60a5fa; }
+    .nav-buttons { display:flex; gap:12px; justify-content:space-between; margin-top:48px; padding-top:24px; border-top:1px solid rgba(255,255,255,0.08); }
+    .nav-buttons a { background:rgba(251,146,60,0.10); border:1px solid rgba(251,146,60,0.22); color:#fb923c; padding:12px 22px; border-radius:10px; text-decoration:none; font-weight:700; font-size:0.90rem; }
+    .nav-buttons a.center { background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.12); color:#94a3b8; }
+  </style>
+  <link rel="stylesheet" href="/assets/css/bloco.css">
+  <style>
+    :root {
+      --accent: #6366f1;
+      --accent-rgb: 99, 102, 241;
+    }
+  </style>
+</head>
+<body class="bloco-08">
+  <div class="topbar"><div class="inner"><a href="/">Início</a>
+    <div class="nav"><a href="/07-intertestamentario/index.html">Intertestamentário</a>
+    <a class="active" href="#">Grupos Judaicos</a></div></div></div>
+
+  <div class="wrap">
+    <div class="hero">
+      <span class="tag">🕍 Grupos Judaicos · Análise Temática Completa</span>
+      <h1>Fariseus, Saduceus, Essênios, Zelotes e Escribas</h1>
+      <p class="sub">Quem eram, o que criam, como surgiram, e como cada grupo interagiu com Jesus no Novo Testamento. O mapa religioso do judaísmo do século I d.C.</p>
+    </div>
+
+    <div class="section-block">
+      <h2 style="color:#fb923c;">📜 O Judaísmo do Século I — Um Mosaico de Grupos</h2>
+      <p>O judaísmo do tempo de Jesus não era monolítico — era um mosaico de grupos com teologias, práticas e visões políticas distintas, frequentemente em conflito entre si. Estes grupos surgiram durante o Período Macabeu e Romano como respostas diferentes à questão central: como ser fiel a Deus sob o domínio estrangeiro? Cada grupo tinha uma resposta diferente — e Jesus dialogou, concordou e discordou com cada um deles de formas específicas.</p>
+      <p>Entender estes grupos é essencial para ler o NT com inteligência. Quando Jesus debate com os fariseus sobre o sábado, quando os saduceus questionam sobre a ressurreição, quando um zelote está entre os doze apóstolos, quando os escribas ficam admirados com sua autoridade — cada um destes episódios tem uma profundidade que só se revela quando conhecemos o contexto histórico e teológico de cada grupo.</p>
+    </div>
+
+    <!-- FARISEUS -->
+    <div class="grupo-full g-fariseus">
+      <div class="g-header">
+        <div class="g-icon">📖</div>
+        <div><div class="g-name">Fariseus</div><div class="g-origin">Origem: ~160 a.C. · Descendentes dos Hasidim · Nome: "Separados" (perushim)</div></div>
+      </div>
+      <h3>Quem eram</h3>
+      <p>Os fariseus eram o grupo religioso mais influente do judaísmo do século I d.C. Seu nome hebraico <em>perushim</em> significa "separados" — separados da impureza ritual e dos compromissos com o poder pagão. Eles eram descendentes espirituais dos hasidim (os pios) que haviam resistido à helenização durante o Período Macabeu. Eram predominantemente da classe média — comerciantes, artesãos, funcionários — não da elite sacerdotal.</p>
+      <h3>O que criam</h3>
+      <p>Os fariseus acreditavam na Torá escrita E na "Torá oral" — uma tradição de interpretações e aplicações da Lei transmitida oralmente desde Moisés. Esta tradição oral (que mais tarde seria codificada na Mishná e no Talmude) era para eles tão autoritativa quanto a Torá escrita. Eles criam na ressurreição dos mortos, nos anjos, na providência divina, e na vida após a morte — doutrinas que os distinguiam dos saduceus.</p>
+      <p>Os fariseus eram rigorosos na observância das leis de pureza ritual, do dízimo, do sábado e das leis alimentares. Eles "construíam uma cerca ao redor da Torá" — adicionando regras extras para garantir que a Lei não fosse violada. Esta "cerca" é o que Jesus frequentemente critica: ela tornava a Lei um fardo impossível e perdia de vista o espírito da Lei.</p>
+      <h3>Relação com Jesus</h3>
+      <p>A relação de Jesus com os fariseus é complexa. Por um lado, Jesus concordava com eles em muitos pontos: ressurreição, anjos, providência divina. Ele foi convidado para jantar na casa de fariseus várias vezes (Lc 7:36; 11:37; 14:1). Nicodemos era fariseu (Jo 3:1). Paulo era fariseu (Fp 3:5) e continuou se identificando como tal mesmo após sua conversão (At 23:6). Por outro lado, Jesus os confrontou duramente por sua hipocrisia, seu legalismo e sua tradição que anulava a Palavra de Deus (Mt 15:3-9; Mt 23).</p>
+      <div class="nt-ref"><div class="label">📖 Referências NT</div><p>Mateus 23 (sete ais contra os fariseus), João 3 (Nicodemos), Atos 23:6-8 (Paulo como fariseu), Filipenses 3:5-6 (formação farisaica de Paulo), Lucas 18:9-14 (parábola do fariseu e do publicano).</p></div>
+    </div>
+
+    <!-- SADUCEUS -->
+    <div class="grupo-full g-saduceus">
+      <div class="g-header">
+        <div class="g-icon">🏛️</div>
+        <div><div class="g-name">Saduceus</div><div class="g-origin">Origem: ~150 a.C. · Elite Sacerdotal e Aristocrática · Nome: possivelmente de "Zadoque" (sumo sacerdote de Salomão)</div></div>
+      </div>
+      <h3>Quem eram</h3>
+      <p>Os saduceus eram a elite sacerdotal e aristocrática do judaísmo. Eles controlavam o sumo sacerdócio, o Templo e o Sinédrio — o conselho supremo judaico. Eram colaboradores pragmáticos com Roma: preferiam a estabilidade política à pureza religiosa. Seu poder estava ligado ao Templo — quando o Templo foi destruído em 70 d.C., os saduceus desapareceram como grupo.</p>
+      <h3>O que criam</h3>
+      <p>Os saduceus aceitavam apenas a Torá escrita (os cinco livros de Moisés) como autoritativa — rejeitando a tradição oral dos fariseus e os livros proféticos como base de doutrina. Consequentemente, negavam a ressurreição dos mortos (não encontravam evidência clara na Torá), a existência de anjos e espíritos, e a providência divina detalhada. Eram teologicamente conservadores e politicamente pragmáticos.</p>
+      <h3>Relação com Jesus</h3>
+      <p>Os saduceus interagiram menos com Jesus do que os fariseus, mas quando interagiram, foi com hostilidade. Eles tentaram pegar Jesus em uma armadilha com a questão da ressurreição (Mt 22:23-33) — e Jesus os refutou usando exatamente a Torá que eles aceitavam (Êx 3:6 — "Eu sou o Deus de Abraão, de Isaque e de Jacó" — no presente, não no passado). Os sumos sacerdotes que organizaram a prisão e o julgamento de Jesus eram saduceus (At 5:17).</p>
+      <div class="nt-ref"><div class="label">📖 Referências NT</div><p>Mateus 22:23-33 (questão sobre a ressurreição), Atos 4:1-3 (saduceus prendem Pedro e João), Atos 5:17 (sumo sacerdote saduceu), Atos 23:6-8 (conflito entre fariseus e saduceus no Sinédrio).</p></div>
+    </div>
+
+    <!-- ESSÊNIOS -->
+    <div class="grupo-full g-essenios">
+      <div class="g-header">
+        <div class="g-icon">📜</div>
+        <div><div class="g-name">Essênios</div><div class="g-origin">Origem: ~150 a.C. · Comunidade Monástica · Produtores dos Manuscritos do Mar Morto</div></div>
+      </div>
+      <h3>Quem eram</h3>
+      <p>Os essênios eram uma comunidade monástica que se retirou do mundo para viver em pureza radical. A comunidade mais conhecida ficava em Qumrã, perto do Mar Morto. Eles rejeitavam o Templo de Jerusalém como corrompido pelos hasmoneus e pelos sumos sacerdotes ilegítimos, e esperavam que Deus restaurasse o verdadeiro sacerdócio no tempo do fim. Viviam em comunidade com bens compartilhados, celibato (pelo menos para alguns membros), e rigorosa observância da pureza ritual.</p>
+      <h3>O que criam</h3>
+      <p>Os essênios criam na predestinação, na dualidade entre luz e trevas (influência persa?), na ressurreição, e na iminência do fim dos tempos. Eles esperavam dois Messias: um Messias sacerdotal (da linha de Aarão) e um Messias real (da linha de Davi). Sua literatura apocalíptica — especialmente a Regra da Comunidade e a Guerra dos Filhos da Luz contra os Filhos das Trevas — mostra uma teologia rica e complexa.</p>
+      <h3>Relação com o NT</h3>
+      <p>Os essênios não são mencionados pelo nome no NT, mas seus paralelos com o NT são notáveis. João Batista pregava no deserto, batizava para purificação, e vivia asceticamente — características essênicas. A comunidade de Atos 2 (bens em comum, refeições comunitárias, batismo) tem paralelos com Qumrã. O vocabulário joanino de "luz e trevas", "filhos de Deus vs. filhos do diabo" tem paralelos com os textos essênios. Mas Jesus não era essênio — ele comia com pecadores, tocava nos impuros, e não se retirou do mundo.</p>
+      <div class="nt-ref"><div class="label">📖 Conexões com o NT</div><p>João 1:23 (João Batista no deserto — cf. Is 40:3, citado também em 1QS 8:14 de Qumrã), Atos 2:44-45 (bens em comum — cf. Regra da Comunidade), João 1:5; 3:19-21 (luz e trevas — vocabulário também em 1QS), Hebreus 9-10 (sacerdócio e sacrifício — temas centrais em Qumrã).</p></div>
+    </div>
+
+    <!-- ZELOTES -->
+    <div class="grupo-full g-zelotes">
+      <div class="g-header">
+        <div class="g-icon">⚔️</div>
+        <div><div class="g-name">Zelotes</div><div class="g-origin">Origem: ~6 d.C. · Resistência Armada Anti-Romana · Inspirados na tradição macabeia</div></div>
+      </div>
+      <h3>Quem eram</h3>
+      <p>Os zelotes eram o movimento de resistência armada ao domínio romano. Fundados por Judas, o Galileu, em 6 d.C. (quando Roma impôs um censo e tributação direta), eles acreditavam que pagar tributo a César era uma forma de apostasia — reconhecer a soberania de um rei humano pagão sobre a terra que pertencia a Deus. Seu lema era: "Nenhum senhor exceto Deus." Eles estavam dispostos a usar a violência para libertar Israel.</p>
+      <h3>O que criam</h3>
+      <p>Os zelotes criam que a libertação de Israel viria através da ação humana — especificamente, através da guerra santa contra Roma. Eles se inspiravam nos Macabeus, que haviam libertado Israel dos selêucidas através da guerra. Criam que se Israel se levantasse em fé, Deus interviria e enviaria o Messias para completar a vitória. Esta visão de um Messias guerreiro é uma das expectativas messiânicas que Jesus deliberadamente recusou.</p>
+      <h3>Relação com Jesus</h3>
+      <p>Simão, um dos doze apóstolos, é chamado de "zelote" (Lc 6:15; At 1:13). Isso significa que Jesus deliberadamente incluiu em seu grupo íntimo um membro do movimento de resistência armada — ao lado de Mateus, um cobrador de impostos para Roma. Esta combinação explosiva mostra que Jesus não veio para estabelecer um movimento político, mas para criar uma nova comunidade que transcendia as divisões políticas. A pergunta "Devemos pagar tributo a César?" (Mt 22:17) era uma armadilha zelote: se Jesus dissesse "sim", seria traidor; se dissesse "não", seria rebelde.</p>
+      <div class="nt-ref"><div class="label">📖 Referências NT</div><p>Lucas 6:15 (Simão o Zelote), Mateus 22:15-22 (tributo a César — questão zelote), João 6:15 (povo quer fazer Jesus rei — expectativa zelote), Atos 5:36-37 (Gamaliel menciona Judas o Galileu, fundador dos zelotes), Atos 21:38 (o "egípcio" que liderou 4.000 sicários — facção extrema dos zelotes).</p></div>
+    </div>
+
+    <!-- ESCRIBAS -->
+    <div class="grupo-full g-escribas">
+      <div class="g-header">
+        <div class="g-icon">✍️</div>
+        <div><div class="g-name">Escribas</div><div class="g-origin">Origem: Período Persa · Especialistas na Lei · Frequentemente aliados aos Fariseus</div></div>
+      </div>
+      <h3>Quem eram</h3>
+      <p>Os escribas (<em>grammateis</em> em grego, <em>soferim</em> em hebraico) eram especialistas profissionais na interpretação e aplicação da Lei de Moisés. Eles não eram um grupo político ou teológico como os fariseus e saduceus — eram uma classe profissional, como advogados especializados em direito religioso. Muitos escribas eram fariseus, mas nem todos os fariseus eram escribas, e havia escribas saduceus também.</p>
+      <h3>O que faziam</h3>
+      <p>Os escribas copiavam as Escrituras (garantindo a transmissão fiel do texto), ensinavam a Lei nas sinagogas e no Templo, interpretavam a Lei em casos específicos, e funcionavam como consultores legais em questões religiosas. Eles eram os guardiões da tradição — e sua autoridade vinha exatamente desta tradição. Quando Jesus ensinava "com autoridade, e não como os escribas" (Mt 7:29), ele estava contrastando sua autoridade intrínseca com a autoridade derivada da tradição que os escribas invocavam.</p>
+      <h3>Relação com Jesus</h3>
+      <p>Os escribas aparecem frequentemente no NT como adversários de Jesus — mas um escriba também se aproximou de Jesus dizendo "Mestre, eu te seguirei" (Mt 8:19), e Jesus elogiou um escriba que respondeu sabiamente sobre o maior mandamento (Mc 12:34 — "Não estás longe do reino de Deus"). Jesus não rejeitava os escribas como classe — rejeitava sua hipocrisia e seu uso da tradição para anular a Palavra de Deus.</p>
+      <div class="nt-ref"><div class="label">📖 Referências NT</div><p>Mateus 7:28-29 (Jesus ensina com autoridade, não como os escribas), Mateus 23:2 (os escribas e fariseus sentam na cadeira de Moisés), Marcos 12:28-34 (o escriba que pergunta sobre o maior mandamento), Lucas 20:46-47 (aviso contra os escribas), João 8:3 (escribas e fariseus trazem a mulher adúltera).</p></div>
+    </div>
+
+    <div class="nav-buttons">
+      <a href="/07-intertestamentario/periodo-romano/index.html">← Período Romano</a>
+      <a class="center" href="/07-intertestamentario/index.html">Todos os Módulos</a>
+      <a href="/07-intertestamentario/expectativa-messianica/index.html">Expectativa Messiânica →</a>
+    </div>
+  </div>
+</body>
+</html>

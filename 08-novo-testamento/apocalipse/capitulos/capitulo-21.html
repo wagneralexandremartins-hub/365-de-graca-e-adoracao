@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apocalipse 21 — A Nova Jerusalém | 365 de Graça & Adoração</title>
+  <link rel="icon" href="/favicon.ico">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0f172a; color: #e2e8f0; font-family: 'Georgia', serif; line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    .topbar { background: rgba(15,23,42,0.97); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
+    .topbar .inner { max-width: 900px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .topbar a { font-size: 0.85rem; color: #94a3b8; font-weight: 600; transition: color 0.2s; }
+    .topbar a:hover { color: #a855f7; }
+    .hero { background: linear-gradient(135deg, #0f172a 0%, #0d001a 50%, #0f172a 100%); padding: 64px 24px 48px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .tag { display: inline-block; background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.25); color: #a855f7; font-size: 0.72rem; font-weight: 800; padding: 4px 14px; border-radius: 999px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+    .hero h1 { font-size: 2.4rem; font-weight: 900; color: #f1f5f9; margin-bottom: 12px; line-height: 1.2; }
+    .hero .ref { font-size: 0.88rem; color: #64748b; margin-bottom: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+    .hero blockquote { font-style: italic; color: #cbd5e1; font-size: 1rem; border-left: 3px solid #a855f7; padding-left: 20px; max-width: 600px; margin: 0 auto; text-align: left; }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
+    .section-block { margin-bottom: 40px; }
+    .section-block h2 { font-size: 1.3rem; font-weight: 800; color: #f1f5f9; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .section-block p { color: #94a3b8; font-size: 0.95rem; line-height: 1.85; margin-bottom: 16px; }
+    .versiculo-bloco { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-left: 3px solid #a855f7; border-radius: 0 12px 12px 0; padding: 18px 20px; margin-bottom: 16px; }
+    .ref-v { font-size: 0.8rem; font-weight: 800; color: #a855f7; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .texto-v { font-style: italic; color: #cbd5e1; font-size: 0.95rem; margin-bottom: 10px; line-height: 1.7; }
+    .analise-v { color: #94a3b8; font-size: 0.9rem; line-height: 1.8; }
+    .igreja-card { background: rgba(168,85,247,0.05); border: 1px solid rgba(168,85,247,0.25); border-radius: 14px; padding: 24px; margin-bottom: 24px; }
+    .igreja-nome { font-size: 1.2rem; font-weight: 900; color: #a855f7; margin-bottom: 4px; }
+    .igreja-ref { font-size: 0.78rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 14px; }
+    .igreja-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+    @media (max-width: 600px) { .igreja-grid { grid-template-columns: 1fr; } }
+    .ig-item { background: rgba(255,255,255,0.02); border-radius: 8px; padding: 10px 14px; }
+    .ig-label { font-size: 0.72rem; font-weight: 800; color: #a855f7; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .ig-val { font-size: 0.88rem; color: #cbd5e1; line-height: 1.6; }
+    .ig-analise { font-size: 0.9rem; color: #94a3b8; line-height: 1.8; }
+    .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin-top: 16px; }
+    .vocab-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 14px 16px; }
+    .termo { font-size: 1.1rem; font-weight: 800; color: #a855f7; font-family: 'Georgia', serif; }
+    .transl { font-size: 0.78rem; color: #64748b; font-style: italic; margin: 2px 0 6px; }
+    .def { font-size: 0.85rem; color: #94a3b8; line-height: 1.65; }
+    .nav-cap { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.07); }
+    .nav-cap a { background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.25); color: #a855f7; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-size: 0.88rem; font-weight: 700; transition: all 0.2s; }
+    .nav-cap a:hover { background: rgba(168,85,247,0.2); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.87rem; margin: 20px 0 32px; }
+    th { background: rgba(168,85,247,0.1); color: #a855f7; padding: 10px 14px; text-align: left; font-weight: 700; border-bottom: 1px solid rgba(168,85,247,0.25); }
+    td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+</style>
+  <link rel="stylesheet" href="/assets/css/bloco.css">
+  <style>
+    :root {
+      --accent: #0ea5e9;
+      --accent-rgb: 14, 165, 233;
+    }
+  </style>
+</head>
+<body class="bloco-09">
+  <div class="topbar"><div class="inner">
+    <a href="/08-novo-testamento/apocalipse/index.html">← Apocalipse</a>
+    <a href="/08-novo-testamento/index.html">Novo Testamento</a>
+  </div></div>
+  <div class="hero">
+    <span class="tag">🌟 Apocalipse 21 · A Nova Criação</span>
+    <h1>Apocalipse 21 — A Nova Jerusalém</h1>
+    <div class="ref">Apocalipse 21:1-27 · João · c. 95-96 d.C. · Ilha de Patmos</div>
+    <blockquote>E ouvi uma grande voz do trono, dizendo: Eis o tabernáculo de Deus com os homens; pois com eles habitará, e eles serão o seu povo, e o próprio Deus estará com eles. — Apocalipse 21:3</blockquote>
+  </div>
+  <div class="wrap">
+    <div class="section-block">
+      <h2>📜 Contexto: O Clímax da Revelação</h2>
+      <p>Apocalipse 21 é o clímax de toda a narrativa bíblica — a consumação de tudo o que Deus prometeu desde o Éden. Após o julgamento do grande trono branco (cap. 20), João vê "um novo céu e uma nova terra" (<em>ouranon kainon kai gēn kainēn</em>) — a criação renovada e restaurada. A Nova Jerusalém descendo do céu é a imagem da habitação de Deus com a humanidade — o cumprimento definitivo do propósito da criação.</p>
+      <p>O capítulo 21 inverte as maldições do Éden: não mais morte (v. 4), não mais dor (v. 4), não mais maldição (22:3), não mais noite (v. 25), não mais mar (v. 1 — o mar era símbolo de caos e morte no mundo antigo). A Nova Jerusalém não é um lugar onde os salvos vão — é um lugar que desce do céu para a terra. A escatologia bíblica não é a fuga da terra para o céu, mas a renovação da terra pelo céu.</p>
+    </div>
+    <div class="section-block">
+      <h2>🔍 Análise Versículo por Versículo</h2>
+      <div class="versiculo-bloco">
+        <div class="ref-v">21:1-4 — Todas as Coisas Novas</div>
+        <div class="texto-v">"E vi um novo céu e uma nova terra; porque o primeiro céu e a primeira terra passaram, e o mar já não existe. E eu, João, vi a santa cidade, a nova Jerusalém, descer do céu da parte de Deus, adornada como uma noiva ataviada para o seu marido."</div>
+        <div class="analise-v">O "novo céu e nova terra" (<em>ouranon kainon kai gēn kainēn</em>) ecoa Isaías 65:17 e 66:22. O adjetivo "novo" (<em>kainos</em>) não significa "completamente diferente" (isso seria <em>neos</em>), mas "renovado, restaurado, de qualidade superior". A nova criação não é a destruição da criação original e a criação de algo completamente diferente — é a transformação e renovação da criação original. A Nova Jerusalém "descendo do céu" (<em>katabainousa ek tou ouranou</em>) é a imagem da habitação de Deus com a humanidade — não os salvos subindo ao céu, mas o céu descendo à terra. A voz do trono (v. 3) anuncia o cumprimento de toda a história da redenção: "Eis o tabernáculo de Deus com os homens" (<em>hē skēnē tou Theou meta tōn anthrōpōn</em>) — o tabernáculo, o templo, a encarnação de Cristo, a habitação do Espírito nos crentes — tudo isso era antecipação desta habitação definitiva e perfeita.</div>
+      </div>
+      <div class="versiculo-bloco">
+        <div class="ref-v">21:5-8 — "Eis que Faço Novas Todas as Coisas"</div>
+        <div class="texto-v">"E o que estava assentado no trono disse: Eis que faço novas todas as coisas. E disse-me: Escreve, porque estas palavras são fiéis e verdadeiras... Eu sou o Alfa e o Ômega, o princípio e o fim. A quem tiver sede darei de graça da fonte da água da vida."</div>
+        <div class="analise-v">"Eis que faço novas todas as coisas" (<em>idou kaina poiō panta</em>) — esta é a única vez no Apocalipse que Deus fala diretamente em primeira pessoa. A renovação de todas as coisas é a declaração mais abrangente da escatologia bíblica — não apenas a salvação das almas, mas a renovação do cosmos inteiro. "Estas palavras são fiéis e verdadeiras" (<em>houtoi hoi logoi pistoi kai alēthinoi eisin</em>) — a confiabilidade da promessa é garantida pelo caráter de Deus. "Alfa e Ômega, princípio e fim" — Deus que iniciou a criação a completará. A promessa da "fonte da água da vida" (<em>tēs pēgēs tou hydatos tēs zōēs</em>) ecoa a promessa de Jesus à samaritana (Jo 4:14) e ao último dia da festa dos tabernáculos (Jo 7:37-38) — a sede espiritual da humanidade será satisfeita definitivamente na nova criação.</div>
+      </div>
+      <div class="versiculo-bloco">
+        <div class="ref-v">21:9-21 — As Dimensões da Nova Jerusalém</div>
+        <div class="texto-v">"E a cidade está posta em quadrado, e o seu comprimento é tanto como a sua largura; e ele mediu a cidade com a cana, doze mil estádios; o comprimento, a largura e a altura são iguais. E mediu o seu muro, cento e quarenta e quatro côvados."</div>
+        <div class="analise-v">As dimensões da Nova Jerusalém são simbólicas, não literais. 12.000 estádios (aproximadamente 2.400 km) em cada dimensão — comprimento, largura e altura iguais — formam um cubo perfeito. O único outro cubo na Bíblia é o Santo dos Santos do Templo de Salomão (1 Rs 6:20) — 20 côvados em cada dimensão. A Nova Jerusalém é o Santo dos Santos cósmico — o lugar da presença de Deus expandido para abranger toda a nova criação. O número 12 permeia toda a descrição: 12 portas com os nomes das 12 tribos de Israel, 12 fundamentos com os nomes dos 12 apóstolos, 12.000 estádios, 144 côvados (12 × 12). O 12 é o número do povo de Deus — a Nova Jerusalém é a habitação definitiva do povo de Deus em sua plenitude.</div>
+      </div>
+      <div class="versiculo-bloco">
+        <div class="ref-v">21:22-27 — Sem Templo, Sem Sol, Sem Noite</div>
+        <div class="texto-v">"E não vi nenhum templo nela, porque o Senhor Deus Todo-Poderoso é o seu templo, e o Cordeiro. E a cidade não necessita do sol nem da lua para lhe darem claridade; porque a glória de Deus a iluminou, e o Cordeiro é a sua lâmpada."</div>
+        <div class="analise-v">A ausência de templo na Nova Jerusalém é surpreendente — o templo era o coração da religião bíblica. Mas o templo era o lugar onde Deus habitava de forma especial; na Nova Jerusalém, Deus habita em toda parte — "o Senhor Deus Todo-Poderoso é o seu templo, e o Cordeiro" (<em>ho gar Kyrios ho Theos ho pantokratōr naos autēs estin kai to arnion</em>). O templo era o meio; a habitação direta de Deus é o fim. A ausência de sol e lua não é cosmológica — é teológica: a glória de Deus é a fonte de toda luz. "As nações andarão na sua luz" (<em>ta ethnē peripatēsousin dia tou phōtos autēs</em>) — a Nova Jerusalém não é exclusiva para Israel ou para os cristãos; as nações trazem sua glória para ela (v. 24,26). A nova criação é a consumação da promessa abraâmica de que todas as nações seriam abençoadas.</div>
+      </div>
+    </div>
+    <div class="section-block">
+      <h2>📚 Vocabulário Essencial</h2>
+      <div class="vocab-grid">
+        <div class="vocab-card"><div class="termo">καινός</div><div class="transl">kainos</div><div class="def">Novo (de qualidade superior, renovado). O novo céu e nova terra não são uma criação completamente diferente, mas a criação original renovada e transformada. A escatologia bíblica é renovação, não substituição.</div></div>
+        <div class="vocab-card"><div class="termo">σκηνή</div><div class="transl">skēnē</div><div class="def">Tabernáculo, tenda. 'O tabernáculo de Deus com os homens' — a habitação definitiva de Deus com a humanidade. Ecoa o tabernáculo do deserto, o templo de Salomão, e a encarnação de Cristo (Jo 1:14 — 'habitou entre nós', lit. 'tabernaculou').</div></div>
+        <div class="vocab-card"><div class="termo">ναός</div><div class="transl">naos</div><div class="def">Templo (o santuário interior). Na Nova Jerusalém, não há templo porque Deus e o Cordeiro são o templo. O meio (templo) é substituído pelo fim (habitação direta de Deus).</div></div>
+        <div class="vocab-card"><div class="termo">δόξα</div><div class="transl">doxa</div><div class="def">Glória. A glória de Deus ilumina a Nova Jerusalém — não há necessidade de sol ou lua. A glória divina, que habitou no tabernáculo e no templo, agora preenche toda a nova criação.</div></div>
+      </div>
+    </div>
+    <div class="section-block">
+      <h2>🏛️ Teologia da Nova Criação</h2>
+      <p>Apocalipse 21 apresenta a escatologia bíblica em sua forma mais completa. A esperança cristã não é a fuga da terra para um céu imaterial — é a renovação da terra pela glória de Deus. A Nova Jerusalém descendo do céu é a imagem da criação restaurada, da humanidade redimida, e da habitação definitiva de Deus com seu povo.</p>
+      <p>A estrutura da Nova Jerusalém revela a continuidade entre a criação original e a nova criação: as 12 tribos de Israel e os 12 apóstolos são os fundamentos da cidade — a história da redenção não é apagada, mas consumada. Os que foram redimidos "de toda tribo, língua, povo e nação" (5:9) habitam juntos na cidade — a diversidade humana não é eliminada, mas glorificada na nova criação.</p>
+    </div>
+    <div class="section-block">
+      <h2>✨ Aplicação Contemporânea</h2>
+      <p>A visão da Nova Jerusalém é o fundamento da esperança cristã e o critério para a ação presente. Porque Deus promete renovar toda a criação, o cuidado com a criação presente tem valor escatológico. Porque a Nova Jerusalém acolhe pessoas de todas as nações, a missão transcultural é urgente. Porque "não haverá mais morte, nem pranto, nem clamor, nem dor" (21:4), o trabalho de cura, justiça e compaixão no presente é antecipação da nova criação.</p>
+      <p>A promessa "eis que faço novas todas as coisas" (21:5) é o fundamento da esperança cristã no sofrimento. Quando a dor parece permanente, quando a injustiça parece invencível, quando a morte parece ter a última palavra — esta promessa afirma que Deus está fazendo novas todas as coisas. A nova criação não é um sonho distante — é a realidade futura que já começa a irromper no presente através do Espírito Santo e da comunidade dos redimidos.</p>
+    </div>
+    <div class="nav-cap">
+      <a href="/08-novo-testamento/apocalipse/capitulos/capitulo-20.html">← Apocalipse 20</a>
+      <a href="/08-novo-testamento/apocalipse/index.html">📋 Índice</a>
+      <a href="/08-novo-testamento/apocalipse/capitulos/capitulo-22.html">Apocalipse 22 →</a>
+    </div>
+  </div>
+</body>
+</html>

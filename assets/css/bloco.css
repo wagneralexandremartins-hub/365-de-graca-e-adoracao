@@ -10,7 +10,7 @@
   Bloco 04 — Livros Poéticos          → Esmeralda       #059669
   Bloco 05 — Livros Proféticos        → Esmeralda       #059669
   Bloco 06 — Apócrifos                → Índigo          #6366f1
-  Bloco 06b— Intertestamentário       → Índigo          #6366f1
+  Bloco 07 — Intertestamentário       → Índigo          #6366f1
   Bloco 07 — Novo Testamento          → Azul Celeste    #0ea5e9
   Bloco 08 — Igreja Primitiva         → Azul Celeste    #0ea5e9
   Bloco 09 — Concílios                → Violeta         #8b5cf6
@@ -557,32 +557,32 @@ body.bloco-03, body.bloco-04, body.bloco-05 {
   --accent-rgb: 5, 150, 105;
 }
 
-/* Bloco 06 e 06b — Índigo */
-body.bloco-06, body.bloco-06b {
+/* Bloco 06 e 07 — Índigo */
+body.bloco-06, body.bloco-07 {
   --accent: #6366f1;
   --accent-rgb: 99, 102, 241;
 }
 
-/* Bloco 07 e 08 — Azul Celeste */
-body.bloco-07, body.bloco-08 {
+/* Bloco 08 e 09 — Azul Celeste */
+body.bloco-08, body.bloco-09 {
   --accent: #0ea5e9;
   --accent-rgb: 14, 165, 233;
 }
 
-/* Bloco 09 e 10 — Violeta */
-body.bloco-09, body.bloco-10 {
+/* Bloco 10 e 11 — Violeta */
+body.bloco-10, body.bloco-11 {
   --accent: #8b5cf6;
   --accent-rgb: 139, 92, 246;
 }
 
-/* Bloco 11 — Rubi */
-body.bloco-11 {
+/* Bloco 12 — Rubi */
+body.bloco-12 {
   --accent: #e11d48;
   --accent-rgb: 225, 29, 72;
 }
 
-/* Bloco 12 — Violeta Escuro */
-body.bloco-12 {
+/* Bloco 13 — Violeta Escuro (Apocalipse) */
+body.bloco-13 {
   --accent: #7c3aed;
   --accent-rgb: 124, 58, 237;
 }
