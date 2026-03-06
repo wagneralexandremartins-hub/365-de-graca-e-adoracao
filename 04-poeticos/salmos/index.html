@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/assets/css/style.css">
   <style>
     .hero-salmos {
-      background: linear-gradient(135deg, rgba(0,168,225,0.15) 0%, rgba(91,231,196,0.08) 100%);
+      background: linear-gradient(135deg, rgba(0,168,225,0.15) 0%, rgba(var(--accent-rgb),0.08) 100%);
       border: 1px solid rgba(0,168,225,0.22);
       border-radius: 24px;
       padding: 52px 36px;
@@ -93,8 +93,15 @@
     }
     table.tipos-table tr:last-child td { border-bottom: none; }
   </style>
+  <link rel="stylesheet" href="/assets/css/bloco.css">
+  <style>
+    :root {
+      --accent: #059669;
+      --accent-rgb: 5, 150, 105;
+    }
+  </style>
 </head>
-<body>
+<body class="bloco-04">
   <div class="topbar">
     <div class="inner">
       <a href="/" class="brand">

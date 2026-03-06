@@ -12,29 +12,29 @@
     .topbar .inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; height:60px; }
     .topbar a { color:#94a3b8; text-decoration:none; font-size:0.9rem; }
     .topbar .nav { display:flex; gap:20px; }
-    .topbar .active { color:#c084fc; font-weight:700; }
+    .topbar .active { color:var(--accent); font-weight:700; }
 
     /* HERO */
-    .hero { background:linear-gradient(135deg,rgba(192,132,252,0.12) 0%,rgba(139,92,246,0.07) 50%,rgba(0,0,0,0.4) 100%); border-bottom:1px solid rgba(192,132,252,0.18); padding:72px 24px 60px; text-align:center; }
-    .hero .badge { display:inline-block; background:rgba(192,132,252,0.15); border:1px solid rgba(192,132,252,0.30); color:#c084fc; font-size:0.78rem; font-weight:700; padding:5px 16px; border-radius:999px; margin-bottom:18px; letter-spacing:0.06em; }
-    .hero h1 { font-size:2.8rem; font-weight:900; color:#c084fc; margin:0 0 12px 0; line-height:1.15; }
+    .hero { background:linear-gradient(135deg,rgba(var(--accent-rgb),0.12) 0%,rgba(139,92,246,0.07) 50%,rgba(0,0,0,0.4) 100%); border-bottom:1px solid rgba(var(--accent-rgb),0.18); padding:72px 24px 60px; text-align:center; }
+    .hero .badge { display:inline-block; background:rgba(var(--accent-rgb),0.15); border:1px solid rgba(var(--accent-rgb),0.30); color:var(--accent); font-size:0.78rem; font-weight:700; padding:5px 16px; border-radius:999px; margin-bottom:18px; letter-spacing:0.06em; }
+    .hero h1 { font-size:2.8rem; font-weight:900; color:var(--accent); margin:0 0 12px 0; line-height:1.15; }
     .hero .sub { color:#94a3b8; font-size:1.12rem; max-width:700px; margin:0 auto 28px; line-height:1.7; }
-    .hero blockquote { background:rgba(192,132,252,0.07); border-left:4px solid #c084fc; border-radius:10px; padding:16px 24px; max-width:640px; margin:0 auto; font-style:italic; color:#e2e8f0; font-size:0.97rem; line-height:1.75; }
+    .hero blockquote { background:rgba(var(--accent-rgb),0.07); border-left:4px solid var(--accent); border-radius:10px; padding:16px 24px; max-width:640px; margin:0 auto; font-style:italic; color:#e2e8f0; font-size:0.97rem; line-height:1.75; }
 
     /* STATS */
-    .stats-bar { background:rgba(192,132,252,0.04); border-top:1px solid rgba(192,132,252,0.10); border-bottom:1px solid rgba(192,132,252,0.10); padding:28px 24px; }
+    .stats-bar { background:rgba(var(--accent-rgb),0.04); border-top:1px solid rgba(var(--accent-rgb),0.10); border-bottom:1px solid rgba(var(--accent-rgb),0.10); padding:28px 24px; }
     .stats-bar .inner { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:20px; text-align:center; }
-    .stat-item .num { font-size:2rem; font-weight:900; color:#c084fc; }
+    .stat-item .num { font-size:2rem; font-weight:900; color:var(--accent); }
     .stat-item .lbl { color:#64748b; font-size:0.82rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; margin-top:4px; }
 
     /* SEÇÕES */
     .section { max-width:1100px; margin:0 auto; padding:56px 24px; }
-    .section-title { font-size:1.5rem; font-weight:800; color:#c084fc; margin:0 0 8px 0; }
+    .section-title { font-size:1.5rem; font-weight:800; color:var(--accent); margin:0 0 8px 0; }
     .section-sub { color:#64748b; font-size:0.95rem; margin:0 0 36px 0; }
 
     /* CONTEXTO */
-    .context-box { background:rgba(192,132,252,0.04); border:1px solid rgba(192,132,252,0.12); border-radius:18px; padding:36px; margin-bottom:48px; }
-    .context-box h2 { color:#c084fc; font-size:1.3rem; margin:0 0 18px 0; }
+    .context-box { background:rgba(var(--accent-rgb),0.04); border:1px solid rgba(var(--accent-rgb),0.12); border-radius:18px; padding:36px; margin-bottom:48px; }
+    .context-box h2 { color:var(--accent); font-size:1.3rem; margin:0 0 18px 0; }
     .context-box p { color:#94a3b8; line-height:1.88; margin-bottom:14px; font-size:0.95rem; }
     .context-box p:last-child { margin-bottom:0; }
 
@@ -45,28 +45,28 @@
     .debate-card p { font-size:0.88rem; line-height:1.7; margin:0; color:#94a3b8; }
     .debate-card ul { margin:8px 0 0 0; padding-left:18px; }
     .debate-card ul li { font-size:0.87rem; color:#94a3b8; line-height:1.7; margin-bottom:4px; }
-    .debate-catol { background:rgba(192,132,252,0.04); border-color:rgba(192,132,252,0.20); }
-    .debate-catol h3 { color:#c084fc; }
+    .debate-catol { background:rgba(var(--accent-rgb),0.04); border-color:rgba(var(--accent-rgb),0.20); }
+    .debate-catol h3 { color:var(--accent); }
     .debate-prot { background:rgba(96,165,250,0.04); border-color:rgba(96,165,250,0.20); }
     .debate-prot h3 { color:#60a5fa; }
 
     /* LIVROS */
     .books-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:20px; margin-top:36px; }
     .book-card { background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.07); border-radius:16px; padding:24px; text-decoration:none; display:block; transition:all 0.2s; position:relative; overflow:hidden; }
-    .book-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:#c084fc; }
+    .book-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--accent); }
     .book-card:hover { transform:translateY(-3px); background:rgba(255,255,255,0.04); }
     .book-card .icon { font-size:2.2rem; margin-bottom:14px; }
-    .book-card .category { font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#c084fc; margin-bottom:8px; }
+    .book-card .category { font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:var(--accent); margin-bottom:8px; }
     .book-card h3 { font-size:1.1rem; font-weight:800; color:#e2e8f0; margin:0 0 8px 0; }
     .book-card .meta { font-size:0.80rem; color:#64748b; margin-bottom:10px; }
     .book-card p { color:#64748b; font-size:0.88rem; line-height:1.65; margin:0 0 14px 0; }
     .book-card .topics { display:flex; flex-wrap:wrap; gap:6px; }
     .book-card .topic { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); color:#94a3b8; font-size:0.75rem; padding:3px 10px; border-radius:999px; }
-    .book-card .cta { font-size:0.85rem; font-weight:700; color:#c084fc; margin-top:14px; display:block; }
+    .book-card .cta { font-size:0.85rem; font-weight:700; color:var(--accent); margin-top:14px; display:block; }
 
     /* CATEGORIAS */
-    .cat-historico::before { background:#f59e0b; }
-    .cat-historico .category, .cat-historico .cta { color:#f59e0b; }
+    .cat-historico::before { background:var(--accent); }
+    .cat-historico .category, .cat-historico .cta { color:var(--accent); }
     .cat-sapiencial::before { background:#34d399; }
     .cat-sapiencial .category, .cat-sapiencial .cta { color:#34d399; }
     .cat-profetico::before { background:#60a5fa; }
@@ -78,13 +78,20 @@
 
     /* FOOTER NAV */
     .nav-footer { border-top:1px solid rgba(255,255,255,0.08); padding:40px 24px; text-align:center; }
-    .nav-footer a { display:inline-block; background:rgba(192,132,252,0.10); border:1px solid rgba(192,132,252,0.22); color:#c084fc; padding:14px 28px; border-radius:12px; text-decoration:none; font-weight:700; font-size:0.95rem; margin:8px; }
-    .nav-footer a.next { background:rgba(192,132,252,0.18); }
+    .nav-footer a { display:inline-block; background:rgba(var(--accent-rgb),0.10); border:1px solid rgba(var(--accent-rgb),0.22); color:var(--accent); padding:14px 28px; border-radius:12px; text-decoration:none; font-weight:700; font-size:0.95rem; margin:8px; }
+    .nav-footer a.next { background:rgba(var(--accent-rgb),0.18); }
 
     @media(max-width:600px) { .debate-grid { grid-template-columns:1fr; } .hero h1 { font-size:2rem; } }
   </style>
+  <link rel="stylesheet" href="/assets/css/bloco.css">
+  <style>
+    :root {
+      --accent: #6366f1;
+      --accent-rgb: 99, 102, 241;
+    }
+  </style>
 </head>
-<body>
+<body class="bloco-06">
   <div class="topbar">
     <div class="inner">
       <a href="/">365 de Graça &amp; Adoração</a>

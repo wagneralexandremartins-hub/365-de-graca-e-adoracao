@@ -8,72 +8,79 @@
   <link rel="stylesheet" href="/assets/css/style.css">
   <style>
     .hero-pv {
-      background: linear-gradient(135deg, rgba(255,200,80,0.15) 0%, rgba(255,140,0,0.08) 100%);
-      border: 1px solid rgba(255,200,80,0.22);
+      background: linear-gradient(135deg, rgba(var(--accent-rgb),0.15) 0%, rgba(255,140,0,0.08) 100%);
+      border: 1px solid rgba(var(--accent-rgb),0.22);
       border-radius: 24px;
       padding: 52px 36px;
       margin-bottom: 32px;
       text-align: center;
     }
-    .hero-pv h1 { font-size: 2.8rem; font-weight: 900; color: #ffc850; margin: 0 0 10px 0; }
+    .hero-pv h1 { font-size: 2.8rem; font-weight: 900; color: var(--accent); margin: 0 0 10px 0; }
     .hero-pv .sub { font-size: 1.1rem; color: #94a3b8; margin-bottom: 22px; }
     .hero-pv blockquote {
-      background: rgba(255,200,80,0.07); border-left: 4px solid #ffc850;
+      background: rgba(var(--accent-rgb),0.07); border-left: 4px solid var(--accent);
       border-radius: 8px; padding: 16px 22px; margin: 0 auto; max-width: 680px;
       font-style: italic; color: #e2e8f0; font-size: 1.02rem; line-height: 1.7;
     }
     .info-bar { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 36px; }
     .info-item {
-      background: rgba(255,200,80,0.08); border: 1px solid rgba(255,200,80,0.18);
+      background: rgba(var(--accent-rgb),0.08); border: 1px solid rgba(var(--accent-rgb),0.18);
       border-radius: 12px; padding: 12px 22px; text-align: center; min-width: 110px;
     }
-    .info-item .num { font-size: 1.7rem; font-weight: 800; color: #ffc850; }
+    .info-item .num { font-size: 1.7rem; font-weight: 800; color: var(--accent); }
     .info-item .label { font-size: 0.80rem; color: #94a3b8; margin-top: 4px; }
     .intro-box {
-      background: rgba(255,255,255,0.03); border: 1px solid rgba(255,200,80,0.12);
+      background: rgba(255,255,255,0.03); border: 1px solid rgba(var(--accent-rgb),0.12);
       border-radius: 18px; padding: 30px; margin-bottom: 36px;
     }
-    .intro-box h2 { color: #ffc850; font-size: 1.25rem; margin-bottom: 14px; }
+    .intro-box h2 { color: var(--accent); font-size: 1.25rem; margin-bottom: 14px; }
     .intro-box p { color: #cbd5e1; line-height: 1.85; margin-bottom: 14px; }
     .intro-box p:last-child { margin-bottom: 0; }
     .bloco {
-      background: rgba(255,255,255,0.02); border: 1px solid rgba(255,200,80,0.10);
+      background: rgba(255,255,255,0.02); border: 1px solid rgba(var(--accent-rgb),0.10);
       border-radius: 18px; margin-bottom: 24px; overflow: hidden;
     }
     .bloco-header {
-      background: rgba(255,200,80,0.08); border-bottom: 1px solid rgba(255,200,80,0.12);
+      background: rgba(var(--accent-rgb),0.08); border-bottom: 1px solid rgba(var(--accent-rgb),0.12);
       padding: 18px 22px;
     }
-    .bloco-header h2 { margin: 0; font-size: 1.15rem; color: #ffc850; }
+    .bloco-header h2 { margin: 0; font-size: 1.15rem; color: var(--accent); }
     .bloco-header .bloco-sub { opacity: 0.75; font-size: 0.86rem; margin-top: 4px; color: #94a3b8; }
     .caps-grid {
       display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 10px; padding: 18px;
     }
     .cap-card {
-      background: rgba(255,200,80,0.05); border: 1px solid rgba(255,200,80,0.14);
+      background: rgba(var(--accent-rgb),0.05); border: 1px solid rgba(var(--accent-rgb),0.14);
       border-radius: 10px; padding: 12px; text-decoration: none; color: #e2e8f0;
       transition: all 0.2s; display: block;
     }
     .cap-card:hover {
-      background: rgba(255,200,80,0.12); border-color: rgba(255,200,80,0.35);
+      background: rgba(var(--accent-rgb),0.12); border-color: rgba(var(--accent-rgb),0.35);
       transform: translateY(-2px);
     }
-    .cap-card .num { font-size: 1.2rem; font-weight: 800; color: #ffc850; }
+    .cap-card .num { font-size: 1.2rem; font-weight: 800; color: var(--accent); }
     .cap-card .titulo { font-size: 0.78rem; margin-top: 4px; color: #94a3b8; }
     .nav-livros {
       display: flex; justify-content: space-between; margin-top: 40px;
       gap: 14px; flex-wrap: wrap;
     }
     .nav-livros a {
-      background: rgba(255,200,80,0.10); border: 1px solid rgba(255,200,80,0.22);
-      color: #ffc850; padding: 12px 24px; border-radius: 12px;
+      background: rgba(var(--accent-rgb),0.10); border: 1px solid rgba(var(--accent-rgb),0.22);
+      color: var(--accent); padding: 12px 24px; border-radius: 12px;
       text-decoration: none; font-weight: 700; transition: all 0.2s;
     }
-    .nav-livros a:hover { background: rgba(255,200,80,0.20); }
+    .nav-livros a:hover { background: rgba(var(--accent-rgb),0.20); }
+  </style>
+  <link rel="stylesheet" href="/assets/css/bloco.css">
+  <style>
+    :root {
+      --accent: #059669;
+      --accent-rgb: 5, 150, 105;
+    }
   </style>
 </head>
-<body>
+<body class="bloco-04">
   <div class="topbar">
     <div class="inner">
       <a href="/" class="brand">

@@ -9,13 +9,13 @@
     body { background: #0f172a; color: #e2e8f0; font-family: "Segoe UI", sans-serif; margin: 0; padding: 0; }
     .topbar { background: rgba(15,23,42,0.97); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0 24px; position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; height: 56px; }
     .topbar a { color: #94a3b8; text-decoration: none; font-size: 0.85rem; font-weight: 600; transition: color 0.2s; }
-    .topbar a:hover { color: #ef4444; }
+    .topbar a:hover { color: var(--accent); }
     .wrap { max-width: 860px; margin: 0 auto; padding: 48px 24px 100px; }
-    .hero { background: linear-gradient(135deg, #ef444418 0%, rgba(0,0,0,0.6) 100%); border: 1px solid #ef444433; border-radius: 20px; padding: 48px 36px; margin-bottom: 40px; text-align: center; }
-    .hero .tag { display: inline-block; background: #ef444422; border: 1px solid #ef444444; color: #ef4444; font-size: 0.78rem; font-weight: 800; padding: 4px 16px; border-radius: 999px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
-    .hero h1 { font-size: 2.8rem; font-weight: 900; color: #ef4444; margin: 0 0 10px; }
+    .hero { background: linear-gradient(135deg, var(--accent)18 0%, rgba(0,0,0,0.6) 100%); border: 1px solid var(--accent)33; border-radius: 20px; padding: 48px 36px; margin-bottom: 40px; text-align: center; }
+    .hero .tag { display: inline-block; background: var(--accent)22; border: 1px solid var(--accent)44; color: var(--accent); font-size: 0.78rem; font-weight: 800; padding: 4px 16px; border-radius: 999px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+    .hero h1 { font-size: 2.8rem; font-weight: 900; color: var(--accent); margin: 0 0 10px; }
     .hero .tema { color: #94a3b8; font-size: 1rem; line-height: 1.7; max-width: 600px; margin: 0 auto 20px; }
-    .hero blockquote { background: #ef444411; border-left: 4px solid #ef4444; border-radius: 8px; padding: 14px 22px; max-width: 620px; margin: 0 auto; font-style: italic; color: #e2e8f0; font-size: 0.95rem; line-height: 1.75; }
+    .hero blockquote { background: var(--accent)11; border-left: 4px solid var(--accent); border-radius: 8px; padding: 14px 22px; max-width: 620px; margin: 0 auto; font-style: italic; color: #e2e8f0; font-size: 0.95rem; line-height: 1.75; }
     .meta-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 40px; }
     .meta-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 16px; text-align: center; }
     .meta-label { font-size: 0.72rem; color: #64748b; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
@@ -23,8 +23,15 @@
     .section-title { font-size: 1.1rem; font-weight: 800; color: #e2e8f0; margin: 0 0 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.08); }
     @media (max-width: 600px) { .meta-grid { grid-template-columns: repeat(2, 1fr); } .hero h1 { font-size: 2rem; } }
   </style>
+  <link rel="stylesheet" href="/assets/css/bloco.css">
+  <style>
+    :root {
+      --accent: #0ea5e9;
+      --accent-rgb: 14, 165, 233;
+    }
+  </style>
 </head>
-<body>
+<body class="bloco-07">
   <div class="topbar">
     <a href="/07-novo-testamento">← Novo Testamento</a>
     <a href="/">2 Timóteo</a>

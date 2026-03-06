@@ -59,9 +59,9 @@
       letter-spacing: 0.5px; text-transform: uppercase;
     }
     .label-exegese { background: rgba(0,168,225,0.15); color: #00a8e1; }
-    .label-teologia { background: rgba(91,231,196,0.15); color: #5be7c4; }
-    .label-aplicacao { background: rgba(255,200,80,0.15); color: #ffc850; }
-    .label-hebraico { background: rgba(180,100,255,0.15); color: #c084fc; }
+    .label-teologia { background: rgba(var(--accent-rgb),0.15); color: var(--accent); }
+    .label-aplicacao { background: rgba(var(--accent-rgb),0.15); color: var(--accent); }
+    .label-hebraico { background: rgba(180,100,255,0.15); color: var(--accent); }
     .label-nt { background: rgba(255,140,0,0.15); color: #ff8c00; }
     .label-musica { background: rgba(244,114,182,0.15); color: #f472b6; }
     .label-historia { background: rgba(255,80,80,0.15); color: #f87171; }
@@ -97,8 +97,15 @@
       background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.12); color: #94a3b8;
     }
 </style>
+  <link rel="stylesheet" href="/assets/css/bloco.css">
+  <style>
+    :root {
+      --accent: #059669;
+      --accent-rgb: 5, 150, 105;
+    }
+  </style>
 </head>
-<body>
+<body class="bloco-04">
   <div class="topbar">
     <div class="inner">
       <a href="/" class="brand">

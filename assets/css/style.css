@@ -548,3 +548,82 @@ a:focus-visible, button:focus-visible{
   border-color: rgba(0,168,225,.3);
   transform: translateY(-2px);
 }
+
+/* =========================================================
+   PALETA PADRONIZADA POR BLOCO — Cards da Homepage
+   Cada card recebe data-bloco="XX" no HTML
+   ========================================================= */
+
+/* Bloco 01–02: Âmbar Dourado */
+.card[data-bloco="01"] .block-number,
+.card[data-bloco="02"] .block-number { color: #d97706; opacity: 0.6; }
+.card[data-bloco="01"] .poster,
+.card[data-bloco="02"] .poster {
+  background: linear-gradient(135deg, #0f0b00 0%, #1a1000 100%);
+  border-bottom: 1px solid rgba(217,119,6,0.18);
+}
+.card[data-bloco="01"]:hover,
+.card[data-bloco="02"]:hover { border-color: rgba(217,119,6,0.40); }
+
+/* Bloco 03–05: Esmeralda */
+.card[data-bloco="03"] .block-number,
+.card[data-bloco="04"] .block-number,
+.card[data-bloco="05"] .block-number { color: #059669; opacity: 0.6; }
+.card[data-bloco="03"] .poster,
+.card[data-bloco="04"] .poster,
+.card[data-bloco="05"] .poster {
+  background: linear-gradient(135deg, #000f08 0%, #001a0e 100%);
+  border-bottom: 1px solid rgba(5,150,105,0.18);
+}
+.card[data-bloco="03"]:hover,
+.card[data-bloco="04"]:hover,
+.card[data-bloco="05"]:hover { border-color: rgba(5,150,105,0.40); }
+
+/* Bloco 06–06b: Índigo */
+.card[data-bloco="06"] .block-number,
+.card[data-bloco="06b"] .block-number { color: #6366f1; opacity: 0.6; }
+.card[data-bloco="06"] .poster,
+.card[data-bloco="06b"] .poster {
+  background: linear-gradient(135deg, #06060f 0%, #0a0a1a 100%);
+  border-bottom: 1px solid rgba(99,102,241,0.18);
+}
+.card[data-bloco="06"]:hover,
+.card[data-bloco="06b"]:hover { border-color: rgba(99,102,241,0.40); }
+
+/* Bloco 07–08: Azul Celeste */
+.card[data-bloco="07"] .block-number,
+.card[data-bloco="08"] .block-number { color: #0ea5e9; opacity: 0.6; }
+.card[data-bloco="07"] .poster,
+.card[data-bloco="08"] .poster {
+  background: linear-gradient(135deg, #00080f 0%, #001020 100%);
+  border-bottom: 1px solid rgba(14,165,233,0.18);
+}
+.card[data-bloco="07"]:hover,
+.card[data-bloco="08"]:hover { border-color: rgba(14,165,233,0.40); }
+
+/* Bloco 09–10: Violeta */
+.card[data-bloco="09"] .block-number,
+.card[data-bloco="10"] .block-number { color: #8b5cf6; opacity: 0.6; }
+.card[data-bloco="09"] .poster,
+.card[data-bloco="10"] .poster {
+  background: linear-gradient(135deg, #060010 0%, #0d0020 100%);
+  border-bottom: 1px solid rgba(139,92,246,0.18);
+}
+.card[data-bloco="09"]:hover,
+.card[data-bloco="10"]:hover { border-color: rgba(139,92,246,0.40); }
+
+/* Bloco 11: Rubi */
+.card[data-bloco="11"] .block-number { color: #e11d48; opacity: 0.6; }
+.card[data-bloco="11"] .poster {
+  background: linear-gradient(135deg, #0f0005 0%, #1a000a 100%);
+  border-bottom: 1px solid rgba(225,29,72,0.18);
+}
+.card[data-bloco="11"]:hover { border-color: rgba(225,29,72,0.40); }
+
+/* Bloco 12: Violeta Escuro */
+.card[data-bloco="12"] .block-number { color: #7c3aed; opacity: 0.6; }
+.card[data-bloco="12"] .poster {
+  background: linear-gradient(135deg, #04001a 0%, #0a0030 100%);
+  border-bottom: 1px solid rgba(124,58,237,0.18);
+}
+.card[data-bloco="12"]:hover { border-color: rgba(124,58,237,0.40); }

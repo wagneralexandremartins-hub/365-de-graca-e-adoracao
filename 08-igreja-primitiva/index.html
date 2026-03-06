@@ -6,69 +6,15 @@
   <title>Bloco 08 — Igreja Primitiva | 365 de Graça & Adoração</title>
   <meta name="description" content="A Igreja Primitiva: Pentecostes, perseguições, mártires, Pais da Igreja e os primeiros concílios. Estudo aprofundado dos séculos I ao V d.C.">
   <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/bloco.css">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: #0f172a; color: #e2e8f0; font-family: 'Georgia', serif; line-height: 1.7; }
-    a { color: inherit; text-decoration: none; }
-    .topbar { background: rgba(15,23,42,0.97); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
-    .topbar .inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-    .topbar a { font-size: 0.85rem; color: #94a3b8; font-weight: 600; transition: color 0.2s; }
-    .topbar a:hover { color: #f97316; }
-    .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px 80px; }
-    .hero { text-align: center; padding: 72px 24px 56px; }
-    .bloco-tag { display: inline-block; background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.25); color: #f97316; font-size: 0.75rem; font-weight: 800; padding: 5px 16px; border-radius: 999px; margin-bottom: 18px; text-transform: uppercase; letter-spacing: 1px; }
-    .hero h1 { font-size: 2.8rem; font-weight: 900; color: #f1f5f9; margin-bottom: 16px; line-height: 1.2; }
-    .hero .sub { font-size: 1.05rem; color: #94a3b8; max-width: 680px; margin: 0 auto 28px; line-height: 1.8; }
-    .hero blockquote { font-style: italic; color: #cbd5e1; font-size: 1rem; border-left: 3px solid #f97316; padding-left: 20px; max-width: 600px; margin: 0 auto; text-align: left; }
-    .stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-bottom: 48px; }
-    .stat-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 20px 16px; text-align: center; }
-    .stat-card .num { font-size: 1.8rem; font-weight: 900; color: #f97316; }
-    .stat-card .label { font-size: 0.78rem; color: #64748b; margin-top: 4px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
-    .bloco-section { margin-bottom: 48px; }
-    .bloco-header { display: flex; align-items: center; gap: 16px; padding: 20px 24px; border-radius: 14px; margin-bottom: 20px; }
-    .bh-pent { background: linear-gradient(135deg, rgba(249,115,22,0.12), rgba(239,68,68,0.08)); border: 1px solid rgba(249,115,22,0.2); }
-    .bh-pers { background: linear-gradient(135deg, rgba(239,68,68,0.12), rgba(185,28,28,0.08)); border: 1px solid rgba(239,68,68,0.2); }
-    .bh-miss { background: linear-gradient(135deg, rgba(34,197,94,0.12), rgba(21,128,61,0.08)); border: 1px solid rgba(34,197,94,0.2); }
-    .bh-mart { background: linear-gradient(135deg, rgba(168,85,247,0.12), rgba(109,40,217,0.08)); border: 1px solid rgba(168,85,247,0.2); }
-    .bh-pais { background: linear-gradient(135deg, rgba(59,130,246,0.12), rgba(29,78,216,0.08)); border: 1px solid rgba(59,130,246,0.2); }
-    .bh-here { background: linear-gradient(135deg, rgba(245,158,11,0.12), rgba(180,83,9,0.08)); border: 1px solid rgba(245,158,11,0.2); }
-    .bh-vida { background: linear-gradient(135deg, rgba(20,184,166,0.12), rgba(15,118,110,0.08)); border: 1px solid rgba(20,184,166,0.2); }
-    .bloco-icon { font-size: 2rem; }
-    .bloco-title { font-size: 1.1rem; font-weight: 800; color: #f1f5f9; }
-    .bloco-desc { font-size: 0.88rem; color: #64748b; margin-top: 4px; }
-    .livros-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
-    .livro-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 18px 16px; transition: all 0.2s; cursor: pointer; }
-    .livro-card:hover { background: rgba(255,255,255,0.06); border-color: rgba(249,115,22,0.3); transform: translateY(-2px); }
-    .livro-nome { font-size: 1rem; font-weight: 800; margin-bottom: 4px; }
-    .livro-caps { font-size: 0.78rem; color: #64748b; margin-bottom: 6px; font-weight: 600; }
-    .livro-tema { font-size: 0.78rem; color: #94a3b8; margin-top: 6px; font-style: italic; line-height: 1.4; }
-    .c-pent .livro-nome { color: #f97316; }
-    .c-pers .livro-nome { color: #ef4444; }
-    .c-miss .livro-nome { color: #22c55e; }
-    .c-mart .livro-nome { color: #a855f7; }
-    .c-pais .livro-nome { color: #3b82f6; }
-    .c-here .livro-nome { color: #f59e0b; }
-    .c-vida .livro-nome { color: #14b8a6; }
-    .timeline { position: relative; padding-left: 32px; margin-bottom: 48px; }
-    .timeline::before { content: ""; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #f97316, #818cf8); }
-    .tl-item { position: relative; margin-bottom: 28px; }
-    .tl-item::before { content: ""; position: absolute; left: -28px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: #f97316; border: 2px solid #0f172a; }
-    .tl-date { font-size: 0.78rem; font-weight: 800; color: #f97316; text-transform: uppercase; margin-bottom: 4px; }
-    .tl-title { font-size: 1rem; font-weight: 700; color: #e2e8f0; margin-bottom: 4px; }
-    .tl-desc { font-size: 0.88rem; color: #64748b; line-height: 1.6; }
-    .info-box { background: rgba(249,115,22,0.06); border: 1px solid rgba(249,115,22,0.18); border-radius: 14px; padding: 24px 28px; margin-bottom: 32px; }
-    .info-box h3 { color: #f97316; font-size: 1rem; margin: 0 0 12px 0; }
-    .info-box p { color: #94a3b8; font-size: 0.92rem; line-height: 1.78; margin: 0 0 10px 0; }
-    table { width: 100%; border-collapse: collapse; font-size: 0.87rem; margin-bottom: 40px; }
-    th { background: rgba(249,115,22,0.10); color: #f97316; padding: 10px 14px; text-align: left; font-weight: 700; border-bottom: 1px solid rgba(249,115,22,0.20); }
-    td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; }
-    tr:hover td { background: rgba(255,255,255,0.02); }
-    h2 { font-size: 1.4rem; font-weight: 800; color: #f1f5f9; margin: 40px 0 16px; }
-    p { color: #94a3b8; font-size: 0.95rem; line-height: 1.8; margin-bottom: 16px; }
-    @media (max-width: 768px) { .stats { grid-template-columns: repeat(2, 1fr); } .hero h1 { font-size: 2rem; } }
+    :root {
+      --accent: #0ea5e9;
+      --accent-rgb: 14, 165, 233;
+    }
   </style>
 </head>
-<body>
+<body class="bloco-08">
   <div class="topbar">
     <div class="inner">
       <a href="/">365 de Graça & Adoração</a>

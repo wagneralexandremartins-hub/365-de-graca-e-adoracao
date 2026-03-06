@@ -28,15 +28,22 @@
     .nt-box { background:rgba(59,130,246,0.05); border:1px solid rgba(59,130,246,0.18); border-radius:10px; padding:14px 18px; margin:14px 0; }
     .nt-box .label { font-size:0.78rem; font-weight:800; color:#60a5fa; text-transform:uppercase; margin-bottom:8px; }
     .nt-box p { color:#94a3b8; font-size:0.92rem; line-height:1.75; margin:0; }
-    .danger-box { background:rgba(239,68,68,0.05); border:1px solid rgba(239,68,68,0.18); border-radius:12px; padding:18px 22px; margin:16px 0; }
+    .danger-box { background:rgba(var(--accent-rgb),0.05); border:1px solid rgba(var(--accent-rgb),0.18); border-radius:12px; padding:18px 22px; margin:16px 0; }
     .danger-box .label { font-size:0.78rem; font-weight:800; color:#f87171; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:8px; }
     .danger-box p { color:#94a3b8; font-size:0.92rem; line-height:1.75; margin:0; }
     .nav-buttons { display:flex; gap:12px; justify-content:space-between; margin-top:48px; padding-top:24px; border-top:1px solid rgba(255,255,255,0.08); }
     .nav-buttons a { background:rgba(96,165,250,0.10); border:1px solid rgba(96,165,250,0.22); color:#60a5fa; padding:12px 22px; border-radius:10px; text-decoration:none; font-weight:700; font-size:0.90rem; }
     .nav-buttons a.center { background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.12); color:#94a3b8; }
   </style>
+  <link rel="stylesheet" href="/assets/css/bloco.css">
+  <style>
+    :root {
+      --accent: #6366f1;
+      --accent-rgb: 99, 102, 241;
+    }
+  </style>
 </head>
-<body>
+<body class="bloco-06b">
   <div class="topbar"><div class="inner"><a href="/">Início</a>
     <div class="nav"><a href="/06-intertestamentario/index.html">Intertestamentário</a>
     <a class="active" href="#">Período Helenístico</a></div></div></div>

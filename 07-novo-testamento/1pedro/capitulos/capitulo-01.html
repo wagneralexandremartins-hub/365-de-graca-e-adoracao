@@ -12,35 +12,42 @@
     .topbar { background: rgba(15,23,42,0.97); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
     .topbar .inner { max-width: 900px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
     .topbar a { font-size: 0.85rem; color: #94a3b8; font-weight: 600; transition: color 0.2s; }
-    .topbar a:hover { color: #f97316; }
+    .topbar a:hover { color: var(--accent); }
     .hero { background: linear-gradient(135deg, #0f172a 0%, #1a0a00 50%, #0f172a 100%); padding: 64px 24px 48px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.07); }
-    .tag { display: inline-block; background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.25); color: #f97316; font-size: 0.72rem; font-weight: 800; padding: 4px 14px; border-radius: 999px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+    .tag { display: inline-block; background: rgba(var(--accent-rgb),0.1); border: 1px solid rgba(var(--accent-rgb),0.25); color: var(--accent); font-size: 0.72rem; font-weight: 800; padding: 4px 14px; border-radius: 999px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
     .hero h1 { font-size: 2.4rem; font-weight: 900; color: #f1f5f9; margin-bottom: 12px; line-height: 1.2; }
     .hero .ref { font-size: 0.88rem; color: #64748b; margin-bottom: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
-    .hero blockquote { font-style: italic; color: #cbd5e1; font-size: 1rem; border-left: 3px solid #f97316; padding-left: 20px; max-width: 600px; margin: 0 auto; text-align: left; }
+    .hero blockquote { font-style: italic; color: #cbd5e1; font-size: 1rem; border-left: 3px solid var(--accent); padding-left: 20px; max-width: 600px; margin: 0 auto; text-align: left; }
     .wrap { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
     .section-block { margin-bottom: 40px; }
     .section-block h2 { font-size: 1.3rem; font-weight: 800; color: #f1f5f9; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.07); }
     .section-block p { color: #94a3b8; font-size: 0.95rem; line-height: 1.85; margin-bottom: 16px; }
-    .versiculo-bloco { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-left: 3px solid #f97316; border-radius: 0 12px 12px 0; padding: 18px 20px; margin-bottom: 16px; }
-    .ref-v { font-size: 0.8rem; font-weight: 800; color: #f97316; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .versiculo-bloco { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-left: 3px solid var(--accent); border-radius: 0 12px 12px 0; padding: 18px 20px; margin-bottom: 16px; }
+    .ref-v { font-size: 0.8rem; font-weight: 800; color: var(--accent); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
     .texto-v { font-style: italic; color: #cbd5e1; font-size: 0.95rem; margin-bottom: 10px; line-height: 1.7; }
     .analise-v { color: #94a3b8; font-size: 0.9rem; line-height: 1.8; }
     .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin-top: 16px; }
     .vocab-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 14px 16px; }
-    .termo { font-size: 1.1rem; font-weight: 800; color: #f97316; font-family: 'Georgia', serif; }
+    .termo { font-size: 1.1rem; font-weight: 800; color: var(--accent); font-family: 'Georgia', serif; }
     .transl { font-size: 0.78rem; color: #64748b; font-style: italic; margin: 2px 0 6px; }
     .def { font-size: 0.85rem; color: #94a3b8; line-height: 1.65; }
     .nav-cap { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.07); }
-    .nav-cap a { background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.25); color: #f97316; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-size: 0.88rem; font-weight: 700; transition: all 0.2s; }
-    .nav-cap a:hover { background: rgba(249,115,22,0.2); }
+    .nav-cap a { background: rgba(var(--accent-rgb),0.1); border: 1px solid rgba(var(--accent-rgb),0.25); color: var(--accent); text-decoration: none; padding: 10px 20px; border-radius: 8px; font-size: 0.88rem; font-weight: 700; transition: all 0.2s; }
+    .nav-cap a:hover { background: rgba(var(--accent-rgb),0.2); }
     table { width: 100%; border-collapse: collapse; font-size: 0.87rem; margin: 20px 0 32px; }
-    th { background: rgba(249,115,22,0.1); color: #f97316; padding: 10px 14px; text-align: left; font-weight: 700; border-bottom: 1px solid rgba(249,115,22,0.25); }
+    th { background: rgba(var(--accent-rgb),0.1); color: var(--accent); padding: 10px 14px; text-align: left; font-weight: 700; border-bottom: 1px solid rgba(var(--accent-rgb),0.25); }
     td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; }
     tr:hover td { background: rgba(255,255,255,0.02); }
 </style>
+  <link rel="stylesheet" href="/assets/css/bloco.css">
+  <style>
+    :root {
+      --accent: #0ea5e9;
+      --accent-rgb: 14, 165, 233;
+    }
+  </style>
 </head>
-<body>
+<body class="bloco-07">
   <div class="topbar"><div class="inner">
     <a href="/07-novo-testamento/1pedro/index.html">← 1 Pedro</a>
     <a href="/07-novo-testamento/index.html">Novo Testamento</a>

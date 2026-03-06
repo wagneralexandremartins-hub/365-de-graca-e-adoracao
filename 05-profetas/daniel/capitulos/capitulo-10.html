@@ -10,18 +10,18 @@
     .topbar .inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; height:60px; }
     .topbar a { color:#94a3b8; text-decoration:none; font-size:0.9rem; }
     .topbar .nav { display:flex; gap:20px; }
-    .topbar .active { color:#f59e0b; font-weight:700; }
-    .chapter-hero { background: linear-gradient(135deg, rgba(245,158,11,0.14) 0%, rgba(0,0,0,0.3) 100%); border: 1px solid rgba(245,158,11,0.22); border-radius: 20px; padding: 36px 28px; margin-bottom: 28px; text-align: center; }
-    .chapter-hero .tag { display:inline-block; background:rgba(245,158,11,0.15); border:1px solid rgba(245,158,11,0.30); color:#f59e0b; font-size:0.78rem; font-weight:700; padding:4px 14px; border-radius:999px; margin-bottom:12px; }
-    .chapter-hero h1 { font-size:2rem; font-weight:900; color:#f59e0b; margin:0 0 8px 0; }
+    .topbar .active { color:var(--accent); font-weight:700; }
+    .chapter-hero { background: linear-gradient(135deg, rgba(var(--accent-rgb),0.14) 0%, rgba(0,0,0,0.3) 100%); border: 1px solid rgba(var(--accent-rgb),0.22); border-radius: 20px; padding: 36px 28px; margin-bottom: 28px; text-align: center; }
+    .chapter-hero .tag { display:inline-block; background:rgba(var(--accent-rgb),0.15); border:1px solid rgba(var(--accent-rgb),0.30); color:var(--accent); font-size:0.78rem; font-weight:700; padding:4px 14px; border-radius:999px; margin-bottom:12px; }
+    .chapter-hero h1 { font-size:2rem; font-weight:900; color:var(--accent); margin:0 0 8px 0; }
     .chapter-hero .sub { color:#94a3b8; font-size:1rem; margin-bottom:18px; }
-    .chapter-hero blockquote { background:rgba(245,158,11,0.07); border-left:4px solid #f59e0b; border-radius:8px; padding:14px 20px; margin:0 auto; max-width:680px; font-style:italic; color:#e2e8f0; font-size:0.96rem; line-height:1.7; }
-    .context-box { background:rgba(245,158,11,0.05); border:1px solid rgba(245,158,11,0.15); border-radius:14px; padding:22px 26px; margin-bottom:24px; }
-    .context-box h3 { color:#f59e0b; font-size:1.05rem; margin:0 0 12px 0; }
+    .chapter-hero blockquote { background:rgba(var(--accent-rgb),0.07); border-left:4px solid var(--accent); border-radius:8px; padding:14px 20px; margin:0 auto; max-width:680px; font-style:italic; color:#e2e8f0; font-size:0.96rem; line-height:1.7; }
+    .context-box { background:rgba(var(--accent-rgb),0.05); border:1px solid rgba(var(--accent-rgb),0.15); border-radius:14px; padding:22px 26px; margin-bottom:24px; }
+    .context-box h3 { color:var(--accent); font-size:1.05rem; margin:0 0 12px 0; }
     .context-box p { color:#cbd5e1; line-height:1.88; margin-bottom:12px; font-size:0.95rem; }
     .context-box p:last-child { margin-bottom:0; }
     .section-block { background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.07); border-radius:14px; padding:22px 26px; margin-bottom:20px; }
-    .section-block h3 { color:#f59e0b; font-size:1.05rem; margin:0 0 14px 0; border-bottom:1px solid rgba(245,158,11,0.15); padding-bottom:10px; }
+    .section-block h3 { color:var(--accent); font-size:1.05rem; margin:0 0 14px 0; border-bottom:1px solid rgba(var(--accent-rgb),0.15); padding-bottom:10px; }
     .section-block p { color:#cbd5e1; line-height:1.88; margin-bottom:12px; font-size:0.94rem; }
     .hebraico-box { background:rgba(251,191,36,0.06); border:1px solid rgba(251,191,36,0.18); border-radius:10px; padding:14px 18px; margin:12px 0; }
     .hebraico-box .termo { font-weight:800; color:#fbbf24; font-size:0.95rem; }
@@ -32,11 +32,11 @@
     .nt-box { background:rgba(59,130,246,0.05); border:1px solid rgba(59,130,246,0.18); border-radius:10px; padding:14px 18px; margin:12px 0; }
     .nt-box .termo { font-weight:800; color:#60a5fa; font-size:0.95rem; }
     .nt-box p { color:#94a3b8; font-size:0.90rem; line-height:1.7; margin:4px 0 0 0; }
-    .sintese-box { background:linear-gradient(135deg, rgba(245,158,11,0.10) 0%, rgba(0,0,0,0.2) 100%); border:1px solid rgba(245,158,11,0.20); border-radius:14px; padding:22px 26px; margin:24px 0; }
-    .sintese-box h3 { color:#f59e0b; font-size:1.05rem; margin:0 0 14px 0; }
+    .sintese-box { background:linear-gradient(135deg, rgba(var(--accent-rgb),0.10) 0%, rgba(0,0,0,0.2) 100%); border:1px solid rgba(var(--accent-rgb),0.20); border-radius:14px; padding:22px 26px; margin:24px 0; }
+    .sintese-box h3 { color:var(--accent); font-size:1.05rem; margin:0 0 14px 0; }
     .sintese-box p { color:#cbd5e1; line-height:1.88; font-size:0.95rem; margin-bottom:10px; }
     .nav-buttons { display:flex; gap:12px; justify-content:space-between; margin-top:40px; padding-top:24px; border-top:1px solid rgba(255,255,255,0.08); }
-    .nav-buttons a { background:rgba(245,158,11,0.10); border:1px solid rgba(245,158,11,0.22); color:#f59e0b; padding:12px 22px; border-radius:10px; text-decoration:none; font-weight:700; font-size:0.90rem; }
+    .nav-buttons a { background:rgba(var(--accent-rgb),0.10); border:1px solid rgba(var(--accent-rgb),0.22); color:var(--accent); padding:12px 22px; border-radius:10px; text-decoration:none; font-weight:700; font-size:0.90rem; }
     .nav-buttons a.disabled { opacity:0.35; pointer-events:none; }
     .nav-buttons a.center { background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.12); color:#94a3b8; }
     .mapa-box { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.10); border-radius: 14px; padding: 20px; margin: 24px 0; text-align: center; }
@@ -44,8 +44,15 @@
     .mapa-box img { max-width: 100%; border-radius: 10px; }
     .mapa-box p { color: #64748b; font-size: 0.85rem; margin: 12px 0 0 0; line-height: 1.6; font-style: italic; }
 </style>
+  <link rel="stylesheet" href="/assets/css/bloco.css">
+  <style>
+    :root {
+      --accent: #059669;
+      --accent-rgb: 5, 150, 105;
+    }
+  </style>
 </head>
-<body>
+<body class="bloco-05">
   <div class="topbar"><div class="inner"><a href="/">Início</a>
     <div class="nav"><a href="/05-profetas/index.html">Profetas</a>
     <a href="/05-profetas/daniel/index.html">Daniel</a>

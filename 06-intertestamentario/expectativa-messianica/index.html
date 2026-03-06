@@ -10,32 +10,39 @@
     .topbar .inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; height:60px; }
     .topbar a { color:#94a3b8; text-decoration:none; font-size:0.9rem; }
     .topbar .nav { display:flex; gap:20px; }
-    .topbar .active { color:#a78bfa; font-weight:700; }
+    .topbar .active { color:var(--accent); font-weight:700; }
     .wrap { max-width:900px; margin:0 auto; padding:40px 24px 80px; }
-    .hero { background:linear-gradient(135deg,rgba(167,139,250,0.13) 0%,rgba(0,0,0,0.35) 100%); border:1px solid rgba(167,139,250,0.22); border-radius:20px; padding:40px 32px; margin-bottom:36px; text-align:center; }
-    .hero .tag { display:inline-block; background:rgba(167,139,250,0.15); border:1px solid rgba(167,139,250,0.30); color:#a78bfa; font-size:0.78rem; font-weight:700; padding:4px 14px; border-radius:999px; margin-bottom:14px; }
-    .hero h1 { font-size:2.4rem; font-weight:900; color:#a78bfa; margin:0 0 10px 0; }
+    .hero { background:linear-gradient(135deg,rgba(var(--accent-rgb),0.13) 0%,rgba(0,0,0,0.35) 100%); border:1px solid rgba(var(--accent-rgb),0.22); border-radius:20px; padding:40px 32px; margin-bottom:36px; text-align:center; }
+    .hero .tag { display:inline-block; background:rgba(var(--accent-rgb),0.15); border:1px solid rgba(var(--accent-rgb),0.30); color:var(--accent); font-size:0.78rem; font-weight:700; padding:4px 14px; border-radius:999px; margin-bottom:14px; }
+    .hero h1 { font-size:2.4rem; font-weight:900; color:var(--accent); margin:0 0 10px 0; }
     .hero .sub { color:#94a3b8; font-size:1.05rem; margin-bottom:20px; line-height:1.7; }
-    .hero blockquote { background:rgba(167,139,250,0.07); border-left:4px solid #a78bfa; border-radius:8px; padding:14px 20px; max-width:680px; margin:0 auto; font-style:italic; color:#e2e8f0; font-size:0.95rem; line-height:1.75; }
+    .hero blockquote { background:rgba(var(--accent-rgb),0.07); border-left:4px solid var(--accent); border-radius:8px; padding:14px 20px; max-width:680px; margin:0 auto; font-style:italic; color:#e2e8f0; font-size:0.95rem; line-height:1.75; }
     .section-block { background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.07); border-radius:16px; padding:28px 32px; margin-bottom:24px; }
-    .section-block h2 { color:#a78bfa; font-size:1.2rem; margin:0 0 16px 0; border-bottom:1px solid rgba(167,139,250,0.15); padding-bottom:12px; }
+    .section-block h2 { color:var(--accent); font-size:1.2rem; margin:0 0 16px 0; border-bottom:1px solid rgba(var(--accent-rgb),0.15); padding-bottom:12px; }
     .section-block h3 { color:#c4b5fd; font-size:1.05rem; margin:20px 0 10px 0; }
     .section-block p { color:#cbd5e1; line-height:1.88; margin-bottom:14px; font-size:0.95rem; }
     .section-block p:last-child { margin-bottom:0; }
-    .messias-type { background:rgba(167,139,250,0.05); border:1px solid rgba(167,139,250,0.18); border-radius:14px; padding:22px; margin:16px 0; }
-    .messias-type .type-title { font-size:1.05rem; font-weight:800; color:#a78bfa; margin-bottom:10px; }
+    .messias-type { background:rgba(var(--accent-rgb),0.05); border:1px solid rgba(var(--accent-rgb),0.18); border-radius:14px; padding:22px; margin:16px 0; }
+    .messias-type .type-title { font-size:1.05rem; font-weight:800; color:var(--accent); margin-bottom:10px; }
     .messias-type .prophecies { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px; }
-    .messias-type .proph { background:rgba(167,139,250,0.10); border:1px solid rgba(167,139,250,0.20); color:#c4b5fd; font-size:0.78rem; padding:3px 10px; border-radius:999px; }
+    .messias-type .proph { background:rgba(var(--accent-rgb),0.10); border:1px solid rgba(var(--accent-rgb),0.20); color:#c4b5fd; font-size:0.78rem; padding:3px 10px; border-radius:999px; }
     .messias-type p { color:#94a3b8; font-size:0.92rem; line-height:1.75; margin:0; }
     .fulfillment-box { background:rgba(52,211,153,0.05); border:1px solid rgba(52,211,153,0.18); border-radius:10px; padding:14px 18px; margin:14px 0; }
     .fulfillment-box .label { font-size:0.78rem; font-weight:800; color:#34d399; text-transform:uppercase; margin-bottom:8px; }
     .fulfillment-box p { color:#94a3b8; font-size:0.92rem; line-height:1.75; margin:0; }
     .nav-buttons { display:flex; gap:12px; justify-content:space-between; margin-top:48px; padding-top:24px; border-top:1px solid rgba(255,255,255,0.08); }
-    .nav-buttons a { background:rgba(167,139,250,0.10); border:1px solid rgba(167,139,250,0.22); color:#a78bfa; padding:12px 22px; border-radius:10px; text-decoration:none; font-weight:700; font-size:0.90rem; }
+    .nav-buttons a { background:rgba(var(--accent-rgb),0.10); border:1px solid rgba(var(--accent-rgb),0.22); color:var(--accent); padding:12px 22px; border-radius:10px; text-decoration:none; font-weight:700; font-size:0.90rem; }
     .nav-buttons a.center { background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.12); color:#94a3b8; }
   </style>
+  <link rel="stylesheet" href="/assets/css/bloco.css">
+  <style>
+    :root {
+      --accent: #6366f1;
+      --accent-rgb: 99, 102, 241;
+    }
+  </style>
 </head>
-<body>
+<body class="bloco-06b">
   <div class="topbar"><div class="inner"><a href="/">Início</a>
     <div class="nav"><a href="/06-intertestamentario/index.html">Intertestamentário</a>
     <a class="active" href="#">Expectativa Messiânica</a></div></div></div>

@@ -5,59 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reconciliação e Esperança | Bloco 11 — 365 de Graça & Adoração</title>
   <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/bloco.css">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: #0f172a; color: #e2e8f0; font-family: 'Georgia', serif; line-height: 1.7; }
-    a { color: inherit; text-decoration: none; }
-    .topbar { background: rgba(15,23,42,0.97); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
-    .topbar .inner { max-width: 900px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-    .topbar a { font-size: 0.85rem; color: #94a3b8; font-weight: 600; transition: color 0.2s; }
-    .hero { padding: 64px 24px 48px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.07); }
-    .tag { display: inline-block; font-size: 0.72rem; font-weight: 800; padding: 4px 14px; border-radius: 999px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
-    .hero h1 { font-size: 2.4rem; font-weight: 900; color: #f1f5f9; margin-bottom: 12px; line-height: 1.2; }
-    .hero .ref { font-size: 0.88rem; color: #64748b; margin-bottom: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
-    .hero blockquote { font-style: italic; color: #cbd5e1; font-size: 1rem; padding-left: 20px; max-width: 600px; margin: 0 auto; text-align: left; }
-    .wrap { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
-    .section-block { margin-bottom: 40px; }
-    .section-block h2 { font-size: 1.3rem; font-weight: 800; color: #f1f5f9; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.07); }
-    .section-block p { color: #94a3b8; font-size: 0.95rem; line-height: 1.85; margin-bottom: 16px; }
-    .bloco { border-left-width: 3px; border-left-style: solid; border-radius: 0 12px 12px 0; padding: 18px 20px; margin-bottom: 16px; background: rgba(255,255,255,0.02); border-top: 1px solid rgba(255,255,255,0.07); border-right: 1px solid rgba(255,255,255,0.07); border-bottom: 1px solid rgba(255,255,255,0.07); }
-    .bloco-titulo { font-size: 0.85rem; font-weight: 800; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
-    .bloco-texto { color: #94a3b8; font-size: 0.92rem; line-height: 1.82; }
-    table { width: 100%; border-collapse: collapse; font-size: 0.87rem; margin: 20px 0 32px; }
-    td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; }
-    tr:hover td { background: rgba(255,255,255,0.02); }
-    .nav-mod { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.07); }
-    .reflexao { border-radius: 12px; padding: 22px 26px; margin-top: 32px; }
-    .reflexao h3 { color: #22c55e; font-size: 0.95rem; font-weight: 800; margin-bottom: 10px; }
-    .reflexao p { color: #94a3b8; font-size: 0.9rem; line-height: 1.8; margin-bottom: 10px; }
-    .reflexao p:last-child { margin-bottom: 0; }
-    .personagem-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin: 20px 0 32px; }
-    .pers-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 18px 16px; }
-    .pers-nome { font-size: 1rem; font-weight: 800; margin-bottom: 4px; }
-    .pers-datas { font-size: 0.75rem; color: #64748b; margin-bottom: 8px; font-weight: 600; }
-    .pers-desc { font-size: 0.85rem; color: #94a3b8; line-height: 1.65; }
-    .dado-destaque { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 16px 20px; margin-bottom: 14px; display: flex; gap: 16px; align-items: flex-start; }
-    .dado-num { font-size: 1.6rem; font-weight: 900; min-width: 60px; }
-    .dado-info { font-size: 0.88rem; color: #94a3b8; line-height: 1.7; }
-    .dado-label { font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
-
-    .topbar a:hover { color: #22c55e; }
-    .hero { background: linear-gradient(135deg, #0f172a 0%, #001a08 50%, #0f172a 100%); }
-    .tag { background: rgba(0,0,0,0.2); border: 1px solid #22c55e40; color: #22c55e; }
-    .hero blockquote { border-left: 3px solid #22c55e; }
-    .bloco { border-left-color: #22c55e; }
-    .bloco-titulo { color: #22c55e; }
-    table th { background: #22c55e18; color: #22c55e; border-bottom: 1px solid #22c55e30; }
-    .nav-mod a { background: #22c55e18; border: 1px solid #22c55e30; color: #22c55e; }
-    .nav-mod a:hover { background: #22c55e30; }
-    .reflexao { background: rgba(34,197,94,0.05); border: 1px solid rgba(34,197,94,0.15); }
-    .pers-nome { color: #22c55e; }
-    .dado-num { color: #22c55e; }
-    .dado-label { color: #22c55e; }
-    </style>
+    :root {
+      --accent: #e11d48;
+      --accent-rgb: 225, 29, 72;
+    }
+  </style>
 </head>
-<body>
+<body class="bloco-11">
   <div class="topbar"><div class="inner">
     <a href="/11-conflitos-contemporaneos/index.html">← Bloco 11</a>
     <a href="/">365 de Graça & Adoração</a>

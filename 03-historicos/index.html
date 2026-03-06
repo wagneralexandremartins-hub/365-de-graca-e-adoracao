@@ -8,13 +8,13 @@
   <link rel="stylesheet" href="/assets/css/style.css">
   <style>
     .tag-deutero {
-      background: rgba(91, 231, 196, 0.18);
-      border-color: rgba(91, 231, 196, 0.35);
-      color: #5be7c4;
+      background: rgba(var(--accent-rgb), 0.18);
+      border-color: rgba(var(--accent-rgb), 0.35);
+      color: var(--accent);
     }
     .deutero-note {
-      background: rgba(91, 231, 196, 0.06);
-      border: 1px solid rgba(91, 231, 196, 0.20);
+      background: rgba(var(--accent-rgb), 0.06);
+      border: 1px solid rgba(var(--accent-rgb), 0.20);
       border-radius: 12px;
       padding: 16px 20px;
       margin-bottom: 14px;
@@ -23,12 +23,19 @@
       line-height: 1.6;
     }
     .deutero-note strong {
-      color: #5be7c4;
+      color: var(--accent);
+    }
+  </style>
+  <link rel="stylesheet" href="/assets/css/bloco.css">
+  <style>
+    :root {
+      --accent: #059669;
+      --accent-rgb: 5, 150, 105;
     }
   </style>
 </head>
 
-<body>
+<body class="bloco-03">
   <!-- Topbar -->
   <div class="topbar">
     <div class="inner">

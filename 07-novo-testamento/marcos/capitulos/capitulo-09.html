@@ -10,19 +10,19 @@ body{background:#0f172a;color:#e2e8f0;font-family:'Segoe UI',sans-serif;margin:0
 .topbar{background:rgba(15,23,42,0.97);border-bottom:1px solid rgba(255,255,255,0.08);padding:0 24px;position:sticky;top:0;z-index:100;}
 .topbar .inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;}
 .topbar a{color:#94a3b8;text-decoration:none;font-size:0.9rem;}
-.topbar a:hover{color:#ef4444;}
+.topbar a:hover{color:var(--accent);}
 .wrap{max-width:900px;margin:0 auto;padding:40px 24px 80px;}
-.hero{background:linear-gradient(135deg,rgba(239,68,68,0.10) 0%,rgba(0,0,0,0.5) 100%);border:1px solid rgba(239,68,68,0.22);border-radius:22px;padding:44px 36px;margin-bottom:32px;text-align:center;}
-.hero .tag{display:inline-block;background:rgba(239,68,68,0.10);border:1px solid rgba(239,68,68,0.22);color:#ef4444;font-size:0.78rem;font-weight:800;padding:5px 16px;border-radius:999px;margin-bottom:14px;text-transform:uppercase;letter-spacing:1px;}
-.hero h1{font-size:2.2rem;font-weight:900;color:#ef4444;margin:0 0 10px 0;line-height:1.2;}
+.hero{background:linear-gradient(135deg,rgba(var(--accent-rgb),0.10) 0%,rgba(0,0,0,0.5) 100%);border:1px solid rgba(var(--accent-rgb),0.22);border-radius:22px;padding:44px 36px;margin-bottom:32px;text-align:center;}
+.hero .tag{display:inline-block;background:rgba(var(--accent-rgb),0.10);border:1px solid rgba(var(--accent-rgb),0.22);color:var(--accent);font-size:0.78rem;font-weight:800;padding:5px 16px;border-radius:999px;margin-bottom:14px;text-transform:uppercase;letter-spacing:1px;}
+.hero h1{font-size:2.2rem;font-weight:900;color:var(--accent);margin:0 0 10px 0;line-height:1.2;}
 .hero .sub{color:#94a3b8;font-size:1rem;line-height:1.75;margin-bottom:20px;}
-.hero blockquote{background:rgba(255,255,255,0.04);border-left:4px solid #ef4444;border-radius:8px;padding:14px 22px;max-width:640px;margin:0 auto;font-style:italic;color:#e2e8f0;font-size:0.97rem;line-height:1.75;}
+.hero blockquote{background:rgba(255,255,255,0.04);border-left:4px solid var(--accent);border-radius:8px;padding:14px 22px;max-width:640px;margin:0 auto;font-style:italic;color:#e2e8f0;font-size:0.97rem;line-height:1.75;}
 .section-block{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:28px 32px;margin-bottom:22px;}
-.section-block h2{color:#ef4444;font-size:1.12rem;margin:0 0 16px 0;border-bottom:1px solid rgba(239,68,68,0.22);padding-bottom:12px;}
+.section-block h2{color:var(--accent);font-size:1.12rem;margin:0 0 16px 0;border-bottom:1px solid rgba(var(--accent-rgb),0.22);padding-bottom:12px;}
 .section-block h3{color:#fca5a5;font-size:1rem;margin:20px 0 10px 0;}
 .section-block p{color:#cbd5e1;line-height:1.88;margin-bottom:14px;font-size:0.95rem;}
-.v-box{background:rgba(239,68,68,0.06);border-left:4px solid #ef4444;border-radius:0 10px 10px 0;padding:16px 20px;margin:16px 0;}
-.v-box .ref{font-size:0.78rem;font-weight:800;color:#ef4444;text-transform:uppercase;margin-bottom:8px;letter-spacing:0.5px;}
+.v-box{background:rgba(var(--accent-rgb),0.06);border-left:4px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin:16px 0;}
+.v-box .ref{font-size:0.78rem;font-weight:800;color:var(--accent);text-transform:uppercase;margin-bottom:8px;letter-spacing:0.5px;}
 .v-box .texto{font-style:italic;color:#e2e8f0;font-size:0.97rem;line-height:1.75;margin-bottom:10px;}
 .v-box .analise{color:#94a3b8;font-size:0.92rem;line-height:1.80;}
 .vocab-box{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px 18px;margin:12px 0;}
@@ -31,15 +31,22 @@ body{background:#0f172a;color:#e2e8f0;font-family:'Segoe UI',sans-serif;margin:0
 .nt-box{background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.18);border-radius:10px;padding:14px 18px;margin:14px 0;}
 .nt-box .label{font-size:0.75rem;font-weight:800;color:#60a5fa;text-transform:uppercase;margin-bottom:6px;}
 .nt-box p{color:#94a3b8;font-size:0.91rem;line-height:1.75;margin:0;}
-.at-box{background:rgba(239,68,68,0.05);border:1px solid rgba(239,68,68,0.15);border-radius:10px;padding:14px 18px;margin:14px 0;}
-.at-box .label{font-size:0.75rem;font-weight:800;color:#ef4444;text-transform:uppercase;margin-bottom:6px;}
+.at-box{background:rgba(var(--accent-rgb),0.05);border:1px solid rgba(var(--accent-rgb),0.15);border-radius:10px;padding:14px 18px;margin:14px 0;}
+.at-box .label{font-size:0.75rem;font-weight:800;color:var(--accent);text-transform:uppercase;margin-bottom:6px;}
 .at-box p{color:#94a3b8;font-size:0.91rem;line-height:1.75;margin:0;}
 .nav-cap{display:flex;gap:10px;justify-content:space-between;margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,0.08);}
-.nav-cap a{background:rgba(239,68,68,0.10);border:1px solid rgba(239,68,68,0.22);color:#ef4444;padding:11px 20px;border-radius:10px;text-decoration:none;font-weight:700;font-size:0.88rem;}
+.nav-cap a{background:rgba(var(--accent-rgb),0.10);border:1px solid rgba(var(--accent-rgb),0.22);color:var(--accent);padding:11px 20px;border-radius:10px;text-decoration:none;font-weight:700;font-size:0.88rem;}
 .nav-cap a.center{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.10);color:#64748b;}
 </style>
+  <link rel="stylesheet" href="/assets/css/bloco.css">
+  <style>
+    :root {
+      --accent: #0ea5e9;
+      --accent-rgb: 14, 165, 233;
+    }
+  </style>
 </head>
-<body>
+<body class="bloco-07">
   <div class="topbar"><div class="inner">
     <a href="/07-novo-testamento/index.html">← Evangelhos</a>
     <div style="display:flex;gap:16px;">

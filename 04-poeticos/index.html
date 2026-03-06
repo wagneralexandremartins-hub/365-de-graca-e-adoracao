@@ -10,7 +10,7 @@
     .tag-poetico {
       background: rgba(255, 200, 80, 0.18);
       border-color: rgba(255, 200, 80, 0.35);
-      color: #ffc850;
+      color: var(--accent);
     }
     .poetico-note {
       background: rgba(255, 200, 80, 0.06);
@@ -23,11 +23,11 @@
       line-height: 1.6;
     }
     .poetico-note strong {
-      color: #ffc850;
+      color: var(--accent);
     }
     .hero-poeticos {
-      background: linear-gradient(135deg, rgba(255,200,80,0.12) 0%, rgba(0,168,225,0.08) 100%);
-      border: 1px solid rgba(255,200,80,0.20);
+      background: linear-gradient(135deg, rgba(var(--accent-rgb),0.12) 0%, rgba(0,168,225,0.08) 100%);
+      border: 1px solid rgba(var(--accent-rgb),0.20);
       border-radius: 24px;
       padding: 48px 36px;
       margin-bottom: 40px;
@@ -36,7 +36,7 @@
     .hero-poeticos h1 {
       font-size: 2.6rem;
       font-weight: 900;
-      color: #ffc850;
+      color: var(--accent);
       margin: 0 0 12px 0;
       letter-spacing: -1px;
     }
@@ -46,8 +46,8 @@
       margin-bottom: 24px;
     }
     .hero-poeticos blockquote {
-      background: rgba(255,200,80,0.07);
-      border-left: 4px solid #ffc850;
+      background: rgba(var(--accent-rgb),0.07);
+      border-left: 4px solid var(--accent);
       border-radius: 8px;
       padding: 16px 22px;
       margin: 0 auto;
@@ -65,8 +65,8 @@
       margin-bottom: 40px;
     }
     .info-item {
-      background: rgba(255,200,80,0.08);
-      border: 1px solid rgba(255,200,80,0.18);
+      background: rgba(var(--accent-rgb),0.08);
+      border: 1px solid rgba(var(--accent-rgb),0.18);
       border-radius: 12px;
       padding: 14px 24px;
       text-align: center;
@@ -75,7 +75,7 @@
     .info-item .num {
       font-size: 1.8rem;
       font-weight: 800;
-      color: #ffc850;
+      color: var(--accent);
     }
     .info-item .label {
       font-size: 0.82rem;
@@ -90,7 +90,7 @@
     }
     .livro-card {
       background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,200,80,0.15);
+      border: 1px solid rgba(var(--accent-rgb),0.15);
       border-radius: 18px;
       padding: 28px 24px;
       text-decoration: none;
@@ -99,10 +99,10 @@
       display: block;
     }
     .livro-card:hover {
-      background: rgba(255,200,80,0.07);
-      border-color: rgba(255,200,80,0.35);
+      background: rgba(var(--accent-rgb),0.07);
+      border-color: rgba(var(--accent-rgb),0.35);
       transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(255,200,80,0.12);
+      box-shadow: 0 12px 32px rgba(var(--accent-rgb),0.12);
     }
     .livro-card .livro-icon {
       font-size: 2.4rem;
@@ -111,7 +111,7 @@
     .livro-card .livro-num {
       font-size: 0.78rem;
       font-weight: 700;
-      color: #ffc850;
+      color: var(--accent);
       text-transform: uppercase;
       letter-spacing: 1px;
       margin-bottom: 6px;
@@ -134,12 +134,12 @@
       flex-wrap: wrap;
     }
     .livro-card .meta-tag {
-      background: rgba(255,200,80,0.10);
-      border: 1px solid rgba(255,200,80,0.20);
+      background: rgba(var(--accent-rgb),0.10);
+      border: 1px solid rgba(var(--accent-rgb),0.20);
       border-radius: 999px;
       padding: 4px 12px;
       font-size: 0.78rem;
-      color: #ffc850;
+      color: var(--accent);
       font-weight: 600;
     }
     .section-title-main {
@@ -155,13 +155,13 @@
     }
     .intro-section {
       background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,200,80,0.12);
+      border: 1px solid rgba(var(--accent-rgb),0.12);
       border-radius: 18px;
       padding: 32px;
       margin-bottom: 40px;
     }
     .intro-section h2 {
-      color: #ffc850;
+      color: var(--accent);
       font-size: 1.3rem;
       margin-bottom: 14px;
     }
@@ -181,9 +181,9 @@
       border-top: 1px solid rgba(255,255,255,0.08);
     }
     .nav-blocos a {
-      background: rgba(255,200,80,0.10);
-      border: 1px solid rgba(255,200,80,0.22);
-      color: #ffc850;
+      background: rgba(var(--accent-rgb),0.10);
+      border: 1px solid rgba(var(--accent-rgb),0.22);
+      color: var(--accent);
       padding: 12px 24px;
       border-radius: 12px;
       text-decoration: none;
@@ -191,11 +191,18 @@
       transition: all 0.2s;
     }
     .nav-blocos a:hover {
-      background: rgba(255,200,80,0.20);
+      background: rgba(var(--accent-rgb),0.20);
+    }
+  </style>
+  <link rel="stylesheet" href="/assets/css/bloco.css">
+  <style>
+    :root {
+      --accent: #059669;
+      --accent-rgb: 5, 150, 105;
     }
   </style>
 </head>
-<body>
+<body class="bloco-04">
   <!-- Topbar -->
   <div class="topbar">
     <div class="inner">

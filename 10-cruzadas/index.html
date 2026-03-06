@@ -6,71 +6,15 @@
   <title>Bloco 10 — Cruzadas e Guerras Religiosas | 365 de Graça & Adoração</title>
   <meta name="description" content="As Cruzadas: fé, violência, política e legado. Da convocação de Urbano II ao encontro de Francisco de Assis com o sultão. Consequências para a cristandade.">
   <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/bloco.css">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: #0f172a; color: #e2e8f0; font-family: 'Georgia', serif; line-height: 1.7; }
-    a { color: inherit; text-decoration: none; }
-    .topbar { background: rgba(15,23,42,0.97); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
-    .topbar .inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-    .topbar a { font-size: 0.82rem; color: #94a3b8; font-weight: 600; transition: color 0.2s; }
-    .topbar a:hover { color: #dc2626; }
-    .hero { background: linear-gradient(135deg, #0f172a 0%, #1a0000 40%, #0f172a 100%); padding: 72px 24px 56px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.07); position: relative; overflow: hidden; }
-    .hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(220,38,38,0.12) 0%, transparent 70%); pointer-events: none; }
-    .bloco-badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(220,38,38,0.1); border: 1px solid rgba(220,38,38,0.25); border-radius: 999px; padding: 6px 18px; margin-bottom: 20px; }
-    .bloco-num { font-size: 0.72rem; font-weight: 900; color: #dc2626; text-transform: uppercase; letter-spacing: 1.5px; }
-    .hero h1 { font-size: 2.8rem; font-weight: 900; color: #f1f5f9; margin-bottom: 16px; line-height: 1.15; max-width: 700px; margin-left: auto; margin-right: auto; }
-    .hero p { color: #94a3b8; font-size: 1.05rem; max-width: 620px; margin: 0 auto 32px; line-height: 1.8; }
-    .hero-tags { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
-    .hero-tag { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 5px 14px; font-size: 0.78rem; color: #94a3b8; font-weight: 600; }
-    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 700px; margin: 0 auto; }
-    .stat-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 20px 16px; text-align: center; }
-    .stat-card .num { font-size: 1.8rem; font-weight: 900; color: #dc2626; }
-    .stat-card .label { font-size: 0.78rem; color: #64748b; margin-top: 4px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
-    .wrap { max-width: 1100px; margin: 0 auto; padding: 48px 24px 80px; }
-    h2 { font-size: 1.4rem; font-weight: 800; color: #f1f5f9; margin: 40px 0 16px; }
-    p { color: #94a3b8; font-size: 0.95rem; line-height: 1.8; margin-bottom: 16px; }
-    .intro-box { background: rgba(220,38,38,0.05); border: 1px solid rgba(220,38,38,0.15); border-radius: 14px; padding: 28px 32px; margin-bottom: 40px; }
-    .intro-box h3 { color: #dc2626; font-size: 1.05rem; font-weight: 800; margin-bottom: 12px; }
-    .intro-box p { color: #94a3b8; font-size: 0.93rem; line-height: 1.82; margin-bottom: 12px; }
-    .modulos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; margin-bottom: 48px; }
-    .modulo-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; padding: 24px; transition: all 0.25s; display: flex; flex-direction: column; }
-    .modulo-card:hover { background: rgba(255,255,255,0.05); transform: translateY(-3px); }
-    .mod-icon { font-size: 2rem; margin-bottom: 12px; }
-    .mod-tag { display: inline-block; font-size: 0.68rem; font-weight: 800; padding: 3px 10px; border-radius: 999px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.8px; }
-    .mod-title { font-size: 1.05rem; font-weight: 800; color: #f1f5f9; margin-bottom: 8px; line-height: 1.3; }
-    .mod-desc { font-size: 0.87rem; color: #64748b; line-height: 1.7; flex: 1; margin-bottom: 16px; }
-    .mod-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; font-weight: 700; padding: 8px 16px; border-radius: 8px; transition: all 0.2s; }
-    .c1 .mod-tag,.c1 .mod-link { background: rgba(220,38,38,0.1); border: 1px solid rgba(220,38,38,0.25); color: #dc2626; }
-    .c1:hover { border-color: rgba(220,38,38,0.3); } .c1 .mod-link:hover { background: rgba(220,38,38,0.2); }
-    .c2 .mod-tag,.c2 .mod-link { background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.25); color: #f59e0b; }
-    .c2:hover { border-color: rgba(245,158,11,0.3); } .c2 .mod-link:hover { background: rgba(245,158,11,0.2); }
-    .c3 .mod-tag,.c3 .mod-link { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.25); color: #ef4444; }
-    .c3:hover { border-color: rgba(239,68,68,0.3); } .c3 .mod-link:hover { background: rgba(239,68,68,0.2); }
-    .c4 .mod-tag,.c4 .mod-link { background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.25); color: #a855f7; }
-    .c4:hover { border-color: rgba(168,85,247,0.3); } .c4 .mod-link:hover { background: rgba(168,85,247,0.2); }
-    .c5 .mod-tag,.c5 .mod-link { background: rgba(34,211,238,0.1); border: 1px solid rgba(34,211,238,0.25); color: #22d3ee; }
-    .c5:hover { border-color: rgba(34,211,238,0.3); } .c5 .mod-link:hover { background: rgba(34,211,238,0.2); }
-    .c6 .mod-tag,.c6 .mod-link { background: rgba(129,140,248,0.1); border: 1px solid rgba(129,140,248,0.25); color: #818cf8; }
-    .c6:hover { border-color: rgba(129,140,248,0.3); } .c6 .mod-link:hover { background: rgba(129,140,248,0.2); }
-    .c7 .mod-tag,.c7 .mod-link { background: rgba(100,116,139,0.12); border: 1px solid rgba(100,116,139,0.3); color: #94a3b8; }
-    .c7:hover { border-color: rgba(100,116,139,0.3); } .c7 .mod-link:hover { background: rgba(100,116,139,0.2); }
-    .c8 .mod-tag,.c8 .mod-link { background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.25); color: #22c55e; }
-    .c8:hover { border-color: rgba(34,197,94,0.3); } .c8 .mod-link:hover { background: rgba(34,197,94,0.2); }
-    .timeline { position: relative; padding-left: 36px; margin-bottom: 48px; }
-    .timeline::before { content: ""; position: absolute; left: 10px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #dc2626, #f59e0b, #22c55e); }
-    .tl-item { position: relative; margin-bottom: 28px; }
-    .tl-item::before { content: ""; position: absolute; left: -30px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: #dc2626; border: 2px solid #0f172a; }
-    .tl-date { font-size: 0.78rem; font-weight: 800; color: #dc2626; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
-    .tl-title { font-size: 1rem; font-weight: 700; color: #e2e8f0; margin-bottom: 6px; }
-    .tl-desc { font-size: 0.88rem; color: #64748b; line-height: 1.65; }
-    table { width: 100%; border-collapse: collapse; font-size: 0.87rem; margin-bottom: 40px; }
-    th { background: rgba(220,38,38,0.10); color: #dc2626; padding: 10px 14px; text-align: left; font-weight: 700; border-bottom: 1px solid rgba(220,38,38,0.20); }
-    td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; }
-    tr:hover td { background: rgba(255,255,255,0.02); }
-    @media (max-width: 768px) { .stats { grid-template-columns: repeat(2, 1fr); } .hero h1 { font-size: 2rem; } }
+    :root {
+      --accent: #8b5cf6;
+      --accent-rgb: 139, 92, 246;
+    }
   </style>
 </head>
-<body>
+<body class="bloco-10">
   <div class="topbar">
     <div class="inner">
       <a href="/">365 de Graça & Adoração</a>

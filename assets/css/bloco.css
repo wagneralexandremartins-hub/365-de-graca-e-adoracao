@@ -1,0 +1,588 @@
+/*
+  365 de Graça & Adoração — CSS Global de Blocos
+  Paleta padronizada por categoria temática
+  
+  PALETA DE CORES POR BLOCO:
+  ─────────────────────────────────────────────────────────────
+  Bloco 01 — O Princípio de Tudo      → Âmbar Dourado   #d97706
+  Bloco 02 — Pentateuco               → Âmbar Dourado   #d97706
+  Bloco 03 — Livros Históricos        → Esmeralda       #059669
+  Bloco 04 — Livros Poéticos          → Esmeralda       #059669
+  Bloco 05 — Livros Proféticos        → Esmeralda       #059669
+  Bloco 06 — Apócrifos                → Índigo          #6366f1
+  Bloco 06b— Intertestamentário       → Índigo          #6366f1
+  Bloco 07 — Novo Testamento          → Azul Celeste    #0ea5e9
+  Bloco 08 — Igreja Primitiva         → Azul Celeste    #0ea5e9
+  Bloco 09 — Concílios                → Violeta         #8b5cf6
+  Bloco 10 — Cruzadas                 → Violeta         #8b5cf6
+  Bloco 11 — Conflitos Contemporâneos → Rubi            #e11d48
+  Bloco 12 — Apocalipse               → Violeta Escuro  #7c3aed
+  ─────────────────────────────────────────────────────────────
+  
+  GRUPOS TEMÁTICOS:
+  🟡 Âmbar   (#d97706) — Criação e Fundação (Blocos 01–02)
+  🟢 Esmeralda (#059669) — Antigo Testamento (Blocos 03–05)
+  🔵 Índigo  (#6366f1) — Período Intertestamentário (Blocos 06–06b)
+  🔷 Azul    (#0ea5e9) — Novo Testamento e Igreja (Blocos 07–08)
+  🟣 Violeta (#8b5cf6) — História da Igreja (Blocos 09–10)
+  🔴 Rubi    (#e11d48) — Conflitos (Bloco 11)
+  🌌 Violeta Escuro (#7c3aed) — Escatologia (Bloco 12)
+*/
+
+/* ─── Reset e Base ─────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #070a12;
+  --bg2: #0f1117;
+  --panel: #12141b;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --muted2: #cbd5e1;
+  --line: rgba(255, 255, 255, 0.08);
+  --line2: rgba(255, 255, 255, 0.05);
+  --radius: 14px;
+  --shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  --max: 920px;
+  --font-body: 'Georgia', 'Times New Roman', serif;
+  --font-ui: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.75;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(var(--accent-rgb), 0.3);
+  color: #fff;
+}
+
+/* ─── Topbar ────────────────────────────────────────────────── */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(7, 10, 18, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+.topbar .inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 13px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.topbar a {
+  font-family: var(--font-ui);
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--muted);
+  transition: color 0.18s;
+}
+
+.topbar a:hover,
+.topbar a.active {
+  color: var(--accent);
+}
+
+.topbar .brand {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+/* ─── Hero ──────────────────────────────────────────────────── */
+.hero {
+  padding: 60px 24px 48px;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(
+    160deg,
+    var(--bg) 0%,
+    rgba(var(--accent-rgb), 0.06) 50%,
+    var(--bg) 100%
+  );
+}
+
+.hero .tag {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  background: rgba(var(--accent-rgb), 0.12);
+  border: 1px solid rgba(var(--accent-rgb), 0.30);
+  color: var(--accent);
+}
+
+.hero h1 {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  font-weight: 900;
+  color: #f8fafc;
+  margin-bottom: 10px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.hero .ref {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero blockquote {
+  font-style: italic;
+  color: var(--muted2);
+  font-size: 1rem;
+  padding: 14px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  border-left: 3px solid var(--accent);
+  background: rgba(var(--accent-rgb), 0.04);
+  border-radius: 0 8px 8px 0;
+}
+
+.hero blockquote small {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.78rem;
+  font-style: normal;
+  color: var(--muted);
+  font-family: var(--font-ui);
+}
+
+/* ─── Conteúdo Principal ────────────────────────────────────── */
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+/* ─── Seções ────────────────────────────────────────────────── */
+.sb {
+  margin-bottom: 44px;
+}
+
+.sb h2 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #f8fafc;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-ui);
+}
+
+.sb p {
+  color: var(--muted2);
+  font-size: 0.96rem;
+  line-height: 1.9;
+  margin-bottom: 16px;
+}
+
+.sb p:last-child {
+  margin-bottom: 0;
+}
+
+/* ─── Blocos de Conteúdo ────────────────────────────────────── */
+.bloco {
+  border-left: 3px solid var(--accent);
+  border-radius: 0 12px 12px 0;
+  padding: 18px 22px;
+  margin-bottom: 16px;
+  background: rgba(var(--accent-rgb), 0.03);
+  border-top: 1px solid var(--line2);
+  border-right: 1px solid var(--line2);
+  border-bottom: 1px solid var(--line2);
+}
+
+.bt {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+}
+
+.bx {
+  color: var(--muted2);
+  font-size: 0.93rem;
+  line-height: 1.88;
+}
+
+/* ─── Versículos ────────────────────────────────────────────── */
+.versiculo {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin-bottom: 22px;
+}
+
+.v-ref {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+.v-texto {
+  font-style: italic;
+  color: #e2e8f0;
+  font-size: 0.96rem;
+  line-height: 1.78;
+  margin-bottom: 12px;
+  border-left: 2px solid var(--accent);
+  padding-left: 16px;
+}
+
+.v-analise {
+  color: var(--muted2);
+  font-size: 0.91rem;
+  line-height: 1.88;
+}
+
+/* ─── Tabelas ───────────────────────────────────────────────── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-ui);
+  font-size: 0.87rem;
+  margin: 20px 0 32px;
+}
+
+th {
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 700;
+  background: rgba(var(--accent-rgb), 0.10);
+  color: var(--accent);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.25);
+}
+
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line2);
+  color: var(--muted2);
+}
+
+tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* ─── Cards de Escola/Posição ───────────────────────────────── */
+.escola-card {
+  border-radius: 12px;
+  padding: 20px 22px;
+  margin-bottom: 14px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.02);
+  transition: border-color 0.18s;
+}
+
+.escola-card:hover {
+  border-color: rgba(var(--accent-rgb), 0.25);
+}
+
+.ec-titulo {
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: var(--accent);
+}
+
+.ec-desc {
+  font-size: 0.91rem;
+  color: var(--muted2);
+  line-height: 1.85;
+}
+
+/* ─── Destaques ─────────────────────────────────────────────── */
+.destaque {
+  border-radius: 14px;
+  padding: 22px 26px;
+  margin-bottom: 22px;
+  background: rgba(var(--accent-rgb), 0.05);
+  border: 1px solid rgba(var(--accent-rgb), 0.18);
+}
+
+.destaque h3 {
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--accent);
+}
+
+.destaque p {
+  font-size: 0.92rem;
+  line-height: 1.88;
+  color: var(--muted2);
+  margin-bottom: 10px;
+}
+
+.destaque p:last-child {
+  margin-bottom: 0;
+}
+
+/* ─── Reflexão ──────────────────────────────────────────────── */
+.reflexao {
+  border-radius: 14px;
+  padding: 22px 26px;
+  margin-top: 32px;
+  background: rgba(var(--accent-rgb), 0.04);
+  border: 1px solid rgba(var(--accent-rgb), 0.18);
+}
+
+.reflexao h3 {
+  font-family: var(--font-ui);
+  color: var(--accent);
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.reflexao p {
+  color: var(--muted2);
+  font-size: 0.91rem;
+  line-height: 1.88;
+  margin-bottom: 10px;
+}
+
+.reflexao p:last-child {
+  margin-bottom: 0;
+}
+
+/* ─── Navegação entre módulos ───────────────────────────────── */
+.nav-mod {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nav-mod a {
+  font-family: var(--font-ui);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  background: rgba(var(--accent-rgb), 0.10);
+  border: 1px solid rgba(var(--accent-rgb), 0.22);
+  color: var(--accent);
+  transition: all 0.18s;
+}
+
+.nav-mod a:hover {
+  background: rgba(var(--accent-rgb), 0.20);
+}
+
+/* ─── Grid de módulos (index dos blocos) ────────────────────── */
+.modulos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.modulo-card {
+  border-radius: 14px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.02);
+  transition: border-color 0.18s, transform 0.18s;
+  text-decoration: none;
+  display: block;
+}
+
+.modulo-card:hover {
+  border-color: rgba(var(--accent-rgb), 0.35);
+  transform: translateY(-2px);
+}
+
+.modulo-card .mc-icon {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.modulo-card .mc-titulo {
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  font-weight: 800;
+  color: #f8fafc;
+  margin-bottom: 8px;
+}
+
+.modulo-card .mc-desc {
+  font-family: var(--font-ui);
+  font-size: 0.86rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.modulo-card .mc-link {
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* ─── Linha do Tempo ────────────────────────────────────────── */
+.timeline {
+  position: relative;
+  padding-left: 28px;
+  margin: 24px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+}
+
+.tl-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.tl-item::before {
+  content: '';
+  position: absolute;
+  left: -24px;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.2);
+}
+
+.tl-data {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.tl-texto {
+  font-size: 0.91rem;
+  color: var(--muted2);
+  line-height: 1.7;
+}
+
+/* ─── Utilitários ───────────────────────────────────────────── */
+.text-accent { color: var(--accent); }
+.text-muted { color: var(--muted); }
+.text-muted2 { color: var(--muted2); }
+.font-ui { font-family: var(--font-ui); }
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: 8px; }
+.mb-2 { margin-bottom: 16px; }
+.mb-3 { margin-bottom: 24px; }
+
+/* ─── Responsividade ────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .hero { padding: 40px 16px 32px; }
+  .wrap { padding: 24px 16px 60px; }
+  .hero h1 { font-size: 1.7rem; }
+  .modulos-grid { grid-template-columns: 1fr; }
+  .nav-mod { flex-direction: column; }
+  .nav-mod a { width: 100%; text-align: center; }
+  table { font-size: 0.82rem; }
+  th, td { padding: 8px 10px; }
+}
+
+/* ─── Variáveis por Bloco (aplicadas via classe no <body>) ──── */
+
+/* Bloco 01 e 02 — Âmbar Dourado */
+body.bloco-01, body.bloco-02 {
+  --accent: #d97706;
+  --accent-rgb: 217, 119, 6;
+}
+
+/* Bloco 03, 04, 05 — Esmeralda */
+body.bloco-03, body.bloco-04, body.bloco-05 {
+  --accent: #059669;
+  --accent-rgb: 5, 150, 105;
+}
+
+/* Bloco 06 e 06b — Índigo */
+body.bloco-06, body.bloco-06b {
+  --accent: #6366f1;
+  --accent-rgb: 99, 102, 241;
+}
+
+/* Bloco 07 e 08 — Azul Celeste */
+body.bloco-07, body.bloco-08 {
+  --accent: #0ea5e9;
+  --accent-rgb: 14, 165, 233;
+}
+
+/* Bloco 09 e 10 — Violeta */
+body.bloco-09, body.bloco-10 {
+  --accent: #8b5cf6;
+  --accent-rgb: 139, 92, 246;
+}
+
+/* Bloco 11 — Rubi */
+body.bloco-11 {
+  --accent: #e11d48;
+  --accent-rgb: 225, 29, 72;
+}
+
+/* Bloco 12 — Violeta Escuro */
+body.bloco-12 {
+  --accent: #7c3aed;
+  --accent-rgb: 124, 58, 237;
+}

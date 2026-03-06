@@ -5,56 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Concílio Vaticano I (1869–1870) | Bloco 09 — 365 de Graça & Adoração</title>
   <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/bloco.css">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: #0f172a; color: #e2e8f0; font-family: 'Georgia', serif; line-height: 1.7; }
-    a { color: inherit; text-decoration: none; }
-    .topbar { background: rgba(15,23,42,0.97); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
-    .topbar .inner { max-width: 900px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-    .topbar a { font-size: 0.85rem; color: #94a3b8; font-weight: 600; }
-    .hero { padding: 64px 24px 48px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.07); }
-    .tag { display: inline-block; font-size: 0.72rem; font-weight: 800; padding: 4px 14px; border-radius: 999px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
-    .hero h1 { font-size: 2.4rem; font-weight: 900; color: #f1f5f9; margin-bottom: 12px; line-height: 1.2; }
-    .hero .ref { font-size: 0.88rem; color: #64748b; margin-bottom: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
-    .hero blockquote { font-style: italic; color: #cbd5e1; font-size: 1rem; padding-left: 20px; max-width: 620px; margin: 0 auto; text-align: left; }
-    .wrap { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
-    .sb { margin-bottom: 40px; }
-    .sb h2 { font-size: 1.3rem; font-weight: 800; color: #f1f5f9; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.07); }
-    .sb p { color: #94a3b8; font-size: 0.95rem; line-height: 1.85; margin-bottom: 16px; }
-    .bloco { border-left-width: 3px; border-left-style: solid; border-radius: 0 12px 12px 0; padding: 18px 20px; margin-bottom: 16px; background: rgba(255,255,255,0.02); border-top: 1px solid rgba(255,255,255,0.07); border-right: 1px solid rgba(255,255,255,0.07); border-bottom: 1px solid rgba(255,255,255,0.07); }
-    .bt { font-size: 0.85rem; font-weight: 800; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
-    .bx { color: #94a3b8; font-size: 0.92rem; line-height: 1.82; }
-    table { width: 100%; border-collapse: collapse; font-size: 0.87rem; margin: 20px 0 32px; }
-    td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; }
-    tr:hover td { background: rgba(255,255,255,0.02); }
-    .nav-mod { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.07); flex-wrap: wrap; gap: 10px; }
-    .nav-mod a { padding: 10px 20px; border-radius: 8px; font-size: 0.88rem; font-weight: 700; transition: all 0.2s; }
-    .reflexao { border-radius: 12px; padding: 22px 26px; margin-top: 32px; background: rgba(34,197,94,0.05); border: 1px solid rgba(34,197,94,0.15); }
-    .reflexao h3 { color: #22c55e; font-size: 0.95rem; font-weight: 800; margin-bottom: 10px; }
-    .reflexao p { color: #94a3b8; font-size: 0.9rem; line-height: 1.8; margin-bottom: 10px; }
-    .reflexao p:last-child { margin-bottom: 0; }
-    .pers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; margin: 20px 0 32px; }
-    .pers-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 16px; }
-    .pers-nome { font-size: 0.95rem; font-weight: 800; margin-bottom: 4px; }
-    .pers-datas { font-size: 0.72rem; color: #64748b; margin-bottom: 8px; font-weight: 600; }
-    .pers-desc { font-size: 0.83rem; color: #94a3b8; line-height: 1.6; }
-    .credo-box { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 24px 28px; margin: 20px 0 32px; font-style: italic; color: #cbd5e1; font-size: 0.92rem; line-height: 1.9; }
-    .credo-box .credo-titulo { font-style: normal; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 14px; }
-
-    .topbar a:hover { color: #22d3ee; }
-    .hero { background: linear-gradient(135deg, #0f172a 0%, #001a1f 50%, #0f172a 100%); }
-    .tag { background: #22d3ee18; border: 1px solid #22d3ee40; color: #22d3ee; }
-    .hero blockquote { border-left: 3px solid #22d3ee; }
-    .bloco { border-left-color: #22d3ee; }
-    .bt { color: #22d3ee; }
-    table th { background: #22d3ee18; color: #22d3ee; border-bottom: 1px solid #22d3ee30; }
-    .nav-mod a { background: #22d3ee18; border: 1px solid #22d3ee30; color: #22d3ee; }
-    .nav-mod a:hover { background: #22d3ee30; }
-    .pers-nome { color: #22d3ee; }
-    .credo-box .credo-titulo { color: #22d3ee; }
-    </style>
+    :root {
+      --accent: #8b5cf6;
+      --accent-rgb: 139, 92, 246;
+    }
+  </style>
 </head>
-<body>
+<body class="bloco-09">
   <div class="topbar"><div class="inner">
     <a href="/09-concilios/index.html">← Bloco 09</a>
     <a href="/">365 de Graça & Adoração</a>

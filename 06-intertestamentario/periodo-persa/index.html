@@ -10,40 +10,47 @@
     .topbar .inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; height:60px; }
     .topbar a { color:#94a3b8; text-decoration:none; font-size:0.9rem; }
     .topbar .nav { display:flex; gap:20px; }
-    .topbar .active { color:#f59e0b; font-weight:700; }
+    .topbar .active { color:var(--accent); font-weight:700; }
     .wrap { max-width:900px; margin:0 auto; padding:40px 24px 80px; }
-    .hero { background:linear-gradient(135deg,rgba(245,158,11,0.13) 0%,rgba(0,0,0,0.35) 100%); border:1px solid rgba(245,158,11,0.22); border-radius:20px; padding:40px 32px; margin-bottom:36px; text-align:center; }
-    .hero .tag { display:inline-block; background:rgba(245,158,11,0.15); border:1px solid rgba(245,158,11,0.30); color:#f59e0b; font-size:0.78rem; font-weight:700; padding:4px 14px; border-radius:999px; margin-bottom:14px; }
-    .hero h1 { font-size:2.4rem; font-weight:900; color:#f59e0b; margin:0 0 10px 0; }
+    .hero { background:linear-gradient(135deg,rgba(var(--accent-rgb),0.13) 0%,rgba(0,0,0,0.35) 100%); border:1px solid rgba(var(--accent-rgb),0.22); border-radius:20px; padding:40px 32px; margin-bottom:36px; text-align:center; }
+    .hero .tag { display:inline-block; background:rgba(var(--accent-rgb),0.15); border:1px solid rgba(var(--accent-rgb),0.30); color:var(--accent); font-size:0.78rem; font-weight:700; padding:4px 14px; border-radius:999px; margin-bottom:14px; }
+    .hero h1 { font-size:2.4rem; font-weight:900; color:var(--accent); margin:0 0 10px 0; }
     .hero .sub { color:#94a3b8; font-size:1.05rem; margin-bottom:20px; line-height:1.7; }
-    .hero blockquote { background:rgba(245,158,11,0.07); border-left:4px solid #f59e0b; border-radius:8px; padding:14px 20px; max-width:680px; margin:0 auto; font-style:italic; color:#e2e8f0; font-size:0.95rem; line-height:1.75; }
+    .hero blockquote { background:rgba(var(--accent-rgb),0.07); border-left:4px solid var(--accent); border-radius:8px; padding:14px 20px; max-width:680px; margin:0 auto; font-style:italic; color:#e2e8f0; font-size:0.95rem; line-height:1.75; }
     .section-block { background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.07); border-radius:16px; padding:28px 32px; margin-bottom:24px; }
-    .section-block h2 { color:#f59e0b; font-size:1.2rem; margin:0 0 16px 0; border-bottom:1px solid rgba(245,158,11,0.15); padding-bottom:12px; }
+    .section-block h2 { color:var(--accent); font-size:1.2rem; margin:0 0 16px 0; border-bottom:1px solid rgba(var(--accent-rgb),0.15); padding-bottom:12px; }
     .section-block h3 { color:#fbbf24; font-size:1.05rem; margin:20px 0 10px 0; }
     .section-block p { color:#cbd5e1; line-height:1.88; margin-bottom:14px; font-size:0.95rem; }
     .section-block p:last-child { margin-bottom:0; }
-    .highlight-box { background:rgba(245,158,11,0.06); border:1px solid rgba(245,158,11,0.18); border-radius:12px; padding:18px 22px; margin:16px 0; }
-    .highlight-box .label { font-size:0.78rem; font-weight:800; color:#f59e0b; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:8px; }
+    .highlight-box { background:rgba(var(--accent-rgb),0.06); border:1px solid rgba(var(--accent-rgb),0.18); border-radius:12px; padding:18px 22px; margin:16px 0; }
+    .highlight-box .label { font-size:0.78rem; font-weight:800; color:var(--accent); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:8px; }
     .highlight-box p { color:#94a3b8; font-size:0.92rem; line-height:1.75; margin:0; }
     .nt-box { background:rgba(59,130,246,0.05); border:1px solid rgba(59,130,246,0.18); border-radius:10px; padding:14px 18px; margin:14px 0; }
     .nt-box .label { font-size:0.78rem; font-weight:800; color:#60a5fa; text-transform:uppercase; margin-bottom:8px; }
     .nt-box p { color:#94a3b8; font-size:0.92rem; line-height:1.75; margin:0; }
-    .timeline-mini { border-left:3px solid rgba(245,158,11,0.30); padding-left:24px; margin:20px 0; }
+    .timeline-mini { border-left:3px solid rgba(var(--accent-rgb),0.30); padding-left:24px; margin:20px 0; }
     .timeline-mini .tl-ev { margin-bottom:20px; position:relative; }
-    .timeline-mini .tl-ev::before { content:''; width:10px; height:10px; background:#f59e0b; border-radius:50%; position:absolute; left:-29px; top:4px; }
-    .timeline-mini .tl-date { font-size:0.78rem; font-weight:800; color:#f59e0b; margin-bottom:4px; }
+    .timeline-mini .tl-ev::before { content:''; width:10px; height:10px; background:var(--accent); border-radius:50%; position:absolute; left:-29px; top:4px; }
+    .timeline-mini .tl-date { font-size:0.78rem; font-weight:800; color:var(--accent); margin-bottom:4px; }
     .timeline-mini .tl-text { color:#94a3b8; font-size:0.92rem; line-height:1.7; }
     .key-figures { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:14px; margin:20px 0; }
-    .figure-card { background:rgba(245,158,11,0.05); border:1px solid rgba(245,158,11,0.15); border-radius:12px; padding:16px; }
-    .figure-card .name { font-weight:800; color:#f59e0b; font-size:0.95rem; margin-bottom:4px; }
+    .figure-card { background:rgba(var(--accent-rgb),0.05); border:1px solid rgba(var(--accent-rgb),0.15); border-radius:12px; padding:16px; }
+    .figure-card .name { font-weight:800; color:var(--accent); font-size:0.95rem; margin-bottom:4px; }
     .figure-card .role { font-size:0.78rem; color:#64748b; margin-bottom:8px; }
     .figure-card p { color:#94a3b8; font-size:0.87rem; line-height:1.65; margin:0; }
     .nav-buttons { display:flex; gap:12px; justify-content:space-between; margin-top:48px; padding-top:24px; border-top:1px solid rgba(255,255,255,0.08); }
-    .nav-buttons a { background:rgba(245,158,11,0.10); border:1px solid rgba(245,158,11,0.22); color:#f59e0b; padding:12px 22px; border-radius:10px; text-decoration:none; font-weight:700; font-size:0.90rem; }
+    .nav-buttons a { background:rgba(var(--accent-rgb),0.10); border:1px solid rgba(var(--accent-rgb),0.22); color:var(--accent); padding:12px 22px; border-radius:10px; text-decoration:none; font-weight:700; font-size:0.90rem; }
     .nav-buttons a.center { background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.12); color:#94a3b8; }
   </style>
+  <link rel="stylesheet" href="/assets/css/bloco.css">
+  <style>
+    :root {
+      --accent: #6366f1;
+      --accent-rgb: 99, 102, 241;
+    }
+  </style>
 </head>
-<body>
+<body class="bloco-06b">
   <div class="topbar"><div class="inner"><a href="/">Início</a>
     <div class="nav"><a href="/06-intertestamentario/index.html">Intertestamentário</a>
     <a class="active" href="#">Período Persa</a></div></div></div>

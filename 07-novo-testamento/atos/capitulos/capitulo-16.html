@@ -11,50 +11,57 @@ body{background:#0f172a;color:#e2e8f0;font-family:'Segoe UI',sans-serif;line-hei
 .topbar{background:rgba(15,23,42,0.97);border-bottom:1px solid rgba(255,255,255,0.08);padding:0 24px;position:sticky;top:0;z-index:100;}
 .topbar .inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;}
 .topbar a{color:#94a3b8;text-decoration:none;font-size:0.88rem;}
-.topbar a:hover{color:#f97316;}
-.hero{background:linear-gradient(135deg,rgba(249,115,22,0.14) 0%,rgba(15,23,42,0.97) 65%);border-bottom:1px solid rgba(249,115,22,0.2);padding:60px 24px 48px;text-align:center;}
-.hero .tag{display:inline-block;background:rgba(249,115,22,0.12);border:1px solid rgba(249,115,22,0.28);color:#f97316;font-size:0.75rem;font-weight:800;padding:4px 16px;border-radius:999px;margin-bottom:14px;text-transform:uppercase;letter-spacing:1.5px;}
-.hero h1{font-size:2.4rem;font-weight:900;color:#f97316;margin:0 0 10px;line-height:1.15;}
+.topbar a:hover{color:var(--accent);}
+.hero{background:linear-gradient(135deg,rgba(var(--accent-rgb),0.14) 0%,rgba(15,23,42,0.97) 65%);border-bottom:1px solid rgba(var(--accent-rgb),0.2);padding:60px 24px 48px;text-align:center;}
+.hero .tag{display:inline-block;background:rgba(var(--accent-rgb),0.12);border:1px solid rgba(var(--accent-rgb),0.28);color:var(--accent);font-size:0.75rem;font-weight:800;padding:4px 16px;border-radius:999px;margin-bottom:14px;text-transform:uppercase;letter-spacing:1.5px;}
+.hero h1{font-size:2.4rem;font-weight:900;color:var(--accent);margin:0 0 10px;line-height:1.15;}
 .hero .ref{color:#64748b;font-size:0.9rem;margin-bottom:18px;}
-.hero blockquote{background:rgba(255,255,255,0.04);border-left:4px solid #f97316;border-radius:8px;padding:14px 22px;max-width:680px;margin:0 auto;font-style:italic;color:#e2e8f0;font-size:0.97rem;line-height:1.75;}
+.hero blockquote{background:rgba(255,255,255,0.04);border-left:4px solid var(--accent);border-radius:8px;padding:14px 22px;max-width:680px;margin:0 auto;font-style:italic;color:#e2e8f0;font-size:0.97rem;line-height:1.75;}
 .wrap{max-width:960px;margin:0 auto;padding:44px 24px 80px;}
 .section-block{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:28px 32px;margin-bottom:22px;}
-.section-block h2{font-size:1.05rem;font-weight:800;color:#f97316;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(249,115,22,0.18);}
+.section-block h2{font-size:1.05rem;font-weight:800;color:var(--accent);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(var(--accent-rgb),0.18);}
 .section-block p{color:#94a3b8;font-size:0.93rem;line-height:1.85;margin-bottom:14px;}
 .section-block p:last-child{margin-bottom:0;}
-.versiculo-bloco{border-left:3px solid rgba(249,115,22,0.35);padding:14px 20px;margin:16px 0;background:rgba(249,115,22,0.04);border-radius:0 10px 10px 0;}
-.versiculo-bloco .ref-v{font-size:0.78rem;font-weight:800;color:#f97316;text-transform:uppercase;margin-bottom:6px;letter-spacing:0.5px;}
+.versiculo-bloco{border-left:3px solid rgba(var(--accent-rgb),0.35);padding:14px 20px;margin:16px 0;background:rgba(var(--accent-rgb),0.04);border-radius:0 10px 10px 0;}
+.versiculo-bloco .ref-v{font-size:0.78rem;font-weight:800;color:var(--accent);text-transform:uppercase;margin-bottom:6px;letter-spacing:0.5px;}
 .versiculo-bloco .texto-v{font-size:0.95rem;color:#e2e8f0;font-style:italic;line-height:1.75;margin-bottom:10px;}
 .versiculo-bloco .analise-v{font-size:0.9rem;color:#94a3b8;line-height:1.82;}
 .vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:14px;}
-.vocab-card{background:rgba(249,115,22,0.06);border:1px solid rgba(249,115,22,0.15);border-radius:10px;padding:14px 16px;}
-.vocab-card .termo{font-size:1.05rem;font-weight:800;color:#f97316;}
+.vocab-card{background:rgba(var(--accent-rgb),0.06);border:1px solid rgba(var(--accent-rgb),0.15);border-radius:10px;padding:14px 16px;}
+.vocab-card .termo{font-size:1.05rem;font-weight:800;color:var(--accent);}
 .vocab-card .transl{font-size:0.8rem;color:#64748b;margin-bottom:6px;}
 .vocab-card .def{font-size:0.85rem;color:#94a3b8;line-height:1.65;}
 .mapa-box{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:24px 28px;margin:22px 0;}
-.mapa-box h3{color:#f97316;font-size:1rem;margin:0 0 12px;}
-.mapa-visual{background:linear-gradient(135deg,rgba(15,23,42,0.9) 0%,rgba(30,41,59,0.9) 100%);border:1px solid rgba(249,115,22,0.2);border-radius:12px;padding:28px;margin:12px 0;position:relative;overflow:hidden;min-height:180px;}
+.mapa-box h3{color:var(--accent);font-size:1rem;margin:0 0 12px;}
+.mapa-visual{background:linear-gradient(135deg,rgba(15,23,42,0.9) 0%,rgba(30,41,59,0.9) 100%);border:1px solid rgba(var(--accent-rgb),0.2);border-radius:12px;padding:28px;margin:12px 0;position:relative;overflow:hidden;min-height:180px;}
 .mapa-visual::before{content:'🗺️';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:5rem;opacity:0.08;}
 .mapa-desc{color:#94a3b8;font-size:0.91rem;line-height:1.75;margin-top:12px;}
 .mapa-pontos{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
-.mapa-ponto{background:rgba(249,115,22,0.08);border:1px solid rgba(249,115,22,0.2);color:#f97316;font-size:0.78rem;font-weight:700;padding:4px 12px;border-radius:999px;}
+.mapa-ponto{background:rgba(var(--accent-rgb),0.08);border:1px solid rgba(var(--accent-rgb),0.2);color:var(--accent);font-size:0.78rem;font-weight:700;padding:4px 12px;border-radius:999px;}
 .nav-cap{display:flex;justify-content:space-between;align-items:center;margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.07);}
-.nav-cap a{background:rgba(249,115,22,0.1);border:1px solid rgba(249,115,22,0.22);color:#f97316;text-decoration:none;padding:10px 20px;border-radius:8px;font-size:0.88rem;font-weight:700;transition:all 0.2s;}
-.nav-cap a:hover{background:rgba(249,115,22,0.2);}
-.tag-bloco{display:inline-block;background:rgba(249,115,22,0.1);border:1px solid rgba(249,115,22,0.2);color:#f97316;font-size:0.72rem;font-weight:800;padding:3px 12px;border-radius:999px;margin-right:6px;margin-bottom:6px;}
+.nav-cap a{background:rgba(var(--accent-rgb),0.1);border:1px solid rgba(var(--accent-rgb),0.22);color:var(--accent);text-decoration:none;padding:10px 20px;border-radius:8px;font-size:0.88rem;font-weight:700;transition:all 0.2s;}
+.nav-cap a:hover{background:rgba(var(--accent-rgb),0.2);}
+.tag-bloco{display:inline-block;background:rgba(var(--accent-rgb),0.1);border:1px solid rgba(var(--accent-rgb),0.2);color:var(--accent);font-size:0.72rem;font-weight:800;padding:3px 12px;border-radius:999px;margin-right:6px;margin-bottom:6px;}
 
-.mapa-viagem{background:rgba(255,255,255,0.02);border:1px solid rgba(249,115,22,0.18);border-radius:16px;padding:24px 28px;margin:22px 0;}
-.mapa-viagem h3{color:#f97316;font-size:1rem;margin:0 0 12px;}
-.mapa-visual-v{background:linear-gradient(135deg,rgba(15,23,42,0.9) 0%,rgba(30,41,59,0.9) 100%);border:1px solid rgba(249,115,22,0.2);border-radius:12px;padding:28px;margin:12px 0;position:relative;overflow:hidden;min-height:180px;}
+.mapa-viagem{background:rgba(255,255,255,0.02);border:1px solid rgba(var(--accent-rgb),0.18);border-radius:16px;padding:24px 28px;margin:22px 0;}
+.mapa-viagem h3{color:var(--accent);font-size:1rem;margin:0 0 12px;}
+.mapa-visual-v{background:linear-gradient(135deg,rgba(15,23,42,0.9) 0%,rgba(30,41,59,0.9) 100%);border:1px solid rgba(var(--accent-rgb),0.2);border-radius:12px;padding:28px;margin:12px 0;position:relative;overflow:hidden;min-height:180px;}
 .mapa-visual-v::before{content:'🗺️';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:5rem;opacity:0.08;}
 .mapa-desc-v{color:#94a3b8;font-size:0.91rem;line-height:1.75;margin-top:12px;}
 .mapa-rota{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;align-items:center;}
-.mapa-cidade{background:rgba(249,115,22,0.08);border:1px solid rgba(249,115,22,0.2);color:#f97316;font-size:0.78rem;font-weight:700;padding:4px 12px;border-radius:999px;}
+.mapa-cidade{background:rgba(var(--accent-rgb),0.08);border:1px solid rgba(var(--accent-rgb),0.2);color:var(--accent);font-size:0.78rem;font-weight:700;padding:4px 12px;border-radius:999px;}
 .mapa-seta{color:#64748b;font-size:0.8rem;}
 
 </style>
+  <link rel="stylesheet" href="/assets/css/bloco.css">
+  <style>
+    :root {
+      --accent: #0ea5e9;
+      --accent-rgb: 14, 165, 233;
+    }
+  </style>
 </head>
-<body>
+<body class="bloco-07">
   <div class="topbar"><div class="inner">
     <a href="/07-novo-testamento/atos/index.html">← Atos dos Apóstolos</a>
     <a href="/07-novo-testamento/index.html">Novo Testamento</a>

@@ -31,9 +31,9 @@
     .grupo-full .nt-ref .label { font-size:0.75rem; font-weight:800; color:#60a5fa; text-transform:uppercase; margin-bottom:6px; }
     .grupo-full .nt-ref p { color:#94a3b8; font-size:0.90rem; margin:0; }
     /* Fariseus */
-    .g-fariseus { background:rgba(167,139,250,0.04); border-color:rgba(167,139,250,0.20); }
-    .g-fariseus .g-name { color:#a78bfa; }
-    .g-fariseus h3 { color:#a78bfa; }
+    .g-fariseus { background:rgba(var(--accent-rgb),0.04); border-color:rgba(var(--accent-rgb),0.20); }
+    .g-fariseus .g-name { color:var(--accent); }
+    .g-fariseus h3 { color:var(--accent); }
     /* Saduceus */
     .g-saduceus { background:rgba(248,113,113,0.04); border-color:rgba(248,113,113,0.20); }
     .g-saduceus .g-name { color:#f87171; }
@@ -54,8 +54,15 @@
     .nav-buttons a { background:rgba(251,146,60,0.10); border:1px solid rgba(251,146,60,0.22); color:#fb923c; padding:12px 22px; border-radius:10px; text-decoration:none; font-weight:700; font-size:0.90rem; }
     .nav-buttons a.center { background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.12); color:#94a3b8; }
   </style>
+  <link rel="stylesheet" href="/assets/css/bloco.css">
+  <style>
+    :root {
+      --accent: #6366f1;
+      --accent-rgb: 99, 102, 241;
+    }
+  </style>
 </head>
-<body>
+<body class="bloco-06b">
   <div class="topbar"><div class="inner"><a href="/">Início</a>
     <div class="nav"><a href="/06-intertestamentario/index.html">Intertestamentário</a>
     <a class="active" href="#">Grupos Judaicos</a></div></div></div>

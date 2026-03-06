@@ -9,30 +9,37 @@
     body { background: #0f172a; color: #e2e8f0; font-family: "Segoe UI", sans-serif; margin: 0; padding: 0; }
     .topbar { background: rgba(15,23,42,0.97); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0 24px; position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; height: 56px; flex-wrap: wrap; gap: 8px; }
     .topbar a { color: #94a3b8; text-decoration: none; font-size: 0.82rem; font-weight: 600; transition: color 0.2s; }
-    .topbar a:hover { color: #f97316; }
+    .topbar a:hover { color: var(--accent); }
     .wrap { max-width: 860px; margin: 0 auto; padding: 48px 24px 100px; }
-    .hero { background: linear-gradient(135deg, #f9731618 0%, rgba(0,0,0,0.6) 100%); border: 1px solid #f9731633; border-radius: 20px; padding: 48px 36px; margin-bottom: 40px; text-align: center; }
-    .hero .tag { display: inline-block; background: #f9731622; border: 1px solid #f9731644; color: #f97316; font-size: 0.78rem; font-weight: 800; padding: 4px 16px; border-radius: 999px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
-    .hero h1 { font-size: 2.2rem; font-weight: 900; color: #f97316; margin: 0 0 10px; line-height: 1.2; }
+    .hero { background: linear-gradient(135deg, var(--accent)18 0%, rgba(0,0,0,0.6) 100%); border: 1px solid var(--accent)33; border-radius: 20px; padding: 48px 36px; margin-bottom: 40px; text-align: center; }
+    .hero .tag { display: inline-block; background: var(--accent)22; border: 1px solid var(--accent)44; color: var(--accent); font-size: 0.78rem; font-weight: 800; padding: 4px 16px; border-radius: 999px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+    .hero h1 { font-size: 2.2rem; font-weight: 900; color: var(--accent); margin: 0 0 10px; line-height: 1.2; }
     .hero .sub { color: #94a3b8; font-size: 0.95rem; line-height: 1.7; max-width: 600px; margin: 0 auto 20px; }
-    .hero blockquote { background: #f9731611; border-left: 4px solid #f97316; border-radius: 8px; padding: 14px 22px; max-width: 620px; margin: 0 auto; font-style: italic; color: #e2e8f0; font-size: 0.95rem; line-height: 1.75; }
+    .hero blockquote { background: var(--accent)11; border-left: 4px solid var(--accent); border-radius: 8px; padding: 14px 22px; max-width: 620px; margin: 0 auto; font-style: italic; color: #e2e8f0; font-size: 0.95rem; line-height: 1.75; }
     .section-block { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 28px 32px; margin-bottom: 28px; }
-    .section-block h2 { font-size: 1.15rem; font-weight: 800; color: #f97316; margin: 0 0 16px; padding-bottom: 10px; border-bottom: 1px solid #f9731622; }
+    .section-block h2 { font-size: 1.15rem; font-weight: 800; color: var(--accent); margin: 0 0 16px; padding-bottom: 10px; border-bottom: 1px solid var(--accent)22; }
     .section-block h3 { font-size: 1rem; font-weight: 700; color: #f1f5f9; margin: 20px 0 10px; }
     .section-block p { color: #94a3b8; line-height: 1.8; margin: 0 0 14px; font-size: 0.93rem; }
-    .versiculo-box { background: #f973160d; border: 1px solid #f9731622; border-radius: 10px; padding: 16px 20px; margin: 16px 0; }
-    .versiculo-ref { font-size: 0.78rem; font-weight: 800; color: #f97316; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+    .versiculo-box { background: var(--accent)0d; border: 1px solid var(--accent)22; border-radius: 10px; padding: 16px 20px; margin: 16px 0; }
+    .versiculo-ref { font-size: 0.78rem; font-weight: 800; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
     .versiculo-texto { font-style: italic; color: #e2e8f0; line-height: 1.75; font-size: 0.95rem; }
-    .vocab-item { background: rgba(255,255,255,0.03); border-radius: 10px; padding: 14px 18px; margin-bottom: 12px; border-left: 3px solid #f97316; }
-    .vocab-termo { font-weight: 800; color: #f97316; font-size: 0.95rem; }
+    .vocab-item { background: rgba(255,255,255,0.03); border-radius: 10px; padding: 14px 18px; margin-bottom: 12px; border-left: 3px solid var(--accent); }
+    .vocab-termo { font-weight: 800; color: var(--accent); font-size: 0.95rem; }
     .vocab-def { color: #94a3b8; font-size: 0.88rem; line-height: 1.7; margin-top: 6px; }
     .nav-caps { display: flex; justify-content: space-between; align-items: center; margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); }
     .nav-caps a { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.10); color: #94a3b8; padding: 10px 20px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 0.88rem; transition: all 0.2s; }
-    .nav-caps a:hover { background: #f9731622; border-color: #f9731644; color: #f97316; }
-    .nav-caps .center { background: #f9731615; border-color: #f9731633; color: #f97316; }
+    .nav-caps a:hover { background: var(--accent)22; border-color: var(--accent)44; color: var(--accent); }
+    .nav-caps .center { background: var(--accent)15; border-color: var(--accent)33; color: var(--accent); }
+  </style>
+  <link rel="stylesheet" href="/assets/css/bloco.css">
+  <style>
+    :root {
+      --accent: #0ea5e9;
+      --accent-rgb: 14, 165, 233;
+    }
   </style>
 </head>
-<body>
+<body class="bloco-07">
   <div class="topbar">
     <a href="/07-novo-testamento/2corintios">← 2 Coríntios</a>
     <span style="color:#475569">2 Coríntios · Capítulo 9 de 13</span>

@@ -11,36 +11,43 @@
     .topbar{background:rgba(15,23,42,0.97);border-bottom:1px solid rgba(255,255,255,0.08);padding:0 24px;position:sticky;top:0;z-index:100;}
     .topbar .inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;}
     .topbar a{color:#94a3b8;text-decoration:none;font-size:0.9rem;}
-    .topbar a:hover{color:#f97316;}
-    .hero{background:linear-gradient(135deg,rgba(249,115,22,0.12) 0%,rgba(15,23,42,0.95) 60%);border-bottom:1px solid rgba(249,115,22,0.18);padding:72px 24px 56px;text-align:center;}
-    .hero .tag{display:inline-block;background:rgba(249,115,22,0.12);border:1px solid rgba(249,115,22,0.25);color:#f97316;font-size:0.78rem;font-weight:800;padding:5px 18px;border-radius:999px;margin-bottom:16px;text-transform:uppercase;letter-spacing:1.5px;}
-    .hero h1{font-size:3rem;font-weight:900;color:#f97316;margin:0 0 12px;line-height:1.1;}
+    .topbar a:hover{color:var(--accent);}
+    .hero{background:linear-gradient(135deg,rgba(var(--accent-rgb),0.12) 0%,rgba(15,23,42,0.95) 60%);border-bottom:1px solid rgba(var(--accent-rgb),0.18);padding:72px 24px 56px;text-align:center;}
+    .hero .tag{display:inline-block;background:rgba(var(--accent-rgb),0.12);border:1px solid rgba(var(--accent-rgb),0.25);color:var(--accent);font-size:0.78rem;font-weight:800;padding:5px 18px;border-radius:999px;margin-bottom:16px;text-transform:uppercase;letter-spacing:1.5px;}
+    .hero h1{font-size:3rem;font-weight:900;color:var(--accent);margin:0 0 12px;line-height:1.1;}
     .hero .sub{color:#94a3b8;font-size:1.05rem;max-width:700px;margin:0 auto 24px;line-height:1.8;}
-    .hero blockquote{background:rgba(255,255,255,0.04);border-left:4px solid #f97316;border-radius:8px;padding:16px 24px;max-width:680px;margin:0 auto;font-style:italic;color:#e2e8f0;font-size:1rem;line-height:1.75;}
+    .hero blockquote{background:rgba(255,255,255,0.04);border-left:4px solid var(--accent);border-radius:8px;padding:16px 24px;max-width:680px;margin:0 auto;font-style:italic;color:#e2e8f0;font-size:1rem;line-height:1.75;}
     .wrap{max-width:1100px;margin:0 auto;padding:48px 24px 80px;}
     .stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-bottom:40px;}
-    .stat-card{background:rgba(249,115,22,0.07);border:1px solid rgba(249,115,22,0.18);border-radius:14px;padding:20px;text-align:center;}
-    .stat-card .num{font-size:2rem;font-weight:900;color:#f97316;}
+    .stat-card{background:rgba(var(--accent-rgb),0.07);border:1px solid rgba(var(--accent-rgb),0.18);border-radius:14px;padding:20px;text-align:center;}
+    .stat-card .num{font-size:2rem;font-weight:900;color:var(--accent);}
     .stat-card .label{font-size:0.8rem;color:#64748b;margin-top:4px;text-transform:uppercase;letter-spacing:0.5px;}
-    .section-title{font-size:1.1rem;font-weight:800;color:#f97316;margin:36px 0 16px;border-bottom:1px solid rgba(249,115,22,0.18);padding-bottom:10px;}
+    .section-title{font-size:1.1rem;font-weight:800;color:var(--accent);margin:36px 0 16px;border-bottom:1px solid rgba(var(--accent-rgb),0.18);padding-bottom:10px;}
     .viagens-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:32px;}
     .viagem-card{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:20px;}
-    .viagem-card .num{font-size:1.4rem;font-weight:900;color:#f97316;margin-bottom:6px;}
+    .viagem-card .num{font-size:1.4rem;font-weight:900;color:var(--accent);margin-bottom:6px;}
     .viagem-card h3{font-size:0.95rem;font-weight:800;color:#e2e8f0;margin:0 0 8px;}
     .viagem-card p{font-size:0.85rem;color:#64748b;line-height:1.65;margin:0;}
     .caps-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;}
     .cap-card{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:14px 16px;text-decoration:none;transition:all 0.2s;}
-    .cap-card:hover{background:rgba(249,115,22,0.08);border-color:rgba(249,115,22,0.25);}
-    .cap-card .cap-num{font-size:0.72rem;font-weight:800;color:#f97316;text-transform:uppercase;margin-bottom:4px;}
+    .cap-card:hover{background:rgba(var(--accent-rgb),0.08);border-color:rgba(var(--accent-rgb),0.25);}
+    .cap-card .cap-num{font-size:0.72rem;font-weight:800;color:var(--accent);text-transform:uppercase;margin-bottom:4px;}
     .cap-card .cap-titulo{font-size:0.88rem;color:#e2e8f0;font-weight:600;line-height:1.4;}
     .cap-card .cap-ref{font-size:0.78rem;color:#64748b;margin-top:4px;}
-    .info-box{background:rgba(249,115,22,0.06);border:1px solid rgba(249,115,22,0.16);border-radius:14px;padding:24px 28px;margin-bottom:28px;}
-    .info-box h3{color:#f97316;font-size:1rem;margin:0 0 12px;}
+    .info-box{background:rgba(var(--accent-rgb),0.06);border:1px solid rgba(var(--accent-rgb),0.16);border-radius:14px;padding:24px 28px;margin-bottom:28px;}
+    .info-box h3{color:var(--accent);font-size:1rem;margin:0 0 12px;}
     .info-box p{color:#94a3b8;font-size:0.92rem;line-height:1.78;margin:0 0 10px;}
     .info-box p:last-child{margin:0;}
   </style>
+  <link rel="stylesheet" href="/assets/css/bloco.css">
+  <style>
+    :root {
+      --accent: #0ea5e9;
+      --accent-rgb: 14, 165, 233;
+    }
+  </style>
 </head>
-<body>
+<body class="bloco-07">
   <div class="topbar"><div class="inner">
     <a href="/07-novo-testamento/index.html">← Novo Testamento</a>
     <div style="display:flex;gap:16px;">
