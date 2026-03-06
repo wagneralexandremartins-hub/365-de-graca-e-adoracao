@@ -34,6 +34,7 @@
   
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/bloco.css">
+  <link rel="stylesheet" href="/assets/css/nav.css">
 </head>
 
 <body>
@@ -47,12 +48,42 @@
         </a>
       </div>
 
-      <nav class="nav" aria-label="Navegação principal">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="main-nav" aria-label="Navegação principal">
         <a class="active" href="/">Início</a>
-        <a href="/sobre/index.html">Sobre o Projeto</a>
-        <a href="/referencias/">Referências</a>
-        <a href="/sobre/proposito.html">Propósito</a>
-        <a href="/sobre/fontes.html">Fontes</a>
+        <div class="nav-item">
+          <a href="#">Blocos ▾</a>
+          <div class="mega-menu">
+            <div class="mega-menu-header">
+              <h4>Os 13 Blocos Temáticos</h4>
+              <a href="/">Ver todos →</a>
+            </div>
+            <div class="mega-menu-grid">
+              <a href="/01-principio/index.html" class="mega-link"><span class="mega-num" style="color:#d97706">01</span><div class="mega-info"><strong>O Princípio</strong><span>Criação e Queda</span></div></a>
+              <a href="/02-pentateuco/index.html" class="mega-link"><span class="mega-num" style="color:#d97706">02</span><div class="mega-info"><strong>Pentateuco</strong><span>Gênesis–Deuteronômio</span></div></a>
+              <a href="/03-historicos/index.html" class="mega-link"><span class="mega-num" style="color:#059669">03</span><div class="mega-info"><strong>Históricos</strong><span>Josué–Ester</span></div></a>
+              <a href="/04-poeticos/index.html" class="mega-link"><span class="mega-num" style="color:#059669">04</span><div class="mega-info"><strong>Poéticos</strong><span>Jó–Cântico</span></div></a>
+              <a href="/05-profetas/index.html" class="mega-link"><span class="mega-num" style="color:#059669">05</span><div class="mega-info"><strong>Profetas</strong><span>17 livros proféticos</span></div></a>
+              <a href="/06-apocrifos/index.html" class="mega-link"><span class="mega-num" style="color:#6366f1">06</span><div class="mega-info"><strong>Apócrifos</strong><span>8 livros deuterocanônicos</span></div></a>
+              <a href="/07-intertestamentario/index.html" class="mega-link"><span class="mega-num" style="color:#6366f1">07</span><div class="mega-info"><strong>Intertestamentário</strong><span>400 anos de silêncio</span></div></a>
+              <a href="/08-novo-testamento/index.html" class="mega-link"><span class="mega-num" style="color:#0ea5e9">08</span><div class="mega-info"><strong>Novo Testamento</strong><span>Evangelhos–Apocalipse</span></div></a>
+              <a href="/09-igreja-primitiva/index.html" class="mega-link"><span class="mega-num" style="color:#0ea5e9">09</span><div class="mega-info"><strong>Igreja Primitiva</strong><span>Pentecostes e expansão</span></div></a>
+              <a href="/10-concilios/index.html" class="mega-link"><span class="mega-num" style="color:#8b5cf6">10</span><div class="mega-info"><strong>Concílios</strong><span>Niceia–Vaticano II</span></div></a>
+              <a href="/11-cruzadas/index.html" class="mega-link"><span class="mega-num" style="color:#8b5cf6">11</span><div class="mega-info"><strong>Cruzadas</strong><span>Guerras religiosas</span></div></a>
+              <a href="/12-conflitos-contemporaneos/index.html" class="mega-link"><span class="mega-num" style="color:#e11d48">12</span><div class="mega-info"><strong>Conflitos</strong><span>Reforma e contemporâneo</span></div></a>
+              <a href="/13-apocalipse/index.html" class="mega-link"><span class="mega-num" style="color:#7c3aed">13</span><div class="mega-info"><strong>Apocalipse</strong><span>Visões e esperança</span></div></a>
+            </div>
+          </div>
+        </div>
+        <a href="/timeline/index.html">Linha do Tempo</a>
+        <a href="/mapas/index.html">Mapas</a>
+        <a href="/sobre/index.html">Sobre</a>
+        <a href="/busca/index.html" class="nav-busca">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;display:inline-block;vertical-align:middle;margin-right:4px"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          Buscar
+        </a>
       </nav>
     </div>
   </div>
@@ -76,7 +107,7 @@
 
           <div class="actions">
             <a class="btn primary" href="/01-principio/index.html">▶ Começar Jornada</a>
-            <a class="btn" href="/sobre/index.html">Sobre o Projeto</a>
+            <a class="btn" href="/busca/index.html">🔍 Buscar Conteúdo</a>
           </div>
         </div>
       </div>
@@ -328,5 +359,6 @@
   </main>
 
   <script src="/assets/js/script.js"></script>
+  <script src="/assets/js/nav.js"></script>
 </body>
 </html>

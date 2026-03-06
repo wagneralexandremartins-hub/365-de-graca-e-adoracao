@@ -1,271 +1,527 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Busca — 365 de Graça & Adoração</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="stylesheet" href="/assets/css/bloco.css">
-    <style>
-        body {
-            background: #0a0e1a;
-            color: #e8e8e8;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            padding: 1.5rem 2rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 1.8rem;
-            color: #4a90e2;
-        }
-
-        header nav {
-            margin-top: 1rem;
-        }
-
-        header nav a {
-            color: #ffffff;
-            text-decoration: none;
-            margin-right: 1.5rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        header nav a:hover {
-            color: #4a90e2;
-        }
-
-        .search-container {
-            max-width: 900px;
-            margin: 3rem auto;
-            padding: 0 2rem;
-        }
-
-        .search-box {
-            background: #1a2332;
-            padding: 2rem;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        .search-input {
-            width: 100%;
-            padding: 1rem;
-            font-size: 1.1rem;
-            border: 2px solid #2a3a52;
-            border-radius: 8px;
-            background: #0a0e1a;
-            color: #e8e8e8;
-            transition: border-color 0.3s;
-        }
-
-        .search-input:focus {
-            outline: none;
-            border-color: #4a90e2;
-        }
-
-        .search-stats {
-            margin-top: 1rem;
-            color: #a0a0a0;
-            font-size: 0.9rem;
-        }
-
-        .results {
-            margin-top: 2rem;
-        }
-
-        .result-item {
-            background: #1a2332;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            border-radius: 8px;
-            border-left: 4px solid #4a90e2;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .result-item:hover {
-            transform: translateX(5px);
-            box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
-        }
-
-        .result-item h3 {
-            margin: 0 0 0.5rem 0;
-            color: #5dade2;
-        }
-
-        .result-item h3 a {
-            color: #5dade2;
-            text-decoration: none;
-        }
-
-        .result-item h3 a:hover {
-            color: #7ec8f3;
-        }
-
-        .result-type {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            background: rgba(74, 144, 226, 0.2);
-            color: #4a90e2;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .result-description {
-            color: #c0c0c0;
-            line-height: 1.6;
-        }
-
-        .no-results {
-            text-align: center;
-            padding: 3rem;
-            color: #a0a0a0;
-        }
-
-        .category-section {
-            margin-top: 3rem;
-        }
-
-        .category-title {
-            color: #4a90e2;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #2a3a52;
-        }
-    </style>
-  <!-- Favicon -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Busca Global — 365 de Graça &amp; Adoração</title>
+  <meta name="description" content="Busca global no projeto 365 de Graça & Adoração — encontre capítulos, livros, temas, personagens e eventos bíblicos.">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/bloco.css">
+  <link rel="stylesheet" href="/assets/css/nav.css">
+  <style>
+    .busca-hero {
+      background: linear-gradient(160deg, #04060f 0%, #080c1a 60%, #0a0f20 100%);
+      padding: 60px 20px 50px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .busca-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0 0 10px; }
+    .busca-hero p { color: rgba(255,255,255,0.5); max-width: 560px; margin: 0 auto 28px; }
+
+    .busca-field-wrap { max-width: 640px; margin: 0 auto; position: relative; }
+    .busca-field-inner {
+      display: flex; align-items: center; gap: 12px;
+      background: rgba(255,255,255,0.06);
+      border: 1.5px solid rgba(255,255,255,0.14);
+      border-radius: 14px; padding: 14px 18px; transition: all 0.2s;
+    }
+    .busca-field-inner:focus-within {
+      border-color: rgba(14,165,233,0.5);
+      background: rgba(14,165,233,0.05);
+      box-shadow: 0 0 0 4px rgba(14,165,233,0.08);
+    }
+    .busca-field-inner svg { width: 20px; height: 20px; color: rgba(255,255,255,0.4); flex-shrink: 0; }
+    #busca-main {
+      flex: 1; background: none; border: none; outline: none;
+      font-size: 1.05rem; color: #fff; font-family: inherit;
+    }
+    #busca-main::placeholder { color: rgba(255,255,255,0.3); }
+    .busca-clear {
+      background: rgba(255,255,255,0.08); border: none; border-radius: 6px;
+      color: rgba(255,255,255,0.5); font-size: 0.78rem; padding: 4px 10px;
+      cursor: pointer; font-family: inherit; transition: all 0.15s; display: none;
+    }
+    .busca-clear.show { display: block; }
+    .busca-clear:hover { background: rgba(255,255,255,0.14); color: #fff; }
+
+    .busca-cats {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      justify-content: center; margin-top: 16px;
+    }
+    .busca-cat {
+      padding: 6px 14px; border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.04);
+      color: rgba(255,255,255,0.5);
+      font-size: 0.78rem; font-weight: 700;
+      cursor: pointer; transition: all 0.18s; font-family: inherit;
+    }
+    .busca-cat:hover { background: rgba(255,255,255,0.08); color: #fff; }
+    .busca-cat.active { color: #fff; border-color: transparent; background: rgba(14,165,233,0.2); }
+
+    .busca-wrap { max-width: 980px; margin: 0 auto; padding: 40px 20px 80px; }
+
+    .busca-stats { display: flex; gap: 32px; flex-wrap: wrap; margin-bottom: 36px; }
+    .busca-stat-num { font-size: 2rem; font-weight: 900; line-height: 1; }
+    .busca-stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.4); margin-top: 4px; }
+
+    #busca-resultados { margin-bottom: 40px; }
+
+    .resultado-secao { margin-bottom: 32px; }
+    .resultado-secao-titulo {
+      font-size: 0.75rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 1.2px;
+      color: rgba(255,255,255,0.35); margin-bottom: 12px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .resultado-secao-titulo::after {
+      content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.07);
+    }
+    .resultado-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 10px;
+    }
+    .resultado-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px 14px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px; text-decoration: none; transition: all 0.15s;
+    }
+    .resultado-item:hover {
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(255,255,255,0.14);
+      transform: translateY(-1px);
+    }
+    .resultado-icone {
+      width: 38px; height: 38px; border-radius: 9px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.72rem; font-weight: 800; flex-shrink: 0;
+    }
+    .resultado-corpo { flex: 1; min-width: 0; }
+    .resultado-titulo {
+      font-size: 0.88rem; font-weight: 700; color: rgba(255,255,255,0.9);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .resultado-sub {
+      font-size: 0.75rem; color: rgba(255,255,255,0.38); margin-top: 2px;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .resultado-tag {
+      font-size: 0.68rem; font-weight: 700; padding: 3px 8px; border-radius: 999px;
+      background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.4); flex-shrink: 0;
+    }
+
+    .busca-vazio { text-align: center; padding: 60px 20px; color: rgba(255,255,255,0.3); }
+    .busca-vazio h3 { font-size: 1.1rem; margin: 0 0 8px; color: rgba(255,255,255,0.5); }
+
+    .indice-secao { margin-bottom: 40px; }
+    .indice-titulo {
+      font-size: 1rem; font-weight: 800; margin-bottom: 16px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .indice-titulo::after { content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.07); }
+    .indice-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px;
+    }
+    .indice-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 12px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 9px; text-decoration: none; transition: all 0.15s;
+    }
+    .indice-item:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12); }
+    .indice-num {
+      font-size: 0.7rem; font-weight: 800;
+      width: 28px; height: 28px; border-radius: 6px;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .indice-nome { font-size: 0.82rem; font-weight: 700; color: rgba(255,255,255,0.8); }
+    .indice-caps { font-size: 0.7rem; color: rgba(255,255,255,0.3); margin-left: auto; }
+
+    mark { background: rgba(14,165,233,0.3); color: #fff; border-radius: 2px; padding: 0 2px; }
+
+    @media (max-width: 600px) {
+      .resultado-grid { grid-template-columns: 1fr; }
+      .indice-grid { grid-template-columns: repeat(2, 1fr); }
+      .busca-stats { gap: 20px; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>🔍 365 de Graça & Adoração</h1>
-        <nav>
-            <a href="/">Início</a>
-            <a href="/sobre">Sobre</a>
-            <a href="/sobre/fontes">Referências</a>
-            <a href="/biblia/">Bíblia</a>
-        </nav>
-    </header>
-
-    <div class="search-container">
-        <div class="search-box">
-            <input type="text" 
-                   id="searchInput" 
-                   class="search-input" 
-                   placeholder="Buscar estudos, capítulos da Bíblia, temas..."
-                   autofocus>
-            <div class="search-stats" id="searchStats">
-                Digite para buscar em mais de 1.200 páginas de conteúdo bíblico
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="inner">
+      <div class="brand">
+        <a href="/">
+          <span>365 de Graça &amp; Adoração</span>
+        </a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="main-nav" aria-label="Navegação principal">
+        <a href="/">Início</a>
+        <div class="nav-item">
+          <a href="#">Blocos ▾</a>
+          <div class="mega-menu">
+            <div class="mega-menu-header">
+              <h4>Os 13 Blocos Temáticos</h4>
+              <a href="/">Ver todos →</a>
             </div>
+            <div class="mega-menu-grid">
+              <a href="/01-principio/index.html" class="mega-link"><span class="mega-num">01</span><div class="mega-info"><strong>O Princípio</strong><span>Criação e Queda</span></div></a>
+              <a href="/02-pentateuco/index.html" class="mega-link"><span class="mega-num">02</span><div class="mega-info"><strong>Pentateuco</strong><span>Gênesis–Deuteronômio</span></div></a>
+              <a href="/03-historicos/index.html" class="mega-link"><span class="mega-num">03</span><div class="mega-info"><strong>Históricos</strong><span>Josué–Ester</span></div></a>
+              <a href="/04-poeticos/index.html" class="mega-link"><span class="mega-num">04</span><div class="mega-info"><strong>Poéticos</strong><span>Jó–Cântico</span></div></a>
+              <a href="/05-profetas/index.html" class="mega-link"><span class="mega-num">05</span><div class="mega-info"><strong>Profetas</strong><span>17 livros proféticos</span></div></a>
+              <a href="/06-apocrifos/index.html" class="mega-link"><span class="mega-num">06</span><div class="mega-info"><strong>Apócrifos</strong><span>8 livros deuterocanônicos</span></div></a>
+              <a href="/07-intertestamentario/index.html" class="mega-link"><span class="mega-num">07</span><div class="mega-info"><strong>Intertestamentário</strong><span>400 anos de silêncio</span></div></a>
+              <a href="/08-novo-testamento/index.html" class="mega-link"><span class="mega-num">08</span><div class="mega-info"><strong>Novo Testamento</strong><span>Evangelhos–Apocalipse</span></div></a>
+              <a href="/09-igreja-primitiva/index.html" class="mega-link"><span class="mega-num">09</span><div class="mega-info"><strong>Igreja Primitiva</strong><span>Pentecostes e expansão</span></div></a>
+              <a href="/10-concilios/index.html" class="mega-link"><span class="mega-num">10</span><div class="mega-info"><strong>Concílios</strong><span>Niceia–Vaticano II</span></div></a>
+              <a href="/11-cruzadas/index.html" class="mega-link"><span class="mega-num">11</span><div class="mega-info"><strong>Cruzadas</strong><span>Guerras religiosas</span></div></a>
+              <a href="/12-conflitos-contemporaneos/index.html" class="mega-link"><span class="mega-num">12</span><div class="mega-info"><strong>Conflitos</strong><span>Reforma e contemporâneo</span></div></a>
+              <a href="/13-apocalipse/index.html" class="mega-link"><span class="mega-num">13</span><div class="mega-info"><strong>Apocalipse</strong><span>Visões e esperança</span></div></a>
+            </div>
+          </div>
         </div>
+        <a href="/timeline/index.html">Linha do Tempo</a>
+        <a href="/mapas/index.html">Mapas</a>
+        <a href="/busca/index.html" class="active">Buscar</a>
+      </nav>
+    </div>
+  </div>
 
-        <div id="results" class="results"></div>
+  <!-- Hero -->
+  <div class="busca-hero">
+    <span class="pill">Busca Global</span>
+    <h1>Encontre qualquer coisa</h1>
+    <p>Pesquise por livros, capítulos, temas, personagens e eventos em todo o projeto</p>
+    <div class="busca-field-wrap">
+      <div class="busca-field-inner">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" id="busca-main" placeholder="Ex: Gálatas, graça, Abraão, Apocalipse, Reforma…" autocomplete="off" />
+        <button class="busca-clear" id="busca-clear" onclick="limparBusca()">Limpar</button>
+      </div>
+      <div class="busca-cats">
+        <button class="busca-cat active" onclick="setCat('all',this)">Tudo</button>
+        <button class="busca-cat" onclick="setCat('Bloco',this)">Blocos</button>
+        <button class="busca-cat" onclick="setCat('AT',this)">Antigo Testamento</button>
+        <button class="busca-cat" onclick="setCat('NT',this)">Novo Testamento</button>
+        <button class="busca-cat" onclick="setCat('Tema',this)">Temas</button>
+        <button class="busca-cat" onclick="setCat('Personagem',this)">Personagens</button>
+        <button class="busca-cat" onclick="setCat('Recurso',this)">Recursos</button>
+      </div>
+    </div>
+  </div>
 
-        <div id="categories" style="display: none;">
-            <div class="category-section">
-                <h2 class="category-title">📚 Estudos do Pentateuco</h2>
-                <div id="estudos-list"></div>
-            </div>
+  <!-- Conteúdo principal -->
+  <div class="busca-wrap">
 
-            <div class="category-section">
-                <h2 class="category-title">📖 Bíblia Completa (ACF)</h2>
-                <div id="biblia-list"></div>
-            </div>
-
-            <div class="category-section">
-                <h2 class="category-title">ℹ️ Páginas Institucionais</h2>
-                <div id="institucional-list"></div>
-            </div>
-        </div>
+    <!-- Stats -->
+    <div class="busca-stats">
+      <div class="busca-stat">
+        <div class="busca-stat-num" style="color:#d97706">1.189</div>
+        <div class="busca-stat-label">Capítulos bíblicos</div>
+      </div>
+      <div class="busca-stat">
+        <div class="busca-stat-num" style="color:#059669">66</div>
+        <div class="busca-stat-label">Livros canônicos</div>
+      </div>
+      <div class="busca-stat">
+        <div class="busca-stat-num" style="color:#0ea5e9">13</div>
+        <div class="busca-stat-label">Blocos temáticos</div>
+      </div>
+      <div class="busca-stat">
+        <div class="busca-stat-num" style="color:#7c3aed">1.627+</div>
+        <div class="busca-stat-label">Páginas no projeto</div>
+      </div>
     </div>
 
-    <script>
-        // Índice de conteúdos
-        const contentIndex = [
-            // Gênesis (50 capítulos)
-            ...Array.from({length: 50}, (_, i) => ({
-                title: `Gênesis ${i + 1}`,
-                url: `/02-pentateuco/genesis/estudos/genesis-${String(i + 1).padStart(2, '0')}.html`,
-                type: 'Estudo',
-                description: `Estudo profundo de Gênesis capítulo ${i + 1}`
-            })),
-            
-            // Êxodo (6 blocos)
-            {title: 'Êxodo - Bloco 01: O Chamado e a Missão', url: '/02-pentateuco/exodo/bloco-01/', type: 'Estudo', description: 'Êxodo 1-4: Opressão, nascimento de Moisés, sarça ardente'},
-            {title: 'Êxodo - Bloco 02: As Pragas e o Confronto', url: '/02-pentateuco/exodo/bloco-02/', type: 'Estudo', description: 'Êxodo 5-11: As dez pragas sobre o Egito'},
-            {title: 'Êxodo - Bloco 03: A Libertação e o Mar', url: '/02-pentateuco/exodo/bloco-03/', type: 'Estudo', description: 'Êxodo 12-15: Páscoa, saída do Egito, Mar Vermelho'},
-            {title: 'Êxodo - Bloco 04: Provações no Deserto', url: '/02-pentateuco/exodo/bloco-04/', type: 'Estudo', description: 'Êxodo 16-18: Maná, água da rocha, Amaleque'},
-            {title: 'Êxodo - Bloco 05: A Aliança no Sinai', url: '/02-pentateuco/exodo/bloco-05/', type: 'Estudo', description: 'Êxodo 19-24: Dez Mandamentos, Livro da Aliança'},
-            {title: 'Êxodo - Bloco 06: O Tabernáculo e a Presença', url: '/02-pentateuco/exodo/bloco-06/', type: 'Estudo', description: 'Êxodo 25-40: Tabernáculo, bezerro de ouro, glória de Deus'},
-            
-            // Páginas institucionais
-            {title: 'Página Inicial', url: '/', type: 'Institucional', description: 'Bem-vindo ao 365 de Graça & Adoração'},
-            {title: 'Sobre o Projeto', url: '/sobre/', type: 'Institucional', description: 'Conheça a missão e visão do projeto'},
-            {title: 'Fontes e Referências', url: '/sobre/fontes/', type: 'Institucional', description: 'Bibliografia e referências acadêmicas'},
-            {title: 'Contexto Histórico', url: '/contexto-historico.html', type: 'Institucional', description: 'Linha do tempo bíblica e contexto histórico'},
-            {title: 'Bíblia ACF Completa', url: '/biblia/', type: 'Bíblia', description: '66 livros, 1.189 capítulos da Bíblia Almeida Corrigida Fiel'}
-        ];
+    <!-- Resultados dinâmicos -->
+    <div id="busca-resultados"></div>
 
-        const searchInput = document.getElementById('searchInput');
-        const resultsDiv = document.getElementById('results');
-        const searchStats = document.getElementById('searchStats');
+    <!-- Índice completo -->
+    <div id="indice-completo">
 
-        // Função de busca
-        function search(query) {
-            query = query.toLowerCase().trim();
-            
-            if (query.length === 0) {
-                resultsDiv.innerHTML = '';
-                searchStats.textContent = 'Digite para buscar em mais de 1.200 páginas de conteúdo bíblico';
-                return;
-            }
+      <div class="indice-secao">
+        <div class="indice-titulo">Os 13 Blocos Temáticos</div>
+        <div class="indice-grid">
+          <a href="/01-principio/index.html" class="indice-item"><span class="indice-num" style="color:#d97706;background:rgba(217,119,6,0.12)">01</span><span class="indice-nome">O Princípio de Tudo</span></a>
+          <a href="/02-pentateuco/index.html" class="indice-item"><span class="indice-num" style="color:#d97706;background:rgba(217,119,6,0.12)">02</span><span class="indice-nome">Pentateuco</span></a>
+          <a href="/03-historicos/index.html" class="indice-item"><span class="indice-num" style="color:#059669;background:rgba(5,150,105,0.12)">03</span><span class="indice-nome">Livros Históricos</span></a>
+          <a href="/04-poeticos/index.html" class="indice-item"><span class="indice-num" style="color:#059669;background:rgba(5,150,105,0.12)">04</span><span class="indice-nome">Livros Poéticos</span></a>
+          <a href="/05-profetas/index.html" class="indice-item"><span class="indice-num" style="color:#059669;background:rgba(5,150,105,0.12)">05</span><span class="indice-nome">Profetas</span></a>
+          <a href="/06-apocrifos/index.html" class="indice-item"><span class="indice-num" style="color:#6366f1;background:rgba(99,102,241,0.12)">06</span><span class="indice-nome">Livros Apócrifos</span></a>
+          <a href="/07-intertestamentario/index.html" class="indice-item"><span class="indice-num" style="color:#6366f1;background:rgba(99,102,241,0.12)">07</span><span class="indice-nome">Intertestamentário</span></a>
+          <a href="/08-novo-testamento/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.12)">08</span><span class="indice-nome">Novo Testamento</span></a>
+          <a href="/09-igreja-primitiva/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.12)">09</span><span class="indice-nome">Igreja Primitiva</span></a>
+          <a href="/10-concilios/index.html" class="indice-item"><span class="indice-num" style="color:#8b5cf6;background:rgba(139,92,246,0.12)">10</span><span class="indice-nome">Concílios</span></a>
+          <a href="/11-cruzadas/index.html" class="indice-item"><span class="indice-num" style="color:#8b5cf6;background:rgba(139,92,246,0.12)">11</span><span class="indice-nome">Cruzadas</span></a>
+          <a href="/12-conflitos-contemporaneos/index.html" class="indice-item"><span class="indice-num" style="color:#e11d48;background:rgba(225,29,72,0.12)">12</span><span class="indice-nome">Conflitos Contemporâneos</span></a>
+          <a href="/13-apocalipse/index.html" class="indice-item"><span class="indice-num" style="color:#7c3aed;background:rgba(124,58,237,0.12)">13</span><span class="indice-nome">Apocalipse</span></a>
+        </div>
+      </div>
 
-            const results = contentIndex.filter(item => 
-                item.title.toLowerCase().includes(query) ||
-                item.description.toLowerCase().includes(query)
-            );
+      <div class="indice-secao">
+        <div class="indice-titulo" style="color:#d97706">Pentateuco — 5 livros</div>
+        <div class="indice-grid">
+          <a href="/02-pentateuco/genesis/index.html" class="indice-item"><span class="indice-num" style="color:#d97706;background:rgba(217,119,6,0.1)">Gn</span><span class="indice-nome">Gênesis</span><span class="indice-caps">50</span></a>
+          <a href="/02-pentateuco/exodo/index.html" class="indice-item"><span class="indice-num" style="color:#d97706;background:rgba(217,119,6,0.1)">Ex</span><span class="indice-nome">Êxodo</span><span class="indice-caps">40</span></a>
+          <a href="/02-pentateuco/levitico/index.html" class="indice-item"><span class="indice-num" style="color:#d97706;background:rgba(217,119,6,0.1)">Lv</span><span class="indice-nome">Levítico</span><span class="indice-caps">27</span></a>
+          <a href="/02-pentateuco/numeros/index.html" class="indice-item"><span class="indice-num" style="color:#d97706;background:rgba(217,119,6,0.1)">Nm</span><span class="indice-nome">Números</span><span class="indice-caps">36</span></a>
+          <a href="/02-pentateuco/deuteronomio/index.html" class="indice-item"><span class="indice-num" style="color:#d97706;background:rgba(217,119,6,0.1)">Dt</span><span class="indice-nome">Deuteronômio</span><span class="indice-caps">34</span></a>
+        </div>
+      </div>
 
-            if (results.length === 0) {
-                resultsDiv.innerHTML = '<div class="no-results">Nenhum resultado encontrado para "' + query + '"</div>';
-                searchStats.textContent = '0 resultados encontrados';
-                return;
-            }
+      <div class="indice-secao">
+        <div class="indice-titulo" style="color:#059669">Livros Históricos — 12 livros</div>
+        <div class="indice-grid">
+          <a href="/03-historicos/josue/index.html" class="indice-item"><span class="indice-num" style="color:#059669;background:rgba(5,150,105,0.1)">Js</span><span class="indice-nome">Josué</span><span class="indice-caps">24</span></a>
+          <a href="/03-historicos/juizes/index.html" class="indice-item"><span class="indice-num" style="color:#059669;background:rgba(5,150,105,0.1)">Jz</span><span class="indice-nome">Juízes</span><span class="indice-caps">21</span></a>
+          <a href="/03-historicos/rute/index.html" class="indice-item"><span class="indice-num" style="color:#059669;background:rgba(5,150,105,0.1)">Rt</span><span class="indice-nome">Rute</span><span class="indice-caps">4</span></a>
+          <a href="/03-historicos/1-samuel/index.html" class="indice-item"><span class="indice-num" style="color:#059669;background:rgba(5,150,105,0.1)">1Sm</span><span class="indice-nome">1 Samuel</span><span class="indice-caps">31</span></a>
+          <a href="/03-historicos/2-samuel/index.html" class="indice-item"><span class="indice-num" style="color:#059669;background:rgba(5,150,105,0.1)">2Sm</span><span class="indice-nome">2 Samuel</span><span class="indice-caps">24</span></a>
+          <a href="/03-historicos/1-reis/index.html" class="indice-item"><span class="indice-num" style="color:#059669;background:rgba(5,150,105,0.1)">1Rs</span><span class="indice-nome">1 Reis</span><span class="indice-caps">22</span></a>
+          <a href="/03-historicos/2-reis/index.html" class="indice-item"><span class="indice-num" style="color:#059669;background:rgba(5,150,105,0.1)">2Rs</span><span class="indice-nome">2 Reis</span><span class="indice-caps">25</span></a>
+          <a href="/03-historicos/1-cronicas/index.html" class="indice-item"><span class="indice-num" style="color:#059669;background:rgba(5,150,105,0.1)">1Cr</span><span class="indice-nome">1 Crônicas</span><span class="indice-caps">29</span></a>
+          <a href="/03-historicos/2-cronicas/index.html" class="indice-item"><span class="indice-num" style="color:#059669;background:rgba(5,150,105,0.1)">2Cr</span><span class="indice-nome">2 Crônicas</span><span class="indice-caps">36</span></a>
+          <a href="/03-historicos/esdras/index.html" class="indice-item"><span class="indice-num" style="color:#059669;background:rgba(5,150,105,0.1)">Ed</span><span class="indice-nome">Esdras</span><span class="indice-caps">10</span></a>
+          <a href="/03-historicos/neemias/index.html" class="indice-item"><span class="indice-num" style="color:#059669;background:rgba(5,150,105,0.1)">Ne</span><span class="indice-nome">Neemias</span><span class="indice-caps">13</span></a>
+          <a href="/03-historicos/ester/index.html" class="indice-item"><span class="indice-num" style="color:#059669;background:rgba(5,150,105,0.1)">Et</span><span class="indice-nome">Ester</span><span class="indice-caps">10</span></a>
+        </div>
+      </div>
 
-            searchStats.textContent = `${results.length} resultado${results.length > 1 ? 's' : ''} encontrado${results.length > 1 ? 's' : ''}`;
+      <div class="indice-secao">
+        <div class="indice-titulo" style="color:#059669">Livros Poéticos — 5 livros</div>
+        <div class="indice-grid">
+          <a href="/04-poeticos/jo/index.html" class="indice-item"><span class="indice-num" style="color:#10b981;background:rgba(16,185,129,0.1)">Jó</span><span class="indice-nome">Jó</span><span class="indice-caps">42</span></a>
+          <a href="/04-poeticos/salmos/index.html" class="indice-item"><span class="indice-num" style="color:#10b981;background:rgba(16,185,129,0.1)">Sl</span><span class="indice-nome">Salmos</span><span class="indice-caps">150</span></a>
+          <a href="/04-poeticos/proverbios/index.html" class="indice-item"><span class="indice-num" style="color:#10b981;background:rgba(16,185,129,0.1)">Pv</span><span class="indice-nome">Provérbios</span><span class="indice-caps">31</span></a>
+          <a href="/04-poeticos/eclesiastes/index.html" class="indice-item"><span class="indice-num" style="color:#10b981;background:rgba(16,185,129,0.1)">Ec</span><span class="indice-nome">Eclesiastes</span><span class="indice-caps">12</span></a>
+          <a href="/04-poeticos/cantico/index.html" class="indice-item"><span class="indice-num" style="color:#10b981;background:rgba(16,185,129,0.1)">Ct</span><span class="indice-nome">Cântico dos Cânticos</span><span class="indice-caps">8</span></a>
+        </div>
+      </div>
 
-            resultsDiv.innerHTML = results.map(item => `
-                <div class="result-item">
-                    <span class="result-type">${item.type}</span>
-                    <h3><a href="${item.url}">${item.title}</a></h3>
-                    <p class="result-description">${item.description}</p>
-                </div>
-            `).join('');
-        }
+      <div class="indice-secao">
+        <div class="indice-titulo" style="color:#059669">Livros Proféticos — 17 livros</div>
+        <div class="indice-grid">
+          <a href="/05-profetas/isaias/index.html" class="indice-item"><span class="indice-num" style="color:#34d399;background:rgba(52,211,153,0.1)">Is</span><span class="indice-nome">Isaías</span><span class="indice-caps">66</span></a>
+          <a href="/05-profetas/jeremias/index.html" class="indice-item"><span class="indice-num" style="color:#34d399;background:rgba(52,211,153,0.1)">Jr</span><span class="indice-nome">Jeremias</span><span class="indice-caps">52</span></a>
+          <a href="/05-profetas/lamentacoes/index.html" class="indice-item"><span class="indice-num" style="color:#34d399;background:rgba(52,211,153,0.1)">Lm</span><span class="indice-nome">Lamentações</span><span class="indice-caps">5</span></a>
+          <a href="/05-profetas/ezequiel/index.html" class="indice-item"><span class="indice-num" style="color:#34d399;background:rgba(52,211,153,0.1)">Ez</span><span class="indice-nome">Ezequiel</span><span class="indice-caps">48</span></a>
+          <a href="/05-profetas/daniel/index.html" class="indice-item"><span class="indice-num" style="color:#34d399;background:rgba(52,211,153,0.1)">Dn</span><span class="indice-nome">Daniel</span><span class="indice-caps">12</span></a>
+          <a href="/05-profetas/oseias/index.html" class="indice-item"><span class="indice-num" style="color:#34d399;background:rgba(52,211,153,0.1)">Os</span><span class="indice-nome">Oseias</span><span class="indice-caps">14</span></a>
+          <a href="/05-profetas/joel/index.html" class="indice-item"><span class="indice-num" style="color:#34d399;background:rgba(52,211,153,0.1)">Jl</span><span class="indice-nome">Joel</span><span class="indice-caps">3</span></a>
+          <a href="/05-profetas/amos/index.html" class="indice-item"><span class="indice-num" style="color:#34d399;background:rgba(52,211,153,0.1)">Am</span><span class="indice-nome">Amós</span><span class="indice-caps">9</span></a>
+          <a href="/05-profetas/jonas/index.html" class="indice-item"><span class="indice-num" style="color:#34d399;background:rgba(52,211,153,0.1)">Jn</span><span class="indice-nome">Jonas</span><span class="indice-caps">4</span></a>
+          <a href="/05-profetas/miqueas/index.html" class="indice-item"><span class="indice-num" style="color:#34d399;background:rgba(52,211,153,0.1)">Mq</span><span class="indice-nome">Miquéias</span><span class="indice-caps">7</span></a>
+          <a href="/05-profetas/naum/index.html" class="indice-item"><span class="indice-num" style="color:#34d399;background:rgba(52,211,153,0.1)">Na</span><span class="indice-nome">Naum</span><span class="indice-caps">3</span></a>
+          <a href="/05-profetas/habacuque/index.html" class="indice-item"><span class="indice-num" style="color:#34d399;background:rgba(52,211,153,0.1)">Hc</span><span class="indice-nome">Habacuque</span><span class="indice-caps">3</span></a>
+          <a href="/05-profetas/sofonias/index.html" class="indice-item"><span class="indice-num" style="color:#34d399;background:rgba(52,211,153,0.1)">Sf</span><span class="indice-nome">Sofonias</span><span class="indice-caps">3</span></a>
+          <a href="/05-profetas/ageu/index.html" class="indice-item"><span class="indice-num" style="color:#34d399;background:rgba(52,211,153,0.1)">Ag</span><span class="indice-nome">Ageu</span><span class="indice-caps">2</span></a>
+          <a href="/05-profetas/zacarias/index.html" class="indice-item"><span class="indice-num" style="color:#34d399;background:rgba(52,211,153,0.1)">Zc</span><span class="indice-nome">Zacarias</span><span class="indice-caps">14</span></a>
+          <a href="/05-profetas/malaquias/index.html" class="indice-item"><span class="indice-num" style="color:#34d399;background:rgba(52,211,153,0.1)">Ml</span><span class="indice-nome">Malaquias</span><span class="indice-caps">4</span></a>
+        </div>
+      </div>
 
-        // Event listener para busca em tempo real
-        searchInput.addEventListener('input', (e) => {
-            search(e.target.value);
+      <div class="indice-secao">
+        <div class="indice-titulo" style="color:#0ea5e9">Novo Testamento — 27 livros</div>
+        <div class="indice-grid">
+          <a href="/08-novo-testamento/mateus/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.1)">Mt</span><span class="indice-nome">Mateus</span><span class="indice-caps">28</span></a>
+          <a href="/08-novo-testamento/marcos/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.1)">Mc</span><span class="indice-nome">Marcos</span><span class="indice-caps">16</span></a>
+          <a href="/08-novo-testamento/lucas/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.1)">Lc</span><span class="indice-nome">Lucas</span><span class="indice-caps">24</span></a>
+          <a href="/08-novo-testamento/joao/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.1)">Jo</span><span class="indice-nome">João</span><span class="indice-caps">21</span></a>
+          <a href="/08-novo-testamento/atos/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.1)">At</span><span class="indice-nome">Atos dos Apóstolos</span><span class="indice-caps">28</span></a>
+          <a href="/08-novo-testamento/romanos/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.1)">Rm</span><span class="indice-nome">Romanos</span><span class="indice-caps">16</span></a>
+          <a href="/08-novo-testamento/1-corintios/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.1)">1Co</span><span class="indice-nome">1 Coríntios</span><span class="indice-caps">16</span></a>
+          <a href="/08-novo-testamento/2-corintios/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.1)">2Co</span><span class="indice-nome">2 Coríntios</span><span class="indice-caps">13</span></a>
+          <a href="/08-novo-testamento/galatas/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.1)">Gl</span><span class="indice-nome">Gálatas</span><span class="indice-caps">6</span></a>
+          <a href="/08-novo-testamento/efesios/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.1)">Ef</span><span class="indice-nome">Efésios</span><span class="indice-caps">6</span></a>
+          <a href="/08-novo-testamento/filipenses/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.1)">Fp</span><span class="indice-nome">Filipenses</span><span class="indice-caps">4</span></a>
+          <a href="/08-novo-testamento/colossenses/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.1)">Cl</span><span class="indice-nome">Colossenses</span><span class="indice-caps">4</span></a>
+          <a href="/08-novo-testamento/1-tessalonicenses/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.1)">1Ts</span><span class="indice-nome">1 Tessalonicenses</span><span class="indice-caps">5</span></a>
+          <a href="/08-novo-testamento/2-tessalonicenses/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.1)">2Ts</span><span class="indice-nome">2 Tessalonicenses</span><span class="indice-caps">3</span></a>
+          <a href="/08-novo-testamento/1-timoteo/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.1)">1Tm</span><span class="indice-nome">1 Timóteo</span><span class="indice-caps">6</span></a>
+          <a href="/08-novo-testamento/2-timoteo/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.1)">2Tm</span><span class="indice-nome">2 Timóteo</span><span class="indice-caps">4</span></a>
+          <a href="/08-novo-testamento/tito/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.1)">Tt</span><span class="indice-nome">Tito</span><span class="indice-caps">3</span></a>
+          <a href="/08-novo-testamento/filemon/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.1)">Fm</span><span class="indice-nome">Filemon</span><span class="indice-caps">1</span></a>
+          <a href="/08-novo-testamento/hebreus/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.1)">Hb</span><span class="indice-nome">Hebreus</span><span class="indice-caps">13</span></a>
+          <a href="/08-novo-testamento/tiago/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.1)">Tg</span><span class="indice-nome">Tiago</span><span class="indice-caps">5</span></a>
+          <a href="/08-novo-testamento/1-pedro/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.1)">1Pe</span><span class="indice-nome">1 Pedro</span><span class="indice-caps">5</span></a>
+          <a href="/08-novo-testamento/2-pedro/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.1)">2Pe</span><span class="indice-nome">2 Pedro</span><span class="indice-caps">3</span></a>
+          <a href="/08-novo-testamento/1-joao/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.1)">1Jo</span><span class="indice-nome">1 João</span><span class="indice-caps">5</span></a>
+          <a href="/08-novo-testamento/2-joao/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.1)">2Jo</span><span class="indice-nome">2 João</span><span class="indice-caps">1</span></a>
+          <a href="/08-novo-testamento/3-joao/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.1)">3Jo</span><span class="indice-nome">3 João</span><span class="indice-caps">1</span></a>
+          <a href="/08-novo-testamento/judas/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.1)">Jd</span><span class="indice-nome">Judas</span><span class="indice-caps">1</span></a>
+          <a href="/08-novo-testamento/apocalipse/index.html" class="indice-item"><span class="indice-num" style="color:#7c3aed;background:rgba(124,58,237,0.1)">Ap</span><span class="indice-nome">Apocalipse</span><span class="indice-caps">22</span></a>
+        </div>
+      </div>
+
+      <div class="indice-secao">
+        <div class="indice-titulo" style="color:#38bdf8">Recursos do Projeto</div>
+        <div class="indice-grid">
+          <a href="/timeline/index.html" class="indice-item"><span class="indice-num" style="color:#0ea5e9;background:rgba(14,165,233,0.1)">TL</span><span class="indice-nome">Linha do Tempo Bíblica</span></a>
+          <a href="/mapas/index.html" class="indice-item"><span class="indice-num" style="color:#059669;background:rgba(5,150,105,0.1)">MP</span><span class="indice-nome">Mapas Bíblicos</span></a>
+          <a href="/sobre/index.html" class="indice-item"><span class="indice-num" style="color:#d97706;background:rgba(217,119,6,0.1)">SO</span><span class="indice-nome">Sobre o Projeto</span></a>
+          <a href="/referencias/index.html" class="indice-item"><span class="indice-num" style="color:#a78bfa;background:rgba(167,139,250,0.1)">RF</span><span class="indice-nome">Referências</span></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer style="text-align:center;padding:32px 20px;border-top:1px solid rgba(255,255,255,0.06);color:rgba(255,255,255,0.25);font-size:0.8rem;">
+    365 de Graça &amp; Adoração &bull; Busca Global &bull; 1.627+ páginas indexadas
+  </footer>
+
+  <script src="/assets/js/nav.js"></script>
+  <script>
+    const BUSCA_INDEX = [
+      {title:'O Princípio de Tudo',sub:'Bloco 01 — Criação, Queda, Caim e Abel',url:'/01-principio/index.html',tag:'Bloco',color:'#d97706'},
+      {title:'Pentateuco',sub:'Bloco 02 — Gênesis ao Deuteronômio',url:'/02-pentateuco/index.html',tag:'Bloco',color:'#d97706'},
+      {title:'Livros Históricos',sub:'Bloco 03 — Josué a Ester',url:'/03-historicos/index.html',tag:'Bloco',color:'#059669'},
+      {title:'Livros Poéticos e Sapienciais',sub:'Bloco 04 — Jó, Salmos, Provérbios, Eclesiastes, Cântico',url:'/04-poeticos/index.html',tag:'Bloco',color:'#059669'},
+      {title:'Profetas',sub:'Bloco 05 — 17 livros proféticos',url:'/05-profetas/index.html',tag:'Bloco',color:'#059669'},
+      {title:'Livros Apócrifos',sub:'Bloco 06 — 8 livros deuterocanônicos',url:'/06-apocrifos/index.html',tag:'Bloco',color:'#6366f1'},
+      {title:'Período Intertestamentário',sub:'Bloco 07 — Os 400 anos de silêncio',url:'/07-intertestamentario/index.html',tag:'Bloco',color:'#6366f1'},
+      {title:'Novo Testamento',sub:'Bloco 08 — Evangelhos, Atos, Epístolas, Apocalipse',url:'/08-novo-testamento/index.html',tag:'Bloco',color:'#0ea5e9'},
+      {title:'Igreja Primitiva',sub:'Bloco 09 — Pentecostes, Perseguições, Pais da Igreja',url:'/09-igreja-primitiva/index.html',tag:'Bloco',color:'#0ea5e9'},
+      {title:'Concílios e História da Igreja',sub:'Bloco 10 — Niceia, Calcedônia, Trento, Vaticano',url:'/10-concilios/index.html',tag:'Bloco',color:'#8b5cf6'},
+      {title:'Cruzadas e Guerras Religiosas',sub:'Bloco 11 — As 8 Cruzadas e suas consequências',url:'/11-cruzadas/index.html',tag:'Bloco',color:'#8b5cf6'},
+      {title:'Conflitos Religiosos Contemporâneos',sub:'Bloco 12 — Reforma, Cisma, Secularismo',url:'/12-conflitos-contemporaneos/index.html',tag:'Bloco',color:'#e11d48'},
+      {title:'Apocalipse',sub:'Bloco 13 — As 7 Igrejas, Selos, Trombetas, Nova Jerusalém',url:'/13-apocalipse/index.html',tag:'Bloco',color:'#7c3aed'},
+      {title:'Gênesis',sub:'Pentateuco — 50 capítulos',url:'/02-pentateuco/genesis/index.html',tag:'AT',color:'#d97706'},
+      {title:'Êxodo',sub:'Pentateuco — 40 capítulos',url:'/02-pentateuco/exodo/index.html',tag:'AT',color:'#d97706'},
+      {title:'Levítico',sub:'Pentateuco — 27 capítulos',url:'/02-pentateuco/levitico/index.html',tag:'AT',color:'#d97706'},
+      {title:'Números',sub:'Pentateuco — 36 capítulos',url:'/02-pentateuco/numeros/index.html',tag:'AT',color:'#d97706'},
+      {title:'Deuteronômio',sub:'Pentateuco — 34 capítulos',url:'/02-pentateuco/deuteronomio/index.html',tag:'AT',color:'#d97706'},
+      {title:'Josué',sub:'Livros Históricos — 24 capítulos',url:'/03-historicos/josue/index.html',tag:'AT',color:'#059669'},
+      {title:'Juízes',sub:'Livros Históricos — 21 capítulos',url:'/03-historicos/juizes/index.html',tag:'AT',color:'#059669'},
+      {title:'Rute',sub:'Livros Históricos — 4 capítulos',url:'/03-historicos/rute/index.html',tag:'AT',color:'#059669'},
+      {title:'1 Samuel',sub:'Livros Históricos — 31 capítulos',url:'/03-historicos/1-samuel/index.html',tag:'AT',color:'#059669'},
+      {title:'2 Samuel',sub:'Livros Históricos — 24 capítulos',url:'/03-historicos/2-samuel/index.html',tag:'AT',color:'#059669'},
+      {title:'1 Reis',sub:'Livros Históricos — 22 capítulos',url:'/03-historicos/1-reis/index.html',tag:'AT',color:'#059669'},
+      {title:'2 Reis',sub:'Livros Históricos — 25 capítulos',url:'/03-historicos/2-reis/index.html',tag:'AT',color:'#059669'},
+      {title:'Salmos',sub:'Livros Poéticos — 150 capítulos',url:'/04-poeticos/salmos/index.html',tag:'AT',color:'#059669'},
+      {title:'Provérbios',sub:'Livros Sapienciais — 31 capítulos',url:'/04-poeticos/proverbios/index.html',tag:'AT',color:'#059669'},
+      {title:'Jó',sub:'Livros Poéticos — 42 capítulos',url:'/04-poeticos/jo/index.html',tag:'AT',color:'#059669'},
+      {title:'Eclesiastes',sub:'Livros Sapienciais — 12 capítulos',url:'/04-poeticos/eclesiastes/index.html',tag:'AT',color:'#059669'},
+      {title:'Cântico dos Cânticos',sub:'Livros Poéticos — 8 capítulos',url:'/04-poeticos/cantico/index.html',tag:'AT',color:'#059669'},
+      {title:'Isaías',sub:'Profetas Maiores — 66 capítulos',url:'/05-profetas/isaias/index.html',tag:'AT',color:'#059669'},
+      {title:'Jeremias',sub:'Profetas Maiores — 52 capítulos',url:'/05-profetas/jeremias/index.html',tag:'AT',color:'#059669'},
+      {title:'Ezequiel',sub:'Profetas Maiores — 48 capítulos',url:'/05-profetas/ezequiel/index.html',tag:'AT',color:'#059669'},
+      {title:'Daniel',sub:'Profetas Maiores — 12 capítulos',url:'/05-profetas/daniel/index.html',tag:'AT',color:'#059669'},
+      {title:'Oseias',sub:'Profetas Menores — 14 capítulos',url:'/05-profetas/oseias/index.html',tag:'AT',color:'#059669'},
+      {title:'Joel',sub:'Profetas Menores — 3 capítulos',url:'/05-profetas/joel/index.html',tag:'AT',color:'#059669'},
+      {title:'Amós',sub:'Profetas Menores — 9 capítulos',url:'/05-profetas/amos/index.html',tag:'AT',color:'#059669'},
+      {title:'Jonas',sub:'Profetas Menores — 4 capítulos',url:'/05-profetas/jonas/index.html',tag:'AT',color:'#059669'},
+      {title:'Mateus',sub:'Evangelhos — 28 capítulos',url:'/08-novo-testamento/mateus/index.html',tag:'NT',color:'#0ea5e9'},
+      {title:'Marcos',sub:'Evangelhos — 16 capítulos',url:'/08-novo-testamento/marcos/index.html',tag:'NT',color:'#0ea5e9'},
+      {title:'Lucas',sub:'Evangelhos — 24 capítulos',url:'/08-novo-testamento/lucas/index.html',tag:'NT',color:'#0ea5e9'},
+      {title:'João',sub:'Evangelhos — 21 capítulos',url:'/08-novo-testamento/joao/index.html',tag:'NT',color:'#0ea5e9'},
+      {title:'Atos dos Apóstolos',sub:'História — 28 capítulos',url:'/08-novo-testamento/atos/index.html',tag:'NT',color:'#0ea5e9'},
+      {title:'Romanos',sub:'Epístolas Paulinas — 16 capítulos',url:'/08-novo-testamento/romanos/index.html',tag:'NT',color:'#0ea5e9'},
+      {title:'1 Coríntios',sub:'Epístolas Paulinas — 16 capítulos',url:'/08-novo-testamento/1-corintios/index.html',tag:'NT',color:'#0ea5e9'},
+      {title:'2 Coríntios',sub:'Epístolas Paulinas — 13 capítulos',url:'/08-novo-testamento/2-corintios/index.html',tag:'NT',color:'#0ea5e9'},
+      {title:'Gálatas',sub:'Epístolas Paulinas — 6 capítulos',url:'/08-novo-testamento/galatas/index.html',tag:'NT',color:'#0ea5e9'},
+      {title:'Efésios',sub:'Epístolas Paulinas — 6 capítulos',url:'/08-novo-testamento/efesios/index.html',tag:'NT',color:'#0ea5e9'},
+      {title:'Filipenses',sub:'Epístolas Paulinas — 4 capítulos',url:'/08-novo-testamento/filipenses/index.html',tag:'NT',color:'#0ea5e9'},
+      {title:'Colossenses',sub:'Epístolas Paulinas — 4 capítulos',url:'/08-novo-testamento/colossenses/index.html',tag:'NT',color:'#0ea5e9'},
+      {title:'Hebreus',sub:'Epístolas Gerais — 13 capítulos',url:'/08-novo-testamento/hebreus/index.html',tag:'NT',color:'#0ea5e9'},
+      {title:'Tiago',sub:'Epístolas Gerais — 5 capítulos',url:'/08-novo-testamento/tiago/index.html',tag:'NT',color:'#0ea5e9'},
+      {title:'1 Pedro',sub:'Epístolas Gerais — 5 capítulos',url:'/08-novo-testamento/1-pedro/index.html',tag:'NT',color:'#0ea5e9'},
+      {title:'Apocalipse de João',sub:'Profecia — 22 capítulos',url:'/08-novo-testamento/apocalipse/index.html',tag:'NT',color:'#7c3aed'},
+      {title:'Graça',sub:'Tema central — da Criação ao Apocalipse',url:'/busca/index.html?q=graca',tag:'Tema',color:'#d97706'},
+      {title:'Adoração',sub:'Tema central — formas e evolução da adoração',url:'/busca/index.html?q=adoracao',tag:'Tema',color:'#d97706'},
+      {title:'Reino de Deus',sub:'Tema central — manifestação ao longo da história',url:'/busca/index.html?q=reino',tag:'Tema',color:'#059669'},
+      {title:'Aliança',sub:'Tema teológico — Noé, Abraão, Moisés, Davi, Nova Aliança',url:'/busca/index.html?q=alianca',tag:'Tema',color:'#059669'},
+      {title:'Profecia Messiânica',sub:'Tema teológico — promessas cumpridas em Cristo',url:'/busca/index.html?q=messias',tag:'Tema',color:'#0ea5e9'},
+      {title:'Fé e Obras',sub:'Tema teológico — Tiago, Paulo, Hebreus',url:'/busca/index.html?q=fe',tag:'Tema',color:'#0ea5e9'},
+      {title:'Escatologia',sub:'Tema teológico — fins últimos, Apocalipse, milênio',url:'/13-apocalipse/index.html',tag:'Tema',color:'#7c3aed'},
+      {title:'Criação',sub:'Tema teológico — Gênesis 1-2, imago Dei',url:'/01-principio/index.html',tag:'Tema',color:'#d97706'},
+      {title:'Redenção',sub:'Tema teológico — libertação do pecado pela graça',url:'/busca/index.html?q=redencao',tag:'Tema',color:'#0ea5e9'},
+      {title:'Abraão',sub:'Personagem — pai da fé, Gênesis 12–25',url:'/02-pentateuco/genesis/index.html',tag:'Personagem',color:'#d97706'},
+      {title:'Moisés',sub:'Personagem — libertador, Êxodo ao Deuteronômio',url:'/02-pentateuco/exodo/index.html',tag:'Personagem',color:'#d97706'},
+      {title:'Davi',sub:'Personagem — rei, salmista, 1-2 Samuel',url:'/03-historicos/1-samuel/index.html',tag:'Personagem',color:'#059669'},
+      {title:'Salomão',sub:'Personagem — rei sábio, 1 Reis, Provérbios',url:'/03-historicos/1-reis/index.html',tag:'Personagem',color:'#059669'},
+      {title:'Elias',sub:'Personagem — profeta do fogo, 1 Reis 17–21',url:'/03-historicos/1-reis/index.html',tag:'Personagem',color:'#059669'},
+      {title:'Isaías',sub:'Personagem — profeta do Messias, Is 1–66',url:'/05-profetas/isaias/index.html',tag:'Personagem',color:'#059669'},
+      {title:'Daniel',sub:'Personagem — profeta na Babilônia, Dn 1–12',url:'/05-profetas/daniel/index.html',tag:'Personagem',color:'#059669'},
+      {title:'Paulo',sub:'Personagem — apóstolo dos gentios, Atos e Epístolas',url:'/08-novo-testamento/atos/index.html',tag:'Personagem',color:'#0ea5e9'},
+      {title:'Pedro',sub:'Personagem — apóstolo, Evangelhos e 1-2 Pedro',url:'/08-novo-testamento/1-pedro/index.html',tag:'Personagem',color:'#0ea5e9'},
+      {title:'João',sub:'Personagem — discípulo amado, Evangelhos e Apocalipse',url:'/08-novo-testamento/joao/index.html',tag:'Personagem',color:'#0ea5e9'},
+      {title:'Maria',sub:'Personagem — mãe de Jesus, Lucas 1-2',url:'/08-novo-testamento/lucas/index.html',tag:'Personagem',color:'#0ea5e9'},
+      {title:'Linha do Tempo Bíblica',sub:'Da Criação ao Apocalipse — cronologia completa',url:'/timeline/index.html',tag:'Recurso',color:'#0ea5e9'},
+      {title:'Mapas Bíblicos',sub:'Geografia bíblica, rotas de Paulo, Cruzadas',url:'/mapas/index.html',tag:'Recurso',color:'#059669'},
+    ];
+
+    let catAtiva = 'all';
+
+    function setCat(cat, btn) {
+      catAtiva = cat;
+      document.querySelectorAll('.busca-cat').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      buscar(document.getElementById('busca-main').value);
+    }
+
+    function highlight(text, q) {
+      if (!q) return text;
+      const re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + ')', 'gi');
+      return text.replace(re, '<mark>$1</mark>');
+    }
+
+    function buscar(q) {
+      const resultDiv = document.getElementById('busca-resultados');
+      const indice = document.getElementById('indice-completo');
+      const clearBtn = document.getElementById('busca-clear');
+      if (!q.trim()) {
+        resultDiv.innerHTML = '';
+        indice.style.display = '';
+        clearBtn.classList.remove('show');
+        return;
+      }
+      clearBtn.classList.add('show');
+      indice.style.display = 'none';
+      const ql = q.toLowerCase()
+        .normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+      let items = BUSCA_INDEX.filter(item => {
+        const t = (item.title + ' ' + item.sub).toLowerCase()
+          .normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+        const match = t.includes(ql);
+        const catMatch = catAtiva === 'all' || item.tag.startsWith(catAtiva);
+        return match && catMatch;
+      });
+      if (items.length === 0) {
+        resultDiv.innerHTML = '<div class="busca-vazio"><h3>Nenhum resultado para "' + q + '"</h3><p>Tente termos como nomes de livros, personagens ou temas teológicos.</p></div>';
+        return;
+      }
+      const grupos = {};
+      items.forEach(item => { if (!grupos[item.tag]) grupos[item.tag]=[]; grupos[item.tag].push(item); });
+      let html = '<p style="font-size:0.8rem;color:rgba(255,255,255,0.35);margin-bottom:20px">' + items.length + ' resultado' + (items.length!==1?'s':'') + ' para "<strong style=\'color:rgba(255,255,255,0.6)\'>' + q + '</strong>"</p>';
+      Object.entries(grupos).forEach(([tag, list]) => {
+        html += '<div class="resultado-secao"><div class="resultado-secao-titulo">' + tag + ' (' + list.length + ')</div><div class="resultado-grid">';
+        list.forEach(item => {
+          html += '<a href="' + item.url + '" class="resultado-item"><div class="resultado-icone" style="color:' + item.color + ';background:' + item.color + '18">' + item.tag.slice(0,2) + '</div><div class="resultado-corpo"><div class="resultado-titulo">' + highlight(item.title, ql) + '</div><div class="resultado-sub">' + item.sub + '</div></div><span class="resultado-tag">' + item.tag + '</span></a>';
         });
+        html += '</div></div>';
+      });
+      resultDiv.innerHTML = html;
+    }
 
-        // Buscar ao carregar se houver query string
-        const urlParams = new URLSearchParams(window.location.search);
-        const queryParam = urlParams.get('q');
-        if (queryParam) {
-            searchInput.value = queryParam;
-            search(queryParam);
-        }
-    </script>
+    function limparBusca() {
+      const input = document.getElementById('busca-main');
+      input.value = ''; buscar(''); input.focus();
+    }
+
+    document.getElementById('busca-main').addEventListener('input', e => buscar(e.target.value));
+
+    const urlQ = new URLSearchParams(window.location.search).get('q');
+    if (urlQ) { document.getElementById('busca-main').value = urlQ; buscar(urlQ); }
+  </script>
 </body>
 </html>
