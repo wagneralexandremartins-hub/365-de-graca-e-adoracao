@@ -1,27 +1,23 @@
-# Robots.txt para 365 de Graça & Adoração
+# robots.txt — 365 de Graça & Adoração
 # https://365gracaeadoracao.com
+# Atualizado: 2026-03-06
 
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://365gracaeadoracao.com/sitemap.xml
-
-# Páginas importantes para priorizar
-Allow: /sobre/
-Allow: /sobre/fontes/
-Allow: /sobre/proposito/
-Allow: /contexto/
-Allow: /02-pentateuco/genesis/
-Allow: /01-principio/
-
-# Bloquear arquivos desnecessários
+# Bloquear arquivos de sistema, scripts e backups
 Disallow: /node_modules/
 Disallow: /.git/
+Disallow: /*.py$
+Disallow: /*.md$
+Disallow: /*_backup*
+Disallow: /busca/index_backup.html
 
-# Permitir rastreamento de imagens
+# Sitemap completo com 1.537 páginas
+Sitemap: https://365gracaeadoracao.com/sitemap.xml
+
+# Permitir rastreamento de imagens pelo Google
 User-agent: Googlebot-Image
+Allow: /assets/img/
 Allow: /assets/images/
-Allow: /images/
-
 
