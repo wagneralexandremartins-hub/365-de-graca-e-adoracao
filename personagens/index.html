@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personagens Bíblicos — Quem foi Moisés, Davi, Paulo e outros · 365 de Graça & Adoração</title>
+  <meta name="description" content="Conheça os principais personagens bíblicos: Moisés, Abraão, Davi, Salomão, Paulo, Pedro, Maria e outros. Vida, contexto histórico e legado espiritual.">
+  <meta name="keywords" content="personagens bíblicos, quem foi Moisés, quem foi Davi, quem foi Paulo, Abraão, Salomão, Pedro, Maria, Jesus, profetas">
+  <meta name="author" content="Wagner Alexandre Martins">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://365gracaeadoracao.com/personagens/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://365gracaeadoracao.com/personagens/">
+  <meta property="og:title" content="Personagens Bíblicos — Quem foi Moisés, Davi, Paulo e outros">
+  <meta property="og:description" content="Conheça os principais personagens bíblicos: Moisés, Abraão, Davi, Salomão, Paulo, Pedro, Maria e outros.">
+  <meta property="og:image" content="https://365gracaeadoracao.com/assets/img/og-image.png">
+  <meta property="og:site_name" content="365 de Graça & Adoração">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/bloco.css">
+  <link rel="stylesheet" href="/assets/css/nav.css">
+  <style>
+    .person-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.2rem; margin-top: 1.5rem; }
+    .person-card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; transition: transform .15s ease, border-color .15s ease; text-decoration: none; color: inherit; display: block; }
+    .person-card:hover { transform: translateY(-4px); border-color: rgba(0,168,225,.35); }
+    .person-header { padding: 1.5rem 1.5rem 1rem; display: flex; align-items: center; gap: 1rem; }
+    .person-icon { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; flex-shrink: 0; }
+    .person-card h3 { margin: 0 0 0.2rem; color: #fff; font-size: 1.1rem; }
+    .person-card .period { font-size: 0.78rem; color: var(--muted); }
+    .person-body { padding: 0 1.5rem 1.5rem; }
+    .person-body p { color: var(--muted); font-size: 0.92rem; line-height: 1.55; margin: 0 0 0.75rem; }
+    .person-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .person-tag { padding: 2px 8px; border-radius: 999px; font-size: 0.7rem; font-weight: 700; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); color: var(--muted); }
+    .era-section { margin-top: 3rem; }
+    .era-section h2 { color: var(--accent2); border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; margin-bottom: 0.5rem; }
+    .era-desc { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .filter-bar { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .filter-btn { padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel); color: var(--muted); font-size: 0.85rem; cursor: pointer; font-weight: 600; transition: all .15s; }
+    .filter-btn:hover, .filter-btn.active { background: rgba(0,168,225,.15); border-color: rgba(0,168,225,.35); color: #fff; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="inner">
+      <div class="brand">
+        <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;">
+          <span>365 de Graça &amp; Adoração</span>
+        </a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="main-nav">
+        <a href="/">Início</a>
+        <a href="/timeline/index.html">Linha do Tempo</a>
+        <a href="/mapas/index.html">Mapas</a>
+        <a href="/como-estudar/index.html">Como Estudar</a>
+        <a href="/busca/index.html" class="nav-busca">🔍 Buscar</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <nav aria-label="Breadcrumb" style="margin-bottom:1.5rem;font-size:0.85rem;color:var(--muted);">
+      <a href="/" style="color:var(--accent);text-decoration:none;">Início</a>
+      <span style="margin:0 0.5rem;">›</span>
+      <span>Personagens Bíblicos</span>
+    </nav>
+
+    <div style="text-align:center;padding:2rem 1rem 1rem;">
+      <span style="font-size:3rem;">👤</span>
+      <h1 style="font-size:clamp(1.8rem,4vw,2.6rem);color:#fff;margin:0.5rem 0;">Personagens Bíblicos</h1>
+      <p style="color:var(--muted);font-size:1.05rem;max-width:640px;margin:0 auto 1.5rem;">
+        Conheça os homens e mulheres que moldaram a história sagrada — suas vidas, seus contextos históricos, suas falhas e seu legado espiritual que atravessa milênios.
+      </p>
+    </div>
+
+    <!-- Filtros -->
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filtrar('todos')">Todos</button>
+      <button class="filter-btn" onclick="filtrar('patriarcas')">Patriarcas</button>
+      <button class="filter-btn" onclick="filtrar('profetas')">Profetas</button>
+      <button class="filter-btn" onclick="filtrar('reis')">Reis</button>
+      <button class="filter-btn" onclick="filtrar('apostolos')">Apóstolos</button>
+      <button class="filter-btn" onclick="filtrar('mulheres')">Mulheres</button>
+    </div>
+
+    <!-- Patriarcas e Fundadores -->
+    <div class="era-section" id="era-patriarcas">
+      <h2>🏕️ Patriarcas e Fundadores</h2>
+      <p class="era-desc">Os pais da fé — homens que receberam as promessas originais e fundaram o povo de Deus.</p>
+      <div class="person-grid">
+
+        <a href="/personagens/abraao.html" class="person-card" data-categoria="patriarcas">
+          <div class="person-header">
+            <div class="person-icon" style="background:rgba(217,119,6,.15);border:1px solid rgba(217,119,6,.3);">🏕️</div>
+            <div>
+              <h3>Abraão</h3>
+              <span class="period">~2000 a.C. · Ur dos Caldeus → Canaã</span>
+            </div>
+          </div>
+          <div class="person-body">
+            <p>O pai da fé. Chamado por Deus para deixar tudo e ir para uma terra desconhecida, Abraão é o fundador espiritual do judaísmo, do cristianismo e do islamismo. Sua fé foi contada como justiça antes mesmo da circuncisão e da lei.</p>
+            <div class="person-tags">
+              <span class="person-tag">Patriarca</span>
+              <span class="person-tag">Gênesis 12–25</span>
+              <span class="person-tag">Aliança</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/personagens/moises.html" class="person-card" data-categoria="profetas">
+          <div class="person-header">
+            <div class="person-icon" style="background:rgba(5,150,105,.15);border:1px solid rgba(5,150,105,.3);">⚡</div>
+            <div>
+              <h3>Moisés</h3>
+              <span class="period">~1300 a.C. · Egito → Deserto → Canaã</span>
+            </div>
+          </div>
+          <div class="person-body">
+            <p>O maior profeta do Antigo Testamento. Libertou Israel do Egito, recebeu a Lei no Sinai e guiou o povo por 40 anos no deserto. Autor dos cinco primeiros livros da Bíblia, falou com Deus "face a face" como nenhum outro profeta.</p>
+            <div class="person-tags">
+              <span class="person-tag">Profeta</span>
+              <span class="person-tag">Êxodo–Deuteronômio</span>
+              <span class="person-tag">Lei</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/personagens/jose.html" class="person-card" data-categoria="patriarcas">
+          <div class="person-header">
+            <div class="person-icon" style="background:rgba(99,102,241,.15);border:1px solid rgba(99,102,241,.3);">🌈</div>
+            <div>
+              <h3>José</h3>
+              <span class="period">~1700 a.C. · Canaã → Egito</span>
+            </div>
+          </div>
+          <div class="person-body">
+            <p>Vendido como escravo pelos próprios irmãos, tornou-se o segundo homem mais poderoso do Egito. Sua história é uma das mais completas tipologias de Cristo na Bíblia — traído, humilhado, exaltado e usado para salvar aqueles que o rejeitaram.</p>
+            <div class="person-tags">
+              <span class="person-tag">Patriarca</span>
+              <span class="person-tag">Gênesis 37–50</span>
+              <span class="person-tag">Providência</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Reis e Líderes -->
+    <div class="era-section" id="era-reis">
+      <h2>👑 Reis e Líderes</h2>
+      <p class="era-desc">Os que governaram Israel e Judá — com glórias e fracassos que definiram o destino de uma nação.</p>
+      <div class="person-grid">
+
+        <a href="/personagens/davi.html" class="person-card" data-categoria="reis">
+          <div class="person-header">
+            <div class="person-icon" style="background:rgba(234,179,8,.15);border:1px solid rgba(234,179,8,.3);">🎵</div>
+            <div>
+              <h3>Davi</h3>
+              <span class="period">~1000 a.C. · Belém → Jerusalém</span>
+            </div>
+          </div>
+          <div class="person-body">
+            <p>O rei mais amado de Israel. Pastor, guerreiro, músico e poeta — autor de grande parte dos Salmos. Homem "segundo o coração de Deus", mas também marcado por falhas graves. Sua aliança com Deus é o fundamento da esperança messiânica.</p>
+            <div class="person-tags">
+              <span class="person-tag">Rei</span>
+              <span class="person-tag">1 Samuel–1 Reis</span>
+              <span class="person-tag">Salmos</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/personagens/salomao.html" class="person-card" data-categoria="reis">
+          <div class="person-header">
+            <div class="person-icon" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);">🏛️</div>
+            <div>
+              <h3>Salomão</h3>
+              <span class="period">~970–930 a.C. · Jerusalém</span>
+            </div>
+          </div>
+          <div class="person-body">
+            <p>O rei mais sábio e mais rico de Israel. Construiu o Templo de Jerusalém, escreveu Provérbios, Eclesiastes e Cântico dos Cânticos. Sua trajetória é uma tragédia espiritual — a sabedoria sem fidelidade não é suficiente para preservar um homem.</p>
+            <div class="person-tags">
+              <span class="person-tag">Rei</span>
+              <span class="person-tag">1 Reis 1–11</span>
+              <span class="person-tag">Sabedoria</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/personagens/josue.html" class="person-card" data-categoria="reis">
+          <div class="person-header">
+            <div class="person-icon" style="background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.3);">⚔️</div>
+            <div>
+              <h3>Josué</h3>
+              <span class="period">~1250 a.C. · Deserto → Canaã</span>
+            </div>
+          </div>
+          <div class="person-body">
+            <p>Sucessor de Moisés e conquistador de Canaã. Seu nome em hebraico (Yehoshua) é a mesma raiz do nome Jesus. Liderou Israel com coragem e fé, e ao final de sua vida declarou: "Quanto a mim e à minha casa, serviremos ao Senhor."</p>
+            <div class="person-tags">
+              <span class="person-tag">Líder Militar</span>
+              <span class="person-tag">Josué</span>
+              <span class="person-tag">Conquista</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Profetas -->
+    <div class="era-section" id="era-profetas">
+      <h2>🔥 Profetas</h2>
+      <p class="era-desc">Os porta-vozes de Deus — homens e mulheres que confrontaram reis, anunciaram julgamento e prometeram restauração.</p>
+      <div class="person-grid">
+
+        <a href="/personagens/elias.html" class="person-card" data-categoria="profetas">
+          <div class="person-header">
+            <div class="person-icon" style="background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);">🔥</div>
+            <div>
+              <h3>Elias</h3>
+              <span class="period">~875 a.C. · Israel do Norte</span>
+            </div>
+          </div>
+          <div class="person-body">
+            <p>O profeta do fogo. Confrontou o rei Acabe e os 450 profetas de Baal no Monte Carmelo. Fugiu ao deserto em depressão e foi restaurado por Deus. Foi arrebatado ao céu em um carro de fogo — e reapareceu na Transfiguração ao lado de Moisés e Jesus.</p>
+            <div class="person-tags">
+              <span class="person-tag">Profeta</span>
+              <span class="person-tag">1 Reis 17–2 Reis 2</span>
+              <span class="person-tag">Milagres</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/personagens/isaias.html" class="person-card" data-categoria="profetas">
+          <div class="person-header">
+            <div class="person-icon" style="background:rgba(139,92,246,.15);border:1px solid rgba(139,92,246,.3);">📜</div>
+            <div>
+              <h3>Isaías</h3>
+              <span class="period">~740–700 a.C. · Jerusalém</span>
+            </div>
+          </div>
+          <div class="person-body">
+            <p>O "evangelista do Antigo Testamento". Suas profecias sobre o Servo Sofredor (Isaías 53) são as mais detalhadas sobre a morte de Cristo escritas 700 anos antes. Chamado por uma visão do trono de Deus, profetizou sobre a queda de Babilônia e a Nova Criação.</p>
+            <div class="person-tags">
+              <span class="person-tag">Profeta</span>
+              <span class="person-tag">Isaías 1–66</span>
+              <span class="person-tag">Messias</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/personagens/jeremias.html" class="person-card" data-categoria="profetas">
+          <div class="person-header">
+            <div class="person-icon" style="background:rgba(14,165,233,.15);border:1px solid rgba(14,165,233,.3);">😢</div>
+            <div>
+              <h3>Jeremias</h3>
+              <span class="period">~627–586 a.C. · Judá</span>
+            </div>
+          </div>
+          <div class="person-body">
+            <p>O "profeta que chorou". Chamado antes de nascer, profetizou a destruição de Jerusalém por décadas sem ser ouvido. Anunciou a Nova Aliança (Jeremias 31:31-34) — a promessa de uma lei escrita no coração, cumprida em Cristo.</p>
+            <div class="person-tags">
+              <span class="person-tag">Profeta</span>
+              <span class="person-tag">Jeremias 1–52</span>
+              <span class="person-tag">Nova Aliança</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Novo Testamento -->
+    <div class="era-section" id="era-nt">
+      <h2>✝️ Apóstolos e Líderes do Novo Testamento</h2>
+      <p class="era-desc">Os que caminharam com Jesus e fundaram a Igreja — suas vidas transformadas e seu legado eterno.</p>
+      <div class="person-grid">
+
+        <a href="/personagens/paulo.html" class="person-card" data-categoria="apostolos">
+          <div class="person-header">
+            <div class="person-icon" style="background:rgba(0,168,225,.15);border:1px solid rgba(0,168,225,.3);">✍️</div>
+            <div>
+              <h3>Paulo de Tarso</h3>
+              <span class="period">~5–67 d.C. · Tarso → Roma</span>
+            </div>
+          </div>
+          <div class="person-body">
+            <p>O maior teólogo do Novo Testamento. Perseguidor da Igreja convertido por uma visão de Cristo ressuscitado, tornou-se o apóstolo dos gentios. Escreveu 13 epístolas que definiram a teologia cristã — da justificação pela fé à escatologia.</p>
+            <div class="person-tags">
+              <span class="person-tag">Apóstolo</span>
+              <span class="person-tag">Atos 9–28</span>
+              <span class="person-tag">13 Epístolas</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/personagens/pedro.html" class="person-card" data-categoria="apostolos">
+          <div class="person-header">
+            <div class="person-icon" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);">🪨</div>
+            <div>
+              <h3>Pedro</h3>
+              <span class="period">~1–64 d.C. · Galileia → Roma</span>
+            </div>
+          </div>
+          <div class="person-body">
+            <p>O líder dos doze apóstolos. Pescador impulsivo que negou Jesus três vezes e foi restaurado com a mesma ternura que havia sido chamado. Pregou o primeiro sermão de Pentecostes, convertendo 3.000 pessoas em um dia. Morreu crucificado de cabeça para baixo em Roma.</p>
+            <div class="person-tags">
+              <span class="person-tag">Apóstolo</span>
+              <span class="person-tag">Evangelhos · Atos</span>
+              <span class="person-tag">2 Epístolas</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/personagens/joao.html" class="person-card" data-categoria="apostolos">
+          <div class="person-header">
+            <div class="person-icon" style="background:rgba(236,72,153,.15);border:1px solid rgba(236,72,153,.3);">❤️</div>
+            <div>
+              <h3>João</h3>
+              <span class="period">~6–100 d.C. · Galileia → Éfeso → Patmos</span>
+            </div>
+          </div>
+          <div class="person-body">
+            <p>O "discípulo amado". O único dos doze que não foi martirizado — morreu de velhice em Éfeso. Escreveu o quarto Evangelho, três epístolas e o Apocalipse. Sua teologia do amor é a mais profunda do Novo Testamento: "Deus é amor."</p>
+            <div class="person-tags">
+              <span class="person-tag">Apóstolo</span>
+              <span class="person-tag">João · Apocalipse</span>
+              <span class="person-tag">3 Epístolas</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Mulheres da Bíblia -->
+    <div class="era-section" id="era-mulheres">
+      <h2>🌸 Mulheres da Bíblia</h2>
+      <p class="era-desc">As mulheres que desempenharam papéis fundamentais na história da salvação — muitas vezes invisibilizadas, sempre essenciais.</p>
+      <div class="person-grid">
+
+        <a href="/personagens/maria.html" class="person-card" data-categoria="mulheres">
+          <div class="person-header">
+            <div class="person-icon" style="background:rgba(167,139,250,.15);border:1px solid rgba(167,139,250,.3);">🌟</div>
+            <div>
+              <h3>Maria, Mãe de Jesus</h3>
+              <span class="period">~20 a.C. – ~50 d.C. · Nazaré</span>
+            </div>
+          </div>
+          <div class="person-body">
+            <p>A jovem de Nazaré que disse "sim" a Deus e mudou a história. Sua fé — "Faça-se em mim segundo a tua palavra" — é o modelo de disponibilidade total. Presente desde a Anunciação até a Cruz e o Pentecostes, Maria é a primeira discípula de Jesus.</p>
+            <div class="person-tags">
+              <span class="person-tag">Mãe de Jesus</span>
+              <span class="person-tag">Lucas 1–2</span>
+              <span class="person-tag">Fé</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/personagens/rute.html" class="person-card" data-categoria="mulheres">
+          <div class="person-header">
+            <div class="person-icon" style="background:rgba(251,146,60,.15);border:1px solid rgba(251,146,60,.3);">🌾</div>
+            <div>
+              <h3>Rute</h3>
+              <span class="period">~1100 a.C. · Moabe → Belém</span>
+            </div>
+          </div>
+          <div class="person-body">
+            <p>A moabita que escolheu o Deus de Israel e o povo de sua sogra Noemi. Sua lealdade — "Para onde tu fores, eu irei" — é um dos mais belos retratos da graça na Bíblia. Bisavó do rei Davi e ancestral de Jesus Cristo.</p>
+            <div class="person-tags">
+              <span class="person-tag">Mulher</span>
+              <span class="person-tag">Livro de Rute</span>
+              <span class="person-tag">Lealdade</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/personagens/ester.html" class="person-card" data-categoria="mulheres">
+          <div class="person-header">
+            <div class="person-icon" style="background:rgba(244,63,94,.15);border:1px solid rgba(244,63,94,.3);">👑</div>
+            <div>
+              <h3>Ester</h3>
+              <span class="period">~480 a.C. · Pérsia</span>
+            </div>
+          </div>
+          <div class="person-body">
+            <p>A rainha que arriscou a vida para salvar seu povo. Judia na corte persa, usou sua posição para impedir o genocídio do povo de Israel. "Quem sabe se não foi para um momento como este que chegaste à posição de rainha?" (Ester 4:14)</p>
+            <div class="person-tags">
+              <span class="person-tag">Rainha</span>
+              <span class="person-tag">Livro de Ester</span>
+              <span class="person-tag">Coragem</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div style="text-align:center;margin:3rem 0;padding:2rem;background:var(--panel);border-radius:16px;border:1px solid var(--line);">
+      <h3 style="color:#fff;margin:0 0 0.5rem;">Explore os Estudos Completos</h3>
+      <p style="color:var(--muted);margin:0 0 1.5rem;">Cada personagem está contextualizado dentro dos 13 Blocos Temáticos do projeto.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="/" class="btn primary">📚 Ver os 13 Blocos</a>
+        <a href="/busca/index.html" class="btn">🔍 Buscar Personagem</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" style="padding:2rem;border-top:1px solid var(--line);margin-top:2rem;">
+    <p>365 de Graça &amp; Adoração — Da Criação ao Apocalipse</p>
+    <p><a href="/" style="color:var(--accent);">← Voltar para o Início</a></p>
+  </footer>
+
+  <script src="/assets/js/nav.js"></script>
+  <script>
+    function filtrar(cat) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+      document.querySelectorAll('.person-card').forEach(card => {
+        if (cat === 'todos' || card.dataset.categoria === cat) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
