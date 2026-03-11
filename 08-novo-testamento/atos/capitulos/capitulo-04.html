@@ -1,154 +1,73 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Atos 4 — Pedro e João Diante do Sinédrio · 365 de Graça &amp; Adoração</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <style>
-*{box-sizing:border-box;margin:0;padding:0;}
-body{background:#0f172a;color:#e2e8f0;font-family:'Segoe UI',sans-serif;line-height:1.75;}
-.topbar{background:rgba(15,23,42,0.97);border-bottom:1px solid rgba(255,255,255,0.08);padding:0 24px;position:sticky;top:0;z-index:100;}
-.topbar .inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;}
-.topbar a{color:#94a3b8;text-decoration:none;font-size:0.88rem;}
-.topbar a:hover{color:var(--accent);}
-.hero{background:linear-gradient(135deg,rgba(var(--accent-rgb),0.14) 0%,rgba(15,23,42,0.97) 65%);border-bottom:1px solid rgba(var(--accent-rgb),0.2);padding:60px 24px 48px;text-align:center;}
-.hero .tag{display:inline-block;background:rgba(var(--accent-rgb),0.12);border:1px solid rgba(var(--accent-rgb),0.28);color:var(--accent);font-size:0.75rem;font-weight:800;padding:4px 16px;border-radius:999px;margin-bottom:14px;text-transform:uppercase;letter-spacing:1.5px;}
-.hero h1{font-size:2.4rem;font-weight:900;color:var(--accent);margin:0 0 10px;line-height:1.15;}
-.hero .ref{color:#64748b;font-size:0.9rem;margin-bottom:18px;}
-.hero blockquote{background:rgba(255,255,255,0.04);border-left:4px solid var(--accent);border-radius:8px;padding:14px 22px;max-width:680px;margin:0 auto;font-style:italic;color:#e2e8f0;font-size:0.97rem;line-height:1.75;}
-.wrap{max-width:960px;margin:0 auto;padding:44px 24px 80px;}
-.section-block{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:28px 32px;margin-bottom:22px;}
-.section-block h2{font-size:1.05rem;font-weight:800;color:var(--accent);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(var(--accent-rgb),0.18);}
-.section-block p{color:#94a3b8;font-size:0.93rem;line-height:1.85;margin-bottom:14px;}
-.section-block p:last-child{margin-bottom:0;}
-.versiculo-bloco{border-left:3px solid rgba(var(--accent-rgb),0.35);padding:14px 20px;margin:16px 0;background:rgba(var(--accent-rgb),0.04);border-radius:0 10px 10px 0;}
-.versiculo-bloco .ref-v{font-size:0.78rem;font-weight:800;color:var(--accent);text-transform:uppercase;margin-bottom:6px;letter-spacing:0.5px;}
-.versiculo-bloco .texto-v{font-size:0.95rem;color:#e2e8f0;font-style:italic;line-height:1.75;margin-bottom:10px;}
-.versiculo-bloco .analise-v{font-size:0.9rem;color:#94a3b8;line-height:1.82;}
-.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:14px;}
-.vocab-card{background:rgba(var(--accent-rgb),0.06);border:1px solid rgba(var(--accent-rgb),0.15);border-radius:10px;padding:14px 16px;}
-.vocab-card .termo{font-size:1.05rem;font-weight:800;color:var(--accent);}
-.vocab-card .transl{font-size:0.8rem;color:#64748b;margin-bottom:6px;}
-.vocab-card .def{font-size:0.85rem;color:#94a3b8;line-height:1.65;}
-.mapa-box{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:24px 28px;margin:22px 0;}
-.mapa-box h3{color:var(--accent);font-size:1rem;margin:0 0 12px;}
-.mapa-visual{background:linear-gradient(135deg,rgba(15,23,42,0.9) 0%,rgba(30,41,59,0.9) 100%);border:1px solid rgba(var(--accent-rgb),0.2);border-radius:12px;padding:28px;margin:12px 0;position:relative;overflow:hidden;min-height:180px;}
-.mapa-visual::before{content:'🗺️';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:5rem;opacity:0.08;}
-.mapa-desc{color:#94a3b8;font-size:0.91rem;line-height:1.75;margin-top:12px;}
-.mapa-pontos{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
-.mapa-ponto{background:rgba(var(--accent-rgb),0.08);border:1px solid rgba(var(--accent-rgb),0.2);color:var(--accent);font-size:0.78rem;font-weight:700;padding:4px 12px;border-radius:999px;}
-.nav-cap{display:flex;justify-content:space-between;align-items:center;margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.07);}
-.nav-cap a{background:rgba(var(--accent-rgb),0.1);border:1px solid rgba(var(--accent-rgb),0.22);color:var(--accent);text-decoration:none;padding:10px 20px;border-radius:8px;font-size:0.88rem;font-weight:700;transition:all 0.2s;}
-.nav-cap a:hover{background:rgba(var(--accent-rgb),0.2);}
-.tag-bloco{display:inline-block;background:rgba(var(--accent-rgb),0.1);border:1px solid rgba(var(--accent-rgb),0.2);color:var(--accent);font-size:0.72rem;font-weight:800;padding:3px 12px;border-radius:999px;margin-right:6px;margin-bottom:6px;}
-</style>
-  <link rel="stylesheet" href="/assets/css/bloco.css">
-  <style>
-    :root {
-      --accent: #0ea5e9;
-      --accent-rgb: 14, 165, 233;
-    }
-  </style>
-
-  <meta name="description" content="Atos 4 narra a primeira perseguição organizada contra a Igreja. O sucesso do milagre e do sermão de Pedro (5.000 homens convertidos — At 4:4) provoca a rea...">
-  <!-- Open Graph / Redes Sociais -->
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://365gracaeadoracao.com/08-novo-testamento/atos/capitulos/capitulo-04">
-  <meta property="og:title" content="Atos 4 — Pedro e João Diante do Sinédrio · 365 de Graça &amp; Adoração">
-  <meta property="og:description" content="Atos 4 narra a primeira perseguição organizada contra a Igreja. O sucesso do milagre e do sermão de Pedro (5.000 homens convertidos — At 4:4) provoca a rea...">
-  <meta property="og:image" content="https://365gracaeadoracao.com/assets/img/og-image.png">
-  <meta property="og:site_name" content="365 de Graça &amp; Adoração">
-  <meta property="og:locale" content="pt_BR">
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Atos 4 — Pedro e João Diante do Sinédrio · 365 de Graça &amp; Adoração">
-  <meta name="twitter:description" content="Atos 4 narra a primeira perseguição organizada contra a Igreja. O sucesso do milagre e do sermão de Pedro (5.000 homens convertidos — At 4:4) provoca a rea...">
-  <meta name="twitter:image" content="https://365gracaeadoracao.com/assets/img/og-image.png">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Início",
-      "item": "https://365gracaeadoracao.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Bloco 08 — Novo Testamento",
-      "item": "https://365gracaeadoracao.com/08-novo-testamento/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Atos",
-      "item": "https://365gracaeadoracao.com/08-novo-testamento/atos/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "Atos 4 — Pedro e João Diante do Sinédrio",
-      "item": "https://365gracaeadoracao.com/08-novo-testamento/atos/capitulos/capitulo-04"
-    }
-    ]
-  }
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atos 4 — A Prisão de Pedro e João e a Oração da Igreja | 365 de Graça &amp; Adoração</title>
+<meta name="description" content="Estudo aprofundado de Atos capítulo 4: O primeiro confronto com o Sinédrio, a confissão corajosa de Pedro e a oração que abalou o lugar. Análise versículo por versículo, contexto histórico e teologia do Espírito Santo.">
+<meta property="og:title" content="Atos 4 — A Prisão de Pedro e João e a Oração da Igreja">
+<meta property="og:description" content="O primeiro confronto com o Sinédrio, a confissão corajosa de Pedro e a oração que abalou o lugar">
+<link rel="stylesheet" href="../../../assets/css/style.css">
+<link rel="stylesheet" href="../../../assets/css/bloco.css">
 </head>
-<body class="bloco-09">
-  <div class="topbar"><div class="inner">
-    <a href="/08-novo-testamento/atos/index.html">← Atos dos Apóstolos</a>
-    <a href="/08-novo-testamento/index.html">Novo Testamento</a>
-  </div></div>
-
-  <div class="hero">
-    <span class="tag">🔥 Atos 4 · Novo Testamento</span>
-    <h1>Atos 4 — Pedro e João Diante do Sinédrio</h1>
-    <div class="ref">At 4:12</div>
-    <blockquote>Não há salvação em nenhum outro, porque não existe sob o céu nenhum outro nome dado entre os homens pelo qual devamos ser salvos.</blockquote>
+<body class="bloco-08">
+<nav class="topbar">
+  <div class="topbar-inner">
+    <a class="site-title" href="/">365 de Graça &amp; Adoração</a>
+    <div class="nav-links">
+      <a href="/">Início</a>
+      <a href="/08-novo-testamento/">Novo Testamento</a>
+      <a href="/busca/">Buscar</a>
+    </div>
   </div>
+</nav>
+<main class="chapter-main">
+  <nav class="breadcrumb">
+    <a href="/">Início</a> ›
+    <a href="/08-novo-testamento/">Novo Testamento</a> ›
+    <a href="../index.html">Atos dos Apóstolos</a> ›
+    <span>Capítulo 4</span>
+  </nav>
+  <header class="chapter-header">
+    <div class="chapter-number">Atos 4</div>
+    <h1 class="chapter-title">A Prisão de Pedro e João e a Oração da Igreja</h1>
+    <p class="chapter-subtitle">O primeiro confronto com o Sinédrio, a confissão corajosa de Pedro e a oração que abalou o lugar</p>
+  </header>
+  <article class="chapter-content">
+<div class="section-block">
+<h2>⛓️ A Prisão e o Interrogatório (4:1-22)</h2>
 
-  <div class="wrap">
+<div class="verse-block">
+  <div class="verse-ref">Atos 4:8-12</div>
+  <blockquote class="verse-text">"Então Pedro, cheio do Espírito Santo, disse-lhes: Príncipes do povo e anciãos de Israel, se somos interrogados hoje acerca do benefício feito a um homem enfermo, para saber por quem foi curado, seja notório a todos vós e a todo o povo de Israel que em nome de Jesus Cristo de Nazaré, a quem vós crucificastes e a quem Deus ressuscitou dos mortos, em nome deste está este diante de vós são. Este é a pedra que foi rejeitada por vós, os edificadores, a qual foi posta como pedra angular. E em nenhum outro há salvação; porque também debaixo do céu nenhum outro nome há, dado entre os homens, pelo qual devamos ser salvos."</blockquote>
+  <div class="verse-analysis">Pedro, que havia negado Jesus três vezes diante de uma serva, agora confessa Jesus diante do Sinédrio — o mesmo tribunal que condenou Jesus à morte. A transformação é obra do Espírito Santo: 'cheio do Espírito Santo' (<em>plesthe pneumatos hagiou</em>). A citação do Salmo 118:22 ('a pedra rejeitada pelos edificadores') é a mesma que Jesus usou contra os líderes religiosos (Mt 21:42). A afirmação 'em nenhum outro há salvação' (<em>ouk estin en allo oudeni he soteria</em>) é a declaração mais exclusivista do NT depois de João 14:6. Não é intolerância — é a convicção de que Jesus é o único que pode fazer o que a salvação requer: morrer pelos pecados e ressuscitar para a vida eterna.</div>
+</div>
 
-    <div class="section-block">
-      <h2>📜 Contexto Histórico e Literário</h2>
-      <p>Atos 4 narra a primeira perseguição organizada contra a Igreja. O sucesso do milagre e do sermão de Pedro (5.000 homens convertidos — At 4:4) provoca a reação das autoridades religiosas. O Sinédrio — o mesmo tribunal que condenou Jesus — agora julga seus seguidores. A ironia é poderosa: os mesmos homens que ordenaram a morte de Jesus agora enfrentam a realidade de que o movimento que tentaram exterminar está crescendo exponencialmente.</p>
-    </div>
+<div class="verse-block">
+  <div class="verse-ref">Atos 4:13</div>
+  <blockquote class="verse-text">"E, vendo a ousadia de Pedro e de João, e sabendo que eram homens sem letras e indoutos, maravilhavam-se; e reconheciam que tinham estado com Jesus."</blockquote>
+  <div class="verse-analysis">A observação do Sinédrio é uma das mais tocantes de Atos: 'reconheciam que tinham estado com Jesus.' A ousadia (<em>parresia</em>) de Pedro e João não vinha de educação formal ou habilidade retórica — vinha da presença de Jesus em suas vidas. O Espírito Santo transforma pescadores sem letras em testemunhas corajosas diante do poder. Este é o padrão de Atos: Deus usa os fracos para confundir os fortes (1Co 1:27). A marca do discipulado genuíno não é eloquência ou erudição — é a evidência de que se esteve com Jesus.</div>
+</div>
+</div>
+<div class="section-block">
+<h2>🙏 A Oração da Igreja (4:23-31)</h2>
 
-    <div class="section-block">
-      <h2>🔍 Análise Exegética</h2>
-      <p>At 4:12 é uma das afirmações mais exclusivistas do NT: a salvação está disponível apenas através de Jesus Cristo. O nome (*onoma*) de Jesus é o único nome salvífico 'dado entre os homens' — não conquistado por esforço humano, mas dado por graça divina. Esta exclusividade não é arrogância humana; é a afirmação de que Deus agiu de forma única e definitiva em Jesus Cristo.</p>
-      <div class="versiculo-bloco">
-        <div class="ref-v">At 4:12</div>
-        <div class="texto-v">"Não há salvação em nenhum outro, porque não existe sob o céu nenhum outro nome dado entre os homens pelo qual devamos ser salvos."</div>
-        <div class="analise-v">Este versículo-chave sintetiza o tema central do capítulo e sua contribuição à teologia de Atos. A análise do vocabulário grego original revela camadas de significado que a tradução portuguesa nem sempre consegue capturar completamente.</div>
-      </div>
-    </div>
+<div class="verse-block">
+  <div class="verse-ref">Atos 4:29-31</div>
+  <blockquote class="verse-text">"E agora, Senhor, olha para as suas ameaças, e concede aos teus servos que falem a tua palavra com toda a ousadia, estendendo tu a tua mão para curar; e que sinais e prodígios se façam pelo nome do teu santo Filho Jesus. E, quando acabaram de orar, o lugar em que estavam reunidos tremeu; e todos foram cheios do Espírito Santo, e falavam a palavra de Deus com ousadia."</blockquote>
+  <div class="verse-analysis">A oração da Igreja diante da perseguição é modelar. Eles não pedem proteção ou que as ameaças cessem — pedem mais ousadia para pregar. A teologia da oração é cristocêntrica e bíblica: eles citam o Salmo 2 (4:25-26) e interpretam os eventos à luz da soberania de Deus. 'O lugar tremeu' — a resposta de Deus é imediata e física. Novamente 'cheios do Espírito Santo' — o enchimento do Espírito não é uma experiência única e definitiva, mas uma realidade que se renova na oração. A Igreja que ora com ousadia recebe ousadia para pregar.</div>
+</div>
+</div>
 
-    <div class="section-block">
-      <h2>🏛️ Teologia Sistemática</h2>
-      <p>Atos 4 contribui de forma significativa para a teologia bíblica em múltiplas dimensões. A pneumatologia (teologia do Espírito Santo) é central em todo o Livro de Atos — o Espírito guia, capacita, envia e protege a missão da Igreja. A eclesiologia (teologia da Igreja) é desenvolvida através dos eventos narrados: a Igreja não é uma instituição humana, mas uma comunidade criada e sustentada pelo Espírito Santo.</p>
-      <p>A cristologia de Atos é alta e exaltada: Jesus é o Senhor ressuscitado que governa a Igreja de sua posição à direita do Pai. Cada milagre, cada conversão, cada avanço missionário é atribuído ao nome e ao poder de Jesus Cristo. A missão da Igreja não é uma iniciativa humana — é a continuação do ministério de Jesus através do Espírito Santo.</p>
-      <p>A soteriologia (teologia da salvação) em Atos é graciosa e universal: a salvação está disponível para todos — judeus e gentios, ricos e pobres, homens e mulheres — através da fé em Jesus Cristo. O batismo é o sinal externo da conversão interna, e o dom do Espírito Santo é a garantia da nova vida em Cristo.</p>
-    </div>
-
-    <div class="section-block">
-      <h2>🔗 Conexões com o Antigo Testamento</h2>
-      <p>Atos está profundamente enraizado no Antigo Testamento. Os apóstolos pregam Jesus como o cumprimento das promessas do AT — o Messias esperado, o Servo Sofredor de Isaías, o Filho do Homem de Daniel, o Profeta como Moisés do Deuteronômio. Cada sermão em Atos é uma leitura cristológica do AT.</p>
-      <p>O Espírito Santo derramado no Pentecostes é o cumprimento da profecia de Joel 2:28-32. A missão aos gentios é o cumprimento de Is 49:6 ('luz para as nações'). A ressurreição de Jesus é o cumprimento do Salmo 16:8-11 e do Salmo 110:1. Lucas está mostrando que o movimento cristão não é uma ruptura com o judaísmo — é o cumprimento de suas esperanças mais profundas.</p>
-    </div>
-
-    <div class="section-block">
-      <h2>✨ Aplicação Contemporânea</h2>
-      <p>Atos 4 fala diretamente à Igreja contemporânea. O mesmo Espírito Santo que capacitou os apóstolos está disponível para cada crente hoje. A missão de ser testemunha de Jesus — em Jerusalém (nossa cidade), em Judeia e Samaria (nossa região e os marginalizados), e até os confins da terra (missão global) — continua sendo o chamado de toda a Igreja.</p>
-      <p>Os desafios que a Igreja primitiva enfrentou — perseguição, divisões internas, questões teológicas, pressões culturais — são os mesmos que a Igreja enfrenta hoje. A resposta de Atos é sempre a mesma: oração, dependência do Espírito Santo, fidelidade ao Evangelho, e coragem para testemunhar independentemente das consequências.</p>
-      <p>A diversidade da Igreja primitiva — judeus e gentios, escravos e livres, homens e mulheres, de todas as nações — é um modelo para a Igreja contemporânea. O Evangelho não é propriedade de nenhuma cultura ou etnia; ele transforma e enriquece todas as culturas enquanto as submete ao senhorio de Cristo.</p>
-    </div>
-
-    <div class="nav-cap"><a href="/08-novo-testamento/atos/capitulos/capitulo-03.html">← Capítulo 3</a><a href="/08-novo-testamento/atos/index.html">📋 Todos os Capítulos</a><a href="/08-novo-testamento/atos/capitulos/capitulo-05.html">Capítulo 5 →</a></div>
-  </div>
+  </article>
+  <nav class="chapter-nav">
+    <a href="capitulo-03.html" class="nav-btn">← Anterior</a>
+    <a href="../index.html" class="nav-btn center">Índice de Atos</a>
+    <a href="capitulo-05.html" class="nav-btn">Próximo →</a>
+  </nav>
+</main>
+<footer class="site-footer">
+  <p>365 de Graça &amp; Adoração • Da Criação ao Apocalipse • © 2026</p>
+</footer>
 </body>
 </html>

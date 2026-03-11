@@ -1,185 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Atos 3 — A Cura do Coxo e o Segundo Sermão de Pedro · 365 de Graça &amp; Adoração</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <style>
-*{box-sizing:border-box;margin:0;padding:0;}
-body{background:#0f172a;color:#e2e8f0;font-family:'Segoe UI',sans-serif;line-height:1.75;}
-.topbar{background:rgba(15,23,42,0.97);border-bottom:1px solid rgba(255,255,255,0.08);padding:0 24px;position:sticky;top:0;z-index:100;}
-.topbar .inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;}
-.topbar a{color:#94a3b8;text-decoration:none;font-size:0.88rem;}
-.topbar a:hover{color:var(--accent);}
-.hero{background:linear-gradient(135deg,rgba(var(--accent-rgb),0.14) 0%,rgba(15,23,42,0.97) 65%);border-bottom:1px solid rgba(var(--accent-rgb),0.2);padding:60px 24px 48px;text-align:center;}
-.hero .tag{display:inline-block;background:rgba(var(--accent-rgb),0.12);border:1px solid rgba(var(--accent-rgb),0.28);color:var(--accent);font-size:0.75rem;font-weight:800;padding:4px 16px;border-radius:999px;margin-bottom:14px;text-transform:uppercase;letter-spacing:1.5px;}
-.hero h1{font-size:2.4rem;font-weight:900;color:var(--accent);margin:0 0 10px;line-height:1.15;}
-.hero .ref{color:#64748b;font-size:0.9rem;margin-bottom:18px;}
-.hero blockquote{background:rgba(255,255,255,0.04);border-left:4px solid var(--accent);border-radius:8px;padding:14px 22px;max-width:680px;margin:0 auto;font-style:italic;color:#e2e8f0;font-size:0.97rem;line-height:1.75;}
-.wrap{max-width:960px;margin:0 auto;padding:44px 24px 80px;}
-.section-block{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:28px 32px;margin-bottom:22px;}
-.section-block h2{font-size:1.05rem;font-weight:800;color:var(--accent);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(var(--accent-rgb),0.18);}
-.section-block p{color:#94a3b8;font-size:0.93rem;line-height:1.85;margin-bottom:14px;}
-.section-block p:last-child{margin-bottom:0;}
-.versiculo-bloco{border-left:3px solid rgba(var(--accent-rgb),0.35);padding:14px 20px;margin:16px 0;background:rgba(var(--accent-rgb),0.04);border-radius:0 10px 10px 0;}
-.versiculo-bloco .ref-v{font-size:0.78rem;font-weight:800;color:var(--accent);text-transform:uppercase;margin-bottom:6px;letter-spacing:0.5px;}
-.versiculo-bloco .texto-v{font-size:0.95rem;color:#e2e8f0;font-style:italic;line-height:1.75;margin-bottom:10px;}
-.versiculo-bloco .analise-v{font-size:0.9rem;color:#94a3b8;line-height:1.82;}
-.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:14px;}
-.vocab-card{background:rgba(var(--accent-rgb),0.06);border:1px solid rgba(var(--accent-rgb),0.15);border-radius:10px;padding:14px 16px;}
-.vocab-card .termo{font-size:1.05rem;font-weight:800;color:var(--accent);}
-.vocab-card .transl{font-size:0.8rem;color:#64748b;margin-bottom:6px;}
-.vocab-card .def{font-size:0.85rem;color:#94a3b8;line-height:1.65;}
-.mapa-box{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:24px 28px;margin:22px 0;}
-.mapa-box h3{color:var(--accent);font-size:1rem;margin:0 0 12px;}
-.mapa-visual{background:linear-gradient(135deg,rgba(15,23,42,0.9) 0%,rgba(30,41,59,0.9) 100%);border:1px solid rgba(var(--accent-rgb),0.2);border-radius:12px;padding:28px;margin:12px 0;position:relative;overflow:hidden;min-height:180px;}
-.mapa-visual::before{content:'🗺️';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:5rem;opacity:0.08;}
-.mapa-desc{color:#94a3b8;font-size:0.91rem;line-height:1.75;margin-top:12px;}
-.mapa-pontos{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
-.mapa-ponto{background:rgba(var(--accent-rgb),0.08);border:1px solid rgba(var(--accent-rgb),0.2);color:var(--accent);font-size:0.78rem;font-weight:700;padding:4px 12px;border-radius:999px;}
-.nav-cap{display:flex;justify-content:space-between;align-items:center;margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.07);}
-.nav-cap a{background:rgba(var(--accent-rgb),0.1);border:1px solid rgba(var(--accent-rgb),0.22);color:var(--accent);text-decoration:none;padding:10px 20px;border-radius:8px;font-size:0.88rem;font-weight:700;transition:all 0.2s;}
-.nav-cap a:hover{background:rgba(var(--accent-rgb),0.2);}
-.tag-bloco{display:inline-block;background:rgba(var(--accent-rgb),0.1);border:1px solid rgba(var(--accent-rgb),0.2);color:var(--accent);font-size:0.72rem;font-weight:800;padding:3px 12px;border-radius:999px;margin-right:6px;margin-bottom:6px;}
-</style>
-  <link rel="stylesheet" href="/assets/css/bloco.css">
-  <style>
-    :root {
-      --accent: #0ea5e9;
-      --accent-rgb: 14, 165, 233;
-    }
-  </style>
-
-  <meta name="description" content="Atos 3 narra o primeiro milagre público registrado após o Pentecostes — a cura de um homem coxo de nascença na porta do Templo chamada 'Formosa'. Este mila...">
-  <!-- Open Graph / Redes Sociais -->
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://365gracaeadoracao.com/08-novo-testamento/atos/capitulos/capitulo-03">
-  <meta property="og:title" content="Atos 3 — A Cura do Coxo e o Segundo Sermão de Pedro · 365 de Graça &amp; Adoração">
-  <meta property="og:description" content="Atos 3 narra o primeiro milagre público registrado após o Pentecostes — a cura de um homem coxo de nascença na porta do Templo chamada 'Formosa'. Este mila...">
-  <meta property="og:image" content="https://365gracaeadoracao.com/assets/img/og-image.png">
-  <meta property="og:site_name" content="365 de Graça &amp; Adoração">
-  <meta property="og:locale" content="pt_BR">
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Atos 3 — A Cura do Coxo e o Segundo Sermão de Pedro · 365 de Graça &amp; Adoração">
-  <meta name="twitter:description" content="Atos 3 narra o primeiro milagre público registrado após o Pentecostes — a cura de um homem coxo de nascença na porta do Templo chamada 'Formosa'. Este mila...">
-  <meta name="twitter:image" content="https://365gracaeadoracao.com/assets/img/og-image.png">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Início",
-      "item": "https://365gracaeadoracao.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Bloco 08 — Novo Testamento",
-      "item": "https://365gracaeadoracao.com/08-novo-testamento/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Atos",
-      "item": "https://365gracaeadoracao.com/08-novo-testamento/atos/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "Atos 3 — A Cura do Coxo e o Segundo Sermão de Pedro",
-      "item": "https://365gracaeadoracao.com/08-novo-testamento/atos/capitulos/capitulo-03"
-    }
-    ]
-  }
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atos 3 — A Cura do Coxo e o Segundo Sermão de Pedro | 365 de Graça &amp; Adoração</title>
+<meta name="description" content="Estudo aprofundado de Atos capítulo 3: O milagre no portão Formoso, o discurso no pórtico de Salomão e o anúncio do Servo Sofredor. Análise versículo por versículo, contexto histórico e teologia do Espírito Santo.">
+<meta property="og:title" content="Atos 3 — A Cura do Coxo e o Segundo Sermão de Pedro">
+<meta property="og:description" content="O milagre no portão Formoso, o discurso no pórtico de Salomão e o anúncio do Servo Sofredor">
+<link rel="stylesheet" href="../../../assets/css/style.css">
+<link rel="stylesheet" href="../../../assets/css/bloco.css">
 </head>
-<body class="bloco-09">
-  <div class="topbar"><div class="inner">
-    <a href="/08-novo-testamento/atos/index.html">← Atos dos Apóstolos</a>
-    <a href="/08-novo-testamento/index.html">Novo Testamento</a>
-  </div></div>
-
-  <div class="hero">
-    <span class="tag">🔥 Atos 3 · Novo Testamento</span>
-    <h1>Atos 3 — A Cura do Coxo e o Segundo Sermão de Pedro</h1>
-    <div class="ref">Atos 3:6</div>
-    <blockquote>Não tenho prata nem ouro, mas o que tenho isso te dou: em nome de Jesus Cristo de Nazaré, levanta-te e anda.</blockquote>
-  </div>
-
-  <div class="wrap">
-
-    <div class="section-block">
-      <h2>📜 Contexto Histórico e Literário</h2>
-      <p>Atos 3 narra o primeiro milagre público registrado após o Pentecostes — a cura de um homem coxo de nascença na porta do Templo chamada 'Formosa'. Este milagre é mais do que uma demonstração de poder: é um sinal messiânico. Isaías havia profetizado que na era messiânica 'o coxo saltará como um veado' (Is 35:6). A cura deste homem é, portanto, um sinal de que o tempo messiânico chegou em Jesus.</p>
-<p>A localização é significativa: a porta Formosa (provavelmente a porta de Nikanor, que separava o átrio das mulheres do átrio de Israel) era o local onde mendigos se posicionavam para pedir esmolas dos adoradores que entravam no Templo. Pedro e João estavam indo ao Templo para a oração da tarde (a hora nona — 15h), mantendo a prática judaica de oração. A Igreja primitiva ainda frequentava o Templo — a separação entre judaísmo e cristianismo ainda não havia ocorrido.</p>
-<p>O segundo sermão de Pedro (At 3:12-26) é estruturado de forma semelhante ao primeiro: começa com a explicação do milagre, proclama os fatos de Jesus (vida, morte, ressurreição), interpreta à luz das Escrituras, e conclui com um chamado ao arrependimento. Uma novidade importante: Pedro chama Jesus de 'o Santo e Justo' (At 3:14), 'o Autor da vida' (At 3:15), e 'o profeta como Moisés' (At 3:22) — títulos cristológicos que expandem a compreensão de quem Jesus é.</p>
-    </div>
-
-    
-
-    <div class="section-block">
-      <h2>🔍 Análise Versículo por Versículo</h2>
-      
-        <div class="versiculo-bloco">
-          <div class="ref-v">3:1-6</div>
-          <div class="texto-v">"E Pedro e João subiam juntos ao templo à hora nona da oração. E era levado um homem coxo de nascença... ao qual Pedro, com João, fitando os olhos, disse: Olha para nós. E ele os olhava com atenção, esperando receber alguma coisa deles. Mas Pedro disse: Não tenho prata nem ouro, mas o que tenho isso te dou: em nome de Jesus Cristo de Nazaré, levanta-te e anda."</div>
-          <div class="analise-v">A frase de Pedro — 'não tenho prata nem ouro, mas o que tenho isso te dou' — é uma das mais memoráveis de Atos. Pedro não tem recursos financeiros, mas tem algo infinitamente mais valioso: a autoridade do nome de Jesus Cristo. O 'nome' (*onoma*) no mundo bíblico representa a pessoa e sua autoridade — curar 'em nome de Jesus' é curar pela autoridade de Jesus. A cura é imediata e completa: 'os pés e os tornozelos lhe foram consolidados' — Lucas, o médico, usa terminologia médica precisa.</div>
-        </div>
-        <div class="versiculo-bloco">
-          <div class="ref-v">3:12-15</div>
-          <div class="texto-v">"E, vendo isso Pedro, respondeu ao povo: Homens israelitas, por que vos admirais disto? Ou por que fitais os olhos em nós, como se pela nossa própria virtude ou piedade tivéssemos feito andar este homem? O Deus de Abraão, e de Isaque, e de Jacó, o Deus de nossos pais, glorificou o seu Filho Jesus, a quem vós entregastes e negastes diante de Pilatos..."</div>
-          <div class="analise-v">Pedro imediatamente redireciona a atenção da multidão de si mesmo para Jesus. Esta é a marca do verdadeiro ministério apostólico: não glorificar o instrumento, mas o Senhor. A referência ao 'Deus de Abraão, Isaque e Jacó' conecta Jesus com a história da aliança de Israel — Pedro está dizendo que o Deus dos patriarcas é o mesmo que ressuscitou Jesus. A acusação é direta: 'a quem vós entregastes e negastes diante de Pilatos' — Pedro não suaviza a responsabilidade do povo.</div>
-        </div>
-        <div class="versiculo-bloco">
-          <div class="ref-v">3:19-21</div>
-          <div class="texto-v">"Arrependei-vos, pois, e convertei-vos, para que sejam apagados os vossos pecados, e venham assim os tempos do refrigério da presença do Senhor; e envie ele a Jesus Cristo, que antes vos foi pregado; ao qual convém que o céu receba até aos tempos da restauração de todas as coisas."</div>
-          <div class="analise-v">Este texto contém uma das afirmações mais ricas sobre escatologia em Atos. Os 'tempos do refrigério' (*kairoi anapsyxeōs*) e os 'tempos da restauração de todas as coisas' (*apokatastasis pantōn*) apontam para a consumação escatológica. O arrependimento de Israel está conectado com a vinda do Messias — uma ideia que Paulo desenvolverá em Rm 11. A expressão 'restauração de todas as coisas' ecoa as profecias de restauração do AT (Is 65-66; Ez 36-37) e aponta para a renovação cósmica final.</div>
-        </div>
-    </div>
-
-    <div class="section-block">
-      <h2>📚 Vocabulário Grego</h2>
-      <p>O estudo do vocabulário grego original ilumina camadas de significado que as traduções nem sempre conseguem capturar. Os termos abaixo são centrais para a compreensão teológica deste capítulo:</p>
-      <div class="vocab-grid">
-        <div class="vocab-card">
-          <div class="termo">ὄνομα</div>
-          <div class="transl">onoma</div>
-          <div class="def">Nome. No mundo bíblico, o nome representa a pessoa e sua autoridade. Curar 'em nome de Jesus' é agir com a autoridade delegada por Jesus. Daí a importância do nome de Jesus em Atos (At 4:12).</div>
-        </div>
-        <div class="vocab-card">
-          <div class="termo">ἀποκατάστασις</div>
-          <div class="transl">apokatastasis</div>
-          <div class="def">Restauração, restabelecimento. De *apo* (de volta) + *kathistēmi* (estabelecer). Em At 3:21, refere-se à restauração escatológica de todas as coisas — a renovação cósmica prometida pelos profetas.</div>
-        </div>
-        <div class="vocab-card">
-          <div class="termo">μετανοέω</div>
-          <div class="transl">metanoeō</div>
-          <div class="def">Arrepender-se, mudar de mente. O imperativo 'arrependei-vos' (*metanoēsate*) é o chamado central da pregação apostólica. Não é apenas sentir remorso, mas uma mudança radical de direção.</div>
-        </div></div>
-    </div>
-
-    <div class="section-block">
-      <h2>🏛️ Teologia Sistemática</h2>
-      <p>Atos 3 apresenta uma cristologia rica e multifacetada. Jesus é chamado de: 'Filho' de Deus (At 3:13), 'o Santo e Justo' (At 3:14), 'o Autor da vida' (*archēgon tēs zōēs* — At 3:15), 'o profeta como Moisés' (At 3:22), e 'o servo' de Deus (At 3:13, 26). Cada título ilumina um aspecto diferente da identidade de Jesus: sua relação com o Pai, sua santidade, seu papel cosmológico, sua continuidade com a profecia, e seu papel de mediador.</p>
-<p>A cura do coxo é um sinal messiânico que aponta para a restauração escatológica. O homem que nunca havia andado agora 'andava, saltava e louvava a Deus' (At 3:8) — uma imagem da salvação como restauração da humanidade à sua condição original e além dela.</p>
-    </div>
-
-    <div class="section-block">
-      <h2>✨ Aplicação Contemporânea</h2>
-      <p>A declaração de Pedro — 'não tenho prata nem ouro, mas o que tenho isso te dou' — é um desafio permanente à Igreja. Quando a Igreja se torna rica em recursos materiais mas pobre em poder espiritual, ela pode dar esmolas mas não pode curar. O poder do Evangelho não reside nos recursos humanos, mas na autoridade do nome de Jesus Cristo.</p>
-<p>Ao mesmo tempo, Pedro e João estavam indo ao Templo para orar — eles não estavam procurando oportunidades de milagres. O milagre aconteceu no caminho da oração fiel. A disponibilidade para o Espírito Santo se manifesta na fidelidade às disciplinas espirituais.</p>
-    </div>
-
-    <div class="nav-cap">
-      <a href="/08-novo-testamento/atos/capitulos/capitulo-02.html">← Atos 2</a>
-      <a href="/08-novo-testamento/atos/index.html">📋 Todos os Capítulos</a>
-      <a href="/08-novo-testamento/atos/capitulos/capitulo-04.html">Atos 4 →</a>
+<body class="bloco-08">
+<nav class="topbar">
+  <div class="topbar-inner">
+    <a class="site-title" href="/">365 de Graça &amp; Adoração</a>
+    <div class="nav-links">
+      <a href="/">Início</a>
+      <a href="/08-novo-testamento/">Novo Testamento</a>
+      <a href="/busca/">Buscar</a>
     </div>
   </div>
+</nav>
+<main class="chapter-main">
+  <nav class="breadcrumb">
+    <a href="/">Início</a> ›
+    <a href="/08-novo-testamento/">Novo Testamento</a> ›
+    <a href="../index.html">Atos dos Apóstolos</a> ›
+    <span>Capítulo 3</span>
+  </nav>
+  <header class="chapter-header">
+    <div class="chapter-number">Atos 3</div>
+    <h1 class="chapter-title">A Cura do Coxo e o Segundo Sermão de Pedro</h1>
+    <p class="chapter-subtitle">O milagre no portão Formoso, o discurso no pórtico de Salomão e o anúncio do Servo Sofredor</p>
+  </header>
+  <article class="chapter-content">
+<div class="section-block">
+<h2>🦿 A Cura no Portão Formoso (3:1-10)</h2>
+
+<div class="verse-block">
+  <div class="verse-ref">Atos 3:1-6</div>
+  <blockquote class="verse-text">"E Pedro e João subiam juntos ao templo, à hora da oração, que era a nona. E era levado um homem, coxo desde o ventre de sua mãe, o qual puseram cada dia à porta do templo chamada Formosa, para pedir esmola aos que entravam no templo. Este, vendo Pedro e João que iam entrar no templo, pedia que lhe dessem esmola. E Pedro, com João, fixando os olhos nele, disse: Olha para nós. E ele os olhava atentamente, esperando receber alguma coisa deles. Mas Pedro disse: Não tenho prata nem ouro; mas o que tenho isso te dou: Em nome de Jesus Cristo de Nazaré, levanta-te e anda."</blockquote>
+  <div class="verse-analysis">O milagre no portão Formoso é o primeiro sinal registrado da Igreja nascente — e é programático. O homem coxo desde o nascimento representa a condição humana: incapaz de andar, dependente de esmolas, excluído do templo (a Lei proibia coxos de entrar no templo — Lv 21:18; 2Sm 5:8). Pedro e João não têm dinheiro — mas têm algo infinitamente mais valioso: o nome de Jesus Cristo. 'Em nome de Jesus Cristo de Nazaré' — o nome (<em>onoma</em>) no mundo antigo representava a pessoa e seu poder. Curar em nome de Jesus é agir com a autoridade delegada por Jesus ressuscitado. A cura é imediata e completa — 'imediatamente se firmaram os seus pés e tornozelos' (3:7).</div>
+</div>
+
+<div class="verse-block">
+  <div class="verse-ref">Atos 3:8-10</div>
+  <blockquote class="verse-text">"E, saltando, ficou em pé e andou; e entrou com eles no templo, andando, saltando e louvando a Deus. E todo o povo o viu andar e louvar a Deus. E o reconheciam como sendo aquele que se assentava a pedir esmola à porta Formosa do templo; e ficaram cheios de admiração e espanto pelo que lhe havia acontecido."</blockquote>
+  <div class="verse-analysis">A reação do homem curado é adoração espontânea — 'andando, saltando e louvando a Deus.' Isso ecoa Isaías 35:6: 'Então o coxo saltará como um cervo.' O milagre é um sinal do Reino de Deus que irrompe na história — a restauração da criação que Jesus inaugurou. A admiração do povo cria a oportunidade para o segundo sermão de Pedro. Os milagres em Atos não são fins em si mesmos — são sinais que apontam para Jesus e abrem portas para o Evangelho.</div>
+</div>
+</div>
+<div class="section-block">
+<h2>📢 O Segundo Sermão de Pedro (3:11-26)</h2>
+
+<div class="verse-block">
+  <div class="verse-ref">Atos 3:13-16</div>
+  <blockquote class="verse-text">"O Deus de Abraão, e de Isaque, e de Jacó, o Deus de nossos pais, glorificou o seu Filho Jesus, a quem vós entregastes e negastes diante de Pilatos, quando ele havia determinado soltá-lo. Mas vós negastes o Santo e o Justo, e pedistes que vos fosse dado um homicida; e matastes o Príncipe da vida, a quem Deus ressuscitou dos mortos, do que nós somos testemunhas."</blockquote>
+  <div class="verse-analysis">Pedro conecta o milagre ao Deus do AT — o mesmo Deus de Abraão, Isaque e Jacó. Isso é crucial: o Evangelho não é uma nova religião, mas o cumprimento da fé de Israel. A série de títulos cristológicos é impressionante: 'Filho' (<em>pais</em> — também pode ser 'Servo', ecoando o Servo Sofredor de Isaías), 'Santo e Justo' (títulos messiânicos), 'Príncipe da vida' (<em>archegos tes zoes</em> — o Iniciador/Autor da vida). A ironia é dolorosa: vocês mataram o Autor da vida — mas Deus o ressuscitou. A ressurreição é a resposta de Deus ao assassinato do Messias.</div>
+</div>
+
+<div class="verse-block">
+  <div class="verse-ref">Atos 3:19-21</div>
+  <blockquote class="verse-text">"Arrependei-vos, pois, e convertei-vos, para que os vossos pecados sejam apagados, e venham assim os tempos do refrigério da presença do Senhor; e ele envie a Jesus Cristo, que vos foi antes anunciado; ao qual convém que o céu receba até aos tempos da restauração de todas as coisas, de que Deus falou pela boca de todos os seus santos profetas desde o princípio do mundo."</blockquote>
+  <div class="verse-analysis">A escatologia de Pedro é rica: (1) 'Tempos do refrigério' (<em>kairoi anapsyxeos</em>) — a era messiânica de restauração; (2) 'Restauração de todas as coisas' (<em>apokatastasis panton</em>) — a renovação cósmica prometida pelos profetas (Is 65:17-25; Ez 36:35; Rm 8:19-23). A segunda vinda de Cristo está condicionada ao arrependimento de Israel? Ou Pedro está simplesmente descrevendo a sequência dos eventos? A maioria dos intérpretes vê aqui uma descrição da esperança escatológica, não uma condição para a parusia. O ponto central é: arrependimento agora, restauração futura.</div>
+</div>
+</div>
+
+  </article>
+  <nav class="chapter-nav">
+    <a href="capitulo-02.html" class="nav-btn">← Anterior</a>
+    <a href="../index.html" class="nav-btn center">Índice de Atos</a>
+    <a href="capitulo-04.html" class="nav-btn">Próximo →</a>
+  </nav>
+</main>
+<footer class="site-footer">
+  <p>365 de Graça &amp; Adoração • Da Criação ao Apocalipse • © 2026</p>
+</footer>
 </body>
 </html>

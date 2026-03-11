@@ -1,154 +1,70 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Atos 17 — Tessalônica, Bereia e o Areópago de Atenas · 365 de Graça &amp; Adoração</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <style>
-*{box-sizing:border-box;margin:0;padding:0;}
-body{background:#0f172a;color:#e2e8f0;font-family:'Segoe UI',sans-serif;line-height:1.75;}
-.topbar{background:rgba(15,23,42,0.97);border-bottom:1px solid rgba(255,255,255,0.08);padding:0 24px;position:sticky;top:0;z-index:100;}
-.topbar .inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;}
-.topbar a{color:#94a3b8;text-decoration:none;font-size:0.88rem;}
-.topbar a:hover{color:var(--accent);}
-.hero{background:linear-gradient(135deg,rgba(var(--accent-rgb),0.14) 0%,rgba(15,23,42,0.97) 65%);border-bottom:1px solid rgba(var(--accent-rgb),0.2);padding:60px 24px 48px;text-align:center;}
-.hero .tag{display:inline-block;background:rgba(var(--accent-rgb),0.12);border:1px solid rgba(var(--accent-rgb),0.28);color:var(--accent);font-size:0.75rem;font-weight:800;padding:4px 16px;border-radius:999px;margin-bottom:14px;text-transform:uppercase;letter-spacing:1.5px;}
-.hero h1{font-size:2.4rem;font-weight:900;color:var(--accent);margin:0 0 10px;line-height:1.15;}
-.hero .ref{color:#64748b;font-size:0.9rem;margin-bottom:18px;}
-.hero blockquote{background:rgba(255,255,255,0.04);border-left:4px solid var(--accent);border-radius:8px;padding:14px 22px;max-width:680px;margin:0 auto;font-style:italic;color:#e2e8f0;font-size:0.97rem;line-height:1.75;}
-.wrap{max-width:960px;margin:0 auto;padding:44px 24px 80px;}
-.section-block{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:28px 32px;margin-bottom:22px;}
-.section-block h2{font-size:1.05rem;font-weight:800;color:var(--accent);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(var(--accent-rgb),0.18);}
-.section-block p{color:#94a3b8;font-size:0.93rem;line-height:1.85;margin-bottom:14px;}
-.section-block p:last-child{margin-bottom:0;}
-.versiculo-bloco{border-left:3px solid rgba(var(--accent-rgb),0.35);padding:14px 20px;margin:16px 0;background:rgba(var(--accent-rgb),0.04);border-radius:0 10px 10px 0;}
-.versiculo-bloco .ref-v{font-size:0.78rem;font-weight:800;color:var(--accent);text-transform:uppercase;margin-bottom:6px;letter-spacing:0.5px;}
-.versiculo-bloco .texto-v{font-size:0.95rem;color:#e2e8f0;font-style:italic;line-height:1.75;margin-bottom:10px;}
-.versiculo-bloco .analise-v{font-size:0.9rem;color:#94a3b8;line-height:1.82;}
-.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:14px;}
-.vocab-card{background:rgba(var(--accent-rgb),0.06);border:1px solid rgba(var(--accent-rgb),0.15);border-radius:10px;padding:14px 16px;}
-.vocab-card .termo{font-size:1.05rem;font-weight:800;color:var(--accent);}
-.vocab-card .transl{font-size:0.8rem;color:#64748b;margin-bottom:6px;}
-.vocab-card .def{font-size:0.85rem;color:#94a3b8;line-height:1.65;}
-.mapa-box{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:24px 28px;margin:22px 0;}
-.mapa-box h3{color:var(--accent);font-size:1rem;margin:0 0 12px;}
-.mapa-visual{background:linear-gradient(135deg,rgba(15,23,42,0.9) 0%,rgba(30,41,59,0.9) 100%);border:1px solid rgba(var(--accent-rgb),0.2);border-radius:12px;padding:28px;margin:12px 0;position:relative;overflow:hidden;min-height:180px;}
-.mapa-visual::before{content:'🗺️';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:5rem;opacity:0.08;}
-.mapa-desc{color:#94a3b8;font-size:0.91rem;line-height:1.75;margin-top:12px;}
-.mapa-pontos{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
-.mapa-ponto{background:rgba(var(--accent-rgb),0.08);border:1px solid rgba(var(--accent-rgb),0.2);color:var(--accent);font-size:0.78rem;font-weight:700;padding:4px 12px;border-radius:999px;}
-.nav-cap{display:flex;justify-content:space-between;align-items:center;margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.07);}
-.nav-cap a{background:rgba(var(--accent-rgb),0.1);border:1px solid rgba(var(--accent-rgb),0.22);color:var(--accent);text-decoration:none;padding:10px 20px;border-radius:8px;font-size:0.88rem;font-weight:700;transition:all 0.2s;}
-.nav-cap a:hover{background:rgba(var(--accent-rgb),0.2);}
-.tag-bloco{display:inline-block;background:rgba(var(--accent-rgb),0.1);border:1px solid rgba(var(--accent-rgb),0.2);color:var(--accent);font-size:0.72rem;font-weight:800;padding:3px 12px;border-radius:999px;margin-right:6px;margin-bottom:6px;}
-</style>
-  <link rel="stylesheet" href="/assets/css/bloco.css">
-  <style>
-    :root {
-      --accent: #0ea5e9;
-      --accent-rgb: 14, 165, 233;
-    }
-  </style>
-
-  <meta name="description" content="Atos 17 narra três encontros missionários distintos: em Tessalônica (com judeus e gregos temerosos de Deus), em Bereia (com judeus 'mais nobres' que examin...">
-  <!-- Open Graph / Redes Sociais -->
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://365gracaeadoracao.com/08-novo-testamento/atos/capitulos/capitulo-17">
-  <meta property="og:title" content="Atos 17 — Tessalônica, Bereia e o Areópago de Atenas · 365 de Graça &amp; Adoração">
-  <meta property="og:description" content="Atos 17 narra três encontros missionários distintos: em Tessalônica (com judeus e gregos temerosos de Deus), em Bereia (com judeus 'mais nobres' que examin...">
-  <meta property="og:image" content="https://365gracaeadoracao.com/assets/img/og-image.png">
-  <meta property="og:site_name" content="365 de Graça &amp; Adoração">
-  <meta property="og:locale" content="pt_BR">
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Atos 17 — Tessalônica, Bereia e o Areópago de Atenas · 365 de Graça &amp; Adoração">
-  <meta name="twitter:description" content="Atos 17 narra três encontros missionários distintos: em Tessalônica (com judeus e gregos temerosos de Deus), em Bereia (com judeus 'mais nobres' que examin...">
-  <meta name="twitter:image" content="https://365gracaeadoracao.com/assets/img/og-image.png">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Início",
-      "item": "https://365gracaeadoracao.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Bloco 08 — Novo Testamento",
-      "item": "https://365gracaeadoracao.com/08-novo-testamento/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Atos",
-      "item": "https://365gracaeadoracao.com/08-novo-testamento/atos/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "Atos 17 — Tessalônica, Bereia e o Areópago de Atenas",
-      "item": "https://365gracaeadoracao.com/08-novo-testamento/atos/capitulos/capitulo-17"
-    }
-    ]
-  }
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atos 17 — Atenas — O Discurso no Areópago | 365 de Graça &amp; Adoração</title>
+<meta name="description" content="Estudo aprofundado de Atos capítulo 17: Tessalônica, Bereia e o encontro de Paulo com a filosofia grega no coração de Atenas. Análise versículo por versículo, contexto histórico e teologia missionária.">
+<meta property="og:title" content="Atos 17 — Atenas — O Discurso no Areópago">
+<meta property="og:description" content="Tessalônica, Bereia e o encontro de Paulo com a filosofia grega no coração de Atenas">
+<link rel="stylesheet" href="../../../assets/css/style.css">
+<link rel="stylesheet" href="../../../assets/css/bloco.css">
 </head>
-<body class="bloco-09">
-  <div class="topbar"><div class="inner">
-    <a href="/08-novo-testamento/atos/index.html">← Atos dos Apóstolos</a>
-    <a href="/08-novo-testamento/index.html">Novo Testamento</a>
-  </div></div>
-
-  <div class="hero">
-    <span class="tag">🔥 Atos 17 · Novo Testamento</span>
-    <h1>Atos 17 — Tessalônica, Bereia e o Areópago de Atenas</h1>
-    <div class="ref">At 17:28</div>
-    <blockquote>Porque nele vivemos, e nos movemos, e existimos.</blockquote>
+<body class="bloco-08">
+<nav class="topbar">
+  <div class="topbar-inner">
+    <a class="site-title" href="/">365 de Graça &amp; Adoração</a>
+    <div class="nav-links">
+      <a href="/">Início</a>
+      <a href="/08-novo-testamento/">Novo Testamento</a>
+      <a href="/busca/">Buscar</a>
+    </div>
   </div>
+</nav>
+<main class="chapter-main">
+  <nav class="breadcrumb">
+    <a href="/">Início</a> ›
+    <a href="/08-novo-testamento/">Novo Testamento</a> ›
+    <a href="../index.html">Atos dos Apóstolos</a> ›
+    <span>Capítulo 17</span>
+  </nav>
+  <header class="chapter-header">
+    <div class="chapter-number">Atos 17</div>
+    <h1 class="chapter-title">Atenas — O Discurso no Areópago</h1>
+    <p class="chapter-subtitle">Tessalônica, Bereia e o encontro de Paulo com a filosofia grega no coração de Atenas</p>
+  </header>
+  <article class="chapter-content">
+<div class="section-block">
+<h2>🏛️ O Areópago de Atenas (17:16-34)</h2>
 
-  <div class="wrap">
+<div class="verse-block">
+  <div class="verse-ref">Atos 17:16-18</div>
+  <blockquote class="verse-text">"Enquanto Paulo os esperava em Atenas, o seu espírito se exasperava dentro dele, vendo a cidade entregue à idolatria. Disputava, pois, na sinagoga com os judeus e com os prosélitos, e diariamente na praça com os que ali se encontravam. E alguns filósofos epicureus e estóicos contendiam com ele; e uns diziam: Que quer dizer este palavreiro? E outros: Parece que é pregador de novos deuses; porque lhes pregava a Jesus e a ressurreição."</blockquote>
+  <div class="verse-analysis">Atenas era o centro intelectual do mundo greco-romano — o lar de Sócrates, Platão e Aristóteles. Paulo não é intimidado pela grandeza cultural da cidade — mas é 'exasperado' (<em>paroxyneto</em> — literalmente 'provocado até a indignação') pela idolatria. Sua estratégia é dupla: sinagoga (para judeus) e ágora (para todos). Os filósofos epicureus (que buscavam a felicidade na ausência de dor, negavam a providência divina e a vida após a morte) e estóicos (que criam em uma razão divina impessoal que governa o universo) representam as duas grandes escolas filosóficas helenísticas. Paulo vai ao Areópago — o tribunal filosófico-religioso de Atenas — para apresentar o Evangelho no mais alto fórum intelectual do mundo.</div>
+</div>
 
-    <div class="section-block">
-      <h2>📜 Contexto Histórico e Literário</h2>
-      <p>Atos 17 narra três encontros missionários distintos: em Tessalônica (com judeus e gregos temerosos de Deus), em Bereia (com judeus 'mais nobres' que examinavam as Escrituras diariamente), e em Atenas (com filósofos epicureus e estoicos no Areópago). Cada encontro demonstra uma abordagem missionária diferente adaptada ao público.</p>
-    </div>
+<div class="verse-block">
+  <div class="verse-ref">Atos 17:22-28</div>
+  <blockquote class="verse-text">"E Paulo, estando em pé no meio do Areópago, disse: Atenienses, em tudo vos vejo como que muito religiosos. Porque, passando e observando os objetos do vosso culto, achei também um altar em que estava escrito: AO DEUS DESCONHECIDO. Esse, pois, que vós honrais sem o conhecer, é o que eu vos anuncio. O Deus que fez o mundo e tudo o que nele há, sendo Senhor do céu e da terra, não habita em templos feitos por mãos humanas... Porque nele vivemos, e nos movemos, e existimos; como também alguns dos vossos poetas disseram: Pois somos também sua geração."</blockquote>
+  <div class="verse-analysis">O discurso do Areópago é a obra-prima da apologética cristã — e o modelo de contextualização missionária. Paulo não começa com a Bíblia (que os atenienses não conhecem) — começa com o que eles já sabem: o altar ao 'Deus Desconhecido' e as citações dos poetas gregos (Arato e Cleanto). Ele usa a cultura local como ponto de contato para anunciar o Deus bíblico. Mas a contextualização tem limites: Paulo não adapta o Evangelho à filosofia grega — ele usa a filosofia como ponte para anunciar a ressurreição, que é o escândalo inaceitável para os gregos (17:32). A contextualização serve ao Evangelho — não o substitui.</div>
+</div>
 
-    <div class="section-block">
-      <h2>🔍 Análise Exegética</h2>
-      <p>O discurso de Paulo no Areópago (At 17:22-31) é o modelo da missão para a cultura secular. Paulo não começa com as Escrituras (seu público não as conhece) — começa com a observação cultural (o altar 'ao Deus desconhecido'), usa poetas gregos (Arato e Cleanto) como pontes, e proclama a ressurreição como o evento que exige uma resposta. A reação é mista: alguns zombam, alguns querem ouvir mais, alguns creem. Paulo não compromete o Evangelho, mas o comunica na linguagem do seu público.</p>
-      <div class="versiculo-bloco">
-        <div class="ref-v">At 17:28</div>
-        <div class="texto-v">"Porque nele vivemos, e nos movemos, e existimos."</div>
-        <div class="analise-v">Este versículo-chave sintetiza o tema central do capítulo e sua contribuição à teologia de Atos. A análise do vocabulário grego original revela camadas de significado que a tradução portuguesa nem sempre consegue capturar completamente.</div>
-      </div>
-    </div>
+<div class="verse-block">
+  <div class="verse-ref">Atos 17:30-34</div>
+  <blockquote class="verse-text">"Deus, tendo passado por alto os tempos da ignorância, anuncia agora a todos os homens, em todo o lugar, que se arrependam; porque estabeleceu um dia em que há de julgar o mundo com justiça, por meio do varão que destinou; e disso deu certeza a todos, ressuscitando-o dos mortos. E, ouvindo a ressurreição dos mortos, uns escarneciam, e outros diziam: Acerca disto te ouviremos outra vez. Assim Paulo saiu do meio deles."</blockquote>
+  <div class="verse-analysis">A reação ao discurso do Areópago é mista: escárnio (pela ressurreição), interesse (ouviremos outra vez) e fé (Dionísio, Dâmaris e outros). A ressurreição é o ponto de ruptura — para os gregos, o corpo era uma prisão da alma; a ideia de ressurreição corporal era absurda ou indesejável. Paulo não suaviza a mensagem para evitar o escárnio — ele prega a ressurreição mesmo sabendo que será ridicularizado. O Evangelho tem um núcleo irredutível que não pode ser adaptado sem ser destruído. O 'fracasso' em Atenas (poucos convertidos) não é um fracasso missionário — é a resposta esperada quando o Evangelho encontra a sabedoria humana (1Co 1:18-25).</div>
+</div>
+</div>
 
-    <div class="section-block">
-      <h2>🏛️ Teologia Sistemática</h2>
-      <p>Atos 17 contribui de forma significativa para a teologia bíblica em múltiplas dimensões. A pneumatologia (teologia do Espírito Santo) é central em todo o Livro de Atos — o Espírito guia, capacita, envia e protege a missão da Igreja. A eclesiologia (teologia da Igreja) é desenvolvida através dos eventos narrados: a Igreja não é uma instituição humana, mas uma comunidade criada e sustentada pelo Espírito Santo.</p>
-      <p>A cristologia de Atos é alta e exaltada: Jesus é o Senhor ressuscitado que governa a Igreja de sua posição à direita do Pai. Cada milagre, cada conversão, cada avanço missionário é atribuído ao nome e ao poder de Jesus Cristo. A missão da Igreja não é uma iniciativa humana — é a continuação do ministério de Jesus através do Espírito Santo.</p>
-      <p>A soteriologia (teologia da salvação) em Atos é graciosa e universal: a salvação está disponível para todos — judeus e gentios, ricos e pobres, homens e mulheres — através da fé em Jesus Cristo. O batismo é o sinal externo da conversão interna, e o dom do Espírito Santo é a garantia da nova vida em Cristo.</p>
-    </div>
-
-    <div class="section-block">
-      <h2>🔗 Conexões com o Antigo Testamento</h2>
-      <p>Atos está profundamente enraizado no Antigo Testamento. Os apóstolos pregam Jesus como o cumprimento das promessas do AT — o Messias esperado, o Servo Sofredor de Isaías, o Filho do Homem de Daniel, o Profeta como Moisés do Deuteronômio. Cada sermão em Atos é uma leitura cristológica do AT.</p>
-      <p>O Espírito Santo derramado no Pentecostes é o cumprimento da profecia de Joel 2:28-32. A missão aos gentios é o cumprimento de Is 49:6 ('luz para as nações'). A ressurreição de Jesus é o cumprimento do Salmo 16:8-11 e do Salmo 110:1. Lucas está mostrando que o movimento cristão não é uma ruptura com o judaísmo — é o cumprimento de suas esperanças mais profundas.</p>
-    </div>
-
-    <div class="section-block">
-      <h2>✨ Aplicação Contemporânea</h2>
-      <p>Atos 17 fala diretamente à Igreja contemporânea. O mesmo Espírito Santo que capacitou os apóstolos está disponível para cada crente hoje. A missão de ser testemunha de Jesus — em Jerusalém (nossa cidade), em Judeia e Samaria (nossa região e os marginalizados), e até os confins da terra (missão global) — continua sendo o chamado de toda a Igreja.</p>
-      <p>Os desafios que a Igreja primitiva enfrentou — perseguição, divisões internas, questões teológicas, pressões culturais — são os mesmos que a Igreja enfrenta hoje. A resposta de Atos é sempre a mesma: oração, dependência do Espírito Santo, fidelidade ao Evangelho, e coragem para testemunhar independentemente das consequências.</p>
-      <p>A diversidade da Igreja primitiva — judeus e gentios, escravos e livres, homens e mulheres, de todas as nações — é um modelo para a Igreja contemporânea. O Evangelho não é propriedade de nenhuma cultura ou etnia; ele transforma e enriquece todas as culturas enquanto as submete ao senhorio de Cristo.</p>
-    </div>
-
-    <div class="nav-cap"><a href="/08-novo-testamento/atos/capitulos/capitulo-16.html">← Capítulo 16</a><a href="/08-novo-testamento/atos/index.html">📋 Todos os Capítulos</a><a href="/08-novo-testamento/atos/capitulos/capitulo-18.html">Capítulo 18 →</a></div>
-  </div>
+  </article>
+  <nav class="chapter-nav">
+    <a href="capitulo-16.html" class="nav-btn">← Anterior</a>
+    <a href="../index.html" class="nav-btn center">Índice de Atos</a>
+    <a href="capitulo-18.html" class="nav-btn">Próximo →</a>
+  </nav>
+</main>
+<footer class="site-footer">
+  <p>365 de Graça &amp; Adoração • Da Criação ao Apocalipse • © 2026</p>
+</footer>
 </body>
 </html>

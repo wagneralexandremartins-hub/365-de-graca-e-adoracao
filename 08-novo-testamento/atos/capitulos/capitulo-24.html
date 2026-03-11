@@ -1,154 +1,64 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Atos 24 — Paulo Diante de Félix em Cesareia · 365 de Graça &amp; Adoração</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <style>
-*{box-sizing:border-box;margin:0;padding:0;}
-body{background:#0f172a;color:#e2e8f0;font-family:'Segoe UI',sans-serif;line-height:1.75;}
-.topbar{background:rgba(15,23,42,0.97);border-bottom:1px solid rgba(255,255,255,0.08);padding:0 24px;position:sticky;top:0;z-index:100;}
-.topbar .inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;}
-.topbar a{color:#94a3b8;text-decoration:none;font-size:0.88rem;}
-.topbar a:hover{color:var(--accent);}
-.hero{background:linear-gradient(135deg,rgba(var(--accent-rgb),0.14) 0%,rgba(15,23,42,0.97) 65%);border-bottom:1px solid rgba(var(--accent-rgb),0.2);padding:60px 24px 48px;text-align:center;}
-.hero .tag{display:inline-block;background:rgba(var(--accent-rgb),0.12);border:1px solid rgba(var(--accent-rgb),0.28);color:var(--accent);font-size:0.75rem;font-weight:800;padding:4px 16px;border-radius:999px;margin-bottom:14px;text-transform:uppercase;letter-spacing:1.5px;}
-.hero h1{font-size:2.4rem;font-weight:900;color:var(--accent);margin:0 0 10px;line-height:1.15;}
-.hero .ref{color:#64748b;font-size:0.9rem;margin-bottom:18px;}
-.hero blockquote{background:rgba(255,255,255,0.04);border-left:4px solid var(--accent);border-radius:8px;padding:14px 22px;max-width:680px;margin:0 auto;font-style:italic;color:#e2e8f0;font-size:0.97rem;line-height:1.75;}
-.wrap{max-width:960px;margin:0 auto;padding:44px 24px 80px;}
-.section-block{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:28px 32px;margin-bottom:22px;}
-.section-block h2{font-size:1.05rem;font-weight:800;color:var(--accent);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(var(--accent-rgb),0.18);}
-.section-block p{color:#94a3b8;font-size:0.93rem;line-height:1.85;margin-bottom:14px;}
-.section-block p:last-child{margin-bottom:0;}
-.versiculo-bloco{border-left:3px solid rgba(var(--accent-rgb),0.35);padding:14px 20px;margin:16px 0;background:rgba(var(--accent-rgb),0.04);border-radius:0 10px 10px 0;}
-.versiculo-bloco .ref-v{font-size:0.78rem;font-weight:800;color:var(--accent);text-transform:uppercase;margin-bottom:6px;letter-spacing:0.5px;}
-.versiculo-bloco .texto-v{font-size:0.95rem;color:#e2e8f0;font-style:italic;line-height:1.75;margin-bottom:10px;}
-.versiculo-bloco .analise-v{font-size:0.9rem;color:#94a3b8;line-height:1.82;}
-.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:14px;}
-.vocab-card{background:rgba(var(--accent-rgb),0.06);border:1px solid rgba(var(--accent-rgb),0.15);border-radius:10px;padding:14px 16px;}
-.vocab-card .termo{font-size:1.05rem;font-weight:800;color:var(--accent);}
-.vocab-card .transl{font-size:0.8rem;color:#64748b;margin-bottom:6px;}
-.vocab-card .def{font-size:0.85rem;color:#94a3b8;line-height:1.65;}
-.mapa-box{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:24px 28px;margin:22px 0;}
-.mapa-box h3{color:var(--accent);font-size:1rem;margin:0 0 12px;}
-.mapa-visual{background:linear-gradient(135deg,rgba(15,23,42,0.9) 0%,rgba(30,41,59,0.9) 100%);border:1px solid rgba(var(--accent-rgb),0.2);border-radius:12px;padding:28px;margin:12px 0;position:relative;overflow:hidden;min-height:180px;}
-.mapa-visual::before{content:'🗺️';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:5rem;opacity:0.08;}
-.mapa-desc{color:#94a3b8;font-size:0.91rem;line-height:1.75;margin-top:12px;}
-.mapa-pontos{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
-.mapa-ponto{background:rgba(var(--accent-rgb),0.08);border:1px solid rgba(var(--accent-rgb),0.2);color:var(--accent);font-size:0.78rem;font-weight:700;padding:4px 12px;border-radius:999px;}
-.nav-cap{display:flex;justify-content:space-between;align-items:center;margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.07);}
-.nav-cap a{background:rgba(var(--accent-rgb),0.1);border:1px solid rgba(var(--accent-rgb),0.22);color:var(--accent);text-decoration:none;padding:10px 20px;border-radius:8px;font-size:0.88rem;font-weight:700;transition:all 0.2s;}
-.nav-cap a:hover{background:rgba(var(--accent-rgb),0.2);}
-.tag-bloco{display:inline-block;background:rgba(var(--accent-rgb),0.1);border:1px solid rgba(var(--accent-rgb),0.2);color:var(--accent);font-size:0.72rem;font-weight:800;padding:3px 12px;border-radius:999px;margin-right:6px;margin-bottom:6px;}
-</style>
-  <link rel="stylesheet" href="/assets/css/bloco.css">
-  <style>
-    :root {
-      --accent: #0ea5e9;
-      --accent-rgb: 14, 165, 233;
-    }
-  </style>
-
-  <meta name="description" content="Atos 24 narra o primeiro dos três julgamentos formais de Paulo diante de autoridades romanas (Félix, Festo, Agripa). O advogado Tértulo apresenta três acus...">
-  <!-- Open Graph / Redes Sociais -->
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://365gracaeadoracao.com/08-novo-testamento/atos/capitulos/capitulo-24">
-  <meta property="og:title" content="Atos 24 — Paulo Diante de Félix em Cesareia · 365 de Graça &amp; Adoração">
-  <meta property="og:description" content="Atos 24 narra o primeiro dos três julgamentos formais de Paulo diante de autoridades romanas (Félix, Festo, Agripa). O advogado Tértulo apresenta três acus...">
-  <meta property="og:image" content="https://365gracaeadoracao.com/assets/img/og-image.png">
-  <meta property="og:site_name" content="365 de Graça &amp; Adoração">
-  <meta property="og:locale" content="pt_BR">
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Atos 24 — Paulo Diante de Félix em Cesareia · 365 de Graça &amp; Adoração">
-  <meta name="twitter:description" content="Atos 24 narra o primeiro dos três julgamentos formais de Paulo diante de autoridades romanas (Félix, Festo, Agripa). O advogado Tértulo apresenta três acus...">
-  <meta name="twitter:image" content="https://365gracaeadoracao.com/assets/img/og-image.png">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Início",
-      "item": "https://365gracaeadoracao.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Bloco 08 — Novo Testamento",
-      "item": "https://365gracaeadoracao.com/08-novo-testamento/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Atos",
-      "item": "https://365gracaeadoracao.com/08-novo-testamento/atos/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "Atos 24 — Paulo Diante de Félix em Cesareia",
-      "item": "https://365gracaeadoracao.com/08-novo-testamento/atos/capitulos/capitulo-24"
-    }
-    ]
-  }
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atos 24 — Paulo Diante de Félix — A Defesa em Cesareia | 365 de Graça &amp; Adoração</title>
+<meta name="description" content="Estudo aprofundado de Atos capítulo 24: A acusação de Tértulo, a defesa de Paulo, as conversas com Félix e a detenção por dois anos. Análise versículo por versículo, contexto histórico e teologia missionária.">
+<meta property="og:title" content="Atos 24 — Paulo Diante de Félix — A Defesa em Cesareia">
+<meta property="og:description" content="A acusação de Tértulo, a defesa de Paulo, as conversas com Félix e a detenção por dois anos">
+<link rel="stylesheet" href="../../../assets/css/style.css">
+<link rel="stylesheet" href="../../../assets/css/bloco.css">
 </head>
-<body class="bloco-09">
-  <div class="topbar"><div class="inner">
-    <a href="/08-novo-testamento/atos/index.html">← Atos dos Apóstolos</a>
-    <a href="/08-novo-testamento/index.html">Novo Testamento</a>
-  </div></div>
-
-  <div class="hero">
-    <span class="tag">🔥 Atos 24 · Novo Testamento</span>
-    <h1>Atos 24 — Paulo Diante de Félix em Cesareia</h1>
-    <div class="ref">At 24:16</div>
-    <blockquote>Por isso me esforço por ter sempre uma consciência sem ofensa, tanto para com Deus como para com os homens.</blockquote>
+<body class="bloco-08">
+<nav class="topbar">
+  <div class="topbar-inner">
+    <a class="site-title" href="/">365 de Graça &amp; Adoração</a>
+    <div class="nav-links">
+      <a href="/">Início</a>
+      <a href="/08-novo-testamento/">Novo Testamento</a>
+      <a href="/busca/">Buscar</a>
+    </div>
   </div>
+</nav>
+<main class="chapter-main">
+  <nav class="breadcrumb">
+    <a href="/">Início</a> ›
+    <a href="/08-novo-testamento/">Novo Testamento</a> ›
+    <a href="../index.html">Atos dos Apóstolos</a> ›
+    <span>Capítulo 24</span>
+  </nav>
+  <header class="chapter-header">
+    <div class="chapter-number">Atos 24</div>
+    <h1 class="chapter-title">Paulo Diante de Félix — A Defesa em Cesareia</h1>
+    <p class="chapter-subtitle">A acusação de Tértulo, a defesa de Paulo, as conversas com Félix e a detenção por dois anos</p>
+  </header>
+  <article class="chapter-content">
+<div class="section-block">
+<h2>⚖️ A Defesa Diante de Félix (24:10-21)</h2>
 
-  <div class="wrap">
+<div class="verse-block">
+  <div class="verse-ref">Atos 24:14-16</div>
+  <blockquote class="verse-text">"Mas isto te confesso, que segundo o Caminho, a que chamam seita, assim sirvo ao Deus de meus pais, crendo em tudo o que está escrito na lei e nos profetas; tendo em Deus a esperança, que eles mesmos também esperam, de que há de haver ressurreição, tanto dos justos como dos injustos. E por isso mesmo me esforço por ter sempre uma consciência sem ofensa, tanto para com Deus como para com os homens."</blockquote>
+  <div class="verse-analysis">A defesa de Paulo diante de Félix é um modelo de apologética cristã. Ele não nega ser do 'Caminho' (<em>hodos</em> — o nome primitivo do Cristianismo, baseado em Jo 14:6) — mas redefine o que isso significa: não é uma seita separatista, mas o cumprimento do judaísmo. 'Sirvo ao Deus de meus pais, crendo em tudo o que está escrito na lei e nos profetas' — o Evangelho não contradiz o AT, ele o cumpre. A menção da 'ressurreição dos justos e injustos' (cf. Dn 12:2; Jo 5:28-29) é a afirmação do julgamento final — um elemento que Paulo usa consistentemente em sua apologética.</div>
+</div>
 
-    <div class="section-block">
-      <h2>📜 Contexto Histórico e Literário</h2>
-      <p>Atos 24 narra o primeiro dos três julgamentos formais de Paulo diante de autoridades romanas (Félix, Festo, Agripa). O advogado Tértulo apresenta três acusações contra Paulo: sedição política ('perturbador entre todos os judeus do mundo'), liderança de uma seita ('cabeça da seita dos nazarenos'), e profanação do Templo. Paulo refuta cada acusação com precisão jurídica.</p>
-    </div>
+<div class="verse-block">
+  <div class="verse-ref">Atos 24:24-26</div>
+  <blockquote class="verse-text">"E, passados alguns dias, veio Félix com Drusila, sua mulher, que era judia, e mandou chamar a Paulo, e ouviu-o acerca da fé em Cristo Jesus. E, discorrendo ele acerca da justiça, e da temperança, e do juízo vindouro, Félix, ficando atemorizado, respondeu: Por agora vai-te; quando tiver ocasião conveniente, chamar-te-ei. E ao mesmo tempo esperava que Paulo lhe desse dinheiro; pelo que muitas vezes o mandava chamar e conversava com ele."</blockquote>
+  <div class="verse-analysis">As conversas de Paulo com Félix são fascinantes. Félix — um ex-escravo que se tornou governador, casado com Drusila (filha de Herodes Agripa I, que havia matado Tiago e preso Pedro) — ouve Paulo sobre 'justiça, temperança e juízo vindouro.' A reação de Félix — 'ficou atemorizado' (<em>emphobos genomenos</em>) — mostra que o Evangelho tocou sua consciência. Mas ele adia a decisão: 'quando tiver ocasião conveniente.' Esta é a tragédia do adiamento: a 'ocasião conveniente' nunca chega. Félix mantém Paulo preso por dois anos — esperando suborno e querendo agradar aos judeus (24:27).</div>
+</div>
+</div>
 
-    <div class="section-block">
-      <h2>🔍 Análise Exegética</h2>
-      <p>O encontro de Paulo com Félix e sua esposa Drusila (At 24:24-26) é um dos momentos mais fascinantes de Atos. Paulo fala sobre 'a justiça, a temperança e o juízo vindouro' — temas diretamente relevantes para Félix, que havia seduzido Drusila (esposa de outro homem) e era conhecido por sua corrupção. Félix 'ficou atemorizado' — o Evangelho atingiu sua consciência. Mas ele adiou a decisão: 'quando tiver oportunidade conveniente, chamar-te-ei.' Este adiamento é o retrato trágico de quem ouve o Evangelho mas não responde.</p>
-      <div class="versiculo-bloco">
-        <div class="ref-v">At 24:16</div>
-        <div class="texto-v">"Por isso me esforço por ter sempre uma consciência sem ofensa, tanto para com Deus como para com os homens."</div>
-        <div class="analise-v">Este versículo-chave sintetiza o tema central do capítulo e sua contribuição à teologia de Atos. A análise do vocabulário grego original revela camadas de significado que a tradução portuguesa nem sempre consegue capturar completamente.</div>
-      </div>
-    </div>
-
-    <div class="section-block">
-      <h2>🏛️ Teologia Sistemática</h2>
-      <p>Atos 24 contribui de forma significativa para a teologia bíblica em múltiplas dimensões. A pneumatologia (teologia do Espírito Santo) é central em todo o Livro de Atos — o Espírito guia, capacita, envia e protege a missão da Igreja. A eclesiologia (teologia da Igreja) é desenvolvida através dos eventos narrados: a Igreja não é uma instituição humana, mas uma comunidade criada e sustentada pelo Espírito Santo.</p>
-      <p>A cristologia de Atos é alta e exaltada: Jesus é o Senhor ressuscitado que governa a Igreja de sua posição à direita do Pai. Cada milagre, cada conversão, cada avanço missionário é atribuído ao nome e ao poder de Jesus Cristo. A missão da Igreja não é uma iniciativa humana — é a continuação do ministério de Jesus através do Espírito Santo.</p>
-      <p>A soteriologia (teologia da salvação) em Atos é graciosa e universal: a salvação está disponível para todos — judeus e gentios, ricos e pobres, homens e mulheres — através da fé em Jesus Cristo. O batismo é o sinal externo da conversão interna, e o dom do Espírito Santo é a garantia da nova vida em Cristo.</p>
-    </div>
-
-    <div class="section-block">
-      <h2>🔗 Conexões com o Antigo Testamento</h2>
-      <p>Atos está profundamente enraizado no Antigo Testamento. Os apóstolos pregam Jesus como o cumprimento das promessas do AT — o Messias esperado, o Servo Sofredor de Isaías, o Filho do Homem de Daniel, o Profeta como Moisés do Deuteronômio. Cada sermão em Atos é uma leitura cristológica do AT.</p>
-      <p>O Espírito Santo derramado no Pentecostes é o cumprimento da profecia de Joel 2:28-32. A missão aos gentios é o cumprimento de Is 49:6 ('luz para as nações'). A ressurreição de Jesus é o cumprimento do Salmo 16:8-11 e do Salmo 110:1. Lucas está mostrando que o movimento cristão não é uma ruptura com o judaísmo — é o cumprimento de suas esperanças mais profundas.</p>
-    </div>
-
-    <div class="section-block">
-      <h2>✨ Aplicação Contemporânea</h2>
-      <p>Atos 24 fala diretamente à Igreja contemporânea. O mesmo Espírito Santo que capacitou os apóstolos está disponível para cada crente hoje. A missão de ser testemunha de Jesus — em Jerusalém (nossa cidade), em Judeia e Samaria (nossa região e os marginalizados), e até os confins da terra (missão global) — continua sendo o chamado de toda a Igreja.</p>
-      <p>Os desafios que a Igreja primitiva enfrentou — perseguição, divisões internas, questões teológicas, pressões culturais — são os mesmos que a Igreja enfrenta hoje. A resposta de Atos é sempre a mesma: oração, dependência do Espírito Santo, fidelidade ao Evangelho, e coragem para testemunhar independentemente das consequências.</p>
-      <p>A diversidade da Igreja primitiva — judeus e gentios, escravos e livres, homens e mulheres, de todas as nações — é um modelo para a Igreja contemporânea. O Evangelho não é propriedade de nenhuma cultura ou etnia; ele transforma e enriquece todas as culturas enquanto as submete ao senhorio de Cristo.</p>
-    </div>
-
-    <div class="nav-cap"><a href="/08-novo-testamento/atos/capitulos/capitulo-23.html">← Capítulo 23</a><a href="/08-novo-testamento/atos/index.html">📋 Todos os Capítulos</a><a href="/08-novo-testamento/atos/capitulos/capitulo-25.html">Capítulo 25 →</a></div>
-  </div>
+  </article>
+  <nav class="chapter-nav">
+    <a href="capitulo-23.html" class="nav-btn">← Anterior</a>
+    <a href="../index.html" class="nav-btn center">Índice de Atos</a>
+    <a href="capitulo-25.html" class="nav-btn">Próximo →</a>
+  </nav>
+</main>
+<footer class="site-footer">
+  <p>365 de Graça &amp; Adoração • Da Criação ao Apocalipse • © 2026</p>
+</footer>
 </body>
 </html>

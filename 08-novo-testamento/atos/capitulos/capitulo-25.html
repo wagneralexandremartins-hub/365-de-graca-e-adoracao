@@ -1,154 +1,67 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Atos 25 — Paulo Apela a César — Festo e Agripa · 365 de Graça &amp; Adoração</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <style>
-*{box-sizing:border-box;margin:0;padding:0;}
-body{background:#0f172a;color:#e2e8f0;font-family:'Segoe UI',sans-serif;line-height:1.75;}
-.topbar{background:rgba(15,23,42,0.97);border-bottom:1px solid rgba(255,255,255,0.08);padding:0 24px;position:sticky;top:0;z-index:100;}
-.topbar .inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;}
-.topbar a{color:#94a3b8;text-decoration:none;font-size:0.88rem;}
-.topbar a:hover{color:var(--accent);}
-.hero{background:linear-gradient(135deg,rgba(var(--accent-rgb),0.14) 0%,rgba(15,23,42,0.97) 65%);border-bottom:1px solid rgba(var(--accent-rgb),0.2);padding:60px 24px 48px;text-align:center;}
-.hero .tag{display:inline-block;background:rgba(var(--accent-rgb),0.12);border:1px solid rgba(var(--accent-rgb),0.28);color:var(--accent);font-size:0.75rem;font-weight:800;padding:4px 16px;border-radius:999px;margin-bottom:14px;text-transform:uppercase;letter-spacing:1.5px;}
-.hero h1{font-size:2.4rem;font-weight:900;color:var(--accent);margin:0 0 10px;line-height:1.15;}
-.hero .ref{color:#64748b;font-size:0.9rem;margin-bottom:18px;}
-.hero blockquote{background:rgba(255,255,255,0.04);border-left:4px solid var(--accent);border-radius:8px;padding:14px 22px;max-width:680px;margin:0 auto;font-style:italic;color:#e2e8f0;font-size:0.97rem;line-height:1.75;}
-.wrap{max-width:960px;margin:0 auto;padding:44px 24px 80px;}
-.section-block{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:28px 32px;margin-bottom:22px;}
-.section-block h2{font-size:1.05rem;font-weight:800;color:var(--accent);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(var(--accent-rgb),0.18);}
-.section-block p{color:#94a3b8;font-size:0.93rem;line-height:1.85;margin-bottom:14px;}
-.section-block p:last-child{margin-bottom:0;}
-.versiculo-bloco{border-left:3px solid rgba(var(--accent-rgb),0.35);padding:14px 20px;margin:16px 0;background:rgba(var(--accent-rgb),0.04);border-radius:0 10px 10px 0;}
-.versiculo-bloco .ref-v{font-size:0.78rem;font-weight:800;color:var(--accent);text-transform:uppercase;margin-bottom:6px;letter-spacing:0.5px;}
-.versiculo-bloco .texto-v{font-size:0.95rem;color:#e2e8f0;font-style:italic;line-height:1.75;margin-bottom:10px;}
-.versiculo-bloco .analise-v{font-size:0.9rem;color:#94a3b8;line-height:1.82;}
-.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:14px;}
-.vocab-card{background:rgba(var(--accent-rgb),0.06);border:1px solid rgba(var(--accent-rgb),0.15);border-radius:10px;padding:14px 16px;}
-.vocab-card .termo{font-size:1.05rem;font-weight:800;color:var(--accent);}
-.vocab-card .transl{font-size:0.8rem;color:#64748b;margin-bottom:6px;}
-.vocab-card .def{font-size:0.85rem;color:#94a3b8;line-height:1.65;}
-.mapa-box{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:24px 28px;margin:22px 0;}
-.mapa-box h3{color:var(--accent);font-size:1rem;margin:0 0 12px;}
-.mapa-visual{background:linear-gradient(135deg,rgba(15,23,42,0.9) 0%,rgba(30,41,59,0.9) 100%);border:1px solid rgba(var(--accent-rgb),0.2);border-radius:12px;padding:28px;margin:12px 0;position:relative;overflow:hidden;min-height:180px;}
-.mapa-visual::before{content:'🗺️';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:5rem;opacity:0.08;}
-.mapa-desc{color:#94a3b8;font-size:0.91rem;line-height:1.75;margin-top:12px;}
-.mapa-pontos{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
-.mapa-ponto{background:rgba(var(--accent-rgb),0.08);border:1px solid rgba(var(--accent-rgb),0.2);color:var(--accent);font-size:0.78rem;font-weight:700;padding:4px 12px;border-radius:999px;}
-.nav-cap{display:flex;justify-content:space-between;align-items:center;margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.07);}
-.nav-cap a{background:rgba(var(--accent-rgb),0.1);border:1px solid rgba(var(--accent-rgb),0.22);color:var(--accent);text-decoration:none;padding:10px 20px;border-radius:8px;font-size:0.88rem;font-weight:700;transition:all 0.2s;}
-.nav-cap a:hover{background:rgba(var(--accent-rgb),0.2);}
-.tag-bloco{display:inline-block;background:rgba(var(--accent-rgb),0.1);border:1px solid rgba(var(--accent-rgb),0.2);color:var(--accent);font-size:0.72rem;font-weight:800;padding:3px 12px;border-radius:999px;margin-right:6px;margin-bottom:6px;}
-</style>
-  <link rel="stylesheet" href="/assets/css/bloco.css">
-  <style>
-    :root {
-      --accent: #0ea5e9;
-      --accent-rgb: 14, 165, 233;
-    }
-  </style>
-
-  <meta name="description" content="Atos 25 narra a chegada do novo governador Festo e sua tentativa de resolver o caso de Paulo. Festo, querendo agradar aos judeus, sugere que Paulo seja jul...">
-  <!-- Open Graph / Redes Sociais -->
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://365gracaeadoracao.com/08-novo-testamento/atos/capitulos/capitulo-25">
-  <meta property="og:title" content="Atos 25 — Paulo Apela a César — Festo e Agripa · 365 de Graça &amp; Adoração">
-  <meta property="og:description" content="Atos 25 narra a chegada do novo governador Festo e sua tentativa de resolver o caso de Paulo. Festo, querendo agradar aos judeus, sugere que Paulo seja jul...">
-  <meta property="og:image" content="https://365gracaeadoracao.com/assets/img/og-image.png">
-  <meta property="og:site_name" content="365 de Graça &amp; Adoração">
-  <meta property="og:locale" content="pt_BR">
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Atos 25 — Paulo Apela a César — Festo e Agripa · 365 de Graça &amp; Adoração">
-  <meta name="twitter:description" content="Atos 25 narra a chegada do novo governador Festo e sua tentativa de resolver o caso de Paulo. Festo, querendo agradar aos judeus, sugere que Paulo seja jul...">
-  <meta name="twitter:image" content="https://365gracaeadoracao.com/assets/img/og-image.png">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Início",
-      "item": "https://365gracaeadoracao.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Bloco 08 — Novo Testamento",
-      "item": "https://365gracaeadoracao.com/08-novo-testamento/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Atos",
-      "item": "https://365gracaeadoracao.com/08-novo-testamento/atos/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "Atos 25 — Paulo Apela a César — Festo e Agripa",
-      "item": "https://365gracaeadoracao.com/08-novo-testamento/atos/capitulos/capitulo-25"
-    }
-    ]
-  }
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atos 25 — Paulo Diante de Festo e Agripa | 365 de Graça &amp; Adoração</title>
+<meta name="description" content="Estudo aprofundado de Atos capítulo 25: O apelo a César, o encontro com Herodes Agripa II e a declaração de inocência de Paulo. Análise versículo por versículo, contexto histórico e teologia missionária.">
+<meta property="og:title" content="Atos 25 — Paulo Diante de Festo e Agripa">
+<meta property="og:description" content="O apelo a César, o encontro com Herodes Agripa II e a declaração de inocência de Paulo">
+<link rel="stylesheet" href="../../../assets/css/style.css">
+<link rel="stylesheet" href="../../../assets/css/bloco.css">
 </head>
-<body class="bloco-09">
-  <div class="topbar"><div class="inner">
-    <a href="/08-novo-testamento/atos/index.html">← Atos dos Apóstolos</a>
-    <a href="/08-novo-testamento/index.html">Novo Testamento</a>
-  </div></div>
-
-  <div class="hero">
-    <span class="tag">🔥 Atos 25 · Novo Testamento</span>
-    <h1>Atos 25 — Paulo Apela a César — Festo e Agripa</h1>
-    <div class="ref">At 25:11</div>
-    <blockquote>Apelo a César.</blockquote>
+<body class="bloco-08">
+<nav class="topbar">
+  <div class="topbar-inner">
+    <a class="site-title" href="/">365 de Graça &amp; Adoração</a>
+    <div class="nav-links">
+      <a href="/">Início</a>
+      <a href="/08-novo-testamento/">Novo Testamento</a>
+      <a href="/busca/">Buscar</a>
+    </div>
   </div>
+</nav>
+<main class="chapter-main">
+  <nav class="breadcrumb">
+    <a href="/">Início</a> ›
+    <a href="/08-novo-testamento/">Novo Testamento</a> ›
+    <a href="../index.html">Atos dos Apóstolos</a> ›
+    <span>Capítulo 25</span>
+  </nav>
+  <header class="chapter-header">
+    <div class="chapter-number">Atos 25</div>
+    <h1 class="chapter-title">Paulo Diante de Festo e Agripa</h1>
+    <p class="chapter-subtitle">O apelo a César, o encontro com Herodes Agripa II e a declaração de inocência de Paulo</p>
+  </header>
+  <article class="chapter-content">
+<div class="section-block">
+<h2>👑 O Apelo a César (25:1-12)</h2>
 
-  <div class="wrap">
+<div class="verse-block">
+  <div class="verse-ref">Atos 25:10-12</div>
+  <blockquote class="verse-text">"E Paulo disse: Estou diante do tribunal de César, onde devo ser julgado; não fiz nenhum agravo aos judeus, como tu muito bem sabes. Porque se sou culpado e fiz alguma coisa digna de morte, não recuso morrer; mas se não há nada naquilo de que estes me acusam, ninguém me pode entregar a eles. Apelo a César. Então Festo, havendo conferenciado com o conselho, respondeu: Apelaste a César; a César irás."</blockquote>
+  <div class="verse-analysis">O apelo de Paulo a César é o momento decisivo que determinará o destino do Evangelho em Roma. Paulo usa seu direito de cidadão romano — um direito que ele havia guardado em reserva para este momento crucial. O apelo a César (<em>Kaisara epikaloumai</em>) era irrevogável: uma vez feito, o caso tinha que ser levado a Roma. Paulo não apela por medo — ele apela porque sabe que é o caminho para Roma, o destino que o Senhor lhe revelou (23:11). A providência divina usa o sistema legal romano para cumprir o propósito missionário de Deus.</div>
+</div>
+</div>
+<div class="section-block">
+<h2>🎭 O Discurso Diante de Agripa (26:1-32)</h2>
 
-    <div class="section-block">
-      <h2>📜 Contexto Histórico e Literário</h2>
-      <p>Atos 25 narra a chegada do novo governador Festo e sua tentativa de resolver o caso de Paulo. Festo, querendo agradar aos judeus, sugere que Paulo seja julgado em Jerusalém — o que seria uma sentença de morte. Paulo usa seu direito de cidadão romano: 'Apelo a César.' Esta apelação é irrevogável — Paulo será levado a Roma.</p>
-    </div>
+<div class="verse-block">
+  <div class="verse-ref">Atos 26:27-29</div>
+  <blockquote class="verse-text">"Crês, ó rei Agripa, nos profetas? Eu sei que crês. E Agripa disse a Paulo: Por pouco me persuades a fazer-me cristão. E Paulo disse: Prouvera a Deus que, não somente por pouco, mas também por muito, não somente tu, mas também todos os que hoje me ouvem se tornassem tais qual eu sou, exceto estas cadeias."</blockquote>
+  <div class="verse-analysis">O discurso de Paulo diante de Herodes Agripa II é o mais pessoal e evangelístico de todos. Paulo não está apenas se defendendo — está pregando o Evangelho ao rei. A pergunta 'Crês nos profetas?' coloca Agripa em uma posição impossível: se diz que sim, tem que aceitar que Jesus é o Messias; se diz que não, perde credibilidade diante do povo judeu. A resposta de Agripa — 'por pouco me persuades a fazer-me cristão' — é ambígua: pode ser sarcástica ou genuinamente tocada. A resposta de Paulo é extraordinária: ele deseja que todos sejam como ele — 'exceto estas cadeias.' Paulo, acorrentado, é mais livre do que seus juízes.</div>
+</div>
+</div>
 
-    <div class="section-block">
-      <h2>🔍 Análise Exegética</h2>
-      <p>A visita do rei Herodes Agripa II e sua irmã Berenice a Festo oferece uma oportunidade para Paulo apresentar sua defesa diante de um rei judeu. Festo está confuso sobre o caso de Paulo — ele precisa de ajuda para formular as acusações por escrito para enviar ao imperador. A ironia é que Paulo, o prisioneiro, está na posição de ensinar os governantes sobre as esperanças de Israel.</p>
-      <div class="versiculo-bloco">
-        <div class="ref-v">At 25:11</div>
-        <div class="texto-v">"Apelo a César."</div>
-        <div class="analise-v">Este versículo-chave sintetiza o tema central do capítulo e sua contribuição à teologia de Atos. A análise do vocabulário grego original revela camadas de significado que a tradução portuguesa nem sempre consegue capturar completamente.</div>
-      </div>
-    </div>
-
-    <div class="section-block">
-      <h2>🏛️ Teologia Sistemática</h2>
-      <p>Atos 25 contribui de forma significativa para a teologia bíblica em múltiplas dimensões. A pneumatologia (teologia do Espírito Santo) é central em todo o Livro de Atos — o Espírito guia, capacita, envia e protege a missão da Igreja. A eclesiologia (teologia da Igreja) é desenvolvida através dos eventos narrados: a Igreja não é uma instituição humana, mas uma comunidade criada e sustentada pelo Espírito Santo.</p>
-      <p>A cristologia de Atos é alta e exaltada: Jesus é o Senhor ressuscitado que governa a Igreja de sua posição à direita do Pai. Cada milagre, cada conversão, cada avanço missionário é atribuído ao nome e ao poder de Jesus Cristo. A missão da Igreja não é uma iniciativa humana — é a continuação do ministério de Jesus através do Espírito Santo.</p>
-      <p>A soteriologia (teologia da salvação) em Atos é graciosa e universal: a salvação está disponível para todos — judeus e gentios, ricos e pobres, homens e mulheres — através da fé em Jesus Cristo. O batismo é o sinal externo da conversão interna, e o dom do Espírito Santo é a garantia da nova vida em Cristo.</p>
-    </div>
-
-    <div class="section-block">
-      <h2>🔗 Conexões com o Antigo Testamento</h2>
-      <p>Atos está profundamente enraizado no Antigo Testamento. Os apóstolos pregam Jesus como o cumprimento das promessas do AT — o Messias esperado, o Servo Sofredor de Isaías, o Filho do Homem de Daniel, o Profeta como Moisés do Deuteronômio. Cada sermão em Atos é uma leitura cristológica do AT.</p>
-      <p>O Espírito Santo derramado no Pentecostes é o cumprimento da profecia de Joel 2:28-32. A missão aos gentios é o cumprimento de Is 49:6 ('luz para as nações'). A ressurreição de Jesus é o cumprimento do Salmo 16:8-11 e do Salmo 110:1. Lucas está mostrando que o movimento cristão não é uma ruptura com o judaísmo — é o cumprimento de suas esperanças mais profundas.</p>
-    </div>
-
-    <div class="section-block">
-      <h2>✨ Aplicação Contemporânea</h2>
-      <p>Atos 25 fala diretamente à Igreja contemporânea. O mesmo Espírito Santo que capacitou os apóstolos está disponível para cada crente hoje. A missão de ser testemunha de Jesus — em Jerusalém (nossa cidade), em Judeia e Samaria (nossa região e os marginalizados), e até os confins da terra (missão global) — continua sendo o chamado de toda a Igreja.</p>
-      <p>Os desafios que a Igreja primitiva enfrentou — perseguição, divisões internas, questões teológicas, pressões culturais — são os mesmos que a Igreja enfrenta hoje. A resposta de Atos é sempre a mesma: oração, dependência do Espírito Santo, fidelidade ao Evangelho, e coragem para testemunhar independentemente das consequências.</p>
-      <p>A diversidade da Igreja primitiva — judeus e gentios, escravos e livres, homens e mulheres, de todas as nações — é um modelo para a Igreja contemporânea. O Evangelho não é propriedade de nenhuma cultura ou etnia; ele transforma e enriquece todas as culturas enquanto as submete ao senhorio de Cristo.</p>
-    </div>
-
-    <div class="nav-cap"><a href="/08-novo-testamento/atos/capitulos/capitulo-24.html">← Capítulo 24</a><a href="/08-novo-testamento/atos/index.html">📋 Todos os Capítulos</a><a href="/08-novo-testamento/atos/capitulos/capitulo-26.html">Capítulo 26 →</a></div>
-  </div>
+  </article>
+  <nav class="chapter-nav">
+    <a href="capitulo-24.html" class="nav-btn">← Anterior</a>
+    <a href="../index.html" class="nav-btn center">Índice de Atos</a>
+    <a href="capitulo-26.html" class="nav-btn">Próximo →</a>
+  </nav>
+</main>
+<footer class="site-footer">
+  <p>365 de Graça &amp; Adoração • Da Criação ao Apocalipse • © 2026</p>
+</footer>
 </body>
 </html>
