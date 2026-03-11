@@ -2,161 +2,59 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apocalipse 4-5 — O Trono e o Cordeiro | 365 de Graça & Adoração</title>
-  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Apocalipse 4 — O Trono de Deus no Céu | 365 de Graça &amp; Adoração</title>
+  <meta name="description" content="Estudo aprofundado de Apocalipse capítulo 4: O Trono de Deus no Céu. Análise exegética versículo por versículo.">
+  <link rel="stylesheet" href="../../../../assets/css/style.css">
+  <link rel="stylesheet" href="../../../../assets/css/bloco.css">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: #0f172a; color: #e2e8f0; font-family: 'Georgia', serif; line-height: 1.7; }
-    a { color: inherit; text-decoration: none; }
-    .topbar { background: rgba(15,23,42,0.97); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
-    .topbar .inner { max-width: 900px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-    .topbar a { font-size: 0.85rem; color: #94a3b8; font-weight: 600; transition: color 0.2s; }
-    .topbar a:hover { color: #a855f7; }
-    .hero { background: linear-gradient(135deg, #0f172a 0%, #0d001a 50%, #0f172a 100%); padding: 64px 24px 48px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.07); }
-    .tag { display: inline-block; background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.25); color: #a855f7; font-size: 0.72rem; font-weight: 800; padding: 4px 14px; border-radius: 999px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
-    .hero h1 { font-size: 2.4rem; font-weight: 900; color: #f1f5f9; margin-bottom: 12px; line-height: 1.2; }
-    .hero .ref { font-size: 0.88rem; color: #64748b; margin-bottom: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
-    .hero blockquote { font-style: italic; color: #cbd5e1; font-size: 1rem; border-left: 3px solid #a855f7; padding-left: 20px; max-width: 600px; margin: 0 auto; text-align: left; }
-    .wrap { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
-    .section-block { margin-bottom: 40px; }
-    .section-block h2 { font-size: 1.3rem; font-weight: 800; color: #f1f5f9; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.07); }
-    .section-block p { color: #94a3b8; font-size: 0.95rem; line-height: 1.85; margin-bottom: 16px; }
-    .versiculo-bloco { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-left: 3px solid #a855f7; border-radius: 0 12px 12px 0; padding: 18px 20px; margin-bottom: 16px; }
-    .ref-v { font-size: 0.8rem; font-weight: 800; color: #a855f7; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
-    .texto-v { font-style: italic; color: #cbd5e1; font-size: 0.95rem; margin-bottom: 10px; line-height: 1.7; }
-    .analise-v { color: #94a3b8; font-size: 0.9rem; line-height: 1.8; }
-    .igreja-card { background: rgba(168,85,247,0.05); border: 1px solid rgba(168,85,247,0.25); border-radius: 14px; padding: 24px; margin-bottom: 24px; }
-    .igreja-nome { font-size: 1.2rem; font-weight: 900; color: #a855f7; margin-bottom: 4px; }
-    .igreja-ref { font-size: 0.78rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 14px; }
-    .igreja-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
-    @media (max-width: 600px) { .igreja-grid { grid-template-columns: 1fr; } }
-    .ig-item { background: rgba(255,255,255,0.02); border-radius: 8px; padding: 10px 14px; }
-    .ig-label { font-size: 0.72rem; font-weight: 800; color: #a855f7; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
-    .ig-val { font-size: 0.88rem; color: #cbd5e1; line-height: 1.6; }
-    .ig-analise { font-size: 0.9rem; color: #94a3b8; line-height: 1.8; }
-    .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin-top: 16px; }
-    .vocab-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 14px 16px; }
-    .termo { font-size: 1.1rem; font-weight: 800; color: #a855f7; font-family: 'Georgia', serif; }
-    .transl { font-size: 0.78rem; color: #64748b; font-style: italic; margin: 2px 0 6px; }
-    .def { font-size: 0.85rem; color: #94a3b8; line-height: 1.65; }
-    .nav-cap { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.07); }
-    .nav-cap a { background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.25); color: #a855f7; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-size: 0.88rem; font-weight: 700; transition: all 0.2s; }
-    .nav-cap a:hover { background: rgba(168,85,247,0.2); }
-    table { width: 100%; border-collapse: collapse; font-size: 0.87rem; margin: 20px 0 32px; }
-    th { background: rgba(168,85,247,0.1); color: #a855f7; padding: 10px 14px; text-align: left; font-weight: 700; border-bottom: 1px solid rgba(168,85,247,0.25); }
-    td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; }
-    tr:hover td { background: rgba(255,255,255,0.02); }
+.section-block{background:var(--panel2,#1a1a2e);border-radius:12px;padding:1.5rem;margin:1.5rem 0}
+.section-block h2{color:var(--accent,#0ea5e9);margin-bottom:1rem;font-size:1.2rem}
+.versiculo-bloco{border-left:3px solid var(--accent,#0ea5e9);padding:1rem 1.2rem;margin:1rem 0;background:rgba(255,255,255,0.03);border-radius:0 8px 8px 0}
+.ref-v{font-size:.8rem;color:var(--accent,#0ea5e9);font-weight:700;margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.05em}
+.texto-v{font-style:italic;color:#e2e8f0;margin-bottom:.6rem;line-height:1.7}
+.analise-v{color:#94a3b8;font-size:.92rem;line-height:1.7}
+.chapter-hero{text-align:center;padding:3rem 1rem 2rem;background:linear-gradient(135deg,rgba(14,165,233,.15),rgba(99,102,241,.1))}
+.chapter-number{font-size:.85rem;color:var(--accent,#0ea5e9);font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem}
+.chapter-subtitle{color:#94a3b8;font-style:italic;margin-top:.5rem}
+.chapter-ref{color:var(--accent,#0ea5e9);font-size:.85rem}
+.chapter-nav{display:flex;justify-content:space-between;padding:1.5rem;gap:1rem;flex-wrap:wrap}
+.chapter-nav a{color:var(--accent,#0ea5e9);text-decoration:none;padding:.5rem 1rem;border:1px solid var(--accent,#0ea5e9);border-radius:6px}
+.breadcrumb{padding:.75rem 1.5rem;font-size:.85rem;color:#64748b}
+.breadcrumb a{color:var(--accent,#0ea5e9);text-decoration:none}
+.wrap{max-width:860px;margin:0 auto;padding:0 1.5rem 3rem}
 </style>
-  <link rel="stylesheet" href="/assets/css/bloco.css">
-  <style>
-    :root {
-      --accent: #0ea5e9;
-      --accent-rgb: 14, 165, 233;
-    }
-  </style>
-
-  <meta name="description" content="Após as sete cartas às igrejas (caps. 2-3), João é transportado ao céu (4:1 — "sobe aqui") e recebe a visão do trono celestial. Esta visão é o fundamento t...">
-  <!-- Open Graph / Redes Sociais -->
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://365gracaeadoracao.com/08-novo-testamento/apocalipse/capitulos/capitulo-04">
-  <meta property="og:title" content="Apocalipse 4-5 — O Trono e o Cordeiro | 365 de Graça & Adoração">
-  <meta property="og:description" content="Após as sete cartas às igrejas (caps. 2-3), João é transportado ao céu (4:1 — "sobe aqui") e recebe a visão do trono celestial. Esta visão é o fundamento t...">
-  <meta property="og:image" content="https://365gracaeadoracao.com/assets/img/og-image.png">
-  <meta property="og:site_name" content="365 de Graça &amp; Adoração">
-  <meta property="og:locale" content="pt_BR">
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Apocalipse 4-5 — O Trono e o Cordeiro | 365 de Graça & Adoração">
-  <meta name="twitter:description" content="Após as sete cartas às igrejas (caps. 2-3), João é transportado ao céu (4:1 — "sobe aqui") e recebe a visão do trono celestial. Esta visão é o fundamento t...">
-  <meta name="twitter:image" content="https://365gracaeadoracao.com/assets/img/og-image.png">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Início",
-      "item": "https://365gracaeadoracao.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Bloco 08 — Novo Testamento",
-      "item": "https://365gracaeadoracao.com/08-novo-testamento/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Apocalipse",
-      "item": "https://365gracaeadoracao.com/08-novo-testamento/apocalipse/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "Apocalipse 4-5 — O Trono e o Cordeiro | 365 de Graça & Adoração",
-      "item": "https://365gracaeadoracao.com/08-novo-testamento/apocalipse/capitulos/capitulo-04"
-    }
-    ]
-  }
-  </script>
 </head>
-<body class="bloco-09">
-  <div class="topbar"><div class="inner">
-    <a href="/08-novo-testamento/apocalipse/index.html">← Apocalipse</a>
-    <a href="/08-novo-testamento/index.html">Novo Testamento</a>
-  </div></div>
-  <div class="hero">
-    <span class="tag">👑 Apocalipse 4-5 · O Trono Celestial</span>
-    <h1>Apocalipse 4-5 — O Trono e o Cordeiro</h1>
-    <div class="ref">Apocalipse 4:1–5:14 · João · c. 95-96 d.C. · Ilha de Patmos</div>
-    <blockquote>Digno és, Senhor e Deus nosso, de receber a glória, e a honra, e o poder; porque tu criaste todas as coisas, e por tua vontade existem e foram criadas. — Apocalipse 4:11</blockquote>
+<body class="bloco-08">
+  <header class="topbar">
+    <a class="brand" href="/">365 de Graça &amp; Adoração</a>
+    <nav><a href="/">Início</a><a href="/08-novo-testamento/">NT</a><a href="/busca/">Buscar</a></nav>
+  </header>
+  <div class="breadcrumb">
+    <a href="/">Início</a> › <a href="/08-novo-testamento/">NT</a> › <a href="../">Apocalipse</a> › Capítulo 4
+  </div>
+  <div class="chapter-hero">
+    <div class="chapter-number">Apocalipse — Capítulo 4</div>
+    <h1>O Trono de Deus no Céu</h1>
+    <p class="chapter-subtitle">"Santo, Santo, Santo é o Senhor Deus Todo-Poderoso, que era, e que é, e que há de vir."</p>
+    <p class="chapter-ref">— Ap 4:8</p>
   </div>
   <div class="wrap">
+    <div class="section-block"><p>Apocalipse 4 é a visão do trono celestial — o fundamento de toda a profecia do Apocalipse. Antes de revelar os julgamentos da terra, João vê a soberania absoluta de Deus.</p></div>
     <div class="section-block">
-      <h2>📜 Contexto: A Visão do Trono</h2>
-      <p>Após as sete cartas às igrejas (caps. 2-3), João é transportado ao céu (4:1 — "sobe aqui") e recebe a visão do trono celestial. Esta visão é o fundamento teológico de todo o restante do Apocalipse: antes de mostrar os julgamentos e as tribulações da terra, Deus mostra a João o que está acontecendo no céu. A mensagem é clara: Deus está no trono, e tudo o que acontece na terra está sob seu controle soberano.</p>
-      <p>O capítulo 4 é uma visão do Pai no trono; o capítulo 5 é uma visão do Filho — o Cordeiro que foi morto e que está digno de abrir o livro selado. Juntos, os dois capítulos formam a mais sublime cena de adoração do NT — a liturgia celestial que é o modelo para toda adoração terrena.</p>
+      <h2>👑 O Trono Celestial (4:1-11)</h2>
+      <div class="versiculo-bloco"><div class="ref-v">Ap 4:2-3</div><div class="texto-v">"E logo fui arrebatado em espírito; e eis que um trono estava posto no céu, e um assentado sobre o trono. E aquele que estava assentado era semelhante, no aspecto, a uma pedra de jaspe e de sardônica; e o arco-íris ao redor do trono era semelhante, no aspecto, a uma esmeralda."</div><div class="analise-v">A visão do trono: Deus não é descrito diretamente — apenas por comparações de pedras preciosas e luz. O arco-íris (aliança, Gn 9) envolve o trono do Juiz — o julgamento é sempre enquadrado pela misericórdia da aliança.</div></div>
+      <div class="versiculo-bloco"><div class="ref-v">Ap 4:8-11</div><div class="texto-v">"E os quatro animais tinham cada um seis asas, e ao redor e por dentro estavam cheios de olhos; e não descansam nem de dia nem de noite, dizendo: Santo, Santo, Santo é o Senhor Deus Todo-Poderoso, que era, e que é, e que há de vir."</div><div class="analise-v">O Trisagion (<em>hagios hagios hagios</em>) — o hino mais antigo da adoração celestial (cf. Is 6:3). A adoração é contínua, sem descanso. Os 24 anciãos lançam suas coroas — reconhecendo que toda autoridade é delegada, toda glória pertence a Deus.</div></div>
     </div>
-    <div class="section-block">
-      <h2>🔍 Análise dos Elementos da Visão</h2>
-      <div class="versiculo-bloco">
-        <div class="ref-v">4:2-6 — O Trono e Aquele que Está Assentado</div>
-        <div class="texto-v">"E eis que um trono estava posto no céu, e sobre o trono estava assentado alguém. E aquele que estava assentado era semelhante em aparência a uma pedra de jaspe e de sárdio; e havia um arco-íris em redor do trono, semelhante em aparência a uma esmeralda."</div>
-        <div class="analise-v">João não descreve a aparência de Deus diretamente — ele usa comparações com pedras preciosas. O jaspe (<em>iaspis</em>) e o sárdio (<em>sardinos</em>) são pedras de brilho intenso — transparência e fogo. O arco-íris (<em>iris</em>) em redor do trono ecoa a visão de Ezequiel (Ez 1:28) — o arco-íris é o sinal da aliança de Deus com a criação (Gn 9:13-16). Mesmo no contexto de julgamento, a aliança de Deus permanece. Os "vinte e quatro anciãos" (<em>eikosi tessares presbyteroi</em>) são provavelmente representantes do povo de Deus — 12 tribos de Israel + 12 apóstolos = 24. Os "quatro seres viventes" (<em>tessara zōa</em>) são os querubins — os guardiões do trono divino (cf. Ez 1; Is 6). Seu cântico — "Santo, Santo, Santo, Senhor Deus Todo-Poderoso, que era, e que é, e que há de vir" — é o Trisagion, o hino mais antigo da adoração judaica e cristã.</div>
-      </div>
-      <div class="versiculo-bloco">
-        <div class="ref-v">5:1-5 — O Livro Selado e o Leão/Cordeiro</div>
-        <div class="texto-v">"E vi na mão direita do que estava assentado no trono um livro escrito por dentro e por fora, selado com sete selos. E vi um anjo forte, proclamando em voz alta: Quem é digno de abrir o livro e de desatar os seus selos? E ninguém no céu, nem na terra, nem debaixo da terra podia abrir o livro."</div>
-        <div class="analise-v">O "livro selado com sete selos" (<em>biblion... katesfragismenon sfragisin hepta</em>) é o decreto do plano de Deus para a história — o rolo que contém os julgamentos e a consumação de todas as coisas. A pergunta do anjo — "quem é digno de abrir o livro?" — é a pergunta central do Apocalipse: quem tem autoridade para executar o plano de Deus para a história? A resposta é o paradoxo central do livro: "o Leão da tribo de Judá" (<em>ho leōn ho ek tēs phylēs Iouda</em>) — mas quando João olha, vê "um Cordeiro como se tivesse sido morto" (<em>arnion hōs esfagmenon</em>). O Leão é o Cordeiro — a vitória de Cristo é conquistada não pela força leonina, mas pelo sacrifício do Cordeiro. Esta é a teologia da cruz no Apocalipse: o poder de Deus se manifesta na fraqueza, a vitória através da morte.</div>
-      </div>
-      <div class="versiculo-bloco">
-        <div class="ref-v">5:9-14 — O Novo Cântico e a Adoração Universal</div>
-        <div class="texto-v">"E cantavam um novo cântico, dizendo: Digno és de tomar o livro e de abrir os seus selos; porque foste morto e com o teu sangue compraste para Deus homens de toda tribo, e língua, e povo, e nação... e todo o ser criado que está no céu, e sobre a terra, e debaixo da terra, e sobre o mar, e tudo o que neles há, ouvi eu dizer: Ao que está assentado no trono e ao Cordeiro, seja a bênção, e a honra, e a glória, e o domínio pelos séculos dos séculos."</div>
-        <div class="analise-v">O "novo cântico" (<em>ōdēn kainēn</em>) é o hino da redenção — cantado porque algo novo aconteceu: o Cordeiro foi morto e comprou para Deus pessoas de toda nação. A universalidade da redenção — "toda tribo, língua, povo e nação" (<em>ek pasēs phylēs kai glōssēs kai laou kai ethnous</em>) — é um dos temas centrais do Apocalipse. A adoração culmina na adoração de toda a criação: "todo o ser criado" (<em>pan ktisma</em>) — o cosmos inteiro se une na adoração ao Pai e ao Cordeiro. Esta visão da adoração universal é o destino final da criação — não a destruição, mas a restauração e o louvor.</div>
-      </div>
-    </div>
-    <div class="section-block">
-      <h2>📚 Vocabulário Essencial</h2>
-      <div class="vocab-grid">
-        <div class="vocab-card"><div class="termo">ἀρνίον</div><div class="transl">arnion</div><div class="def">Cordeiro (diminutivo). O título mais frequente para Cristo no Apocalipse (29 vezes). O Cordeiro que foi morto é digno de receber poder, riqueza, sabedoria, força, honra, glória e louvor.</div></div>
-        <div class="vocab-card"><div class="termo">ἄξιος</div><div class="transl">axios</div><div class="def">Digno. O critério para abrir o livro selado. Cristo é digno porque foi morto e comprou para Deus pessoas de toda nação. A dignidade de Cristo é fundamentada em seu sacrifício.</div></div>
-        <div class="vocab-card"><div class="termo">ᾠδὴ καινή</div><div class="transl">ōdē kainē</div><div class="def">Novo cântico. O hino da redenção cantado pelos seres celestiais ao Cordeiro. 'Novo' porque a redenção é um ato novo e definitivo de Deus na história.</div></div>
-        <div class="vocab-card"><div class="termo">τετράζωα</div><div class="transl">tessara zōa</div><div class="def">Quatro seres viventes. Os querubins — guardiões do trono divino. Representam a criação em sua plenitude: leão (animais selvagens), boi (animais domésticos), homem (humanidade), águia (aves).</div></div>
-      </div>
-    </div>
-    <div class="section-block">
-      <h2>✨ Aplicação Contemporânea</h2>
-      <p>A visão do trono em Apocalipse 4-5 é o fundamento da adoração cristã. Antes de qualquer instrução sobre como adorar, Deus mostra a João o que a adoração parece no céu — e o que a adoração celestial revela é que Deus está no trono. Esta visão é o antídoto para o desespero: quando a história parece caótica e o mal parece vencer, a visão do trono lembra que Deus está no controle.</p>
-      <p>O paradoxo do Leão/Cordeiro em Ap 5:5-6 é o coração da teologia cristã. O poder de Deus não se manifesta como poder humano — força, dominação, conquista. Manifesta-se como sacrifício, serviço, entrega. O Cordeiro que foi morto é o mais poderoso ser do universo. Esta inversão de valores é o Evangelho em sua forma mais concentrada.</p>
-    </div>
-    <div class="nav-cap">
-      <a href="/08-novo-testamento/apocalipse/capitulos/capitulo-03.html">← Apocalipse 3</a>
-      <a href="/08-novo-testamento/apocalipse/index.html">📋 Índice</a>
-      <a href="/08-novo-testamento/apocalipse/capitulos/capitulo-05.html">Apocalipse 5 →</a>
-    </div>
+
   </div>
+  <nav class="chapter-nav">
+    <a href="capitulo-03.html">← Anterior: Apocalipse 3</a>
+    <a href="../index.html">Índice de Apocalipse</a>
+    <a href="capitulo-05.html">Próximo: Apocalipse 5 →</a>
+  </nav>
+  <footer class="site-footer">
+    <p>365 de Graça &amp; Adoração • Da Criação ao Apocalipse • © 2026</p>
+  </footer>
 </body>
 </html>

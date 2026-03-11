@@ -2,179 +2,63 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1 Pedro 1 — Esperança Viva e Santidade | 365 de Graça & Adoração</title>
-  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>1 Pedro 1 — Esperança Viva pela Ressurreição | 365 de Graça &amp; Adoração</title>
+  <meta name="description" content="Estudo aprofundado de 1 Pedro capítulo 1: Esperança Viva pela Ressurreição. Análise exegética versículo por versículo.">
+  <link rel="stylesheet" href="../../../../assets/css/style.css">
+  <link rel="stylesheet" href="../../../../assets/css/bloco.css">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: #0f172a; color: #e2e8f0; font-family: 'Georgia', serif; line-height: 1.7; }
-    a { color: inherit; text-decoration: none; }
-    .topbar { background: rgba(15,23,42,0.97); border-bottom: 1px solid rgba(255,255,255,0.07); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
-    .topbar .inner { max-width: 900px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-    .topbar a { font-size: 0.85rem; color: #94a3b8; font-weight: 600; transition: color 0.2s; }
-    .topbar a:hover { color: var(--accent); }
-    .hero { background: linear-gradient(135deg, #0f172a 0%, #1a0a00 50%, #0f172a 100%); padding: 64px 24px 48px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.07); }
-    .tag { display: inline-block; background: rgba(var(--accent-rgb),0.1); border: 1px solid rgba(var(--accent-rgb),0.25); color: var(--accent); font-size: 0.72rem; font-weight: 800; padding: 4px 14px; border-radius: 999px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
-    .hero h1 { font-size: 2.4rem; font-weight: 900; color: #f1f5f9; margin-bottom: 12px; line-height: 1.2; }
-    .hero .ref { font-size: 0.88rem; color: #64748b; margin-bottom: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
-    .hero blockquote { font-style: italic; color: #cbd5e1; font-size: 1rem; border-left: 3px solid var(--accent); padding-left: 20px; max-width: 600px; margin: 0 auto; text-align: left; }
-    .wrap { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
-    .section-block { margin-bottom: 40px; }
-    .section-block h2 { font-size: 1.3rem; font-weight: 800; color: #f1f5f9; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.07); }
-    .section-block p { color: #94a3b8; font-size: 0.95rem; line-height: 1.85; margin-bottom: 16px; }
-    .versiculo-bloco { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-left: 3px solid var(--accent); border-radius: 0 12px 12px 0; padding: 18px 20px; margin-bottom: 16px; }
-    .ref-v { font-size: 0.8rem; font-weight: 800; color: var(--accent); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
-    .texto-v { font-style: italic; color: #cbd5e1; font-size: 0.95rem; margin-bottom: 10px; line-height: 1.7; }
-    .analise-v { color: #94a3b8; font-size: 0.9rem; line-height: 1.8; }
-    .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin-top: 16px; }
-    .vocab-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 14px 16px; }
-    .termo { font-size: 1.1rem; font-weight: 800; color: var(--accent); font-family: 'Georgia', serif; }
-    .transl { font-size: 0.78rem; color: #64748b; font-style: italic; margin: 2px 0 6px; }
-    .def { font-size: 0.85rem; color: #94a3b8; line-height: 1.65; }
-    .nav-cap { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.07); }
-    .nav-cap a { background: rgba(var(--accent-rgb),0.1); border: 1px solid rgba(var(--accent-rgb),0.25); color: var(--accent); text-decoration: none; padding: 10px 20px; border-radius: 8px; font-size: 0.88rem; font-weight: 700; transition: all 0.2s; }
-    .nav-cap a:hover { background: rgba(var(--accent-rgb),0.2); }
-    table { width: 100%; border-collapse: collapse; font-size: 0.87rem; margin: 20px 0 32px; }
-    th { background: rgba(var(--accent-rgb),0.1); color: var(--accent); padding: 10px 14px; text-align: left; font-weight: 700; border-bottom: 1px solid rgba(var(--accent-rgb),0.25); }
-    td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; }
-    tr:hover td { background: rgba(255,255,255,0.02); }
+.section-block{background:var(--panel2,#1a1a2e);border-radius:12px;padding:1.5rem;margin:1.5rem 0}
+.section-block h2{color:var(--accent,#0ea5e9);margin-bottom:1rem;font-size:1.2rem}
+.versiculo-bloco{border-left:3px solid var(--accent,#0ea5e9);padding:1rem 1.2rem;margin:1rem 0;background:rgba(255,255,255,0.03);border-radius:0 8px 8px 0}
+.ref-v{font-size:.8rem;color:var(--accent,#0ea5e9);font-weight:700;margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.05em}
+.texto-v{font-style:italic;color:#e2e8f0;margin-bottom:.6rem;line-height:1.7}
+.analise-v{color:#94a3b8;font-size:.92rem;line-height:1.7}
+.chapter-hero{text-align:center;padding:3rem 1rem 2rem;background:linear-gradient(135deg,rgba(14,165,233,.15),rgba(99,102,241,.1))}
+.chapter-number{font-size:.85rem;color:var(--accent,#0ea5e9);font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem}
+.chapter-subtitle{color:#94a3b8;font-style:italic;margin-top:.5rem}
+.chapter-ref{color:var(--accent,#0ea5e9);font-size:.85rem}
+.chapter-nav{display:flex;justify-content:space-between;padding:1.5rem;gap:1rem;flex-wrap:wrap}
+.chapter-nav a{color:var(--accent,#0ea5e9);text-decoration:none;padding:.5rem 1rem;border:1px solid var(--accent,#0ea5e9);border-radius:6px}
+.breadcrumb{padding:.75rem 1.5rem;font-size:.85rem;color:#64748b}
+.breadcrumb a{color:var(--accent,#0ea5e9);text-decoration:none}
+.wrap{max-width:860px;margin:0 auto;padding:0 1.5rem 3rem}
 </style>
-  <link rel="stylesheet" href="/assets/css/bloco.css">
-  <style>
-    :root {
-      --accent: #0ea5e9;
-      --accent-rgb: 14, 165, 233;
-    }
-  </style>
-
-  <meta name="description" content="1 Pedro é uma carta de encorajamento para cristãos que sofrem. Pedro escreve "aos estrangeiros dispersos" (parepidēmois diasporas) pelo Ponto, Galácia, Cap...">
-  <!-- Open Graph / Redes Sociais -->
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://365gracaeadoracao.com/08-novo-testamento/1pedro/capitulos/capitulo-01">
-  <meta property="og:title" content="1 Pedro 1 — Esperança Viva e Santidade | 365 de Graça & Adoração">
-  <meta property="og:description" content="1 Pedro é uma carta de encorajamento para cristãos que sofrem. Pedro escreve "aos estrangeiros dispersos" (parepidēmois diasporas) pelo Ponto, Galácia, Cap...">
-  <meta property="og:image" content="https://365gracaeadoracao.com/assets/img/og-image.png">
-  <meta property="og:site_name" content="365 de Graça &amp; Adoração">
-  <meta property="og:locale" content="pt_BR">
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="1 Pedro 1 — Esperança Viva e Santidade | 365 de Graça & Adoração">
-  <meta name="twitter:description" content="1 Pedro é uma carta de encorajamento para cristãos que sofrem. Pedro escreve "aos estrangeiros dispersos" (parepidēmois diasporas) pelo Ponto, Galácia, Cap...">
-  <meta name="twitter:image" content="https://365gracaeadoracao.com/assets/img/og-image.png">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Início",
-      "item": "https://365gracaeadoracao.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Bloco 08 — Novo Testamento",
-      "item": "https://365gracaeadoracao.com/08-novo-testamento/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "1Pedro",
-      "item": "https://365gracaeadoracao.com/08-novo-testamento/1pedro/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "1 Pedro 1 — Esperança Viva e Santidade | 365 de Graça & Adoração",
-      "item": "https://365gracaeadoracao.com/08-novo-testamento/1pedro/capitulos/capitulo-01"
-    }
-    ]
-  }
-  </script>
 </head>
-<body class="bloco-09">
-  <div class="topbar"><div class="inner">
-    <a href="/08-novo-testamento/1pedro/index.html">← 1 Pedro</a>
-    <a href="/08-novo-testamento/index.html">Novo Testamento</a>
-  </div></div>
-  <div class="hero">
-    <span class="tag">📜 1 Pedro 1 · Epístolas Gerais</span>
-    <h1>1 Pedro 1 — Esperança Viva e Santidade</h1>
-    <div class="ref">1 Pedro 1:1-25 · Pedro · c. 62-64 d.C. · Roma</div>
-    <blockquote>Bendito seja o Deus e Pai de nosso Senhor Jesus Cristo, que segundo a sua muita misericórdia nos regenerou para uma esperança viva, pela ressurreição de Jesus Cristo dentre os mortos. — 1 Pedro 1:3</blockquote>
+<body class="bloco-08">
+  <header class="topbar">
+    <a class="brand" href="/">365 de Graça &amp; Adoração</a>
+    <nav><a href="/">Início</a><a href="/08-novo-testamento/">NT</a><a href="/busca/">Buscar</a></nav>
+  </header>
+  <div class="breadcrumb">
+    <a href="/">Início</a> › <a href="/08-novo-testamento/">NT</a> › <a href="../">1 Pedro</a> › Capítulo 1
+  </div>
+  <div class="chapter-hero">
+    <div class="chapter-number">1 Pedro — Capítulo 1</div>
+    <h1>Esperança Viva pela Ressurreição</h1>
+    <p class="chapter-subtitle">"Bendito seja o Deus e Pai de nosso Senhor Jesus Cristo, que segundo a sua muita misericórdia nos regenerou para uma esperança viva."</p>
+    <p class="chapter-ref">— 1Pe 1:3</p>
   </div>
   <div class="wrap">
+    <div class="section-block"><p>1 Pedro é a carta do sofrimento com esperança — escrita por Pedro a cristãos dispersos na Ásia Menor (~63-64 d.C.) que enfrentavam perseguição. O cap. 1 apresenta a esperança viva da ressurreição.</p></div>
     <div class="section-block">
-      <h2>📜 Contexto Histórico e Literário</h2>
-      <p>1 Pedro é uma carta de encorajamento para cristãos que sofrem. Pedro escreve "aos estrangeiros dispersos" (<em>parepidēmois diasporas</em>) pelo Ponto, Galácia, Capadócia, Ásia e Bitínia — províncias da Ásia Menor. A palavra "estrangeiros" (<em>parepidēmoi</em>) é deliberadamente ambígua: pode referir-se a judeus da diáspora, a gentios convertidos que se tornaram "estrangeiros" em sua própria cultura, ou a todos os cristãos como peregrinos neste mundo. A carta foi escrita de "Babilônia" (v. 5:13) — provavelmente Roma, usando o nome simbólico da grande cidade pagã.</p>
-<p>O contexto histórico é a perseguição — não necessariamente a perseguição imperial organizada de Nero (64 d.C.), mas a hostilidade social e cultural que os cristãos enfrentavam por recusar-se a participar nos cultos pagãos, nas festas religiosas e nas práticas sociais do mundo greco-romano. Pedro escreve para dar-lhes fundamento teológico para perseverar: a esperança viva da ressurreição, a identidade como povo escolhido de Deus, e o exemplo de Cristo que sofreu e foi glorificado.</p>
-<p>O capítulo 1 tem três seções: (1) a saudação e a bênção trinitária (vv. 1-12); (2) o apelo à santidade (vv. 13-21); e (3) o apelo ao amor fraternal (vv. 22-25). A bênção dos versículos 3-12 é uma das mais ricas do NT — um hino de louvor à Trindade pela salvação, com ênfase especial na esperança escatológica.</p>
-    </div>
-    <div class="section-block">
-      <h2>🔍 Análise Versículo por Versículo</h2>
-      
-      <div class="versiculo-bloco">
-        <div class="ref-v">1:3-5 — Esperança Viva</div>
-        <div class="texto-v">"Bendito seja o Deus e Pai de nosso Senhor Jesus Cristo, que segundo a sua muita misericórdia nos regenerou para uma esperança viva, pela ressurreição de Jesus Cristo dentre os mortos; para uma herança incorruptível, e incontaminada, e que não se pode murchar, guardada nos céus para vós."</div>
-        <div class="analise-v">A abertura da bênção é trinitária: o Pai nos regenerou, pela ressurreição do Filho, para uma herança guardada pelo Espírito (v. 5). "Esperança viva" (<em>elpida zōsan</em>) — a esperança cristã não é um desejo vago ou uma ilusão confortante; é uma esperança "viva" porque fundamentada na ressurreição de Cristo. A ressurreição não é apenas um evento passado — é o fundamento de uma esperança presente e futura. A herança é descrita com três adjetivos negativos que definem o que ela não é: "incorruptível" (<em>aphtharton</em>) — não sujeita à deterioração; "incontaminada" (<em>amianton</em>) — não manchada pelo pecado; "que não se pode murchar" (<em>amaranton</em>) — não sujeita ao envelhecimento. Estas três qualidades contrastam com toda herança terrena, que é corruptível, contaminável e perecível.</div>
-      </div>
-      <div class="versiculo-bloco">
-        <div class="ref-v">1:6-9 — Alegria no Sofrimento</div>
-        <div class="texto-v">"Em que exultais, ainda que agora, se necessário for, sejais por um pouco contristados em várias tentações; para que a prova da vossa fé, muito mais preciosa do que o ouro que perece, ainda que provado pelo fogo, seja achada em louvor, e glória, e honra na revelação de Jesus Cristo."</div>
-        <div class="analise-v">A alegria no sofrimento é um dos temas mais paradoxais do NT. Pedro não nega o sofrimento — "se necessário for" (<em>ei deon estin</em>) reconhece que o sofrimento é real e pode ser necessário. Mas afirma que a alegria pode coexistir com o sofrimento porque a alegria cristã não é baseada nas circunstâncias, mas na esperança viva da ressurreição. A metáfora do ouro refinado pelo fogo é poderosa: o sofrimento não destrói a fé genuína — ele a purifica, removendo as impurezas e revelando o ouro puro. "A prova da vossa fé" (<em>to dokimion hymōn tēs pisteōs</em>) — o sofrimento é o teste que demonstra e purifica a fé. O objetivo final é "louvor, glória e honra na revelação de Jesus Cristo" — o sofrimento presente é temporário; a glória futura é eterna.</div>
-      </div>
-      <div class="versiculo-bloco">
-        <div class="ref-v">1:13-16 — O Apelo à Santidade</div>
-        <div class="texto-v">"Por isso, cingindo os lombos do vosso entendimento, sóbrios e esperando completamente na graça que vos é trazida na revelação de Jesus Cristo, como filhos obedientes, não vos conformeis com as concupiscências que antes tínheis na vossa ignorância; mas, como é santo aquele que vos chamou, sede vós também santos em toda a vossa maneira de viver."</div>
-        <div class="analise-v">"Cingindo os lombos do vosso entendimento" (<em>anazōsamenoi tas osphyas tēs dianoias hymōn</em>) — a metáfora é de preparação para ação: no mundo antigo, cingir os lombos (prender as roupas longas com um cinto) era o gesto de quem se preparava para trabalhar ou correr. Pedro aplica esta metáfora à mente: a mente cristã deve estar preparada, alerta, pronta para pensar com clareza. "Não vos conformeis" (<em>mē syschēmatizomenoi</em>) — o mesmo verbo que Paulo usa em Rm 12:2. O cristão não deve ser moldado pelo padrão do mundo. A motivação para a santidade é teológica: "como é santo aquele que vos chamou" — a santidade de Deus é o modelo e o fundamento da santidade humana. A citação de Lv 11:44 — "sede santos, porque eu sou santo" — mostra que a santidade não é uma novidade cristã, mas o chamado eterno de Deus ao seu povo.</div>
-      </div>
-      <div class="versiculo-bloco">
-        <div class="ref-v">1:18-21 — Redenção pelo Sangue Precioso</div>
-        <div class="texto-v">"Sabendo que não fostes remidos de vossa vã conversação, recebida por tradição de vossos pais, com coisas corruptíveis, como prata ou ouro; mas com o precioso sangue de Cristo, como de um cordeiro sem defeito e sem mácula."</div>
-        <div class="analise-v">A teologia da redenção de Pedro é rica em imagens do AT. "Remidos" (<em>elytrōthēte</em>) — o verbo é o mesmo da redenção de escravos: o pagamento do resgate para libertar alguém. O preço da redenção não foi prata ou ouro — foi "o precioso sangue de Cristo" (<em>timiō haimati Christou</em>). A imagem do "cordeiro sem defeito e sem mácula" (<em>amnos amōmos kai aspilos</em>) ecoa o cordeiro pascal (Êx 12:5) e o Servo do Senhor (Is 53:7). Cristo é o cumprimento de todos os sacrifícios do AT. O versículo 20 é extraordinário: Cristo foi "predestinado antes da fundação do mundo" (<em>proegnōsmenou men pro katabolēs kosmou</em>) — a redenção não foi uma improvisação divina após a queda, mas o plano eterno de Deus antes da criação.</div>
-      </div>
+      <h2>🌟 Esperança Viva (1:3-12)</h2>
+      <div class="versiculo-bloco"><div class="ref-v">1Pe 1:3-5</div><div class="texto-v">"Bendito seja o Deus e Pai de nosso Senhor Jesus Cristo, que segundo a sua muita misericórdia nos regenerou para uma esperança viva, pela ressurreição de Jesus Cristo dentre os mortos, para uma herança incorruptível, incontaminável, e que não se pode murchar, guardada nos céus para vós."</div><div class="analise-v">A esperança cristã é 'viva' (<em>zosan</em>) — não esperança morta de uma religião morta, mas esperança fundamentada na ressurreição. A herança tem três atributos negativos: incorruptível (<em>aphtharton</em>), incontaminável (<em>amianton</em>), imurchável (<em>amaranton</em>). Guardada por Deus nos céus — nenhum poder pode roubá-la.</div></div>
+      <div class="versiculo-bloco"><div class="ref-v">1Pe 1:6-7</div><div class="texto-v">"Nisto exultais, embora agora, por um pouco de tempo, se necessário, sejais contristados por várias provações; para que o valor da vossa fé, muito mais preciosa do que o ouro que perece, mas que pelo fogo se prova, seja achado para louvor, e glória, e honra na revelação de Jesus Cristo."</div><div class="analise-v">O sofrimento como refinamento: o ouro é purificado pelo fogo, mas perece; a fé purificada pelo sofrimento é mais preciosa que o ouro e dura para a eternidade. A perspectiva escatológica transforma o sofrimento presente.</div></div>
     </div>
     <div class="section-block">
-      <h2>📚 Vocabulário Essencial</h2>
-      <div class="vocab-grid">
-        <div class="vocab-card">
-          <div class="termo">ἐλπίς</div>
-          <div class="transl">elpis</div>
-          <div class="def">Esperança. A esperança cristã não é um desejo vago, mas uma expectativa fundamentada na ressurreição de Cristo. É 'viva' porque o Cristo ressuscitado é o seu fundamento.</div>
-        </div>
-        <div class="vocab-card">
-          <div class="termo">παρεπίδημος</div>
-          <div class="transl">parepidēmos</div>
-          <div class="def">Estrangeiro, peregrino. Os cristãos são 'estrangeiros' neste mundo — sua verdadeira pátria é o reino de Deus. Esta identidade de peregrinos fundamenta tanto a esperança quanto a ética cristã.</div>
-        </div>
-        <div class="vocab-card">
-          <div class="termo">ἅγιος</div>
-          <div class="transl">hagios</div>
-          <div class="def">Santo, separado. A santidade bíblica não é primariamente moralidade, mas separação para Deus. 'Sede santos porque eu sou santo' — a santidade humana é participação na santidade divina.</div>
-        </div>
-        <div class="vocab-card">
-          <div class="termo">λύτρον</div>
-          <div class="transl">lytron</div>
-          <div class="def">Resgate, preço de redenção. O preço pago para libertar um escravo. Cristo pagou o preço de nossa redenção — não com prata ou ouro, mas com seu precioso sangue.</div>
-        </div></div>
+      <h2>🌿 Santidade como Resposta à Graça (1:13-25)</h2>
+      <div class="versiculo-bloco"><div class="ref-v">1Pe 1:15-16</div><div class="texto-v">"Mas, como é santo aquele que vos chamou, sede vós também santos em toda a vossa maneira de viver; porquanto está escrito: Sede santos, porque eu sou santo."</div><div class="analise-v">A santidade como imitação de Deus: 'sede santos porque eu sou santo' (Lv 11:44). A santidade não é opção — é a natureza do chamado divino. O imperativo é baseado no indicativo: Deus é santo, portanto sejamos santos.</div></div>
     </div>
-    <div class="section-block">
-      <h2>🏛️ Teologia Sistemática</h2>
-      <p>1 Pedro 1 apresenta a esperança cristã em sua forma mais concreta e fundamentada. A esperança não é um sentimento otimista ou uma ilusão confortante — é uma realidade objetiva fundamentada na ressurreição histórica de Cristo. Porque Cristo ressuscitou, a herança prometida é real, a fé dos crentes não é em vão, e o sofrimento presente tem sentido e limite.</p>
-<p>A relação entre esperança e santidade em 1 Pedro 1 é fundamental. A santidade não é motivada pelo medo do julgamento (embora o julgamento seja mencionado em v. 17), mas pela esperança da revelação de Cristo (v. 13) e pelo amor de Deus que nos redimiu pelo sangue precioso de Cristo (vv. 18-21). A santidade que brota da esperança e do amor é qualitativamente diferente da moralidade que brota do medo.</p>
-    </div>
-    <div class="section-block">
-      <h2>✨ Aplicação Contemporânea</h2>
-      <p>A "esperança viva" de 1 Pedro 1:3 é o antídoto para o desespero e o niilismo contemporâneos. Em uma cultura que perdeu a esperança de um futuro melhor, que vive no presente imediato sem horizonte transcendente, a esperança cristã é radicalmente contracultural. A ressurreição de Cristo não é apenas um evento passado — é a garantia de que a história tem um destino, que o sofrimento não tem a última palavra, que a morte não é o fim.</p>
-<p>O apelo à santidade em 1 Pedro 1:13-16 é urgente para a Igreja contemporânea. "Não vos conformeis" — a pressão para se conformar com os valores e práticas da cultura dominante é intensa. Pedro não pede isolamento do mundo, mas não-conformidade com os valores do mundo. A santidade não é separação geográfica, mas separação de valores: os cristãos vivem no mundo, mas não são moldados pelo mundo.</p>
-    </div>
-    <div class="nav-cap">
-      <a href="/08-novo-testamento/1pedro/index.html">← Índice de 1 Pedro</a>
-      <a href="/08-novo-testamento/1pedro/index.html">📋 Índice</a>
-      <a href="/08-novo-testamento/1pedro/capitulos/capitulo-02.html">1 Pedro 2 →</a>
-    </div>
+
   </div>
+  <nav class="chapter-nav">
+    <a href="../index.html">← Voltar ao Índice</a>
+    <a href="../index.html">Índice de 1 Pedro</a>
+    <a href="capitulo-02.html">Próximo: 1 Pedro 2 →</a>
+  </nav>
+  <footer class="site-footer">
+    <p>365 de Graça &amp; Adoração • Da Criação ao Apocalipse • © 2026</p>
+  </footer>
 </body>
 </html>
