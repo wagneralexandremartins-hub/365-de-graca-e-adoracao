@@ -1,166 +1,73 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Marcos 1 — O Início do Evangelho — Batismo e Primeiros Discípulos · 365 de Graça &amp; Adoração</title>
-  <meta name="description" content="Estudo versículo por versículo de Marcos 1 — Marcos começa sem genealogia: João Batista prepara o caminho, Jesus é batizado e tentado, chama os primeiros discípulos e realiza os primeiros milagres.">
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <style>
-body{background:#0f172a;color:#e2e8f0;font-family:'Segoe UI',sans-serif;margin:0;padding:0;}
-.topbar{background:rgba(15,23,42,0.97);border-bottom:1px solid rgba(255,255,255,0.08);padding:0 24px;position:sticky;top:0;z-index:100;}
-.topbar .inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;}
-.topbar a{color:#94a3b8;text-decoration:none;font-size:0.9rem;}
-.topbar a:hover{color:var(--accent);}
-.wrap{max-width:900px;margin:0 auto;padding:40px 24px 80px;}
-.hero{background:linear-gradient(135deg,rgba(var(--accent-rgb),0.10) 0%,rgba(0,0,0,0.5) 100%);border:1px solid rgba(var(--accent-rgb),0.22);border-radius:22px;padding:44px 36px;margin-bottom:32px;text-align:center;}
-.hero .tag{display:inline-block;background:rgba(var(--accent-rgb),0.10);border:1px solid rgba(var(--accent-rgb),0.22);color:var(--accent);font-size:0.78rem;font-weight:800;padding:5px 16px;border-radius:999px;margin-bottom:14px;text-transform:uppercase;letter-spacing:1px;}
-.hero h1{font-size:2.2rem;font-weight:900;color:var(--accent);margin:0 0 10px 0;line-height:1.2;}
-.hero .sub{color:#94a3b8;font-size:1rem;line-height:1.75;margin-bottom:20px;}
-.hero blockquote{background:rgba(255,255,255,0.04);border-left:4px solid var(--accent);border-radius:8px;padding:14px 22px;max-width:640px;margin:0 auto;font-style:italic;color:#e2e8f0;font-size:0.97rem;line-height:1.75;}
-.section-block{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:28px 32px;margin-bottom:22px;}
-.section-block h2{color:var(--accent);font-size:1.12rem;margin:0 0 16px 0;border-bottom:1px solid rgba(var(--accent-rgb),0.22);padding-bottom:12px;}
-.section-block h3{color:#fca5a5;font-size:1rem;margin:20px 0 10px 0;}
-.section-block p{color:#cbd5e1;line-height:1.88;margin-bottom:14px;font-size:0.95rem;}
-.v-box{background:rgba(var(--accent-rgb),0.06);border-left:4px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin:16px 0;}
-.v-box .ref{font-size:0.78rem;font-weight:800;color:var(--accent);text-transform:uppercase;margin-bottom:8px;letter-spacing:0.5px;}
-.v-box .texto{font-style:italic;color:#e2e8f0;font-size:0.97rem;line-height:1.75;margin-bottom:10px;}
-.v-box .analise{color:#94a3b8;font-size:0.92rem;line-height:1.80;}
-.vocab-box{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px 18px;margin:12px 0;}
-.vocab-box .term{font-weight:800;color:#fca5a5;font-size:0.95rem;}
-.vocab-box .def{color:#94a3b8;font-size:0.90rem;line-height:1.72;margin-top:5px;}
-.nt-box{background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.18);border-radius:10px;padding:14px 18px;margin:14px 0;}
-.nt-box .label{font-size:0.75rem;font-weight:800;color:#60a5fa;text-transform:uppercase;margin-bottom:6px;}
-.nt-box p{color:#94a3b8;font-size:0.91rem;line-height:1.75;margin:0;}
-.at-box{background:rgba(var(--accent-rgb),0.05);border:1px solid rgba(var(--accent-rgb),0.15);border-radius:10px;padding:14px 18px;margin:14px 0;}
-.at-box .label{font-size:0.75rem;font-weight:800;color:var(--accent);text-transform:uppercase;margin-bottom:6px;}
-.at-box p{color:#94a3b8;font-size:0.91rem;line-height:1.75;margin:0;}
-.nav-cap{display:flex;gap:10px;justify-content:space-between;margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,0.08);}
-.nav-cap a{background:rgba(var(--accent-rgb),0.10);border:1px solid rgba(var(--accent-rgb),0.22);color:var(--accent);padding:11px 20px;border-radius:10px;text-decoration:none;font-weight:700;font-size:0.88rem;}
-.nav-cap a.center{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.10);color:#64748b;}
-
-.mapa-box{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:24px 28px;margin:22px 0;}
-.mapa-box h3{color:var(--accent);font-size:1rem;margin:0 0 12px 0;}
-.mapa-visual{background:linear-gradient(135deg,rgba(15,23,42,0.9) 0%,rgba(30,41,59,0.9) 100%);border:1px solid rgba(ef4444,0.20);border-radius:12px;padding:28px;margin:12px 0;position:relative;overflow:hidden;min-height:180px;}
-.mapa-visual::before{content:'🗺️';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:5rem;opacity:0.08;}
-.mapa-desc{color:#94a3b8;font-size:0.91rem;line-height:1.75;margin-top:12px;}
-.mapa-pontos{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
-.mapa-ponto{background:rgba(ef4444,0.08);border:1px solid rgba(ef4444,0.20);color:var(--accent);font-size:0.78rem;font-weight:700;padding:4px 12px;border-radius:999px;}
-
-</style>
-  <link rel="stylesheet" href="/assets/css/bloco.css">
-  <style>
-    :root {
-      --accent: #0ea5e9;
-      --accent-rgb: 14, 165, 233;
-    }
-  </style>
-
-  <!-- Open Graph / Redes Sociais -->
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://365gracaeadoracao.com/08-novo-testamento/marcos/capitulos/capitulo-01">
-  <meta property="og:title" content="Marcos 1 — O Início do Evangelho — Batismo e Primeiros Discípulos · 365 de Graça &amp; Adoração">
-  <meta property="og:description" content="Estudo versículo por versículo de Marcos 1 — Marcos começa sem genealogia: João Batista prepara o caminho, Jesus é batizado e tentado, chama os primeiros discípulos e realiza os primeiros milagres.">
-  <meta property="og:image" content="https://365gracaeadoracao.com/assets/img/og-image.png">
-  <meta property="og:site_name" content="365 de Graça &amp; Adoração">
-  <meta property="og:locale" content="pt_BR">
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Marcos 1 — O Início do Evangelho — Batismo e Primeiros Discípulos · 365 de Graça &amp; Adoração">
-  <meta name="twitter:description" content="Estudo versículo por versículo de Marcos 1 — Marcos começa sem genealogia: João Batista prepara o caminho, Jesus é batizado e tentado, chama os primeiros discípulos e realiza os primeiros milagres.">
-  <meta name="twitter:image" content="https://365gracaeadoracao.com/assets/img/og-image.png">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Início",
-      "item": "https://365gracaeadoracao.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Bloco 08 — Novo Testamento",
-      "item": "https://365gracaeadoracao.com/08-novo-testamento/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Marcos",
-      "item": "https://365gracaeadoracao.com/08-novo-testamento/marcos/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "Marcos 1 — O Início do Evangelho — Batismo e Primeiros Discípulos",
-      "item": "https://365gracaeadoracao.com/08-novo-testamento/marcos/capitulos/capitulo-01"
-    }
-    ]
-  }
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marcos 1 — O Início do Evangelho — Batismo, Tentação e os Primeiros Milagres | 365 de Graça &amp; Adoração</title>
+<meta name="description" content="Estudo aprofundado de Marcos capítulo 1: O Evangelho de Marcos começa com ação imediata: João Batista, o batismo de Jesus, a tentação e os primeiros chamados e curas. Análise versículo por versículo, contexto histórico e teologia.">
+<meta property="og:title" content="Marcos 1 — O Início do Evangelho — Batismo, Tentação e os Primeiros Milagres">
+<meta property="og:description" content="O Evangelho de Marcos começa com ação imediata: João Batista, o batismo de Jesus, a tentação e os primeiros chamados e curas">
+<link rel="stylesheet" href="../../../assets/css/style.css">
+<link rel="stylesheet" href="../../../assets/css/bloco.css">
 </head>
-<body class="bloco-09">
-  <div class="topbar"><div class="inner">
-    <a href="/08-novo-testamento/index.html">← Evangelhos</a>
-    <div style="display:flex;gap:16px;">
-      <a href="/08-novo-testamento/mateus/index.html">Mateus</a>
-      <a href="/08-novo-testamento/marcos/index.html">⚡ Marcos</a>
-      <a href="/08-novo-testamento/lucas/index.html">Lucas</a>
-      <a href="/08-novo-testamento/joao/index.html">João</a>
-    </div>
-  </div></div>
-  <div class="wrap">
-    <div class="hero">
-      <span class="tag">⚡ Marcos · Capítulo 1 de 16</span>
-      <h1>O Início do Evangelho — Batismo e Primeiros Discípulos</h1>
-      <p class="sub">Marcos começa sem genealogia: João Batista prepara o caminho, Jesus é batizado e tentado, chama os primeiros discípulos e realiza os primeiros milagres.</p>
-      <blockquote>O tempo está cumprido, e o reino de Deus está próximo; arrependei-vos e crede no evangelho. — Marcos 1:15</blockquote>
-    </div>
-    <div class="section-block"><h2>📜 Contexto Histórico e Literário</h2><p>O Evangelho de Marcos é o mais curto, mais dinâmico e provavelmente o mais antigo dos quatro Evangelhos. A tradição patrística (Papias, c. 130 d.C.) afirma que Marcos escreveu seu Evangelho como intérprete de Pedro, registrando os ensinamentos e memórias do apóstolo. Esta origem petrina explica a vivacidade narrativa do Evangelho — Marcos não é um teólogo sistemático como Mateus ou João, mas um narrador que preserva as memórias vívidas de uma testemunha ocular.</p>
-<p>O capítulo 1 de Marcos é uma obra-prima de compressão narrativa. Em 45 versículos, Marcos apresenta João Batista, o batismo de Jesus, as tentações, a proclamação do Reino, o chamado dos primeiros discípulos, um exorcismo na sinagoga, a cura da sogra de Pedro, e uma sessão de curas e exorcismos ao anoitecer. A palavra-chave é <em>euthys</em> ('imediatamente') — que aparece 11 vezes só no capítulo 1. Marcos não tem tempo para reflexões teológicas longas; ele quer mostrar Jesus em ação.</p>
-<p>O Evangelho de Marcos é estruturado em duas partes: a primeira (caps. 1-8) responde à pergunta 'Quem é Jesus?' através de milagres e ensinamentos; a segunda (caps. 9-16) responde à pergunta 'O que Jesus veio fazer?' através da narrativa da Paixão. O ponto de virada é a confissão de Pedro em Cesareia de Filipe (Mc 8:29): 'Tu és o Cristo.' A partir daí, Jesus começa a ensinar sobre sua morte e ressurreição.</p>
-</div>
-
-    <div class="mapa-box">
-      <h3>🗺️ A Galileia no Ministério de Jesus</h3>
-      <div class="mapa-visual">
-        <div style="position:relative;z-index:1;text-align:center;">
-          <div style="font-size:0.85rem;color:#ef4444;font-weight:800;margin-bottom:8px;text-transform:uppercase;letter-spacing:1px;">Localização Geográfica</div>
-          <div style="font-size:0.92rem;color:#e2e8f0;line-height:1.7;">A Galileia no Ministério de Jesus</div>
-          <div style="margin-top:12px;font-size:0.82rem;color:#64748b;">Terra Santa · Século I d.C.</div>
-        </div>
-      </div>
-      <p class="mapa-desc">A Galileia era a região mais populosa e cosmopolita da Palestina — 'Galileia dos gentios' (Is 9:1). Cafarnaum, base do ministério de Jesus, ficava na margem norte do Mar da Galileia. O lago media 21 km de comprimento e 13 km de largura.</p>
-      <div class="mapa-pontos"><span class="mapa-ponto">📍 Cafarnaum</span><span class="mapa-ponto">📍 Mar da Galileia</span><span class="mapa-ponto">📍 Nazaré</span><span class="mapa-ponto">📍 Betsaida</span><span class="mapa-ponto">📍 Corazim</span></div>
-    </div>
-
-<div class="section-block"><h2>📖 Análise Versículo por Versículo</h2><h3>O Prólogo — Mc 1:1-13</h3>
-<div class="v-box"><div class="ref">Marcos 1:1</div><div class="texto">"Princípio do evangelho de Jesus Cristo, Filho de Deus."</div><div class="analise">Marcos começa com uma declaração programática de apenas 8 palavras em grego. 'Princípio' (<em>archē</em>) ecoa Gênesis 1:1 ('No princípio') e João 1:1 ('No princípio era o Verbo'). 'Evangelho' (<em>euangelion</em>) é uma palavra do mundo greco-romano: era o anúncio de uma vitória militar ou do nascimento de um imperador. Marcos está dizendo: o verdadeiro <em>euangelion</em> não é o de César, mas o de Jesus. 'Filho de Deus' (<em>huios theou</em>) é o título mais alto — e Marcos o coloca na primeira linha, antes mesmo de qualquer narrativa.</div></div>
-<div class="v-box"><div class="ref">Marcos 1:10-11</div><div class="texto">"E logo, saindo da água, viu os céus se abrindo e o Espírito descendo sobre ele como pomba. E ouviu-se uma voz dos céus: Tu és o meu Filho amado, em ti me comprazo."</div><div class="analise">Em Marcos, a teofania do batismo é narrada na perspectiva de Jesus: 'ele viu os céus se abrindo'. É uma visão pessoal, não um espetáculo público. A voz do Pai fala diretamente a Jesus ('Tu és') — em Mateus, a voz fala sobre Jesus ('Este é'). Marcos preserva a intimidade do momento. Os céus 'se abrindo' (<em>schizomenous</em> — literalmente 'rasgando-se') ecoa Isaías 64:1: 'Oh, se rasgasses os céus e descesses!' — a oração de Israel por intervenção divina. Deus responde rasgando os céus e enviando seu Filho.</div></div>
-<div class="v-box"><div class="ref">Marcos 1:12-13</div><div class="texto">"E logo o Espírito o impeliu para o deserto. E esteve no deserto quarenta dias, sendo tentado por Satanás; e estava com as feras, e os anjos o serviam."</div><div class="analise">A narrativa das tentações em Marcos é a mais breve dos três Sinóticos — apenas dois versículos. Mas contém um detalhe único: 'estava com as feras'. No deserto da Judeia habitavam leões, leopardos, ursos e serpentes. A imagem de Jesus 'com as feras' pode evocar o Paraíso perdido (Adão vivia em harmonia com os animais) — Jesus é o novo Adão que restaura a harmonia original. Também ecoa Isaías 11:6-9 (o lobo habitará com o cordeiro) — o Reino messiânico onde a criação é restaurada.</div></div>
-<h3>A Proclamação do Reino — Mc 1:14-15</h3>
-<div class="v-box"><div class="ref">Marcos 1:14-15</div><div class="texto">"Depois que João foi preso, Jesus foi para a Galileia, pregando o evangelho de Deus, e dizendo: O tempo está cumprido, e o reino de Deus está próximo; arrependei-vos e crede no evangelho."</div><div class="analise">Este é o resumo do ministério de Jesus em Marcos — quatro declarações em sequência: (1) 'O tempo está cumprido' (<em>peplērōtai ho kairos</em>) — o momento decisivo da história chegou; (2) 'o reino de Deus está próximo' — o reinado de Deus irrompe na história; (3) 'arrependei-vos' (<em>metanoeite</em>) — mudai de orientação; (4) 'crede no evangelho' (<em>pisteuete en tō euangeliō</em>) — confiai na boa notícia. A resposta ao Reino é dupla: arrependimento e fé.</div></div>
-<h3>O Chamado dos Primeiros Discípulos — Mc 1:16-20</h3>
-<div class="v-box"><div class="ref">Marcos 1:17</div><div class="texto">"Segui-me, e eu farei que sejais pescadores de homens."</div><div class="analise">O chamado de Jesus é direto e sem explicação: 'Segui-me.' Não há discurso teológico, não há credenciais apresentadas, não há contrato negociado. Jesus chama e eles seguem — 'imediatamente' (<em>euthys</em>). A metáfora 'pescadores de homens' transforma a profissão deles em vocação: eles continuarão pescando, mas agora o alvo são pessoas, não peixes. A pesca no mundo antigo era um trabalho coletivo, noturno, incerto — uma boa metáfora para o trabalho missionário.</div></div>
-<h3>O Exorcismo na Sinagoga — Mc 1:21-28</h3>
-<div class="v-box"><div class="ref">Marcos 1:22</div><div class="texto">"E admiravam-se da sua doutrina, porque os ensinava como quem tem autoridade, e não como os escribas."</div><div class="analise">A autoridade (<em>exousia</em>) de Jesus é o tema central do capítulo 1. Os escribas ensinavam por autoridade delegada — citavam rabinos anteriores ('Rabbi Fulano disse...'). Jesus ensina com autoridade própria ('Eu vos digo...'). Esta diferença choca os ouvintes. A mesma <em>exousia</em> que aparece no ensino aparece no exorcismo (v.27): 'Com autoridade manda até aos espíritos imundos, e eles lhe obedecem.' Jesus tem autoridade sobre as palavras e sobre os poderes espirituais.</div></div>
-<div class="v-box"><div class="ref">Marcos 1:24</div><div class="texto">"Que temos nós contigo, Jesus Nazareno? Vieste destruir-nos? Sei quem és: o Santo de Deus."</div><div class="analise">O espírito imundo reconhece Jesus antes dos discípulos. Há uma ironia profunda em Marcos: os demônios sabem quem é Jesus (1:24, 3:11, 5:7), mas os líderes religiosos não reconhecem (3:22). O 'segredo messiânico' de Marcos — Jesus frequentemente ordena silêncio sobre sua identidade — pode ser entendido à luz desta ironia: Jesus não quer que sua identidade seja proclamada por demônios ou mal compreendida por multidões que buscam apenas milagres.</div></div>
-</div>
-<div class="section-block"><h2>🔤 Vocabulário Grego</h2><div class="vocab-box"><div class="term"><em>Euthys</em> (εὐθύς) — Imediatamente/Logo</div><div class="def">A palavra mais característica de Marcos — aparece 41 vezes no Evangelho (contra 5 em Mateus e 1 em Lucas). Cria um ritmo narrativo urgente: Jesus age, e age agora. Esta urgência reflete a teologia de Marcos: o Reino de Deus irrompeu na história, e o tempo é de ação, não de contemplação.</div></div>
-<div class="vocab-box"><div class="term"><em>Euangelion</em> (εὐαγγέλιον) — Evangelho/Boa Notícia</div><div class="def">Do grego <em>eu</em> (bom) + <em>angelos</em> (mensageiro). No mundo romano, <em>euangelion</em> era o anúncio de uma vitória militar ou do nascimento de um novo imperador. Marcos usa o termo para anunciar que a verdadeira boa notícia não é a de César, mas a de Jesus — o verdadeiro Rei que traz o verdadeiro Reino.</div></div>
-<div class="vocab-box"><div class="term"><em>Exousia</em> (ἐξουσία) — Autoridade/Poder</div><div class="def">Literalmente 'poder que vem de fora' — autoridade delegada ou inerente. Em Marcos 1, Jesus demonstra <em>exousia</em> no ensino (v.22), no exorcismo (v.27) e nas curas (v.34). Esta autoridade é o que distingue Jesus dos escribas e dos exorcistas comuns. Ela culmina na Grande Comissão: 'Toda autoridade me foi dada no céu e na terra' (Mt 28:18).</div></div>
-</div>
-<div class="section-block"><h2>🌉 Aplicação Contemporânea</h2><p>O capítulo 1 de Marcos nos apresenta um Jesus que age — que cura, liberta, chama, ensina. Este é o Jesus que a Igreja é chamada a proclamar: não apenas um mestre de ética, não apenas um exemplo moral, mas o Filho de Deus com autoridade sobre o pecado, a doença, a morte e os poderes espirituais. O Evangelho de Marcos é um antídoto contra um cristianismo domesticado e passivo.</p>
-<p>O chamado dos discípulos em Marcos 1 nos desafia: Jesus chama pessoas comuns — pescadores, não teólogos — e os transforma em instrumentos do Reino. O critério não é competência, mas disponibilidade. 'Segui-me' ainda é o convite de Jesus para cada pessoa que o lê. A resposta dos discípulos — 'imediatamente deixaram as redes e o seguiram' — é o modelo de discipulado que Marcos propõe.</p>
-</div>
-
-    <div class="nav-cap">
-      <a href="/08-novo-testamento/marcos/index.html">← Índice</a>
-      <a class="center" href="/08-novo-testamento/marcos/index.html">Índice de Marcos</a>
-      <a href="/08-novo-testamento/marcos/capitulos/capitulo-02.html">Cap. 2 →</a>
+<body class="bloco-08">
+<nav class="topbar">
+  <div class="topbar-inner">
+    <a class="site-title" href="/">365 de Graça &amp; Adoração</a>
+    <div class="nav-links">
+      <a href="/">Início</a>
+      <a href="/08-novo-testamento/">Novo Testamento</a>
+      <a href="/busca/">Buscar</a>
     </div>
   </div>
+</nav>
+<main class="chapter-main">
+  <nav class="breadcrumb">
+    <a href="/">Início</a> ›
+    <a href="/08-novo-testamento/">Novo Testamento</a> ›
+    <a href="../index.html">Marcos</a> ›
+    <span>Capítulo 1</span>
+  </nav>
+  <header class="chapter-header">
+    <div class="chapter-number">Marcos 1</div>
+    <h1 class="chapter-title">O Início do Evangelho — Batismo, Tentação e os Primeiros Milagres</h1>
+    <p class="chapter-subtitle">O Evangelho de Marcos começa com ação imediata: João Batista, o batismo de Jesus, a tentação e os primeiros chamados e curas</p>
+  </header>
+  <article class="chapter-content">
+<div class="section-block">
+<h2>⚡ O Início Imediato (1:1-15)</h2>
+
+<div class="verse-block">
+  <div class="verse-ref">Marcos 1:1</div>
+  <blockquote class="verse-text">"Princípio do evangelho de Jesus Cristo, Filho de Deus."</blockquote>
+  <div class="verse-analysis">Marcos começa com uma das frases mais densas do NT. 'Princípio' (<em>arche</em>) ecoa Gênesis 1:1 e João 1:1 — um novo começo na história da criação. 'Evangelho' (<em>euangelion</em>) era uma palavra do mundo romano: anúncio de vitória militar ou nascimento de um imperador. Marcos subverte o uso: o verdadeiro Evangelho não é o de César, mas o de Jesus Cristo. 'Filho de Deus' — alguns manuscritos antigos omitem esta frase, mas ela é teologicamente central para Marcos: o Evangelho inteiro é a revelação progressiva de quem Jesus é, culminando na confissão do centurião na cruz (15:39).</div>
+</div>
+
+<div class="verse-block">
+  <div class="verse-ref">Marcos 1:15</div>
+  <blockquote class="verse-text">"O tempo está cumprido, e o reino de Deus está próximo; arrependei-vos e crede no evangelho."</blockquote>
+  <div class="verse-analysis">Este é o resumo do ministério de Jesus em Marcos — quatro declarações comprimidas em uma frase. 'O tempo está cumprido' (<em>pepleromai ho kairos</em>): o momento decisivo da história chegou, o tempo de espera acabou. 'O reino de Deus está próximo' (<em>engiken</em>): chegou, está aqui, está irrompendo na história. 'Arrependei-vos' (<em>metanoeite</em>): mudança radical de direção. 'Crede no evangelho': fé no anúncio da boa notícia. Arrependimento e fé são as duas faces da mesma moeda — a resposta humana ao Reino que chega.</div>
+</div>
+</div>
+<div class="section-block">
+<h2>🔥 O Homem com Espírito Imundo (1:21-28)</h2>
+
+<div class="verse-block">
+  <div class="verse-ref">Marcos 1:27</div>
+  <blockquote class="verse-text">"E todos se admiraram, de sorte que perguntavam uns aos outros, dizendo: Que é isto? Que nova doutrina é esta? Pois com autoridade manda até aos espíritos imundos, e eles lhe obedecem."</blockquote>
+  <div class="verse-analysis">A palavra 'autoridade' (<em>exousia</em>) aparece pela primeira vez aqui e será um tema central em Marcos. Jesus não ensina como os escribas — que citavam autoridades rabínicas ('Rabbi Fulano diz...'); Jesus ensina com autoridade própria. E essa autoridade se estende além das palavras: os espíritos imundos reconhecem e obedecem. O mundo espiritual sabe quem Jesus é antes que os humanos descubram. A pergunta 'Que é isto?' é a pergunta que Marcos quer que o leitor faça — e que responda progressivamente ao longo do Evangelho.</div>
+</div>
+</div>
+
+  </article>
+  <nav class="chapter-nav">
+    <a href="../index.html" class="nav-btn">← Anterior</a>
+    <a href="../index.html" class="nav-btn center">Índice de Marcos</a>
+    <a href="capitulo-02.html" class="nav-btn">Próximo →</a>
+  </nav>
+</main>
+<footer class="site-footer">
+  <p>365 de Graça &amp; Adoração • Da Criação ao Apocalipse • © 2026</p>
+</footer>
 </body>
 </html>
