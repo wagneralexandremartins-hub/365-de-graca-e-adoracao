@@ -19,6 +19,26 @@
 <link rel="stylesheet" href="/assets/css/bloco.css">
 </head>
 <body class="bloco-08">
+<!-- Seletor de Idioma Flutuante -->
+<div id="lang-selector" style="
+  position: fixed;
+  top: 14px;
+  right: 16px;
+  z-index: 9999;
+  display: flex;
+  gap: 6px;
+  background: rgba(15,23,42,0.92);
+  border: 1px solid #334155;
+  border-radius: 30px;
+  padding: 5px 10px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+">
+  <a href="/" title="Português" style="text-decoration:none;font-size:1.1rem;opacity:0.7;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">🇧🇷</a>
+  <a href="/en/" title="English" style="text-decoration:none;font-size:1.1rem;opacity:0.7;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">🇺🇸</a>
+  <a href="/es/" title="Español" style="text-decoration:none;font-size:1.1rem;opacity:0.95;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">🇪🇸</a>
+</div>
+
 <div style="background:#1e293b;padding:0.4rem 1rem;font-size:0.82rem;text-align:right;">
   🌐 <a href="/08-novo-testamento/mateus/capitulos/capitulo-11" style="color:#60a5fa;margin:0 0.4rem;">🇧🇷 PT</a>
   <strong style="color:#f1f5f9;">🇪🇸 ES</strong>
