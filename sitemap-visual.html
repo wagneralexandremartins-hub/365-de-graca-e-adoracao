@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sitemap Visual — 365 de Graça & Adoração</title>
+<style>
+  :root {
+    --bg: #0f0f1a;
+    --card: #1a1a2e;
+    --card2: #16213e;
+    --accent: #e2b96f;
+    --accent2: #7ec8e3;
+    --accent3: #a8d8a8;
+    --accent4: #f4a261;
+    --accent5: #e76f51;
+    --text: #e8e8f0;
+    --muted: #8888aa;
+    --border: #2a2a4a;
+    --green: #4caf50;
+    --blue: #2196f3;
+    --purple: #9c27b0;
+    --orange: #ff9800;
+    --teal: #009688;
+    --red: #f44336;
+    --gold: #ffd700;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
+  }
+
+  /* HEADER */
+  header {
+    background: linear-gradient(135deg, #0d0d1a 0%, #1a1a3e 50%, #0d1a2a 100%);
+    border-bottom: 2px solid var(--accent);
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(226,185,111,0.15) 0%, transparent 70%);
+  }
+  header h1 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    color: var(--accent);
+    letter-spacing: 2px;
+    text-shadow: 0 0 30px rgba(226,185,111,0.5);
+    position: relative;
+  }
+  header p {
+    color: var(--muted);
+    margin-top: 8px;
+    font-size: 1rem;
+    position: relative;
+  }
+  .badge-url {
+    display: inline-block;
+    margin-top: 12px;
+    background: rgba(226,185,111,0.15);
+    border: 1px solid var(--accent);
+    border-radius: 20px;
+    padding: 4px 16px;
+    font-size: 0.85rem;
+    color: var(--accent);
+    position: relative;
+  }
+
+  /* STATS GRID */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+  }
+  .stat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .stat-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+  .stat-card .num {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .stat-card .label {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-top: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* MAIN CONTENT */
+  main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  /* SECTION TITLE */
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 40px 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-title h2 {
+    font-size: 1.4rem;
+    color: var(--accent);
+  }
+  .section-title .tag {
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .tag-completo { background: rgba(76,175,80,0.2); color: #4caf50; border: 1px solid #4caf50; }
+  .tag-parcial  { background: rgba(255,152,0,0.2);  color: #ff9800; border: 1px solid #ff9800; }
+  .tag-estrutura{ background: rgba(33,150,243,0.2); color: #2196f3; border: 1px solid #2196f3; }
+
+  /* BOOKS GRID */
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 14px;
+  }
+  .book-card {
+    background: var(--card2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    transition: transform 0.2s, border-color 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .book-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .book-card:hover { transform: translateY(-2px); }
+  .book-card .book-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+  }
+  .book-card .book-meta {
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .book-card .book-count {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 8px;
+  }
+  .book-card .progress-bar {
+    height: 4px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 2px;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+  .book-card .progress-fill {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 0.5s;
+  }
+
+  /* Color themes per section */
+  .theme-pentateuco .book-card::before { background: linear-gradient(90deg, #e2b96f, #f4a261); }
+  .theme-pentateuco .book-card { border-color: rgba(226,185,111,0.3); }
+  .theme-pentateuco .book-card:hover { border-color: var(--accent); }
+  .theme-pentateuco .book-count { color: var(--accent); }
+  .theme-pentateuco .progress-fill { background: linear-gradient(90deg, #e2b96f, #f4a261); }
+
+  .theme-historicos .book-card::before { background: linear-gradient(90deg, #7ec8e3, #2196f3); }
+  .theme-historicos .book-card { border-color: rgba(126,200,227,0.3); }
+  .theme-historicos .book-card:hover { border-color: var(--accent2); }
+  .theme-historicos .book-count { color: var(--accent2); }
+  .theme-historicos .progress-fill { background: linear-gradient(90deg, #7ec8e3, #2196f3); }
+
+  .theme-poeticos .book-card::before { background: linear-gradient(90deg, #ce93d8, #9c27b0); }
+  .theme-poeticos .book-card { border-color: rgba(206,147,216,0.3); }
+  .theme-poeticos .book-card:hover { border-color: #ce93d8; }
+  .theme-poeticos .book-count { color: #ce93d8; }
+  .theme-poeticos .progress-fill { background: linear-gradient(90deg, #ce93d8, #9c27b0); }
+
+  .theme-profetas .book-card::before { background: linear-gradient(90deg, #ef9a9a, #f44336); }
+  .theme-profetas .book-card { border-color: rgba(239,154,154,0.3); }
+  .theme-profetas .book-card:hover { border-color: #ef9a9a; }
+  .theme-profetas .book-count { color: #ef9a9a; }
+  .theme-profetas .progress-fill { background: linear-gradient(90deg, #ef9a9a, #f44336); }
+
+  .theme-nt .book-card::before { background: linear-gradient(90deg, #a8d8a8, #4caf50); }
+  .theme-nt .book-card { border-color: rgba(168,216,168,0.3); }
+  .theme-nt .book-card:hover { border-color: var(--accent3); }
+  .theme-nt .book-count { color: var(--accent3); }
+  .theme-nt .progress-fill { background: linear-gradient(90deg, #a8d8a8, #4caf50); }
+
+  .theme-especial .book-card::before { background: linear-gradient(90deg, #ffd700, #ff9800); }
+  .theme-especial .book-card { border-color: rgba(255,215,0,0.3); }
+  .theme-especial .book-card:hover { border-color: var(--gold); }
+  .theme-especial .book-count { color: var(--gold); }
+  .theme-especial .progress-fill { background: linear-gradient(90deg, #ffd700, #ff9800); }
+
+  /* SPECIAL SECTIONS */
+  .special-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 14px;
+  }
+  .special-card {
+    background: var(--card2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .special-card:hover { transform: translateY(-2px); border-color: var(--gold); }
+  .special-card .s-icon { font-size: 1.8rem; margin-bottom: 8px; }
+  .special-card .s-title { font-weight: 600; font-size: 0.95rem; color: var(--gold); }
+  .special-card .s-desc { font-size: 0.8rem; color: var(--muted); margin-top: 4px; }
+  .special-card .s-count { font-size: 1.1rem; font-weight: 700; color: var(--text); margin-top: 8px; }
+
+  /* TIMELINE / EVOLUTION */
+  .timeline {
+    position: relative;
+    padding-left: 30px;
+    margin-top: 20px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px; top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--accent), var(--accent3));
+  }
+  .tl-item {
+    position: relative;
+    margin-bottom: 24px;
+    background: var(--card2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+  }
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: -26px; top: 20px;
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--bg);
+  }
+  .tl-item .tl-date { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+  .tl-item .tl-title { font-weight: 600; color: var(--accent); margin: 4px 0; }
+  .tl-item .tl-desc { font-size: 0.85rem; color: var(--text); }
+  .tl-item .tl-badge {
+    display: inline-block;
+    margin-top: 8px;
+    background: rgba(168,216,168,0.15);
+    border: 1px solid var(--accent3);
+    border-radius: 12px;
+    padding: 2px 10px;
+    font-size: 0.75rem;
+    color: var(--accent3);
+  }
+
+  /* PROGRESS OVERVIEW */
+  .progress-overview {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 20px;
+  }
+  .progress-overview h3 { color: var(--accent); margin-bottom: 20px; font-size: 1.1rem; }
+  .po-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .po-label { width: 180px; font-size: 0.85rem; flex-shrink: 0; }
+  .po-bar-wrap { flex: 1; height: 8px; background: rgba(255,255,255,0.08); border-radius: 4px; overflow: hidden; }
+  .po-bar { height: 100%; border-radius: 4px; }
+  .po-num { width: 60px; text-align: right; font-size: 0.8rem; color: var(--muted); flex-shrink: 0; }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border);
+    margin-top: 60px;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .books-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <h1>365 de Graça &amp; Adoração</h1>
+  <p>Sitemap Visual — Mapeamento Completo do Conteúdo</p>
+  <div class="badge-url">365-de-graca-e-adoracao.vercel.app</div>
+</header>
+
+<!-- STATS -->
+<div class="stats-grid">
+  <div class="stat-card">
+    <div class="num" style="color:#e2b96f">2.853</div>
+    <div class="label">Páginas HTML</div>
+  </div>
+  <div class="stat-card">
+    <div class="num" style="color:#a8d8a8">260</div>
+    <div class="label">Caps NT Aprofundados</div>
+  </div>
+  <div class="stat-card">
+    <div class="num" style="color:#7ec8e3">249</div>
+    <div class="label">Caps Históricos</div>
+  </div>
+  <div class="stat-card">
+    <div class="num" style="color:#ef9a9a">250</div>
+    <div class="label">Caps Profetas</div>
+  </div>
+  <div class="stat-card">
+    <div class="num" style="color:#ce93d8">150</div>
+    <div class="label">Salmos</div>
+  </div>
+  <div class="stat-card">
+    <div class="num" style="color:#ffd700">27</div>
+    <div class="label">Livros NT Completos</div>
+  </div>
+  <div class="stat-card">
+    <div class="num" style="color:#f4a261">169</div>
+    <div class="label">Blocos Pentateuco</div>
+  </div>
+  <div class="stat-card">
+    <div class="num" style="color:#4caf50">66+</div>
+    <div class="label">Seções Especiais</div>
+  </div>
+</div>
+
+<main>
+
+  <!-- PROGRESSO GERAL -->
+  <div class="section-title">
+    <h2>Progresso Geral do Site</h2>
+    <span class="tag tag-completo">Visão Geral</span>
+  </div>
+  <div class="progress-overview">
+    <h3>Volume de Conteúdo por Seção</h3>
+    <div class="po-row">
+      <div class="po-label">📖 Pentateuco</div>
+      <div class="po-bar-wrap"><div class="po-bar" style="width:60%;background:linear-gradient(90deg,#e2b96f,#f4a261)"></div></div>
+      <div class="po-num">276 pgs</div>
+    </div>
+    <div class="po-row">
+      <div class="po-label">🏛️ Históricos</div>
+      <div class="po-bar-wrap"><div class="po-bar" style="width:100%;background:linear-gradient(90deg,#7ec8e3,#2196f3)"></div></div>
+      <div class="po-num">335 pgs</div>
+    </div>
+    <div class="po-row">
+      <div class="po-label">🎵 Poéticos</div>
+      <div class="po-bar-wrap"><div class="po-bar" style="width:74%;background:linear-gradient(90deg,#ce93d8,#9c27b0)"></div></div>
+      <div class="po-num">249 pgs</div>
+    </div>
+    <div class="po-row">
+      <div class="po-label">🔥 Profetas</div>
+      <div class="po-bar-wrap"><div class="po-bar" style="width:80%;background:linear-gradient(90deg,#ef9a9a,#f44336)"></div></div>
+      <div class="po-num">268 pgs</div>
+    </div>
+    <div class="po-row">
+      <div class="po-label">📜 Apócrifos</div>
+      <div class="po-bar-wrap"><div class="po-bar" style="width:43%;background:linear-gradient(90deg,#bcaaa4,#795548)"></div></div>
+      <div class="po-num">146 pgs</div>
+    </div>
+    <div class="po-row">
+      <div class="po-label">✝️ Novo Testamento</div>
+      <div class="po-bar-wrap"><div class="po-bar" style="width:86%;background:linear-gradient(90deg,#a8d8a8,#4caf50)"></div></div>
+      <div class="po-num">288 pgs</div>
+    </div>
+    <div class="po-row">
+      <div class="po-label">📚 Bíblia (texto)</div>
+      <div class="po-bar-wrap"><div class="po-bar" style="width:100%;background:linear-gradient(90deg,#ffd700,#ff9800)"></div></div>
+      <div class="po-num">1.190 pgs</div>
+    </div>
+    <div class="po-row">
+      <div class="po-label">🏛️ Igreja/Concílios</div>
+      <div class="po-bar-wrap"><div class="po-bar" style="width:8%;background:linear-gradient(90deg,#80cbc4,#009688)"></div></div>
+      <div class="po-num">26 pgs</div>
+    </div>
+  </div>
+
+  <!-- EVOLUÇÃO / TIMELINE -->
+  <div class="section-title" style="margin-top:50px">
+    <h2>Linha do Tempo de Desenvolvimento</h2>
+    <span class="tag tag-completo">Evolução</span>
+  </div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-date">Fase 1 — Fundação</div>
+      <div class="tl-title">Estrutura Base + Evangelhos</div>
+      <div class="tl-desc">Criação do site estático, navegação, design dark, e aprofundamento dos 4 Evangelhos (Mateus 28, Marcos 16, Lucas 24, João 21 = 89 capítulos).</div>
+      <span class="tl-badge">89 caps aprofundados</span>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">Fase 2 — Atos</div>
+      <div class="tl-title">Atos dos Apóstolos</div>
+      <div class="tl-desc">Todos os 28 capítulos de Atos aprofundados com análise exegética versículo por versículo, contexto histórico greco-romano e vocabulário grego.</div>
+      <span class="tl-badge">28 caps aprofundados</span>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">Fase 3 — Epístolas Paulinas I</div>
+      <div class="tl-title">Romanos + 1 Coríntios</div>
+      <div class="tl-desc">Romanos (16 caps) — Magna Carta da justificação. 1 Coríntios (16 caps) — Hino do amor, ressurreição, dons espirituais.</div>
+      <span class="tl-badge">32 caps aprofundados</span>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">Fase 4 — Epístolas Paulinas II</div>
+      <div class="tl-title">2Cor + Gálatas + Ef + Fp + Cl + 1-2Ts</div>
+      <div class="tl-desc">2 Coríntios (13), Gálatas (6), Efésios (6), Filipenses (4), Colossenses (4), 1-2 Tessalonicenses (8) = 41 capítulos com exegese profunda.</div>
+      <span class="tl-badge">41 caps aprofundados</span>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">Fase 5 — Pastorais + Hebreus</div>
+      <div class="tl-title">1-2 Timóteo + Tito + Filemom + Hebreus</div>
+      <div class="tl-desc">Cartas pastorais (13 caps), Filemom (1 cap) e Hebreus (13 caps) — supremacia de Cristo, nova aliança, Galeria da Fé (cap. 11).</div>
+      <span class="tl-badge">27 caps aprofundados</span>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">Fase 6 — Epístolas Gerais + Apocalipse</div>
+      <div class="tl-title">Tiago + Pedro + João + Judas + Apocalipse</div>
+      <div class="tl-desc">Tiago (5), 1-2 Pedro (8), 1-3 João (7), Judas (1), Apocalipse (22) = 43 capítulos. O Novo Testamento está 100% aprofundado.</div>
+      <span class="tl-badge">43 caps aprofundados · NT COMPLETO ✓</span>
+    </div>
+  </div>
+
+  <!-- NOVO TESTAMENTO -->
+  <div class="section-title" style="margin-top:50px">
+    <h2>Novo Testamento — 260 Capítulos Aprofundados</h2>
+    <span class="tag tag-completo">100% Completo</span>
+  </div>
+
+  <!-- Evangelhos -->
+  <p style="color:var(--muted);font-size:0.85rem;margin-bottom:12px;text-transform:uppercase;letter-spacing:1px">Evangelhos</p>
+  <div class="books-grid theme-nt">
+    <div class="book-card">
+      <div class="book-name">Mateus</div>
+      <div class="book-meta">Evangelho do Rei</div>
+      <div class="book-count">28 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Marcos</div>
+      <div class="book-meta">Evangelho do Servo</div>
+      <div class="book-count">16 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Lucas</div>
+      <div class="book-meta">Evangelho do Filho do Homem</div>
+      <div class="book-count">24 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">João</div>
+      <div class="book-meta">Evangelho do Filho de Deus</div>
+      <div class="book-count">21 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Atos</div>
+      <div class="book-meta">Igreja Primitiva</div>
+      <div class="book-count">28 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+  </div>
+
+  <!-- Epístolas Paulinas -->
+  <p style="color:var(--muted);font-size:0.85rem;margin:20px 0 12px;text-transform:uppercase;letter-spacing:1px">Epístolas Paulinas</p>
+  <div class="books-grid theme-nt">
+    <div class="book-card">
+      <div class="book-name">Romanos</div>
+      <div class="book-meta">Justificação pela Fé</div>
+      <div class="book-count">16 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">1 Coríntios</div>
+      <div class="book-meta">Hino do Amor</div>
+      <div class="book-count">16 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">2 Coríntios</div>
+      <div class="book-meta">Teologia do Sofrimento</div>
+      <div class="book-count">13 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Gálatas</div>
+      <div class="book-meta">Liberdade em Cristo</div>
+      <div class="book-count">6 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Efésios</div>
+      <div class="book-meta">Graça pela Fé</div>
+      <div class="book-count">6 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Filipenses</div>
+      <div class="book-meta">Kenosis e Alegria</div>
+      <div class="book-count">4 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Colossenses</div>
+      <div class="book-meta">Supremacia de Cristo</div>
+      <div class="book-count">4 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">1 Tessalonicenses</div>
+      <div class="book-meta">Parusia e Esperança</div>
+      <div class="book-count">5 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">2 Tessalonicenses</div>
+      <div class="book-meta">Homem da Iniquidade</div>
+      <div class="book-count">3 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">1 Timóteo</div>
+      <div class="book-meta">Liderança e Piedade</div>
+      <div class="book-count">6 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">2 Timóteo</div>
+      <div class="book-meta">Testamento de Paulo</div>
+      <div class="book-count">4 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Tito</div>
+      <div class="book-meta">Graça que Ensina</div>
+      <div class="book-count">3 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Filemom</div>
+      <div class="book-meta">Intercessão Apostólica</div>
+      <div class="book-count">1 cap</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+  </div>
+
+  <!-- Epístolas Gerais + Apocalipse -->
+  <p style="color:var(--muted);font-size:0.85rem;margin:20px 0 12px;text-transform:uppercase;letter-spacing:1px">Epístolas Gerais + Apocalipse</p>
+  <div class="books-grid theme-nt">
+    <div class="book-card">
+      <div class="book-name">Hebreus</div>
+      <div class="book-meta">Nova Aliança · Galeria da Fé</div>
+      <div class="book-count">13 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Tiago</div>
+      <div class="book-meta">Fé e Obras</div>
+      <div class="book-count">5 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">1 Pedro</div>
+      <div class="book-meta">Esperança Viva</div>
+      <div class="book-count">5 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">2 Pedro</div>
+      <div class="book-meta">Nova Criação</div>
+      <div class="book-count">3 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">1 João</div>
+      <div class="book-meta">Deus é Amor</div>
+      <div class="book-count">5 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">2 João</div>
+      <div class="book-meta">Amor e Verdade</div>
+      <div class="book-count">1 cap</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">3 João</div>
+      <div class="book-meta">Hospitalidade</div>
+      <div class="book-count">1 cap</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Judas</div>
+      <div class="book-meta">Contender pela Fé</div>
+      <div class="book-count">1 cap</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card" style="border-color:rgba(255,215,0,0.5)!important">
+      <div class="book-name" style="color:#ffd700">Apocalipse</div>
+      <div class="book-meta">Consumação de Todas as Coisas</div>
+      <div class="book-count" style="color:#ffd700">22 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%;background:linear-gradient(90deg,#ffd700,#ff9800)"></div></div>
+    </div>
+  </div>
+
+  <!-- ANTIGO TESTAMENTO -->
+  <div class="section-title" style="margin-top:50px">
+    <h2>Antigo Testamento</h2>
+    <span class="tag tag-parcial">Em Desenvolvimento</span>
+  </div>
+
+  <!-- Pentateuco -->
+  <p style="color:var(--muted);font-size:0.85rem;margin-bottom:12px;text-transform:uppercase;letter-spacing:1px">Pentateuco — Formato em Blocos Temáticos</p>
+  <div class="books-grid theme-pentateuco">
+    <div class="book-card">
+      <div class="book-name">Gênesis</div>
+      <div class="book-meta">Criação e Patriarcas</div>
+      <div class="book-count">6 blocos</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:40%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Êxodo</div>
+      <div class="book-meta">Libertação e Aliança</div>
+      <div class="book-count">47 blocos</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Levítico</div>
+      <div class="book-meta">Lei e Santidade</div>
+      <div class="book-count">33 blocos</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Números</div>
+      <div class="book-meta">Peregrinação no Deserto</div>
+      <div class="book-count">42 blocos</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Deuteronômio</div>
+      <div class="book-meta">Renovação da Aliança</div>
+      <div class="book-count">40 blocos</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+  </div>
+
+  <!-- Históricos -->
+  <p style="color:var(--muted);font-size:0.85rem;margin:20px 0 12px;text-transform:uppercase;letter-spacing:1px">Livros Históricos — Capítulos Aprofundados</p>
+  <div class="books-grid theme-historicos">
+    <div class="book-card">
+      <div class="book-name">Josué</div>
+      <div class="book-meta">Conquista de Canaã</div>
+      <div class="book-count">24 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Juízes</div>
+      <div class="book-meta">Ciclo da Apostasia</div>
+      <div class="book-count">21 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Rute</div>
+      <div class="book-meta">Fidelidade e Redenção</div>
+      <div class="book-count">4 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">1 Samuel</div>
+      <div class="book-meta">Samuel, Saul e Davi</div>
+      <div class="book-count">31 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">2 Samuel</div>
+      <div class="book-meta">Reino de Davi</div>
+      <div class="book-count">24 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">1 Reis</div>
+      <div class="book-meta">Salomão e Divisão</div>
+      <div class="book-count">22 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">2 Reis</div>
+      <div class="book-meta">Queda de Israel e Judá</div>
+      <div class="book-count">25 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">1 Crônicas</div>
+      <div class="book-meta">Genealogias e Davi</div>
+      <div class="book-count">29 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">2 Crônicas</div>
+      <div class="book-meta">Salomão ao Exílio</div>
+      <div class="book-count">36 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Esdras</div>
+      <div class="book-meta">Retorno do Exílio</div>
+      <div class="book-count">10 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Neemias</div>
+      <div class="book-meta">Reconstrução de Jerusalém</div>
+      <div class="book-count">13 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Ester</div>
+      <div class="book-meta">Providência Divina</div>
+      <div class="book-count">10 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+  </div>
+
+  <!-- Poéticos -->
+  <p style="color:var(--muted);font-size:0.85rem;margin:20px 0 12px;text-transform:uppercase;letter-spacing:1px">Livros Poéticos e Sapienciais</p>
+  <div class="books-grid theme-poeticos">
+    <div class="book-card">
+      <div class="book-name">Jó</div>
+      <div class="book-meta">Sofrimento e Soberania</div>
+      <div class="book-count">42 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Salmos</div>
+      <div class="book-meta">Hinário de Israel</div>
+      <div class="book-count">150 salmos</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Provérbios</div>
+      <div class="book-meta">Sabedoria Prática</div>
+      <div class="book-count">31 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Eclesiastes</div>
+      <div class="book-meta">Vaidade e Sentido</div>
+      <div class="book-count">12 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Cânticos</div>
+      <div class="book-meta">Amor e Contemplação</div>
+      <div class="book-count">8 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+  </div>
+
+  <!-- Profetas -->
+  <p style="color:var(--muted);font-size:0.85rem;margin:20px 0 12px;text-transform:uppercase;letter-spacing:1px">Profetas Maiores</p>
+  <div class="books-grid theme-profetas">
+    <div class="book-card">
+      <div class="book-name">Isaías</div>
+      <div class="book-meta">O Evangelho do AT</div>
+      <div class="book-count">66 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Jeremias</div>
+      <div class="book-meta">Profeta das Lágrimas</div>
+      <div class="book-count">52 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Lamentações</div>
+      <div class="book-meta">Queda de Jerusalém</div>
+      <div class="book-count">5 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Ezequiel</div>
+      <div class="book-meta">Visões e Restauração</div>
+      <div class="book-count">48 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">Daniel</div>
+      <div class="book-meta">Apocalíptica e Fidelidade</div>
+      <div class="book-count">12 caps</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+  </div>
+
+  <p style="color:var(--muted);font-size:0.85rem;margin:20px 0 12px;text-transform:uppercase;letter-spacing:1px">Profetas Menores</p>
+  <div class="books-grid theme-profetas">
+    <div class="book-card"><div class="book-name">Oseias</div><div class="book-meta">Amor Fiel de Deus</div><div class="book-count">14 caps</div><div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div></div>
+    <div class="book-card"><div class="book-name">Joel</div><div class="book-meta">Dia do Senhor</div><div class="book-count">3 caps</div><div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div></div>
+    <div class="book-card"><div class="book-name">Amós</div><div class="book-meta">Justiça Social</div><div class="book-count">9 caps</div><div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div></div>
+    <div class="book-card"><div class="book-name">Obadias</div><div class="book-meta">Julgamento de Edom</div><div class="book-count">1 cap</div><div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div></div>
+    <div class="book-card"><div class="book-name">Jonas</div><div class="book-meta">Graça Universal</div><div class="book-count">4 caps</div><div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div></div>
+    <div class="book-card"><div class="book-name">Miquéias</div><div class="book-meta">Justiça e Misericórdia</div><div class="book-count">7 caps</div><div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div></div>
+    <div class="book-card"><div class="book-name">Naum</div><div class="book-meta">Queda de Nínive</div><div class="book-count">3 caps</div><div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div></div>
+    <div class="book-card"><div class="book-name">Habacuque</div><div class="book-meta">O Justo Viverá pela Fé</div><div class="book-count">3 caps</div><div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div></div>
+    <div class="book-card"><div class="book-name">Sofonias</div><div class="book-meta">Dia da Ira</div><div class="book-count">3 caps</div><div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div></div>
+    <div class="book-card"><div class="book-name">Ageu</div><div class="book-meta">Reconstrução do Templo</div><div class="book-count">2 caps</div><div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div></div>
+    <div class="book-card"><div class="book-name">Zacarias</div><div class="book-meta">Visões Messiânicas</div><div class="book-count">14 caps</div><div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div></div>
+    <div class="book-card"><div class="book-name">Malaquias</div><div class="book-meta">Último Profeta do AT</div><div class="book-count">4 caps</div><div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div></div>
+  </div>
+
+  <!-- SEÇÕES ESPECIAIS -->
+  <div class="section-title" style="margin-top:50px">
+    <h2>Seções Especiais e Recursos</h2>
+    <span class="tag tag-estrutura">Conteúdo Extra</span>
+  </div>
+  <div class="special-grid">
+    <div class="special-card">
+      <div class="s-icon">⛪</div>
+      <div class="s-title">Igreja Primitiva</div>
+      <div class="s-desc">Expansão missionária, mártires, heresias, Pais da Igreja, Pentecostes, vida comunitária</div>
+      <div class="s-count">8 páginas</div>
+    </div>
+    <div class="special-card">
+      <div class="s-icon">🏛️</div>
+      <div class="s-title">Concílios Ecumênicos</div>
+      <div class="s-desc">Niceia, Constantinopla, Éfeso, Calcedônia, Trento, Vaticano I e II, Patrística</div>
+      <div class="s-count">9 páginas</div>
+    </div>
+    <div class="special-card">
+      <div class="s-icon">⚔️</div>
+      <div class="s-title">Cruzadas</div>
+      <div class="s-desc">Contexto histórico, causas, consequências e legado das Cruzadas medievais</div>
+      <div class="s-count">9 páginas</div>
+    </div>
+    <div class="special-card">
+      <div class="s-icon">🌍</div>
+      <div class="s-title">Conflitos Contemporâneos</div>
+      <div class="s-desc">Análise bíblica e histórica de conflitos do mundo contemporâneo</div>
+      <div class="s-count">9 páginas</div>
+    </div>
+    <div class="special-card">
+      <div class="s-icon">🔮</div>
+      <div class="s-title">Apocalipse — Seção Especial</div>
+      <div class="s-desc">Hermenêutica, sete igrejas, sete selos, trombetas, taças, milênio, nova Jerusalém</div>
+      <div class="s-count">13 páginas</div>
+    </div>
+    <div class="special-card">
+      <div class="s-icon">⏳</div>
+      <div class="s-title">Período Intertestamentário</div>
+      <div class="s-desc">Período persa, helenístico, macabeu, romano, grupos judaicos, expectativa messiânica</div>
+      <div class="s-count">8 páginas</div>
+    </div>
+    <div class="special-card">
+      <div class="s-icon">📚</div>
+      <div class="s-title">Apócrifos</div>
+      <div class="s-desc">1-2 Macabeus, Tobias, Judite, Sabedoria, Eclesiástico, Baruque, Acréscimos</div>
+      <div class="s-count">146 páginas</div>
+    </div>
+    <div class="special-card">
+      <div class="s-icon">👤</div>
+      <div class="s-title">Personagens Bíblicos</div>
+      <div class="s-desc">Perfis aprofundados dos principais personagens da Bíblia</div>
+      <div class="s-count">16 páginas</div>
+    </div>
+    <div class="special-card">
+      <div class="s-icon">🗺️</div>
+      <div class="s-title">Mapas Bíblicos</div>
+      <div class="s-desc">Mapas interativos das regiões, rotas e locais mencionados na Bíblia</div>
+      <div class="s-count">1 página</div>
+    </div>
+    <div class="special-card">
+      <div class="s-icon">📅</div>
+      <div class="s-title">Timeline Bíblica</div>
+      <div class="s-desc">Linha do tempo cronológica dos eventos bíblicos do Gênesis ao Apocalipse</div>
+      <div class="s-count">1 página</div>
+    </div>
+    <div class="special-card">
+      <div class="s-icon">🔍</div>
+      <div class="s-title">Busca</div>
+      <div class="s-desc">Sistema de busca integrado para localizar conteúdo em todo o site</div>
+      <div class="s-count">2 páginas</div>
+    </div>
+    <div class="special-card">
+      <div class="s-icon">📖</div>
+      <div class="s-title">Como Estudar a Bíblia</div>
+      <div class="s-desc">Guia metodológico para estudo bíblico aprofundado com ferramentas exegéticas</div>
+      <div class="s-count">1 página</div>
+    </div>
+  </div>
+
+  <!-- PRÓXIMOS PASSOS -->
+  <div class="section-title" style="margin-top:50px">
+    <h2>Próximos Passos Sugeridos</h2>
+    <span class="tag tag-parcial">Roadmap</span>
+  </div>
+  <div class="special-grid">
+    <div class="special-card" style="border-color:rgba(226,185,111,0.4)">
+      <div class="s-icon">📖</div>
+      <div class="s-title" style="color:var(--accent)">Pentateuco — Capítulos</div>
+      <div class="s-desc">Converter os blocos temáticos do Pentateuco para o formato versículo por versículo (Gênesis 50, Êxodo 40, Levítico 27, Números 36, Deuteronômio 34)</div>
+      <div class="s-count" style="color:#ff9800">~187 caps pendentes</div>
+    </div>
+    <div class="special-card" style="border-color:rgba(126,200,227,0.4)">
+      <div class="s-icon">🎵</div>
+      <div class="s-title" style="color:var(--accent2)">Salmos — Aprofundamento</div>
+      <div class="s-desc">Aprofundar os 150 salmos com análise poética, contexto histórico, vocabulário hebraico e teologia dos salmos</div>
+      <div class="s-count" style="color:#ff9800">150 salmos pendentes</div>
+    </div>
+    <div class="special-card" style="border-color:rgba(168,216,168,0.4)">
+      <div class="s-icon">🌍</div>
+      <div class="s-title" style="color:var(--accent3)">Mapas Interativos</div>
+      <div class="s-desc">Expandir a seção de mapas com mapas interativos por livro, rotas das viagens de Paulo, conquista de Canaã, etc.</div>
+      <div class="s-count" style="color:#ff9800">Em planejamento</div>
+    </div>
+    <div class="special-card" style="border-color:rgba(255,215,0,0.4)">
+      <div class="s-icon">👤</div>
+      <div class="s-title" style="color:var(--gold)">Personagens — Expansão</div>
+      <div class="s-desc">Ampliar os perfis de personagens bíblicos com análise psicológica, teológica e histórica aprofundada</div>
+      <div class="s-count" style="color:#ff9800">16 → 100+ personagens</div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>Sitemap gerado em <strong>23 de março de 2026</strong> · <strong>2.853 páginas HTML</strong> no ar</p>
+  <p style="margin-top:8px">
+    <a href="https://365-de-graca-e-adoracao.vercel.app" target="_blank">365-de-graca-e-adoracao.vercel.app</a>
+    &nbsp;·&nbsp;
+    <a href="https://github.com/wagneralexandremartins-hub/365-de-graca-e-adoracao" target="_blank">GitHub</a>
+  </p>
+</footer>
+
+</body>
+</html>

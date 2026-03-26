@@ -1,0 +1,11 @@
+{
+  "name": "365-de-graca-e-adoracao",
+  "version": "1.0.0",
+  "description": "365 de Graça & Adoração — Da Criação ao Apocalipse",
+  "scripts": {
+    "build": "node generate-sitemap.js",
+    "sitemap": "node generate-sitemap.js"
+  },
+  "author": "Wagner Alexandre Martins",
+  "license": "MIT"
+}

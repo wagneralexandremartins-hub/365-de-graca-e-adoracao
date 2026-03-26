@@ -1,0 +1,23 @@
+# robots.txt — 365 de Graça & Adoração
+# https://365gracaeadoracao.com
+# Atualizado: 2026-03-26
+
+User-agent: *
+Allow: /
+
+# Bloquear arquivos de sistema, scripts e backups
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /*.py$
+Disallow: /*.md$
+Disallow: /*_backup*
+Disallow: /busca/index_backup.html
+
+# Sitemap completo com 2.849 páginas
+Sitemap: https://365gracaeadoracao.com/sitemap.xml
+
+# Permitir rastreamento de imagens pelo Google
+User-agent: Googlebot-Image
+Allow: /assets/img/
+Allow: /assets/images/
+

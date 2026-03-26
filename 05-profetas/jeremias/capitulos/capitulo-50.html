@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jeremias 50 — Oráculos contra as Nações · 365 de Graça &amp; Adoração</title>
+  <link rel="stylesheet" href="/assets/css/style.css"><style>
+    body { background:#0f172a; color:#e2e8f0; font-family:'Segoe UI',sans-serif; margin:0; padding:0; }
+    .wrap { max-width:860px; margin:0 auto; padding:32px 20px 60px; }
+    .topbar { background:rgba(15,23,42,0.95); border-bottom:1px solid rgba(255,255,255,0.08); padding:0 24px; }
+    .topbar .inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; height:60px; }
+    .topbar a { color:#94a3b8; text-decoration:none; font-size:0.9rem; }
+    .topbar .nav { display:flex; gap:20px; }
+    .topbar .active { color:var(--accent); font-weight:700; }
+    .chapter-hero {
+      background: linear-gradient(135deg, rgba(var(--accent-rgb),0.14) 0%, rgba(0,0,0,0.3) 100%);
+      border: 1px solid rgba(var(--accent-rgb),0.22); border-radius: 20px;
+      padding: 36px 28px; margin-bottom: 28px; text-align: center;
+    }
+    .chapter-hero .tag { display:inline-block; background:rgba(var(--accent-rgb),0.15); border:1px solid rgba(var(--accent-rgb),0.30); color:var(--accent); font-size:0.78rem; font-weight:700; padding:4px 14px; border-radius:999px; margin-bottom:12px; }
+    .chapter-hero h1 { font-size:2rem; font-weight:900; color:var(--accent); margin:0 0 8px 0; }
+    .chapter-hero .sub { color:#94a3b8; font-size:1rem; margin-bottom:18px; }
+    .chapter-hero blockquote { background:rgba(var(--accent-rgb),0.07); border-left:4px solid var(--accent); border-radius:8px; padding:14px 20px; margin:0 auto; max-width:680px; font-style:italic; color:#e2e8f0; font-size:0.96rem; line-height:1.7; }
+    .context-box { background:rgba(var(--accent-rgb),0.05); border:1px solid rgba(var(--accent-rgb),0.15); border-radius:14px; padding:22px 26px; margin-bottom:24px; }
+    .context-box h3 { color:var(--accent); font-size:1.05rem; margin:0 0 12px 0; }
+    .context-box p { color:#cbd5e1; line-height:1.88; margin-bottom:12px; font-size:0.95rem; }
+    .context-box p:last-child { margin-bottom:0; }
+    .section-block { background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.07); border-radius:14px; padding:22px 26px; margin-bottom:20px; }
+    .section-block h3 { color:var(--accent); font-size:1.05rem; margin:0 0 14px 0; border-bottom:1px solid rgba(var(--accent-rgb),0.15); padding-bottom:10px; }
+    .section-block p { color:#cbd5e1; line-height:1.88; margin-bottom:12px; font-size:0.94rem; }
+    .hebraico-box { background:rgba(251,191,36,0.06); border:1px solid rgba(251,191,36,0.18); border-radius:10px; padding:14px 18px; margin:12px 0; }
+    .hebraico-box .termo { font-weight:800; color:#fbbf24; font-size:0.95rem; }
+    .hebraico-box p { color:#94a3b8; font-size:0.90rem; line-height:1.7; margin:4px 0 0 0; }
+    .aplicacao-box { background:rgba(34,197,94,0.05); border:1px solid rgba(34,197,94,0.15); border-radius:10px; padding:14px 18px; margin:12px 0; }
+    .aplicacao-box h4 { color:#22c55e; font-size:0.88rem; font-weight:800; margin:0 0 8px 0; }
+    .aplicacao-box p { color:#94a3b8; font-size:0.91rem; line-height:1.75; margin:0; }
+    .nt-box { background:rgba(59,130,246,0.05); border:1px solid rgba(59,130,246,0.18); border-radius:10px; padding:14px 18px; margin:12px 0; }
+    .nt-box .termo { font-weight:800; color:#60a5fa; font-size:0.95rem; }
+    .nt-box p { color:#94a3b8; font-size:0.90rem; line-height:1.7; margin:4px 0 0 0; }
+    .sintese-box { background:linear-gradient(135deg, rgba(var(--accent-rgb),0.10) 0%, rgba(0,0,0,0.2) 100%); border:1px solid rgba(var(--accent-rgb),0.20); border-radius:14px; padding:22px 26px; margin:24px 0; }
+    .sintese-box h3 { color:var(--accent); font-size:1.05rem; margin:0 0 14px 0; }
+    .sintese-box p { color:#cbd5e1; line-height:1.88; font-size:0.95rem; margin-bottom:10px; }
+    .nav-buttons { display:flex; gap:12px; justify-content:space-between; margin-top:40px; padding-top:24px; border-top:1px solid rgba(255,255,255,0.08); }
+    .nav-buttons a { background:rgba(var(--accent-rgb),0.10); border:1px solid rgba(var(--accent-rgb),0.22); color:var(--accent); padding:12px 22px; border-radius:10px; text-decoration:none; font-weight:700; font-size:0.90rem; }
+    .nav-buttons a.disabled { opacity:0.35; pointer-events:none; }
+    .nav-buttons a.center { background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.12); color:#94a3b8; }
+    .mapa-box { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.10); border-radius: 14px; padding: 20px; margin: 24px 0; text-align: center; }
+    .mapa-box h4 { color: #94a3b8; font-size: 0.88rem; font-weight: 700; margin: 0 0 14px 0; text-transform: uppercase; }
+    .mapa-box img { max-width: 100%; border-radius: 10px; }
+    .mapa-box p { color: #64748b; font-size: 0.85rem; margin: 12px 0 0 0; line-height: 1.6; font-style: italic; }
+</style>
+  <link rel="stylesheet" href="/assets/css/bloco.css">
+  <style>
+    :root {
+      --accent: #059669;
+      --accent-rgb: 5, 150, 105;
+    }
+  </style>
+
+  <meta name="description" content="Oráculos contra as Nações">
+  <!-- Open Graph / Redes Sociais -->
+  <!-- Twitter Card -->
+  <!-- SEO Otimizado -->
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Wagner Alexandre Martins">
+  <link rel="canonical" href="https://365gracaeadoracao.com/05-profetas/jeremias/capitulos/capitulo-50">
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Jeremias 50 — Jeremias 50 | Estudo Bíblico | 365 de Graça &amp; Adoração">
+  <meta property="og:description" content="Estudo de Jeremias capítulo 50 — Profetas Maiores. Análise versículo por versículo com contexto histórico, vocabulário hebraico e aplicação espiritual.">
+  <meta property="og:url" content="https://365gracaeadoracao.com/05-profetas/jeremias/capitulos/capitulo-50">
+  <meta property="og:image" content="https://365gracaeadoracao.com/assets/img/og-cover.jpg">
+  <meta property="og:site_name" content="365 de Graça &amp; Adoração">
+  <meta property="og:locale" content="pt_BR">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jeremias 50 — Jeremias 50 | Estudo Bíblico | 365 de Graça &amp; Adoração">
+  <meta name="twitter:description" content="Estudo de Jeremias capítulo 50 — Profetas Maiores. Análise versículo por versículo com contexto histórico, vocabulário hebraico e aplicação espiritual.">
+  <meta name="twitter:image" content="https://365gracaeadoracao.com/assets/img/og-cover.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Jeremias 50 — Jeremias 50 | Estudo Bíblico | 365 de Graça & Adoração",
+    "description": "Estudo de Jeremias capítulo 50 — Profetas Maiores. Análise versículo por versículo com contexto histórico, vocabulário hebraico e aplicação espiritual.",
+    "url": "https://365gracaeadoracao.com/05-profetas/jeremias/capitulos/capitulo-50",
+    "author": {
+      "@type": "Person",
+      "name": "Wagner Alexandre Martins"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "365 de Graça & Adoração",
+      "url": "https://365gracaeadoracao.com"
+    },
+    "inLanguage": "pt-BR"
+  }
+  </script>
+
+</head>
+<body class="bloco-05">
+  <div class="topbar"><div class="inner"><a href="/">Início</a>
+    <div class="nav"><a href="/05-profetas/index.html">Profetas</a>
+    <a href="/05-profetas/jeremias/index.html">Jeremias</a>
+    <a class="active" href="#">Cap. 50</a></div></div></div>
+  <div class="wrap">
+    <div class="chapter-hero">
+      <span class="tag">😢 Jeremias · Capítulo 50 de 52 · Profeta Maior</span>
+      <h1>Jeremias 50</h1>
+      <p class="sub">Oráculos contra as Nações</p>
+      <blockquote>"Porque eu sei os pensamentos que tenho a vosso respeito, diz o SENHOR; pensamentos de paz, e não de mal, para vos dar o fim que esperais." — Jeremias 29:11</blockquote>
+    </div>
+    <div class="context-box">
+      <h3>📜 Contexto Histórico e Literário</h3>
+      <p>Este capítulo está na seção dos oráculos contra as nações (caps. 46-51), que proclamam o julgamento divino sobre os grandes poderes do mundo antigo.</p><p>Os oráculos abrangem o Egito, a Filisteia, Moabe, Amom, Edom, Damasco e a Babilônia. A Babilônia recebe os oráculos mais extensos — a nação que foi instrumento de Deus para julgar Israel será ela mesma julgada.</p><p>A teologia é clara: nenhuma nação está acima do julgamento de Deus. A Babilônia, por mais poderosa que seja, cairá. Este é o fundamento da esperança de Israel no exílio.</p>
+      <p>O capítulo 50 de Jeremias está inserido neste contexto mais amplo e contribui de forma específica para o desenvolvimento da mensagem profética. Jeremias é o profeta do coração partido — ele ama profundamente o povo que é chamado a confrontar, e seu ministério é marcado por uma tensão entre a Palavra de julgamento que deve proclamar e o amor que sente pelo povo.</p>
+    </div>
+    <div class="section-block">
+      <h3>📖 Jeremias 50 — Análise Exegética</h3>
+      <p>O capítulo 50 de Jeremias proclama a Palavra de YHWH em um dos momentos mais críticos da história de Israel. Jeremias, cujo ministério durou mais de 40 anos atravessando cinco reinados, é o profeta que mais sofreu por sua mensagem. Ele foi preso, jogado em uma cisterna, ridicularizado, e viu sua mensagem rejeitada repetidamente. Mas ele nunca abandonou sua missão.</p>
+      <p>A análise exegética deste capítulo revela a profundidade da revelação divina em Jeremias. O livro é único por sua dimensão biográfica: mais do que qualquer outro livro profético, Jeremias nos permite ver o interior do profeta — suas dúvidas, seus medos, suas confissões, sua fé. Esta transparência é um presente para todos os que servem a Deus em circunstâncias difíceis.</p>
+      <div class="hebraico-box">
+        <div class="termo">📚 Vocabulário Hebraico e Contexto Linguístico</div>
+        <p>O vocabulário hebraico de Jeremias é rico e variado. Termos centrais incluem: <em>shub</em> (retornar, arrepender-se — usado mais de 100 vezes), <em>berit</em> (aliança), <em>lev</em> (coração — o centro da vida moral e espiritual), <em>mishpat</em> (justiça), <em>chesed</em> (amor leal), e <em>shalom</em> (paz, completude). O vocabulário de Jeremias reflete sua teologia central: o chamado ao arrependimento e ao retorno ao Deus da aliança.</p>
+      </div>
+      <p>A dimensão messiânica de Jeremias é central para a teologia do NT. A Nova Aliança (Jr 31:31-34) é o texto mais citado do AT no NT, e Jesus a cumpre explicitamente na Última Ceia. Mas além da Nova Aliança, Jeremias também profetiza sobre o 'Ramo Justo' (<em>Tzemach Tzaddiq</em>) que reinará como rei e fará justiça — uma profecia messiânica cumprida em Jesus Cristo (Jr 23:5-6; 33:15-16).</p>
+      <div class="aplicacao-box">
+        <h4>✅ Aplicação Contemporânea</h4>
+        <p>A mensagem de Jeremias 50 é profundamente relevante para a Igreja contemporânea. Vivemos em um mundo que, como o mundo de Jeremias, frequentemente prefere mensagens confortáveis a mensagens verdadeiras, busca segurança nos poderes humanos em vez de confiar em Deus, e pratica uma religiosidade superficial sem transformação ética. A voz de Jeremias nos chama à fidelidade corajosa, ao arrependimento genuíno, e à esperança na Nova Aliança que Deus estabeleceu em Jesus Cristo.</p>
+      </div>
+    </div>
+    <div class="section-block">
+      <h3>📖 Teologia Sistemática e Conexão com o NT</h3>
+      <p>A teologia de Jeremias 50 contribui para os grandes temas do livro: a soberania de Deus sobre a história, a responsabilidade humana diante do pacto, o julgamento como consequência da infidelidade, e a graça redentora que sempre acompanha o julgamento. Jeremias é o profeta que mais profundamente entendeu a dimensão interior da fé — a necessidade de um coração transformado, não apenas de obediência externa.</p>
+      <div class="nt-box">
+        <div class="termo">📖 Conexão com o Novo Testamento</div>
+        <p>Os temas deste capítulo encontram seu cumprimento no NT. A Nova Aliança que Jeremias promete é estabelecida por Jesus Cristo na Última Ceia (Lc 22:20; 1Co 11:25) e explicada pelo livro de Hebreus (caps. 8-10). O 'Ramo Justo' de Jeremias é identificado com Jesus Cristo. A promessa de restauração de Jeremias aponta para a restauração definitiva que Cristo opera pela ressurreição e que será completada na nova criação.</p>
+      </div>
+    </div>
+    <div class="sintese-box">
+      <h3>🔑 Síntese Teológica do Capítulo 50</h3>
+      <p>Jeremias 50 contribui para a grande narrativa do livro e da Bíblia. Os temas desenvolvidos aqui — oráculos contra as nações — apontam para a fidelidade de Deus ao seu povo e ao seu plano redentor que culmina em Jesus Cristo.</p>
+      <p>A mensagem de Jeremias não é apenas histórica; ela é viva e atual. O mesmo Deus que sustentou Jeremias em seu ministério difícil sustenta a Igreja hoje. A Palavra de Deus é viva e eficaz (Hb 4:12).</p>
+    </div>
+    <div class="nav-buttons"><a href="capitulo-49.html">← Capítulo 49</a>
+      <a class="center" href="/05-profetas/jeremias/index.html">Índice de Jeremias</a>
+      <a href="capitulo-51.html">Próximo →</a></div>
+  </div>
+</body></html>
