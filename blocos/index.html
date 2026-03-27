@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>12 Blocos da Jornada | 365 Graça & Adoração</title>
+  <meta name="description" content="Conheça os 12 blocos da jornada bíblica do projeto 365 Graça & Adoração, organizados da origem de tudo até a consumação final." />
+  <meta name="keywords" content="12 blocos bíblicos, jornada bíblica, 365 Graça e Adoração, Pentateuco, Evangelhos, Igreja Primitiva, Apocalipse" />
+  <meta name="author" content="365 Graça & Adoração" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="12 Blocos da Jornada | 365 Graça & Adoração" />
+  <meta property="og:description" content="Uma estrutura bíblica organizada em 12 blocos, da criação à consumação final." />
+  <meta property="og:url" content="https://365gracaeadoracao.com/blocos/" />
+  <meta property="og:image" content="https://365gracaeadoracao.com/assets/img/og-image.jpg" />
+
+  <link rel="canonical" href="https://365gracaeadoracao.com/blocos/" />
+  <link rel="icon" href="/assets/img/favicon.png" />
+
+  <style>
+    :root {
+      --bg: #08111f;
+      --bg-soft: #0f172a;
+      --card: rgba(255,255,255,0.06);
+      --card-border: rgba(255,255,255,0.12);
+      --text: #e5e7eb;
+      --muted: #cbd5e1;
+      --gold: #f5c542;
+      --gold-strong: #e8b923;
+      --accent: #60a5fa;
+      --shadow: 0 10px 30px rgba(0,0,0,0.25);
+      --radius: 18px;
+      --max: 1220px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        linear-gradient(rgba(8,17,31,0.92), rgba(8,17,31,0.97)),
+        url("/assets/img/bg-biblia.jpg") center/cover no-repeat fixed;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      background: rgba(8,17,31,0.80);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: bold;
+    }
+
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--gold), #fff1b3);
+      color: #111827;
+      font-weight: 900;
+      box-shadow: var(--shadow);
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: normal;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .nav a {
+      color: var(--muted);
+      transition: 0.2s ease;
+    }
+
+    .nav a:hover {
+      color: #fff;
+    }
+
+    .nav-cta {
+      background: var(--gold);
+      color: #111827 !important;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: bold;
+    }
+
+    .hero {
+      padding: 80px 0 50px;
+    }
+
+    .hero-box {
+      max-width: 920px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      color: #fde68a;
+      background: rgba(245,197,66,0.08);
+      border: 1px solid rgba(245,197,66,0.22);
+      margin-bottom: 18px;
+      font-size: 0.94rem;
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 4vw, 4rem);
+      line-height: 1.12;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 780px;
+      margin-bottom: 22px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: bold;
+      transition: transform .2s ease, opacity .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.96;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #111827;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.16);
+      color: white;
+    }
+
+    .summary {
+      padding: 10px 0 40px;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .summary-card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 22px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .summary-card strong {
+      display: block;
+      color: var(--gold);
+      font-size: 1.9rem;
+      margin-bottom: 6px;
+    }
+
+    .summary-card span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    section {
+      padding: 56px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: clamp(1.7rem, 3vw, 2.5rem);
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--muted);
+      max-width: 820px;
+      margin: 0 auto 34px;
+    }
+
+    .blocks-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .block-card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      transition: transform .2s ease, border-color .2s ease;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .block-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(245,197,66,0.35);
+    }
+
+    .block-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: #111827;
+      font-weight: 900;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .block-card h3 {
+      font-size: 1.16rem;
+      margin-bottom: 10px;
+    }
+
+    .block-card p {
+      color: var(--muted);
+      font-size: 0.97rem;
+      margin-bottom: 14px;
+    }
+
+    .block-meta {
+      font-size: 0.92rem;
+      color: #fde68a;
+      margin-bottom: 12px;
+      font-weight: bold;
+    }
+
+    .topics {
+      margin-top: auto;
+      padding-top: 10px;
+    }
+
+    .topics span {
+      display: inline-block;
+      margin: 4px 6px 0 0;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      color: #dbeafe;
+      font-size: 0.85rem;
+    }
+
+    .block-link {
+      margin-top: 18px;
+      display: inline-block;
+      color: #fde68a;
+      font-weight: bold;
+    }
+
+    .note-box {
+      background: linear-gradient(180deg, rgba(245,197,66,0.08), rgba(255,255,255,0.02));
+      border: 1px solid rgba(245,197,66,0.18);
+      border-radius: 24px;
+      padding: 32px 24px;
+      box-shadow: var(--shadow);
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .note-box h2 {
+      margin-bottom: 12px;
+      text-align: center;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+    }
+
+    .note-box p {
+      color: var(--muted);
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 14px;
+    }
+
+    .footer {
+      padding: 30px 0 45px;
+      color: var(--muted);
+    }
+
+    .footer-grid {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 20px;
+      display: grid;
+      grid-template-columns: 1.2fr .9fr .9fr;
+      gap: 20px;
+    }
+
+    .footer-grid h3 {
+      color: #fff;
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+
+    .footer-grid a {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--muted);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 24px;
+      color: #94a3b8;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 1024px) {
+      .blocks-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .summary-grid,
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .nav {
+        display: none;
+      }
+
+      .blocks-grid,
+      .summary-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 56px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="/" aria-label="Voltar para a página inicial">
+        <div class="brand-logo">365</div>
+        <div>
+          365 Graça & Adoração
+          <small>Da Criação ao Apocalipse</small>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Menu principal">
+        <a href="/">Início</a>
+        <a href="/sobre">Sobre</a>
+        <a href="/blocos/" aria-current="page">12 Blocos</a>
+        <a href="/buscar">Buscar</a>
+        <a href="/contato" class="nav-cta">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-box">
+        <div class="eyebrow">Estrutura oficial da jornada bíblica</div>
+        <h1>Os 12 blocos da jornada do <span style="color:#f5c542;">365 Graça & Adoração</span></h1>
+        <p>
+          A caminhada foi reorganizada para seguir uma linha mais bíblica, coerente e progressiva,
+          sem repetição de ideias. Agora a estrutura conduz o leitor da origem de tudo até a
+          consumação final de forma mais clara, teológica e didática.
+        </p>
+        <p>
+          Cada bloco representa uma etapa da revelação bíblica e ajuda o leitor a enxergar
+          a unidade das Escrituras com ordem, profundidade e reverência.
+        </p>
+
+        <div class="hero-actions">
+          <a href="/01-principio" class="btn btn-primary">Começar Jornada</a>
+          <a href="#estrutura" class="btn btn-secondary">Ver os 12 blocos</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="summary">
+      <div class="container">
+        <div class="summary-grid">
+          <div class="summary-card">
+            <strong>12</strong>
+            <span>Blocos organizados</span>
+          </div>
+          <div class="summary-card">
+            <strong>66</strong>
+            <span>Livros canônicos</span>
+          </div>
+          <div class="summary-card">
+            <strong>365</strong>
+            <span>Dias de jornada</span>
+          </div>
+          <div class="summary-card">
+            <strong>1</strong>
+            <span>Linha bíblica unificada</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="estrutura">
+      <div class="container">
+        <h2 class="section-title">Estrutura completa dos 12 blocos</h2>
+        <p class="section-subtitle">
+          Abaixo está a nova organização da jornada, com foco bíblico, progressão histórica
+          e coerência teológica para facilitar tanto o estudo quanto a navegação no site.
+        </p>
+
+        <div class="blocks-grid">
+
+          <article class="block-card">
+            <div class="block-number">1</div>
+            <h3>Pentateuco: A Origem de Tudo</h3>
+            <div class="block-meta">Gênesis a Deuteronômio</div>
+            <p>
+              O início da revelação bíblica: criação, queda, dilúvio, patriarcas, aliança,
+              libertação, formação do povo e fundamentos da Lei.
+            </p>
+            <div class="topics">
+              <span>Criação</span>
+              <span>Queda</span>
+              <span>Dilúvio</span>
+              <span>Patriarcas</span>
+              <span>Lei</span>
+            </div>
+            <a class="block-link" href="/01-principio">Acessar bloco</a>
+          </article>
+
+          <article class="block-card">
+            <div class="block-number">2</div>
+            <h3>Libertação e Lei</h3>
+            <div class="block-meta">Êxodo e aprofundamentos</div>
+            <p>
+              A saída do Egito, o pacto, o tabernáculo, a santidade, a organização do povo
+              e o chamado à obediência diante de Deus.
+            </p>
+            <div class="topics">
+              <span>Êxodo</span>
+              <span>Aliança</span>
+              <span>Tabernáculo</span>
+              <span>Santidade</span>
+              <span>Obediência</span>
+            </div>
+            <a class="block-link" href="/blocos/">Acessar bloco</a>
+          </article>
+
+          <article class="block-card">
+            <div class="block-number">3</div>
+            <h3>Conquista e Estabelecimento</h3>
+            <div class="block-meta">Josué e Juízes</div>
+            <p>
+              A entrada na terra prometida, as lutas, a instabilidade espiritual e o
+              surgimento das primeiras lideranças sobre Israel.
+            </p>
+            <div class="topics">
+              <span>Terra Prometida</span>
+              <span>Josué</span>
+              <span>Juízes</span>
+              <span>Conquista</span>
+            </div>
+            <a class="block-link" href="/blocos/">Acessar bloco</a>
+          </article>
+
+          <article class="block-card">
+            <div class="block-number">4</div>
+            <h3>Reino Unido</h3>
+            <div class="block-meta">Saul, Davi e Salomão</div>
+            <p>
+              O surgimento da monarquia em Israel, a consolidação do reino e a centralidade
+              de Jerusalém na história do povo.
+            </p>
+            <div class="topics">
+              <span>Saul</span>
+              <span>Davi</span>
+              <span>Salomão</span>
+              <span>Monarquia</span>
+            </div>
+            <a class="block-link" href="/blocos/">Acessar bloco</a>
+          </article>
+
+          <article class="block-card">
+            <div class="block-number">5</div>
+            <h3>Reino Dividido</h3>
+            <div class="block-meta">Israel e Judá</div>
+            <p>
+              A separação do reino, o enfraquecimento espiritual, a idolatria e as crises
+              políticas e religiosas do povo.
+            </p>
+            <div class="topics">
+              <span>Israel</span>
+              <span>Judá</span>
+              <span>Idolatria</span>
+              <span>Crise espiritual</span>
+            </div>
+            <a class="block-link" href="/blocos/">Acessar bloco</a>
+          </article>
+
+          <article class="block-card">
+            <div class="block-number">6</div>
+            <h3>Profetas e Advertências</h3>
+            <div class="block-meta">Maiores e menores</div>
+            <p>
+              Deus levanta profetas para confrontar, corrigir, anunciar juízo e renovar a
+              esperança do povo em meio à infidelidade.
+            </p>
+            <div class="topics">
+              <span>Isaías</span>
+              <span>Jeremias</span>
+              <span>Ezequiel</span>
+              <span>Profetas menores</span>
+            </div>
+            <a class="block-link" href="/blocos/">Acessar bloco</a>
+          </article>
+
+          <article class="block-card">
+            <div class="block-number">7</div>
+            <h3>Exílio e Retorno</h3>
+            <div class="block-meta">Babilônia e reconstrução</div>
+            <p>
+              O cativeiro, a disciplina, a saudade da terra, o retorno e a reconstrução da
+              identidade espiritual e comunitária.
+            </p>
+            <div class="topics">
+              <span>Exílio</span>
+              <span>Babilônia</span>
+              <span>Esdras</span>
+              <span>Neemias</span>
+            </div>
+            <a class="block-link" href="/blocos/">Acessar bloco</a>
+          </article>
+
+          <article class="block-card">
+            <div class="block-number">8</div>
+            <h3>Sabedoria e Vida com Deus</h3>
+            <div class="block-meta">Poéticos e sapienciais</div>
+            <p>
+              Um mergulho na adoração, no sofrimento, na prudência, no temor do Senhor e na
+              vida interior diante de Deus.
+            </p>
+            <div class="topics">
+              <span>Salmos</span>
+              <span>Provérbios</span>
+              <span>Jó</span>
+              <span>Eclesiastes</span>
+            </div>
+            <a class="block-link" href="/blocos/">Acessar bloco</a>
+          </article>
+
+          <article class="block-card">
+            <div class="block-number">9</div>
+            <h3>O Silêncio Profético</h3>
+            <div class="block-meta">Período intertestamentário</div>
+            <p>
+              O intervalo entre os testamentos, a preparação do cenário histórico e a
+              expectativa crescente pela vinda do Messias.
+            </p>
+            <div class="topics">
+              <span>Intertestamentário</span>
+              <span>Expectativa</span>
+              <span>Messias</span>
+            </div>
+            <a class="block-link" href="/blocos/">Acessar bloco</a>
+          </article>
+
+          <article class="block-card">
+            <div class="block-number">10</div>
+            <h3>A Vinda de Cristo</h3>
+            <div class="block-meta">Mateus, Marcos, Lucas e João</div>
+            <p>
+              O nascimento, ministério, ensino, paixão, morte e ressurreição de Jesus Cristo,
+              centro da revelação e da redenção.
+            </p>
+            <div class="topics">
+              <span>Evangelhos</span>
+              <span>Jesus</span>
+              <span>Ensinos</span>
+              <span>Ressurreição</span>
+            </div>
+            <a class="block-link" href="/mateus">Acessar bloco</a>
+          </article>
+
+          <article class="block-card">
+            <div class="block-number">11</div>
+            <h3>A Igreja Primitiva</h3>
+            <div class="block-meta">Atos dos Apóstolos</div>
+            <p>
+              A descida do Espírito Santo, a expansão do evangelho, o testemunho apostólico e
+              o nascimento da comunidade cristã.
+            </p>
+            <div class="topics">
+              <span>Atos</span>
+              <span>Espírito Santo</span>
+              <span>Missão</span>
+              <span>Igreja</span>
+            </div>
+            <a class="block-link" href="/blocos/">Acessar bloco</a>
+          </article>
+
+          <article class="block-card">
+            <div class="block-number">12</div>
+            <h3>Doutrina, Vida Cristã e Consumação</h3>
+            <div class="block-meta">Cartas apostólicas e Apocalipse</div>
+            <p>
+              Os fundamentos da fé cristã, a prática da vida no Espírito, a perseverança, a
+              esperança futura, o juízo e a nova criação.
+            </p>
+            <div class="topics">
+              <span>Cartas</span>
+              <span>Santificação</span>
+              <span>Esperança</span>
+              <span>Apocalipse</span>
+              <span>Nova criação</span>
+            </div>
+            <a class="block-link" href="/blocos/">Acessar bloco</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="note-box">
+          <h2>Uma jornada mais clara, sem repetição</h2>
+          <p>
+            A reorganização dos blocos elimina sobreposição de ideias e fortalece a linha
+            bíblica do projeto. Assim, o leitor entende melhor onde está, para onde vai e
+            como cada etapa se conecta com a próxima.
+          </p>
+          <p>
+                  A reorganização dos blocos elimina sobreposição de ideias e fortalece a linha
+            bíblica do projeto. Assim, o leitor entende melhor onde está, para onde vai e
+            como cada etapa se conecta com a próxima.
+          </p>
+          <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:18px;">
+            <a href="/01-principio/index.html" class="btn btn-primary">📖 Começar Jornada</a>
+            <a href="/" class="btn btn-secondary">← Voltar à Home</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>365 Graça &amp; Adoração</h3>
+          <p style="color:#cbd5e1;font-size:0.93rem;margin-bottom:12px;">Um projeto de estudo bíblico gratuito, estruturado e profundo — da Criação ao Apocalipse.</p>
+          <p style="color:#64748b;font-size:0.86rem;">© 2026 · Conteúdo gratuito para edificação da fé</p>
+        </div>
+        <div>
+          <h3>Navegação</h3>
+          <a href="/">Início</a>
+          <a href="/08-novo-testamento/index.html">Novo Testamento</a>
+          <a href="/personagens/index.html">Personagens</a>
+          <a href="/mapas/index.html">Mapas</a>
+          <a href="/timeline/index.html">Linha do Tempo</a>
+        </div>
+        <div>
+          <h3>NT Destaque</h3>
+          <a href="/08-novo-testamento/mateus/capitulos/capitulo-01.html">Mateus 1</a>
+          <a href="/08-novo-testamento/joao/capitulos/capitulo-01.html">João 1</a>
+          <a href="/08-novo-testamento/romanos/capitulos/capitulo-08.html">Romanos 8</a>
+          <a href="/08-novo-testamento/hebreus/capitulos/capitulo-11.html">Hebreus 11</a>
+          <a href="/08-novo-testamento/apocalipse/capitulos/capitulo-22.html">Apocalipse 22</a>
+        </div>
+      </div>
+      <div class="footer-bottom">Feito com fé · Gratuito para sempre · <a href="/sobre/index.html" style="color:#60a5fa;">Sobre o projeto</a></div>
+    </div>
+  </footer>
+
+  <!-- Seletor de Idioma Flutuante -->
+  <div style="position:fixed;top:14px;right:16px;z-index:9999;display:flex;gap:6px;background:rgba(15,23,42,0.92);border:1px solid #334155;border-radius:30px;padding:5px 10px;backdrop-filter:blur(8px);box-shadow:0 2px 12px rgba(0,0,0,0.4);">
+    <a href="/" title="Português" style="text-decoration:none;font-size:1.1rem;opacity:0.95;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">🇧🇷</a>
+    <a href="/en/" title="English" style="text-decoration:none;font-size:1.1rem;opacity:0.7;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">🇺🇸</a>
+    <a href="/es/" title="Español" style="text-decoration:none;font-size:1.1rem;opacity:0.7;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">🇪🇸</a>
+  </div>
+
+  <!-- Dark Mode -->
+  <script>(function(){var s=localStorage.getItem('365-theme');if(s==='light')document.documentElement.setAttribute('data-theme','light');})();</script>
+  <style>[data-theme="light"]{filter:invert(1) hue-rotate(180deg);}[data-theme="light"] img,[data-theme="light"] video{filter:invert(1) hue-rotate(180deg);}#dark-toggle{position:fixed;bottom:80px;right:16px;z-index:9998;background:rgba(15,23,42,0.9);border:1px solid #334155;border-radius:50%;width:44px;height:44px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.2rem;box-shadow:0 2px 10px rgba(0,0,0,0.4);transition:transform 0.2s;}#dark-toggle:hover{transform:scale(1.1);}</style>
+  <div id="dark-toggle" title="Alternar modo claro/escuro" onclick="var h=document.documentElement,c=h.getAttribute('data-theme');if(c==='light'){h.removeAttribute('data-theme');localStorage.setItem('365-theme','dark');this.textContent='🌙';}else{h.setAttribute('data-theme','light');localStorage.setItem('365-theme','light');this.textContent='☀️';}">🌙</div>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/?text=Estou%20estudando%20a%20B%C3%ADblia%20no%20365%20de%20Gra%C3%A7a%20%26%20Adora%C3%A7%C3%A3o%3A%20https%3A%2F%2F365gracaeadoracao.com" target="_blank" title="Compartilhar no WhatsApp" style="position:fixed;bottom:20px;right:16px;z-index:9998;background:#25d366;border-radius:50%;width:50px;height:50px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 15px rgba(37,211,102,0.5);text-decoration:none;font-size:1.5rem;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1)'">📲</a>
+
+</body>
+</html>
