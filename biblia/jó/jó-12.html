@@ -267,5 +267,84 @@
       <a href="jó-13.html" class="nav-button">Próximo Capítulo →</a>
     </div>
   </div>
+
+<!-- Dark Mode Toggle -->
+<script>
+(function() {
+  var saved = localStorage.getItem('365-theme');
+  if (saved === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+})();
+</script>
+<style>
+[data-theme="light"] {
+  filter: invert(1) hue-rotate(180deg);
+}
+[data-theme="light"] img,
+[data-theme="light"] video,
+[data-theme="light"] iframe {
+  filter: invert(1) hue-rotate(180deg);
+}
+#dark-toggle {
+  position: fixed;
+  bottom: 80px;
+  right: 16px;
+  z-index: 9998;
+  background: rgba(15,23,42,0.9);
+  border: 1px solid #334155;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  transition: transform 0.2s;
+}
+#dark-toggle:hover { transform: scale(1.1); }
+</style>
+<div id="dark-toggle" title="Alternar modo claro/escuro" onclick="
+  var html = document.documentElement;
+  var cur = html.getAttribute('data-theme');
+  if (cur === 'light') {
+    html.removeAttribute('data-theme');
+    localStorage.setItem('365-theme', 'dark');
+    this.textContent = '🌙';
+  } else {
+    html.setAttribute('data-theme', 'light');
+    localStorage.setItem('365-theme', 'light');
+    this.textContent = '☀️';
+  }
+">🌙</div>
+
+<!-- WhatsApp CTA Flutuante -->
+<a id="whatsapp-cta" 
+   href="https://wa.me/?text=Estou%20estudando%20a%20B%C3%ADblia%20no%20365%20de%20Gra%C3%A7a%20%26%20Adora%C3%A7%C3%A3o%3A%20https%3A%2F%2F365gracaeadoracao.com" 
+   target="_blank"
+   title="Compartilhar no WhatsApp"
+   style="
+     position: fixed;
+     bottom: 20px;
+     right: 16px;
+     z-index: 9998;
+     background: #25d366;
+     border-radius: 50%;
+     width: 50px;
+     height: 50px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     box-shadow: 0 4px 15px rgba(37,211,102,0.5);
+     text-decoration: none;
+     font-size: 1.5rem;
+     transition: transform 0.2s;
+   "
+   onmouseover="this.style.transform='scale(1.15)'"
+   onmouseout="this.style.transform='scale(1)'"
+>📲</a>
+
 </body>
 </html>

@@ -120,7 +120,72 @@
 </div>
 </div>
 
-  </article>
+  
+<div class="reflexao-box" style="
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  border: 1px solid #334155;
+  border-left: 4px solid #f59e0b;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+">
+  <h3 style="color:#f59e0b;margin-bottom:1rem;font-size:1rem;">💭 Perguntas para Reflexão</h3>
+  <div id="reflexao-perguntas">
+    <p style="color:#94a3b8;font-size:0.9rem;margin-bottom:0.8rem;">1. O que este capítulo revela sobre o caráter de Deus?</p>
+    <p style="color:#94a3b8;font-size:0.9rem;margin-bottom:0.8rem;">2. Qual versículo mais impactou você e por quê?</p>
+    <p style="color:#94a3b8;font-size:0.9rem;margin-bottom:0.8rem;">3. Como você pode aplicar esta passagem na sua vida hoje?</p>
+    <p style="color:#94a3b8;font-size:0.9rem;margin-bottom:1rem;">4. O que este texto revela sobre Jesus Cristo?</p>
+  </div>
+  <textarea id="reflexao-texto" placeholder="Escreva sua reflexão aqui... (salvo automaticamente)" style="
+    width: 100%;
+    min-height: 80px;
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: #e2e8f0;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    resize: vertical;
+    box-sizing: border-box;
+    margin-top: 0.5rem;
+  "></textarea>
+  <div style="display:flex;gap:0.5rem;margin-top:0.5rem;align-items:center;">
+    <button onclick="salvarReflexao()" style="
+      background:#0ea5e9;color:#fff;border:none;border-radius:6px;
+      padding:0.4rem 1rem;cursor:pointer;font-size:0.85rem;
+    ">💾 Salvar</button>
+    <span id="reflexao-status" style="color:#64748b;font-size:0.8rem;"></span>
+    <a href="https://wa.me/?text=Minha+reflexão+bíblica+de+hoje:+%0A" 
+       target="_blank" 
+       style="margin-left:auto;color:#25d366;font-size:0.85rem;text-decoration:none;">
+      📲 Compartilhar no WhatsApp
+    </a>
+  </div>
+</div>
+<script>
+(function() {
+  var key = 'reflexao-' + window.location.pathname;
+  var ta = document.getElementById('reflexao-texto');
+  var saved = localStorage.getItem(key);
+  if (saved) ta.value = saved;
+  ta.addEventListener('input', function() {
+    localStorage.setItem(key, ta.value);
+    var st = document.getElementById('reflexao-status');
+    st.textContent = '✓ Salvo';
+    setTimeout(function() { st.textContent = ''; }, 2000);
+  });
+})();
+function salvarReflexao() {
+  var key = 'reflexao-' + window.location.pathname;
+  var ta = document.getElementById('reflexao-texto');
+  localStorage.setItem(key, ta.value);
+  var st = document.getElementById('reflexao-status');
+  st.textContent = '✓ Reflexão salva!';
+  setTimeout(function() { st.textContent = ''; }, 3000);
+}
+</script>
+
+</article>
   <nav class="chapter-nav">
     <a href="capitulo-13.html" class="nav-btn">← Anterior</a>
     <a href="../index.html" class="nav-btn center">Índice de João</a>
@@ -130,5 +195,136 @@
 <footer class="site-footer">
   <p>365 de Graça &amp; Adoração • Da Criação ao Apocalipse • © 2026</p>
 </footer>
+
+
+<style>
+.chapter-nav-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9990;
+  background: rgba(15,23,42,0.97);
+  border-top: 1px solid #334155;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1rem;
+  backdrop-filter: blur(8px);
+  gap: 0.5rem;
+}
+.chapter-nav-fixed a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.chapter-nav-fixed a:hover { background: #1e293b; color: #f1f5f9; }
+.chapter-nav-fixed a.next-btn {
+  background: #0ea5e9;
+  color: #fff;
+  border-color: #0ea5e9;
+  font-weight: 600;
+}
+.chapter-nav-fixed a.next-btn:hover { background: #0284c7; }
+.chapter-nav-fixed .progress-text {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-align: center;
+  flex: 1;
+}
+/* Espaço para a barra fixa não cobrir conteúdo */
+body { padding-bottom: 60px; }
+</style>
+
+<div class="chapter-nav-fixed">
+  <a href="/08-novo-testamento/joao/capitulos/capitulo-13.html">← Joao 13</a>
+  <span class="progress-text">Capítulo 82 de 260 do NT</span>
+  <a href="/08-novo-testamento/joao/capitulos/capitulo-15.html" class="next-btn">Joao 15 →</a>
+</div>
+
+
+<!-- Dark Mode Toggle -->
+<script>
+(function() {
+  var saved = localStorage.getItem('365-theme');
+  if (saved === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+})();
+</script>
+<style>
+[data-theme="light"] {
+  filter: invert(1) hue-rotate(180deg);
+}
+[data-theme="light"] img,
+[data-theme="light"] video,
+[data-theme="light"] iframe {
+  filter: invert(1) hue-rotate(180deg);
+}
+#dark-toggle {
+  position: fixed;
+  bottom: 80px;
+  right: 16px;
+  z-index: 9998;
+  background: rgba(15,23,42,0.9);
+  border: 1px solid #334155;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  transition: transform 0.2s;
+}
+#dark-toggle:hover { transform: scale(1.1); }
+</style>
+<div id="dark-toggle" title="Alternar modo claro/escuro" onclick="
+  var html = document.documentElement;
+  var cur = html.getAttribute('data-theme');
+  if (cur === 'light') {
+    html.removeAttribute('data-theme');
+    localStorage.setItem('365-theme', 'dark');
+    this.textContent = '🌙';
+  } else {
+    html.setAttribute('data-theme', 'light');
+    localStorage.setItem('365-theme', 'light');
+    this.textContent = '☀️';
+  }
+">🌙</div>
+
+<!-- WhatsApp CTA Flutuante -->
+<a id="whatsapp-cta" 
+   href="https://wa.me/?text=Estou%20estudando%20a%20B%C3%ADblia%20no%20365%20de%20Gra%C3%A7a%20%26%20Adora%C3%A7%C3%A3o%3A%20https%3A%2F%2F365gracaeadoracao.com" 
+   target="_blank"
+   title="Compartilhar no WhatsApp"
+   style="
+     position: fixed;
+     bottom: 20px;
+     right: 16px;
+     z-index: 9998;
+     background: #25d366;
+     border-radius: 50%;
+     width: 50px;
+     height: 50px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     box-shadow: 0 4px 15px rgba(37,211,102,0.5);
+     text-decoration: none;
+     font-size: 1.5rem;
+     transition: transform 0.2s;
+   "
+   onmouseover="this.style.transform='scale(1.15)'"
+   onmouseout="this.style.transform='scale(1)'"
+>📲</a>
+
 </body>
 </html>
