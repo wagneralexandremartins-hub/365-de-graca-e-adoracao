@@ -3,18 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>365 Graça & Adoração | Da Criação ao Apocalipse</title>
+  <title>365 Graça &amp; Adoração | Da Criação ao Apocalipse</title>
   <meta name="description" content="Uma jornada bíblica completa da Criação ao Apocalipse, com estudo estruturado, contexto histórico, reflexão e aplicação prática em 365 dias." />
   <meta name="keywords" content="365 Graça e Adoração, estudo bíblico, Bíblia online, Gênesis, Mateus, teologia, devocional, jornada bíblica, estudo cristão" />
   <meta name="author" content="Wagner Alexandre Martins" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#0f172a" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="365 Graça & Adoração | Da Criação ao Apocalipse" />
+  <meta property="og:title" content="365 Graça &amp; Adoração | Da Criação ao Apocalipse" />
   <meta property="og:description" content="Uma jornada bíblica completa com leitura, contexto histórico, reflexão teológica e aplicação prática." />
   <meta property="og:url" content="https://365gracaeadoracao.com/" />
   <meta property="og:image" content="https://365gracaeadoracao.com/assets/img/og-image.jpg" />
   <link rel="canonical" href="https://365gracaeadoracao.com/" />
+  <link rel="alternate" hreflang="pt-BR" href="https://365gracaeadoracao.com/" />
+  <link rel="alternate" hreflang="en" href="https://365gracaeadoracao.com/en/" />
+  <link rel="alternate" hreflang="es" href="https://365gracaeadoracao.com/es/" />
   <link rel="icon" href="/assets/img/favicon.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"365 Graça & Adoração","url":"https://365gracaeadoracao.com","description":"Jornada bíblica completa da Criação ao Apocalipse","inLanguage":"pt-BR"}</script>
@@ -77,7 +80,7 @@
     }
     .hero h1 { font-size: clamp(2rem, 4vw, 4rem); line-height: 1.12; margin-bottom: 18px; }
     .hero h1 span { color: var(--gold); }
-    .hero > .container > .hero-grid > div > p { color: var(--muted); font-size: 1.05rem; max-width: 680px; margin-bottom: 28px; }
+    .hero-desc { color: var(--muted); font-size: 1.05rem; max-width: 680px; margin-bottom: 28px; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 20px; }
     .btn {
       display: inline-flex; align-items: center; justify-content: center;
@@ -183,7 +186,6 @@
     <a href="/es/" title="Español" style="text-decoration:none;font-size:1.1rem;opacity:0.7;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">🇪🇸</a>
   </div>
 
-  <!-- TOPBAR -->
   <header class="topbar">
     <div class="container topbar-inner">
       <a href="/" class="brand" aria-label="365 Graça e Adoração">
@@ -207,37 +209,37 @@
 
   <main>
 
-    <!-- HERO -->
     <section class="hero" id="inicio">
-      <div class="container hero-grid">
-        <div>
-          <div class="eyebrow">📖 Projeto bíblico estruturado para 365 dias</div>
-          <h1>Uma jornada de <span>transformação espiritual</span><br>da Criação ao Apocalipse</h1>
-          <p>Estude a Bíblia com profundidade, reverência e clareza. Um caminho organizado com leitura, contexto histórico, reflexão teológica e aplicação prática para edificar a fé no presente.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="/08-novo-testamento/mateus/capitulos/capitulo-01.html">📖 Começar Dia 1 — Mateus 1</a>
-            <a class="btn btn-secondary" href="#busca">🔍 Buscar Conteúdo</a>
-            <a class="btn btn-secondary" href="/como-estudar/index.html">📚 Como Estudar</a>
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow">📖 Projeto bíblico estruturado para 365 dias</div>
+            <h1>Uma jornada de <span>transformação espiritual</span><br>da Criação ao Apocalipse</h1>
+            <p class="hero-desc">Estude a Bíblia com profundidade, reverência e clareza. Um caminho organizado com leitura, contexto histórico, reflexão teológica e aplicação prática para edificar a fé no presente.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="/08-novo-testamento/mateus/capitulos/capitulo-01.html">📖 Começar Dia 1 — Mateus 1</a>
+              <a class="btn btn-secondary" href="#busca">🔍 Buscar Conteúdo</a>
+              <a class="btn btn-secondary" href="/como-estudar/index.html">📚 Como Estudar</a>
+            </div>
+            <p class="mini-info">Comece pelo princípio, avance com ordem e cresça com entendimento.</p>
           </div>
-          <p class="mini-info">Comece pelo princípio, avance com ordem e cresça com entendimento.</p>
-        </div>
 
-        <aside class="hero-card">
-          <h2>Seu progresso espiritual começa hoje</h2>
-          <p class="mini-info">Acompanhe sua jornada pelos 260 capítulos do NT:</p>
-          <div class="progress-line">
-            <div class="progress-fill" id="progress-bar"></div>
-          </div>
-          <p><strong id="progress-label">Dia 1 de 260</strong></p>
-          <p class="mini-info" style="margin-top:8px;">Inicie por Mateus 1, avance com constância e retorne diariamente para continuar.</p>
-          <div style="margin-top:18px;">
-            <a class="btn btn-primary" href="/08-novo-testamento/mateus/capitulos/capitulo-01.html" style="width:100%;justify-content:center;">▶ Continuar leitura</a>
-          </div>
-        </aside>
+          <aside class="hero-card">
+            <h2>Seu progresso espiritual começa hoje</h2>
+            <p class="mini-info">Acompanhe sua jornada pelos 260 capítulos do NT:</p>
+            <div class="progress-line">
+              <div class="progress-fill" id="progress-bar"></div>
+            </div>
+            <p><strong id="progress-label">Dia 1 de 260</strong></p>
+            <p class="mini-info" style="margin-top:8px;">Inicie por Mateus 1, avance com constância e retorne diariamente para continuar.</p>
+            <div style="margin-top:18px;">
+              <a class="btn btn-primary" href="/08-novo-testamento/mateus/capitulos/capitulo-01.html" style="width:100%;justify-content:center;">▶ Continuar leitura</a>
+            </div>
+          </aside>
+        </div>
       </div>
     </section>
 
-    <!-- STATS -->
     <section class="stats" aria-label="Indicadores do projeto">
       <div class="container">
         <div class="stats-grid">
@@ -249,7 +251,6 @@
       </div>
     </section>
 
-    <!-- BUSCA -->
     <section id="busca">
       <div class="container">
         <h2 class="section-title">Busque um capítulo, tema ou livro</h2>
@@ -275,7 +276,6 @@
       </div>
     </section>
 
-    <!-- MÉTODO -->
     <section id="jornada">
       <div class="container">
         <h2 class="section-title">Como funciona a jornada 365</h2>
@@ -303,90 +303,107 @@
             <div class="card-icon">📖</div>
             <h3>Um projeto para leitura contínua e transformação</h3>
             <p>O 365 Graça &amp; Adoração nasce com o propósito de oferecer um caminho sólido de estudo bíblico, acessível ao leitor comum e sério o suficiente para quem deseja se aprofundar com reverência, disciplina e visão teológica.</p>
-            <p>Cada capítulo do Novo Testamento é estudado versículo por versículo com análise exegética, vocabulário grego original e aplicação prática — totalizando 260 capítulos aprofundados.</p>
-            <a href="/sobre/index.html" style="display:inline-block;margin-top:12px;">Ler apresentação completa →</a>
+            <p style="margin-top:10px;">Cada capítulo do Novo Testamento é estudado versículo por versículo com análise exegética, vocabulário grego original e aplicação prática — totalizando 260 capítulos aprofundados.</p>
+            <a href="/sobre/index.html" style="display:inline-block;margin-top:12px;color:#fde68a;font-weight:bold;">Ler apresentação completa →</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- BLOCOS -->
     <section id="blocos">
       <div class="container">
         <h2 class="section-title">12 Blocos da Jornada</h2>
-        <p class="section-subtitle">A caminhada foi reorganizada em 12 blocos com progressão histórica e coerência teológica — da origem de tudo até a consumação final. <a href="/blocos/" style="color:#f5c542;font-weight:bold;">Ver estrutura completa →</a></p>
+        <p class="section-subtitle">Uma caminhada bíblica estruturada com progressão histórica e coerência teológica — da Criação ao Apocalipse. <a href="/blocos/" style="color:#f5c542;font-weight:bold;">Ver estrutura completa →</a></p>
         <div class="cards-grid">
+
           <article class="card">
             <div class="card-icon">🌍</div>
-            <h3>1. Pentateuco: A Origem</h3>
-            <p>Criação, queda, dilúvio, patriarcas, aliança, êxodo, lei e fundamentos do povo de Deus.</p>
-            <a href="/01-principio/index.html">Acessar bloco →</a>
+            <h3>1. O Princípio e a Lei</h3>
+            <p>Criação, queda e a libertação do Egito. O fundamento da fé no Pentateuco.</p>
+            <a href="/01-principio/index.html">Gênesis a Deuteronômio →</a>
           </article>
-          <article class="card">
-            <div class="card-icon">🔥</div>
-            <h3>2. Libertação e Lei</h3>
-            <p>Êxodo, pacto, tabernáculo, santidade, organização do povo e chamado à obediência.</p>
-            <a href="/02-pentateuco/index.html">Acessar bloco →</a>
-          </article>
+
           <article class="card">
             <div class="card-icon">⚔️</div>
-            <h3>3. Conquista e Estabelecimento</h3>
-            <p>Terra prometida, Josué, Juízes, instabilidade espiritual e primeiras lideranças.</p>
-            <a href="/03-historicos/index.html">Acessar bloco →</a>
+            <h3>2. Conquista e Juízes</h3>
+            <p>A posse da Terra Prometida, os ciclos de apostasia e os libertadores de Israel.</p>
+            <a href="/03-historicos/index.html">Josué a Rute →</a>
           </article>
+
           <article class="card">
             <div class="card-icon">👑</div>
-            <h3>4–5. Reino Unido e Dividido</h3>
-            <p>Saul, Davi, Salomão, separação do reino, idolatria e crises espirituais de Israel.</p>
-            <a href="/03-historicos/index.html">Acessar bloco →</a>
+            <h3>3. O Reino Unido</h3>
+            <p>A era de ouro sob Saul, Davi e Salomão. O estabelecimento da monarquia e o Templo.</p>
+            <a href="/03-historicos/index.html">1 Samuel a 2 Crônicas →</a>
           </article>
+
+          <article class="card">
+            <div class="card-icon">💔</div>
+            <h3>4. O Reino Dividido</h3>
+            <p>A separação entre Israel e Judá, a idolatria e os avisos de Elias e Eliseu.</p>
+            <a href="/03-historicos/index.html">Reis e Crônicas →</a>
+          </article>
+
           <article class="card">
             <div class="card-icon">📣</div>
-            <h3>6. Profetas e Advertências</h3>
-            <p>Isaías, Jeremias, Ezequiel e profetas menores — juízo, esperança e promessa messiânica.</p>
-            <a href="/05-profetas/index.html">Acessar bloco →</a>
+            <h3>5. Vozes Proféticas</h3>
+            <p>Isaías, Jeremias e os profetas que anunciaram juízo e a vinda do Messias.</p>
+            <a href="/05-profetas/index.html">Profetas Maiores →</a>
           </article>
+
           <article class="card">
             <div class="card-icon">🏺</div>
-            <h3>7. Exílio e Retorno</h3>
-            <p>Cativeiro babilônico, disciplina, saudade, retorno e reconstrução da identidade espiritual.</p>
-            <a href="/03-historicos/index.html">Acessar bloco →</a>
+            <h3>6. Exílio e Cativeiro</h3>
+            <p>A queda de Jerusalém e a vida do povo de Deus na Babilônia e Pérsia.</p>
+            <a href="/05-profetas/index.html">Ezequiel e Daniel →</a>
           </article>
+
+          <article class="card">
+            <div class="card-icon">🛠️</div>
+            <h3>7. Restauração e Retorno</h3>
+            <p>A reconstrução do Templo e dos muros sob Esdras e Neemias após o exílio.</p>
+            <a href="/03-historicos/index.html">Pós-Exílio →</a>
+          </article>
+
           <article class="card">
             <div class="card-icon">🙏</div>
-            <h3>8. Sabedoria e Vida com Deus</h3>
-            <p>Salmos, Provérbios, Jó, Eclesiastes — adoração, sofrimento e temor do Senhor.</p>
-            <a href="/04-poeticos/index.html">Acessar bloco →</a>
+            <h3>8. Sabedoria e Adoração</h3>
+            <p>Salmos, Provérbios e Jó. A aplicação prática e poética da vida com Deus.</p>
+            <a href="/04-poeticos/index.html">Livros Poéticos →</a>
           </article>
+
           <article class="card">
             <div class="card-icon">⏳</div>
-            <h3>9. O Silêncio Profético</h3>
-            <p>Período intertestamentário — 400 anos de espera e expectativa crescente pelo Messias.</p>
-            <a href="/07-intertestamentario/index.html">Acessar bloco →</a>
+            <h3>9. Espera Messiânica</h3>
+            <p>O período de silêncio profético: 400 anos preparando o caminho para o Cristo.</p>
+            <a href="/07-intertestamentario/index.html">Intertestamentário →</a>
           </article>
+
           <article class="card">
             <div class="card-icon">✝️</div>
-            <h3>10. A Vinda de Cristo</h3>
-            <p>Mateus, Marcos, Lucas e João — nascimento, ministério, morte e ressurreição de Jesus.</p>
-            <a href="/08-novo-testamento/index.html">Acessar bloco →</a>
+            <h3>10. O Messias Prometido</h3>
+            <p>O ministério, morte e ressurreição de Jesus Cristo segundo os Evangelhos.</p>
+            <a href="/08-novo-testamento/index.html">Mateus a João →</a>
           </article>
+
           <article class="card">
             <div class="card-icon">🕊️</div>
-            <h3>11. A Igreja Primitiva</h3>
-            <p>Atos dos Apóstolos — Espírito Santo, expansão do evangelho e nascimento da Igreja.</p>
-            <a href="/09-igreja-primitiva/index.html">Acessar bloco →</a>
+            <h3>11. A Igreja em Missão</h3>
+            <p>O agir do Espírito Santo e a expansão do Evangelho por todo o mundo.</p>
+            <a href="/09-igreja-primitiva/index.html">Atos dos Apóstolos →</a>
           </article>
+
           <article class="card">
             <div class="card-icon">📜</div>
-            <h3>12. Doutrina, Vida e Consumação</h3>
-            <p>Cartas apostólicas e Apocalipse — fé, santificação, esperança e nova criação.</p>
-            <a href="/08-novo-testamento/apocalipse/index.html">Acessar bloco →</a>
+            <h3>12. Doutrina e Glória</h3>
+            <p>As cartas de instrução à Igreja e a visão final da Consumação em Apocalipse.</p>
+            <a href="/08-novo-testamento/apocalipse/index.html">Epístolas e Apocalipse →</a>
           </article>
+
         </div>
       </div>
     </section>
 
-    <!-- IDIOMAS -->
     <section id="idiomas">
       <div class="container">
         <h2 class="section-title">Disponível em 3 idiomas</h2>
@@ -411,7 +428,6 @@
       </div>
     </section>
 
-    <!-- CTA FINAL -->
     <section>
       <div class="container">
         <div class="cta-section">
@@ -474,7 +490,7 @@
   <!-- WhatsApp -->
   <a href="https://wa.me/?text=Estou%20estudando%20a%20B%C3%ADblia%20no%20365%20de%20Gra%C3%A7a%20%26%20Adora%C3%A7%C3%A3o%3A%20https%3A%2F%2F365gracaeadoracao.com" target="_blank" title="Compartilhar no WhatsApp" style="position:fixed;bottom:20px;right:16px;z-index:9998;background:#25d366;border-radius:50%;width:50px;height:50px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 15px rgba(37,211,102,0.5);text-decoration:none;font-size:1.5rem;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1)'">📲</a>
 
-  <!-- Progress bar dinâmica -->
+  <!-- Progresso -->
   <script>
   (function(){
     var total=260, cur=parseInt(localStorage.getItem('365-progress')||'1');
