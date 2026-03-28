@@ -1,0 +1,5 @@
+node_modules/
+*.log
+*.tmp
+index_backup.html
+*_backup.html
