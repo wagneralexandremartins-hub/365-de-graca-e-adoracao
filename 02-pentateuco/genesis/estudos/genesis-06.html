@@ -150,6 +150,17 @@
         font-size: 0.9rem;
         margin: 0;
     }
+  
+    /* === BRAND / LOGO PADRONIZADO === */
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: bold; text-decoration: none; color: inherit; }
+    .brand-logo {
+      width: 42px; height: 42px; background: #d4a017; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; font-weight: 900; color: #111827; flex-shrink: 0;
+    }
+    .brand-text { line-height: 1.2; font-size: 1rem; color: #fff; }
+    .brand-text small { display: block; color: #9ca3af; font-weight: normal; font-size: 0.78rem; }
+
   </style>
 <style>
   /* === CORREÇÕES DE LEGIBILIDADE === */
@@ -263,12 +274,13 @@
   <!-- Topbar -->
   <div class="topbar">
     <div class="inner">
-      <div class="brand">
-        <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;">
-          <img src="/assets/img/logo-header.png" alt="365 de Graça &amp; Adoração" style="height:48px;width:auto;" />
-          <span>365 de Graça &amp; Adoração</span>
-        </a>
-      </div>
+            <a href="/" class="brand" aria-label="365 Graça e Adoração">
+        <div class="brand-logo">365</div>
+        <div class="brand-text">
+          365 Graça &amp; Adoração
+          <small>Da Criação ao Apocalipse</small>
+        </div>
+      </a>
 
       <nav class="nav" aria-label="Navegação principal">
         <a href="/">Início</a>
