@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Cruz de Cristo | De Gênesis ao Apocalipse | 365 de Graça &amp; Adoração</title>
+  <meta name="description" content="Estudo bíblico e teológico sobre Jesus e a crucificação de Gênesis ao Apocalipse. Uma leitura ampla da cruz como centro da revelação, da promessa à glorificação do Cordeiro." />
+  <meta name="keywords" content="Jesus Cristo, cruz, crucificação, Gênesis ao Apocalipse, exegese bíblica, teologia bíblica, Isaías 53, Salmo 22, Apocalipse 5, 365 de Graça e Adoração" />
+  <meta name="author" content="365 de Graça &amp; Adoração" />
+  <meta property="og:title" content="A Cruz de Cristo | De Gênesis ao Apocalipse" />
+  <meta property="og:description" content="Um estudo bíblico e teológico sobre a cruz de Cristo como centro da Escritura, de Gênesis ao Apocalipse." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://365gracaeadoracao.com/assets/img/og-cover.jpg" />
+  <meta property="og:url" content="https://365gracaeadoracao.com/estudos/cruz-de-cristo/" />
+  <link rel="canonical" href="https://365gracaeadoracao.com/estudos/cruz-de-cristo/" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <style>
+    :root {
+      --bg:         #08111f;
+      --bg-soft:    #0f172a;
+      --bg-card:    rgba(255,255,255,0.05);
+      --bg-section: rgba(255,255,255,0.03);
+      --text:       #e5e7eb;
+      --muted:      #8b9ab4;
+      --gold:       #f5c542;
+      --accent:     #d4af37;
+      --accent-2:   #8b1e1e;
+      --border:     rgba(255,255,255,0.10);
+      --shadow:     0 8px 32px rgba(0,0,0,0.35);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Georgia", "Times New Roman", serif;
+      line-height: 1.85;
+      font-size: 1.05rem;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ── TOPBAR ── */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8,17,31,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 14px 0;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: bold;
+      color: var(--text);
+    }
+
+    .brand-logo {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), #fff2b8);
+      color: #111827;
+      display: grid; place-items: center;
+      font-size: 1.1rem; font-weight: 900;
+      box-shadow: var(--shadow);
+      flex-shrink: 0;
+    }
+
+    .brand-text { font-size: 1rem; line-height: 1.3; }
+    .brand-text small { display: block; color: var(--muted); font-weight: normal; font-size: 0.82rem; }
+
+    .topbar-nav {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .topbar-nav a {
+      color: var(--muted);
+      font-size: 0.93rem;
+      transition: color 0.2s;
+    }
+
+    .topbar-nav a:hover { color: var(--text); }
+
+    .topbar-nav .nav-cta {
+      background: var(--gold);
+      color: #111827 !important;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-weight: bold;
+      font-size: 0.88rem;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 90px 0 60px;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 70% 30%, rgba(212,175,55,0.10), transparent 50%),
+                  radial-gradient(circle at 20% 80%, rgba(139,30,30,0.08), transparent 40%);
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(212,175,55,0.12);
+      color: var(--accent);
+      border: 1px solid rgba(212,175,55,0.28);
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      letter-spacing: 0.3px;
+      margin-bottom: 20px;
+      font-family: system-ui, sans-serif;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+
+    .hero h1 span { color: var(--gold); }
+
+    .divider-title {
+      width: 80px; height: 3px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      border-radius: 999px;
+      margin: 14px 0 22px;
+    }
+
+    .hero p.lead {
+      color: var(--muted);
+      max-width: 820px;
+      font-size: 1.1rem;
+      margin-bottom: 28px;
+    }
+
+    .btn-gold {
+      display: inline-block;
+      background: var(--gold);
+      color: #111;
+      font-weight: 700;
+      padding: 13px 26px;
+      border-radius: 999px;
+      font-family: system-ui, sans-serif;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+
+    .btn-gold:hover { background: #e7c558; }
+
+    /* ── ARTICLE ── */
+    .article-wrap { padding: 50px 0 80px; }
+
+    .article-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .article-content {
+      padding: 36px 22px;
+    }
+
+    @media (min-width: 768px) {
+      .article-content { padding: 52px 48px; }
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px 24px;
+      margin-bottom: 36px;
+    }
+
+    .toc h2 {
+      font-size: 1.05rem;
+      color: var(--gold);
+      margin-bottom: 16px;
+      font-family: system-ui, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .toc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 20px;
+    }
+
+    @media (max-width: 600px) { .toc-grid { grid-template-columns: 1fr; } }
+
+    .toc-grid a {
+      color: var(--text);
+      font-size: 0.93rem;
+      font-family: system-ui, sans-serif;
+      padding: 4px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      transition: color 0.2s;
+    }
+
+    .toc-grid a:hover { color: var(--gold); }
+
+    /* ── SECTION BLOCK ── */
+    .section-block {
+      margin-bottom: 38px;
+      padding: 28px 24px;
+      border-radius: 18px;
+      background: var(--bg-section);
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .section-block h2 {
+      font-size: 1.65rem;
+      margin-bottom: 20px;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .section-block h3 {
+      font-size: 1.15rem;
+      margin-top: 26px;
+      margin-bottom: 14px;
+      color: #fff0b3;
+      font-weight: 700;
+    }
+
+    .section-block p {
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+
+    .section-block ul,
+    .section-block ol {
+      padding-left: 1.4rem;
+      color: #c9d2e3;
+      margin-bottom: 16px;
+    }
+
+    .section-block li { margin-bottom: 9px; }
+
+    /* ── VERSE BOX ── */
+    .verse-box {
+      border-left: 4px solid var(--accent);
+      background: rgba(212,175,55,0.08);
+      padding: 16px 20px;
+      border-radius: 12px;
+      margin: 20px 0;
+      color: #fff8dc;
+      font-style: italic;
+      line-height: 1.75;
+    }
+
+    .verse-box cite {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.88rem;
+      color: var(--muted);
+      font-style: normal;
+    }
+
+    /* ── HIGHLIGHT BOX ── */
+    .highlight-box {
+      background: rgba(139,30,30,0.14);
+      border: 1px solid rgba(139,30,30,0.32);
+      border-radius: 16px;
+      padding: 18px 20px;
+      margin: 20px 0;
+      color: #ffd6d6;
+      line-height: 1.75;
+    }
+
+    .highlight-box strong { color: #ffb3b3; }
+
+    /* ── INFO BOX ── */
+    .info-box {
+      background: rgba(96,165,250,0.08);
+      border: 1px solid rgba(96,165,250,0.22);
+      border-radius: 16px;
+      padding: 18px 20px;
+      margin: 20px 0;
+      color: #bfdbfe;
+    }
+
+    /* ── QUESTIONS BOX ── */
+    .questions-box {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+    }
+
+    .questions-box h2 {
+      color: var(--gold);
+      margin-bottom: 18px;
+      font-size: 1.4rem;
+    }
+
+    .questions-box ol {
+      padding-left: 1.4rem;
+      color: #c9d2e3;
+    }
+
+    .questions-box li {
+      margin-bottom: 12px;
+      line-height: 1.7;
+    }
+
+    /* ── FOOTER ── */
+    .footer-note {
+      color: var(--muted);
+      font-size: 0.93rem;
+      text-align: center;
+      padding: 28px 0 50px;
+      font-family: system-ui, sans-serif;
+    }
+
+    .site-footer {
+      background: #1a0a00;
+      color: var(--muted);
+      text-align: center;
+      padding: 22px;
+      font-size: 0.9rem;
+      font-family: system-ui, sans-serif;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── DARK MODE ── */
+    [data-theme="light"] {
+      filter: invert(1) hue-rotate(180deg);
+    }
+    [data-theme="light"] img,
+    [data-theme="light"] video,
+    [data-theme="light"] iframe {
+      filter: invert(1) hue-rotate(180deg);
+    }
+
+    /* ── DARK TOGGLE ── */
+    #dark-toggle {
+      position: fixed;
+      bottom: 80px;
+      right: 16px;
+      z-index: 9997;
+      background: rgba(15,23,42,0.88);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      width: 42px; height: 42px;
+      display: grid; place-items: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background 0.2s;
+    }
+
+    #dark-toggle:hover { background: rgba(30,40,60,0.95); }
+
+    /* ── WHATSAPP CTA ── */
+    #whatsapp-cta {
+      position: fixed;
+      bottom: 20px;
+      right: 16px;
+      z-index: 9998;
+      background: #25d366;
+      border-radius: 50%;
+      width: 50px; height: 50px;
+      display: grid; place-items: center;
+      font-size: 1.4rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+      transition: transform 0.2s;
+    }
+
+    #whatsapp-cta:hover { transform: scale(1.1); }
+  </style>
+</head>
+<body>
+
+<!-- Topbar -->
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="/" class="brand" aria-label="365 Graça e Adoração">
+      <div class="brand-logo">365</div>
+      <div class="brand-text">
+        365 Graça &amp; Adoração
+        <small>Da Criação ao Apocalipse</small>
+      </div>
+    </a>
+    <nav class="topbar-nav" aria-label="Navegação principal">
+      <a href="/">Início</a>
+      <a href="/02-pentateuco/">Pentateuco</a>
+      <a href="/08-novo-testamento/">Novo Testamento</a>
+      <a href="/estudos/">Estudos</a>
+      <a href="/sobre/index.html">Sobre</a>
+      <a href="/08-novo-testamento/mateus/capitulos/capitulo-01.html" class="nav-cta">📖 Dia 1</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="container">
+    <span class="hero-badge">Estudo Bíblico &nbsp;•&nbsp; Teologia Bíblica &nbsp;•&nbsp; Cristologia</span>
+    <h1>A Cruz de Cristo<br><span>De Gênesis ao Apocalipse</span></h1>
+    <div class="divider-title"></div>
+    <p class="lead">
+      Uma leitura ampla, teológica e exegética sobre Jesus e a crucificação como centro da revelação bíblica.
+      Da promessa inicial em Gênesis à glorificação do Cordeiro em Apocalipse, a Escritura inteira converge para a cruz.
+    </p>
+    <a href="#estudo-completo" class="btn-gold">Ler estudo completo ↓</a>
+  </div>
+</header>
+
+<!-- Estudo -->
+<main class="article-wrap" id="estudo-completo">
+  <div class="container">
+    <div class="article-card">
+      <div class="article-content">
+
+        <!-- TOC -->
+        <section class="toc" aria-label="Navegação do estudo">
+          <h2>📋 Navegação do Estudo</h2>
+          <div class="toc-grid">
+            <a href="#visao-geral">1. Visão Geral</a>
+            <a href="#genesis">2. Gênesis — A Semente da Cruz</a>
+            <a href="#pentateuco">3. Êxodo, Levítico e Números</a>
+            <a href="#salmos-profetas">4. Salmos e Profetas</a>
+            <a href="#evangelhos">5. Evangelhos</a>
+            <a href="#cartas">6. As Cartas Apostólicas</a>
+            <a href="#apocalipse">7. Apocalipse</a>
+            <a href="#fio-central">8. O Fio Central da Escritura</a>
+            <a href="#reflexoes">9. Perguntas que Confrontam</a>
+            <a href="#conclusao">10. Conclusão</a>
+          </div>
+        </section>
+
+        <!-- 1. Visão Geral -->
+        <section class="section-block" id="visao-geral">
+          <h2>1. Visão Geral</h2>
+          <p>
+            A cruz não começa no Calvário. Ela começa no coração de Deus. Antes do homem cair, Deus já conhecia a
+            profundidade da ruína humana e já havia determinado a manifestação da graça. A cruz não surge como improviso
+            diante do pecado; ela se revela nas Escrituras como o centro do plano redentor eterno, concebido antes da
+            fundação do mundo (Efésios 1:4; 1 Pedro 1:20).
+          </p>
+          <p>
+            Quando olhamos a Bíblia inteira, percebemos que a cruz não é apenas um evento entre outros, mas o ponto em
+            que a justiça de Deus, a santidade divina, a gravidade do pecado e a profundidade do amor se encontram de
+            forma definitiva. A revelação bíblica se move em direção à cruz e, depois dela, passa a interpretá-la como
+            fundamento da esperança, da reconciliação e da glória futura. Toda a narrativa bíblica — da criação ao
+            juízo final — é iluminada por esse acontecimento central.
+          </p>
+          <p>
+            A teologia bíblica reconhece que a Escritura possui uma unidade orgânica: os dois Testamentos não são
+            documentos independentes, mas capítulos de uma única história. O Antigo Testamento prepara, anuncia e
+            prefigura; o Novo Testamento cumpre, interpreta e proclama. E o eixo que une esses dois movimentos é a
+            pessoa e a obra de Jesus Cristo, especialmente sua morte e ressurreição.
+          </p>
+          <div class="highlight-box">
+            <strong>Chave hermenêutica:</strong> compreender a cruz como centro da Escritura não é impor uma leitura
+            cristã ao Antigo Testamento, mas reconhecer o movimento que o próprio texto bíblico realiza. Os autores
+            do Novo Testamento — Paulo, Pedro, João, o autor de Hebreus — leram o Antigo Testamento como uma narrativa
+            que encontra seu cumprimento em Cristo. Essa leitura não é arbitrária; ela é o resultado de uma revelação
+            progressiva que o próprio Deus conduziu ao longo dos séculos.
+          </div>
+          <p>
+            Este estudo percorre a Bíblia de Gênesis ao Apocalipse, identificando como a cruz é prometida, prefigurada,
+            anunciada, realizada, interpretada e glorificada em cada grande seção das Escrituras. Não se trata de uma
+            leitura superficial, mas de uma investigação teológica que busca compreender a profundidade do que Deus
+            realizou em Cristo.
+          </p>
+        </section>
+
+        <!-- 2. Gênesis -->
+        <section class="section-block" id="genesis">
+          <h2>2. Gênesis — A Semente da Cruz</h2>
+          <p>
+            Em Gênesis, a cruz ainda não aparece em sua forma histórica, mas já se manifesta em promessa, princípio e
+            tipologia. O livro dos começos é também o livro das primeiras sombras do Redentor. Cada grande narrativa
+            de Gênesis carrega, em seu interior, um eco da redenção que viria.
+          </p>
+
+          <h3>2.1. O Protoevangelium — Gênesis 3:15</h3>
+          <p>
+            A primeira grande declaração redentora se encontra logo após a queda. Deus dirige-se à serpente e pronuncia
+            palavras que a tradição cristã reconhece como o primeiro anúncio do evangelho — o <em>protoevangelium</em>:
+          </p>
+          <div class="verse-box">
+            "E porei inimizade entre ti e a mulher, e entre a tua semente e a sua semente; esta te ferirá a cabeça,
+            e tu lhe ferirás o calcanhar."
+            <cite>— Gênesis 3:15</cite>
+          </div>
+          <p>
+            Esse texto é denso em seu significado. A descendência da mulher sofreria — o calcanhar ferido fala de dor
+            real, de vulnerabilidade, de entrega. Mas venceria — a cabeça esmagada fala de derrota definitiva do mal.
+            Há aqui um padrão que se repete em toda a Escritura: sofrimento seguido de triunfo, humilhação seguida de
+            exaltação, morte seguida de vida. A cruz e a ressurreição já estão esboçadas nessa primeira promessa.
+          </p>
+          <p>
+            A inimizade entre as duas sementes não é apenas histórica; é cósmica. Ela atravessa toda a narrativa bíblica
+            até o Apocalipse, onde o Dragão é definitivamente derrotado pelo Cordeiro. Gênesis 3:15 é, portanto, o
+            primeiro capítulo de uma história que só se encerra em Apocalipse 20.
+          </p>
+
+          <h3>2.2. Adão e Eva cobertos por Deus</h3>
+          <p>
+            Depois do pecado, o homem tenta cobrir sua vergonha com recursos próprios — folhas de figueira costuradas
+            às pressas. Mas Deus provê vestes de pele (Gênesis 3:21). A cena é teologicamente carregada: para que
+            houvesse pele, um animal teve de morrer. A restauração não viria da iniciativa humana, mas da provisão
+            divina que envolve morte substitutiva. O pecado produz nudez espiritual; a graça oferece cobertura — mas
+            a um custo.
+          </p>
+          <p>
+            Essa lógica — de que a cobertura do pecado exige morte — percorrerá toda a teologia sacrificial do Antigo
+            Testamento e encontrará sua expressão máxima na cruz, onde Cristo, o Cordeiro de Deus, morre para que os
+            pecadores sejam cobertos com sua justiça.
+          </p>
+
+          <h3>2.3. Abel e o princípio do sacrifício aceitável</h3>
+          <p>
+            A narrativa de Caim e Abel reforça a ideia de que a aproximação de Deus não se dá de qualquer forma. A
+            oferta de Abel — dos primogênitos do rebanho e da sua gordura — é aceita; a de Caim, não. O texto não
+            explica detalhadamente o porquê, mas a tradição teológica e a carta aos Hebreus (11:4) apontam para a fé
+            e para a natureza da oferta. Abel trouxe sangue; Caim trouxe produto do solo. A aproximação aceitável
+            envolve entrega, reverência e a lógica do sangue, que será aprofundada progressivamente na revelação.
+          </p>
+
+          <h3>2.4. Abraão, Isaque e o cordeiro provido</h3>
+          <p>
+            Em Gênesis 22, a tipologia da cruz atinge sua expressão mais clara no Antigo Testamento. Abraão recebe a
+            ordem de oferecer seu filho único, amado, Isaque. O filho sobe o monte carregando a lenha do sacrifício —
+            imagem que ecoa com força no Novo Testamento, onde Cristo sobe o Calvário carregando a cruz. Isaque
+            pergunta: "Onde está o cordeiro para o holocausto?" E Abraão responde com uma das declarações mais
+            proféticas do Antigo Testamento:
+          </p>
+          <div class="verse-box">
+            "Deus proverá para si o cordeiro para o holocausto, meu filho."
+            <cite>— Gênesis 22:8</cite>
+          </div>
+          <p>
+            Quando o anjo detém a mão de Abraão e um carneiro é encontrado preso pelos chifres num arbusto, a cena
+            revela a lógica da substituição: alguém morre no lugar de outro. O monte Moriá — identificado pela
+            tradição com o monte onde o templo seria construído e, por extensão, com o Calvário — torna-se o lugar
+            onde Deus provê o substituto. A tipologia é inequívoca: o Pai que entrega o Filho amado, o Filho que
+            carrega o instrumento de seu sacrifício, o substituto que morre no lugar do condenado.
+          </p>
+        </section>
+
+        <!-- 3. Pentateuco -->
+        <section class="section-block" id="pentateuco">
+          <h2>3. Êxodo, Levítico e Números — A Pedagogia da Redenção</h2>
+          <p>
+            O restante do Pentateuco aprofunda e sistematiza a teologia da redenção iniciada em Gênesis. Êxodo,
+            Levítico e Números constroem um vocabulário teológico — cordeiro, sangue, expiação, sacerdote, altar,
+            substituição — que o Novo Testamento aplicará diretamente a Cristo.
+          </p>
+
+          <h3>3.1. Êxodo — O Cordeiro Pascal</h3>
+          <p>
+            Na Páscoa, o sangue do cordeiro é aplicado nas ombreiras e na verga da porta, e o povo é poupado do juízo.
+            A imagem é poderosa e precisa: alguém morre para que outros vivam. O livramento passa pelo sangue. A
+            família que não aplicou o sangue não foi poupada — não havia outra forma de escapar do juízo.
+          </p>
+          <div class="verse-box">
+            "E o sangue vos será por sinal nas casas em que estiverdes; verei o sangue e passarei por vós, e não haverá
+            entre vós praga de mortandade quando eu ferir a terra do Egito."
+            <cite>— Êxodo 12:13</cite>
+          </div>
+          <p>
+            Paulo aplica essa tipologia diretamente a Cristo: "Porque Cristo, nossa Páscoa, foi imolado por nós"
+            (1 Coríntios 5:7). O cordeiro pascal não era apenas um rito histórico; era uma figura pedagógica do
+            livramento definitivo que seria plenamente revelado em Cristo. A lógica é a mesma: o juízo de Deus é
+            real, o pecado tem consequências, mas o sangue do substituto cobre aqueles que, por fé, aplicam esse
+            sangue à sua vida.
+          </p>
+
+          <h3>3.2. Levítico — O Pecado, o Altar e o Sangue</h3>
+          <p>
+            Levítico é frequentemente considerado um livro árido, cheio de regulamentos rituais. Mas sua teologia é
+            profunda e necessária para compreender a cruz. Levítico mostra que o pecado não é mera falha superficial.
+            Ele rompe a comunhão com Deus, contamina o adorador e a comunidade, e exige expiação. Por isso, o sistema
+            sacrificial não era excesso ritual, mas linguagem teológica precisa:
+          </p>
+          <ul>
+            <li>O pecado gera separação entre o homem e Deus.</li>
+            <li>A separação exige expiação — um tratamento justo do pecado.</li>
+            <li>A expiação envolve oferta, sacerdote mediador e sangue derramado.</li>
+            <li>O sangue aponta para vida entregue em favor de outro — substituição.</li>
+            <li>O sacerdote representa o povo diante de Deus — mediação.</li>
+          </ul>
+          <p>
+            O Dia da Expiação (Yom Kippur, Levítico 16) sintetiza toda essa pedagogia. Dois bodes são usados: um é
+            sacrificado como oferta pelo pecado; o outro — o bode expiatório — recebe simbolicamente os pecados do
+            povo e é enviado ao deserto. Juntos, eles ilustram dois aspectos da obra de Cristo: a propiciação (o
+            pecado é tratado com justiça) e a remoção (o pecado é afastado do adorador). Na cruz, Cristo cumpre
+            ambas as funções de forma definitiva e perfeita.
+          </p>
+
+          <h3>3.3. Números — A Serpente Erguida no Deserto</h3>
+          <p>
+            Em Números 21, o povo de Israel, no deserto, é atacado por serpentes venenosas como consequência de sua
+            rebeldia. Deus instrui Moisés a fazer uma serpente de bronze e erguê-la num poste: todo aquele que olhasse
+            para ela seria curado. O olhar obediente torna-se instrumento de cura — não pela magia do objeto, mas pela
+            fé na palavra de Deus.
+          </p>
+          <p>
+            Jesus aplica essa imagem a si mesmo em João 3:14-15: "E assim como Moisés levantou a serpente no deserto,
+            assim importa que o Filho do Homem seja levantado; para que todo aquele que nele crê não pereça, mas tenha
+            a vida eterna." A cruz passa a ser vista como local de juízo — Cristo assume o juízo que o pecado merece —
+            e, ao mesmo tempo, de cura. Aquele que olha com fé para o Crucificado encontra vida.
+          </p>
+        </section>
+
+        <!-- 4. Salmos e Profetas -->
+        <section class="section-block" id="salmos-profetas">
+          <h2>4. Salmos e Profetas — A Cruz Revelada Antes de Acontecer</h2>
+          <p>
+            Nos Salmos e nos Profetas, a revelação da cruz atinge uma profundidade surpreendente. Textos escritos
+            séculos antes do Calvário descrevem com precisão aspectos da paixão de Cristo — o sofrimento, o abandono,
+            a substituição, a morte e a vitória. Isso não é coincidência; é o resultado da inspiração divina que
+            conduz a revelação progressivamente em direção ao seu cumprimento.
+          </p>
+
+          <h3>4.1. Salmo 22 — O Justo Sofredor</h3>
+          <p>
+            O Salmo 22 traz uma densidade impressionante. Escrito por Davi, ele descreve uma experiência de sofrimento
+            extremo que vai muito além do que o próprio Davi viveu. O clamor inicial — "Deus meu, Deus meu, por que
+            me desamparaste?" — é citado por Jesus na cruz (Mateus 27:46). A zombaria dos espectadores (v. 7-8), a
+            sede intensa (v. 15), a perfuração das mãos e dos pés (v. 16), o sorteio das vestes (v. 18) — todos esses
+            detalhes formam um retrato que a tradição cristã associa profundamente à paixão de Cristo.
+          </p>
+          <div class="verse-box">
+            "Deus meu, Deus meu, por que me desamparaste? Por que te alongas do meu socorro, e das palavras do meu
+            bramido?"
+            <cite>— Salmo 22:1</cite>
+          </div>
+          <p>
+            A cruz aparece aqui não apenas como morte física, mas como humilhação pública, exposição total e peso
+            espiritual insuportável. O grito de abandono não é descrença; é a expressão da profundidade do sofrimento
+            vicário — Cristo carregando o peso do pecado humano e experimentando a separação que o pecado produz.
+            Mas o salmo não termina em derrota: ele culmina em louvor e proclamação da vitória de Deus (v. 24-31).
+          </p>
+
+          <h3>4.2. Isaías 53 — O Centro da Teologia da Cruz</h3>
+          <p>
+            Isaías 53 é, provavelmente, o texto mais explícito sobre a morte vicária de Cristo em todo o Antigo
+            Testamento. Escrito mais de setecentos anos antes da crucificação, ele descreve o sofrimento do Servo
+            do Senhor com uma precisão que ultrapassa qualquer explicação natural. A linguagem da substituição é
+            cristalina e repetida:
+          </p>
+          <ul>
+            <li>"Ele foi desprezado e rejeitado pelos homens." (v. 3)</li>
+            <li>"Certamente ele tomou sobre si as nossas enfermidades e as nossas dores carregou." (v. 4)</li>
+            <li>"Mas ele foi traspassado pelas nossas transgressões e moído pelas nossas iniquidades." (v. 5)</li>
+            <li>"O Senhor fez cair sobre ele a iniquidade de nós todos." (v. 6)</li>
+            <li>"Pela sua ciência justificará o meu servo justo a muitos, e as iniquidades deles sobre si mesmo carregará." (v. 11)</li>
+          </ul>
+          <p>
+            O ponto central é a natureza vicária do sofrimento: o Servo não sofre por seus próprios pecados, mas pelos
+            pecados de outros. Não há aqui sofrimento aleatório ou injustiça sem propósito. Há propósito redentor
+            explícito. A cruz não é somente violência humana descontrolada; é o local em que Deus trata o pecado de
+            forma justa e graciosa ao mesmo tempo — a justiça recai sobre o Substituto; a graça é estendida ao
+            pecador.
+          </p>
+          <div class="verse-box">
+            "Mas ele foi traspassado pelas nossas transgressões, e moído pelas nossas iniquidades; o castigo que nos
+            traz a paz estava sobre ele, e pelas suas pisaduras fomos sarados."
+            <cite>— Isaías 53:5</cite>
+          </div>
+
+          <h3>4.3. Zacarias — O Traspassado e o Pastor Ferido</h3>
+          <p>
+            Zacarias 12:10 anuncia: "E derramarei sobre a casa de Davi e sobre os moradores de Jerusalém o espírito
+            de graça e de súplicas; e olharão para mim, a quem traspassaram." João 19:37 cita esse texto diretamente
+            ao descrever a lança que perfurou o lado de Jesus. A imagem do traspassado aprofunda a consciência de que
+            o Messias seria ferido de forma visível, histórica e reconhecível — e que esse ferimento seria o ponto de
+            partida para o luto, o arrependimento e a restauração.
+          </p>
+          <p>
+            Zacarias 13:7 acrescenta: "Desperta, ó espada, contra o meu pastor, e contra o homem que é meu companheiro,
+            diz o Senhor dos Exércitos; fere o pastor, e as ovelhas se dispersarão." Jesus cita esse texto em Mateus
+            26:31, aplicando-o à sua própria morte e ao abandono dos discípulos. O Pastor ferido é o Messias; a
+            dispersão das ovelhas é o prelúdio da reunião que a ressurreição tornará possível.
+          </p>
+        </section>
+
+        <!-- 5. Evangelhos -->
+        <section class="section-block" id="evangelhos">
+          <h2>5. Evangelhos — A Cruz na História</h2>
+          <p>
+            Nos Evangelhos, a cruz deixa de ser promessa e figura para se tornar acontecimento histórico. Jesus não
+            tropeça na cruz. Ele caminha em direção a ela com consciência plena de sua missão. Desde o início de seu
+            ministério, ele anuncia sua morte e ressurreição (Marcos 8:31; 9:31; 10:33-34). A cruz não é uma surpresa
+            para ele; é o destino para o qual toda a sua vida aponta.
+          </p>
+
+          <h3>5.1. A Cruz como Clímax da Missão</h3>
+          <p>
+            Os Evangelhos são construídos de forma que a narrativa da paixão ocupa uma proporção desproporcional do
+            texto — cerca de um terço de cada Evangelho. Isso não é acidental. Os evangelistas compreenderam que a
+            morte e ressurreição de Jesus são o centro de sua mensagem, não apenas um episódio entre outros. Tudo
+            antes da paixão prepara; tudo depois a interpreta.
+          </p>
+          <p>
+            A cruz concentra rejeição religiosa, injustiça política, violência pública e o desvendamento do coração
+            humano em toda a sua profundidade. Ali, o pecado se expõe com toda sua gravidade — a humanidade rejeita
+            o Filho de Deus. Entretanto, ao mesmo tempo, Deus conduz a história segundo seu propósito redentor. O
+            que os homens fazem por maldade, Deus usa para realizar a maior obra de sua graça.
+          </p>
+
+          <h3>5.2. A Humilhação do Filho</h3>
+          <p>
+            A narrativa da paixão nos Evangelhos é deliberadamente detalhada em sua descrição da humilhação de Jesus.
+            A condenação injusta, o escárnio dos soldados, a coroa de espinhos, os açoites, a exposição pública na
+            cruz, as zombarias dos passantes — tudo isso revela que a cruz não é apenas morte física; é vergonha,
+            esvaziamento e entrega total. Paulo captura isso em Filipenses 2:8: "E, achado na forma de homem, humilhou-se
+            a si mesmo, sendo obediente até à morte, e morte de cruz."
+          </p>
+          <p>
+            A morte de cruz era a forma de execução mais humilhante no mundo romano, reservada para escravos e
+            criminosos das classes mais baixas. Para um judeu, havia ainda a dimensão de Deuteronômio 21:23: "maldito
+            todo aquele que for pendurado no madeiro." Cristo não apenas morreu; ele morreu carregando a maldição que
+            o pecado humano merecia (Gálatas 3:13).
+          </p>
+
+          <h3>5.3. "Está Consumado" — João 19:30</h3>
+          <div class="verse-box">
+            "Quando Jesus, pois, tomou o vinagre, disse: Está consumado. E, inclinando a cabeça, entregou o espírito."
+            <cite>— João 19:30</cite>
+          </div>
+          <p>
+            A palavra grega <em>tetelestai</em> — traduzida como "está consumado" — era usada no mundo antigo para
+            indicar que uma dívida havia sido paga integralmente. Não comunica derrota, mas cumprimento perfeito.
+            O que estava prometido em Gênesis 3:15, prefigurado no cordeiro pascal, cantado no Salmo 22, anunciado
+            em Isaías 53 — tudo isso é levado à sua plenitude histórica nesse momento. A cruz é o ponto em que o
+            plano eterno de redenção entra em sua consumação histórica.
+          </p>
+        </section>
+
+        <!-- 6. Cartas -->
+        <section class="section-block" id="cartas">
+          <h2>6. As Cartas Apostólicas — O Significado da Cruz</h2>
+          <p>
+            Depois da ressurreição e da ascensão, os apóstolos passam a interpretar a cruz com profundidade teológica
+            crescente. O evento histórico é lido à luz da aliança, do templo, da expiação, da reconciliação e da
+            vitória sobre os poderes do mal. As cartas do Novo Testamento constituem a teologia mais sistemática da
+            cruz que a Bíblia oferece.
+          </p>
+
+          <h3>6.1. A Cruz como Substituição</h3>
+          <p>
+            Cristo morre em favor de pecadores — no lugar deles, não apenas em benefício deles. Ele assume aquilo que
+            pertencia ao homem: culpa, condenação e sentença. "Aquele que não conheceu pecado, o fez pecado por nós,
+            para que nele fôssemos feitos justiça de Deus" (2 Coríntios 5:21). Isso não torna o pecado leve; torna a
+            graça mais espantosa. A substituição penal é o coração da expiação: a justiça de Deus é satisfeita porque
+            o julgamento recai sobre o Substituto; a graça de Deus é manifestada porque o pecador é perdoado.
+          </p>
+
+          <h3>6.2. A Cruz como Redenção</h3>
+          <p>
+            Redenção é linguagem de resgate — a libertação de um escravo mediante pagamento de preço. "Foste comprado
+            por preço" (1 Coríntios 6:20). O homem, escravo do pecado e da morte, não se liberta sozinho. Ele é
+            comprado, resgatado e trazido para uma nova condição diante de Deus. Pedro escreve: "Sabendo que não com
+            coisas corruptíveis, como prata ou ouro, fostes resgatados da vossa vã maneira de viver... mas com o
+            precioso sangue de Cristo, como de um cordeiro sem mácula e sem contaminação" (1 Pedro 1:18-19).
+          </p>
+
+          <h3>6.3. A Cruz como Reconciliação</h3>
+          <p>
+            O pecado criou inimizade entre Deus e o homem — não apenas distância, mas hostilidade ativa. A cruz
+            derruba o muro de separação. "Deus estava em Cristo reconciliando consigo o mundo, não lhes imputando
+            os seus pecados" (2 Coríntios 5:19). A reconciliação não é apenas perdão interior; ela reabre o caminho
+            para a comunhão. O véu do templo rasgado de cima a baixo (Mateus 27:51) é o símbolo visual dessa
+            realidade: o acesso à presença de Deus foi restaurado.
+          </p>
+
+          <h3>6.4. A Cruz como Vitória Cósmica</h3>
+          <p>
+            Paulo descreve a cruz como o local onde Cristo "despojou os principados e as potestades, e os expôs
+            publicamente, triunfando sobre eles" (Colossenses 2:15). O mal, a acusação e os poderes que escravizam
+            são confrontados e derrotados na cruz. O aparente fracasso se revela triunfo divino. O Crucificado vence
+            não apesar da cruz, mas precisamente por meio dela. A morte é vencida pela morte; o acusador é silenciado
+            pelo sangue do Cordeiro (Apocalipse 12:11).
+          </p>
+          <div class="info-box">
+            <strong>Síntese das imagens apostólicas da cruz:</strong> substituição (o Filho morre no lugar do pecador),
+            redenção (o escravo é libertado mediante preço), reconciliação (o inimigo é trazido de volta à comunhão),
+            propiciação (a ira justa de Deus é satisfeita), vitória (os poderes do mal são derrotados). Nenhuma
+            imagem isolada esgota o significado da cruz; juntas, elas revelam sua riqueza inesgotável.
+          </div>
+        </section>
+
+        <!-- 7. Apocalipse -->
+        <section class="section-block" id="apocalipse">
+          <h2>7. Apocalipse — O Cordeiro no Centro do Trono</h2>
+          <p>
+            Em Apocalipse, a glória não apaga a cruz. O Cristo exaltado é contemplado como Cordeiro — a imagem do
+            sacrifício permanece no centro da visão celestial. O céu não celebra apenas poder; celebra o sacrifício
+            que fundamenta a redenção. A marca da cruz permanece teologicamente central na eternidade.
+          </p>
+          <div class="verse-box">
+            "E olhei, e vi que no meio do trono e dos quatro animais e no meio dos anciãos estava um Cordeiro como
+            se tivesse sido morto."
+            <cite>— Apocalipse 5:6</cite>
+          </div>
+          <p>
+            A imagem é deliberada e poderosa: o Cordeiro está "como se tivesse sido morto" — as marcas do sacrifício
+            são visíveis no Cristo glorificado. Isso significa que a cruz não foi um momento a ser superado ou
+            esquecido, mas o fundamento eterno da adoração. O Cordeiro não é uma imagem passageira; ele é a identidade
+            eterna do Redentor glorificado.
+          </p>
+          <p>
+            Os vinte e quatro anciãos e os quatro seres viventes prostram-se diante do Cordeiro e cantam um cântico
+            novo: "Digno és de tomar o livro e de abrir os seus selos; porque foste morto e com o teu sangue nos
+            resgataste para Deus, de todo o gênero, e língua, e povo, e nação" (Apocalipse 5:9). A razão da adoração
+            celestial é o sangue do Cordeiro — a obra da cruz. A vitória final do Reino é lida à luz do sacrifício.
+            O trono e o sacrifício não estão em oposição; estão unidos na pessoa do Cordeiro que é também o Leão
+            da tribo de Judá.
+          </p>
+          <p>
+            Apocalipse também revela que os redimidos vencem "pelo sangue do Cordeiro e pela palavra do seu
+            testemunho" (12:11). A cruz não é apenas o fundamento da salvação passada; é a arma da vitória presente
+            e futura. Aqueles que foram redimidos pelo sangue do Cordeiro vivem e morrem à luz dessa redenção.
+          </p>
+        </section>
+
+        <!-- 8. Fio Central -->
+        <section class="section-block" id="fio-central">
+          <h2>8. O Fio Central da Escritura</h2>
+          <p>
+            Quando observamos a Bíblia em sua totalidade, um fio vermelho — literalmente, o fio do sangue redentor —
+            atravessa toda a sua estrutura narrativa e teológica. Cada grande seção da Escritura contribui com um
+            aspecto específico para a compreensão da cruz:
+          </p>
+          <ul>
+            <li><strong>Gênesis:</strong> a cruz é prometida — a semente da mulher esmagará a cabeça da serpente.</li>
+            <li><strong>Êxodo:</strong> a cruz é prefigurada — o cordeiro pascal morre para que o povo seja liberto.</li>
+            <li><strong>Levítico:</strong> a cruz é ensinada — o sistema sacrificial revela a lógica da expiação.</li>
+            <li><strong>Números:</strong> a cruz é erguida — a serpente de bronze aponta para o Crucificado que cura.</li>
+            <li><strong>Salmos:</strong> a cruz é cantada — o sofrimento do justo e o triunfo de Deus.</li>
+            <li><strong>Profetas:</strong> a cruz é anunciada — o Servo sofredor carrega os pecados de muitos.</li>
+            <li><strong>Evangelhos:</strong> a cruz acontece — o Filho de Deus morre e ressuscita na história.</li>
+            <li><strong>Cartas:</strong> a cruz é interpretada — substituição, redenção, reconciliação, vitória.</li>
+            <li><strong>Apocalipse:</strong> a cruz é glorificada — o Cordeiro imolado está no centro do trono eterno.</li>
+          </ul>
+          <div class="highlight-box">
+            <strong>Síntese teológica:</strong> a Bíblia inteira converge para Cristo, e Cristo se revela de maneira
+            suprema no mistério da cruz. Não há parte da Escritura que seja indiferente à cruz; toda ela, de alguma
+            forma, prepara, anuncia, realiza ou interpreta o que Deus fez em Cristo no Calvário. Compreender isso é
+            compreender a unidade orgânica das Escrituras e a coerência do plano redentor de Deus.
+          </div>
+        </section>
+
+        <!-- 9. Perguntas -->
+        <section class="section-block" id="reflexoes">
+          <div class="questions-box">
+            <h2>9. Perguntas que Confrontam o Agora</h2>
+            <ol>
+              <li>Se a cruz foi necessária para tratar o pecado com justiça, o que isso revela sobre a gravidade do pecado em sua vida hoje?</li>
+              <li>Você trata a cruz como símbolo religioso ou como realidade viva que exige resposta pessoal e transformação?</li>
+              <li>O que ainda não morreu em você que deveria ter sido crucificado com Cristo (Gálatas 2:20)?</li>
+              <li>Você vive como alguém verdadeiramente redimido ou como alguém ainda governado por velhas correntes e padrões de pecado?</li>
+              <li>Sua fé está firmada na obra objetiva da cruz ou em emoções passageiras e experiências subjetivas?</li>
+              <li>Você segue o Cristo crucificado e ressurreto ou apenas uma ideia confortável e domesticada de Jesus?</li>
+              <li>A cruz transformou efetivamente sua maneira de viver, suas prioridades e seus relacionamentos?</li>
+              <li>Você reconhece o custo infinito da salvação ou trata a graça com superficialidade e descuido?</li>
+              <li>Seu modo de viver aponta para o Cordeiro que foi morto ou para a glorificação do próprio ego?</li>
+              <li>Se o céu eterno celebra o Cordeiro imolado, por que sua vida ainda insiste em celebrar a si mesma?</li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- 10. Conclusão -->
+        <section class="section-block mb-0" id="conclusao">
+          <h2>10. Conclusão</h2>
+          <p>
+            A cruz não é apenas um episódio do passado. Ela é o centro da história da redenção, o ponto mais alto
+            da revelação do amor divino e o lugar em que o pecado é tratado com seriedade absoluta. Em Cristo, Deus
+            não ignora a justiça nem abandona a misericórdia; Ele une ambas de forma perfeita e inseparável. A
+            santidade de Deus é honrada; o amor de Deus é manifestado; o pecador é salvo.
+          </p>
+          <p>
+            De Gênesis ao Apocalipse, a Escritura aponta para o Cordeiro. Toda promessa, toda sombra, todo altar,
+            toda profecia e toda esperança encontram sua plenitude na cruz e sua confirmação no Cristo glorificado.
+            A ressurreição não anula a cruz; ela a confirma e a proclama como vitória definitiva sobre o pecado, a
+            morte e o inferno.
+          </p>
+          <p>
+            Diante da cruz, ninguém permanece neutro. Ela exige contemplação — olhar com honestidade para o que o
+            pecado custou. Ela exige arrependimento — reconhecer que somos os que merecíamos o julgamento. Ela exige
+            fé — confiar que o que Cristo fez é suficiente e definitivo. Ela exige rendição — entregar a vida àquele
+            que a entregou por nós. E ela exige vida transformada — viver de forma que o amor da cruz seja visível
+            em tudo o que somos e fazemos.
+          </p>
+          <div class="highlight-box">
+            <strong>Conclusão final:</strong> a cruz não é apenas parte da mensagem cristã; ela é o coração da
+            mensagem. Remova a cruz e o evangelho perde seu poder; mantenha-a no centro e toda a Escritura brilha
+            com a glória do Deus que salva.
+          </div>
+        </section>
+
+      </div><!-- /.article-content -->
+    </div><!-- /.article-card -->
+
+    <div class="footer-note">
+      Estudo preparado para o projeto <strong>365 de Graça &amp; Adoração</strong> &nbsp;•&nbsp;
+      Tema: <em>A Cruz de Cristo — De Gênesis ao Apocalipse</em>
+    </div>
+  </div><!-- /.container -->
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <p>365 de Graça &amp; Adoração · Projeto de Estudo Bíblico Completo</p>
+</footer>
+
+<!-- Dark Mode Toggle -->
+<div id="dark-toggle" role="button" aria-label="Alternar modo claro/escuro" title="Alternar modo claro/escuro">🌙</div>
+
+<!-- WhatsApp CTA -->
+<a id="whatsapp-cta"
+   href="https://wa.me/?text=Estudo%20sobre%20A%20Cruz%20de%20Cristo%20no%20365%20de%20Gra%C3%A7a%20%26%20Adora%C3%A7%C3%A3o%3A%20https%3A%2F%2F365gracaeadoracao.com%2Festudos%2Fcruz-de-cristo%2F"
+   target="_blank"
+   title="Compartilhar no WhatsApp"
+   aria-label="Compartilhar no WhatsApp">📲</a>
+
+<script>
+(function() {
+  var saved = localStorage.getItem('365-theme');
+  if (saved === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+})();
+
+document.getElementById('dark-toggle').addEventListener('click', function() {
+  var html = document.documentElement;
+  var current = html.getAttribute('data-theme');
+  if (current === 'light') {
+    html.removeAttribute('data-theme');
+    localStorage.setItem('365-theme', 'dark');
+    this.textContent = '🌙';
+  } else {
+    html.setAttribute('data-theme', 'light');
+    localStorage.setItem('365-theme', 'light');
+    this.textContent = '☀️';
+  }
+});
+</script>
+
+</body>
+</html>
