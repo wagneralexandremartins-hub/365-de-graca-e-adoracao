@@ -1,261 +1,593 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gênesis — Projeto 365</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="stylesheet" href="/assets/css/bloco.css">
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <!-- SEO Otimizado -->
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="Wagner Alexandre Martins">
-  <link rel="canonical" href="https://365gracaeadoracao.com/genesis/index">
-  <!-- Open Graph -->
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="Gênesis — Projeto 365">
-  <meta property="og:description" content="Estudo bíblico aprofundado da Criação ao Apocalipse. Análise exegética versículo por versículo com contexto histórico e teológico.">
-  <meta property="og:url" content="https://365gracaeadoracao.com/genesis/index">
-  <meta property="og:image" content="https://365gracaeadoracao.com/assets/img/og-cover.jpg">
-  <meta property="og:site_name" content="365 de Graça &amp; Adoração">
-  <meta property="og:locale" content="pt_BR">
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Gênesis — Projeto 365">
-  <meta name="twitter:description" content="Estudo bíblico aprofundado da Criação ao Apocalipse. Análise exegética versículo por versículo com contexto histórico e teológico.">
-  <meta name="twitter:image" content="https://365gracaeadoracao.com/assets/img/og-cover.jpg">
+
+  <title>Gênesis: estudo bíblico completo, contexto histórico e explicação capítulo por capítulo | 365 Graça &amp; Adoração</title>
+  <meta name="description" content="Estudo bíblico completo de Gênesis com contexto histórico, análise teológica, explicação capítulo por capítulo, personagens, temas centrais e aplicação prática." />
+  <meta name="keywords" content="Gênesis, estudo bíblico de Gênesis, Gênesis explicado, contexto histórico de Gênesis, análise de Gênesis, Bíblia, Antigo Testamento, criação, Adão e Eva, Noé, Abraão, José do Egito" />
+  <meta name="author" content="365 Graça &amp; Adoração" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://365gracaeadoracao.com/genesis/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Gênesis: estudo bíblico completo e contexto histórico" />
+  <meta property="og:description" content="Explore o livro de Gênesis com profundidade: criação, queda, dilúvio, patriarcas e a formação das promessas bíblicas." />
+  <meta property="og:url" content="https://365gracaeadoracao.com/genesis/" />
+  <meta property="og:image" content="https://365gracaeadoracao.com/assets/img/logo-header.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gênesis: estudo bíblico completo e contexto histórico" />
+  <meta name="twitter:description" content="Uma página pilar para estudar Gênesis capítulo por capítulo com profundidade bíblica e aplicação prática." />
+  <meta name="twitter:image" content="https://365gracaeadoracao.com/assets/img/logo-header.png" />
+
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --brand: #8b5cf6;
+      --brand-dark: #6d28d9;
+      --line: #e5e7eb;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: #f8fafc; color: var(--text); line-height: 1.7; }
+    a { color: var(--brand-dark); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { width: min(1140px, 92%); margin: 0 auto; }
+
+    /* TOPBAR */
+    .topbar { background: #0b1020; color: var(--white); border-bottom: 1px solid rgba(255,255,255,.08); }
+    .topbar .container { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 14px 0; flex-wrap: wrap; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; color: var(--white); }
+    .brand img { height: 48px; width: auto; display: block; }
+    .menu { display: flex; gap: 18px; flex-wrap: wrap; }
+    .menu a { color: rgba(255,255,255,.92); font-size: 0.96rem; }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(rgba(15,23,42,.82), rgba(15,23,42,.88)),
+        url('https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: var(--white); padding: 90px 0 70px;
+    }
+    .hero .eyebrow { display: inline-block; font-size: 0.9rem; letter-spacing: .08em; text-transform: uppercase; color: #ddd6fe; margin-bottom: 14px; font-weight: 700; }
+    .hero h1 { font-family: 'Merriweather', serif; font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.2; margin-bottom: 18px; max-width: 900px; }
+    .hero p { font-size: 1.08rem; color: rgba(255,255,255,.92); max-width: 860px; margin-bottom: 24px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 18px; }
+
+    /* BUTTONS */
+    .btn { display: inline-block; padding: 14px 20px; border-radius: 12px; font-weight: 700; transition: .2s ease; }
+    .btn-primary { background: var(--brand); color: #fff; }
+    .btn-primary:hover { background: var(--brand-dark); text-decoration: none; }
+    .btn-outline { border: 1px solid rgba(255,255,255,.25); color: #fff; background: rgba(255,255,255,.06); }
+    .btn-outline:hover { background: rgba(255,255,255,.12); text-decoration: none; }
+
+    /* SECTIONS */
+    .section { padding: 64px 0; }
+    .section-alt { background: #f1f5f9; }
+    .section-title { font-family: 'Merriweather', serif; font-size: clamp(1.6rem, 3vw, 2.4rem); margin-bottom: 12px; color: #111827; }
+    .section-subtitle { color: var(--muted); max-width: 860px; margin-bottom: 28px; }
+
+    /* GRIDS */
+    .grid { display: grid; gap: 24px; }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+    /* CARDS */
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 24px; box-shadow: 0 10px 30px rgba(15,23,42,.05); }
+    .card h3 { font-size: 1.15rem; margin-bottom: 10px; color: #111827; }
+    .card p { color: #4b5563; font-size: 0.98rem; }
+    .card-icon { font-size: 2rem; margin-bottom: 12px; }
+
+    /* CHAPTERS */
+    .chapters-list, .topics-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; list-style: none; margin-top: 12px; }
+    .chapters-list li a, .topics-list li a { display: block; background: #fff; border: 1px solid var(--line); padding: 14px 16px; border-radius: 14px; font-weight: 600; color: #1f2937; transition: .15s ease; }
+    .chapters-list li a:hover, .topics-list li a:hover { border-color: #c4b5fd; background: #faf5ff; text-decoration: none; }
+    .chapters-list li a small { display: block; font-weight: 400; color: #6b7280; font-size: 0.88rem; margin-top: 4px; }
+
+    /* HIGHLIGHT */
+    .highlight { background: linear-gradient(135deg, #faf5ff, #eef2ff); border: 1px solid #ddd6fe; border-radius: 20px; padding: 32px; }
+    .highlight h2 { font-family: 'Merriweather', serif; margin-bottom: 12px; color: #111827; }
+    .highlight p { color: #374151; line-height: 1.8; margin-bottom: 12px; }
+
+    /* TIMELINE */
+    .timeline { list-style: none; position: relative; padding-left: 28px; }
+    .timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: #ddd6fe; }
+    .timeline li { position: relative; margin-bottom: 20px; padding-left: 16px; }
+    .timeline li::before { content: ''; position: absolute; left: -20px; top: 6px; width: 10px; height: 10px; border-radius: 50%; background: var(--brand); }
+    .timeline li strong { color: #111827; }
+    .timeline li span { color: #6b7280; font-size: 0.95rem; }
+
+    /* FAQ */
+    .faq details { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; margin-bottom: 14px; }
+    .faq summary { font-weight: 700; cursor: pointer; color: #111827; }
+    .faq p { margin-top: 12px; color: #4b5563; line-height: 1.7; }
+
+    /* BREADCRUMB */
+    .breadcrumb { font-size: .95rem; margin-bottom: 18px; color: #cbd5e1; }
+    .breadcrumb a { color: #e9d5ff; }
+
+    /* STATS */
+    .stats-bar { background: #0b1020; color: var(--white); padding: 28px 0; }
+    .stats-bar .container { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; }
+    .stat-item { text-align: center; }
+    .stat-item .num { font-size: 2.2rem; font-weight: 700; color: #ddd6fe; display: block; }
+    .stat-item .label { font-size: 0.9rem; color: rgba(255,255,255,.7); }
+
+    /* PERSONAGENS */
+    .personagem-card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 20px; text-align: center; }
+    .personagem-card .emoji { font-size: 2.5rem; margin-bottom: 10px; }
+    .personagem-card h4 { font-size: 1.05rem; color: #111827; margin-bottom: 6px; }
+    .personagem-card p { font-size: 0.9rem; color: #6b7280; }
+
+    /* FOOTER */
+    .footer { background: #0b1020; color: rgba(255,255,255,.88); padding: 40px 0; margin-top: 30px; }
+    .footer h3 { color: #fff; margin-bottom: 8px; }
+    .footer p { color: rgba(255,255,255,.78); }
+    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 16px; }
+    .footer-links a { color: #ddd6fe; font-size: 0.95rem; }
+
+    @media (max-width: 900px) {
+      .grid-3, .grid-2, .grid-4, .chapters-list, .topics-list { grid-template-columns: 1fr; }
+      .hero { padding: 72px 0 56px; }
+    }
+  </style>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Gênesis — Projeto 365",
-    "description": "Estudo bíblico aprofundado da Criação ao Apocalipse. Análise exegética versículo por versículo com contexto histórico e teológico.",
-    "url": "https://365gracaeadoracao.com/genesis/index",
-    "author": {
-      "@type": "Person",
-      "name": "Wagner Alexandre Martins"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "365 de Graça & Adoração",
-      "url": "https://365gracaeadoracao.com"
-    },
-    "inLanguage": "pt-BR"
+    "@type": "CollectionPage",
+    "name": "Gênesis: estudo bíblico completo e contexto histórico",
+    "url": "https://365gracaeadoracao.com/genesis/",
+    "description": "Página pilar do livro de Gênesis com estudo bíblico, contexto histórico, capítulos, temas, personagens e perguntas frequentes.",
+    "isPartOf": { "@type": "WebSite", "name": "365 Graça & Adoração", "url": "https://365gracaeadoracao.com/" },
+    "about": ["Livro de Gênesis","Criação","Queda","Dilúvio","Abraão","José do Egito","Patriarcas","Antigo Testamento"]
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://365gracaeadoracao.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Antigo Testamento", "item": "https://365gracaeadoracao.com/01-antigo-testamento" },
+      { "@type": "ListItem", "position": 3, "name": "Gênesis", "item": "https://365gracaeadoracao.com/genesis/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "O que significa Gênesis na Bíblia?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Gênesis significa origem, começo ou nascimento. É o livro que apresenta os fundamentos da criação, da humanidade, do pecado e das promessas divinas. O nome vem do grego 'génesis', tradução do hebraico 'Bereshit' (no princípio)." }
+      },
+      {
+        "@type": "Question",
+        "name": "Qual é o tema principal do livro de Gênesis?",
+        "acceptedAnswer": { "@type": "Answer", "text": "O tema principal é o início de todas as coisas sob a soberania de Deus: criação, queda, juízo, graça e o começo da história da redenção. Gênesis revela quem é Deus, quem é o ser humano e qual é o plano divino para restaurar a humanidade." }
+      },
+      {
+        "@type": "Question",
+        "name": "Quantos capítulos tem o livro de Gênesis?",
+        "acceptedAnswer": { "@type": "Answer", "text": "O livro de Gênesis possui 50 capítulos e 1.533 versículos, divididos em duas grandes seções: a História Primeva (capítulos 1 a 11) e a História Patriarcal (capítulos 12 a 50)." }
+      },
+      {
+        "@type": "Question",
+        "name": "O que é a promessa messiânica em Gênesis 3:15?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Gênesis 3:15 é chamado de 'Protoevangelium' (primeiro evangelho). Deus promete que a descendência da mulher esmagará a cabeça da serpente — a primeira promessa do Messias, cumprida em Jesus Cristo." }
+      },
+      {
+        "@type": "Question",
+        "name": "Como Gênesis se relaciona com o Novo Testamento?",
+        "acceptedAnswer": { "@type": "Answer", "text": "O Novo Testamento cita ou alude a Gênesis mais de 200 vezes. Paulo usa Abraão como modelo de justificação pela fé (Rm 4; Gl 3). João inicia seu evangelho com 'No princípio' (Jo 1:1), ecoando Gênesis 1:1. O Apocalipse retoma os temas do Éden na Nova Criação (Ap 22)." }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-<!-- Seletor de Idioma Flutuante -->
-<div id="lang-selector" style="
-  position: fixed;
-  top: 14px;
-  right: 16px;
-  z-index: 9999;
-  display: flex;
-  gap: 6px;
-  background: rgba(15,23,42,0.92);
-  border: 1px solid #334155;
-  border-radius: 30px;
-  padding: 5px 10px;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
-">
-  <a href="/" title="Português" style="text-decoration:none;font-size:1.1rem;opacity:0.95;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">🇧🇷</a>
-  <a href="/en/" title="English" style="text-decoration:none;font-size:1.1rem;opacity:0.7;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">🇺🇸</a>
-  <a href="/es/" title="Español" style="text-decoration:none;font-size:1.1rem;opacity:0.7;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">🇪🇸</a>
-</div>
 
-  <div class="topbar">
-    <div class="inner">
-            <a href="/" class="brand" aria-label="365 Graça e Adoração">
-        <img src="/assets/img/logo-header.png" alt="365 Graça e Adoração" class="brand-logo-img" style="height:42px;width:auto;display:block;">
-        <div class="brand-text">
-          365 Graça &amp; Adoração
-          <small>Da Criação ao Apocalipse</small>
-        </div>
+  <header class="topbar">
+    <div class="container">
+      <a class="brand" href="/">
+        <img src="/assets/img/logo-header.png" alt="Logo 365 Graça &amp; Adoração" />
+        <span>365 Graça &amp; Adoração</span>
       </a>
-      <nav class="nav">
+      <nav class="menu" aria-label="Navegação principal">
         <a href="/">Início</a>
-        <a class="active" href="/genesis/index.html">Gênesis</a>
-        <a href="/01_PENTATEUCO/02_CONTEXTO_HISTORICO/03_LINHA_DO_TEMPO/01_PENTATEUCO/02_CONTEXTO_HISTORICO/03_LINHA_DO_TEMPO/linha-do-tempo.html">Linha do Tempo</a>
+        <a href="/01-antigo-testamento">Antigo Testamento</a>
+        <a href="/genesis/" aria-current="page">Gênesis</a>
+        <a href="/02-pentateuco/genesis/">Blocos de Gênesis</a>
+        <a href="/personagens">Personagens</a>
       </nav>
     </div>
-  </div>
+  </header>
 
-  <main class="wrap">
+  <main>
+
+    <!-- HERO -->
     <section class="hero">
-      <div class="content">
-        <div>
-          <span class="pill">📘 Hub</span>
-          <h1>Gênesis</h1>
-          <p>Central de conteúdos do livro de Gênesis no Projeto 365.</p>
-          <div class="actions">
-            <a class="btn primary" href="/genesis/00-o-principio-de-tudo.html">▶ O Princípio de Tudo</a>
-            <a class="btn" href="/genesis/02-adao-e-a-graca.html">Adão e a Graça</a>
-          </div>
-        </div>
-
-        <div class="card" style="width:100%; max-width:340px; justify-self:end;">
-          <div class="poster" style="height:160px; background-color: #2a2a2a; display: flex; align-items: center; justify-content: center;">
-            <span class="tag">Destaque</span>
-          </div>
-          <div class="body">
-            <h3>Linha do Tempo (Gn 1–5)</h3>
-            <p>Visão histórica e teológica até Noé.</p>
-            <a href="/01_PENTATEUCO/02_CONTEXTO_HISTORICO/03_LINHA_DO_TEMPO/01_PENTATEUCO/02_CONTEXTO_HISTORICO/03_LINHA_DO_TEMPO/linha-do-tempo.html">Abrir →</a>
-          </div>
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Caminho de navegação">
+          <a href="/">Início</a> ›
+          <a href="/01-antigo-testamento">Antigo Testamento</a> ›
+          <span>Gênesis</span>
+        </nav>
+        <span class="eyebrow">Página pilar de estudo bíblico</span>
+        <h1>Gênesis: estudo bíblico completo, contexto histórico e explicação capítulo por capítulo</h1>
+        <p>
+          Explore o livro de Gênesis com profundidade, reverência e clareza. Aqui você encontrará visão panorâmica,
+          contexto histórico, estrutura literária, temas centrais, personagens marcantes e acesso organizado a todos os 50 capítulos.
+          Gênesis é o fundamento de toda a narrativa bíblica — e entendê-lo transforma a leitura de toda a Escritura.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#capitulos">Começar estudo de Gênesis</a>
+          <a class="btn btn-outline" href="#temas">Ver temas principais</a>
+          <a class="btn btn-outline" href="#personagens">Personagens</a>
         </div>
       </div>
     </section>
 
+    <!-- STATS -->
+    <div class="stats-bar">
+      <div class="container">
+        <div class="stat-item"><span class="num">50</span><span class="label">Capítulos</span></div>
+        <div class="stat-item"><span class="num">1.533</span><span class="label">Versículos</span></div>
+        <div class="stat-item"><span class="num">4</span><span class="label">Patriarcas principais</span></div>
+        <div class="stat-item"><span class="num">~2.000</span><span class="label">Anos de história</span></div>
+        <div class="stat-item"><span class="num">1º</span><span class="label">Livro da Bíblia</span></div>
+      </div>
+    </div>
+
+    <!-- POR QUE ESTUDAR -->
     <section class="section">
-      <div class="section-header">
-        <div>
-          <h2 class="section-title">Estudos</h2>
-          <p class="section-sub">Acesse por cards</p>
+      <div class="container">
+        <h2 class="section-title">Por que estudar Gênesis?</h2>
+        <p class="section-subtitle">
+          Gênesis é o livro dos começos. Nele encontramos a criação, a entrada do pecado no mundo,
+          o juízo divino, a graça preservadora, o início das alianças e a formação da linhagem da promessa.
+          Toda a narrativa bíblica posterior se apoia, de algum modo, nos fundamentos estabelecidos aqui.
+        </p>
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="card-icon">🌍</div>
+            <h3>Fundamento da criação</h3>
+            <p>Gênesis apresenta Deus como Criador soberano, eterno e ordenador de todas as coisas. A criação não foi acidente — foi ato intencional de um Deus pessoal e relacional.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🍎</div>
+            <h3>Origem da queda</h3>
+            <p>O livro mostra como o pecado entrou na história humana e quais foram suas consequências espirituais, morais e relacionais. A queda explica a condição universal da humanidade.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">✨</div>
+            <h3>Início da promessa</h3>
+            <p>Da semente prometida em Gênesis 3:15 até a bênção de Jacó sobre Judá, Gênesis inicia o fio redentor que atravessa toda a Escritura e culmina em Jesus Cristo.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🤝</div>
+            <h3>Teologia das alianças</h3>
+            <p>As alianças com Adão, Noé e Abraão revelam o caráter de Deus: fiel, misericordioso e comprometido com a restauração da humanidade caída.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🏛️</div>
+            <h3>Contexto histórico</h3>
+            <p>Gênesis situa Israel dentro da história do Antigo Oriente Próximo, respondendo às grandes questões cosmológicas e antropológicas do mundo antigo com uma perspectiva radicalmente diferente.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🔮</div>
+            <h3>Tipologia e profecia</h3>
+            <p>José como tipo de Cristo, Isaque como figura do sacrifício, a serpente esmagada — Gênesis está repleto de tipos e sombras que apontam para o cumprimento no Novo Testamento.</p>
+          </article>
         </div>
-      </div>
-
-      <div class="row" style="display: flex; gap: 20px; flex-wrap: wrap;">
-        <article class="card">
-          <div class="poster" style="height:120px; background-color: #333;"><span class="tag">Estudo</span></div>
-          <div class="body">
-            <h3>O Princípio de Tudo</h3>
-            <p>Fundamentos da criação.</p>
-            <a href="/genesis/00-o-principio-de-tudo.html">Abrir →</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="poster" style="height:120px; background-color: #333;"><span class="tag">Estudo</span></div>
-          <div class="body">
-            <h3>Princípio da Adoração</h3>
-            <p>A adoração desde o início.</p>
-            <a href="/genesis/00-principio-da-adoracao.html">Abrir →</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="poster" style="height:120px; background-color: #333;"><span class="tag">Estudo</span></div>
-          <div class="body">
-            <h3>Adão e a Graça</h3>
-            <p>A graça desde o início.</p>
-            <a href="/genesis/02-adao-e-a-graca.html">Abrir →</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="poster" style="height:120px; background-color: #333;"><span class="tag">Estudo</span></div>
-          <div class="body">
-            <h3>Caim e Abel</h3>
-            <p>A primeira oferta e suas consequências.</p>
-            <a href="/genesis/03-caim-e-abel.html">Abrir →</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="poster" style="height:120px; background-color: #333;"><span class="tag">Estudo</span></div>
-          <div class="body">
-            <h3>Inveja na Adoração</h3>
-            <p>O pecado que afasta de Deus.</p>
-            <a href="/genesis/04-inveja-na-adoracao.html">Abrir →</a>
-          </div>
-        </article>
       </div>
     </section>
 
-    <footer class="footer" style="margin-top: 50px; padding: 20px; text-align: center; border-top: 1px solid #eee;">
-      Projeto 365 • Gênesis
-    </footer>
+    <!-- ESTRUTURA -->
+    <section class="section section-alt" id="estrutura">
+      <div class="container">
+        <h2 class="section-title">Estrutura do livro de Gênesis</h2>
+        <p class="section-subtitle">
+          Gênesis é organizado em torno de dez "gerações" (toledot em hebraico), cada uma introduzida pela fórmula "estas são as gerações de...". Essa estrutura literária revela a intenção do autor de mostrar como Deus conduz a história de geração em geração.
+        </p>
+        <div class="grid grid-2">
+          <article class="card">
+            <h3>📖 Gênesis 1–11: História Primeva</h3>
+            <p>
+              Criação (Gn 1–2), queda no Éden (Gn 3), Caim e Abel (Gn 4), genealogias de Adão a Noé (Gn 5),
+              corrupção humana e dilúvio (Gn 6–9), dispersão das nações (Gn 10) e Torre de Babel (Gn 11).
+              Essa seção revela a condição universal da humanidade e a necessidade urgente de redenção.
+              O pecado se expande em círculos cada vez mais amplos — do indivíduo, à família, à civilização inteira.
+            </p>
+          </article>
+          <article class="card">
+            <h3>📖 Gênesis 12–50: História Patriarcal</h3>
+            <p>
+              Abraão (Gn 12–25), Isaque (Gn 21–27), Jacó e Esaú (Gn 25–36) e José no Egito (Gn 37–50).
+              Aqui vemos o chamado, a promessa, a eleição, a providência e a preservação do povo que será
+              instrumento da história da salvação. Deus escolhe o fraco, o improvável e o pequeno para revelar
+              que a salvação vem exclusivamente da graça divina.
+            </p>
+          </article>
+        </div>
+
+        <div style="margin-top: 40px;">
+          <h3 style="font-family:'Merriweather',serif;font-size:1.4rem;margin-bottom:20px;color:#111827;">Linha do tempo de Gênesis</h3>
+          <ul class="timeline">
+            <li><strong>Criação (Gn 1–2)</strong> — <span>Deus cria os céus, a terra e o ser humano à sua imagem</span></li>
+            <li><strong>A Queda (Gn 3)</strong> — <span>Adão e Eva desobedecem; o pecado e a morte entram no mundo</span></li>
+            <li><strong>Caim e Abel (Gn 4)</strong> — <span>Primeiro assassinato; o pecado se expande na família humana</span></li>
+            <li><strong>Genealogia de Adão (Gn 5)</strong> — <span>Dez gerações de Adão a Noé; Enoque caminha com Deus</span></li>
+            <li><strong>O Dilúvio (Gn 6–9)</strong> — <span>Deus julga a humanidade corrompida; Noé e sua família são preservados</span></li>
+            <li><strong>Aliança com Noé (Gn 9)</strong> — <span>Deus promete nunca mais destruir a terra com dilúvio; o arco-íris como sinal</span></li>
+            <li><strong>Torre de Babel (Gn 11)</strong> — <span>Dispersão das nações; Deus confunde as línguas</span></li>
+            <li><strong>Chamado de Abraão (Gn 12)</strong> — <span>Deus chama Abrão de Ur; promessa de terra, nação e bênção universal</span></li>
+            <li><strong>Aliança abraâmica (Gn 15 e 17)</strong> — <span>Deus confirma o pacto; Abrão recebe o nome Abraão</span></li>
+            <li><strong>Nascimento de Isaque (Gn 21)</strong> — <span>O filho da promessa nasce quando Abraão tinha 100 anos</span></li>
+            <li><strong>Sacrifício de Isaque (Gn 22)</strong> — <span>Deus prova a fé de Abraão; o cordeiro substituto aponta para Cristo</span></li>
+            <li><strong>Jacó e Esaú (Gn 25–36)</strong> — <span>A eleição divina, a luta com o anjo, o nome Israel</span></li>
+            <li><strong>José vendido (Gn 37)</strong> — <span>Os irmãos vendem José como escravo por inveja</span></li>
+            <li><strong>José no Egito (Gn 39–41)</strong> — <span>Prisão, interpretação de sonhos, exaltação ao segundo posto do Egito</span></li>
+            <li><strong>Reconciliação (Gn 45–50)</strong> — <span>José revela sua identidade; família de Jacó migra para o Egito</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAPÍTULOS -->
+    <section class="section" id="capitulos">
+      <div class="container">
+        <h2 class="section-title">Todos os capítulos de Gênesis para estudo</h2>
+        <p class="section-subtitle">
+          Cada capítulo apresenta introdução, contexto histórico, análise exegética, aplicação prática e links internos.
+          Organize sua leitura de forma progressiva ou acesse diretamente o capítulo de seu interesse.
+        </p>
+
+        <h3 style="font-size:1.2rem;margin-bottom:16px;color:#374151;">Gênesis 1–11: História Primeva</h3>
+        <ul class="chapters-list">
+          <li><a href="/02-pentateuco/genesis/bloco-01/">Gênesis 1–11: A Criação e a Queda<small>Visão panorâmica da história primeva</small></a></li>
+          <li><a href="/genesis/genesis-1.html">Gênesis 1 explicado: a criação dos céus e da terra<small>Deus cria o universo em seis dias</small></a></li>
+          <li><a href="/genesis/genesis-2.html">Gênesis 2 explicado: a formação do homem e da mulher<small>O jardim do Éden e a aliança da vida</small></a></li>
+          <li><a href="/genesis/genesis-3.html">Gênesis 3 explicado: a queda e a promessa redentora<small>O pecado original e o Protoevangelium</small></a></li>
+          <li><a href="/genesis/genesis-4.html">Gênesis 4 explicado: Caim, Abel e a corrupção do coração<small>O primeiro assassinato e suas consequências</small></a></li>
+          <li><a href="/genesis/genesis-5.html">Gênesis 5 explicado: genealogia e continuidade da linhagem<small>De Adão a Noé; Enoque caminha com Deus</small></a></li>
+          <li><a href="/genesis/genesis-6.html">Gênesis 6 explicado: corrupção humana e anúncio do dilúvio<small>A maldade do homem e o chamado de Noé</small></a></li>
+          <li><a href="/genesis/genesis-7.html">Gênesis 7 explicado: o dilúvio e o juízo de Deus<small>As águas cobrem a terra; Noé é preservado</small></a></li>
+          <li><a href="/genesis/genesis-8.html">Gênesis 8 explicado: o recuo das águas e a esperança<small>A pomba, o ramo de oliveira e o novo começo</small></a></li>
+          <li><a href="/genesis/genesis-9.html">Gênesis 9 explicado: a aliança com Noé<small>O arco-íris como sinal do pacto eterno</small></a></li>
+          <li><a href="/genesis/genesis-10.html">Gênesis 10 explicado: as nações da terra<small>A tabela das nações e a dispersão dos povos</small></a></li>
+          <li><a href="/genesis/genesis-11.html">Gênesis 11 explicado: Torre de Babel e dispersão<small>O orgulho humano e a confusão das línguas</small></a></li>
+        </ul>
+
+        <h3 style="font-size:1.2rem;margin:32px 0 16px;color:#374151;">Gênesis 12–25: Abraão, o Pai da Fé</h3>
+        <ul class="chapters-list">
+          <li><a href="/02-pentateuco/genesis/bloco-02/">Gênesis 12–25: Abraão — O Pai da Fé<small>Visão panorâmica da vida de Abraão</small></a></li>
+          <li><a href="/genesis/genesis-12.html">Gênesis 12 explicado: o chamado de Abraão<small>Deus chama Abrão; a promessa universal</small></a></li>
+          <li><a href="/genesis/genesis-13.html">Gênesis 13 explicado: Abraão e Ló se separam<small>A generosidade de Abraão e a escolha de Ló</small></a></li>
+          <li><a href="/genesis/genesis-14.html">Gênesis 14 explicado: Abraão e Melquisedeque<small>A guerra dos reis e o sacerdote de Deus Altíssimo</small></a></li>
+          <li><a href="/genesis/genesis-15.html">Gênesis 15 explicado: a aliança de Deus com Abraão<small>A fé de Abraão imputada como justiça</small></a></li>
+          <li><a href="/genesis/genesis-16.html">Gênesis 16 explicado: Agar e Ismael<small>A impaciência humana e as consequências</small></a></li>
+          <li><a href="/genesis/genesis-17.html">Gênesis 17 explicado: a aliança da circuncisão<small>Abrão recebe o nome Abraão; sinal do pacto</small></a></li>
+          <li><a href="/genesis/genesis-18.html">Gênesis 18 explicado: os três visitantes e Sodoma<small>A promessa do filho e a intercessão de Abraão</small></a></li>
+          <li><a href="/genesis/genesis-19.html">Gênesis 19 explicado: destruição de Sodoma<small>O juízo divino e a fuga de Ló</small></a></li>
+          <li><a href="/genesis/genesis-20.html">Gênesis 20 explicado: Abraão e Abimeleque<small>A fé vacilante e a graça preservadora</small></a></li>
+          <li><a href="/genesis/genesis-21.html">Gênesis 21 explicado: nascimento de Isaque<small>O filho da promessa finalmente chega</small></a></li>
+          <li><a href="/genesis/genesis-22.html">Gênesis 22 explicado: o sacrifício de Isaque<small>A maior prova de fé e a figura do Messias</small></a></li>
+          <li><a href="/genesis/genesis-23.html">Gênesis 23 explicado: a morte de Sara<small>Abraão compra a primeira posse na terra prometida</small></a></li>
+          <li><a href="/genesis/genesis-24.html">Gênesis 24 explicado: a esposa para Isaque<small>A providência de Deus na busca de Rebeca</small></a></li>
+          <li><a href="/genesis/genesis-25.html">Gênesis 25 explicado: morte de Abraão e nascimento de Jacó<small>Esaú vende a primogenitura por um prato de lentilhas</small></a></li>
+        </ul>
+
+        <h3 style="font-size:1.2rem;margin:32px 0 16px;color:#374151;">Gênesis 26–36: Isaque e Jacó</h3>
+        <ul class="chapters-list">
+          <li><a href="/02-pentateuco/genesis/bloco-03/">Gênesis 25–36: Isaque e Jacó<small>Visão panorâmica da segunda geração patriarcal</small></a></li>
+          <li><a href="/genesis/genesis-26.html">Gênesis 26 explicado: Isaque e a aliança renovada<small>A promessa confirma-se na segunda geração</small></a></li>
+          <li><a href="/genesis/genesis-27.html">Gênesis 27 explicado: Jacó rouba a bênção<small>O engano, a eleição e os propósitos de Deus</small></a></li>
+          <li><a href="/genesis/genesis-28.html">Gênesis 28 explicado: a escada de Jacó<small>A visão em Betel e a renovação da aliança</small></a></li>
+          <li><a href="/genesis/genesis-29.html">Gênesis 29 explicado: Jacó e as filhas de Labão<small>O enganador é enganado; Lia e Raquel</small></a></li>
+          <li><a href="/genesis/genesis-30.html">Gênesis 30 explicado: os filhos de Jacó<small>As doze tribos de Israel começam a se formar</small></a></li>
+          <li><a href="/genesis/genesis-31.html">Gênesis 31 explicado: Jacó foge de Labão<small>A separação e o pacto de Mizpá</small></a></li>
+          <li><a href="/genesis/genesis-32.html">Gênesis 32 explicado: Jacó luta com Deus<small>O encontro transformador e o nome Israel</small></a></li>
+          <li><a href="/genesis/genesis-33.html">Gênesis 33 explicado: reconciliação com Esaú<small>O perdão e o reencontro dos irmãos</small></a></li>
+          <li><a href="/genesis/genesis-34.html">Gênesis 34 explicado: Diná e os siquemitas<small>A violência e suas consequências para a família</small></a></li>
+          <li><a href="/genesis/genesis-35.html">Gênesis 35 explicado: retorno a Betel<small>Renovação espiritual e morte de Raquel</small></a></li>
+          <li><a href="/genesis/genesis-36.html">Gênesis 36 explicado: os descendentes de Esaú<small>A genealogia de Edom e os reis de Seir</small></a></li>
+        </ul>
+
+        <h3 style="font-size:1.2rem;margin:32px 0 16px;color:#374151;">Gênesis 37–50: José no Egito</h3>
+        <ul class="chapters-list">
+          <li><a href="/02-pentateuco/genesis/bloco-04/">Gênesis 37–41: José no Egito — Parte 1<small>Visão panorâmica da ascensão de José</small></a></li>
+          <li><a href="/02-pentateuco/genesis/bloco-05/">Gênesis 42–47: José no Egito — Parte 2<small>Visão panorâmica do reencontro com os irmãos</small></a></li>
+          <li><a href="/02-pentateuco/genesis/bloco-06/">Gênesis 48–50: Bênçãos e Morte dos Patriarcas<small>Visão panorâmica do fim de Gênesis</small></a></li>
+          <li><a href="/genesis/genesis-37.html">Gênesis 37 explicado: José vendido pelos irmãos<small>A inveja, o sonho e a providência de Deus</small></a></li>
+          <li><a href="/genesis/genesis-38.html">Gênesis 38 explicado: Judá e Tamar<small>A linhagem messiânica preservada de forma inesperada</small></a></li>
+          <li><a href="/genesis/genesis-39.html">Gênesis 39 explicado: José e a esposa de Potifar<small>A integridade de José e a prisão injusta</small></a></li>
+          <li><a href="/genesis/genesis-40.html">Gênesis 40 explicado: José interpreta sonhos na prisão<small>O copeiro, o padeiro e o esquecimento</small></a></li>
+          <li><a href="/genesis/genesis-41.html">Gênesis 41 explicado: José diante do Faraó<small>Os sonhos do Faraó e a exaltação de José</small></a></li>
+          <li><a href="/genesis/genesis-42.html">Gênesis 42 explicado: os irmãos de José no Egito<small>O primeiro encontro; José os reconhece</small></a></li>
+          <li><a href="/genesis/genesis-43.html">Gênesis 43 explicado: a segunda viagem ao Egito<small>Benjamim vai ao Egito; o banquete de José</small></a></li>
+          <li><a href="/genesis/genesis-44.html">Gênesis 44 explicado: a taça de prata<small>A armadilha de José e a intercessão de Judá</small></a></li>
+          <li><a href="/genesis/genesis-45.html">Gênesis 45 explicado: José se revela aos irmãos<small>O perdão e a providência de Deus declarados</small></a></li>
+          <li><a href="/genesis/genesis-46.html">Gênesis 46 explicado: Jacó desce ao Egito<small>A família de Israel migra; o reencontro com José</small></a></li>
+          <li><a href="/genesis/genesis-47.html">Gênesis 47 explicado: Israel se estabelece no Egito<small>A terra de Gósen e os últimos anos de Jacó</small></a></li>
+          <li><a href="/genesis/genesis-48.html">Gênesis 48 explicado: Jacó abençoa Efraim e Manassés<small>A eleição divina inverte a ordem humana</small></a></li>
+          <li><a href="/genesis/genesis-49.html">Gênesis 49 explicado: as bênçãos das doze tribos<small>A profecia sobre Judá e o cetro messiânico</small></a></li>
+          <li><a href="/genesis/genesis-50.html">Gênesis 50 explicado: perdão, providência e esperança<small>A morte de Jacó e José; a promessa da volta</small></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TEMAS -->
+    <section class="section section-alt" id="temas">
+      <div class="container">
+        <h2 class="section-title">Temas principais de Gênesis</h2>
+        <p class="section-subtitle">
+          Cada tema abaixo é um cluster temático que aprofunda a compreensão do livro e conecta Gênesis ao restante da Bíblia.
+          Esses artigos ajudam a responder as grandes perguntas que os leitores trazem ao texto.
+        </p>
+        <ul class="topics-list">
+          <li><a href="/genesis/criacao.html">A criação em Gênesis e seu significado bíblico</a></li>
+          <li><a href="/genesis/adao-e-eva.html">Quem foram Adão e Eva segundo a Bíblia</a></li>
+          <li><a href="/genesis/queda-do-homem.html">A queda do homem explicada biblicamente</a></li>
+          <li><a href="/genesis/caim-e-abel.html">Caim e Abel: inveja, culto e juízo</a></li>
+          <li><a href="/genesis/noe-e-o-diluvio.html">Noé e o dilúvio: graça, obediência e juízo</a></li>
+          <li><a href="/genesis/torre-de-babel.html">Torre de Babel: orgulho humano e dispersão</a></li>
+          <li><a href="/genesis/abraao.html">Quem foi Abraão em Gênesis</a></li>
+          <li><a href="/genesis/jose-do-egito.html">José do Egito: providência, sofrimento e perdão</a></li>
+          <li><a href="/genesis/aliancas-em-genesis.html">As alianças em Gênesis: Adão, Noé e Abraão</a></li>
+          <li><a href="/genesis/promessa-messianica.html">A promessa messiânica em Gênesis 3:15</a></li>
+          <li><a href="/genesis/eleicao-divina.html">A eleição divina em Gênesis: por que Deus escolhe o improvável?</a></li>
+          <li><a href="/genesis/providencia-de-deus.html">A providência de Deus na história de José</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PERSONAGENS -->
+    <section class="section" id="personagens">
+      <div class="container">
+        <h2 class="section-title">Personagens centrais de Gênesis</h2>
+        <p class="section-subtitle">
+          Gênesis apresenta personagens complexos, falhos e redimidos — homens e mulheres que Deus usa apesar de suas fraquezas para cumprir Seus propósitos eternos.
+        </p>
+        <div class="grid grid-4">
+          <div class="personagem-card"><div class="emoji">👨</div><h4>Adão</h4><p>Primeiro homem, criado à imagem de Deus. Sua desobediência trouxe o pecado ao mundo (Gn 1–5).</p></div>
+          <div class="personagem-card"><div class="emoji">👩</div><h4>Eva</h4><p>Primeira mulher, companheira de Adão. Enganada pela serpente, participa da queda (Gn 2–4).</p></div>
+          <div class="personagem-card"><div class="emoji">🚢</div><h4>Noé</h4><p>Homem justo que encontrou graça diante de Deus. Construiu a arca e preservou a humanidade (Gn 6–9).</p></div>
+          <div class="personagem-card"><div class="emoji">⭐</div><h4>Abraão</h4><p>Pai da fé. Chamado de Ur, recebeu a promessa da terra, da nação e da bênção universal (Gn 12–25).</p></div>
+          <div class="personagem-card"><div class="emoji">🌿</div><h4>Sara</h4><p>Esposa de Abraão, mãe de Isaque. Sua fé vacilou, mas Deus cumpriu a promessa (Gn 12–23).</p></div>
+          <div class="personagem-card"><div class="emoji">🏔️</div><h4>Isaque</h4><p>Filho da promessa. Seu quase-sacrifício em Moriá é uma das mais ricas tipologias de Cristo (Gn 21–27).</p></div>
+          <div class="personagem-card"><div class="emoji">🤼</div><h4>Jacó / Israel</h4><p>Enganador transformado por Deus. Após lutar com o anjo, recebe o nome Israel (Gn 25–36).</p></div>
+          <div class="personagem-card"><div class="emoji">👑</div><h4>José</h4><p>Vendido como escravo, exaltado ao segundo posto do Egito. Tipo de Cristo em sofrimento e glória (Gn 37–50).</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO ESTUDAR -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="highlight">
+          <h2>Como estudar cada capítulo de Gênesis com profundidade</h2>
+          <p>
+            Um estudo sólido de Gênesis não se limita à leitura superficial do texto. Cada capítulo merece ser abordado
+            com método e reverência. O ideal é combinar leitura do texto bíblico original, compreensão do contexto histórico
+            e cultural do Antigo Oriente Próximo, análise da estrutura literária (narrativa, poesia, genealogia, lei),
+            exegese dos termos-chave em hebraico, reflexão teológica e aplicação prática para a vida cristã contemporânea.
+          </p>
+          <p>
+            Cada página de capítulo neste site segue um padrão editorial consistente: texto bíblico base, contexto histórico,
+            estrutura literária, análise versículo por versículo, palavras-chave relevantes, aplicação prática,
+            perguntas introspectivas e links para o capítulo anterior, o próximo e o tema relacionado.
+          </p>
+          <p>
+            Recomendamos estudar Gênesis em blocos temáticos: primeiro a História Primeva (Gn 1–11) para estabelecer os
+            fundamentos teológicos, depois a narrativa de cada patriarca. Use a linha do tempo e os mapas para situar
+            geograficamente os eventos. E sempre conecte o que você lê em Gênesis com o cumprimento no Novo Testamento.
+          </p>
+          <div style="margin-top:20px;">
+            <a href="/02-pentateuco/genesis/bloco-01/" class="btn btn-primary">Começar pelo Bloco 1: Criação e Queda</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+      <div class="container">
+        <h2 class="section-title">Perguntas frequentes sobre Gênesis</h2>
+        <p class="section-subtitle">
+          Respostas às perguntas mais comuns de quem estuda o livro de Gênesis pela primeira vez ou em profundidade.
+        </p>
+        <details>
+          <summary>O que significa Gênesis na Bíblia?</summary>
+          <p>Gênesis significa origem, começo ou nascimento. É o livro que apresenta os fundamentos da criação, da humanidade, do pecado e das promessas divinas. O nome vem do grego "génesis", tradução do hebraico "Bereshit" (no princípio), que é também o título original do livro na tradição judaica.</p>
+        </details>
+        <details>
+          <summary>Qual é o tema principal do livro de Gênesis?</summary>
+          <p>O tema principal é o início de todas as coisas sob a soberania de Deus: criação, queda, juízo, graça e o começo da história da redenção. Gênesis revela quem é Deus, quem é o ser humano, qual é a origem do pecado e como Deus inicia Seu plano para restaurar a humanidade caída por meio de uma linhagem escolhida.</p>
+        </details>
+        <details>
+          <summary>Por que Gênesis é importante para entender o restante da Bíblia?</summary>
+          <p>Porque ele estabelece conceitos fundamentais como criação, aliança, linhagem prometida, pecado, juízo e eleição, que reaparecem ao longo de toda a Escritura. Sem Gênesis, não é possível compreender plenamente o Novo Testamento, a obra de Cristo ou a consumação do plano redentor. Jesus mesmo cita Gênesis ao falar sobre o casamento (Mt 19:4-5) e sobre a fé de Abraão (Jo 8:56).</p>
+        </details>
+        <details>
+          <summary>Quantos capítulos tem o livro de Gênesis?</summary>
+          <p>O livro de Gênesis possui 50 capítulos e 1.533 versículos, sendo o segundo maior livro do Pentateuco (depois de Números). Está dividido em duas grandes seções: a História Primeva (capítulos 1 a 11) e a História Patriarcal (capítulos 12 a 50).</p>
+        </details>
+        <details>
+          <summary>Quem escreveu o livro de Gênesis?</summary>
+          <p>A tradição judaica e cristã atribui a autoria do Pentateuco, incluindo Gênesis, a Moisés. O livro foi provavelmente composto e editado durante o período do Êxodo e da peregrinação no deserto, por volta do século XIII a.C., com base em tradições orais e escritas mais antigas. A crítica histórica moderna propõe múltiplas fontes (teoria documentária), mas a autoria mosaica permanece a posição da tradição bíblica.</p>
+        </details>
+        <details>
+          <summary>O que é a promessa messiânica em Gênesis 3:15?</summary>
+          <p>Gênesis 3:15 é chamado de "Protoevangelium" (primeiro evangelho). Nele, Deus diz à serpente: "Porei inimizade entre ti e a mulher, entre a tua descendência e o seu descendente; este te ferirá a cabeça, e tu lhe ferirás o calcanhar." Teologicamente, essa passagem é interpretada como a primeira promessa do Messias, que seria cumprida em Jesus Cristo — que venceu o pecado e a morte ao custo de Seu próprio sofrimento.</p>
+        </details>
+        <details>
+          <summary>Como Gênesis se relaciona com o Novo Testamento?</summary>
+          <p>O Novo Testamento cita ou alude a Gênesis mais de 200 vezes. Paulo usa Abraão como modelo de justificação pela fé (Rm 4; Gl 3). O autor de Hebreus apresenta Melquisedeque como tipo de Cristo (Hb 7). João inicia seu evangelho com "No princípio" (Jo 1:1), ecoando Gênesis 1:1. O Apocalipse retoma os temas do Éden na Nova Criação (Ap 22). Gênesis e Apocalipse formam os dois pilares narrativos da Bíblia.</p>
+        </details>
+        <details>
+          <summary>Qual a diferença entre Gênesis 1 e Gênesis 2?</summary>
+          <p>Gênesis 1 apresenta a criação de forma panorâmica e estruturada, em seis dias, com ênfase na soberania de Deus sobre toda a criação. Gênesis 2 aprofunda o foco no ser humano — a formação de Adão do pó da terra, o jardim do Éden, a criação de Eva e o mandato cultural. Os dois capítulos são complementares: o primeiro responde "quem criou e como?"; o segundo responde "qual é o lugar e o propósito do ser humano na criação?"</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- RECURSOS -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Recursos relacionados</h2>
+        <p class="section-subtitle">Continue seu estudo com recursos complementares disponíveis no site.</p>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>📅 Linha do Tempo de Gênesis</h3>
+            <p>Visualize os eventos de Gênesis em ordem cronológica, com datas aproximadas e conexões históricas com o Antigo Oriente Próximo.</p>
+            <div style="margin-top:16px;"><a href="/genesis/linha-do-tempo.html" class="btn btn-primary" style="font-size:0.9rem;padding:10px 16px;">Ver linha do tempo</a></div>
+          </article>
+          <article class="card">
+            <h3>👥 Personagens de Gênesis</h3>
+            <p>Perfis detalhados dos principais personagens: Adão, Eva, Noé, Abraão, Sara, Isaque, Rebeca, Jacó, Raquel, Lia e José.</p>
+            <div style="margin-top:16px;"><a href="/personagens" class="btn btn-primary" style="font-size:0.9rem;padding:10px 16px;">Ver personagens</a></div>
+          </article>
+          <article class="card">
+            <h3>📚 Estudos de Gênesis</h3>
+            <p>Estudos temáticos aprofundados sobre criação, queda, dilúvio, patriarcas e as grandes alianças do Antigo Testamento.</p>
+            <div style="margin-top:16px;"><a href="/02-pentateuco/genesis/" class="btn btn-primary" style="font-size:0.9rem;padding:10px 16px;">Ver estudos</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-<!-- Dark Mode Toggle -->
-<script>
-(function() {
-  var saved = localStorage.getItem('365-theme');
-  if (saved === 'light') {
-    document.documentElement.setAttribute('data-theme', 'light');
-  }
-})();
-</script>
-<style>
-[data-theme="light"] {
-  filter: invert(1) hue-rotate(180deg);
-}
-[data-theme="light"] img,
-[data-theme="light"] video,
-[data-theme="light"] iframe {
-  filter: invert(1) hue-rotate(180deg);
-}
-#dark-toggle {
-  position: fixed;
-  bottom: 80px;
-  right: 16px;
-  z-index: 9998;
-  background: rgba(15,23,42,0.9);
-  border: 1px solid #334155;
-  border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 1.2rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-  transition: transform 0.2s;
-}
-#dark-toggle:hover { transform: scale(1.1); }
-
-    /* === BRAND / LOGO PADRONIZADO === */
-    .brand { display: flex; align-items: center; gap: 12px; font-weight: bold; text-decoration: none; color: inherit; }
-    .brand-logo-img { height: 42px; width: auto; display: block; }
-    .brand-text { line-height: 1.2; font-size: 1rem; color: #fff; }
-    .brand-text small { display: block; color: #9ca3af; font-weight: normal; font-size: 0.78rem; }
-
-  </style>
-<div id="dark-toggle" title="Alternar modo claro/escuro" onclick="
-  var html = document.documentElement;
-  var cur = html.getAttribute('data-theme');
-  if (cur === 'light') {
-    html.removeAttribute('data-theme');
-    localStorage.setItem('365-theme', 'dark');
-    this.textContent = '🌙';
-  } else {
-    html.setAttribute('data-theme', 'light');
-    localStorage.setItem('365-theme', 'light');
-    this.textContent = '☀️';
-  }
-">🌙</div>
-
-<!-- WhatsApp CTA Flutuante -->
-<a id="whatsapp-cta" 
-   href="https://wa.me/?text=Estou%20estudando%20a%20B%C3%ADblia%20no%20365%20de%20Gra%C3%A7a%20%26%20Adora%C3%A7%C3%A3o%3A%20https%3A%2F%2F365gracaeadoracao.com" 
-   target="_blank"
-   title="Compartilhar no WhatsApp"
-   style="
-     position: fixed;
-     bottom: 20px;
-     right: 16px;
-     z-index: 9998;
-     background: #25d366;
-     border-radius: 50%;
-     width: 50px;
-     height: 50px;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     box-shadow: 0 4px 15px rgba(37,211,102,0.5);
-     text-decoration: none;
-     font-size: 1.5rem;
-     transition: transform 0.2s;
-   "
-   onmouseover="this.style.transform='scale(1.15)'"
-   onmouseout="this.style.transform='scale(1)'"
->📲</a>
+  <footer class="footer">
+    <div class="container">
+      <h3>365 Graça &amp; Adoração</h3>
+      <p>Projeto bíblico gratuito, organizado e profundo — da Criação ao Apocalipse.</p>
+      <nav class="footer-links" aria-label="Links do rodapé">
+        <a href="/">Início</a>
+        <a href="/01-antigo-testamento">Antigo Testamento</a>
+        <a href="/08-novo-testamento">Novo Testamento</a>
+        <a href="/genesis/">Gênesis</a>
+        <a href="/personagens">Personagens</a>
+      </nav>
+    </div>
+  </footer>
 
 </body>
 </html>
