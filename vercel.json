@@ -3,6 +3,21 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/es/john-1",
+      "destination": "/es/juan-1",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-1/",
+      "destination": "/es/juan-1/",
+      "permanent": true
+    },
+    {
+      "source": "/06-apocrifos/capitulos/:path*",
+      "destination": "/06-apocrifos",
+      "permanent": true
+    },
+    {
       "source": "/periodo-persa",
       "destination": "/07-intertestamentario/periodo-persa",
       "permanent": true
