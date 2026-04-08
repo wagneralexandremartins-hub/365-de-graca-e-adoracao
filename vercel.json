@@ -1,6 +1,16 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/estudos",
+      "destination": "/estudos/index.html"
+    },
+    {
+      "source": "/estudos/",
+      "destination": "/estudos/index.html"
+    }
+  ],
   "redirects": [
     {
       "source": "/es/john-1",
