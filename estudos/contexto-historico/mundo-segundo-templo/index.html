@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O mundo do Segundo Templo | Contexto Histórico Bíblico | 365 Graça &amp; Adoração</title>
+  <meta name="description" content="Estudo aprofundado sobre o período do Segundo Templo: grupos religiosos, tensões políticas, fariseus, saduceus, zelotes e o cenário que moldou o ministério de Jesus." />
+  <meta name="keywords" content="Segundo Templo, fariseus, saduceus, zelotes, essênios, Herodes, período intertestamentário, contexto histórico bíblico" />
+  <meta name="author" content="365 Graça &amp; Adoração" />
+  <meta property="og:title" content="O mundo do Segundo Templo | 365 Graça &amp; Adoração" />
+  <meta property="og:description" content="Conheça o universo histórico, religioso e político do período do Segundo Templo e como ele moldou o ministério de Jesus." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://365gracaeadoracao.com/assets/img/og-cover.jpg" />
+  <meta property="og:url" content="https://365gracaeadoracao.com/estudos/contexto-historico/mundo-segundo-templo/" />
+  <link rel="canonical" href="https://365gracaeadoracao.com/estudos/contexto-historico/mundo-segundo-templo/" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="alternate" hreflang="pt-BR" href="https://365gracaeadoracao.com/estudos/contexto-historico/mundo-segundo-templo/" />
+  <link rel="alternate" hreflang="en" href="https://365gracaeadoracao.com/en/estudos/" />
+  <link rel="alternate" hreflang="es" href="https://365gracaeadoracao.com/es/estudios/" />
+
+  <style>
+    :root {
+      --bg:         #08111f;
+      --bg-soft:    #0f172a;
+      --bg-card:    rgba(255,255,255,0.05);
+      --bg-section: rgba(255,255,255,0.03);
+      --text:       #e5e7eb;
+      --muted:      #8b9ab4;
+      --gold:       #f5c542;
+      --accent:     #d4af37;
+      --accent-2:   #8b1e1e;
+      --border:     rgba(255,255,255,0.10);
+      --shadow:     0 8px 32px rgba(0,0,0,0.35);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: "Georgia", "Times New Roman", serif;
+      line-height: 1.85; font-size: 1.05rem;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+
+    .topbar {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(8,17,31,0.92); backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    .topbar-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 20px; padding: 14px 0; flex-wrap: wrap;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: bold; color: var(--text); }
+    .brand-logo-img { height: 42px; width: auto; display: block; }
+    .brand-text { font-size: 1rem; line-height: 1.3; }
+    .brand-text small { display: block; color: var(--muted); font-weight: normal; font-size: 0.82rem; }
+    .topbar-nav { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .topbar-nav a { color: var(--muted); font-size: 0.93rem; transition: color 0.2s; font-family: system-ui, sans-serif; }
+    .topbar-nav a:hover, .topbar-nav a.active { color: var(--gold); }
+    .topbar-nav .nav-cta {
+      background: var(--gold); color: #111827 !important;
+      padding: 8px 16px; border-radius: 999px; font-weight: bold; font-size: 0.88rem;
+    }
+
+    .hero {
+      padding: 80px 0 60px; position: relative; overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero::before {
+      content: ""; position: absolute; inset: 0;
+      background: radial-gradient(circle at 70% 30%, rgba(212,175,55,0.10), transparent 50%),
+                  radial-gradient(circle at 20% 80%, rgba(139,30,30,0.08), transparent 40%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(212,175,55,0.12); color: var(--accent);
+      border: 1px solid rgba(212,175,55,0.28);
+      padding: 7px 14px; border-radius: 999px; font-size: 0.88rem;
+      letter-spacing: 0.3px; margin-bottom: 20px; font-family: system-ui, sans-serif;
+    }
+    .hero h1 {
+      font-size: clamp(1.8rem, 4.5vw, 3rem); font-weight: 700;
+      line-height: 1.2; margin-bottom: 16px; color: #fff;
+    }
+    .hero h1 span { color: var(--gold); }
+    .divider-title {
+      width: 80px; height: 3px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      border-radius: 999px; margin: 14px 0 22px;
+    }
+    .hero p.lead { color: var(--muted); max-width: 820px; font-size: 1.1rem; margin-bottom: 28px; }
+
+    .breadcrumbs {
+      font-family: system-ui, sans-serif; font-size: 0.88rem;
+      color: var(--muted); padding: 16px 0;
+    }
+    .breadcrumbs a { color: var(--muted); transition: color 0.2s; }
+    .breadcrumbs a:hover { color: var(--gold); }
+    .breadcrumbs span { color: var(--text); }
+
+    .article-wrap { padding: 40px 0 80px; }
+    .article-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 22px; box-shadow: var(--shadow); overflow: hidden;
+    }
+    .article-content { padding: 36px 22px; }
+    @media (min-width: 768px) { .article-content { padding: 52px 48px; } }
+
+    .toc {
+      background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+      border-radius: 18px; padding: 22px 24px; margin-bottom: 36px;
+    }
+    .toc h2 {
+      font-size: 1.05rem; color: var(--gold); margin-bottom: 16px;
+      font-family: system-ui, sans-serif; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .toc-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 8px 20px;
+    }
+    @media (max-width: 600px) { .toc-grid { grid-template-columns: 1fr; } }
+    .toc-grid a {
+      color: var(--text); font-size: 0.93rem; font-family: system-ui, sans-serif;
+      padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.05); transition: color 0.2s;
+    }
+    .toc-grid a:hover { color: var(--gold); }
+
+    .section-block {
+      margin-bottom: 38px; padding: 28px 24px;
+      border-radius: 18px; background: var(--bg-section);
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+    .section-block h2 {
+      font-size: 1.65rem; margin-bottom: 20px; color: var(--gold); font-weight: 700;
+    }
+    .section-block h3 {
+      font-size: 1.15rem; margin-top: 26px; margin-bottom: 14px; color: #fff0b3; font-weight: 700;
+    }
+    .section-block p { margin-bottom: 16px; color: var(--text); }
+    .section-block ul, .section-block ol {
+      padding-left: 1.4rem; color: #c9d2e3; margin-bottom: 16px;
+    }
+    .section-block li { margin-bottom: 9px; }
+
+    .verse-box {
+      border-left: 4px solid var(--accent);
+      background: rgba(212,175,55,0.08);
+      padding: 16px 20px; border-radius: 12px; margin: 20px 0;
+      color: #fff8dc; font-style: italic; line-height: 1.75;
+    }
+    .verse-box cite {
+      display: block; margin-top: 8px; font-size: 0.88rem;
+      color: var(--muted); font-style: normal;
+    }
+
+    .highlight-box {
+      background: rgba(139,30,30,0.14); border: 1px solid rgba(139,30,30,0.32);
+      border-radius: 16px; padding: 18px 20px; margin: 20px 0;
+      color: #ffd6d6; line-height: 1.75;
+    }
+    .highlight-box strong { color: #ffb3b3; }
+
+    .info-box {
+      background: rgba(96,165,250,0.08); border: 1px solid rgba(96,165,250,0.22);
+      border-radius: 16px; padding: 18px 20px; margin: 20px 0; color: #bfdbfe;
+    }
+
+    .groups-table {
+      width: 100%; border-collapse: collapse; margin: 20px 0;
+      font-family: system-ui, sans-serif; font-size: 0.9rem;
+    }
+    .groups-table th {
+      background: rgba(212,175,55,0.12); color: var(--gold);
+      padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border);
+    }
+    .groups-table td {
+      padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.05);
+      color: var(--text); vertical-align: top;
+    }
+    .groups-table tr:last-child td { border-bottom: none; }
+
+    .questions-box {
+      background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+      border-radius: 18px; padding: 24px;
+    }
+    .questions-box h2 { color: var(--gold); margin-bottom: 18px; font-size: 1.4rem; }
+    .questions-box ol { padding-left: 1.4rem; color: #c9d2e3; }
+    .questions-box li { margin-bottom: 12px; line-height: 1.7; }
+
+    .related-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 18px; margin-top: 24px;
+    }
+    .related-card {
+      background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px; padding: 20px 18px; transition: border-color 0.2s;
+    }
+    .related-card:hover { border-color: rgba(212,175,55,0.35); }
+    .related-card h3 { font-size: 0.98rem; color: #fff; margin-bottom: 8px; }
+    .related-card p { font-size: 0.85rem; color: var(--muted); font-family: system-ui, sans-serif; }
+
+    .adsense-wrap {
+      margin: 36px 0; text-align: center;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+    }
+
+    .footer-note {
+      color: var(--muted); font-size: 0.93rem; text-align: center;
+      padding: 28px 0 50px; font-family: system-ui, sans-serif;
+    }
+    .site-footer {
+      background: #1a0a00; color: var(--muted); text-align: center;
+      padding: 22px; font-size: 0.9rem; font-family: system-ui, sans-serif;
+      border-top: 1px solid var(--border);
+    }
+
+    #lang-selector {
+      position: fixed; top: 14px; right: 16px; z-index: 9999;
+      display: flex; gap: 6px;
+      background: rgba(15,23,42,0.92); border: 1px solid #334155;
+      border-radius: 30px; padding: 5px 10px;
+      backdrop-filter: blur(8px); box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    }
+    #lang-selector a { font-size: 1.1rem; }
+
+    #whatsapp-cta {
+      position: fixed; bottom: 20px; right: 16px; z-index: 9998;
+      background: #25d366; border-radius: 50%;
+      width: 50px; height: 50px; display: grid; place-items: center;
+      font-size: 1.4rem; box-shadow: 0 4px 16px rgba(0,0,0,0.4); transition: transform 0.2s;
+    }
+    #whatsapp-cta:hover { transform: scale(1.1); }
+  </style>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7719935194423493"
+       crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Seletor de idioma -->
+<div id="lang-selector">
+  <a href="/estudos/contexto-historico/mundo-segundo-templo/" title="Português" style="opacity:0.95;">🇧🇷</a>
+  <a href="/en/estudos/" title="English" style="opacity:0.7;">🇺🇸</a>
+  <a href="/es/estudios/" title="Español" style="opacity:0.7;">🇪🇸</a>
+</div>
+
+<!-- Topbar -->
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="/" class="brand" aria-label="365 Graça e Adoração">
+      <img src="/assets/img/logo-header.png" alt="365 Graça e Adoração" class="brand-logo-img">
+      <div class="brand-text">
+        365 Graça &amp; Adoração
+        <small>Da Criação ao Apocalipse</small>
+      </div>
+    </a>
+    <nav class="topbar-nav" aria-label="Navegação principal">
+      <a href="/">Início</a>
+      <a href="/02-pentateuco/">Pentateuco</a>
+      <a href="/08-novo-testamento/">Novo Testamento</a>
+      <a href="/estudos/" class="active">Estudos</a>
+      <a href="/sobre/index.html">Sobre</a>
+      <a href="/08-novo-testamento/mateus/capitulos/capitulo-01.html" class="nav-cta">📖 Dia 1</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="container">
+    <span class="hero-badge">Estudo 11 &nbsp;•&nbsp; Contexto Histórico &nbsp;•&nbsp; Período Intertestamentário</span>
+    <h1>O mundo do<br><span>Segundo Templo</span></h1>
+    <div class="divider-title"></div>
+    <p class="lead">
+      Entre o retorno do exílio babilônico e a destruição do Templo em 70 d.C., o povo judeu viveu séculos de
+      transformação religiosa, política e cultural. Compreender esse período é essencial para ler os Evangelhos
+      e as cartas do Novo Testamento com profundidade e precisão.
+    </p>
+  </div>
+</header>
+
+<!-- Estudo -->
+<main class="article-wrap">
+  <div class="container">
+
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Início</a> /
+      <a href="/estudos/">Estudos Bíblicos Temáticos</a> /
+      <a href="/estudos/contexto-historico/">Contexto Histórico</a> /
+      <span>O mundo do Segundo Templo</span>
+    </nav>
+
+    <div class="article-card">
+      <div class="article-content">
+
+        <!-- TOC -->
+        <section class="toc" aria-label="Navegação do estudo">
+          <h2>📋 Navegação do Estudo</h2>
+          <div class="toc-grid">
+            <a href="#introducao">1. Introdução ao período</a>
+            <a href="#grupos-religiosos">2. Os grupos religiosos</a>
+            <a href="#herodes">3. Herodes e a política romana</a>
+            <a href="#templo">4. O Templo como centro</a>
+            <a href="#esperancas">5. Esperanças messiânicas</a>
+            <a href="#textos-chave">6. Textos-chave</a>
+            <a href="#aplicacoes">7. Aplicações práticas</a>
+            <a href="#reflexoes">8. Perguntas para reflexão</a>
+          </div>
+        </section>
+
+        <!-- 1. Introdução -->
+        <section class="section-block" id="introducao">
+          <h2>1. Introdução ao período do Segundo Templo</h2>
+          <p>
+            O período do Segundo Templo abrange aproximadamente cinco séculos de história judaica, desde a
+            reconstrução do Templo de Jerusalém por Zorobabel (por volta de 516 a.C.) até sua destruição pelos
+            romanos sob o general Tito em 70 d.C. Esse longo período não foi homogêneo: ele atravessou dominações
+            persas, gregas e romanas, cada uma deixando marcas profundas na religiosidade, na cultura e na
+            identidade do povo judeu.
+          </p>
+          <p>
+            Quando os exilados retornaram da Babilônia, trouxeram consigo uma fé transformada. A experiência do
+            exílio havia ensinado ao povo judeu que era possível manter a identidade religiosa mesmo sem terra,
+            sem Templo e sem monarquia. Essa lição moldou profundamente o judaísmo do Segundo Templo: a Torah
+            ganhou centralidade absoluta, as sinagogas emergiram como espaços de estudo e oração, e os escribas
+            tornaram-se figuras de autoridade religiosa ao lado dos sacerdotes.
+          </p>
+          <p>
+            O encontro com o helenismo, a partir das conquistas de Alexandre Magno (332 a.C.), representou um
+            dos maiores desafios para a identidade judaica. A cultura grega — com sua filosofia, seus costumes,
+            sua língua e sua arquitetura — penetrou profundamente na vida cotidiana, gerando tensões internas
+            que dividiram o judaísmo em correntes distintas. Alguns judeus abraçaram o helenismo; outros
+            resistiram com fervor, como os macabeus, que lideraram uma revolta bem-sucedida contra a helenização
+            forçada de Antíoco IV Epifânio (167–164 a.C.).
+          </p>
+          <div class="verse-box">
+            "Naqueles dias saíram de Israel alguns filhos da iniquidade, que persuadiram a muitos, dizendo:
+            Vamos e façamos aliança com as nações que nos rodeiam."
+            <cite>— 1 Macabeus 1:11</cite>
+          </div>
+          <p>
+            A revolta macabeia resultou na fundação da dinastia hasmoneia, que governou a Judeia como Estado
+            independente por cerca de um século. Esse período de independência relativa terminou em 63 a.C.,
+            quando o general romano Pompeu conquistou Jerusalém e integrou a Judeia à esfera de influência de
+            Roma. A partir daí, o povo judeu viveu sob domínio romano, com graus variados de autonomia,
+            até a catástrofe de 70 d.C.
+          </p>
+          <p>
+            É nesse contexto — marcado pela memória do exílio, pela tensão com o helenismo, pela dominação
+            romana e pela expectativa messiânica — que Jesus de Nazaré nasceu, viveu, pregou e morreu.
+            Compreender esse mundo é compreender o solo histórico do qual o Novo Testamento brotou.
+          </p>
+        </section>
+
+        <!-- AdSense - Dentro do artigo -->
+        <div class="adsense-wrap">
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-7719935194423493"
+               data-ad-slot="auto"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <!-- 2. Grupos religiosos -->
+        <section class="section-block" id="grupos-religiosos">
+          <h2>2. Os grupos religiosos do período</h2>
+          <p>
+            Um dos aspectos mais fascinantes do judaísmo do Segundo Templo é sua diversidade interna. Longe de
+            ser um bloco uniforme, o judaísmo do século I d.C. era um mosaico de correntes teológicas, políticas
+            e espirituais, cada uma com sua própria interpretação da Torah, sua própria relação com o poder
+            romano e sua própria visão sobre o futuro de Israel.
+          </p>
+
+          <table class="groups-table">
+            <thead>
+              <tr>
+                <th>Grupo</th>
+                <th>Características principais</th>
+                <th>Relação com Jesus</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Fariseus</strong></td>
+                <td>Ênfase na Torah oral, ressurreição dos mortos, separação ritual, influência nas sinagogas</td>
+                <td>Frequentes debates; alguns se tornaram seguidores (Nicodemos, Paulo)</td>
+              </tr>
+              <tr>
+                <td><strong>Saduceus</strong></td>
+                <td>Aristocracia sacerdotal, rejeitavam a ressurreição, aceitavam apenas a Torah escrita</td>
+                <td>Oposição direta; controlavam o Templo e o Sinédrio</td>
+              </tr>
+              <tr>
+                <td><strong>Zelotes</strong></td>
+                <td>Resistência armada ao domínio romano, fervor nacionalista, esperança messiânica militante</td>
+                <td>Um dos doze apóstolos era Simão, o Zelote (Lucas 6:15)</td>
+              </tr>
+              <tr>
+                <td><strong>Essênios</strong></td>
+                <td>Comunidades separadas, pureza ritual rigorosa, aguardavam o fim dos tempos</td>
+                <td>Não mencionados nos Evangelhos; provavelmente ligados aos Manuscritos do Mar Morto</td>
+              </tr>
+              <tr>
+                <td><strong>Escribas</strong></td>
+                <td>Especialistas na interpretação da Torah, mestres da Lei, presentes em várias correntes</td>
+                <td>Frequentemente mencionados como adversários nos Evangelhos</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Os fariseus: guardiões da tradição oral</h3>
+          <p>
+            Os fariseus são, sem dúvida, o grupo que mais aparece nos Evangelhos. Seu nome provavelmente deriva
+            do hebraico <em>perushim</em>, "os separados", indicando sua ênfase na pureza ritual e na distinção
+            em relação aos gentios e aos judeus menos observantes. Eles acreditavam que a Torah oral — a tradição
+            interpretativa transmitida de geração em geração — tinha a mesma autoridade que a Torah escrita.
+          </p>
+          <p>
+            Essa tradição oral seria posteriormente codificada na Mishná (século II d.C.) e no Talmude. Os
+            fariseus eram populares entre o povo comum porque tornavam a Torah acessível e aplicável à vida
+            cotidiana. Eles acreditavam na ressurreição dos mortos, nos anjos e na providência divina — pontos
+            de contato significativos com o ensinamento de Jesus, embora os conflitos sobre a interpretação
+            da Lei fossem frequentes e intensos.
+          </p>
+
+          <h3>Os saduceus: poder e pragmatismo</h3>
+          <p>
+            Os saduceus representavam a aristocracia sacerdotal de Jerusalém. Controlavam o Templo, o Sinédrio
+            e os principais cargos religiosos e políticos. Sua teologia era conservadora: rejeitavam a
+            ressurreição dos mortos, os anjos e qualquer tradição não explicitamente presente na Torah escrita.
+            Politicamente, eram pragmáticos — dispostos a colaborar com Roma para preservar sua posição e
+            evitar conflitos que pudessem ameaçar o Templo e a ordem estabelecida.
+          </p>
+          <div class="verse-box">
+            "Naquele mesmo dia vieram a ele os saduceus, que dizem não haver ressurreição, e o interrogaram."
+            <cite>— Mateus 22:23</cite>
+          </div>
+
+          <h3>Os essênios e os Manuscritos do Mar Morto</h3>
+          <p>
+            Os essênios são conhecidos principalmente por sua possível conexão com a comunidade de Qumrã, cujos
+            escritos foram descobertos entre 1947 e 1956 nas cavernas próximas ao Mar Morto. Esses manuscritos —
+            os mais antigos textos bíblicos conhecidos — revelam uma comunidade que se retirou do mundo para
+            viver em pureza absoluta, aguardando uma batalha apocalíptica final entre os "filhos da luz" e os
+            "filhos das trevas". Embora os essênios não apareçam nos Evangelhos, seu universo teológico lança
+            luz sobre o contexto apocalíptico em que João Batista e Jesus pregaram.
+          </p>
+        </section>
+
+        <!-- 3. Herodes e Roma -->
+        <section class="section-block" id="herodes">
+          <h2>3. Herodes e a política romana</h2>
+          <p>
+            Herodes, o Grande (37–4 a.C.), é uma das figuras mais complexas e controversas do período.
+            Nomeado rei da Judeia pelos romanos, ele era de origem idumeia — descendente dos edomitas,
+            convertidos ao judaísmo à força pelos hasmoneus. Sua legitimidade era, portanto, questionada
+            por muitos judeus. Para compensar, Herodes empreendeu um dos maiores projetos de construção
+            da Antiguidade: a reconstrução e ampliação do Templo de Jerusalém, que se tornou uma das
+            maravilhas arquitetônicas do mundo antigo.
+          </p>
+          <p>
+            O Templo de Herodes era imenso: sua plataforma media aproximadamente 300 metros por 500 metros.
+            Os discípulos de Jesus, ao admirarem suas pedras monumentais, ouviram a profecia que os
+            surpreendeu: "Não ficará aqui pedra sobre pedra que não seja derrubada" (Mateus 24:2). Essa
+            profecia se cumpriu em 70 d.C., quando as legiões romanas de Tito destruíram Jerusalém e
+            incendiaram o Templo.
+          </p>
+          <div class="highlight-box">
+            <strong>Contexto político:</strong> A Judeia do século I d.C. era uma região de tensão constante.
+            Os romanos cobravam impostos pesados, exigiam lealdade ao imperador e mantinham guarnições militares
+            em pontos estratégicos. A presença de um governador romano (como Pôncio Pilatos) ao lado de um
+            rei cliente (como Herodes Antipas) criava um sistema de poder dual que os judeus navegavam com
+            dificuldade. Qualquer movimento que parecesse ameaçar a ordem romana era reprimido com violência.
+          </div>
+          <p>
+            Após a morte de Herodes, o Grande, seu reino foi dividido entre seus filhos. Herodes Antipas
+            governou a Galileia e a Pereia — a região onde Jesus cresceu e onde João Batista pregou.
+            Foi Antipas quem mandou decapitar João Batista (Marcos 6:14-29) e quem interrogou Jesus
+            durante o julgamento (Lucas 23:7-12). A Judeia, por sua vez, foi governada diretamente por
+            procuradores romanos, entre eles Pôncio Pilatos (26–36 d.C.).
+          </p>
+          <p>
+            A tensão entre a esperança messiânica judaica e o poder romano é o pano de fundo político
+            de toda a narrativa dos Evangelhos. Quando Jesus entrou em Jerusalém montado num jumento
+            (Mateus 21:1-11), ele estava fazendo uma declaração política e teológica ao mesmo tempo:
+            cumprindo a profecia de Zacarias 9:9, mas recusando o modelo de messias guerreiro que
+            muitos esperavam.
+          </p>
+        </section>
+
+        <!-- AdSense - Meio do estudo -->
+        <div class="adsense-wrap">
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-7719935194423493"
+               data-ad-slot="auto"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <!-- 4. O Templo -->
+        <section class="section-block" id="templo">
+          <h2>4. O Templo como centro da vida judaica</h2>
+          <p>
+            Para compreender o judaísmo do Segundo Templo, é preciso entender o papel absolutamente central
+            que o Templo de Jerusalém desempenhava na vida religiosa, econômica e identitária do povo judeu.
+            O Templo não era apenas um local de culto: era o ponto onde o céu e a terra se encontravam,
+            onde a presença de Deus habitava, onde os pecados eram expiados por meio dos sacrifícios e
+            onde a identidade nacional judaica se ancorava.
+          </p>
+          <p>
+            Três vezes por ano — nas festas de Páscoa, Pentecostes e Tabernáculos —, judeus de todo o
+            mundo mediterrâneo peregrinavam a Jerusalém. A cidade, que normalmente abrigava cerca de
+            50.000 habitantes, podia receber centenas de milhares de peregrinos durante as grandes festas.
+            Era nesse contexto de multidão, fervor religioso e tensão política que Jesus ensinava no
+            pátio do Templo, debatia com os líderes religiosos e realizava seus sinais.
+          </p>
+          <div class="verse-box">
+            "E Jesus entrou no Templo e expulsou todos os que vendiam e compravam no Templo; e derrubou
+            as mesas dos cambistas e as cadeiras dos que vendiam pombas."
+            <cite>— Mateus 21:12</cite>
+          </div>
+          <p>
+            A purificação do Templo por Jesus não foi um gesto impulsivo: foi uma ação profética deliberada,
+            que evocava a linguagem dos profetas (especialmente Jeremias 7:11 e Isaías 56:7) e desafiava
+            diretamente a autoridade dos sacerdotes que controlavam o comércio do Templo. Esse ato foi
+            provavelmente o estopim que levou os líderes religiosos a decidirem eliminar Jesus.
+          </p>
+          <p>
+            A destruição do Templo em 70 d.C. representou uma ruptura traumática para o judaísmo. Sem
+            Templo, sem sacrifícios, sem sacerdócio funcionando, o judaísmo precisou se reinventar.
+            Os fariseus, com sua ênfase na Torah e na sinagoga, foram os que melhor sobreviveram à
+            catástrofe e moldaram o judaísmo rabínico que conhecemos até hoje. Para os cristãos, a
+            destruição do Templo foi interpretada como confirmação das profecias de Jesus e como sinal
+            de que a nova aliança em Cristo havia substituído o sistema sacrificial do Templo.
+          </p>
+        </section>
+
+        <!-- 5. Esperanças messiânicas -->
+        <section class="section-block" id="esperancas">
+          <h2>5. Esperanças messiânicas no período</h2>
+          <p>
+            A expectativa de um messias — um ungido de Deus que restauraria Israel — era uma das correntes
+            mais poderosas do judaísmo do Segundo Templo. Mas é importante notar que essa expectativa não
+            era uniforme: havia diferentes visões sobre quem seria o messias, o que ele faria e como
+            chegaria o Reino de Deus.
+          </p>
+          <p>
+            Alguns esperavam um messias davídico — um rei guerreiro que expulsaria os romanos e restauraria
+            a monarquia de Israel. Outros aguardavam um messias sacerdotal — um sumo sacerdote ideal que
+            purificaria o culto e restauraria a aliança com Deus. Os textos de Qumrã falam de dois messias:
+            um real e um sacerdotal. Havia ainda aqueles que esperavam uma intervenção direta e apocalíptica
+            de Deus, sem necessariamente um mediador humano.
+          </p>
+          <div class="info-box">
+            <strong>Nota exegética:</strong> A variedade de expectativas messiânicas no judaísmo do Segundo
+            Templo ajuda a explicar por que a mensagem de Jesus foi ao mesmo tempo atraente e desconcertante
+            para seus contemporâneos. Ele cumpria algumas expectativas messiânicas (filho de Davi, milagres,
+            ensinamento com autoridade) enquanto subvertia outras (recusava a liderança política, pregava
+            o amor aos inimigos, anunciava um reino não deste mundo).
+          </div>
+          <p>
+            A pergunta de João Batista — "És tu aquele que havia de vir, ou esperaremos outro?" (Mateus 11:3)
+            — revela exatamente essa tensão. João, que havia anunciado Jesus como o Cordeiro de Deus, estava
+            na prisão aguardando um messias que agisse de forma mais decisiva contra os ímpios. A resposta
+            de Jesus aponta para os sinais do Reino — cegos que veem, coxos que andam, mortos que ressuscitam
+            — como evidência de que o messias prometido pelos profetas havia chegado, mas de uma forma
+            inesperada e surpreendente.
+          </p>
+        </section>
+
+        <!-- 6. Textos-chave -->
+        <section class="section-block" id="textos-chave">
+          <h2>6. Textos-chave para leitura e meditação</h2>
+          <p>
+            A compreensão do período do Segundo Templo é enriquecida pela leitura de textos bíblicos e
+            extrabíblicos que iluminam o contexto histórico e teológico. Os seguintes textos são
+            fundamentais para este estudo:
+          </p>
+          <ul>
+            <li><strong>Esdras 1–6:</strong> O retorno do exílio e a reconstrução do Templo sob Zorobabel.</li>
+            <li><strong>Neemias 8–10:</strong> A renovação da aliança e a centralidade da Torah no período pós-exílico.</li>
+            <li><strong>Daniel 7–12:</strong> A literatura apocalíptica que moldou as esperanças messiânicas do período.</li>
+            <li><strong>Marcos 12:13-34:</strong> Jesus debatendo com fariseus, saduceus e escribas — um retrato vivo dos grupos do período.</li>
+            <li><strong>Mateus 23:</strong> O discurso de Jesus contra os escribas e fariseus — uma janela para as tensões religiosas do tempo.</li>
+            <li><strong>João 2:13-22:</strong> A purificação do Templo e a profecia de sua destruição e reconstrução.</li>
+            <li><strong>Atos 2:1-47:</strong> O Pentecostes em Jerusalém — o nascimento da Igreja no coração do judaísmo do Segundo Templo.</li>
+          </ul>
+          <div class="verse-box">
+            "Destruí este templo, e em três dias o levantarei. Então disseram os judeus: Em quarenta e seis
+            anos foi edificado este templo, e tu o levantarás em três dias? Mas ele falava do templo do seu corpo."
+            <cite>— João 2:19-21</cite>
+          </div>
+        </section>
+
+        <!-- 7. Aplicações práticas -->
+        <section class="section-block" id="aplicacoes">
+          <h2>7. Aplicações práticas para o discipulado</h2>
+          <p>
+            O estudo do período do Segundo Templo não é apenas um exercício acadêmico: ele tem implicações
+            profundas para a vida cristã e para a leitura das Escrituras. Algumas aplicações práticas:
+          </p>
+          <ul>
+            <li>
+              <strong>Leia os Evangelhos com novos olhos:</strong> Ao conhecer os grupos religiosos do período,
+              os debates de Jesus ganham nova profundidade. Cada confronto com fariseus, saduceus ou escribas
+              revela camadas de significado que passam despercebidas sem o contexto histórico.
+            </li>
+            <li>
+              <strong>Compreenda a novidade do Evangelho:</strong> Jesus não veio abolir a Torah, mas cumpri-la
+              (Mateus 5:17). Entender o que a Torah significava no judaísmo do Segundo Templo ajuda a perceber
+              a radicalidade e a profundidade dessa declaração.
+            </li>
+            <li>
+              <strong>Reflita sobre a tentação do poder religioso:</strong> Os saduceus perderam sua fé por
+              amor ao poder; os fariseus às vezes transformaram a devoção em performance. Esses perigos são
+              perenes e continuam relevantes para a vida da Igreja hoje.
+            </li>
+            <li>
+              <strong>Medite sobre a esperança messiânica:</strong> O povo do Segundo Templo aguardava o
+              messias com fervor. Como cristãos, aguardamos o retorno de Cristo. Essa esperança deve moldar
+              nossa vida, nossa ética e nossa missão no mundo.
+            </li>
+            <li>
+              <strong>Estude em comunidade:</strong> Assim como os judeus do período estudavam a Torah em
+              comunidade nas sinagogas, o estudo bíblico em grupo aprofunda a compreensão e fortalece
+              a fé. Compartilhe este estudo em seu grupo de discipulado.
+            </li>
+          </ul>
+        </section>
+
+        <!-- 8. Perguntas para reflexão -->
+        <div class="questions-box" id="reflexoes">
+          <h2>8. Perguntas para reflexão e discussão</h2>
+          <ol>
+            <li>Como o exílio babilônico transformou a fé judaica? Que lições essa experiência tem para a Igreja em contextos de perseguição ou marginalização?</li>
+            <li>Quais características dos fariseus você identifica na religiosidade cristã contemporânea? Como Jesus nos desafia a superar essas tendências?</li>
+            <li>O Templo era o centro da vida religiosa judaica. O que ocupa esse lugar central na sua vida espiritual hoje?</li>
+            <li>As esperanças messiânicas do período eram diversas e às vezes contraditórias. Como você lida com expectativas não cumpridas em sua caminhada de fé?</li>
+            <li>A destruição do Templo em 70 d.C. obrigou o judaísmo a se reinventar. Que "destruições" em sua vida ou comunidade abriram espaço para uma fé mais profunda e autêntica?</li>
+            <li>Como o conhecimento do contexto histórico do Segundo Templo mudou sua leitura de alguma passagem específica dos Evangelhos?</li>
+          </ol>
+        </div>
+
+        <!-- AdSense - Final do artigo -->
+        <div class="adsense-wrap">
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-7719935194423493"
+               data-ad-slot="auto"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <!-- Temas relacionados -->
+        <section style="margin-top:40px;">
+          <h2 style="font-size:1.4rem;color:var(--gold);margin-bottom:20px;">Temas relacionados</h2>
+          <div class="related-grid">
+            <a class="related-card" href="/estudos/contexto-historico/contexto-historico-evangelhos/">
+              <h3>O contexto histórico dos Evangelhos</h3>
+              <p>Continue o aprofundamento neste eixo temático.</p>
+            </a>
+            <a class="related-card" href="/estudos/contexto-historico/roma-jerusalem-expansao-cristianismo/">
+              <h3>Roma, Jerusalém e a expansão do cristianismo</h3>
+              <p>Continue o aprofundamento neste eixo temático.</p>
+            </a>
+            <a class="related-card" href="/estudos/contexto-historico/arqueologia-confirmacao-historica/">
+              <h3>Arqueologia bíblica e confirmação histórica</h3>
+              <p>Continue o aprofundamento neste eixo temático.</p>
+            </a>
+            <a class="related-card" href="/estudos/contexto-historico/">
+              <h3>← Voltar ao bloco</h3>
+              <p>Ver todos os estudos de Contexto Histórico.</p>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <p class="footer-note">
+      © 2026 · 365 Graça &amp; Adoração · Estudos Bíblicos Temáticos · Da Criação ao Apocalipse
+    </p>
+  </div>
+</main>
+
+<!-- WhatsApp CTA -->
+<a id="whatsapp-cta" href="https://wa.me/?text=Estou%20estudando%20o%20mundo%20do%20Segundo%20Templo%20em%20365gracaeadoracao.com" target="_blank" rel="noopener" aria-label="Compartilhar no WhatsApp">💬</a>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <p>© 2026 · 365 Graça &amp; Adoração · Estudos Bíblicos Temáticos · Da Criação ao Apocalipse</p>
+</footer>
+
+</body>
+</html>
