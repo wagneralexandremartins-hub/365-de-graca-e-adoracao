@@ -3,461 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Estudos Temáticos Bíblicos | 365 Graça &amp; Adoração</title>
-  <meta name="description" content="Estudos temáticos aprofundados sobre a Bíblia: Contexto Histórico, Cruz de Cristo, Personagens Bíblicos e muito mais. Estudo versículo a versículo com contexto histórico e mapas." />
-  <meta name="keywords" content="estudos bíblicos, estudos temáticos, contexto histórico bíblico, cruz de cristo, 365 Graça e Adoração" />
-  <meta name="author" content="365 Graça &amp; Adoração" />
+  <title>Estudos Bíblicos Temáticos | 365 Graça &amp; Adoração</title>
+  <meta name="description" content="Área temática com estudos bíblicos por assunto para aprofundamento espiritual, histórico e prático." />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#0f172a" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Estudos Temáticos Bíblicos | 365 Graça &amp; Adoração" />
-  <meta property="og:description" content="Estudos temáticos aprofundados sobre a Bíblia com contexto histórico, mapas e análise versículo a versículo." />
-  <meta property="og:url" content="https://365gracaeadoracao.com/estudos/" />
-  <meta property="og:image" content="https://365gracaeadoracao.com/assets/img/og-image.jpg" />
-  <link rel="canonical" href="https://365gracaeadoracao.com/estudos/" />
-  <link rel="alternate" hreflang="pt-BR" href="https://365gracaeadoracao.com/estudos/" />
+  <link rel="canonical" href="https://365gracaeadoracao.com/estudos/index.html" />
+  <link rel="alternate" hreflang="pt-BR" href="https://365gracaeadoracao.com/estudos/index.html" />
   <link rel="alternate" hreflang="en" href="https://365gracaeadoracao.com/en/estudos/" />
   <link rel="alternate" hreflang="es" href="https://365gracaeadoracao.com/es/estudios/" />
-  <link rel="icon" href="/assets/img/og-image.png" />
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7719935194423493" crossorigin="anonymous"></script>
-  <style>
-    :root {
-      --bg: #08111f;
-      --bg-soft: #0f172a;
-      --card: rgba(255,255,255,0.06);
-      --card-border: rgba(255,255,255,0.12);
-      --text: #e5e7eb;
-      --muted: #cbd5e1;
-      --gold: #f5c542;
-      --gold-strong: #e8b923;
-      --accent: #60a5fa;
-      --shadow: 0 10px 30px rgba(0,0,0,0.25);
-      --radius: 18px;
-      --max: 1220px;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background:
-        linear-gradient(rgba(8,17,31,0.92), rgba(8,17,31,0.97)),
-        url("/assets/img/bg-biblia.jpg") center/cover no-repeat fixed;
-      color: var(--text);
-      line-height: 1.6;
-    }
-    a { text-decoration: none; color: inherit; }
-
-    /* TOPBAR */
-    .topbar {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(8,17,31,0.95);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      backdrop-filter: blur(12px);
-    }
-    .topbar-inner {
-      max-width: var(--max); margin: 0 auto;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0.7rem 1.5rem;
-    }
-    .brand { display: flex; align-items: center; gap: 0.75rem; }
-    .brand-logo-img { height: 42px; width: auto; display: block; }
-    .brand-text { display: flex; flex-direction: column; }
-    .brand-text span { font-size: 1.05rem; font-weight: 700; color: var(--gold); }
-    .brand-text small { font-size: 0.72rem; color: var(--muted); }
-    .nav-links { display: flex; gap: 1.2rem; align-items: center; }
-    .nav-links a { font-size: 0.88rem; color: var(--muted); transition: color 0.2s; }
-    .nav-links a:hover { color: var(--gold); }
-
-    /* HERO */
-    .hero {
-      max-width: var(--max); margin: 0 auto;
-      padding: 4rem 1.5rem 2rem;
-      text-align: center;
-    }
-    .hero-badge {
-      display: inline-block;
-      background: rgba(245,197,66,0.12);
-      border: 1px solid rgba(245,197,66,0.3);
-      color: var(--gold);
-      font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em;
-      padding: 0.35rem 1rem; border-radius: 30px;
-      margin-bottom: 1.2rem; text-transform: uppercase;
-    }
-    .hero h1 {
-      font-size: clamp(1.8rem, 4vw, 3rem);
-      font-weight: 800; color: #fff;
-      line-height: 1.2; margin-bottom: 1rem;
-    }
-    .hero h1 span { color: var(--gold); }
-    .hero p {
-      font-size: 1.05rem; color: var(--muted);
-      max-width: 680px; margin: 0 auto 2rem;
-    }
-
-    /* STATS */
-    .stats {
-      display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;
-      margin-bottom: 2.5rem;
-    }
-    .stat {
-      background: var(--card); border: 1px solid var(--card-border);
-      border-radius: 12px; padding: 1rem 1.5rem; text-align: center;
-      min-width: 120px;
-    }
-    .stat-num { font-size: 1.8rem; font-weight: 800; color: var(--gold); }
-    .stat-label { font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; }
-
-    /* BREADCRUMB */
-    .breadcrumb {
-      max-width: var(--max); margin: 0 auto;
-      padding: 0.5rem 1.5rem 0;
-      font-size: 0.82rem; color: var(--muted);
-    }
-    .breadcrumb a { color: var(--accent); }
-    .breadcrumb a:hover { text-decoration: underline; }
-
-    /* GRID */
-    .section-title {
-      max-width: var(--max); margin: 2rem auto 1rem;
-      padding: 0 1.5rem;
-      font-size: 1.3rem; font-weight: 700; color: var(--gold);
-      border-left: 4px solid var(--gold); padding-left: 1rem;
-    }
-    .blocks-grid {
-      max-width: var(--max); margin: 0 auto;
-      padding: 0 1.5rem 1.5rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 1.5rem;
-    }
-    .block-card {
-      background: var(--card);
-      border: 1px solid var(--card-border);
-      border-radius: var(--radius);
-      padding: 1.8rem;
-      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-      display: flex; flex-direction: column; gap: 0.8rem;
-      position: relative; overflow: hidden;
-    }
-    .block-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: linear-gradient(90deg, var(--gold), transparent);
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-    .block-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: rgba(245,197,66,0.3); }
-    .block-card:hover::before { opacity: 1; }
-    .block-num {
-      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em;
-      color: var(--gold); text-transform: uppercase;
-    }
-    .block-card h2 {
-      font-size: 1.15rem; font-weight: 700; color: #fff; line-height: 1.3;
-    }
-    .block-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
-    .block-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.3rem; }
-    .tag {
-      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
-      color: var(--muted); font-size: 0.72rem; padding: 0.2rem 0.6rem;
-      border-radius: 20px;
-    }
-    .block-cta {
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      margin-top: auto; padding-top: 0.8rem;
-      font-size: 0.85rem; font-weight: 600; color: var(--gold);
-      border-top: 1px solid rgba(255,255,255,0.07);
-      transition: gap 0.2s;
-    }
-    .block-card:hover .block-cta { gap: 0.7rem; }
-
-    /* COMING SOON */
-    .block-card.coming-soon { opacity: 0.55; pointer-events: none; }
-    .coming-badge {
-      display: inline-block; background: rgba(96,165,250,0.15);
-      border: 1px solid rgba(96,165,250,0.3); color: var(--accent);
-      font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.6rem;
-      border-radius: 20px; text-transform: uppercase; letter-spacing: 0.08em;
-    }
-
-    /* ADSENSE */
-    .ad-wrap {
-      max-width: var(--max); margin: 1.5rem auto;
-      padding: 0 1.5rem;
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center; padding: 2.5rem 1.5rem;
-      color: var(--muted); font-size: 0.82rem;
-      border-top: 1px solid rgba(255,255,255,0.07);
-      margin-top: 3rem;
-    }
-    footer a { color: var(--accent); }
-
-    /* LANG SELECTOR */
-    #lang-selector {
-      position: fixed; top: 14px; right: 16px; z-index: 9999;
-      display: flex; gap: 6px;
-      background: rgba(15,23,42,0.92);
-      border: 1px solid #334155; border-radius: 30px;
-      padding: 5px 10px; backdrop-filter: blur(8px);
-      box-shadow: 0 2px 12px rgba(0,0,0,0.4);
-    }
-    #lang-selector a { text-decoration: none; font-size: 1.1rem; opacity: 0.7; transition: transform 0.15s; }
-    #lang-selector a:hover { transform: scale(1.2); }
-    #lang-selector a.active { opacity: 1; }
-
-    /* DARK TOGGLE */
-    #dark-toggle {
-      position: fixed; bottom: 70px; right: 16px; z-index: 9999;
-      background: #1e293b; border: 1px solid #334155; border-radius: 50%;
-      width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
-      cursor: pointer; font-size: 1.2rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.4); transition: transform 0.2s;
-    }
-    #dark-toggle:hover { transform: scale(1.1); }
-
-    /* WHATSAPP */
-    #whatsapp-cta {
-      position: fixed; bottom: 20px; right: 16px; z-index: 9998;
-      background: #25d366; border-radius: 50%;
-      width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 4px 15px rgba(37,211,102,0.5);
-      text-decoration: none; font-size: 1.5rem; transition: transform 0.2s;
-    }
-    #whatsapp-cta:hover { transform: scale(1.15); }
-
-    @media (max-width: 640px) {
-      .blocks-grid { grid-template-columns: 1fr; }
-      .stats { gap: 1rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="/estudos/styles.css" />
 </head>
 <body>
-
-<!-- SELETOR DE IDIOMA -->
-<div id="lang-selector">
-  <a href="/" title="Português" class="active">🇧🇷</a>
-  <a href="/en/estudos/" title="English">🇺🇸</a>
-  <a href="/es/estudios/" title="Español">🇪🇸</a>
+<div id="lang-selector" style="position:fixed;top:14px;right:16px;z-index:9999;display:flex;gap:6px;background:rgba(15,23,42,0.92);border:1px solid #334155;border-radius:30px;padding:5px 10px;backdrop-filter:blur(8px);box-shadow:0 2px 12px rgba(0,0,0,0.4);">
+  <a href="/estudos/index.html" title="Português" style="font-size:1.1rem;opacity:0.95;">🇧🇷</a>
+  <a href="/en/estudos/" title="English" style="font-size:1.1rem;opacity:0.7;">🇺🇸</a>
+  <a href="/es/estudios/" title="Español" style="font-size:1.1rem;opacity:0.7;">🇪🇸</a>
 </div>
-
-<!-- TOPBAR -->
-<nav class="topbar">
-  <div class="topbar-inner">
-    <a href="/" class="brand">
-      <img src="/assets/img/logo-header.png" alt="365 Graça e Adoração" class="brand-logo-img">
-      <div class="brand-text">
-        <span>365 Graça &amp; Adoração</span>
-        <small>Da Criação ao Apocalipse</small>
-      </div>
-    </a>
-    <div class="nav-links">
-      <a href="/">Início</a>
-      <a href="/blocos/">13 Blocos</a>
-      <a href="/estudos/" style="color:var(--gold);">Estudos</a>
-      <a href="/personagens/">Personagens</a>
-      <a href="/mapas/">Mapas</a>
+<header class="topbar"><div class="inner"><a href="/" class="brand"><img src="/assets/img/logo-header.png" alt="365 Graça e Adoração" class="brand-logo-img"><div class="brand-text">365 Graça &amp; Adoração<small>Da Criação ao Apocalipse</small></div></a><nav class="nav"><a href="/">Início</a><a href="/blocos/">12 Blocos</a><a href="/estudos/index.html" class="active">Estudos Temáticos</a><a href="/timeline/index.html">Linha do Tempo</a><a href="/personagens/index.html">Personagens</a></nav></div></header>
+<main class="wrap">
+  <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Início</a> / <span>Estudos Bíblicos Temáticos</span></nav>
+  <section class="hero">
+    <h1>Estudos Bíblicos Temáticos</h1>
+    <p>Uma nova área temática para aprofundar assuntos contemporâneos e bíblicos sem alterar a estrutura principal dos 12 blocos da jornada.</p>
+  </section>
+  <section class="section">
+    <h2>Categorias</h2>
+    <div class="grid"><article class="card"><span class="badge">Categoria</span><h2>Vida Espiritual</h2><p>Disciplinas espirituais e crescimento contínuo com base bíblica.</p><a href="/estudos/vida-espiritual/index.html">Explorar categoria →</a></article>
+<article class="card"><span class="badge">Categoria</span><h2>Emoções e Cura</h2><p>Ansiedade, perdão e restauração à luz das Escrituras.</p><a href="/estudos/emocoes-e-cura/index.html">Explorar categoria →</a></article>
+<article class="card"><span class="badge">Categoria</span><h2>Juventude e Tecnologia</h2><p>Desafios digitais e formação de identidade cristã.</p><a href="/estudos/juventude-e-tecnologia/index.html">Explorar categoria →</a></article>
+<article class="card"><span class="badge">Categoria</span><h2>Contexto Histórico</h2><p>Segundo Templo, Evangelhos, arqueologia e expansão cristã.</p><a href="/estudos/contexto-historico/index.html">Explorar categoria →</a></article>
+<article class="card"><span class="badge">Categoria</span><h2>Últimos Dias</h2><p>Escatologia bíblica com esperança, vigilância e sobriedade.</p><a href="/estudos/ultimos-dias/index.html">Explorar categoria →</a></article>
+<article class="card"><span class="badge">Categoria</span><h2>Família, Igreja e Sociedade</h2><p>Vida comunitária, responsabilidade espiritual e testemunho público.</p><a href="/estudos/familia-igreja-sociedade/index.html">Explorar categoria →</a></article></div>
+  </section>
+  <section class="section">
+    <h2>Estudos iniciais em destaque</h2>
+    <div class="grid"><article class="card"><h3>Ansiedade à luz da Bíblia</h3><p>Página-base com introdução, textos-chave, aplicações e links internos.</p><a href="/estudos/emocoes-e-cura/ansiedade-luz-biblia/index.html">Abrir estudo →</a></article>
+<article class="card"><h3>Oração que transforma a vida</h3><p>Página-base com introdução, textos-chave, aplicações e links internos.</p><a href="/estudos/vida-espiritual/oracao-transforma-vida/index.html">Abrir estudo →</a></article>
+<article class="card"><h3>Fé em tempos de incerteza</h3><p>Página-base com introdução, textos-chave, aplicações e links internos.</p><a href="/estudos/emocoes-e-cura/fe-tempos-incerteza/index.html">Abrir estudo →</a></article>
+<article class="card"><h3>Perdão e restauração</h3><p>Página-base com introdução, textos-chave, aplicações e links internos.</p><a href="/estudos/emocoes-e-cura/perdao-restauracao/index.html">Abrir estudo →</a></article>
+<article class="card"><h3>Paz de Deus em um mundo agitado</h3><p>Página-base com introdução, textos-chave, aplicações e links internos.</p><a href="/estudos/emocoes-e-cura/paz-deus-mundo-agitado/index.html">Abrir estudo →</a></article>
+<article class="card"><h3>Como discernir a vontade de Deus</h3><p>Página-base com introdução, textos-chave, aplicações e links internos.</p><a href="/estudos/vida-espiritual/discernir-vontade-deus/index.html">Abrir estudo →</a></article></div>
+  </section>
+  <section class="section">
+    <h2>Temas relacionados</h2>
+    <div class="related">
+      <a class="card" href="/mapas/index.html"><h3>Mapas bíblicos</h3><p>Aprofunde geografia e contexto territorial das narrativas.</p></a>
+      <a class="card" href="/personagens/index.html"><h3>Personagens bíblicos</h3><p>Conecte cada estudo a perfis e trajetórias de fé.</p></a>
+      <a class="card" href="/timeline/index.html"><h3>Linha do tempo</h3><p>Visualize marcos históricos da criação ao Apocalipse.</p></a>
     </div>
-  </div>
-</nav>
+  </section>
 
-<!-- BREADCRUMB -->
-<nav class="breadcrumb">
-  <a href="/">Início</a> › <span style="color:#e5e7eb;">Estudos Temáticos</span>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-badge">📚 Estudos Temáticos</div>
-  <h1>Aprofunde sua <span>Jornada Bíblica</span></h1>
-  <p>Estudos temáticos aprofundados, organizados por blocos de conhecimento. Cada bloco reúne estudos com contexto histórico, análise versículo a versículo e aplicações práticas para a vida cristã.</p>
-  <div class="stats">
-    <div class="stat">
-      <div class="stat-num">2</div>
-      <div class="stat-label">Blocos Ativos</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">8</div>
-      <div class="stat-label">Estudos Disponíveis</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">3</div>
-      <div class="stat-label">Idiomas</div>
-    </div>
-  </div>
-</section>
-
-<!-- ADSENSE TOPO -->
-<div class="ad-wrap">
-  <ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-7719935194423493"
-    data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-
-<!-- BLOCO: CONTEXTO HISTÓRICO -->
-<h2 class="section-title">📖 Bloco 13 — Contexto Histórico</h2>
-<div class="blocks-grid">
-
-  <a href="/estudos/contexto-historico/mundo-segundo-templo/" class="block-card">
-    <div class="block-num">Estudo 11</div>
-    <h2>O mundo do Segundo Templo</h2>
-    <p>Grupos religiosos, Herodes, o Templo de Jerusalém e as esperanças messiânicas que moldaram o contexto do Novo Testamento.</p>
-    <div class="block-tags">
-      <span class="tag">Fariseus</span>
-      <span class="tag">Herodes</span>
-      <span class="tag">Templo</span>
-      <span class="tag">Messias</span>
-    </div>
-    <span class="block-cta">Estudar agora →</span>
-  </a>
-
-  <a href="/estudos/contexto-historico/contexto-historico-evangelhos/" class="block-card">
-    <div class="block-num">Estudo 12</div>
-    <h2>O contexto histórico dos Evangelhos</h2>
-    <p>Mateus, Marcos, Lucas e João — a questão sinótica, as audiências originais e como o contexto histórico ilumina cada Evangelho.</p>
-    <div class="block-tags">
-      <span class="tag">Mateus</span>
-      <span class="tag">Marcos</span>
-      <span class="tag">Lucas</span>
-      <span class="tag">João</span>
-    </div>
-    <span class="block-cta">Estudar agora →</span>
-  </a>
-
-  <a href="/estudos/contexto-historico/roma-jerusalem-expansao-cristianismo/" class="block-card">
-    <div class="block-num">Estudo 13</div>
-    <h2>Roma, Jerusalém e a expansão do cristianismo</h2>
-    <p>Pax Romana, a diáspora judaica, as viagens de Paulo, as perseguições e a queda de Jerusalém em 70 d.C.</p>
-    <div class="block-tags">
-      <span class="tag">Roma</span>
-      <span class="tag">Paulo</span>
-      <span class="tag">Diáspora</span>
-      <span class="tag">Perseguição</span>
-    </div>
-    <span class="block-cta">Estudar agora →</span>
-  </a>
-
-  <a href="/estudos/contexto-historico/arqueologia-confirmacao-historica/" class="block-card">
-    <div class="block-num">Estudo 14</div>
-    <h2>Arqueologia bíblica e confirmação histórica</h2>
-    <p>Manuscritos do Mar Morto, Inscrição de Pôncio Pilatos, ossuário de Caifás — como a arqueologia confirma a narrativa bíblica.</p>
-    <div class="block-tags">
-      <span class="tag">Arqueologia</span>
-      <span class="tag">Mar Morto</span>
-      <span class="tag">Manuscritos</span>
-      <span class="tag">Evidências</span>
-    </div>
-    <span class="block-cta">Estudar agora →</span>
-  </a>
-
-  <a href="/estudos/contexto-historico/geografia-terra-santa/" class="block-card">
-    <div class="block-num">Estudo 15</div>
-    <h2>A geografia da Terra Santa</h2>
-    <p>Galileia, Judeia, Samaria, o Jordão e as grandes rotas do século I — como a geografia moldou o ministério de Jesus e dos apóstolos.</p>
-    <div class="block-tags">
-      <span class="tag">Galileia</span>
-      <span class="tag">Jerusalém</span>
-      <span class="tag">Samaria</span>
-      <span class="tag">Rotas</span>
-    </div>
-    <span class="block-cta">Estudar agora →</span>
-  </a>
-
-  <a href="/estudos/contexto-historico/cultura-cotidiano-mundo-biblico/" class="block-card">
-    <div class="block-num">Estudo 16</div>
-    <h2>Cultura e cotidiano no mundo bíblico</h2>
-    <p>Família, alimentação, trabalho, festas religiosas, vestuário e educação — o dia a dia do povo judeu no tempo de Jesus.</p>
-    <div class="block-tags">
-      <span class="tag">Família</span>
-      <span class="tag">Festas</span>
-      <span class="tag">Trabalho</span>
-      <span class="tag">Educação</span>
-    </div>
-    <span class="block-cta">Estudar agora →</span>
-  </a>
-
-</div>
-
-<!-- ADSENSE MEIO -->
-<div class="ad-wrap">
-  <ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-7719935194423493"
-    data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-
-<!-- BLOCO: CRUZ DE CRISTO -->
-<h2 class="section-title">✝ Estudos Especiais</h2>
-<div class="blocks-grid">
-
-  <a href="/estudos/cruz-de-cristo/" class="block-card">
-    <div class="block-num">Estudo Especial</div>
-    <h2>A Cruz de Cristo — De Gênesis ao Apocalipse</h2>
-    <p>O fio vermelho da redenção que atravessa toda a Escritura — do protoevangelio em Gênesis 3 até o Cordeiro no Apocalipse.</p>
-    <div class="block-tags">
-      <span class="tag">Redenção</span>
-      <span class="tag">Sacrifício</span>
-      <span class="tag">Cordeiro</span>
-      <span class="tag">Salvação</span>
-    </div>
-    <span class="block-cta">Estudar agora →</span>
-  </a>
-
-  <div class="block-card coming-soon">
-    <div class="block-num">Em breve</div>
-    <h2>Os Personagens da Fé</h2>
-    <p>Abraão, Moisés, Davi, Pedro, Paulo — vidas que ilustram a fidelidade de Deus e o chamado ao discipulado.</p>
-    <div class="block-tags">
-      <span class="tag">Abraão</span>
-      <span class="tag">Moisés</span>
-      <span class="tag">Davi</span>
-      <span class="tag">Paulo</span>
-    </div>
-    <span class="coming-badge">Em breve</span>
-  </div>
-
-  <div class="block-card coming-soon">
-    <div class="block-num">Em breve</div>
-    <h2>As Profecias Messiânicas</h2>
-    <p>Mais de 300 profecias do Antigo Testamento cumpridas em Jesus — evidência da inspiração divina das Escrituras.</p>
-    <div class="block-tags">
-      <span class="tag">Profecias</span>
-      <span class="tag">Messias</span>
-      <span class="tag">Cumprimento</span>
-    </div>
-    <span class="coming-badge">Em breve</span>
-  </div>
-
-</div>
-
-<!-- ADSENSE RODAPÉ -->
-<div class="ad-wrap">
-  <ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-7719935194423493"
-    data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-
-<!-- FOOTER -->
-<footer>
-  <p>365 Graça &amp; Adoração — Estudo bíblico gratuito para todos</p>
-  <p style="margin-top:0.5rem;">
-    <a href="/">Início</a> &nbsp;·&nbsp;
-    <a href="/blocos/">13 Blocos</a> &nbsp;·&nbsp;
-    <a href="/personagens/">Personagens</a> &nbsp;·&nbsp;
-    <a href="/mapas/">Mapas</a> &nbsp;·&nbsp;
-    <a href="/sobre/">Sobre</a>
-  </p>
-  <p style="margin-top:0.8rem;color:#475569;">© 2025 365gracaeadoracao.com</p>
+</main>
+<footer class="footer">
+  <p>© 2026 · 365 Graça &amp; Adoração · Estudos Bíblicos Temáticos.</p>
+  <div class="translation-note"><strong>Espaço para tradução futura:</strong> estrutura preparada para versões em <code>/en/estudos/</code> e <code>/es/estudios/</code>, mantendo URLs estáticas e compatíveis com Vercel.</div>
 </footer>
-
-<!-- DARK TOGGLE -->
-<div id="dark-toggle" title="Alternar modo escuro/claro"
-  onclick="var h=document.documentElement,c=h.getAttribute('data-theme');if(c==='light'){h.removeAttribute('data-theme');localStorage.setItem('365-theme','dark');this.textContent='🌙';}else{h.setAttribute('data-theme','light');localStorage.setItem('365-theme','light');this.textContent='☀️';}">🌙</div>
-
-<!-- WHATSAPP -->
-<a id="whatsapp-cta"
-  href="https://wa.me/?text=Estudando%20a%20B%C3%ADblia%20em%20365%20Gra%C3%A7a%20e%20Adora%C3%A7%C3%A3o%3A%20https%3A%2F%2F365gracaeadoracao.com%2Festudos%2F"
-  target="_blank" title="Compartilhar no WhatsApp">📲</a>
-
 </body>
 </html>
