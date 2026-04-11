@@ -9,6 +9,14 @@
     {
       "source": "/estudos/",
       "destination": "/estudos/index.html"
+    },
+    {
+      "source": "/ebook-4-passos",
+      "destination": "/ebook-4-passos/index.html"
+    },
+    {
+      "source": "/ebook-4-passos/",
+      "destination": "/ebook-4-passos/index.html"
     }
   ],
   "redirects": [
