@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Como Estudar a Bíblia com Profundidade Sem Complicação | 365 Graça & Adoração</title>
+  <meta name="description" content="Um guia prático e reverente para quem deseja compreender melhor as Escrituras, organizar a leitura bíblica e transformar o estudo da Palavra em uma prática viva e constante." />
+  <meta name="keywords" content="como estudar a Bíblia, estudo bíblico profundo, ebook cristão, interpretação bíblica, leitura bíblica, 365 Graça e Adoração, hermenêutica prática" />
+  <meta name="author" content="365 Graça & Adoração" />
+  <meta property="og:title" content="Como Estudar a Bíblia com Profundidade Sem Complicação" />
+  <meta property="og:description" content="Um guia prático e reverente para quem deseja compreender melhor as Escrituras, organizar a leitura bíblica e transformar o estudo da Palavra em uma prática viva e constante." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://365gracaeadoracao.com/como-estudar-a-biblia" />
+  <link rel="canonical" href="https://365gracaeadoracao.com/como-estudar-a-biblia" />
+
+  <style>
+    :root {
+      --bg: #f8f5ef;
+      --paper: #ffffff;
+      --ink: #1f1f1f;
+      --muted: #5b5b5b;
+      --brand: #7a5c2e;
+      --brand-dark: #5b421e;
+      --accent: #d8c29a;
+      --line: #e6ddcf;
+      --success: #2c6b3f;
+      --shadow: 0 10px 30px rgba(0,0,0,0.08);
+      --radius: 18px;
+      --max: 1140px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(248, 245, 239, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: var(--shadow);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      font-size: 0.98rem;
+      transition: 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--brand);
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary:hover {
+      background: var(--brand-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--brand-dark);
+      border-color: var(--brand-dark);
+    }
+
+    .btn-secondary:hover {
+      background: #f2eadc;
+    }
+
+    .hero {
+      padding: 72px 0 56px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #efe6d6;
+      color: var(--brand-dark);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.18;
+      margin: 0 0 16px;
+      color: #151515;
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 4vw, 4rem);
+      letter-spacing: -0.03em;
+    }
+
+    h2 {
+      font-size: clamp(1.6rem, 2.7vw, 2.6rem);
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    .hero p.lead {
+      font-size: 1.12rem;
+      color: var(--muted);
+      max-width: 650px;
+      margin: 0 0 24px;
+    }
+
+    .hero-points {
+      display: grid;
+      gap: 10px;
+      margin: 20px 0 30px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .hero-points li {
+      position: relative;
+      padding-left: 28px;
+      color: #333;
+    }
+
+    .hero-points li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--brand);
+      font-weight: 700;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .hero-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .cover-wrap {
+      overflow: hidden;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: #f3eee4;
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .cover-wrap img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .price-box {
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 18px;
+      background: #fcf8f1;
+      border: 1px solid var(--line);
+    }
+
+    .price-box strong {
+      display: block;
+      font-size: 1.5rem;
+      color: var(--brand-dark);
+    }
+
+    section {
+      padding: 64px 0;
+    }
+
+    .section-muted {
+      background: #f3ede2;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-intro {
+      max-width: 800px;
+      margin: 0 auto 34px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .cards-3,
+    .cards-4 {
+      display: grid;
+      gap: 20px;
+    }
+
+    .cards-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cards-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      height: 100%;
+    }
+
+    .card .num {
+      display: inline-flex;
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      align-items: center;
+      justify-content: center;
+      background: #efe6d6;
+      color: var(--brand-dark);
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .list-box {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .check-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .check-list li {
+      position: relative;
+      padding-left: 28px;
+      color: #333;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--success);
+      font-weight: 700;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, #6f5329, #3e2d14);
+      color: #fff;
+      border-radius: 28px;
+      padding: 40px 28px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .cta-box p {
+      max-width: 760px;
+      margin: 0 auto 24px;
+      color: rgba(255,255,255,0.92);
+    }
+
+    .faq {
+      display: grid;
+      gap: 14px;
+    }
+
+    details {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px 20px;
+      box-shadow: var(--shadow);
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: #1b1b1b;
+    }
+
+    details p {
+      margin: 12px 0 0;
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 28px 0 50px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .small {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .split,
+      .cards-3,
+      .cards-4 {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 52px;
+      }
+
+      .topbar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-actions {
+        width: 100%;
+      }
+
+      .nav-actions .btn {
+        flex: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="https://365gracaeadoracao.com/">
+        <span style="font-size: 1.5rem;">✨</span>
+        <span>365 Graça & Adoração</span>
+      </a>
+
+      <div class="nav-actions">
+        <a class="btn btn-secondary" href="https://365gracaeadoracao.com/" target="_blank" rel="noopener noreferrer">Conhecer o 365</a>
+        <a class="btn btn-primary" href="https://go.hotmart.com/Y105370596Y?dp=1" target="_blank" rel="noopener noreferrer">Quero adquirir o ebook</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Ebook cristão • Estudo bíblico aprofundado</span>
+          <h1>Como Estudar a Bíblia com Profundidade Sem Complicação</h1>
+          <p class="lead">
+            Um guia prático e reverente do <strong>365 Graça & Adoração</strong> para quem deseja
+            compreender melhor as Escrituras, organizar a leitura bíblica, evitar erros de interpretação
+            e transformar o estudo da Palavra em uma prática viva, constante e espiritualmente consistente.
+          </p>
+
+          <ul class="hero-points">
+            <li>Entenda por que estudar a Bíblia com profundidade transforma a fé.</li>
+            <li>Aprenda a ler o texto dentro do seu contexto histórico e literário.</li>
+            <li>Identifique e evite os erros mais comuns na interpretação bíblica.</li>
+            <li>Desenvolva constância e maturidade espiritual no estudo da Palavra.</li>
+          </ul>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://go.hotmart.com/Y105370596Y?dp=1" target="_blank" rel="noopener noreferrer">Comprar agora</a>
+            <a class="btn btn-secondary" href="#conteudo">Ver o que você vai aprender</a>
+          </div>
+
+          <p class="small" style="margin-top: 16px;">
+            Ideal para cristãos iniciantes, líderes de pequenos grupos, professores de escola bíblica, discipuladores e leitores que desejam crescer no conhecimento bíblico.
+          </p>
+        </div>
+
+        <aside class="hero-card">
+          <div class="cover-wrap">
+            📖 Capa do ebook
+          </div>
+
+          <div class="price-box">
+            <span class="small">Guia prático de estudo bíblico</span>
+            <strong>$7.00</strong>
+            <p class="small" style="margin: 8px 0 16px;">
+              Acesso ao ebook digital com método prático, ferramentas simples e orientações para um estudo bíblico mais profundo.
+            </p>
+            <a class="btn btn-primary" style="width: 100%;" href="https://go.hotmart.com/Y105370596Y?dp=1" target="_blank" rel="noopener noreferrer">Ir para a compra</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section-muted">
+      <div class="container">
+        <h2>Muitos cristãos leem, mas poucos foram ensinados a estudar</h2>
+        <p class="section-intro">
+          A dificuldade não está na falta de interesse, mas na ausência de método. Este ebook foi criado
+          para romper essa barreira e ajudar o leitor a estudar a Bíblia com profundidade de forma simples,
+          prática e segura.
+        </p>
+
+        <div class="cards-3">
+          <article class="card">
+            <h3>Leituras sem contexto</h3>
+            <p>Versículos isolados e leituras rápidas podem levar a interpretações equivocadas e aplicações sem base sólida.</p>
+          </article>
+
+          <article class="card">
+            <h3>Estudo apenas para especialistas</h3>
+            <p>Muitos acreditam que um estudo mais profundo é reservado a teólogos e pregadores, o que os impede de crescer.</p>
+          </article>
+
+          <article class="card">
+            <h3>Falta de constância</h3>
+            <p>Sem método e organização, é difícil manter uma rotina de estudo bíblico que produza crescimento espiritual real.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="conteudo">
+      <div class="container">
+        <h2>O que você vai aprender neste ebook</h2>
+        <p class="section-intro">
+          O conteúdo foi organizado de forma prática, clara e edificante, com ferramentas e orientações
+          para transformar sua relação com as Escrituras.
+        </p>
+
+        <div class="cards-4">
+          <article class="card">
+            <span class="num">1</span>
+            <h3>Por que estudar com profundidade</h3>
+            <p>Entenda a importância de ir além da leitura superficial e o impacto transformador de um estudo bíblico consistente.</p>
+          </article>
+
+          <article class="card">
+            <span class="num">2</span>
+            <h3>Leitura dentro do contexto</h3>
+            <p>Aprenda a considerar o contexto histórico, cultural, literário e teológico de cada passagem para interpretar com fidelidade.</p>
+          </article>
+
+          <article class="card">
+            <span class="num">3</span>
+            <h3>Erros comuns de interpretação</h3>
+            <p>Identifique as armadilhas mais frequentes na leitura bíblica e saiba como evitá-las com sabedoria e humildade.</p>
+          </article>
+
+          <article class="card">
+            <span class="num">4</span>
+            <h3>Ferramentas e constância</h3>
+            <p>Conheça recursos simples e estratégias práticas para desenvolver uma rotina de estudo bíblico viva e consistente.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-muted">
+      <div class="container split">
+        <div class="list-box">
+          <h3>Este ebook é para você que...</h3>
+          <ul class="check-list">
+            <li>É cristão iniciante e quer estudar a Bíblia com mais clareza.</li>
+            <li>Lidera um pequeno grupo ou escola bíblica.</li>
+            <li>Deseja sair de uma leitura superficial e crescer na fé.</li>
+            <li>Quer evitar erros comuns de interpretação bíblica.</li>
+            <li>Busca desenvolver constância e maturidade espiritual.</li>
+            <li>Precisa de um método simples, sólido e acessível.</li>
+          </ul>
+        </div>
+
+        <div class="list-box">
+          <h3>O diferencial do 365 Graça & Adoração</h3>
+          <ul class="check-list">
+            <li>Abordagem alinhada à reverência e à edificação cristã.</li>
+            <li>Método prático sem abrir mão da profundidade teológica.</li>
+            <li>Conteúdo pensado para o leitor comum que deseja crescer.</li>
+            <li>Linguagem acessível com base sólida nas Escrituras.</li>
+            <li>Material conectado ao propósito do projeto 365.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>A Bíblia foi dada para ser compreendida, recebida e vivida</h2>
+        <p class="section-intro">
+          Este ebook foi criado para ajudar você a transformar a leitura bíblica em uma prática viva,
+          constante e espiritualmente consistente, independentemente do seu nível de conhecimento.
+        </p>
+
+        <div class="cards-3">
+          <article class="card">
+            <h3>Método acessível</h3>
+            <p>Um caminho claro e prático para estudar as Escrituras com mais profundidade, sem precisar de formação teológica prévia.</p>
+          </article>
+
+          <article class="card">
+            <h3>Base sólida</h3>
+            <p>Fundamentos hermenêuticos apresentados de forma simples para proteger o leitor de interpretações equivocadas.</p>
+          </article>
+
+          <article class="card">
+            <h3>Crescimento real</h3>
+            <p>Orientações para transformar o estudo bíblico em uma prática diária que produz maturidade espiritual genuína.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="cta-box">
+          <h2 style="color: #fff;">Comece hoje a estudar a Bíblia com mais profundidade</h2>
+          <p>
+            Se você deseja compreender melhor as Escrituras, organizar sua leitura bíblica e crescer
+            espiritualmente com base sólida, este ebook foi criado para ser o seu guia nessa jornada.
+          </p>
+          <a class="btn btn-primary" href="https://go.hotmart.com/Y105370596Y?dp=1" target="_blank" rel="noopener noreferrer">Adquirir o ebook agora</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-muted">
+      <div class="container">
+        <h2>Perguntas frequentes</h2>
+        <div class="faq">
+          <details>
+            <summary>Em que formato o ebook será entregue?</summary>
+            <p>O material é entregue em formato digital, ideal para leitura em celular, tablet ou computador.</p>
+          </details>
+
+          <details>
+            <summary>Este conteúdo serve para iniciantes?</summary>
+            <p>Sim. O ebook foi pensado para ser acessível a qualquer cristão, independentemente do nível de conhecimento bíblico.</p>
+          </details>
+
+          <details>
+            <summary>O ebook é útil para líderes e professores?</summary>
+            <p>Sim. Ele oferece ferramentas e orientações que ajudam líderes, discipuladores e professores a organizar e aprofundar seu estudo bíblico.</p>
+          </details>
+
+          <details>
+            <summary>Esse material substitui um curso de teologia?</summary>
+            <p>Não. Ele oferece uma base prática e acessível para o estudo pessoal, servindo como ponto de partida para uma jornada de crescimento mais ampla.</p>
+          </details>
+
+          <details>
+            <summary>Há garantia de satisfação?</summary>
+            <p>Sim. O produto oferece garantia de 7 dias conforme a política da plataforma Hotmart.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong>365 Graça & Adoração</strong> • Uma jornada de estudo bíblico com profundidade, contexto e edificação.</p>
+      <p>
+        <a href="https://365gracaeadoracao.com/" target="_blank" rel="noopener noreferrer">Acessar o site</a>
+        •
+        <a href="https://go.hotmart.com/Y105370596Y?dp=1" target="_blank" rel="noopener noreferrer">Comprar o ebook</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

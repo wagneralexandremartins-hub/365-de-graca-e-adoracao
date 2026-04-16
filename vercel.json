@@ -17,6 +17,30 @@
     {
       "source": "/ebook-4-passos/",
       "destination": "/ebook-4-passos/index.html"
+    },
+    {
+      "source": "/loja-365",
+      "destination": "/loja-365/index.html"
+    },
+    {
+      "source": "/loja-365/",
+      "destination": "/loja-365/index.html"
+    },
+    {
+      "source": "/autismo-e-fe",
+      "destination": "/autismo-e-fe/index.html"
+    },
+    {
+      "source": "/autismo-e-fe/",
+      "destination": "/autismo-e-fe/index.html"
+    },
+    {
+      "source": "/como-estudar-a-biblia",
+      "destination": "/como-estudar-a-biblia/index.html"
+    },
+    {
+      "source": "/como-estudar-a-biblia/",
+      "destination": "/como-estudar-a-biblia/index.html"
     }
   ],
   "redirects": [
