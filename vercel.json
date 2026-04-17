@@ -363,6 +363,551 @@
       "source": "/apocrifos",
       "destination": "/06-apocrifos",
       "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-01/",
+      "destination": "/03-historicos/josue/capitulos/capitulo-01.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-01",
+      "destination": "/03-historicos/josue/capitulos/capitulo-01.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-02/",
+      "destination": "/03-historicos/josue/capitulos/capitulo-02.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-02",
+      "destination": "/03-historicos/josue/capitulos/capitulo-02.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-03/",
+      "destination": "/03-historicos/josue/capitulos/capitulo-03.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-03",
+      "destination": "/03-historicos/josue/capitulos/capitulo-03.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-04/",
+      "destination": "/03-historicos/josue/capitulos/capitulo-04.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-04",
+      "destination": "/03-historicos/josue/capitulos/capitulo-04.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-05/",
+      "destination": "/03-historicos/josue/capitulos/capitulo-05.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-05",
+      "destination": "/03-historicos/josue/capitulos/capitulo-05.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-06/",
+      "destination": "/03-historicos/josue/capitulos/capitulo-06.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-06",
+      "destination": "/03-historicos/josue/capitulos/capitulo-06.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-07/",
+      "destination": "/03-historicos/josue/capitulos/capitulo-07.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-07",
+      "destination": "/03-historicos/josue/capitulos/capitulo-07.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-08/",
+      "destination": "/03-historicos/josue/capitulos/capitulo-08.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-08",
+      "destination": "/03-historicos/josue/capitulos/capitulo-08.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-09/",
+      "destination": "/03-historicos/josue/capitulos/capitulo-09.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-09",
+      "destination": "/03-historicos/josue/capitulos/capitulo-09.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-10/",
+      "destination": "/03-historicos/josue/capitulos/capitulo-10.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-10",
+      "destination": "/03-historicos/josue/capitulos/capitulo-10.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-11/",
+      "destination": "/03-historicos/josue/capitulos/capitulo-11.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-11",
+      "destination": "/03-historicos/josue/capitulos/capitulo-11.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-12/",
+      "destination": "/03-historicos/josue/capitulos/capitulo-12.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-12",
+      "destination": "/03-historicos/josue/capitulos/capitulo-12.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-13/",
+      "destination": "/03-historicos/josue/capitulos/capitulo-13.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-13",
+      "destination": "/03-historicos/josue/capitulos/capitulo-13.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-14/",
+      "destination": "/03-historicos/josue/capitulos/capitulo-14.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-14",
+      "destination": "/03-historicos/josue/capitulos/capitulo-14.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-15/",
+      "destination": "/03-historicos/josue/capitulos/capitulo-15.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-15",
+      "destination": "/03-historicos/josue/capitulos/capitulo-15.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-16/",
+      "destination": "/03-historicos/josue/capitulos/capitulo-16.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-16",
+      "destination": "/03-historicos/josue/capitulos/capitulo-16.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-17/",
+      "destination": "/03-historicos/josue/capitulos/capitulo-17.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-17",
+      "destination": "/03-historicos/josue/capitulos/capitulo-17.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-18/",
+      "destination": "/03-historicos/josue/capitulos/capitulo-18.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-18",
+      "destination": "/03-historicos/josue/capitulos/capitulo-18.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-19/",
+      "destination": "/03-historicos/josue/capitulos/capitulo-19.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-19",
+      "destination": "/03-historicos/josue/capitulos/capitulo-19.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-20/",
+      "destination": "/03-historicos/josue/capitulos/capitulo-20.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-20",
+      "destination": "/03-historicos/josue/capitulos/capitulo-20.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-21/",
+      "destination": "/03-historicos/josue/capitulos/capitulo-21.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-21",
+      "destination": "/03-historicos/josue/capitulos/capitulo-21.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-22/",
+      "destination": "/03-historicos/josue/capitulos/capitulo-22.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-22",
+      "destination": "/03-historicos/josue/capitulos/capitulo-22.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-23/",
+      "destination": "/03-historicos/josue/capitulos/capitulo-23.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-23",
+      "destination": "/03-historicos/josue/capitulos/capitulo-23.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-24/",
+      "destination": "/03-historicos/josue/capitulos/capitulo-24.html",
+      "permanent": true
+    },
+    {
+      "source": "/03-historicos/josue/capitulo-24",
+      "destination": "/03-historicos/josue/capitulos/capitulo-24.html",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-2/",
+      "destination": "/es/juan-2/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-2",
+      "destination": "/es/juan-2/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-3/",
+      "destination": "/es/juan-3/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-3",
+      "destination": "/es/juan-3/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-4/",
+      "destination": "/es/juan-4/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-4",
+      "destination": "/es/juan-4/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-5/",
+      "destination": "/es/juan-5/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-5",
+      "destination": "/es/juan-5/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-6/",
+      "destination": "/es/juan-6/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-6",
+      "destination": "/es/juan-6/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-7/",
+      "destination": "/es/juan-7/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-7",
+      "destination": "/es/juan-7/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-8/",
+      "destination": "/es/juan-8/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-8",
+      "destination": "/es/juan-8/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-9/",
+      "destination": "/es/juan-9/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-9",
+      "destination": "/es/juan-9/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-10/",
+      "destination": "/es/juan-10/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-10",
+      "destination": "/es/juan-10/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-11/",
+      "destination": "/es/juan-11/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-11",
+      "destination": "/es/juan-11/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-12/",
+      "destination": "/es/juan-12/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-12",
+      "destination": "/es/juan-12/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-13/",
+      "destination": "/es/juan-13/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-13",
+      "destination": "/es/juan-13/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-14/",
+      "destination": "/es/juan-14/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-14",
+      "destination": "/es/juan-14/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-15/",
+      "destination": "/es/juan-15/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-15",
+      "destination": "/es/juan-15/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-16/",
+      "destination": "/es/juan-16/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-16",
+      "destination": "/es/juan-16/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-17/",
+      "destination": "/es/juan-17/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-17",
+      "destination": "/es/juan-17/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-18/",
+      "destination": "/es/juan-18/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-18",
+      "destination": "/es/juan-18/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-19/",
+      "destination": "/es/juan-19/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-19",
+      "destination": "/es/juan-19/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-20/",
+      "destination": "/es/juan-20/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-20",
+      "destination": "/es/juan-20/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-21/",
+      "destination": "/es/juan-21/",
+      "permanent": true
+    },
+    {
+      "source": "/es/john-21",
+      "destination": "/es/juan-21/",
+      "permanent": true
+    },
+    {
+      "source": "/08-novo-testamento/john/capitulos/capitulo-01",
+      "destination": "/08-novo-testamento/joao/capitulos/capitulo-01.html",
+      "permanent": true
+    },
+    {
+      "source": "/08-novo-testamento/john/capitulos/capitulo-02",
+      "destination": "/08-novo-testamento/joao/capitulos/capitulo-02.html",
+      "permanent": true
+    },
+    {
+      "source": "/08-novo-testamento/john/capitulos/capitulo-03",
+      "destination": "/08-novo-testamento/joao/capitulos/capitulo-03.html",
+      "permanent": true
+    },
+    {
+      "source": "/08-novo-testamento/john/capitulos/capitulo-04",
+      "destination": "/08-novo-testamento/joao/capitulos/capitulo-04.html",
+      "permanent": true
+    },
+    {
+      "source": "/08-novo-testamento/john/capitulos/capitulo-05",
+      "destination": "/08-novo-testamento/joao/capitulos/capitulo-05.html",
+      "permanent": true
+    },
+    {
+      "source": "/08-novo-testamento/john/capitulos/capitulo-06",
+      "destination": "/08-novo-testamento/joao/capitulos/capitulo-06.html",
+      "permanent": true
+    },
+    {
+      "source": "/08-novo-testamento/john/capitulos/capitulo-07",
+      "destination": "/08-novo-testamento/joao/capitulos/capitulo-07.html",
+      "permanent": true
+    },
+    {
+      "source": "/08-novo-testamento/john/capitulos/capitulo-08",
+      "destination": "/08-novo-testamento/joao/capitulos/capitulo-08.html",
+      "permanent": true
+    },
+    {
+      "source": "/08-novo-testamento/john/capitulos/capitulo-09",
+      "destination": "/08-novo-testamento/joao/capitulos/capitulo-09.html",
+      "permanent": true
+    },
+    {
+      "source": "/08-novo-testamento/john/capitulos/capitulo-10",
+      "destination": "/08-novo-testamento/joao/capitulos/capitulo-10.html",
+      "permanent": true
+    },
+    {
+      "source": "/08-novo-testamento/john/capitulos/capitulo-11",
+      "destination": "/08-novo-testamento/joao/capitulos/capitulo-11.html",
+      "permanent": true
+    },
+    {
+      "source": "/08-novo-testamento/john/capitulos/capitulo-12",
+      "destination": "/08-novo-testamento/joao/capitulos/capitulo-12.html",
+      "permanent": true
+    },
+    {
+      "source": "/08-novo-testamento/john/capitulos/capitulo-13",
+      "destination": "/08-novo-testamento/joao/capitulos/capitulo-13.html",
+      "permanent": true
+    },
+    {
+      "source": "/08-novo-testamento/john/capitulos/capitulo-14",
+      "destination": "/08-novo-testamento/joao/capitulos/capitulo-14.html",
+      "permanent": true
+    },
+    {
+      "source": "/08-novo-testamento/john/capitulos/capitulo-15",
+      "destination": "/08-novo-testamento/joao/capitulos/capitulo-15.html",
+      "permanent": true
+    },
+    {
+      "source": "/08-novo-testamento/john/capitulos/capitulo-16",
+      "destination": "/08-novo-testamento/joao/capitulos/capitulo-16.html",
+      "permanent": true
+    },
+    {
+      "source": "/08-novo-testamento/john/capitulos/capitulo-17",
+      "destination": "/08-novo-testamento/joao/capitulos/capitulo-17.html",
+      "permanent": true
+    },
+    {
+      "source": "/08-novo-testamento/john/capitulos/capitulo-18",
+      "destination": "/08-novo-testamento/joao/capitulos/capitulo-18.html",
+      "permanent": true
+    },
+    {
+      "source": "/08-novo-testamento/john/capitulos/capitulo-19",
+      "destination": "/08-novo-testamento/joao/capitulos/capitulo-19.html",
+      "permanent": true
+    },
+    {
+      "source": "/08-novo-testamento/john/capitulos/capitulo-20",
+      "destination": "/08-novo-testamento/joao/capitulos/capitulo-20.html",
+      "permanent": true
+    },
+    {
+      "source": "/08-novo-testamento/john/capitulos/capitulo-21",
+      "destination": "/08-novo-testamento/joao/capitulos/capitulo-21.html",
+      "permanent": true
     }
   ]
 }
