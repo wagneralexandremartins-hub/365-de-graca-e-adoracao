@@ -25,6 +25,11 @@ import sys
 import difflib
 from pathlib import Path
 
+# Console do Windows costuma usar cp1252, que não cobre emoji/símbolos que
+# aparecem no HTML (usados no diff do dry-run); força UTF-8 na saída.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 ROOT = Path(__file__).resolve().parent
 
 # Arquivo raiz — já tem o menu correto com âncoras locais; pular.
