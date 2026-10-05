@@ -21,7 +21,8 @@
     if (book) {
       book.classList.add('is-current');
       book.href = p ? p.url : S.chapterUrl('mateus', 1);
-      book.querySelector('span').textContent = p ? 'Continuar no cap. ' + p.ch + ' →' : 'Começar no NT →';
+      // Hub com tema por livro: o estado vai na linha de dias; senão, no primeiro <span>
+      (book.querySelector('.dias') || book.querySelector('span')).textContent = p ? 'Continuar no cap. ' + p.ch + ' →' : 'Começar no NT →';
     }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
