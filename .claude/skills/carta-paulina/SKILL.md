@@ -10,6 +10,18 @@ Esta skill monta **só a estrutura**. Todo campo de conteúdo fica como marcador
 ## Onde fica
 - Uma página por carta, dentro da pasta do livro: `08-novo-testamento/<livro>/contexto.html` (ex.: `filemom/contexto.html`). Não renomeie nem mova o `index.html` existente; o índice do livro ganha um link para o contexto só depois da aprovação.
 - Use o menu central (skill `menu-central`) e o visual do protótipo (`redesign/redesign.css`). Nada de CSS inline novo.
+- Citações bíblicas, quando aprovadas, na ACF (skill `regras-365`).
+
+## Classe `ficha` (lista de dados rápidos)
+Não existe em outra página do site. Entra em `redesign/redesign.css` quando a primeira página for criada (na etapa dos hubs, migra para o CSS definitivo):
+```css
+.ficha{ display:grid; grid-template-columns:max-content 1fr; gap:10px 24px; margin:0; padding:22px 24px;
+  background:var(--panel); border:1px solid var(--line); border-radius:14px; }
+.ficha dt{ font-family:var(--font-mono); font-size:12px; letter-spacing:1px; text-transform:uppercase;
+  color:var(--amber-glow); padding-top:2px; }
+.ficha dd{ margin:0; color:var(--ink); }
+@media (max-width:600px){ .ficha{ grid-template-columns:1fr; gap:4px; } .ficha dd{ margin-bottom:12px; } }
+```
 
 ## Campos (nesta ordem)
 | Campo | Marcador |

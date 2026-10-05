@@ -11,6 +11,7 @@ Valem para qualquer tarefa neste repositório. Em caso de dúvida, pergunte ao W
 - **Nunca altere texto editorial** (estudos, exegese, comentários, versículos, títulos de capítulos, notas) sem autorização explícita do Wagner. O conteúdo foi desenvolvido no ChatGPT e é responsabilidade editorial dele. Mexa só em estrutura, navegação e visual.
 - Se uma mudança técnica deixar um texto incoerente (ex.: "os livros abaixo" sem livros abaixo), não corrija o texto: aponte e pergunte.
 - Quando um conteúdo editorial aprovado citar dados de saúde ou população, use fontes oficiais (OMS, Ministério da Saúde, IBGE).
+- Tradução bíblica padrão em português: **ACF (Almeida Corrigida Fiel)**, a mesma do texto em `biblia/`. Conteúdo novo usa ACF. Páginas existentes que citam outra tradução (NVI em parte do Pentateuco, ARA em poucas páginas, NT sem tradução declarada) não são alteradas sem ordem do Wagner.
 - Rótulos de navegação novos (botões, títulos de seção da interface) também passam pela aprovação do Wagner antes de serem gravados.
 
 ## Git
