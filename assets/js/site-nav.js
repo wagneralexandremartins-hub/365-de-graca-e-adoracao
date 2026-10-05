@@ -20,7 +20,7 @@
   var MENU = [
     { href: '/',                                 label: 'Início',            match: /^\/(index\.html)?$/ },
     { href: '/redesign/antigo-testamento.html',  label: 'Antigo Testamento', match: /^\/(redesign\/antigo-testamento|0[1-7]-)/ },
-    { href: '/08-novo-testamento/',              label: 'Novo Testamento',   match: /^\/(redesign\/novo-testamento|08-|09-|13-)/ },
+    { href: '/08-novo-testamento/',              label: 'Novo Testamento',   match: /^\/(redesign\/novo-testamento|08-|09-|13-|biblia\/(mt|mc|lc|jo|atos|rm|1co|2co|gl|ef|fp|cl|1ts|2ts|1tm|2tm|tt|fm|hb|tg|1pe|2pe|1jo|2jo|3jo|jd|ap)\/)/ },
     { href: '/personagens/index.html',           label: 'Personagens',       match: /^\/personagens\// },
     { href: '/mapas/index.html',                 label: 'Mapas',             match: /^\/mapas\// },
     { href: '/timeline/index.html',              label: 'Linha do Tempo',    match: /^\/timeline\// },
