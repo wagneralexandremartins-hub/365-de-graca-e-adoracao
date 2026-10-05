@@ -103,6 +103,17 @@ A tradução padrão do site é a **ACF** (decisão de 05/10/2026). Estas 41 pá
 
 Observação: `02-pentateuco/genesis/estudos/genesis-20.html` cita "(Gênesis 20:1-18, NVI)" numa citação, sem declarar texto-base. Fora da lista: 26 páginas que citam NVI/ARA só como fonte, bibliografia, comparação ou descrição das traduções (corretas como estão).
 
+## Tarefa de amanhã (06/10/2026): capa 3D de livro
+
+Criar uma **capa 3D de livro, só em CSS**, no topo das **páginas de abertura de cada livro** da Bíblia (não nos capítulos).
+
+- **Antes de qualquer alteração**, fazer apenas o mapeamento somente leitura das páginas de abertura que o Wagner pedir, e parar no relatório.
+- Mapeamento já feito em 05/10 (só leitura): o padrão recomendado é `<bloco>/<livro>/index.html` (`02-` a `06-` e `08-novo-testamento/`), que cobre os 66 livros canônicos uma vez cada. A confirmar com o Wagner:
+  - Gênesis: `02-pentateuco/genesis/index.html` (o `genesis/index.html` da raiz é um estudo temático).
+  - Deuterocanônicos: `06-apocrifos/` (as cópias em `03-historicos/` ficariam sem capa).
+- Nome, testamento e número de capítulos da capa devem vir de uma tabela única de livros, não do texto de cada página (Deuteronômio cita "187" antes da contagem real; Gênesis e Salmos não mostram a contagem no formato padrão).
+- Sem criar páginas novas. Mesmo procedimento das etapas anteriores: dry-run, confirmação, validação e commit separado.
+
 ## Limpeza prioritária (registrada em 05/10/2026; nada alterado ainda)
 
 Estas páginas **não devem ser alteradas** até decisão do Wagner. Todas ficaram fora do menu central.
