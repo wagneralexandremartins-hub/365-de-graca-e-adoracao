@@ -103,6 +103,57 @@ A tradução padrão do site é a **ACF** (decisão de 05/10/2026). Estas 41 pá
 
 Observação: `02-pentateuco/genesis/estudos/genesis-20.html` cita "(Gênesis 20:1-18, NVI)" numa citação, sem declarar texto-base. Fora da lista: 26 páginas que citam NVI/ARA só como fonte, bibliografia, comparação ou descrição das traduções (corretas como estão).
 
+## Checklist final do merge na `main`
+
+Nada vai à `main` sem ordem explícita do Wagner. Marcar cada item antes de abrir o PR.
+
+**A. Pendências de conteúdo e navegação (na branch)**
+- [ ] Trocar o link do AT para `/antigo-testamento/` nas 2.888 páginas, no `site-nav.js` e no `aplicar_menu_central.py` (script `trocar_link_at.py`, dry-run aprovado → apply → commit separado).
+- [ ] Hub do NT real (`08-novo-testamento/index.html`): manter o `<head>`, trocar só o corpo pelo layout do protótipo; prova de textos idênticos.
+- [ ] Home real (`index.html`): manter o `<head>` (title, description, OG, JSON-LD, AdSense), trocar o corpo; links `/redesign/…` → endereços finais.
+- [ ] `sitemap.xml`: incluir `/antigo-testamento/`.
+- [ ] Decidir: botão "Começar Dia 1 ›" só na home e nos hubs (como está) ou em todas as páginas.
+
+**B. Validação final (na branch, servidor local)**
+- [ ] Varredura de links internos de todas as páginas PT (nenhum 404 novo).
+- [ ] Amostra visual (skill `validacao-visual`): home, hubs, 1 página de cada etapa, 1280/768/390px, claro e escuro.
+- [ ] `git status` limpo; nenhum `_backups/*.zip` em commit; `redesign/` fora do deploy (`pages.yml`).
+
+**C. GitHub (Settings, feito pelo Wagner)**
+- [ ] Branch padrão do repositório: `(root)` → `main`.
+- [ ] Pages › Source: "Deploy from a branch" (`(root)`) → **"GitHub Actions"**.
+- [ ] Conferir que o ambiente `github-pages` continua aceitando deploy só da `main`.
+
+**D. Merge**
+- [ ] Antes do merge: marcar o estado atual da `main` com uma tag (`git tag pre-redesign ec2c3181` e `git push origin pre-redesign`).
+- [ ] Push da branch e PR **para a `main`** (o GitHub vai sugerir `(root)` enquanto ela for a padrão: trocar).
+- [ ] Revisar o resumo do PR (arquivos e commits) com o Wagner.
+- [ ] Merge com **merge commit** (não squash), para a reversão ser um único `revert`.
+- [ ] Acompanhar o workflow "Deploy GitHub Pages" até "success".
+
+**E. Depois do deploy (site no ar)**
+- [ ] Abrir home, hubs AT/NT, um capítulo do NT, um do AT, Bíblia, Estudos; desktop e celular; modo claro.
+- [ ] Testar "Continue de onde parou" (abrir um capítulo do NT e voltar à home).
+- [ ] Conferir `https://365gracaeadoracao.com/antigo-testamento/` e o canonical.
+- [ ] Nos dias seguintes: Search Console (erros de cobertura) e AdSense (anúncios aparecendo).
+
+## Plano de reversão (se algo der errado depois do merge)
+
+O site é estático e o deploy publica a `main`. Reverter = devolver a `main` ao estado anterior e deixar o workflow publicar de novo (~1 minuto). Nenhum dado externo é afetado.
+
+1. **Pelo GitHub (mais simples):** abrir o PR mesclado → botão **"Revert"** → cria um PR de reversão → mesclar na `main`. O deploy roda sozinho.
+2. **Pela linha de comando (com ordem do Wagner):**
+   ```
+   git checkout main && git pull
+   git revert -m 1 <sha-do-merge>        # desfaz o merge inteiro num commit novo
+   git push origin main                  # dispara o deploy do site anterior
+   ```
+3. **Conferir:** workflow em "success" e o site com a home antiga. A tag `pre-redesign` marca o ponto de volta para comparação (`git diff pre-redesign main` deve ficar vazio, salvo commits posteriores).
+4. **Não usar** `git push --force` na `main` nem deploy manual de outra branch (o ambiente só aceita a `main`).
+5. A branch `redesign/navegacao-awexpress` continua existindo: corrige-se nela e repete-se o checklist.
+6. Se a fonte do Pages tiver sido trocada para "GitHub Actions" e isso for a causa do problema, voltar em Settings › Pages (isso independe do revert do código).
+7. Correção pontual de página: os zips em `_backups/` (só na máquina local) guardam cada página como estava antes de cada etapa.
+
 ## Tarefa de amanhã (06/10/2026): capa 3D de livro
 
 Criar uma **capa 3D de livro, só em CSS**, no topo das **páginas de abertura de cada livro** da Bíblia (não nos capítulos).
@@ -124,6 +175,7 @@ Estas páginas **não devem ser alteradas** até decisão do Wagner. Todas ficar
 | `busca/index_backup.html` | Cópia de backup da busca, **publicada no site** (o deploy não exclui `*_backup.html`). |
 | `02-pentateuco/genesis/estudos/pasted_content.html` | Nome de arquivo colado por engano; dois `<title>` ("pasted_content" e "Projeto 365"). |
 | `timeline-component.html`, `timeline-genesis-1.html` (raiz) | Fragmentos sem `<html>`/`<body>`, publicados como páginas. |
+| `og:image`/`twitter:image` em 2.825 páginas | Apontam para `assets/img/og-cover.jpg`, que **não existe** (404 no site no ar): compartilhamentos saem sem imagem. O arquivo existente é `assets/img/og-image.png`. |
 
 ## Pendências para a Fase 2 (anotadas a pedido do Wagner)
 
