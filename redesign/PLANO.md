@@ -88,6 +88,21 @@ Problemas **anteriores** ao piloto (o site no ar é igual):
 - `08-novo-testamento/mateus/capitulos/*` e `03-historicos/1samuel/cap-*`: conteúdo sem estilo (classes sem CSS).
 - Overflow a 390px: URLs longas nas referências de Números 1 e a tabela do hub do NT.
 
+## Decisão editorial pendente: texto-base em NVI ou ARA (41 páginas)
+
+A tradução padrão do site é a **ACF** (decisão de 05/10/2026). Estas 41 páginas mostram o texto bíblico em outra tradução. **Ficam como estão** até o Wagner decidir: trocar o texto é mudança editorial.
+
+**NVI (36 páginas)**
+- `02-pentateuco/genesis/estudos/` (34): `01_Genesis_4_1_5_Caim_e_Abel_Adoracao_e_Aceitacao.html`, `01_Genesis_5_1_32_Genealogia_de_Adao.html`, `01_Genesis_5_1_4_Introducao_e_Imagem_de_Deus.html`, `02_Genesis_4_6_8_Pecado_a_Porta_e_o_Homicidio.html`, `02_Genesis_5_5_8_Adao_a_Sete_Continuidade.html`, `genesis-07`, `08`, `09`, `13`, `15`, `17`, `18`, `19`, `21`, `22`, `23`, `24`, `26`, `28`, `30`, `33`, `34`, `36`, `37`, `38`, `39`, `40`, `41`, `42`, `43`, `44`, `48`, `49`, `50` (todos `.html`)
+- `02-pentateuco/exodo/bloco-01/index.html`
+- `02-pentateuco/levitico/bloco-01/index.html`
+
+**ARA (5 páginas)**
+- `02-pentateuco/genesis/estudos/genesis-06.html`, `genesis-12.html`, `genesis-16.html`, `genesis-47.html`
+- `genesis/genesis-1.html`
+
+Observação: `02-pentateuco/genesis/estudos/genesis-20.html` cita "(Gênesis 20:1-18, NVI)" numa citação, sem declarar texto-base. Fora da lista: 26 páginas que citam NVI/ARA só como fonte, bibliografia, comparação ou descrição das traduções (corretas como estão).
+
 ## Pendências para a Fase 2 (anotadas a pedido do Wagner)
 
 - **Bug no índice de busca** (`assets/js/nav.js`): as URLs usam `1-corintios`, mas a pasta é `1corintios`. Revisar todos os livros com número (1/2 Coríntios, 1/2 Tessalonicenses, 1/2 Timóteo, 1/2 Pedro, 1/2/3 João, 1/2 Samuel, 1/2 Reis, 1/2 Crônicas, 1/2 Macabeus) e testar cada URL do índice contra o disco.
