@@ -103,6 +103,17 @@ A tradução padrão do site é a **ACF** (decisão de 05/10/2026). Estas 41 pá
 
 Observação: `02-pentateuco/genesis/estudos/genesis-20.html` cita "(Gênesis 20:1-18, NVI)" numa citação, sem declarar texto-base. Fora da lista: 26 páginas que citam NVI/ARA só como fonte, bibliografia, comparação ou descrição das traduções (corretas como estão).
 
+## Limpeza prioritária (registrada em 05/10/2026; nada alterado ainda)
+
+Estas páginas **não devem ser alteradas** até decisão do Wagner. Todas ficaram fora do menu central.
+
+| Página(s) | Problema |
+|---|---|
+| `genesis/genesis-12.html` a `genesis/genesis-50.html` (39) | Conteúdo mínimo (~700 bytes: título + "Conteúdo completo do capítulo N…") com `canonical` e anúncio do AdSense. Conteúdo raso indexado: risco de SEO e de política do AdSense. |
+| `busca/index_backup.html` | Cópia de backup da busca, **publicada no site** (o deploy não exclui `*_backup.html`). |
+| `02-pentateuco/genesis/estudos/pasted_content.html` | Nome de arquivo colado por engano; dois `<title>` ("pasted_content" e "Projeto 365"). |
+| `timeline-component.html`, `timeline-genesis-1.html` (raiz) | Fragmentos sem `<html>`/`<body>`, publicados como páginas. |
+
 ## Pendências para a Fase 2 (anotadas a pedido do Wagner)
 
 - **Bug no índice de busca** (`assets/js/nav.js`): as URLs usam `1-corintios`, mas a pasta é `1corintios`. Revisar todos os livros com número (1/2 Coríntios, 1/2 Tessalonicenses, 1/2 Timóteo, 1/2 Pedro, 1/2/3 João, 1/2 Samuel, 1/2 Reis, 1/2 Crônicas, 1/2 Macabeus) e testar cada URL do índice contra o disco.
