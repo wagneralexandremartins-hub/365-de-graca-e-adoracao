@@ -10,6 +10,7 @@ Valide **antes de propor commit**. Screenshot sozinho não basta: confira també
 ## Como testar localmente
 - Sirva a raiz do repositório: `python -m http.server 8365 --bind 127.0.0.1` (o servidor em segundo plano expira em até 2 h; se cair no meio de um teste, descarte o resultado daquela rodada).
 - A janela do Chrome pode não redimensionar; para larguras menores, carregue a página num `<iframe>` da mesma origem com a largura desejada e meça dentro dele.
+- **Cache de iframe**: o Chrome guarda os documentos carregados em iframe separadamente; uma página aberta num iframe *antes* do apply pode voltar na versão antiga (e um `fetch(…, {cache:'reload'})` não resolve). Carregue o iframe com um parâmetro único (`?v=<timestamp>`) e confira se o HTML recebido contém `site-nav:v1`.
 - Para comparar CSS antes/depois sem mexer no repositório, sirva a versão antiga de outra porta e troque o `href` do `<link>` só no navegador.
 - Limpe o `localStorage` de teste no fim (`365-theme`, `365-progress`, `365-last`).
 
