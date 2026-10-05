@@ -81,10 +81,6 @@
   var m = path.match(/^\/08-novo-testamento\/([^\/]+)\/capitulos\/capitulo-(\d+)\.html$/);
   if (m) record(m[1], parseInt(m[2], 10));
 
-  /* Só no protótipo: ?simular=romanos/8 simula leitura para demonstrar a home */
-  var sim = /[?&]simular=([a-z0-9]+)\/(\d+)/.exec(location.search);
-  if (sim && /^\/redesign\//.test(path)) record(sim[1], parseInt(sim[2], 10));
-
   /* ── Montagem do cabeçalho ──────────────────────────────────────── */
   function esc(s) {
     return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; });
