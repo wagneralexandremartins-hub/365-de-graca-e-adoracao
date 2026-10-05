@@ -20,6 +20,7 @@ Se a prova falhar, o arquivo não é gravado.
 Uso:
   python scripts/aplicar_menu_central.py                  # dry-run (todas PT)
   python scripts/aplicar_menu_central.py --only a,b       # restringe
+  python scripts/aplicar_menu_central.py --only-file lista.txt  # uma página por linha
   python scripts/aplicar_menu_central.py --diff-out f.diff
   python scripts/aplicar_menu_central.py --apply          # grava (com backup zip)
 """
@@ -330,6 +331,9 @@ def main():
     diff_out = None
     if "--only" in args:
         only = [x.strip() for x in args[args.index("--only") + 1].split(",") if x.strip()]
+    if "--only-file" in args:  # uma página por linha (listas longas não cabem na linha de comando)
+        lst = Path(args[args.index("--only-file") + 1]).read_text(encoding="utf-8").splitlines()
+        only = (only or []) + [x.strip().replace("\\", "/") for x in lst if x.strip()]
     if "--diff-out" in args:
         diff_out = Path(args[args.index("--diff-out") + 1])
 
