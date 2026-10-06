@@ -197,8 +197,8 @@
 
 /* ==========================================================================
    Coluna de leitura abaixo da capa
-   Só vale para o <main class="container"> que vem logo depois da capa
-   (seletor de irmão ~), ou seja, só nas páginas com o bloco capa3d:v1.
+   Só vale para o topo que vem depois da capa (seletor de irmão ~), ou seja,
+   só nas páginas com o bloco capa3d:v1.
    Não muda nenhum texto: apenas largura, alinhamento e espaçamento.
    Cores com variáveis do bloco.css (com reserva) para o modo claro
    continuar sendo a inversão do site.
@@ -207,6 +207,15 @@
   box-sizing: border-box;
   max-width: 820px; margin: 0 auto;
   padding: 8px 24px 64px;
+}
+/* Mesma coluna para os topos sem largura própria (Levítico, Números,
+   Deuteronômio: div.container; Êxodo: .exodus-index). Só a coluna: o
+   conteúdo interno dessas páginas segue com o estilo que elas já têm. */
+.capa3d-faixa ~ div.container,
+.capa3d-faixa ~ .exodus-index{
+  box-sizing: border-box;
+  max-width: 820px; margin-left: auto; margin-right: auto;
+  padding-left: 24px; padding-right: 24px;
 }
 .capa3d-faixa ~ main.container *, .capa3d-faixa ~ main.container *::before, .capa3d-faixa ~ main.container *::after{ box-sizing: border-box; }
 
@@ -247,12 +256,21 @@
 .capa3d-faixa ~ main.container .study-card p{ margin: 0; flex: 1; line-height: 1.55; overflow-wrap: anywhere; }
 .capa3d-faixa ~ main.container .study-card .btn{ margin-top: 4px; max-width: 100%; }
 
+/* Êxodo: as grades da própria página exigem cartões de 400px/350px e
+   estouram no celular. Mínimo limitado à largura da coluna. */
+.capa3d-faixa ~ .exodus-index .study-options,
+.capa3d-faixa ~ .exodus-index .blocks-grid{
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+}
+
 /* Chamada final */
 .capa3d-faixa ~ main.container .cta-section{ text-align: center; }
 .capa3d-faixa ~ main.container .cta-buttons{ display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
 
 @media (max-width: 600px){
   .capa3d-faixa ~ main.container{ padding: 4px 16px 48px; }
+  .capa3d-faixa ~ div.container,
+  .capa3d-faixa ~ .exodus-index{ padding-left: 16px; padding-right: 16px; }
   /* no celular o justificado abre buracos entre as palavras: centralizado lê melhor */
   .capa3d-faixa ~ main.container .hero-section .description{ text-align: center; }
 }
