@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capa 3D de livro — 365 Graça &amp; Adoração (protótipo)</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Sora:wght@600;700;800&display=swap">
+  <link rel="stylesheet" href="/assets/css/site-header.css">
+  <link rel="stylesheet" href="/redesign/redesign.css">
+  <link rel="stylesheet" href="/assets/css/capa-livro.css">
+  <script src="/assets/js/site-nav.js" defer></script>
+  <script src="/redesign/prototipo-header.js" defer></script>
+  <style>
+    /* Só do protótipo: rótulos de onde cada capa entra e o topo atual abaixo dela */
+    [data-theme="light"]{ filter: invert(1) hue-rotate(180deg); }
+    .proto-nota{ max-width:760px; margin:0 auto; padding:32px 16px 0; color:var(--muted); font-size:14px; }
+    .proto-nota code{ font-family:var(--font-mono); font-size:12.5px; color:var(--ink); }
+    .proto-bloco{ border-top:1px solid var(--line); margin-top:40px; }
+    .proto-rotulo{ max-width:760px; margin:0 auto; padding:20px 16px 0; font:500 12.5px/1.4 var(--font-mono); color:var(--amber-glow); }
+    .proto-topo{ max-width:760px; margin:0 auto 8px; padding:16px; border:1px dashed var(--line); border-radius:10px;
+                 color:var(--muted); font-size:13.5px; text-align:center; }
+    .proto-legenda{ display:flex; flex-wrap:wrap; gap:12px 20px; justify-content:center; margin-top:16px; font-size:13px; color:var(--muted); }
+    .proto-legenda span::before{ content:""; display:inline-block; width:12px; height:12px; border-radius:3px; margin-right:6px; vertical-align:-1px; background:var(--c); }
+    .proto-tema{ display:block; margin:18px auto 0; background:var(--panel); color:var(--ink); border:1px solid var(--line);
+                 border-radius:8px; padding:8px 14px; font:500 13px var(--font-body); cursor:pointer; }
+  </style>
+</head>
+<body>
+  <a class="sh-skip" href="#conteudo">Pular para o conteúdo</a>
+  <header id="site-header" class="site-header"><noscript><nav class="sh-fallback" aria-label="Navegação principal"><a href="/">Início</a><a href="/redesign/antigo-testamento.html">Antigo Testamento</a><a href="/08-novo-testamento/">Novo Testamento</a><a href="/personagens/index.html">Personagens</a><a href="/mapas/index.html">Mapas</a><a href="/timeline/index.html">Linha do Tempo</a><a href="/estudos/">Estudos</a><a href="/loja-365/">Loja 365</a></nav></noscript></header>
+  <main id="conteudo">
+    <p class="proto-nota">Protótipo da capa 3D para as páginas de abertura dos livros. Cada capa entra logo abaixo do menu, acima do topo que a página já tem. Nome, grupo e número de capítulos vêm da tabela do cânon.</p>
+    <div class="proto-legenda" aria-hidden="true">
+      <span style="--c:#f2a93b">Antigo Testamento</span>
+      <span style="--c:#8fb0ff">Novo Testamento</span>
+      <span style="--c:#c99cf5">Deuterocanônicos</span>
+    </div>
+    <button type="button" class="proto-tema" onclick="var h=document.documentElement;h.getAttribute('data-theme')==='light'?h.removeAttribute('data-theme'):h.setAttribute('data-theme','light')">Alternar modo claro (simulação)</button>
+
+    <!-- Gênesis · AT -->
+    <section class="proto-bloco">
+      <p class="proto-rotulo">02-pentateuco/genesis/index.html</p>
+      <div class="capa3d-faixa" data-grupo="at">
+        <div class="capa3d-cena" role="img" aria-label="Capa do livro de Gênesis — Antigo Testamento, 50 capítulos">
+          <div class="capa3d-livro" aria-hidden="true">
+            <div class="capa3d-face capa3d-verso"></div>
+            <div class="capa3d-face capa3d-topo"></div>
+            <div class="capa3d-face capa3d-paginas"></div>
+            <div class="capa3d-face capa3d-lombada"><span>Gênesis</span></div>
+            <div class="capa3d-face capa3d-frente">
+              <span class="capa3d-grupo">Antigo Testamento</span>
+              <span class="capa3d-titulo">
+                <span class="capa3d-nome">Gênesis</span>
+                <span class="capa3d-filete"></span>
+                <span class="capa3d-caps">50 capítulos</span>
+              </span>
+              <span class="capa3d-marca">365 Graça &amp; Adoração</span>
+            </div>
+          </div>
+          <div class="capa3d-sombra"></div>
+        </div>
+      </div>
+      <div class="proto-topo">↓ topo atual da página (título e introdução) continua aqui, sem alteração</div>
+    </section>
+
+    <!-- Salmos · AT -->
+    <section class="proto-bloco">
+      <p class="proto-rotulo">04-poeticos/salmos/index.html</p>
+      <div class="capa3d-faixa" data-grupo="at">
+        <div class="capa3d-cena" role="img" aria-label="Capa do livro de Salmos — Antigo Testamento, 150 capítulos">
+          <div class="capa3d-livro" aria-hidden="true">
+            <div class="capa3d-face capa3d-verso"></div>
+            <div class="capa3d-face capa3d-topo"></div>
+            <div class="capa3d-face capa3d-paginas"></div>
+            <div class="capa3d-face capa3d-lombada"><span>Salmos</span></div>
+            <div class="capa3d-face capa3d-frente">
+              <span class="capa3d-grupo">Antigo Testamento</span>
+              <span class="capa3d-titulo">
+                <span class="capa3d-nome">Salmos</span>
+                <span class="capa3d-filete"></span>
+                <span class="capa3d-caps">150 capítulos</span>
+              </span>
+              <span class="capa3d-marca">365 Graça &amp; Adoração</span>
+            </div>
+          </div>
+          <div class="capa3d-sombra"></div>
+        </div>
+      </div>
+      <div class="proto-topo">↓ topo atual da página (título e introdução) continua aqui, sem alteração</div>
+    </section>
+
+    <!-- Tobias · deuterocanônico -->
+    <section class="proto-bloco">
+      <p class="proto-rotulo">06-apocrifos/tobias/index.html</p>
+      <div class="capa3d-faixa" data-grupo="deutero">
+        <div class="capa3d-cena" role="img" aria-label="Capa do livro de Tobias — Deuterocanônico, 14 capítulos">
+          <div class="capa3d-livro" aria-hidden="true">
+            <div class="capa3d-face capa3d-verso"></div>
+            <div class="capa3d-face capa3d-topo"></div>
+            <div class="capa3d-face capa3d-paginas"></div>
+            <div class="capa3d-face capa3d-lombada"><span>Tobias</span></div>
+            <div class="capa3d-face capa3d-frente">
+              <span class="capa3d-grupo">Deuterocanônico</span>
+              <span class="capa3d-titulo">
+                <span class="capa3d-nome">Tobias</span>
+                <span class="capa3d-filete"></span>
+                <span class="capa3d-caps">14 capítulos</span>
+              </span>
+              <span class="capa3d-marca">365 Graça &amp; Adoração</span>
+            </div>
+          </div>
+          <div class="capa3d-sombra"></div>
+        </div>
+      </div>
+      <div class="proto-topo">↓ topo atual da página (título e introdução) continua aqui, sem alteração</div>
+    </section>
+
+    <!-- 1 Tessalonicenses · NT (nome longo) -->
+    <section class="proto-bloco">
+      <p class="proto-rotulo">08-novo-testamento/1tessalonicenses/index.html</p>
+      <div class="capa3d-faixa" data-grupo="nt" style="--capa-nome:11.5cqi">
+        <div class="capa3d-cena" role="img" aria-label="Capa do livro 1 Tessalonicenses — Novo Testamento, 5 capítulos">
+          <div class="capa3d-livro" aria-hidden="true">
+            <div class="capa3d-face capa3d-verso"></div>
+            <div class="capa3d-face capa3d-topo"></div>
+            <div class="capa3d-face capa3d-paginas"></div>
+            <div class="capa3d-face capa3d-lombada"><span>1 Tessalonicenses</span></div>
+            <div class="capa3d-face capa3d-frente">
+              <span class="capa3d-grupo">Novo Testamento</span>
+              <span class="capa3d-titulo">
+                <span class="capa3d-nome">1 Tessalonicenses</span>
+                <span class="capa3d-filete"></span>
+                <span class="capa3d-caps">5 capítulos</span>
+              </span>
+              <span class="capa3d-marca">365 Graça &amp; Adoração</span>
+            </div>
+          </div>
+          <div class="capa3d-sombra"></div>
+        </div>
+      </div>
+      <div class="proto-topo">↓ topo atual da página (título e introdução) continua aqui, sem alteração</div>
+    </section>
+
+    <!-- Eclesiástico · deuterocanônico (nome longo) -->
+    <section class="proto-bloco">
+      <p class="proto-rotulo">06-apocrifos/eclesiastico/index.html</p>
+      <div class="capa3d-faixa" data-grupo="deutero" style="--capa-nome:12.5cqi">
+        <div class="capa3d-cena" role="img" aria-label="Capa do livro Eclesiástico (Ben Sirá) — Deuterocanônico, 51 capítulos">
+          <div class="capa3d-livro" aria-hidden="true">
+            <div class="capa3d-face capa3d-verso"></div>
+            <div class="capa3d-face capa3d-topo"></div>
+            <div class="capa3d-face capa3d-paginas"></div>
+            <div class="capa3d-face capa3d-lombada"><span>Eclesiástico</span></div>
+            <div class="capa3d-face capa3d-frente">
+              <span class="capa3d-grupo">Deuterocanônico</span>
+              <span class="capa3d-titulo">
+                <span class="capa3d-nome">Eclesiástico (Ben Sirá)</span>
+                <span class="capa3d-filete"></span>
+                <span class="capa3d-caps">51 capítulos</span>
+              </span>
+              <span class="capa3d-marca">365 Graça &amp; Adoração</span>
+            </div>
+          </div>
+          <div class="capa3d-sombra"></div>
+        </div>
+      </div>
+      <div class="proto-topo">↓ topo atual da página (título e introdução) continua aqui, sem alteração</div>
+    </section>
+  </main>
+</body>
+</html>
