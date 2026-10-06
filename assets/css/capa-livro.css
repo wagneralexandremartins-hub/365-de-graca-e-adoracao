@@ -263,6 +263,10 @@
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
 }
 
+/* Deuteronômio (e demais div.container): o título da página tem 3em e
+   estourava no celular. Só reduz em tela estreita; no desktop fica 3em. */
+.capa3d-faixa ~ div.container .header h1{ font-size: clamp(1.4rem, 6.5vw, 3em); }
+
 /* Chamada final */
 .capa3d-faixa ~ main.container .cta-section{ text-align: center; }
 .capa3d-faixa ~ main.container .cta-buttons{ display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
