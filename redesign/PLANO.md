@@ -154,6 +154,26 @@ O site é estático e o deploy publica a `main`. Reverter = devolver a `main` ao
 6. Se a fonte do Pages tiver sido trocada para "GitHub Actions" e isso for a causa do problema, voltar em Settings › Pages (isso independe do revert do código).
 7. Correção pontual de página: os zips em `_backups/` (só na máquina local) guardam cada página como estava antes de cada etapa.
 
+## Estado em 06/10 (fim do dia)
+
+**Feito**
+- Capa 3D aplicada nas páginas de abertura de **17 livros**: Pentateuco (5) + Históricos canônicos (12: Josué, Juízes, Rute, 1–2 Samuel, 1–2 Reis, 1–2 Crônicas, Esdras, Neemias, Ester). Capítulos da capa vindos do cânon. Tobias, Judite e 1–2 Macabeus ficaram fora (duplicados em `03-historicos` e `06-apocrifos`, decisão pendente).
+- CSS em `assets/css/capa-livro.css` (tudo preso à capa: coluna de leitura, grades do Êxodo, título do Deuteronômio no celular); script `scripts/aplicar_capa3d.py` (dry-run, `--apply`, `--only`, bloco `<!-- capa3d:v1 -->`, prova byte a byte).
+- Validação: 17/17 sem rolagem horizontal em 1280/768/390/360, escuro e claro; desktop inalterado.
+- Commits: `3e602f64` (protótipo + CSS), `f63a6912` (piloto Gênesis + script), `c8bcca86` (notas de limpeza), `83713f7d` (lote de 16), `23969271` (Deuteronômio), `66685bd5` (Êxodo/Deuteronômio resolvidos).
+- **Push da branch** `redesign/navegacao-awexpress` em `66685bd5`. **`main` intacta em `ec2c3181`**; `(root)` não tocada; nenhum deploy disparado.
+
+**Pendências**
+1. Opcional: capa em mais 2 livros (sugestão: Salmos e um Evangelho), com o mesmo procedimento (dry-run, confirmação, validação, commit separado).
+2. Faixa de números desalinhada em Juízes e provavelmente nos outros 9 livros `main.wrap` (ver Limpeza prioritária).
+3. Modo claro de Rute e Josué (cartão de introdução e faixas coloridas mudam de tom pela inversão global).
+4. Checklist do merge (seção "Checklist final do merge na `main`"):
+   - **Wagner, no GitHub:** trocar a branch padrão para `main` e o Pages para "GitHub Actions". Conferido em 06/10: a branch padrão ainda é `(root)` e o Pages ainda é *legacy* apontando para `(root)`.
+   - Troca do link do AT em 2.888 páginas (script `trocar_link_at.py`, dry-run OK, não aplicado).
+   - Hub do NT e home reais.
+   - PR da branch para `main` (não para `(root)`).
+   - Merge **só com OK explícito do Wagner**.
+
 ## Tarefa de amanhã (06/10/2026): capa 3D de livro
 
 Criar uma **capa 3D de livro, só em CSS**, no topo das **páginas de abertura de cada livro** da Bíblia (não nos capítulos).
