@@ -43,7 +43,7 @@ EXCLUDE_TOP = {"_backups", ".git", ".github", "en", "es", "redesign", "scripts",
 # Itens do menu (fallback <noscript>). Manter igual ao MENU de site-nav.js.
 MENU = [
     ("/", "Início"),
-    ("/redesign/antigo-testamento.html", "Antigo Testamento"),
+    ("/antigo-testamento/", "Antigo Testamento"),
     ("/08-novo-testamento/", "Novo Testamento"),
     ("/personagens/index.html", "Personagens"),
     ("/mapas/index.html", "Mapas"),
