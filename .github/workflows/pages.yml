@@ -30,6 +30,8 @@ jobs:
             --exclude='_backups/' \
             --exclude='scripts/' \
             --exclude='.github/' \
+            --exclude='.claude/' \
+            --exclude='redesign/' \
             --exclude='*.md' \
             --exclude='*.py' \
             --exclude='generate-sitemap.js' \

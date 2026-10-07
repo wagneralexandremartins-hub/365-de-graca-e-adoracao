@@ -1,0 +1,177 @@
+/* ==========================================================================
+   site-header.css — cabeçalho central do 365 Graça & Adoração
+   Montado por /assets/js/site-nav.js. Tokens e padrões da AWEXPRESS.
+
+   Isolamento: as páginas antigas têm regras genéricas (header, nav, a, .brand…).
+   Tudo aqui fica sob #site-header e começa com `all: revert`, então nenhuma
+   regra antiga vaza para o cabeçalho, e nada daqui vaza para o conteúdo.
+   ========================================================================== */
+
+#site-header, #site-header *, #site-header *::before, #site-header *::after,
+.context-nav, .context-nav *, .sh-skip{
+  all: revert;
+  box-sizing: border-box;
+}
+
+#site-header, .context-nav, .sh-skip{
+  --sh-bg: #0a0d14;
+  --sh-bg-glass: rgba(10,13,20,0.88);
+  --sh-panel: #131826;
+  --sh-ink: #eef1f7;
+  --sh-muted: #8a93a8;
+  --sh-line: rgba(255,255,255,0.08);
+  --sh-cobalt: #3b6ef6;
+  --sh-cobalt-glow: #5b8aff;
+  --sh-amber: #f2a93b;
+  --sh-amber-glow: #ffc36b;
+  --sh-h: 68px;
+}
+/* Modo claro: o site inverte a página inteira (filter: invert no <html>,
+   ver #dark-toggle), então o cabeçalho escuro vira claro sozinho. Não
+   definir cores claras aqui, senão a inversão as escurece de novo. */
+
+/* Pular para o conteúdo */
+.sh-skip{
+  position: absolute; left: 16px; top: -100px; z-index: 10000;
+  background: var(--sh-panel); color: var(--sh-ink); border: 1px solid var(--sh-line); border-radius: 8px;
+  padding: 10px 16px; font: 600 14px/1.2 'Inter', system-ui, sans-serif; text-decoration: none;
+}
+.sh-skip:focus{ top: 12px; }
+
+/* #site-header fica no fluxo e reserva a altura; a barra (.sh-bar) é fixa no
+   topo da janela. Assim funciona em qualquer layout antigo (sticky falha
+   quando o pai tem altura limitada, o que acontece em várias páginas). */
+#site-header{
+  display: block; position: relative; z-index: 9000;
+  min-height: var(--sh-h); margin: 0; padding: 0;
+  background: var(--sh-bg);
+  color: var(--sh-ink);
+  font: 400 15px/1.4 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-align: left;
+}
+#site-header .sh-bar{
+  position: fixed; top: 0; left: 0; right: 0; z-index: 9000;
+  display: flex; align-items: center; gap: 20px;
+  height: var(--sh-h); margin: 0; padding: 0 3%;
+  background: var(--sh-bg-glass);
+  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--sh-line);
+}
+#site-header a:focus-visible, #site-header button:focus-visible, .context-nav a:focus-visible{
+  outline: 2px solid var(--sh-cobalt-glow); outline-offset: 2px;
+}
+
+/* Marca */
+#site-header .sh-brand{ display: flex; align-items: center; gap: 10px; flex: none; min-width: 0; color: var(--sh-ink); text-decoration: none; }
+#site-header .sh-brand img{ display: block; height: 36px; width: auto; }
+#site-header .sh-brand-text{ display: block; font: 700 15px/1.15 'Sora', system-ui, sans-serif; white-space: nowrap; color: var(--sh-ink); }
+#site-header .sh-brand-text small{ display: block; margin-top: 2px; font: 400 10.5px/1.2 'JetBrains Mono', ui-monospace, monospace; letter-spacing: .5px; color: var(--sh-muted); }
+
+/* Menu */
+#site-header .sh-nav{ display: flex; align-items: center; gap: 18px; margin: 0 0 0 auto; padding: 0; }
+#site-header .sh-nav a{
+  position: relative; display: block; padding: 6px 0;
+  color: var(--sh-muted); text-decoration: none; white-space: nowrap;
+  font: 500 14px/1.3 'Inter', system-ui, sans-serif;
+  transition: color .2s ease;
+}
+#site-header .sh-nav a:hover{ color: var(--sh-ink); }
+#site-header .sh-nav a[aria-current="page"]{ color: var(--sh-ink); }
+#site-header .sh-nav a[aria-current="page"]::after{
+  content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 2px; border-radius: 2px;
+  background: linear-gradient(90deg, var(--sh-cobalt-glow), var(--sh-amber-glow));
+}
+#site-header .sh-nav a.sh-loja{ color: var(--sh-amber-glow); }
+
+/* Ferramentas: busca + idiomas */
+#site-header .sh-tools{ display: flex; align-items: center; gap: 6px; flex: none; }
+#site-header .sh-search{
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 8px; color: var(--sh-muted);
+  border: 1px solid var(--sh-line); text-decoration: none;
+}
+#site-header .sh-search:hover{ color: var(--sh-ink); border-color: var(--sh-cobalt-glow); }
+#site-header .sh-search-ico{
+  display: block; width: 16px; height: 16px; background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-3.5-3.5'/%3E%3C/svg%3E") center / contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-3.5-3.5'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+#site-header .sh-lang{ display: flex; gap: 2px; font: 400 11.5px/1 'JetBrains Mono', ui-monospace, monospace; }
+#site-header .sh-lang a{ padding: 6px 7px; border-radius: 6px; color: var(--sh-muted); text-decoration: none; border: 1px solid transparent; }
+#site-header .sh-lang a:hover{ color: var(--sh-ink); }
+#site-header .sh-lang a[aria-current="true"]{ color: var(--sh-ink); border-color: var(--sh-line); }
+
+/* Botão do menu (mobile) */
+#site-header .sh-toggle{
+  display: none; align-items: center; justify-content: center; flex: none;
+  width: 40px; height: 40px; margin: 0 0 0 auto; padding: 0; border-radius: 8px; cursor: pointer;
+  background: transparent; border: 1px solid var(--sh-line); color: var(--sh-ink);
+}
+#site-header .sh-toggle[aria-expanded="true"]{ border-color: var(--sh-cobalt-glow); }
+#site-header .sh-bars, #site-header .sh-bars::before, #site-header .sh-bars::after{
+  display: block; width: 18px; height: 2px; border-radius: 2px; background: currentColor;
+  transition: transform .2s ease, background .2s ease;
+}
+#site-header .sh-bars{ position: relative; }
+#site-header .sh-bars::before, #site-header .sh-bars::after{ content: ""; position: absolute; left: 0; }
+#site-header .sh-bars::before{ top: -6px; }
+#site-header .sh-bars::after{ top: 6px; }
+#site-header .sh-toggle[aria-expanded="true"] .sh-bars{ background: transparent; }
+#site-header .sh-toggle[aria-expanded="true"] .sh-bars::before{ transform: translateY(6px) rotate(45deg); }
+#site-header .sh-toggle[aria-expanded="true"] .sh-bars::after{ transform: translateY(-6px) rotate(-45deg); }
+
+/* Fallback sem JavaScript */
+#site-header .sh-fallback{ display: flex; flex-wrap: wrap; gap: 6px 16px; padding: 12px 0; }
+#site-header .sh-fallback a{ color: var(--sh-muted); text-decoration: none; font-size: 14px; }
+
+/* Navegação contextual que já existia na página (voltar, trilha do livro) */
+.context-nav{
+  display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px;
+  margin: 0; padding: 10px 4%;
+  background: var(--sh-bg); border-bottom: 1px solid var(--sh-line);
+  font: 500 13px/1.4 'Inter', system-ui, sans-serif; color: var(--sh-muted);
+}
+.context-nav a{ color: var(--sh-muted); text-decoration: none; padding: 2px 0; }
+.context-nav a:hover{ color: var(--sh-cobalt-glow); }
+.context-nav a[aria-current="page"]{ color: var(--sh-ink); }
+.context-nav .sh-sep{ opacity: .5; }
+
+/* Menu recolhe abaixo de 1320px: marca + 8 links + busca + idiomas não cabem numa linha */
+@media (max-width: 1320px){
+  #site-header .sh-toggle{ display: inline-flex; }
+  #site-header .sh-tools{ order: 3; }
+  #site-header .sh-nav{
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; align-items: stretch; gap: 0; margin: 0; padding: 6px 4% 14px;
+    background: var(--sh-bg); border-bottom: 1px solid var(--sh-line);
+    max-height: calc(100vh - var(--sh-h)); overflow-y: auto;
+  }
+  #site-header .sh-nav.is-open{ display: flex; }
+  #site-header .sh-nav a{ padding: 13px 0 13px 12px; font-size: 15px; border-bottom: 1px solid var(--sh-line); }
+  #site-header .sh-nav a:last-child{ border-bottom: none; }
+  #site-header .sh-nav a[aria-current="page"]{ font-weight: 600; box-shadow: inset 3px 0 0 var(--sh-cobalt-glow); }
+  #site-header .sh-nav a[aria-current="page"]::after{ display: none; }
+}
+@media (max-width: 520px){
+  #site-header, .context-nav{ --sh-h: 60px; }
+  #site-header .sh-bar{ gap: 10px; padding: 0 4%; }
+  #site-header .sh-brand img{ height: 30px; }
+  #site-header .sh-brand-text{ font-size: 13.5px; }
+  #site-header .sh-brand-text small{ display: none; }
+  #site-header .sh-search{ width: 34px; height: 34px; }
+}
+/* Idiomas dentro do menu aberto (só em telas pequenas) */
+#site-header .sh-nav-lang{ display: none; }
+@media (max-width: 440px){
+  #site-header .sh-lang{ display: none; }
+  #site-header .sh-nav-lang{ display: flex; gap: 8px; padding: 14px 0 4px 12px; font: 400 13px/1 'JetBrains Mono', ui-monospace, monospace; }
+  #site-header .sh-nav .sh-nav-lang a{ padding: 8px 12px; border: 1px solid var(--sh-line); border-radius: 6px; font-size: 13px; }
+  #site-header .sh-nav .sh-nav-lang a[aria-current="true"]{ color: var(--sh-ink); border-color: var(--sh-cobalt-glow); box-shadow: none; }
+}
+@media (max-width: 330px){
+  #site-header .sh-brand-text{ display: none; }
+}
+@media (prefers-reduced-motion: reduce){
+  #site-header *, .context-nav *{ transition: none; }
+}

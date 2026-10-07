@@ -3,3 +3,6 @@ node_modules/
 *.tmp
 index_backup.html
 *_backup.html
+
+# Backups locais gerados pelos scripts (ficam fora do repositório)
+_backups/*.zip

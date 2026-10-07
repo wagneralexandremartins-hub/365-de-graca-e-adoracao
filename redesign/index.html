@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>365 Graça &amp; Adoração — Protótipo da nova home</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Sora:wght@600;700;800&display=swap">
+  <link rel="stylesheet" href="/assets/css/site-header.css">
+  <link rel="stylesheet" href="/redesign/redesign.css">
+  <script src="/assets/js/site-nav.js" defer></script>
+  <script src="/redesign/prototipo-header.js" defer></script>
+</head>
+<body>
+  <a class="sh-skip" href="#conteudo">Pular para o conteúdo</a>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="spotlight" aria-hidden="true"></div>
+
+  <header id="site-header" class="site-header"><noscript><nav class="sh-fallback" aria-label="Navegação principal"><a href="/">Início</a><a href="/redesign/antigo-testamento.html">Antigo Testamento</a><a href="/08-novo-testamento/">Novo Testamento</a><a href="/personagens/index.html">Personagens</a><a href="/mapas/index.html">Mapas</a><a href="/timeline/index.html">Linha do Tempo</a><a href="/estudos/">Estudos</a><a href="/loja-365/">Loja 365</a></nav></noscript></header>
+
+  <main id="conteudo">
+
+    <!-- HERO: busca em destaque + continuar de onde parou -->
+    <section class="section hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow"><span class="dot" aria-hidden="true"></span>Projeto bíblico estruturado para 365 dias</div>
+          <h1>Uma jornada de <span class="grad">transformação espiritual</span> da Criação ao Apocalipse</h1>
+          <p class="lead">Estude a Bíblia com profundidade, reverência e clareza. Um caminho organizado com leitura, contexto histórico, reflexão teológica e aplicação prática para edificar a fé no presente.</p>
+
+          <div class="hero-search">
+            <form class="search" action="/busca/index.html" method="get" role="search">
+              <input type="search" name="q" placeholder="Ex.: Gênesis 1, Sermão do Monte, graça, oração..." aria-label="Busque um capítulo, tema ou livro">
+              <button class="btn btn-primary" type="submit">Buscar</button>
+            </form>
+            <p class="hint">Encontre conteúdos com mais rapidez e siga a jornada com melhor organização.</p>
+          </div>
+
+          <div class="stat-bar" aria-label="Indicadores do projeto">
+            <div><strong>66</strong><span>Livros canônicos</span></div>
+            <div><strong>1.189</strong><span>Capítulos bíblicos</span></div>
+            <div><strong>+2.900</strong><span>Páginas em português</span></div>
+            <div><strong>3</strong><span>Idiomas disponíveis</span></div>
+          </div>
+        </div>
+
+        <aside class="resume" aria-labelledby="resume-title">
+          <span class="kicker">Continue de onde parou</span>
+          <h2 id="resume-title">Seu progresso espiritual começa hoje</h2>
+          <p class="resume-where" id="resume-where">Mateus 1</p>
+          <p class="resume-hint" id="resume-hint">Inicie por Mateus 1, avance com constância e retorne diariamente para continuar.</p>
+          <div class="progress" role="progressbar" aria-label="Acompanhe sua jornada pelos 260 capítulos do NT" aria-valuemin="0" aria-valuemax="260" aria-valuenow="0" id="resume-bar">
+            <div class="progress-fill" id="resume-fill"></div>
+          </div>
+          <div class="progress-meta"><span id="resume-day">Dia 1 de 260</span><span id="resume-pct">0%</span></div>
+          <a class="btn btn-primary" id="resume-btn" href="/08-novo-testamento/mateus/capitulos/capitulo-01.html">Continuar leitura →</a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ENTRADAS GRANDES -->
+    <section class="section" aria-labelledby="explorar-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Explorar</span>
+          <h2 id="explorar-title">Da Criação ao Apocalipse</h2>
+        </div>
+        <div class="entries">
+          <a class="entry entry-lg entry-at" href="/redesign/antigo-testamento.html">
+            <div><span class="kicker">Antigo Testamento</span><h3>Antigo Testamento</h3><p>Pentateuco, Históricos, Poéticos e Profetas</p></div>
+            <span class="link-arrow">Explorar →</span>
+          </a>
+          <a class="entry entry-lg entry-nt" href="/redesign/novo-testamento.html">
+            <div><span class="kicker">Novo Testamento</span><h3>Novo Testamento</h3><p>Evangelhos, Atos, Epístolas, Apocalipse</p></div>
+            <span class="link-arrow">Explorar →</span>
+          </a>
+          <a class="entry" href="/estudos/">
+            <div><h3>Estudos</h3><p>Área temática com estudos bíblicos por assunto para aprofundamento espiritual, histórico e prático.</p></div>
+            <span class="link-arrow">Explorar →</span>
+          </a>
+          <a class="entry" href="/estudos/index.html#fontes-historicas">
+            <div><h3>Fontes Históricas</h3><p>Apócrifos e Deuterocanônicos · Período Intertestamentário</p></div>
+            <span class="link-arrow">Explorar →</span>
+          </a>
+          <a class="entry" href="/personagens/index.html">
+            <div><h3>Personagens</h3><p>Conheça os principais personagens bíblicos: Moisés, Abraão, Davi, Salomão, Paulo, Pedro, Maria e outros.</p></div>
+            <span class="link-arrow">Explorar →</span>
+          </a>
+          <a class="entry" href="/mapas/index.html">
+            <div><h3>Mapas</h3><p>Geografia bíblica, rotas de Paulo, Cruzadas</p></div>
+            <span class="link-arrow">Explorar →</span>
+          </a>
+          <a class="entry" href="/timeline/index.html">
+            <div><h3>Linha do Tempo</h3><p>Da Criação ao Apocalipse — cronologia completa</p></div>
+            <span class="link-arrow">Explorar →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- POR ONDE COMEÇAR (quem chega pela primeira vez) -->
+    <section class="section" id="jornada" aria-labelledby="comecar-title">
+      <div class="wrap start-band">
+        <div class="start-head">
+          <div>
+            <span class="kicker">Por onde começar</span>
+            <h2 id="comecar-title">Comece hoje. Um capítulo por dia.</h2>
+            <p>Não é necessário ter formação teológica. Basta disposição para ler, refletir e crescer. A jornada de 365 dias começa com um único passo — o primeiro capítulo.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="/08-novo-testamento/mateus/capitulos/capitulo-01.html">Começar agora — Mateus 1 →</a>
+            <a class="btn btn-ghost" href="/01-principio/index.html">Começar pelo Gênesis</a>
+            <a class="btn btn-ghost" href="/como-estudar/index.html">Como Estudar</a>
+          </div>
+        </div>
+        <h3>Como funciona a jornada 365</h3>
+        <ol class="steps" role="list">
+          <li class="step"><span class="num">01</span><h3>Leia com atenção</h3><p>O texto bíblico é a base. O estudo parte da Escritura e não de opiniões soltas.</p></li>
+          <li class="step"><span class="num">02</span><h3>Entenda o contexto</h3><p>Veja cenário histórico, geográfico, literário e espiritual de cada passagem.</p></li>
+          <li class="step"><span class="num">03</span><h3>Reflita com profundidade</h3><p>Questões teológicas e perguntas introspectivas ajudam a confrontar o presente.</p></li>
+          <li class="step"><span class="num">04</span><h3>Aplique à vida</h3><p>O objetivo não é apenas ler mais, mas viver melhor diante de Deus.</p></li>
+        </ol>
+        <div class="filter" style="margin:24px 0 0">
+          <a href="/01-principio/index.html">Começar em Gênesis</a>
+          <a href="/08-novo-testamento/mateus/index.html">Evangelho de Mateus</a>
+          <a href="/08-novo-testamento/joao/index.html">Evangelho de João</a>
+          <a href="/08-novo-testamento/romanos/index.html">Romanos</a>
+          <a href="/08-novo-testamento/hebreus/index.html">Hebreus</a>
+          <a href="/08-novo-testamento/apocalipse/index.html">Apocalipse</a>
+          <a href="/personagens/index.html">Personagens Bíblicos</a>
+          <a href="/mapas/index.html">Mapas</a>
+        </div>
+        <div class="card about-card">
+          <div>
+            <h3>Um projeto para leitura contínua e transformação</h3>
+            <p>O 365 Graça &amp; Adoração nasce com o propósito de oferecer um caminho sólido de estudo bíblico, acessível ao leitor comum e sério o suficiente para quem deseja se aprofundar com reverência, disciplina e visão teológica.</p>
+          </div>
+          <a class="link-arrow" href="/sobre/index.html">Ler apresentação completa →</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- A JORNADA (cartões copiados literalmente da home no ar, seção #blocos) -->
+    <section class="section" id="blocos" aria-labelledby="jornada-etapas-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="jornada-etapas-title">A Jornada</h2>
+          <p class="section-sub">Uma caminhada bíblica estruturada com progressão histórica e coerência teológica — da Criação ao Apocalipse. <a href="/blocos/" style="color:#f5c542;font-weight:bold;">Ver estrutura completa →</a></p>
+        </div>
+        <div class="grid grid-4 jornada-cards">
+
+          <article class="card">
+            <div class="card-icon">🌍</div>
+            <h3>1. O Princípio e a Lei</h3>
+            <p>Criação, queda e a libertação do Egito. O fundamento da fé no Pentateuco.</p>
+            <a href="/01-principio/index.html">Gênesis a Deuteronômio →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">⚔️</div>
+            <h3>2. Conquista e Juízes</h3>
+            <p>A posse da Terra Prometida, os ciclos de apostasia e os libertadores de Israel.</p>
+            <a href="/03-historicos/index.html">Josué a Rute →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">👑</div>
+            <h3>3. O Reino Unido</h3>
+            <p>A era de ouro sob Saul, Davi e Salomão. O estabelecimento da monarquia e o Templo.</p>
+            <a href="/03-historicos/index.html">1 Samuel a 2 Crônicas →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">💔</div>
+            <h3>4. O Reino Dividido</h3>
+            <p>A separação entre Israel e Judá, a idolatria e os avisos de Elias e Eliseu.</p>
+            <a href="/03-historicos/index.html">Reis e Crônicas →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">📣</div>
+            <h3>5. Vozes Proféticas</h3>
+            <p>Isaías, Jeremias e os profetas que anunciaram juízo e a vinda do Messias.</p>
+            <a href="/05-profetas/index.html">Profetas Maiores →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🏺</div>
+            <h3>6. Exílio e Cativeiro</h3>
+            <p>A queda de Jerusalém e a vida do povo de Deus na Babilônia e Pérsia.</p>
+            <a href="/05-profetas/index.html">Ezequiel e Daniel →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🛠️</div>
+            <h3>7. Restauração e Retorno</h3>
+            <p>A reconstrução do Templo e dos muros sob Esdras e Neemias após o exílio.</p>
+            <a href="/03-historicos/index.html">Pós-Exílio →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🙏</div>
+            <h3>8. Sabedoria e Adoração</h3>
+            <p>Salmos, Provérbios e Jó. A aplicação prática e poética da vida com Deus.</p>
+            <a href="/04-poeticos/index.html">Livros Poéticos →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">⏳</div>
+            <h3>9. Espera Messiânica</h3>
+            <p>O período de silêncio profético: 400 anos preparando o caminho para o Cristo.</p>
+            <a href="/07-intertestamentario/index.html">Intertestamentário →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">✝️</div>
+            <h3>10. O Messias Prometido</h3>
+            <p>O ministério, morte e ressurreição de Jesus Cristo segundo os Evangelhos.</p>
+            <a href="/08-novo-testamento/index.html">Mateus a João →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🕊️</div>
+            <h3>11. A Igreja em Missão</h3>
+            <p>O agir do Espírito Santo e a expansão do Evangelho por todo o mundo.</p>
+            <a href="/09-igreja-primitiva/index.html">Atos dos Apóstolos →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">📜</div>
+            <h3>12. Doutrina e Glória</h3>
+            <p>As cartas de instrução à Igreja e a visão final da Consumação em Apocalipse.</p>
+            <a href="/08-novo-testamento/apocalipse/index.html">Epístolas e Apocalipse →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- IDIOMAS -->
+    <section class="section" id="idiomas" aria-labelledby="idiomas-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Idiomas</span>
+          <h2 id="idiomas-title">Disponível em 3 idiomas</h2>
+          <p>Todos os 260 capítulos do Novo Testamento traduzidos com exegese completa.</p>
+        </div>
+        <div class="grid grid-3">
+          <a class="card lang-card" href="/" lang="pt-BR">
+            <h3><span class="code">PT</span>Português</h3>
+            <p>Versão original com análise exegética completa, vocabulário grego e aplicação prática.</p>
+            <span class="link-arrow">Acessar em Português →</span>
+          </a>
+          <a class="card lang-card" href="/en/" lang="en">
+            <h3><span class="code">EN</span>English</h3>
+            <p>Full exegetical study of all 260 NT chapters in English with ESV references.</p>
+            <span class="link-arrow">Access in English →</span>
+          </a>
+          <a class="card lang-card" href="/es/" lang="es">
+            <h3><span class="code">ES</span>Español</h3>
+            <p>Estudio exegético completo de los 260 capítulos del NT en español con RVR60.</p>
+            <span class="link-arrow">Acceder en Español →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h3>365 Graça &amp; Adoração</h3>
+          <p>Um projeto de estudo bíblico gratuito, estruturado e profundo — da Criação ao Apocalipse.</p>
+          <p>© 2026 · Conteúdo gratuito para edificação da fé</p>
+        </div>
+        <div>
+          <h3>Navegação</h3>
+          <div class="footer-links">
+            <a href="/01-principio/index.html">O Princípio</a>
+            <a href="/02-pentateuco/index.html">Pentateuco</a>
+            <a href="/08-novo-testamento/index.html">Novo Testamento</a>
+            <a href="/personagens/index.html">Personagens</a>
+            <a href="/mapas/index.html">Mapas</a>
+            <a href="/timeline/index.html">Linha do Tempo</a>
+            <a href="/blocos/">13 Blocos</a>
+          </div>
+        </div>
+        <div>
+          <h3>NT Destaque</h3>
+          <div class="footer-links">
+            <a href="/08-novo-testamento/mateus/capitulos/capitulo-01.html">Mateus 1</a>
+            <a href="/08-novo-testamento/joao/capitulos/capitulo-01.html">João 1</a>
+            <a href="/08-novo-testamento/romanos/capitulos/capitulo-08.html">Romanos 8</a>
+            <a href="/08-novo-testamento/efesios/capitulos/capitulo-02.html">Efésios 2</a>
+            <a href="/08-novo-testamento/hebreus/capitulos/capitulo-11.html">Hebreus 11</a>
+            <a href="/08-novo-testamento/apocalipse/capitulos/capitulo-22.html">Apocalipse 22</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">Feito com fé · Gratuito para sempre · <a href="/sobre/index.html">Sobre o projeto</a> · <a href="/politica-de-privacidade.html">Política de Privacidade</a></div>
+    </div>
+  </footer>
+
+  <script>
+    /* "Continue de onde parou": lê o progresso gravado por site-nav.js (localStorage).
+       Sem dados (primeira visita, aba anônima, armazenamento bloqueado), o cartão
+       continua no estado inicial: Mateus 1, Dia 1 de 260. */
+    document.addEventListener('DOMContentLoaded', function () {
+      var S = window.Site365; if (!S) return;
+      var p = null; try { p = S.getProgress(); } catch (e) {}
+      if (!p) return;
+      document.getElementById('resume-where').textContent = p.book + ' ' + p.ch;
+      document.getElementById('resume-hint').textContent = 'Último capítulo aberto';
+      document.getElementById('resume-day').textContent = 'Dia ' + p.day + ' de ' + p.total;
+      document.getElementById('resume-pct').textContent = p.pct + '%';
+      document.getElementById('resume-fill').style.width = Math.max(p.pct, 2) + '%';
+      document.getElementById('resume-bar').setAttribute('aria-valuenow', p.day);
+      document.getElementById('resume-btn').href = p.url;
+    });
+  </script>
+
+  <!-- Dark Mode -->
+  <script>(function(){var s=localStorage.getItem('365-theme');if(s==='light')document.documentElement.setAttribute('data-theme','light');})();</script>
+  <style>
+    [data-theme="light"]{filter:invert(1) hue-rotate(180deg);}
+    [data-theme="light"] img,[data-theme="light"] video{filter:invert(1) hue-rotate(180deg);}
+    #dark-toggle{position:fixed;bottom:80px;right:16px;z-index:9998;background:rgba(15,23,42,0.9);border:1px solid #334155;border-radius:50%;width:44px;height:44px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.2rem;box-shadow:0 2px 10px rgba(0,0,0,0.4);transition:transform 0.2s;}
+    #dark-toggle:hover{transform:scale(1.1);}
+  </style>
+  <div id="dark-toggle" title="Alternar modo claro/escuro" onclick="var h=document.documentElement,c=h.getAttribute('data-theme');if(c==='light'){h.removeAttribute('data-theme');localStorage.setItem('365-theme','dark');this.textContent='🌙';}else{h.setAttribute('data-theme','light');localStorage.setItem('365-theme','light');this.textContent='☀️';}">🌙</div>
+</body>
+</html>
