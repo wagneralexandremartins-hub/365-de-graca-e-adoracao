@@ -125,17 +125,17 @@ Nada vai à `main` sem ordem explícita do Wagner. Marcar cada item antes de abr
 - [x] Conferir que o ambiente `github-pages` continua aceitando deploy só da `main`. Conferido em 07/10 (política de branch: só `main`).
 
 **D. Merge**
-- [ ] Antes do merge: marcar o estado atual da `main` com uma tag (`git tag pre-redesign ec2c3181` e `git push origin pre-redesign`).
-- [ ] Push da branch e PR **para a `main`** (o GitHub vai sugerir `(root)` enquanto ela for a padrão: trocar).
-- [ ] Revisar o resumo do PR (arquivos e commits) com o Wagner.
-- [ ] Merge com **merge commit** (não squash), para a reversão ser um único `revert`.
-- [ ] Acompanhar o workflow "Deploy GitHub Pages" até "success".
+- [x] Antes do merge: marcar o estado atual da `main` com uma tag (`git tag pre-redesign ec2c3181` e `git push origin pre-redesign`). Tag no GitHub em `ec2c3181` (07/10).
+- [x] Push da branch e PR **para a `main`** (o GitHub vai sugerir `(root)` enquanto ela for a padrão: trocar). PR #1, de `redesign/navegacao-awexpress` (`d721e79f`) para `main`: 45 commits, 2.919 arquivos (2.892 modificados, 27 novos, 0 removidos).
+- [x] Revisar o resumo do PR (arquivos e commits) com o Wagner. Sem conflitos; lista de arquivos igual ao diff local, nada fora do esperado.
+- [x] Merge com **merge commit** (não squash), para a reversão ser um único `revert`. **Merge `6101ab89`** (PR #1, pais `ec2c3181` + `d721e79f`), em 07/10/2026 às 18h26, com ordem do Wagner. Branches mantidas.
+- [x] Acompanhar o workflow "Deploy GitHub Pages" até "success". Build e deploy com sucesso; site no ar = `6101ab89` às 18h27 de 07/10 (home, hubs, Mateus, `site-nav.js` e `sitemap.xml` conferidos byte a byte; `/redesign/` e `/CLAUDE.md` dão 404).
 
 **E. Depois do deploy (site no ar)**
-- [ ] Abrir home, hubs AT/NT, um capítulo do NT, um do AT, Bíblia, Estudos; desktop e celular; modo claro.
-- [ ] Testar "Continue de onde parou" (abrir um capítulo do NT e voltar à home).
-- [ ] Conferir `https://365gracaeadoracao.com/antigo-testamento/` e o canonical.
-- [ ] Nos dias seguintes: Search Console (erros de cobertura) e AdSense (anúncios aparecendo).
+- [x] Abrir home, hubs AT/NT, um capítulo do NT, um do AT, Bíblia, Estudos; desktop e celular; modo claro. Conferido pelo Wagner no ar em 07/10: home, hubs AT e NT, capas de Juízes, Mateus, Marcos, Lucas, João e Romanos, celular e modo claro.
+- [x] Testar "Continue de onde parou" (abrir um capítulo do NT e voltar à home). Conferido pelo Wagner no ar em 07/10.
+- [x] Conferir `https://365gracaeadoracao.com/antigo-testamento/` e o canonical. Página no ar idêntica à da `main` (canonical `/antigo-testamento/`), 07/10.
+- [ ] Nos dias seguintes: Search Console (erros de cobertura) e AdSense (anúncios aparecendo). Em aberto: acompanhar a partir de 08/10.
 
 ## Plano de reversão (se algo der errado depois do merge)
 
