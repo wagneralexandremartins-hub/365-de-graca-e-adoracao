@@ -21,251 +21,140 @@
   <link rel="icon" href="/assets/img/favicon.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"365 Graça & Adoração","url":"https://365gracaeadoracao.com","description":"Jornada bíblica completa da Criação ao Apocalipse","inLanguage":"pt-BR"}</script>
-  <style>
-    :root {
-      --bg: #08111f;
-      --bg-soft: #0f172a;
-      --card: rgba(255,255,255,0.06);
-      --card-border: rgba(255,255,255,0.12);
-      --text: #e5e7eb;
-      --muted: #cbd5e1;
-      --gold: #f5c542;
-      --accent: #60a5fa;
-      --shadow: 0 10px 30px rgba(0,0,0,0.25);
-      --radius: 18px;
-      --max: 1200px;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(rgba(8,17,31,0.92), rgba(8,17,31,0.97)),
-        url("/assets/img/bg-biblia.jpg") center/cover no-repeat fixed;
-      color: var(--text);
-      line-height: 1.6;
-    }
-    a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; display: block; }
-    .container { width: min(92%, var(--max)); margin: 0 auto; }
-
-    /* TOPBAR */
-    .topbar {
-      position: sticky; top: 0; z-index: 1000;
-      backdrop-filter: blur(12px);
-      background: rgba(8,17,31,0.82);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-    .topbar-inner { display: flex; align-items: center; justify-content: flex-start; gap: 30px; padding: 14px 0; }
-    .brand { display: flex; align-items: center; gap: 12px; font-weight: bold; }
-    .brand-logo-img { height: 42px; width: auto; display: block; }
-    .brand-text small { display: block; color: var(--muted); font-weight: normal; font-size: 0.82rem; }
-    .nav { display: flex; align-items: center; gap: 28px; flex-wrap: nowrap; justify-content: center; flex: 1; }
-    .nav a { color: var(--muted); font-size: 0.95rem; transition: 0.2s; white-space: nowrap; position: relative; }
-    .nav a:hover { color: #fff; }
-    .nav a[href*="loja-365"] { color: var(--gold); font-weight: bold; border-bottom: 3px solid var(--gold); padding-bottom: 2px; }
-    .nav-cta { background: var(--gold); color: #111827 !important; padding: 12px 24px; border-radius: 999px; font-weight: bold; font-size: 0.95rem; }
-
-    /* HERO */
-    .hero { padding: 80px 0 50px; }
-    .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 30px; align-items: center; }
-    .eyebrow {
-      display: inline-block; padding: 8px 14px;
-      border: 1px solid rgba(245,197,66,0.3); color: #fde68a;
-      background: rgba(245,197,66,0.08); border-radius: 999px;
-      margin-bottom: 18px; font-size: 0.92rem;
-    }
-    .hero h1 { font-size: clamp(2rem, 4vw, 4rem); line-height: 1.12; margin-bottom: 18px; }
-    .hero h1 span { color: var(--gold); }
-    .hero-desc { color: var(--muted); font-size: 1.05rem; max-width: 680px; margin-bottom: 28px; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 20px; }
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center;
-      gap: 8px; padding: 14px 22px; border-radius: 999px; font-weight: bold;
-      transition: transform .2s, opacity .2s;
-    }
-    .btn:hover { transform: translateY(-2px); opacity: 0.95; }
-    .btn-primary { background: var(--gold); color: #111827; box-shadow: var(--shadow); }
-    .btn-secondary { border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.04); color: #fff; }
-    .mini-info { color: var(--muted); font-size: 0.93rem; }
-
-    /* HERO CARD */
-    .hero-card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
-      border: 1px solid var(--card-border); border-radius: 24px; padding: 24px; box-shadow: var(--shadow);
-    }
-    .hero-card h2 { font-size: 1.15rem; margin-bottom: 14px; color: #fff; }
-    .progress-line { width: 100%; height: 12px; background: rgba(255,255,255,0.08); border-radius: 999px; overflow: hidden; margin: 14px 0 10px; }
-    .progress-fill { width: 2%; height: 100%; background: linear-gradient(90deg, var(--gold), #fff0a6); border-radius: 999px; transition: width 0.5s; }
-
-    /* STATS */
-    .stats { padding: 10px 0 30px; }
-    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-    .stat-card { background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius); padding: 22px; text-align: center; box-shadow: var(--shadow); }
-    .stat-card strong { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 6px; }
-    .stat-card span { color: var(--muted); font-size: 0.93rem; }
-
-    /* SECTIONS */
-    section { padding: 60px 0; }
-    .section-title { text-align: center; margin-bottom: 12px; font-size: clamp(1.6rem, 3vw, 2.4rem); }
-    .section-subtitle { text-align: center; color: var(--muted); max-width: 760px; margin: 0 auto 32px; }
-
-    /* SEARCH */
-    .search-box { background: var(--card); border: 1px solid var(--card-border); border-radius: 22px; padding: 24px; max-width: 900px; margin: 0 auto; box-shadow: var(--shadow); }
-    .search-row { display: grid; grid-template-columns: 1fr auto; gap: 12px; }
-    .search-row input { width: 100%; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.05); color: #fff; padding: 16px 18px; border-radius: 14px; outline: none; font-size: 1rem; }
-    .search-row button { border: none; cursor: pointer; padding: 16px 22px; border-radius: 14px; background: var(--accent); color: white; font-weight: bold; }
-    .quick-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
-    .quick-links a { font-size: 0.88rem; color: #dbeafe; border: 1px solid rgba(96,165,250,0.25); background: rgba(96,165,250,0.10); padding: 7px 12px; border-radius: 999px; transition: 0.2s; }
-    .quick-links a:hover { background: rgba(96,165,250,0.2); }
-
-    /* CARDS */
-    .cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .card { background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); transition: transform .2s, border-color .2s; }
-    .card:hover { transform: translateY(-4px); border-color: rgba(245,197,66,0.35); }
-    .card-icon { font-size: 1.5rem; margin-bottom: 12px; }
-    .card h3 { font-size: 1.1rem; margin-bottom: 10px; }
-    .card p { color: var(--muted); font-size: 0.94rem; margin-bottom: 12px; }
-    .card a { color: #fde68a; font-weight: bold; }
-
-    /* TWO COL */
-    .two-col { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
-    .steps { display: grid; gap: 16px; }
-    .step { display: flex; gap: 14px; align-items: flex-start; background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius); padding: 18px; }
-    .step-number { min-width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; font-weight: bold; background: var(--gold); color: #111827; }
-    .step h3 { margin-bottom: 6px; }
-    .step p { color: var(--muted); font-size: 0.94rem; }
-
-    /* TRANSLATION */
-    .translation-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .translation-card { background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius); padding: 24px; text-align: center; box-shadow: var(--shadow); }
-    .translation-card h3 { margin-bottom: 10px; font-size: 1.2rem; }
-    .translation-card p { color: var(--muted); margin-bottom: 16px; font-size: 0.94rem; }
-    .translation-card a { display: inline-block; padding: 10px 18px; border-radius: 999px; font-weight: bold; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.05); transition: 0.2s; }
-    .translation-card a:hover { background: rgba(255,255,255,0.1); }
-
-    /* CTA */
-    .cta-section { text-align: center; background: linear-gradient(180deg, rgba(245,197,66,0.08), rgba(255,255,255,0.02)); border: 1px solid rgba(245,197,66,0.16); border-radius: 28px; padding: 48px 24px; box-shadow: var(--shadow); }
-    .cta-section h2 { font-size: clamp(1.7rem, 3vw, 2.6rem); margin-bottom: 14px; }
-    .cta-section p { color: var(--muted); max-width: 720px; margin: 0 auto 24px; }
-    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-
-    /* FOOTER */
-    footer { padding: 30px 0 50px; color: var(--muted); }
-    .footer-grid { display: grid; grid-template-columns: 1.2fr .8fr .8fr; gap: 20px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.08); }
-    .footer-grid h3 { color: #fff; margin-bottom: 12px; font-size: 1rem; }
-    .footer-grid a { display: block; margin-bottom: 8px; color: var(--muted); transition: 0.2s; }
-    .footer-grid a:hover { color: #fff; }
-    .footer-bottom { margin-top: 24px; font-size: 0.9rem; color: #94a3b8; text-align: center; }
-
-    /* RESPONSIVE */
-    @media (max-width: 980px) {
-      .hero-grid, .two-col, .translation-grid, .footer-grid { grid-template-columns: 1fr; }
-      .stats-grid, .cards-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 680px) {
-      .nav { display: none; }
-      .hero { padding-top: 50px; }
-      .stats-grid, .cards-grid, .translation-grid { grid-template-columns: 1fr; }
-      .search-row { grid-template-columns: 1fr; }
-      .hero-actions { flex-direction: column; }
-      .btn { width: 100%; }
-      .cta-btns { flex-direction: column; }
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/css/site.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7719935194423493"
          crossorigin="anonymous"></script>
+<!-- site-nav:v1 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Sora:wght@600;700;800&amp;display=swap">
+<link rel="stylesheet" href="/assets/css/site-header.css">
+<script src="/assets/js/site-nav.js" defer></script>
+<!-- /site-nav:v1 -->
+  <script src="/assets/js/header-cta.js" defer></script>
 </head>
 <body>
-
-  <!-- Seletor de Idioma Flutuante -->
-  <div id="lang-selector" style="position:fixed;top:14px;right:16px;z-index:9999;display:flex;gap:6px;background:rgba(15,23,42,0.92);border:1px solid #334155;border-radius:30px;padding:5px 10px;backdrop-filter:blur(8px);box-shadow:0 2px 12px rgba(0,0,0,0.4);">
-    <a href="/" title="Português" style="text-decoration:none;font-size:1.1rem;opacity:0.95;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">🇧🇷</a>
-    <a href="/en/" title="English" style="text-decoration:none;font-size:1.1rem;opacity:0.7;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">🇺🇸</a>
-    <a href="/es/" title="Español" style="text-decoration:none;font-size:1.1rem;opacity:0.7;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">🇪🇸</a>
-  </div>
-
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a href="/" class="brand" aria-label="365 Graça e Adoração">
-        <img src="/assets/img/logo-header.png" alt="365 Graça e Adoração" class="brand-logo-img" style="height:42px;width:auto;display:block;">
-        <div class="brand-text">
-          365 Graça &amp; Adoração
-          <small>Da Criação ao Apocalipse</small>
-        </div>
-      </a>
-      <nav class="nav" aria-label="Navegação principal">
-        <a href="#inicio">Início</a>
-        <a href="#jornada">Jornada</a>
-        <a href="/blocos/">13 Blocos</a>
-        <a href="#idiomas">Idiomas</a>
-        <a href="/personagens/index.html">Personagens</a>
-        <a href="/loja-365/">Loja 365</a>
-        <a href="/sobre/index.html">Sobre</a>
-      </nav>
-      <div style="display: flex; align-items: center; gap: 16px; margin-left: auto;">
-        <span style="color: var(--muted); font-size: 0.9rem;">🇧🇷 BR | US</span>
-        <a href="/08-novo-testamento/mateus/capitulos/capitulo-01.html" class="nav-cta">Começar Dia 1 ›</a>
-      </div>
-    </div>
-  </header>
+<!-- site-nav:v1 -->
+<a class="sh-skip" href="#conteudo">Pular para o conteúdo</a>
+<header id="site-header" class="site-header"><noscript><nav class="sh-fallback" aria-label="Navegação principal"><a href="/">Início</a><a href="/antigo-testamento/">Antigo Testamento</a><a href="/08-novo-testamento/">Novo Testamento</a><a href="/personagens/index.html">Personagens</a><a href="/mapas/index.html">Mapas</a><a href="/timeline/index.html">Linha do Tempo</a><a href="/estudos/">Estudos</a><a href="/loja-365/">Loja 365</a></nav></noscript></header>
+<span id="conteudo"></span>
+<!-- /site-nav:v1 -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="spotlight" aria-hidden="true"></div>
 
   <main>
 
-    <section class="hero" id="inicio">
-      <div class="container">
-        <div class="hero-grid">
-          <div>
-            <div class="eyebrow">📖 Projeto bíblico estruturado para 365 dias</div>
-            <h1>Uma jornada de <span>transformação espiritual</span><br>da Criação ao Apocalipse</h1>
-            <p class="hero-desc">Estude a Bíblia com profundidade, reverência e clareza. Um caminho organizado com leitura, contexto histórico, reflexão teológica e aplicação prática para edificar a fé no presente.</p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="/08-novo-testamento/mateus/capitulos/capitulo-01.html">📖 Começar Dia 1 — Mateus 1</a>
-              <a class="btn btn-secondary" href="#busca">🔍 Buscar Conteúdo</a>
-              <a class="btn btn-secondary" href="/estudos/">📚 Área de Estudos</a>
-              <a class="btn btn-secondary" href="/como-estudar/index.html">📚 Como Estudar</a>
-            </div>
-            <p class="mini-info">Comece pelo princípio, avance com ordem e cresça com entendimento.</p>
+    <!-- HERO: busca em destaque + continuar de onde parou -->
+    <section class="section hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">📖 Projeto bíblico estruturado para 365 dias</div>
+          <h1>Uma jornada de <span class="grad">transformação espiritual</span> da Criação ao Apocalipse</h1>
+          <p class="lead">Estude a Bíblia com profundidade, reverência e clareza. Um caminho organizado com leitura, contexto histórico, reflexão teológica e aplicação prática para edificar a fé no presente.</p>
+
+          <div class="hero-search" id="busca">
+            <h2 class="kicker">Busque um capítulo, tema ou livro</h2>
+            <form class="search" action="/busca/index.html" method="get" role="search">
+              <input type="search" name="q" placeholder="Ex.: Gênesis 1, Sermão do Monte, graça, oração..." aria-label="Buscar conteúdo bíblico">
+              <button class="btn btn-primary" type="submit">Buscar</button>
+            </form>
+            <p class="hint">Encontre conteúdos com mais rapidez e siga a jornada com melhor organização.</p>
           </div>
 
-          <aside class="hero-card">
-            <h2>Seu progresso espiritual começa hoje</h2>
-            <p class="mini-info">Acompanhe sua jornada pelos 260 capítulos do NT:</p>
-            <div class="progress-line">
-              <div class="progress-fill" id="progress-bar"></div>
-            </div>
-            <p><strong id="progress-label">Dia 1 de 260</strong></p>
-            <p class="mini-info" style="margin-top:8px;">Inicie por Mateus 1, avance com constância e retorne diariamente para continuar.</p>
-            <div style="margin-top:18px;">
-              <a class="btn btn-primary" href="/08-novo-testamento/mateus/capitulos/capitulo-01.html" style="width:100%;justify-content:center;">▶ Continuar leitura</a>
-            </div>
-          </aside>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="/08-novo-testamento/mateus/capitulos/capitulo-01.html">📖 Começar Dia 1 — Mateus 1</a>
+            <a class="btn btn-ghost" href="#busca">🔍 Buscar Conteúdo</a>
+            <a class="btn btn-ghost" href="/estudos/">📚 Área de Estudos</a>
+            <a class="btn btn-ghost" href="/como-estudar/index.html">📚 Como Estudar</a>
+          </div>
+          <p class="lead" style="margin-top:14px;font-size:14px">Comece pelo princípio, avance com ordem e cresça com entendimento.</p>
+
+          <div class="stat-bar" aria-label="Indicadores do projeto">
+            <div><strong>66</strong><span>Livros canônicos</span></div>
+            <div><strong>1.189</strong><span>Capítulos bíblicos</span></div>
+            <div><strong>+2.900</strong><span>Páginas em português</span></div>
+            <div><strong>3</strong><span>Idiomas disponíveis</span></div>
+          </div>
+        </div>
+
+        <aside class="resume" aria-labelledby="resume-title">
+          <span class="kicker">Continue de onde parou</span>
+          <h2 id="resume-title">Seu progresso espiritual começa hoje</h2>
+          <p class="resume-where" id="resume-where">Mateus 1</p>
+          <p class="resume-hint">Acompanhe sua jornada pelos 260 capítulos do NT:</p>
+          <p class="resume-hint" id="resume-hint">Inicie por Mateus 1, avance com constância e retorne diariamente para continuar.</p>
+          <div class="progress" role="progressbar" aria-label="Progresso nos 260 capítulos do NT" aria-valuemin="0" aria-valuemax="260" aria-valuenow="1" id="resume-bar">
+            <div class="progress-fill" id="resume-fill"></div>
+          </div>
+          <div class="progress-meta"><span id="resume-day">Dia 1 de 260</span><span id="resume-pct">0%</span></div>
+          <a class="btn btn-primary" id="resume-btn" href="/08-novo-testamento/mateus/capitulos/capitulo-01.html">▶ Continuar leitura</a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ENTRADAS GRANDES (textos do protótipo aprovado) -->
+    <section class="section" aria-labelledby="explorar-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Explorar</span>
+          <h2 id="explorar-title">Da Criação ao Apocalipse</h2>
+        </div>
+        <div class="entries">
+          <a class="entry entry-lg entry-at" href="/antigo-testamento/">
+            <div><span class="kicker">Antigo Testamento</span><h3>Antigo Testamento</h3><p>Pentateuco, Históricos, Poéticos e Profetas</p></div>
+            <span class="link-arrow">Explorar →</span>
+          </a>
+          <a class="entry entry-lg entry-nt" href="/08-novo-testamento/">
+            <div><span class="kicker">Novo Testamento</span><h3>Novo Testamento</h3><p>Evangelhos, Atos, Epístolas, Apocalipse</p></div>
+            <span class="link-arrow">Explorar →</span>
+          </a>
+          <a class="entry" href="/estudos/">
+            <div><h3>Estudos</h3><p>Área temática com estudos bíblicos por assunto para aprofundamento espiritual, histórico e prático.</p></div>
+            <span class="link-arrow">Explorar →</span>
+          </a>
+          <a class="entry" href="/estudos/index.html#fontes-historicas">
+            <div><h3>Fontes Históricas</h3><p>Apócrifos e Deuterocanônicos · Período Intertestamentário</p></div>
+            <span class="link-arrow">Explorar →</span>
+          </a>
+          <a class="entry" href="/personagens/index.html">
+            <div><h3>Personagens</h3><p>Conheça os principais personagens bíblicos: Moisés, Abraão, Davi, Salomão, Paulo, Pedro, Maria e outros.</p></div>
+            <span class="link-arrow">Explorar →</span>
+          </a>
+          <a class="entry" href="/mapas/index.html">
+            <div><h3>Mapas</h3><p>Geografia bíblica, rotas de Paulo, Cruzadas</p></div>
+            <span class="link-arrow">Explorar →</span>
+          </a>
+          <a class="entry" href="/timeline/index.html">
+            <div><h3>Linha do Tempo</h3><p>Da Criação ao Apocalipse — cronologia completa</p></div>
+            <span class="link-arrow">Explorar →</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="stats" aria-label="Indicadores do projeto">
-      <div class="container">
-        <div class="stats-grid">
-          <div class="stat-card"><strong>66</strong><span>Livros canônicos</span></div>
-          <div class="stat-card"><strong>1.189</strong><span>Capítulos bíblicos</span></div>
-          <div class="stat-card"><strong>3.374</strong><span>Páginas de estudo</span></div>
-          <div class="stat-card"><strong>3</strong><span>Idiomas disponíveis</span></div>
+    <!-- POR ONDE COMEÇAR -->
+    <section class="section" id="jornada" aria-labelledby="comecar-title">
+      <div class="wrap start-band">
+        <div class="start-head">
+          <div>
+            <span class="kicker">Por onde começar</span>
+            <h2 id="comecar-title">Comece hoje. Um capítulo por dia.</h2>
+            <p>Não é necessário ter formação teológica. Basta disposição para ler, refletir e crescer. A jornada de 365 dias começa com um único passo — o primeiro capítulo.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="/08-novo-testamento/mateus/capitulos/capitulo-01.html">📖 Começar agora — Mateus 1</a>
+            <a class="btn btn-ghost" href="/01-principio/index.html">🌍 Começar pelo Gênesis</a>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section id="busca">
-      <div class="container">
-        <h2 class="section-title">Busque um capítulo, tema ou livro</h2>
-        <p class="section-subtitle">Encontre conteúdos com mais rapidez e siga a jornada com melhor organização.</p>
-        <div class="search-box">
-          <form action="/busca/index.html" method="get">
-            <div class="search-row">
-              <input type="search" name="q" placeholder="Ex.: Gênesis 1, Sermão do Monte, graça, oração..." aria-label="Buscar conteúdo bíblico" />
-              <button type="submit">Buscar</button>
-            </div>
-          </form>
-          <div class="quick-links">
+        <h3>Como funciona a jornada 365</h3>
+        <p class="section-sub">O projeto foi pensado para conduzir o leitor com ordem, profundidade e constância, sem superficialidade e sem pressa.</p>
+        <ol class="steps" role="list">
+          <li class="step"><span class="num">1</span><h3>Leia com atenção</h3><p>O texto bíblico é a base. O estudo parte da Escritura e não de opiniões soltas.</p></li>
+          <li class="step"><span class="num">2</span><h3>Entenda o contexto</h3><p>Veja cenário histórico, geográfico, literário e espiritual de cada passagem.</p></li>
+          <li class="step"><span class="num">3</span><h3>Reflita com profundidade</h3><p>Questões teológicas e perguntas introspectivas ajudam a confrontar o presente.</p></li>
+          <li class="step"><span class="num">4</span><h3>Aplique à vida</h3><p>O objetivo não é apenas ler mais, mas viver melhor diante de Deus.</p></li>
+        </ol>
+        <div class="filter" style="margin:24px 0 0">
             <a href="/01-principio/index.html">Começar em Gênesis</a>
             <a href="/08-novo-testamento/mateus/index.html">Evangelho de Mateus</a>
             <a href="/08-novo-testamento/joao/index.html">Evangelho de João</a>
@@ -274,50 +163,27 @@
             <a href="/08-novo-testamento/apocalipse/index.html">Apocalipse</a>
             <a href="/personagens/index.html">Personagens Bíblicos</a>
             <a href="/mapas/index.html">Mapas</a>
-          </div>
         </div>
-      </div>
-    </section>
-
-    <section id="jornada">
-      <div class="container">
-        <h2 class="section-title">Como funciona a jornada 365</h2>
-        <p class="section-subtitle">O projeto foi pensado para conduzir o leitor com ordem, profundidade e constância, sem superficialidade e sem pressa.</p>
-        <div class="two-col">
-          <div class="steps">
-            <div class="step">
-              <div class="step-number">1</div>
-              <div><h3>Leia com atenção</h3><p>O texto bíblico é a base. O estudo parte da Escritura e não de opiniões soltas.</p></div>
-            </div>
-            <div class="step">
-              <div class="step-number">2</div>
-              <div><h3>Entenda o contexto</h3><p>Veja cenário histórico, geográfico, literário e espiritual de cada passagem.</p></div>
-            </div>
-            <div class="step">
-              <div class="step-number">3</div>
-              <div><h3>Reflita com profundidade</h3><p>Questões teológicas e perguntas introspectivas ajudam a confrontar o presente.</p></div>
-            </div>
-            <div class="step">
-              <div class="step-number">4</div>
-              <div><h3>Aplique à vida</h3><p>O objetivo não é apenas ler mais, mas viver melhor diante de Deus.</p></div>
-            </div>
-          </div>
-          <div class="card">
+        <div class="card about-card">
+          <div>
             <div class="card-icon">📖</div>
             <h3>Um projeto para leitura contínua e transformação</h3>
             <p>O 365 Graça &amp; Adoração nasce com o propósito de oferecer um caminho sólido de estudo bíblico, acessível ao leitor comum e sério o suficiente para quem deseja se aprofundar com reverência, disciplina e visão teológica.</p>
             <p style="margin-top:10px;">Cada capítulo do Novo Testamento é estudado versículo por versículo com análise exegética, vocabulário grego original e aplicação prática — totalizando 260 capítulos aprofundados.</p>
-            <a href="/sobre/index.html" style="display:inline-block;margin-top:12px;color:#fde68a;font-weight:bold;">Ler apresentação completa →</a>
           </div>
+          <a class="link-arrow" href="/sobre/index.html">Ler apresentação completa →</a>
         </div>
       </div>
     </section>
 
-    <section id="blocos">
-      <div class="container">
-        <h2 class="section-title">13 Blocos da Jornada</h2>
-        <p class="section-subtitle">Uma caminhada bíblica estruturada com progressão histórica e coerência teológica — da Criação ao Apocalipse. <a href="/blocos/" style="color:#f5c542;font-weight:bold;">Ver estrutura completa →</a></p>
-        <div class="cards-grid">
+    <!-- 13 BLOCOS (cartões literais da home atual) -->
+    <section class="section" id="blocos" aria-labelledby="blocos-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="blocos-title">A Jornada</h2>
+          <p class="section-sub">Uma caminhada bíblica estruturada com progressão histórica e coerência teológica — da Criação ao Apocalipse. <a href="/blocos/" style="color:#f5c542;font-weight:bold;">Ver estrutura completa →</a></p>
+        </div>
+        <div class="grid grid-4 jornada-cards">
 
           <article class="card">
             <div class="card-icon">🌍</div>
@@ -407,76 +273,67 @@
       </div>
     </section>
 
-    <section id="idiomas">
-      <div class="container">
-        <h2 class="section-title">Disponível em 3 idiomas</h2>
-        <p class="section-subtitle">Todos os 260 capítulos do Novo Testamento traduzidos com exegese completa.</p>
-        <div class="translation-grid">
-          <div class="translation-card">
+    <!-- IDIOMAS -->
+    <section class="section" id="idiomas" aria-labelledby="idiomas-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Idiomas</span>
+          <h2 id="idiomas-title">Disponível em 3 idiomas</h2>
+          <p>Todos os 260 capítulos do Novo Testamento traduzidos com exegese completa.</p>
+        </div>
+        <div class="grid grid-3">
+          <a class="card lang-card" href="/" lang="pt-BR">
             <h3>🇧🇷 Português</h3>
             <p>Versão original com análise exegética completa, vocabulário grego e aplicação prática.</p>
-            <a href="/">Acessar em Português</a>
-          </div>
-          <div class="translation-card">
+            <span class="link-arrow">Acessar em Português</span>
+          </a>
+          <a class="card lang-card" href="/en/" lang="en">
             <h3>🇺🇸 English</h3>
             <p>Full exegetical study of all 260 NT chapters in English with ESV references.</p>
-            <a href="/en/">Access in English</a>
-          </div>
-          <div class="translation-card">
+            <span class="link-arrow">Access in English</span>
+          </a>
+          <a class="card lang-card" href="/es/" lang="es">
             <h3>🇪🇸 Español</h3>
             <p>Estudio exegético completo de los 260 capítulos del NT en español con RVR60.</p>
-            <a href="/es/">Acceder en Español</a>
-          </div>
+            <span class="link-arrow">Acceder en Español</span>
+          </a>
         </div>
       </div>
     </section>
-
-    <section>
-      <div class="container">
-        <div class="cta-section">
-          <h2>Comece hoje. Um capítulo por dia.</h2>
-          <p>Não é necessário ter formação teológica. Basta disposição para ler, refletir e crescer. A jornada de 365 dias começa com um único passo — o primeiro capítulo.</p>
-          <div class="cta-btns">
-            <a class="btn btn-primary" href="/08-novo-testamento/mateus/capitulos/capitulo-01.html">📖 Começar agora — Mateus 1</a>
-            <a class="btn btn-secondary" href="/01-principio/index.html">🌍 Começar pelo Gênesis</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <footer>
-    <div class="container">
+  <footer class="site-footer">
+    <div class="wrap">
       <div class="footer-grid">
         <div>
           <h3>365 Graça &amp; Adoração</h3>
-          <p style="color:var(--muted);font-size:0.93rem;margin-bottom:12px;">Um projeto de estudo bíblico gratuito, estruturado e profundo — da Criação ao Apocalipse.</p>
-          <p style="color:#64748b;font-size:0.86rem;">© 2026 · Conteúdo gratuito para edificação da fé</p>
+          <p>Um projeto de estudo bíblico gratuito, estruturado e profundo — da Criação ao Apocalipse.</p>
+          <p>© 2026 · Conteúdo gratuito para edificação da fé</p>
         </div>
         <div>
           <h3>Navegação</h3>
+          <div class="footer-links">
           <a href="/01-principio/index.html">O Princípio</a>
           <a href="/02-pentateuco/index.html">Pentateuco</a>
           <a href="/08-novo-testamento/index.html">Novo Testamento</a>
           <a href="/personagens/index.html">Personagens</a>
           <a href="/mapas/index.html">Mapas</a>
           <a href="/timeline/index.html">Linha do Tempo</a>
+          </div>
         </div>
         <div>
           <h3>NT Destaque</h3>
+          <div class="footer-links">
           <a href="/08-novo-testamento/mateus/capitulos/capitulo-01.html">Mateus 1</a>
           <a href="/08-novo-testamento/joao/capitulos/capitulo-01.html">João 1</a>
           <a href="/08-novo-testamento/romanos/capitulos/capitulo-08.html">Romanos 8</a>
           <a href="/08-novo-testamento/efesios/capitulos/capitulo-02.html">Efésios 2</a>
           <a href="/08-novo-testamento/hebreus/capitulos/capitulo-11.html">Hebreus 11</a>
           <a href="/08-novo-testamento/apocalipse/capitulos/capitulo-22.html">Apocalipse 22</a>
+          </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        Feito com fé · Gratuito para sempre ·
-        <a href="/sobre/index.html" style="color:#60a5fa;">Sobre o projeto</a>
-      </div>
+      <div class="footer-bottom">Feito com fé · Gratuito para sempre · <a href="/sobre/index.html">Sobre o projeto</a></div>
     </div>
   </footer>
 
@@ -493,16 +350,22 @@
   <!-- WhatsApp -->
   <a href="https://wa.me/?text=Estou%20estudando%20a%20B%C3%ADblia%20no%20365%20de%20Gra%C3%A7a%20%26%20Adora%C3%A7%C3%A3o%3A%20https%3A%2F%2F365gracaeadoracao.com" target="_blank" title="Compartilhar no WhatsApp" style="position:fixed;bottom:20px;right:16px;z-index:9998;background:#25d366;border-radius:50%;width:50px;height:50px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 15px rgba(37,211,102,0.5);text-decoration:none;font-size:1.5rem;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1)'">📲</a>
 
-  <!-- Progresso -->
+  <!-- Progresso: "Continue de onde parou" lê o progresso gravado por site-nav.js.
+       Sem dados (primeira visita, aba anônima, armazenamento bloqueado), o cartão
+       fica no estado inicial: Mateus 1, Dia 1 de 260. -->
   <script>
-  (function(){
-    var total=260, cur=parseInt(localStorage.getItem('365-progress')||'1');
-    var pct=Math.min(Math.round((cur/total)*100),100);
-    var bar=document.getElementById('progress-bar');
-    var lbl=document.getElementById('progress-label');
-    if(bar) bar.style.width=Math.max(pct,2)+'%';
-    if(lbl) lbl.textContent='Dia '+cur+' de '+total;
-  })();
+    document.addEventListener('DOMContentLoaded', function () {
+      var S = window.Site365; if (!S) return;
+      var p = null; try { p = S.getProgress(); } catch (e) {}
+      if (!p) return;
+      document.getElementById('resume-where').textContent = p.book + ' ' + p.ch;
+      document.getElementById('resume-hint').textContent = 'Último capítulo aberto';
+      document.getElementById('resume-day').textContent = 'Dia ' + p.day + ' de ' + p.total;
+      document.getElementById('resume-pct').textContent = p.pct + '%';
+      document.getElementById('resume-fill').style.width = Math.max(p.pct, 2) + '%';
+      document.getElementById('resume-bar').setAttribute('aria-valuenow', p.day);
+      document.getElementById('resume-btn').href = p.url;
+    });
   </script>
 
 </body>
