@@ -115,9 +115,9 @@ Nada vai à `main` sem ordem explícita do Wagner. Marcar cada item antes de abr
 - [ ] Decidir: botão "Começar Dia 1 ›" só na home e nos hubs (como está) ou em todas as páginas.
 
 **B. Validação final (na branch, servidor local)**
-- [ ] Varredura de links internos de todas as páginas PT (nenhum 404 novo).
-- [ ] Amostra visual (skill `validacao-visual`): home, hubs, 1 página de cada etapa, 1280/768/390px, claro e escuro.
-- [ ] `git status` limpo; nenhum `_backups/*.zip` em commit; `redesign/` fora do deploy (`pages.yml`).
+- [x] Varredura de links internos de todas as páginas PT (nenhum 404 novo): 2.943 páginas, 57.119 links; 0 quebrados novos em relação à `main` (os 1.325 pares quebrados são todos antigos, 1.196 deles `/styles.css`). Menu, trilha de 260 capítulos e "Começar Dia 1" conferidos (07/10).
+- [x] Amostra visual (skill `validacao-visual`): home, hubs, 1 página de cada etapa, 1280/768/390px, claro e escuro. Feita em 07/10 (home, hubs AT/NT, Gênesis, Romanos, estudo, Apócrifos, busca); só problemas antigos (ver Limpeza prioritária).
+- [x] `git status` limpo; nenhum `_backups/*.zip` em commit; `redesign/` fora do deploy (`pages.yml`). Conferido em 07/10; nenhuma página publicada referencia `/redesign/`.
 
 **C. GitHub (Settings, feito pelo Wagner)**
 - [ ] Branch padrão do repositório: `(root)` → `main`.
@@ -197,6 +197,9 @@ Estas páginas **não devem ser alteradas** até decisão do Wagner. Todas ficar
 | `02-pentateuco/genesis/estudos/pasted_file_FffSUA_image.html`, `pasted_file_V6Gujv_image.html`, `pasted_file_aNGcVD_image.html`, `pasted_file_llU4dO_image.html`, `pasted_file_roMaD4_image.html` (5) | Arquivos de imagem colados por engano e embrulhados no modelo de página: cabeçalho HTML normal (com `canonical` e AdSense) seguido de dados binários com 1.054 a 1.185 bytes nulos cada. Título = nome do arquivo (o de `roMaD4` saiu ilegível). O git as trata como binárias (diff não aparece). Publicadas no site, fora do `sitemap.xml`. Receberam o menu central e a troca do link do AT com prova byte a byte (registrado em 07/10/2026). |
 | `08-novo-testamento/index.html` (canonical) | O canonical é `https://365gracaeadoracao.com/08-novo-testamento/index` (sem `.html`), mas o `sitemap.xml` lista `/08-novo-testamento/index.html`. Alinhar os dois na etapa de SEO (registrado em 07/10/2026). |
 | `sitemap.xml` (`lastmod` e cabeçalho) | Os `lastmod` das páginas alteradas no redesign continuam em 2026-05-26, e o comentário do topo diz "Gerado em 2026-05-26 · Total de páginas: 4151" (são 4.152 desde 07/10). Atualizar na etapa de SEO (registrado em 07/10/2026). |
+| `06-apocrifos/index.html`, `busca/index.html` | Rolagem horizontal a 390px: Apócrifos passa 6px; Busca passa 31px (grade `.indice-item` com 2 colunas de 180px). Iguais na `main` (não causadas pelo redesign). Corrigir por CSS depois (registrado em 07/10/2026). |
+| `estudos/` e subpáginas | Sem o botão de modo claro (`#dark-toggle`): o modo claro escolhido no resto do site não se aplica nessas páginas (registrado em 07/10/2026). |
+| Textos para decisão do Wagner (**não alterar**) | `busca/index.html` mostra "1.627+ Páginas no projeto", enquanto a home diz "+2.900 Páginas em português". O rodapé dos estudos diz "compatíveis com Vercel" (o site está no GitHub Pages). Registrado em 07/10/2026. |
 | `timeline-component.html`, `timeline-genesis-1.html` (raiz) | Fragmentos sem `<html>`/`<body>`, publicados como páginas. |
 | `og:image`/`twitter:image` em 2.825 páginas | Apontam para `assets/img/og-cover.jpg`, que **não existe** (404 no site no ar): compartilhamentos saem sem imagem. O arquivo existente é `assets/img/og-image.png`. |
 | `03-historicos/juizes/index.html` (e provavelmente os outros 9 livros com `main.wrap`: 1–2 Samuel, 1–2 Reis, 1–2 Crônicas, Esdras, Neemias, Ester) | Faixa de números ("21 Capítulos · 618 Versículos · ~1380–1050 a.C. · 12 Juízes Principais") sem estilo, um item por linha; selo, título e subtítulo deslocados para a esquerda no cartão de abertura. Já existia antes da capa 3D (registrado em 06/10/2026). Tratar numa etapa própria, depois do lote da capa. |
