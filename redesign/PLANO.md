@@ -120,9 +120,9 @@ Nada vai à `main` sem ordem explícita do Wagner. Marcar cada item antes de abr
 - [x] `git status` limpo; nenhum `_backups/*.zip` em commit; `redesign/` fora do deploy (`pages.yml`). Conferido em 07/10; nenhuma página publicada referencia `/redesign/`.
 
 **C. GitHub (Settings, feito pelo Wagner)**
-- [ ] Branch padrão do repositório: `(root)` → `main`.
-- [ ] Pages › Source: "Deploy from a branch" (`(root)`) → **"GitHub Actions"**.
-- [ ] Conferir que o ambiente `github-pages` continua aceitando deploy só da `main`.
+- [x] Branch padrão do repositório: `(root)` → `main`. Feito pelo Wagner; conferido em 07/10 (`default_branch = main`). A antiga `(root)` aparece agora como `(main)` (mesmo commit `501c8730`).
+- [x] Pages › Source: "Deploy from a branch" (`(root)`) → **"GitHub Actions"**. Conferido em 07/10 (`build_type = workflow`).
+- [x] Conferir que o ambiente `github-pages` continua aceitando deploy só da `main`. Conferido em 07/10 (política de branch: só `main`).
 
 **D. Merge**
 - [ ] Antes do merge: marcar o estado atual da `main` com uma tag (`git tag pre-redesign ec2c3181` e `git push origin pre-redesign`).
