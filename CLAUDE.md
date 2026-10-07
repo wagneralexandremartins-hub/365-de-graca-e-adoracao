@@ -8,4 +8,8 @@
 - Preservar todas as URLs e páginas existentes; não apagar nem mover páginas.
 - Responder em português do Brasil, de forma direta.
 
-Detalhes e procedimentos: skills em `.claude/skills/` — `regras-365`, `menu-central`, `validacao-visual` e `carta-paulina`.
+Detalhes e procedimentos: skills em `.claude/skills/` — `regras-365`, `menu-central`, `validacao-visual` e `carta-paulina`, e:
+- `capa-3d-livro` — capa 3D nas páginas de abertura dos livros.
+- `hub-testamento` — hubs AT/NT e home no layout novo.
+- `merge-deploy` — PR, merge na `main`, deploy e reversão.
+- `seo-limpeza` — itens da "Limpeza prioritária" e varredura de links.
