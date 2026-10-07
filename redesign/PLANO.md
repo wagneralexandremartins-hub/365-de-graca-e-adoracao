@@ -108,7 +108,7 @@ Observação: `02-pentateuco/genesis/estudos/genesis-20.html` cita "(Gênesis 20
 Nada vai à `main` sem ordem explícita do Wagner. Marcar cada item antes de abrir o PR.
 
 **A. Pendências de conteúdo e navegação (na branch)**
-- [ ] Trocar o link do AT para `/antigo-testamento/` nas 2.888 páginas, no `site-nav.js` e no `aplicar_menu_central.py` (script `trocar_link_at.py`, dry-run aprovado → apply → commit separado).
+- [x] Trocar o link do AT para `/antigo-testamento/` nas 2.888 páginas, no `site-nav.js` e no `aplicar_menu_central.py` (`scripts/trocar_link_at.py`; commits `a1592ef9` e `32f4e237`, push em 07/10; prova byte a byte 2.888/2.888).
 - [ ] Hub do NT real (`08-novo-testamento/index.html`): manter o `<head>`, trocar só o corpo pelo layout do protótipo; prova de textos idênticos.
 - [ ] Home real (`index.html`): manter o `<head>` (title, description, OG, JSON-LD, AdSense), trocar o corpo; links `/redesign/…` → endereços finais.
 - [ ] `sitemap.xml`: incluir `/antigo-testamento/`.
@@ -194,6 +194,7 @@ Estas páginas **não devem ser alteradas** até decisão do Wagner. Todas ficar
 | `genesis/genesis-12.html` a `genesis/genesis-50.html` (39) | Conteúdo mínimo (~700 bytes: título + "Conteúdo completo do capítulo N…") com `canonical` e anúncio do AdSense. Conteúdo raso indexado: risco de SEO e de política do AdSense. |
 | `busca/index_backup.html` | Cópia de backup da busca, **publicada no site** (o deploy não exclui `*_backup.html`). |
 | `02-pentateuco/genesis/estudos/pasted_content.html` | Nome de arquivo colado por engano; dois `<title>` ("pasted_content" e "Projeto 365"). |
+| `02-pentateuco/genesis/estudos/pasted_file_FffSUA_image.html`, `pasted_file_V6Gujv_image.html`, `pasted_file_aNGcVD_image.html`, `pasted_file_llU4dO_image.html`, `pasted_file_roMaD4_image.html` (5) | Arquivos de imagem colados por engano e embrulhados no modelo de página: cabeçalho HTML normal (com `canonical` e AdSense) seguido de dados binários com 1.054 a 1.185 bytes nulos cada. Título = nome do arquivo (o de `roMaD4` saiu ilegível). O git as trata como binárias (diff não aparece). Publicadas no site, fora do `sitemap.xml`. Receberam o menu central e a troca do link do AT com prova byte a byte (registrado em 07/10/2026). |
 | `timeline-component.html`, `timeline-genesis-1.html` (raiz) | Fragmentos sem `<html>`/`<body>`, publicados como páginas. |
 | `og:image`/`twitter:image` em 2.825 páginas | Apontam para `assets/img/og-cover.jpg`, que **não existe** (404 no site no ar): compartilhamentos saem sem imagem. O arquivo existente é `assets/img/og-image.png`. |
 | `03-historicos/juizes/index.html` (e provavelmente os outros 9 livros com `main.wrap`: 1–2 Samuel, 1–2 Reis, 1–2 Crônicas, Esdras, Neemias, Ester) | Faixa de números ("21 Capítulos · 618 Versículos · ~1380–1050 a.C. · 12 Juízes Principais") sem estilo, um item por linha; selo, título e subtítulo deslocados para a esquerda no cartão de abertura. Já existia antes da capa 3D (registrado em 06/10/2026). Tratar numa etapa própria, depois do lote da capa. |
