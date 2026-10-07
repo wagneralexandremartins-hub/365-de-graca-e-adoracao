@@ -112,7 +112,7 @@ Nada vai à `main` sem ordem explícita do Wagner. Marcar cada item antes de abr
 - [x] Hub do NT real (`08-novo-testamento/index.html`): mesma estrutura do hub do AT, `<head>` mantido (só os estilos antigos trocados por `site.css`), faixa `context-nav` removida só nesta página; prova de textos idênticos (commit `36cdb569`, 07/10).
 - [x] Home real (`index.html`): `<head>` mantido (só o `<style>` antigo trocado por `site.css`), corpo no layout do protótipo, links finais `/antigo-testamento/` e `/08-novo-testamento/`; "A Jornada" e "+2.900 Páginas em português" por decisão do Wagner (commit `7ee6ed59`, 07/10). Sem `index-anterior.html`. favicon, og-image e og-cover ficam para uma etapa própria no site inteiro.
 - [x] `sitemap.xml`: incluir `/antigo-testamento/` (commit `064bb6f7`, 07/10; o hub do NT já constava como `/08-novo-testamento/index.html`).
-- [ ] Decidir: botão "Começar Dia 1 ›" só na home e nos hubs (como está) ou em todas as páginas.
+- [x] Decidir: botão "Começar Dia 1 ›" só na home e nos hubs (como está) ou em todas as páginas. Resolvido pelo Wagner: fica só na home e nos hubs.
 
 **B. Validação final (na branch, servidor local)**
 - [x] Varredura de links internos de todas as páginas PT (nenhum 404 novo): 2.943 páginas, 57.119 links; 0 quebrados novos em relação à `main` (os 1.325 pares quebrados são todos antigos, 1.196 deles `/styles.css`). Menu, trilha de 260 capítulos e "Começar Dia 1" conferidos (07/10).
@@ -154,25 +154,24 @@ O site é estático e o deploy publica a `main`. Reverter = devolver a `main` ao
 6. Se a fonte do Pages tiver sido trocada para "GitHub Actions" e isso for a causa do problema, voltar em Settings › Pages (isso independe do revert do código).
 7. Correção pontual de página: os zips em `_backups/` (só na máquina local) guardam cada página como estava antes de cada etapa.
 
-## Estado em 06/10 (fim do dia)
+## Estado em 07/10 (fim do dia)
 
-**Feito**
-- Capa 3D aplicada nas páginas de abertura de **17 livros**: Pentateuco (5) + Históricos canônicos (12: Josué, Juízes, Rute, 1–2 Samuel, 1–2 Reis, 1–2 Crônicas, Esdras, Neemias, Ester). Capítulos da capa vindos do cânon. Tobias, Judite e 1–2 Macabeus ficaram fora (duplicados em `03-historicos` e `06-apocrifos`, decisão pendente).
-- CSS em `assets/css/capa-livro.css` (tudo preso à capa: coluna de leitura, grades do Êxodo, título do Deuteronômio no celular); script `scripts/aplicar_capa3d.py` (dry-run, `--apply`, `--only`, bloco `<!-- capa3d:v1 -->`, prova byte a byte).
-- Validação: 17/17 sem rolagem horizontal em 1280/768/390/360, escuro e claro; desktop inalterado.
-- Commits: `3e602f64` (protótipo + CSS), `f63a6912` (piloto Gênesis + script), `c8bcca86` (notas de limpeza), `83713f7d` (lote de 16), `23969271` (Deuteronômio), `66685bd5` (Êxodo/Deuteronômio resolvidos).
-- **Push da branch** `redesign/navegacao-awexpress` em `66685bd5`. **`main` intacta em `ec2c3181`**; `(root)` não tocada; nenhum deploy disparado.
+**Redesign no ar.** PR #1 (`redesign/navegacao-awexpress` → `main`) mesclado com merge commit **`6101ab89`** em 07/10/2026 às 18h26; workflow "Deploy GitHub Pages" com sucesso, site publicado às 18h27.
+- `main` (GitHub): `6101ab89`.
+- Branch `redesign/navegacao-awexpress`: `d32764b3` no GitHub ao fim de 07/10 (antes deste registro).
+- Tag `pre-redesign`: `ec2c3181` (a `main` anterior ao redesign; ponto de volta).
+- No ar: menu central em ~2.940 páginas PT, hubs `/antigo-testamento/` e `/08-novo-testamento/`, nova home, capa 3D em 44 livros (17 AT + 27 NT), `sitemap.xml` com `/antigo-testamento/`.
 
-**Pendências**
-1. Opcional: capa em mais 2 livros (sugestão: Salmos e um Evangelho), com o mesmo procedimento (dry-run, confirmação, validação, commit separado).
-2. Faixa de números desalinhada em Juízes e provavelmente nos outros 9 livros `main.wrap` (ver Limpeza prioritária).
-3. Modo claro de Rute e Josué (cartão de introdução e faixas coloridas mudam de tom pela inversão global).
-4. Checklist do merge (seção "Checklist final do merge na `main`"):
-   - **Wagner, no GitHub:** trocar a branch padrão para `main` e o Pages para "GitHub Actions". Conferido em 06/10: a branch padrão ainda é `(root)` e o Pages ainda é *legacy* apontando para `(root)`.
-   - Troca do link do AT em 2.888 páginas (script `trocar_link_at.py`, dry-run OK, não aplicado).
-   - Hub do NT e home reais.
-   - PR da branch para `main` (não para `(root)`).
-   - Merge **só com OK explícito do Wagner**.
+## Próximos passos
+
+1. Acompanhar Search Console (erros de cobertura) e AdSense (anúncios aparecendo) a partir de 08/10.
+2. Limpeza de SEO: favicon, og-image/og-cover, canonical do NT, `lastmod` do sitemap e páginas `genesis/genesis-NN` (ver Limpeza prioritária).
+3. Capas 3D dos Poéticos, Profetas e deuterocanônicos (mesmo procedimento da skill `capa-3d-livro`).
+4. CSS: faixa de números dos livros `main.wrap`; Apócrifos e Busca no celular (rolagem a 390px).
+5. Textos para decisão do Wagner: "1.627+ Páginas no projeto" na busca e "compatíveis com Vercel" no rodapé dos estudos.
+6. Duplicatas Tobias, Judite e 1–2 Macabeus (`03-historicos` × `06-apocrifos`).
+7. Branches `(main)` e `(root)`: a antiga `(root)` aparece no GitHub como `(main)` (`501c8730`); decidir renomear ou apagar.
+8. EN/ES (etapa 7), só após aprovação.
 
 ## Tarefa de amanhã (06/10/2026): capa 3D de livro
 
@@ -200,6 +199,7 @@ Estas páginas **não devem ser alteradas** até decisão do Wagner. Todas ficar
 | `06-apocrifos/index.html`, `busca/index.html` | Rolagem horizontal a 390px: Apócrifos passa 6px; Busca passa 31px (grade `.indice-item` com 2 colunas de 180px). Iguais na `main` (não causadas pelo redesign). Corrigir por CSS depois (registrado em 07/10/2026). |
 | `estudos/` e subpáginas | Sem o botão de modo claro (`#dark-toggle`): o modo claro escolhido no resto do site não se aplica nessas páginas (registrado em 07/10/2026). |
 | Textos para decisão do Wagner (**não alterar**) | `busca/index.html` mostra "1.627+ Páginas no projeto", enquanto a home diz "+2.900 Páginas em português". O rodapé dos estudos diz "compatíveis com Vercel" (o site está no GitHub Pages). Registrado em 07/10/2026. |
+| `assets/img/favicon.png` | Referenciado e inexistente (404) em `index.html`, `blocos/index.html` e `politica-de-privacidade.html`. Corrigir na etapa de SEO, junto com og-image/og-cover (registrado em 07/10/2026). |
 | `timeline-component.html`, `timeline-genesis-1.html` (raiz) | Fragmentos sem `<html>`/`<body>`, publicados como páginas. |
 | `og:image`/`twitter:image` em 2.825 páginas | Apontam para `assets/img/og-cover.jpg`, que **não existe** (404 no site no ar): compartilhamentos saem sem imagem. O arquivo existente é `assets/img/og-image.png`. |
 | `03-historicos/juizes/index.html` (e provavelmente os outros 9 livros com `main.wrap`: 1–2 Samuel, 1–2 Reis, 1–2 Crônicas, Esdras, Neemias, Ester) | Faixa de números ("21 Capítulos · 618 Versículos · ~1380–1050 a.C. · 12 Juízes Principais") sem estilo, um item por linha; selo, título e subtítulo deslocados para a esquerda no cartão de abertura. Já existia antes da capa 3D (registrado em 06/10/2026). Tratar numa etapa própria, depois do lote da capa. |
