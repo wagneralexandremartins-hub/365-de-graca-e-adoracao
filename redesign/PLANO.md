@@ -109,7 +109,7 @@ Nada vai à `main` sem ordem explícita do Wagner. Marcar cada item antes de abr
 
 **A. Pendências de conteúdo e navegação (na branch)**
 - [x] Trocar o link do AT para `/antigo-testamento/` nas 2.888 páginas, no `site-nav.js` e no `aplicar_menu_central.py` (`scripts/trocar_link_at.py`; commits `a1592ef9` e `32f4e237`, push em 07/10; prova byte a byte 2.888/2.888).
-- [ ] Hub do NT real (`08-novo-testamento/index.html`): manter o `<head>`, trocar só o corpo pelo layout do protótipo; prova de textos idênticos.
+- [x] Hub do NT real (`08-novo-testamento/index.html`): mesma estrutura do hub do AT, `<head>` mantido (só os estilos antigos trocados por `site.css`), faixa `context-nav` removida só nesta página; prova de textos idênticos (commit `36cdb569`, 07/10).
 - [ ] Home real (`index.html`): manter o `<head>` (title, description, OG, JSON-LD, AdSense), trocar o corpo; links `/redesign/…` → endereços finais.
 - [ ] `sitemap.xml`: incluir `/antigo-testamento/`.
 - [ ] Decidir: botão "Começar Dia 1 ›" só na home e nos hubs (como está) ou em todas as páginas.
