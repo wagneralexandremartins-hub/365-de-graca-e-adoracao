@@ -25,7 +25,7 @@ Depois de montar a versão nova, o script prova, byte a byte, que
 Se a prova falhar, o arquivo não é gravado. Rodar de novo não duplica nada.
 
 Uso:
-  python scripts/aplicar_capa3d.py                     # dry-run (as 17 páginas)
+  python scripts/aplicar_capa3d.py                     # dry-run (todas as páginas da tabela)
   python scripts/aplicar_capa3d.py --only genesis,rute # restringe (pasta do livro)
   python scripts/aplicar_capa3d.py --diff-out f.diff
   python scripts/aplicar_capa3d.py --apply             # grava (com backup zip)
@@ -65,6 +65,35 @@ LIVROS = [
     ("03-historicos/esdras",       "Esdras",       "at", 10, "Esdras",       None,    "main.wrap"),
     ("03-historicos/neemias",      "Neemias",      "at", 13, "Neemias",      None,    "main.wrap"),
     ("03-historicos/ester",        "Ester",        "at", 10, "Ester",        None,    "main.wrap"),
+    # Novo Testamento (07/10/2026). Tamanho do nome medido no navegador: só
+    # Colossenses (13cqi, folga) e 1–2 Tessalonicenses (11.5cqi, como no protótipo).
+    ("08-novo-testamento/mateus",           "Mateus",             "nt", 28, "Mateus",             None,     "div.wrap"),
+    ("08-novo-testamento/marcos",           "Marcos",             "nt", 16, "Marcos",             None,     "div.wrap"),
+    ("08-novo-testamento/lucas",            "Lucas",              "nt", 24, "Lucas",              None,     "div.wrap"),
+    ("08-novo-testamento/joao",             "João",               "nt", 21, "João",               None,     "div.wrap"),
+    ("08-novo-testamento/atos",             "Atos dos Apóstolos", "nt", 28, "Atos dos Apóstolos", None,     "div.hero"),
+    ("08-novo-testamento/romanos",          "Romanos",            "nt", 16, "Romanos",            None,     "div.wrap"),
+    ("08-novo-testamento/1corintios",       "1 Coríntios",        "nt", 16, "1 Coríntios",        None,     "div.wrap"),
+    ("08-novo-testamento/2corintios",       "2 Coríntios",        "nt", 13, "2 Coríntios",        None,     "div.wrap"),
+    ("08-novo-testamento/galatas",          "Gálatas",            "nt",  6, "Gálatas",            None,     "div.wrap"),
+    ("08-novo-testamento/efesios",          "Efésios",            "nt",  6, "Efésios",            None,     "div.wrap"),
+    ("08-novo-testamento/filipenses",       "Filipenses",         "nt",  4, "Filipenses",         None,     "div.wrap"),
+    ("08-novo-testamento/colossenses",      "Colossenses",        "nt",  4, "Colossenses",        "13cqi",  "div.wrap"),
+    ("08-novo-testamento/1tessalonicenses", "1 Tessalonicenses",  "nt",  5, "1 Tessalonicenses",  "11.5cqi", "div.wrap"),
+    ("08-novo-testamento/2tessalonicenses", "2 Tessalonicenses",  "nt",  3, "2 Tessalonicenses",  "11.5cqi", "div.wrap"),
+    ("08-novo-testamento/1timoteo",         "1 Timóteo",          "nt",  6, "1 Timóteo",          None,     "div.wrap"),
+    ("08-novo-testamento/2timoteo",         "2 Timóteo",          "nt",  4, "2 Timóteo",          None,     "div.wrap"),
+    ("08-novo-testamento/tito",             "Tito",               "nt",  3, "Tito",               None,     "div.wrap"),
+    ("08-novo-testamento/filemom",          "Filemom",            "nt",  1, "Filemom",            None,     "div.wrap"),
+    ("08-novo-testamento/hebreus",          "Hebreus",            "nt", 13, "Hebreus",            None,     "div.wrap"),
+    ("08-novo-testamento/tiago",            "Tiago",              "nt",  5, "Tiago",              None,     "div.wrap"),
+    ("08-novo-testamento/1pedro",           "1 Pedro",            "nt",  5, "1 Pedro",            None,     "div.wrap"),
+    ("08-novo-testamento/2pedro",           "2 Pedro",            "nt",  3, "2 Pedro",            None,     "div.wrap"),
+    ("08-novo-testamento/1joao",            "1 João",             "nt",  5, "1 João",             None,     "div.wrap"),
+    ("08-novo-testamento/2joao",            "2 João",             "nt",  1, "2 João",             None,     "div.wrap"),
+    ("08-novo-testamento/3joao",            "3 João",             "nt",  1, "3 João",             None,     "div.wrap"),
+    ("08-novo-testamento/judas",            "Judas",              "nt",  1, "Judas",              None,     "div.wrap"),
+    ("08-novo-testamento/apocalipse",       "Apocalipse",         "nt", 22, "Apocalipse",         None,     "div.wrap"),
 ]
 
 
@@ -76,10 +105,11 @@ def bloco(livro, nl):
     _, nome, grupo, caps, lombada, tam, _ = livro
     g = GRUPOS[grupo]
     st = f' style="--capa-nome:{tam}"' if tam else ""
+    rot_caps = f"{caps} capítulo" if caps == 1 else f"{caps} capítulos"   # Filemom, 2–3 João, Judas
     linhas = [
         f"<!-- {MARK} -->",
         f'<div class="capa3d-faixa" data-grupo="{grupo}"{st}>',
-        f'  <div class="capa3d-cena" role="img" aria-label="Capa do livro {esc(nome)} — {g}, {caps} capítulos">',
+        f'  <div class="capa3d-cena" role="img" aria-label="Capa do livro {esc(nome)} — {g}, {rot_caps}">',
         '    <div class="capa3d-livro" aria-hidden="true">',
         '      <div class="capa3d-face capa3d-verso"></div>',
         '      <div class="capa3d-face capa3d-topo"></div>',
@@ -90,7 +120,7 @@ def bloco(livro, nl):
         '        <span class="capa3d-titulo">',
         f'          <span class="capa3d-nome">{esc(nome)}</span>',
         '          <span class="capa3d-filete"></span>',
-        f'          <span class="capa3d-caps">{caps} capítulos</span>',
+        f'          <span class="capa3d-caps">{rot_caps}</span>',
         '        </span>',
         '        <span class="capa3d-marca">365 Graça &amp; Adoração</span>',
         '      </div>',
