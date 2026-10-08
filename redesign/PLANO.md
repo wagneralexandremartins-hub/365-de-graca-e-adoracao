@@ -183,20 +183,33 @@ Inventário somente leitura em `redesign/INVENTARIO.md` (commit `45c8381c`). Fre
     - 29 páginas de `estudos/` (índice, 6 categorias, 22 estudos) com canonical `.../index.html`.
     - 4 com canonical de pasta sem barra (`autismo-e-fe`, `como-estudar-a-biblia`, `ebook-4-passos`, `loja-365`), que no ar respondem 301 para `/pasta/`; ficaram de fora para não pôr redirect no sitemap.
   - **Formato `/pasta/index` em 299 índices PT:** é o canonical atual e responde 200, mas é atípico. O limpo seria `/pasta/`, o que exige editar o canonical dessas páginas e rodar o script do sitemap de novo. Decisão do Wagner.
-- **Item 4 — hreflang (parado, próximo):** o quebrado é EN/ES → pt-BR (1.672 de 2.504; PT → EN/ES está OK). 1.496 têm equivalente 1:1, 14 + 7 com nome de livro em inglês no NT; Gênesis (100) e 1–2 Macabeus (62) dependem de decisão; as páginas PT não declaram hreflang de volta. Regra: só entre páginas existentes, sem redirect, equivalentes, com URL igual ao canonical do alvo e recíprocas; na dúvida, remover (skill `seo-limpeza`).
-- Skill nova `lote-seguro` com o ritual dos lotes; `seo-limpeza` atualizada com as decisões de 08/10.
+- Skill nova `lote-seguro` com o ritual dos lotes; `seo-limpeza` atualizada com as decisões de 08/10 (commit `b94f8e93`).
+- **Canonical de Mateus:** ✅ concluído. Commits `df0235e6` (`scripts/canonical_mateus.py`) e `443900a1` (28 páginas). Uma linha `<link rel="canonical" href=".../08-novo-testamento/mateus/capitulos/capitulo-NN">` abaixo do `<meta name="description">` em `capitulo-01` a `28` (109 bytes, CRLF). Prova byte a byte 28/28; prints dos capítulos 1, 15 e 28 (escuro e claro) idênticos pixel a pixel. Backup `_backups/canonical-mateus-20261008-170320.zip`.
+- **Sitemap × Mateus:** ✅ commit `da33334b`. As 28 URLs de Mateus passaram para a forma sem `.html`; fora de `<loc>` idêntico byte a byte. Backup `_backups/sitemap-canonical-20261008-171146.zip`. **Restam 88 URLs com `.html`:** 55 sem canonical (27 EN `*-block-N`, 27 ES `*-bloque-N`, 1 Samuel 29), 29 de `estudos/` e 4 de pasta sem barra.
+- **Item 4 — hreflang:** ✅ feito. Commits `9da75802` (`scripts/hreflang_item4.py`) e `e7158fff` (3.168 arquivos: 1.000 EN, 1.000 ES, 1.168 PT). Backup `_backups/hreflang-20261008-171332.zip`.
+  - H1: 1.843 hrefs corrigidos para o canonical do equivalente (pt-BR na forma antiga `/livro/capitulo-N/` 1.494; Pentateuco `/capitulo-NN/index` 328; nome de livro em inglês no NT 14; EN→ES `matthew/romans/revelation` → `mateo/romanos/apocalipsis` 7). Os capítulos 4–28 de Mateus já ficaram certos com o canonical novo.
+  - H2: 164 alternates pt-BR removidos: Gênesis 100 (o PT não tem página por capítulo), 1–2 Macabeus 62 (apontavam para `06-apocrifos/1macabeus/`, inexistente; usar as cópias de `03-historicos` depende da decisão das duplicatas) e 1 Samuel 29 2 (página truncada).
+  - H3: 1.168 páginas PT ganharam pt-BR/en/es logo abaixo do canonical.
+  - Prova: 3.168/3.168 idênticos ao backup fora das linhas de hreflang, CRLF preservado; nova simulação dá 0 mudanças; estado final com 0 violações da regra no escopo. Prints de Salmo 23 PT/EN/ES (escuro e claro) idênticos.
+  - Fora do escopo, não editado: `estudos/` e home (31 pt-BR com canonical `.html` e 64 sem reciprocidade com `en/estudos` e `es/estudios`).
+  - Se o formato `/pasta/index` mudar, rodar de novo `sitemap_canonical.py` e `hreflang_item4.py`.
+- **1 Samuel 29 PT truncada** (`03-historicos/1samuel/capitulos/capitulo-29.html`; relatório só de leitura, nada alterado): 4.139 bytes contra ~22–23 KB dos capítulos 28 e 30. Começa no byte 0 no meio de uma frase (" (1 Sm 29:5) ressoava na mente dos filisteus…"); não tem `<!DOCTYPE>`, `<html>`, `<head>` nem abertura de `<body>`, portanto não tem título, description, canonical, CSS, AdSense nem menu central. Restam os 2 últimos parágrafos da dissertação (1.227 caracteres), os botões 28 · livro · 30, o rodapé e os scripts (modo escuro, WhatsApp); o fechamento está íntegro. Faltam o cabeçalho do capítulo, o Texto Bíblico (ACF), o Contexto Histórico e Geográfico, os mapas e o início da Dissertação. Já nasceu truncada no primeiro commit (`c0c808c7`, 26/03/2026); não há versão completa no git. **A reconstrução é decisão editorial do Wagner**; material de apoio: `biblia/1sm/1sm-29.html` (texto ACF).
+- Push: nenhum desde `36573c9e`. Tudo acima está só na branch local; nada no ar até PR e merge na `main`.
 
 ## Próximos passos
 
 1. Acompanhar Search Console (erros de cobertura) e AdSense (anúncios aparecendo) a partir de 08/10; depois do próximo merge, reenviar o sitemap.
-2. Limpeza de SEO: hreflang (item 4, simulação primeiro); decisões sobre os 83 sem canonical (Mateus em destaque), `/pasta/index` (299) e os 116 URLs com `.html`; `lastmod` do sitemap e páginas `genesis/genesis-NN` (ver Limpeza prioritária). Favicon, og-image/og-cover, `/styles.css` e sitemap × canonical resolvidos em 08/10.
+2. Limpeza de SEO: decisões sobre os 55 sem canonical (blocos EN/ES e 1 Samuel 29), `/pasta/index` (299) e os 88 URLs com `.html`; hreflang de `estudos/`; reconstrução da 1 Samuel 29 (editorial); `lastmod` do sitemap e páginas `genesis/genesis-NN` (ver Limpeza prioritária). Favicon, og-image/og-cover, `/styles.css`, sitemap × canonical, canonical de Mateus e hreflang dos capítulos resolvidos em 08/10.
 3. **Próxima frente sugerida: busca com índice gerado** (frente 2 do `INVENTARIO.md`): índice JSON estático gerado a partir das páginas reais (title/H1/description/URL), um script de busca só, aposentando os índices manuais de `busca/index.html` e `assets/js/nav.js` (hoje 76 e 66 entradas, 1,4% do site).
 4. Capas 3D dos Poéticos, Profetas e deuterocanônicos (mesmo procedimento da skill `capa-3d-livro`).
-5. CSS: faixa de números dos livros `main.wrap`; Apócrifos e Busca no celular (rolagem a 390px).
-6. Textos para decisão do Wagner: "1.627+ Páginas no projeto" na busca e "compatíveis com Vercel" no rodapé dos estudos.
-7. Duplicatas Tobias, Judite e 1–2 Macabeus (`03-historicos` × `06-apocrifos`).
-8. Branches `(main)` e `(root)`: a antiga `(root)` aparece no GitHub como `(main)` (`501c8730`); decidir renomear ou apagar.
-9. EN/ES (etapa 7), só após aprovação.
+5. CSS: faixa de números dos livros `main.wrap`; Apócrifos e Busca no celular (rolagem a 390px); o botão verde flutuante (WhatsApp, canto inferior direito) pode cobrir o botão "próximo capítulo" da barra fixa (visto em Mateus 15 a 1280px).
+6. Ideias visuais futuras (não implementar agora):
+   - og-cover melhorado, com arte nova (hoje é o `og-image.png` convertido para JPEG).
+   - Símbolo da Graça girando sobre o eixo no hero da home, ao lado do cartão "Continue de onde parou", inspirado no cubo do site da AWEXPRESS: `rotateY` em CSS, SVG/PNG leve, parado com `prefers-reduced-motion`. Só depois do merge do SEO, como lote visual separado.
+7. Textos para decisão do Wagner: "1.627+ Páginas no projeto" na busca e "compatíveis com Vercel" no rodapé dos estudos.
+8. Duplicatas Tobias, Judite e 1–2 Macabeus (`03-historicos` × `06-apocrifos`).
+9. Branches `(main)` e `(root)`: a antiga `(root)` aparece no GitHub como `(main)` (`501c8730`); decidir renomear ou apagar.
+10. EN/ES (etapa 7), só após aprovação.
 
 ## Tarefa de amanhã (06/10/2026): capa 3D de livro
 
