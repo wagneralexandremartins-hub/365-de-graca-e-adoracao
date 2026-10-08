@@ -112,7 +112,7 @@ Nada vai à `main` sem ordem explícita do Wagner. Marcar cada item antes de abr
 - [x] Hub do NT real (`08-novo-testamento/index.html`): mesma estrutura do hub do AT, `<head>` mantido (só os estilos antigos trocados por `site.css`), faixa `context-nav` removida só nesta página; prova de textos idênticos (commit `36cdb569`, 07/10).
 - [x] Home real (`index.html`): `<head>` mantido (só o `<style>` antigo trocado por `site.css`), corpo no layout do protótipo, links finais `/antigo-testamento/` e `/08-novo-testamento/`; "A Jornada" e "+2.900 Páginas em português" por decisão do Wagner (commit `7ee6ed59`, 07/10). Sem `index-anterior.html`. favicon, og-image e og-cover ficam para uma etapa própria no site inteiro.
 - [x] `sitemap.xml`: incluir `/antigo-testamento/` (commit `064bb6f7`, 07/10; o hub do NT já constava como `/08-novo-testamento/index.html`).
-- [ ] Decidir: botão "Começar Dia 1 ›" só na home e nos hubs (como está) ou em todas as páginas.
+- [x] Decidir: botão "Começar Dia 1 ›" só na home e nos hubs (como está) ou em todas as páginas. Resolvido pelo Wagner: fica só na home e nos hubs.
 
 **B. Validação final (na branch, servidor local)**
 - [x] Varredura de links internos de todas as páginas PT (nenhum 404 novo): 2.943 páginas, 57.119 links; 0 quebrados novos em relação à `main` (os 1.325 pares quebrados são todos antigos, 1.196 deles `/styles.css`). Menu, trilha de 260 capítulos e "Começar Dia 1" conferidos (07/10).
@@ -125,17 +125,17 @@ Nada vai à `main` sem ordem explícita do Wagner. Marcar cada item antes de abr
 - [x] Conferir que o ambiente `github-pages` continua aceitando deploy só da `main`. Conferido em 07/10 (política de branch: só `main`).
 
 **D. Merge**
-- [ ] Antes do merge: marcar o estado atual da `main` com uma tag (`git tag pre-redesign ec2c3181` e `git push origin pre-redesign`).
-- [ ] Push da branch e PR **para a `main`** (o GitHub vai sugerir `(root)` enquanto ela for a padrão: trocar).
-- [ ] Revisar o resumo do PR (arquivos e commits) com o Wagner.
-- [ ] Merge com **merge commit** (não squash), para a reversão ser um único `revert`.
-- [ ] Acompanhar o workflow "Deploy GitHub Pages" até "success".
+- [x] Antes do merge: marcar o estado atual da `main` com uma tag (`git tag pre-redesign ec2c3181` e `git push origin pre-redesign`). Tag no GitHub em `ec2c3181` (07/10).
+- [x] Push da branch e PR **para a `main`** (o GitHub vai sugerir `(root)` enquanto ela for a padrão: trocar). PR #1, de `redesign/navegacao-awexpress` (`d721e79f`) para `main`: 45 commits, 2.919 arquivos (2.892 modificados, 27 novos, 0 removidos).
+- [x] Revisar o resumo do PR (arquivos e commits) com o Wagner. Sem conflitos; lista de arquivos igual ao diff local, nada fora do esperado.
+- [x] Merge com **merge commit** (não squash), para a reversão ser um único `revert`. **Merge `6101ab89`** (PR #1, pais `ec2c3181` + `d721e79f`), em 07/10/2026 às 18h26, com ordem do Wagner. Branches mantidas.
+- [x] Acompanhar o workflow "Deploy GitHub Pages" até "success". Build e deploy com sucesso; site no ar = `6101ab89` às 18h27 de 07/10 (home, hubs, Mateus, `site-nav.js` e `sitemap.xml` conferidos byte a byte; `/redesign/` e `/CLAUDE.md` dão 404).
 
 **E. Depois do deploy (site no ar)**
-- [ ] Abrir home, hubs AT/NT, um capítulo do NT, um do AT, Bíblia, Estudos; desktop e celular; modo claro.
-- [ ] Testar "Continue de onde parou" (abrir um capítulo do NT e voltar à home).
-- [ ] Conferir `https://365gracaeadoracao.com/antigo-testamento/` e o canonical.
-- [ ] Nos dias seguintes: Search Console (erros de cobertura) e AdSense (anúncios aparecendo).
+- [x] Abrir home, hubs AT/NT, um capítulo do NT, um do AT, Bíblia, Estudos; desktop e celular; modo claro. Conferido pelo Wagner no ar em 07/10: home, hubs AT e NT, capas de Juízes, Mateus, Marcos, Lucas, João e Romanos, celular e modo claro.
+- [x] Testar "Continue de onde parou" (abrir um capítulo do NT e voltar à home). Conferido pelo Wagner no ar em 07/10.
+- [x] Conferir `https://365gracaeadoracao.com/antigo-testamento/` e o canonical. Página no ar idêntica à da `main` (canonical `/antigo-testamento/`), 07/10.
+- [ ] Nos dias seguintes: Search Console (erros de cobertura) e AdSense (anúncios aparecendo). Em aberto: acompanhar a partir de 08/10.
 
 ## Plano de reversão (se algo der errado depois do merge)
 
@@ -154,25 +154,64 @@ O site é estático e o deploy publica a `main`. Reverter = devolver a `main` ao
 6. Se a fonte do Pages tiver sido trocada para "GitHub Actions" e isso for a causa do problema, voltar em Settings › Pages (isso independe do revert do código).
 7. Correção pontual de página: os zips em `_backups/` (só na máquina local) guardam cada página como estava antes de cada etapa.
 
-## Estado em 06/10 (fim do dia)
+## Estado em 07/10 (fim do dia)
 
-**Feito**
-- Capa 3D aplicada nas páginas de abertura de **17 livros**: Pentateuco (5) + Históricos canônicos (12: Josué, Juízes, Rute, 1–2 Samuel, 1–2 Reis, 1–2 Crônicas, Esdras, Neemias, Ester). Capítulos da capa vindos do cânon. Tobias, Judite e 1–2 Macabeus ficaram fora (duplicados em `03-historicos` e `06-apocrifos`, decisão pendente).
-- CSS em `assets/css/capa-livro.css` (tudo preso à capa: coluna de leitura, grades do Êxodo, título do Deuteronômio no celular); script `scripts/aplicar_capa3d.py` (dry-run, `--apply`, `--only`, bloco `<!-- capa3d:v1 -->`, prova byte a byte).
-- Validação: 17/17 sem rolagem horizontal em 1280/768/390/360, escuro e claro; desktop inalterado.
-- Commits: `3e602f64` (protótipo + CSS), `f63a6912` (piloto Gênesis + script), `c8bcca86` (notas de limpeza), `83713f7d` (lote de 16), `23969271` (Deuteronômio), `66685bd5` (Êxodo/Deuteronômio resolvidos).
-- **Push da branch** `redesign/navegacao-awexpress` em `66685bd5`. **`main` intacta em `ec2c3181`**; `(root)` não tocada; nenhum deploy disparado.
+**Redesign no ar.** PR #1 (`redesign/navegacao-awexpress` → `main`) mesclado com merge commit **`6101ab89`** em 07/10/2026 às 18h26; workflow "Deploy GitHub Pages" com sucesso, site publicado às 18h27.
+- `main` (GitHub): `6101ab89`.
+- Branch `redesign/navegacao-awexpress`: `d32764b3` no GitHub ao fim de 07/10 (antes deste registro).
+- Tag `pre-redesign`: `ec2c3181` (a `main` anterior ao redesign; ponto de volta).
+- No ar: menu central em ~2.940 páginas PT, hubs `/antigo-testamento/` e `/08-novo-testamento/`, nova home, capa 3D em 44 livros (17 AT + 27 NT), `sitemap.xml` com `/antigo-testamento/`.
 
-**Pendências**
-1. Opcional: capa em mais 2 livros (sugestão: Salmos e um Evangelho), com o mesmo procedimento (dry-run, confirmação, validação, commit separado).
-2. Faixa de números desalinhada em Juízes e provavelmente nos outros 9 livros `main.wrap` (ver Limpeza prioritária).
-3. Modo claro de Rute e Josué (cartão de introdução e faixas coloridas mudam de tom pela inversão global).
-4. Checklist do merge (seção "Checklist final do merge na `main`"):
-   - **Wagner, no GitHub:** trocar a branch padrão para `main` e o Pages para "GitHub Actions". Conferido em 06/10: a branch padrão ainda é `(root)` e o Pages ainda é *legacy* apontando para `(root)`.
-   - Troca do link do AT em 2.888 páginas (script `trocar_link_at.py`, dry-run OK, não aplicado).
-   - Hub do NT e home reais.
-   - PR da branch para `main` (não para `(root)`).
-   - Merge **só com OK explícito do Wagner**.
+## Estado em 08/10
+
+Inventário somente leitura em `redesign/INVENTARIO.md` (commit `45c8381c`). Frente 1 (SEO técnico) iniciada, um item por vez, sempre com dry-run e OK do Wagner antes do `--apply`.
+
+| Commit | Conteúdo |
+|---|---|
+| `82c14da1` | `scripts/corrigir_hifen_busca.py` (dry-run padrão, `--apply` com backup) |
+| `bac53d98` | **Item 1 — bug do hífen:** 9 links em `assets/js/nav.js` e 12 em `busca/index.html` (1–2 Samuel, 1–2 Reis, 1–2 Coríntios, 1–2 Pedro, 1 João, Cântico → `canticos`); Davi, Salomão, Elias e Pedro (personagens) apontam para `/personagens/*.html`. Backup `_backups/hifen-busca-20261008-125328.zip`. |
+| `ba066ba0` | `scripts/seo_arquivos_ausentes.py` (2a + 2b numa passada) |
+| `bd34f8e1` | **Item 2b — `/styles.css`:** linha removida de 1.196 páginas (1.190 `biblia/` + 6 blocos de Êxodo); o arquivo nunca existiu (404). Prova byte a byte 1.196/1.196. Backup `_backups/seo-2a2b-20261008-130812.zip`. |
+| `5716d119` | **Item 2a — imagens:** `assets/img/og-cover.jpg` e `og-image.jpg` (JPEG do `og-image.png`, mesma arte, 1200×630; enquadramento aprovado) e `favicon.png` (cópia do `apple-touch-icon.png`). Nenhuma página editada. |
+
+- Push feito: `origin/redesign/navegacao-awexpress` = `5716d119`. `main` segue `6101ab89`, ou seja, **essas correções ainda não estão no ar** (exigem novo PR e merge, só com ordem do Wagner).
+- Validação: busca testada no navegador (`?q=` Samuel, Reis, Coríntios, Cântico, Davi, Salomão, Elias, Pedro); 14 destinos e 3 imagens com 200. Prints antes/depois (escuro e claro) de `biblia/gn/gn-01`, `sl/sl-23`, `1co/1co-13` e `exodo/bloco-01`: 7 de 8 idênticos pixel a pixel; o bloco de Êxodo no escuro difere só no anti-aliasing do texto do cabeçalho (487 px, sem mudança de layout).
+- **Decisão provisória do Wagner (08/10): formato oficial das URLs sem `.html`**, como os canonicals atuais. Nenhuma página alterada por isso.
+- **Item 3 — sitemap alinhado ao canonical:** ✅ feito, sem push. Commits `fc10aa21` (`scripts/sitemap_canonical.py`) e `07cee8bc` (`sitemap.xml`). Backup `_backups/sitemap-canonical-20261008-163709.zip`. 4.034 de 4.152 `<loc>` passaram à URL do canonical: EN/ES `/pasta/` (2.506), PT capítulos sem extensão (1.216), PT índices `/pasta/index` (299) e `/pasta/` (13). Fora de `<loc>` o arquivo é idêntico byte a byte (`lastmod`, `priority`, ordem e CRLF intactos). Amostra no ar: 24 URLs novas com 200, sem redirect.
+  - **116 URLs ficaram com `.html` no sitemap** (decisão pendente):
+    - **83 páginas sem canonical:** 27 EN `*-block-N`, 27 ES `*-bloque-N`, `03-historicos/1samuel/capitulos/capitulo-29.html` e, em destaque, **os 28 capítulos de Mateus** (`08-novo-testamento/mateus/capitulos/capitulo-01` a `28`): o primeiro livro do NT inteiro sem canonical.
+    - 29 páginas de `estudos/` (índice, 6 categorias, 22 estudos) com canonical `.../index.html`.
+    - 4 com canonical de pasta sem barra (`autismo-e-fe`, `como-estudar-a-biblia`, `ebook-4-passos`, `loja-365`), que no ar respondem 301 para `/pasta/`; ficaram de fora para não pôr redirect no sitemap.
+  - **Formato `/pasta/index` em 299 índices PT:** é o canonical atual e responde 200, mas é atípico. O limpo seria `/pasta/`, o que exige editar o canonical dessas páginas e rodar o script do sitemap de novo. Decisão do Wagner.
+- Skill nova `lote-seguro` com o ritual dos lotes; `seo-limpeza` atualizada com as decisões de 08/10 (commit `b94f8e93`).
+- **Canonical de Mateus:** ✅ concluído. Commits `df0235e6` (`scripts/canonical_mateus.py`) e `443900a1` (28 páginas). Uma linha `<link rel="canonical" href=".../08-novo-testamento/mateus/capitulos/capitulo-NN">` abaixo do `<meta name="description">` em `capitulo-01` a `28` (109 bytes, CRLF). Prova byte a byte 28/28; prints dos capítulos 1, 15 e 28 (escuro e claro) idênticos pixel a pixel. Backup `_backups/canonical-mateus-20261008-170320.zip`.
+- **Sitemap × Mateus:** ✅ commit `da33334b`. As 28 URLs de Mateus passaram para a forma sem `.html`; fora de `<loc>` idêntico byte a byte. Backup `_backups/sitemap-canonical-20261008-171146.zip`. **Restam 88 URLs com `.html`:** 55 sem canonical (27 EN `*-block-N`, 27 ES `*-bloque-N`, 1 Samuel 29), 29 de `estudos/` e 4 de pasta sem barra.
+- **Item 4 — hreflang:** ✅ feito. Commits `9da75802` (`scripts/hreflang_item4.py`) e `e7158fff` (3.168 arquivos: 1.000 EN, 1.000 ES, 1.168 PT). Backup `_backups/hreflang-20261008-171332.zip`.
+  - H1: 1.843 hrefs corrigidos para o canonical do equivalente (pt-BR na forma antiga `/livro/capitulo-N/` 1.494; Pentateuco `/capitulo-NN/index` 328; nome de livro em inglês no NT 14; EN→ES `matthew/romans/revelation` → `mateo/romanos/apocalipsis` 7). Os capítulos 4–28 de Mateus já ficaram certos com o canonical novo.
+  - H2: 164 alternates pt-BR removidos: Gênesis 100 (o PT não tem página por capítulo), 1–2 Macabeus 62 (apontavam para `06-apocrifos/1macabeus/`, inexistente; usar as cópias de `03-historicos` depende da decisão das duplicatas) e 1 Samuel 29 2 (página truncada).
+  - H3: 1.168 páginas PT ganharam pt-BR/en/es logo abaixo do canonical.
+  - Prova: 3.168/3.168 idênticos ao backup fora das linhas de hreflang, CRLF preservado; nova simulação dá 0 mudanças; estado final com 0 violações da regra no escopo. Prints de Salmo 23 PT/EN/ES (escuro e claro) idênticos.
+  - Fora do escopo, não editado: `estudos/` e home (31 pt-BR com canonical `.html` e 64 sem reciprocidade com `en/estudos` e `es/estudios`).
+  - Se o formato `/pasta/index` mudar, rodar de novo `sitemap_canonical.py` e `hreflang_item4.py`.
+- **1 Samuel 29 PT truncada** (`03-historicos/1samuel/capitulos/capitulo-29.html`; relatório só de leitura, nada alterado): 4.139 bytes contra ~22–23 KB dos capítulos 28 e 30. Começa no byte 0 no meio de uma frase (" (1 Sm 29:5) ressoava na mente dos filisteus…"); não tem `<!DOCTYPE>`, `<html>`, `<head>` nem abertura de `<body>`, portanto não tem título, description, canonical, CSS, AdSense nem menu central. Restam os 2 últimos parágrafos da dissertação (1.227 caracteres), os botões 28 · livro · 30, o rodapé e os scripts (modo escuro, WhatsApp); o fechamento está íntegro. Faltam o cabeçalho do capítulo, o Texto Bíblico (ACF), o Contexto Histórico e Geográfico, os mapas e o início da Dissertação. Já nasceu truncada no primeiro commit (`c0c808c7`, 26/03/2026); não há versão completa no git. **A reconstrução é decisão editorial do Wagner**; material de apoio: `biblia/1sm/1sm-29.html` (texto ACF).
+- Push: branch enviada em 08/10 (`origin/redesign/navegacao-awexpress` = `0732def8`), sem PR e sem merge; `main` segue `6101ab89`. Nada disso está no ar até PR e merge na `main`.
+- **Pendência — Gênesis EN/ES sem link pt-BR:** as 100 páginas `en/genesis-1` a `50` e `es/genesis-1` a `50` perderam o hreflang pt-BR (H2) porque o PT de Gênesis só tem páginas por bloco (`02-pentateuco/genesis/bloco-01` a `06`), não por capítulo. Decisão do Wagner: criar páginas PT por capítulo, apontar para o bloco (não é equivalente 1:1, a regra não permite) ou deixar sem pt-BR.
+- **Pendência — 61 arquivos versionados em `_backups/`** (commits de 09/04/2026, anteriores ao redesign). Não vão ao ar: o `pages.yml` exclui `_backups/` do deploy, e `https://365gracaeadoracao.com/_backups/2026-04-15_10-51-26_blocos_index.html` responde 404 (checado em 08/10). O `.gitignore` só ignora `_backups/*.zip`, não a pasta inteira. Decisão do Wagner: tirar do repositório (`git rm --cached`, mantendo a cópia local) e ignorar `_backups/`, ou deixar como está.
+
+## Próximos passos
+
+1. Acompanhar Search Console (erros de cobertura) e AdSense (anúncios aparecendo) a partir de 08/10; depois do próximo merge, reenviar o sitemap.
+2. Limpeza de SEO: decisões sobre os 55 sem canonical (blocos EN/ES e 1 Samuel 29), `/pasta/index` (299) e os 88 URLs com `.html`; hreflang de `estudos/`; Gênesis EN/ES sem pt-BR (100 páginas); 61 arquivos de `_backups/` versionados; reconstrução da 1 Samuel 29 (editorial); `lastmod` do sitemap e páginas `genesis/genesis-NN` (ver Limpeza prioritária). Favicon, og-image/og-cover, `/styles.css`, sitemap × canonical, canonical de Mateus e hreflang dos capítulos resolvidos em 08/10.
+3. **Próxima frente sugerida: busca com índice gerado** (frente 2 do `INVENTARIO.md`): índice JSON estático gerado a partir das páginas reais (title/H1/description/URL), um script de busca só, aposentando os índices manuais de `busca/index.html` e `assets/js/nav.js` (hoje 76 e 66 entradas, 1,4% do site).
+4. Capas 3D dos Poéticos, Profetas e deuterocanônicos (mesmo procedimento da skill `capa-3d-livro`).
+5. CSS: faixa de números dos livros `main.wrap`; Apócrifos e Busca no celular (rolagem a 390px); o botão verde flutuante (WhatsApp, canto inferior direito) pode cobrir o botão "próximo capítulo" da barra fixa (visto em Mateus 15 a 1280px).
+6. Ideias visuais futuras (não implementar agora):
+   - og-cover melhorado, com arte nova (hoje é o `og-image.png` convertido para JPEG).
+   - Símbolo da Graça girando sobre o eixo no hero da home, ao lado do cartão "Continue de onde parou", inspirado no cubo do site da AWEXPRESS: `rotateY` em CSS, SVG/PNG leve, parado com `prefers-reduced-motion`. Só depois do merge do SEO, como lote visual separado.
+7. Textos para decisão do Wagner: "1.627+ Páginas no projeto" na busca e "compatíveis com Vercel" no rodapé dos estudos.
+8. Duplicatas Tobias, Judite e 1–2 Macabeus (`03-historicos` × `06-apocrifos`).
+9. Branches `(main)` e `(root)`: a antiga `(root)` aparece no GitHub como `(main)` (`501c8730`); decidir renomear ou apagar.
+10. EN/ES (etapa 7), só após aprovação.
 
 ## Tarefa de amanhã (06/10/2026): capa 3D de livro
 
@@ -195,13 +234,14 @@ Estas páginas **não devem ser alteradas** até decisão do Wagner. Todas ficar
 | `busca/index_backup.html` | Cópia de backup da busca, **publicada no site** (o deploy não exclui `*_backup.html`). |
 | `02-pentateuco/genesis/estudos/pasted_content.html` | Nome de arquivo colado por engano; dois `<title>` ("pasted_content" e "Projeto 365"). |
 | `02-pentateuco/genesis/estudos/pasted_file_FffSUA_image.html`, `pasted_file_V6Gujv_image.html`, `pasted_file_aNGcVD_image.html`, `pasted_file_llU4dO_image.html`, `pasted_file_roMaD4_image.html` (5) | Arquivos de imagem colados por engano e embrulhados no modelo de página: cabeçalho HTML normal (com `canonical` e AdSense) seguido de dados binários com 1.054 a 1.185 bytes nulos cada. Título = nome do arquivo (o de `roMaD4` saiu ilegível). O git as trata como binárias (diff não aparece). Publicadas no site, fora do `sitemap.xml`. Receberam o menu central e a troca do link do AT com prova byte a byte (registrado em 07/10/2026). |
-| `08-novo-testamento/index.html` (canonical) | O canonical é `https://365gracaeadoracao.com/08-novo-testamento/index` (sem `.html`), mas o `sitemap.xml` lista `/08-novo-testamento/index.html`. Alinhar os dois na etapa de SEO (registrado em 07/10/2026). |
+| ~~`08-novo-testamento/index.html` (canonical)~~ | ✅ **Resolvido em 08/10/2026** (commit `07cee8bc`): o sitemap agora usa o canonical. Registro original: o canonical é `https://365gracaeadoracao.com/08-novo-testamento/index` (sem `.html`), mas o `sitemap.xml` lista `/08-novo-testamento/index.html`. Alinhar os dois na etapa de SEO (registrado em 07/10/2026). |
 | `sitemap.xml` (`lastmod` e cabeçalho) | Os `lastmod` das páginas alteradas no redesign continuam em 2026-05-26, e o comentário do topo diz "Gerado em 2026-05-26 · Total de páginas: 4151" (são 4.152 desde 07/10). Atualizar na etapa de SEO (registrado em 07/10/2026). |
 | `06-apocrifos/index.html`, `busca/index.html` | Rolagem horizontal a 390px: Apócrifos passa 6px; Busca passa 31px (grade `.indice-item` com 2 colunas de 180px). Iguais na `main` (não causadas pelo redesign). Corrigir por CSS depois (registrado em 07/10/2026). |
 | `estudos/` e subpáginas | Sem o botão de modo claro (`#dark-toggle`): o modo claro escolhido no resto do site não se aplica nessas páginas (registrado em 07/10/2026). |
 | Textos para decisão do Wagner (**não alterar**) | `busca/index.html` mostra "1.627+ Páginas no projeto", enquanto a home diz "+2.900 Páginas em português". O rodapé dos estudos diz "compatíveis com Vercel" (o site está no GitHub Pages). Registrado em 07/10/2026. |
+| ~~`assets/img/favicon.png`~~ | ✅ **Resolvido em 08/10/2026** (commit `5716d119`). Criado como cópia do `apple-touch-icon.png`; as 5 páginas que o citam (inclui `en/estudos` e `es/estudios`) não foram editadas. |
 | `timeline-component.html`, `timeline-genesis-1.html` (raiz) | Fragmentos sem `<html>`/`<body>`, publicados como páginas. |
-| `og:image`/`twitter:image` em 2.825 páginas | Apontam para `assets/img/og-cover.jpg`, que **não existe** (404 no site no ar): compartilhamentos saem sem imagem. O arquivo existente é `assets/img/og-image.png`. |
+| ~~`og:image`/`twitter:image` em 2.825 páginas~~ | ✅ **Resolvido em 08/10/2026** (commit `5716d119`). `assets/img/og-cover.jpg` (e `og-image.jpg`, citado pela home e `blocos/`) criados como JPEG do `og-image.png`, mesma arte; nenhuma página editada. Só vale no ar depois do próximo merge na `main`. |
 | `03-historicos/juizes/index.html` (e provavelmente os outros 9 livros com `main.wrap`: 1–2 Samuel, 1–2 Reis, 1–2 Crônicas, Esdras, Neemias, Ester) | Faixa de números ("21 Capítulos · 618 Versículos · ~1380–1050 a.C. · 12 Juízes Principais") sem estilo, um item por linha; selo, título e subtítulo deslocados para a esquerda no cartão de abertura. Já existia antes da capa 3D (registrado em 06/10/2026). Tratar numa etapa própria, depois do lote da capa. |
 | `03-historicos/rute/index.html`, `03-historicos/josue/index.html` | No modo claro, o cartão de introdução de Rute fica escuro e as faixas coloridas de Josué (e de Rute) mudam de tom, por causa da inversão global do site (`filter: invert` no `<html>`) sobre cores fixas da página. Não afeta a capa 3D (registrado em 06/10/2026). |
 | ~~`02-pentateuco/deuteronomio/index.html`~~ | ✅ **Resolvido em 06/10/2026** (commit `23969271`). Rolagem horizontal a 390px: o título da página ("📜 DEUTERONÔMIO", 3em) não cabia na coluna. Corrigido no `assets/css/capa-livro.css`, preso à capa: `clamp(1.4rem, 6.5vw, 3em)` — só reduz no celular; no desktop continua 3em. |
@@ -209,6 +249,6 @@ Estas páginas **não devem ser alteradas** até decisão do Wagner. Todas ficar
 
 ## Pendências para a Fase 2 (anotadas a pedido do Wagner)
 
-- **Bug no índice de busca** (`assets/js/nav.js`): as URLs usam `1-corintios`, mas a pasta é `1corintios`. Revisar todos os livros com número (1/2 Coríntios, 1/2 Tessalonicenses, 1/2 Timóteo, 1/2 Pedro, 1/2/3 João, 1/2 Samuel, 1/2 Reis, 1/2 Crônicas, 1/2 Macabeus) e testar cada URL do índice contra o disco.
+- ~~**Bug no índice de busca** (`assets/js/nav.js`)~~: ✅ **Resolvido em 08/10/2026** (commit `bac53d98`). Todas as URLs dos dois índices (`nav.js` e `busca/index.html`) testadas contra o disco: 21 corrigidas, 0 quebradas restantes. A substituição dos índices manuais por um índice gerado é a próxima frente sugerida.
 - **Revisão das páginas com estilos inline** (2.933 com `<style>` próprio): checar visualmente, por amostragem, o conflito com Sora/Inter e com os tokens novos.
 - Itens já listados no briefing: modelo de introdução das cartas paulinas (piloto 1 Tessalonicenses ou Filemom), títulos "Capítulo N" em Romanos, "1 capitulos" em Filemom, menu do NT com 8 livros, "próximo" de Filemom → Hebreus 1, faixa de data de Gálatas, personagens que faltam (Timóteo, Tito, Onésimo, Barnabé, Silas, Priscila e Áquila).
