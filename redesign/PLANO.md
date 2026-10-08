@@ -198,6 +198,41 @@ Inventário somente leitura em `redesign/INVENTARIO.md` (commit `45c8381c`). Fre
 - **Pendência — Gênesis EN/ES sem link pt-BR:** as 100 páginas `en/genesis-1` a `50` e `es/genesis-1` a `50` perderam o hreflang pt-BR (H2) porque o PT de Gênesis só tem páginas por bloco (`02-pentateuco/genesis/bloco-01` a `06`), não por capítulo. Decisão do Wagner: criar páginas PT por capítulo, apontar para o bloco (não é equivalente 1:1, a regra não permite) ou deixar sem pt-BR.
 - **Pendência — 61 arquivos versionados em `_backups/`** (commits de 09/04/2026, anteriores ao redesign). Não vão ao ar: o `pages.yml` exclui `_backups/` do deploy, e `https://365gracaeadoracao.com/_backups/2026-04-15_10-51-26_blocos_index.html` responde 404 (checado em 08/10). O `.gitignore` só ignora `_backups/*.zip`, não a pasta inteira. Decisão do Wagner: tirar do repositório (`git rm --cached`, mantendo a cópia local) e ignorar `_backups/`, ou deixar como está.
 
+## Estado em 08/10 (fim do dia)
+
+**Entregue**
+- PR #2 mesclado na `main` com merge commit `7ce48cd2` (pais `6101ab89` + `8e3df475`; 20 commits, 4.379 arquivos). Workflow "Deploy GitHub Pages" (run 37843120886): build e deploy **success** às 20:56 UTC.
+- Conferência no ar, só com curl: hreflang do Salmo 23 em PT/EN/ES correto e recíproco; `sitemap.xml` com 4.152 URLs (88 ainda com `.html`), igual ao do repositório; canonical de Mateus 1 presente; `og-cover.jpg`, `og-image.jpg` e `favicon.png` com 200; 1 Samuel 29 continua abrindo (truncada, como estava).
+- Rollback: tag `pre-redesign` (`ec2c3181`) ou `git revert -m 1 7ce48cd2`, só com ordem do Wagner.
+
+**Search Console**
+- Domínio verificado via TXT na Hostinger: **manter os dois registros TXT**.
+- Sitemap `https://365gracaeadoracao.com/sitemap.xml` reenviado em 08/10.
+- Existe uma linha antiga com defeito (`sitemap.xml.`, com ponto no fim, de 23/02/2026): remover no Search Console.
+
+**Linha de base (08/10/2026)**
+- 1.483 cliques desde julho.
+- Últimos 28 dias: 585 cliques (+19%) e 48,3 mil impressões (+27%).
+- 3.693 páginas indexadas e 9.319 não indexadas.
+- Cliques por país: EUA 14%, Brasil 12%, México 12%, Venezuela 9%, Colômbia 8%.
+- Páginas mais clicadas são ES: 1 Crónicas 18, Ezequiel 16, Jeremías 6, Deuteronomio 3.
+
+**Novas pendências**
+- (a) Acentos faltando nos títulos ES (ex.: "Cronicas", "Dias de Gracia y Adoracion"): contar quantos títulos ES e EN são afetados, sem alterar nada, e propor simulação.
+- (b) Símbolo da Graça girando em CSS (`rotateY`) no hero da home, com `prefers-reduced-motion`, primeiro numa página de teste.
+- (c) Tirar os 61 arquivos de `_backups/` do git e pôr `_backups/` no `.gitignore` (via PR).
+- (d) Revisar a qualidade dos textos ES, começando pelas páginas mais clicadas.
+- (e) Ler a aba Indexação > Páginas do Search Console e classificar os motivos de não indexação.
+
+**Decisões do Wagner (não alterar texto sem OK)**
+- Macabeus, Tobias e Judite duplicados (`03-historicos` × `06-apocrifos`).
+- Reconstrução da 1 Samuel 29.
+- Gênesis EN/ES: 100 páginas sem pt-BR.
+- `/pasta/index` (299 índices PT) contra `/pasta/`.
+- 55 páginas sem canonical (27 EN `*-block-N`, 27 ES `*-bloque-N`, 1 Samuel 29).
+
+**Próximo passo de amanhã:** ler Indexação > Páginas no Search Console e escolher a próxima frente: símbolo girando, acentos ES ou busca com índice gerado.
+
 ## Próximos passos
 
 1. Acompanhar Search Console (erros de cobertura) e AdSense (anúncios aparecendo) a partir de 08/10; depois do próximo merge, reenviar o sitemap.
