@@ -162,16 +162,35 @@ O site é estático e o deploy publica a `main`. Reverter = devolver a `main` ao
 - Tag `pre-redesign`: `ec2c3181` (a `main` anterior ao redesign; ponto de volta).
 - No ar: menu central em ~2.940 páginas PT, hubs `/antigo-testamento/` e `/08-novo-testamento/`, nova home, capa 3D em 44 livros (17 AT + 27 NT), `sitemap.xml` com `/antigo-testamento/`.
 
+## Estado em 08/10
+
+Inventário somente leitura em `redesign/INVENTARIO.md` (commit `45c8381c`). Frente 1 (SEO técnico) iniciada, um item por vez, sempre com dry-run e OK do Wagner antes do `--apply`.
+
+| Commit | Conteúdo |
+|---|---|
+| `82c14da1` | `scripts/corrigir_hifen_busca.py` (dry-run padrão, `--apply` com backup) |
+| `bac53d98` | **Item 1 — bug do hífen:** 9 links em `assets/js/nav.js` e 12 em `busca/index.html` (1–2 Samuel, 1–2 Reis, 1–2 Coríntios, 1–2 Pedro, 1 João, Cântico → `canticos`); Davi, Salomão, Elias e Pedro (personagens) apontam para `/personagens/*.html`. Backup `_backups/hifen-busca-20261008-125328.zip`. |
+| `ba066ba0` | `scripts/seo_arquivos_ausentes.py` (2a + 2b numa passada) |
+| `bd34f8e1` | **Item 2b — `/styles.css`:** linha removida de 1.196 páginas (1.190 `biblia/` + 6 blocos de Êxodo); o arquivo nunca existiu (404). Prova byte a byte 1.196/1.196. Backup `_backups/seo-2a2b-20261008-130812.zip`. |
+| `5716d119` | **Item 2a — imagens:** `assets/img/og-cover.jpg` e `og-image.jpg` (JPEG do `og-image.png`, mesma arte, 1200×630; enquadramento aprovado) e `favicon.png` (cópia do `apple-touch-icon.png`). Nenhuma página editada. |
+
+- Push feito: `origin/redesign/navegacao-awexpress` = `5716d119`. `main` segue `6101ab89`, ou seja, **essas correções ainda não estão no ar** (exigem novo PR e merge, só com ordem do Wagner).
+- Validação: busca testada no navegador (`?q=` Samuel, Reis, Coríntios, Cântico, Davi, Salomão, Elias, Pedro); 14 destinos e 3 imagens com 200. Prints antes/depois (escuro e claro) de `biblia/gn/gn-01`, `sl/sl-23`, `1co/1co-13` e `exodo/bloco-01`: 7 de 8 idênticos pixel a pixel; o bloco de Êxodo no escuro difere só no anti-aliasing do texto do cabeçalho (487 px, sem mudança de layout).
+- **Parados, aguardando a checagem do Wagner no Search Console:**
+  - **Item 3 — canonical × sitemap:** o sitemap usa `.html` (4.150 URLs) e `/` (2); o canonical usa forma sem extensão no PT e `/pasta/` no EN/ES. 4.038 páginas divergem (mesma página, forma diferente), 31 coincidem e 83 não têm canonical. Nada alterado.
+  - **Item 4 — hreflang:** o quebrado é EN/ES → pt-BR (1.672 de 2.504; PT → EN/ES está OK). 1.496 têm equivalente 1:1, 14 + 7 com nome de livro em inglês no NT; Gênesis (100) e 1–2 Macabeus (62) dependem de decisão; as páginas PT não declaram hreflang de volta. A forma das URLs segue a decisão do item 3.
+
 ## Próximos passos
 
-1. Acompanhar Search Console (erros de cobertura) e AdSense (anúncios aparecendo) a partir de 08/10.
-2. Limpeza de SEO: favicon, og-image/og-cover, canonical do NT, `lastmod` do sitemap e páginas `genesis/genesis-NN` (ver Limpeza prioritária).
-3. Capas 3D dos Poéticos, Profetas e deuterocanônicos (mesmo procedimento da skill `capa-3d-livro`).
-4. CSS: faixa de números dos livros `main.wrap`; Apócrifos e Busca no celular (rolagem a 390px).
-5. Textos para decisão do Wagner: "1.627+ Páginas no projeto" na busca e "compatíveis com Vercel" no rodapé dos estudos.
-6. Duplicatas Tobias, Judite e 1–2 Macabeus (`03-historicos` × `06-apocrifos`).
-7. Branches `(main)` e `(root)`: a antiga `(root)` aparece no GitHub como `(main)` (`501c8730`); decidir renomear ou apagar.
-8. EN/ES (etapa 7), só após aprovação.
+1. Acompanhar Search Console (erros de cobertura) e AdSense (anúncios aparecendo) a partir de 08/10. **Wagner:** conferir em Páginas → Indexadas se as URLs aparecem com ou sem `.html` (define os itens 3 e 4 da frente 1).
+2. Limpeza de SEO: canonical × sitemap e hreflang (aguardando o item acima), `lastmod` do sitemap e páginas `genesis/genesis-NN` (ver Limpeza prioritária). Favicon, og-image/og-cover e `/styles.css` resolvidos em 08/10.
+3. **Próxima frente sugerida: busca com índice gerado** (frente 2 do `INVENTARIO.md`): índice JSON estático gerado a partir das páginas reais (title/H1/description/URL), um script de busca só, aposentando os índices manuais de `busca/index.html` e `assets/js/nav.js` (hoje 76 e 66 entradas, 1,4% do site).
+4. Capas 3D dos Poéticos, Profetas e deuterocanônicos (mesmo procedimento da skill `capa-3d-livro`).
+5. CSS: faixa de números dos livros `main.wrap`; Apócrifos e Busca no celular (rolagem a 390px).
+6. Textos para decisão do Wagner: "1.627+ Páginas no projeto" na busca e "compatíveis com Vercel" no rodapé dos estudos.
+7. Duplicatas Tobias, Judite e 1–2 Macabeus (`03-historicos` × `06-apocrifos`).
+8. Branches `(main)` e `(root)`: a antiga `(root)` aparece no GitHub como `(main)` (`501c8730`); decidir renomear ou apagar.
+9. EN/ES (etapa 7), só após aprovação.
 
 ## Tarefa de amanhã (06/10/2026): capa 3D de livro
 
@@ -199,9 +218,9 @@ Estas páginas **não devem ser alteradas** até decisão do Wagner. Todas ficar
 | `06-apocrifos/index.html`, `busca/index.html` | Rolagem horizontal a 390px: Apócrifos passa 6px; Busca passa 31px (grade `.indice-item` com 2 colunas de 180px). Iguais na `main` (não causadas pelo redesign). Corrigir por CSS depois (registrado em 07/10/2026). |
 | `estudos/` e subpáginas | Sem o botão de modo claro (`#dark-toggle`): o modo claro escolhido no resto do site não se aplica nessas páginas (registrado em 07/10/2026). |
 | Textos para decisão do Wagner (**não alterar**) | `busca/index.html` mostra "1.627+ Páginas no projeto", enquanto a home diz "+2.900 Páginas em português". O rodapé dos estudos diz "compatíveis com Vercel" (o site está no GitHub Pages). Registrado em 07/10/2026. |
-| `assets/img/favicon.png` | Referenciado e inexistente (404) em `index.html`, `blocos/index.html` e `politica-de-privacidade.html`. Corrigir na etapa de SEO, junto com og-image/og-cover (registrado em 07/10/2026). |
+| ~~`assets/img/favicon.png`~~ | ✅ **Resolvido em 08/10/2026** (commit `5716d119`). Criado como cópia do `apple-touch-icon.png`; as 5 páginas que o citam (inclui `en/estudos` e `es/estudios`) não foram editadas. |
 | `timeline-component.html`, `timeline-genesis-1.html` (raiz) | Fragmentos sem `<html>`/`<body>`, publicados como páginas. |
-| `og:image`/`twitter:image` em 2.825 páginas | Apontam para `assets/img/og-cover.jpg`, que **não existe** (404 no site no ar): compartilhamentos saem sem imagem. O arquivo existente é `assets/img/og-image.png`. |
+| ~~`og:image`/`twitter:image` em 2.825 páginas~~ | ✅ **Resolvido em 08/10/2026** (commit `5716d119`). `assets/img/og-cover.jpg` (e `og-image.jpg`, citado pela home e `blocos/`) criados como JPEG do `og-image.png`, mesma arte; nenhuma página editada. Só vale no ar depois do próximo merge na `main`. |
 | `03-historicos/juizes/index.html` (e provavelmente os outros 9 livros com `main.wrap`: 1–2 Samuel, 1–2 Reis, 1–2 Crônicas, Esdras, Neemias, Ester) | Faixa de números ("21 Capítulos · 618 Versículos · ~1380–1050 a.C. · 12 Juízes Principais") sem estilo, um item por linha; selo, título e subtítulo deslocados para a esquerda no cartão de abertura. Já existia antes da capa 3D (registrado em 06/10/2026). Tratar numa etapa própria, depois do lote da capa. |
 | `03-historicos/rute/index.html`, `03-historicos/josue/index.html` | No modo claro, o cartão de introdução de Rute fica escuro e as faixas coloridas de Josué (e de Rute) mudam de tom, por causa da inversão global do site (`filter: invert` no `<html>`) sobre cores fixas da página. Não afeta a capa 3D (registrado em 06/10/2026). |
 | ~~`02-pentateuco/deuteronomio/index.html`~~ | ✅ **Resolvido em 06/10/2026** (commit `23969271`). Rolagem horizontal a 390px: o título da página ("📜 DEUTERONÔMIO", 3em) não cabia na coluna. Corrigido no `assets/css/capa-livro.css`, preso à capa: `clamp(1.4rem, 6.5vw, 3em)` — só reduz no celular; no desktop continua 3em. |
@@ -209,6 +228,6 @@ Estas páginas **não devem ser alteradas** até decisão do Wagner. Todas ficar
 
 ## Pendências para a Fase 2 (anotadas a pedido do Wagner)
 
-- **Bug no índice de busca** (`assets/js/nav.js`): as URLs usam `1-corintios`, mas a pasta é `1corintios`. Revisar todos os livros com número (1/2 Coríntios, 1/2 Tessalonicenses, 1/2 Timóteo, 1/2 Pedro, 1/2/3 João, 1/2 Samuel, 1/2 Reis, 1/2 Crônicas, 1/2 Macabeus) e testar cada URL do índice contra o disco.
+- ~~**Bug no índice de busca** (`assets/js/nav.js`)~~: ✅ **Resolvido em 08/10/2026** (commit `bac53d98`). Todas as URLs dos dois índices (`nav.js` e `busca/index.html`) testadas contra o disco: 21 corrigidas, 0 quebradas restantes. A substituição dos índices manuais por um índice gerado é a próxima frente sugerida.
 - **Revisão das páginas com estilos inline** (2.933 com `<style>` próprio): checar visualmente, por amostragem, o conflito com Sora/Inter e com os tokens novos.
 - Itens já listados no briefing: modelo de introdução das cartas paulinas (piloto 1 Tessalonicenses ou Filemom), títulos "Capítulo N" em Romanos, "1 capitulos" em Filemom, menu do NT com 8 livros, "próximo" de Filemom → Hebreus 1, faixa de data de Gálatas, personagens que faltam (Timóteo, Tito, Onésimo, Barnabé, Silas, Priscila e Áquila).
