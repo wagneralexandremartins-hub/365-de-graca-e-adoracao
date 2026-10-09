@@ -7,14 +7,14 @@ description: Ritual obrigatório para qualquer alteração em lote no 365 (scrip
 
 ## Regras fixas do projeto
 - Nunca alterar texto editorial (estudos, exegese, versículos, títulos) sem autorização explícita do Wagner.
-- Trabalhar só em branch (hoje `redesign/navegacao-awexpress`); **nunca na `main`**. Confira `git branch --show-current` antes de gravar e antes de cada commit.
+- Trabalhar só em branch (a branch da etapa); **nunca na `main`**. Confira `git branch --show-current` antes de gravar e antes de cada commit.
 - Perguntar antes de cada commit e de cada push. Nada de merge na `main` sem ordem explícita.
 - Site 100% estático (HTML, CSS e JS puros), preservar todas as URLs; não apagar nem mover páginas.
 - Responder em português do Brasil. Na dúvida, parar e perguntar; o que exigir decisão do Wagner é anotado, não decidido.
 
 ## 1. Script em `scripts/`
 - Um script por assunto, com docstring dizendo o que muda, a decisão do Wagner (com data) e a prova.
-- **Simulação por padrão.** Só grava com `--apply`. Modelos: `scripts/seo_arquivos_ausentes.py`, `scripts/sitemap_canonical.py`, `scripts/corrigir_hifen_busca.py`.
+- **Simulação por padrão.** Só grava com `--apply`. Modelos: `scripts/seo_arquivos_ausentes.py`, `scripts/sitemap_canonical.py`, `scripts/corrigir_hifen_busca.py`, `scripts/canonical_mateus.py` (inserir uma linha em várias páginas) e `scripts/hreflang_item4.py` (trocas, remoções e inserções em sub-etapas, milhares de arquivos).
 - Ler e gravar em bytes (`rb`/`wb`), nunca reabrir em texto: assim CRLF, BOM e acentos ficam como estão.
 - Casos fora do padrão **não são corrigidos por palpite**: o script os pula e lista com o motivo ("decisão pendente").
 - Se qualquer prova falhar, o script sai com erro e não grava nada.
@@ -48,7 +48,13 @@ Por arquivo, conforme o tipo de troca:
 - URLs: testar uma amostra no disco e, se o formato depender do GitHub Pages, no ar com `curl -s -o /dev/null -w '%{http_code} %{redirect_url}'` (só leitura). URL com 301 não vai para sitemap, canonical nem hreflang.
 
 ## 6. Commits
+- **`git add` em milhares de arquivos demora** (ex.: 3.168 no item 4): esperar o comando terminar e conferir `git status` antes de editar ou gravar qualquer outro arquivo.
 - Separados por assunto: primeiro o script, depois o resultado do lote, e o `redesign/PLANO.md` em commit próprio.
 - Mensagem em arquivo no scratchpad e `git commit -F arquivo.txt`, com números no corpo e a linha `Co-Authored-By`.
 - Mostrar as mensagens e **perguntar antes de commitar**. **Sem push**, a menos que o Wagner peça; push e PR para a `main` são passos separados (skill `merge-deploy`).
 - Nada no ar até PR e merge na `main`; dizer isso no relatório.
+
+## 7. Conferência no ar (depois do deploy, só leitura)
+- Só com `curl`, acrescentando `?v=<algo novo>` em cada URL para evitar cache (ex.: `curl -s "https://365gracaeadoracao.com/sitemap.xml?v=$(date +%s)"`).
+- Conferir uma amostra das páginas do lote (ex.: hreflang do Salmo 23 em PT/EN/ES, canonical de Mateus 1) e os assets tocados (status 200).
+- Baixar o `sitemap.xml` no ar e comparar com o do repositório (`cmp` ou SHA-256, mais contagem de `<loc>` e de URLs com `.html`); devem ser iguais.
