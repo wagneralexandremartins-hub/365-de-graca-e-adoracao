@@ -306,14 +306,23 @@ Depois do merge: reenviar o sitemap no Search Console e pedir "Validar correçã
 
 ## Ponto de partida para terça (13/10/2026)
 
-**Onde paramos (09/10, noite)**
+**Atualização 09/10, 20h38 UTC — PRs #7 e #6 mesclados (merge commit, com ordem do Wagner)**
+| PR | O quê | Merge | Deploy | Rollback (só com ordem do Wagner) |
+|---|---|---|---|---|
+| #7 | Símbolo 3D nos 6 índices de testamento (PT, EN, ES) | `35e48613` (pais `be928fb0` + `b212e3fa`) | run `37988188742`, success 20:37 UTC | `git revert -m 1 35e48613` |
+| #6 | Docs: `PLANO.md` (08/10, 09/10, terça) + skills | `a9d911b7` (pais `35e48613` + `a48a6be6`) | run `37988317423`, success 20:38 UTC | `git revert -m 1 a9d911b7` |
+- Conferido no ar com `curl ?v=` depois do #7: as 6 páginas de índice respondem 200, têm o `<link>` do `simbolo-3d.css` e as 9 imagens, e são iguais à `main`; `simbolo-3d.css` 200 com o bloco AT/NT (5.004 bytes, igual à `main`); capítulos `lucas/capitulos/capitulo-14` e `en/luke-14/` iguais antes e depois do merge, sem o símbolo; home 200.
+- O #6 não muda o site: `redesign/` e `.claude/` seguem fora do deploy (404 no ar).
+- Com isso, os passos 1 e 2 abaixo estão feitos; terça começa pelo passo 3.
+
+**Onde paramos (09/10, noite — antes dos merges acima)**
 - `main` no GitHub = `be928fb0` (merge do PR #5, símbolo 3D na home). Site no ar = `main`.
 - **PR #6 aberto, sem merge:** `docs/estado-09-10` → `main` (este `PLANO.md` com os estados de 08/10 e 09/10 + skills `seo-limpeza`, `lote-seguro`, `merge-deploy`). Só documentação; não muda o site.
 - **`feat/simbolo-at-nt`, só local (sem push, sem PR):** símbolo 3D nos 6 índices de testamento (PT `antigo-testamento/` e `08-novo-testamento/`; EN `old-testament/` e `en/`; ES `antiguo-testamento/` e `es/`). Commits `0f6c4495` (script `scripts/aplicar_simbolo_at_nt.py`) e `b212e3fa` (+21 linhas no fim do `simbolo-3d.css` e +15 linhas em cada página, 0 alteradas). Backup `_backups/simbolo-at-nt-20261009-170509.zip`. Testes feitos a 1280/1024/390/360 px: giro, movimento reduzido, sem rolagem horizontal, sem sobreposição com o texto, título na mesma posição da `main`, home inalterada. Desktop: 220 px (PT) e 180 px (EN/ES) à direita do hero; até 1100 px: canto superior direito, 60 px (PT) e 48 px (EN/ES). Índices de livro (79) e capítulos ficaram de fora por decisão do Wagner.
 
 **Primeiros passos de terça, nesta ordem (cada um só com OK do Wagner)**
-1. Revisar e mesclar o PR #6 (docs).
-2. Push da `feat/simbolo-at-nt` e PR para a `main`; depois do merge: acompanhar o deploy e conferir no ar com `curl ?v=` (6 páginas com o `<link>` e as 9 imagens; `simbolo-3d.css` com o bloco novo; home sem mudança).
+1. ✅ (09/10) Revisar e mesclar o PR #6 (docs).
+2. ✅ (09/10, PR #7) Push da `feat/simbolo-at-nt` e PR para a `main`; depois do merge: acompanhar o deploy e conferir no ar com `curl ?v=` (6 páginas com o `<link>` e as 9 imagens; `simbolo-3d.css` com o bloco novo; home sem mudança).
 3. Search Console: pedir "Validar correção" no relatório de 404 (botões EN/ES); remover a linha `sitemap.xml.`; ler Indexação > Páginas e classificar os motivos restantes.
 4. Escolher a próxima frente: busca com índice gerado; acentos nos títulos ES/EN (contar e simular); cabeçalho `topbar` → menu central nas páginas EN/ES; modo claro em EN/ES.
 
@@ -325,7 +334,7 @@ Depois do merge: reenviar o sitemap no Search Console e pedir "Validar correçã
 **Lembretes**
 - `redesign/preview-simbolo-3d.html` e `redesign/simbolo-365-anel.webp` continuam só no disco (fora do git).
 - O CSS embutido em `scripts/aplicar_simbolo_home.py` é a versão anterior ao ajuste do celular; vale o `assets/css/simbolo-3d.css`.
-- Rollbacks no ar: #2 `7ce48cd2`, #3 `71506aca`, #4 `760336d2`, #5 `be928fb0` (`git revert -m 1 <hash>`, só com ordem do Wagner).
+- Rollbacks no ar: #2 `7ce48cd2`, #3 `71506aca`, #4 `760336d2`, #5 `be928fb0`, #7 `35e48613`, #6 (docs) `a9d911b7` (`git revert -m 1 <hash>`, só com ordem do Wagner).
 
 ## Tarefa de amanhã (06/10/2026): capa 3D de livro
 
