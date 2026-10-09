@@ -1,0 +1,76 @@
+/* ==========================================================================
+   Símbolo da Graça girando em 3D — só na home (index.html), 09/10/2026
+   CSS puro (perspective + rotateY), sem JavaScript. Prévia aprovada:
+   redesign/preview-simbolo-3d.html. Imagem: /assets/img/simbolo-365-anel.webp
+   (anel "365" recortado de logo-365-graca-adoracao.png, 440×440).
+   ========================================================================== */
+
+/* coluna da direita do hero: símbolo acima do cartão "Continue de onde parou" */
+.hero-lado { display: flex; flex-direction: column; align-items: center; gap: 34px; min-width: 0; }
+.hero-lado .resume { width: 100%; }
+
+.simbolo3d {
+  --tam: 220px;          /* tamanho no desktop */
+  --volta: 12s;          /* duração de uma volta */
+  --brilho: 0.38;        /* intensidade do halo âmbar */
+  --espessura: 1.6px;    /* distância entre as camadas da borda da "moeda" */
+  position: relative;
+  width: var(--tam); height: var(--tam);   /* tamanho fixo: não desloca o layout */
+  perspective: 900px;
+  flex: none;
+}
+/* halo e sombra ficam FORA do elemento 3D (filter em preserve-3d achataria o giro) */
+.simbolo3d::before {
+  content: ""; position: absolute; inset: -18%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(242, 169, 59, var(--brilho)) 0%, rgba(224, 144, 31, calc(var(--brilho) * 0.4)) 38%, transparent 68%);
+  filter: blur(6px);
+  pointer-events: none;
+}
+.simbolo3d::after {
+  content: ""; position: absolute; left: 18%; right: 18%; bottom: -10%; height: 9%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(0, 0, 0, 0.55), transparent 70%);
+  pointer-events: none;
+}
+.simbolo3d .moeda {
+  position: absolute; inset: 0;
+  transform-style: preserve-3d;
+  animation: simbolo-gira var(--volta) linear infinite;
+}
+.simbolo3d img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  -webkit-mask-image: radial-gradient(closest-side, #000 80%, transparent 100%);
+          mask-image: radial-gradient(closest-side, #000 80%, transparent 100%);
+  user-select: none; -webkit-user-drag: none;
+}
+/* frente e verso: cada um só aparece do seu lado; o verso é girado 180° para o "365" não ficar espelhado */
+.simbolo3d .frente { transform: translateZ(calc(var(--espessura) * 4)); backface-visibility: hidden; }
+.simbolo3d .verso  { transform: rotateY(180deg) translateZ(calc(var(--espessura) * 4)); backface-visibility: hidden; }
+/* camadas internas: formam a "borda" da moeda quando ela fica de perfil */
+.simbolo3d .borda { filter: brightness(0.45) saturate(1.2); }
+.simbolo3d .b1 { transform: translateZ(calc(var(--espessura) *  3)); }
+.simbolo3d .b2 { transform: translateZ(calc(var(--espessura) *  2)); }
+.simbolo3d .b3 { transform: translateZ(calc(var(--espessura) *  1)); }
+.simbolo3d .b4 { transform: translateZ(0); }
+.simbolo3d .b5 { transform: translateZ(calc(var(--espessura) * -1)); }
+.simbolo3d .b6 { transform: translateZ(calc(var(--espessura) * -2)); }
+.simbolo3d .b7 { transform: translateZ(calc(var(--espessura) * -3)); }
+
+@keyframes simbolo-gira {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(360deg); }
+}
+/* celular: o símbolo sobe para o topo do hero, acima do título, com 112 px.
+   Sem mexer no HTML: "display: contents" faz o símbolo e o cartão virarem itens da grade do hero
+   (.hero-grid, já em uma coluna), e "order: -1" põe o símbolo antes da coluna do título. */
+@media (max-width: 600px) {
+  .hero-lado { display: contents; }
+  .simbolo3d { --tam: 112px; --espessura: 0.9px; order: -1; justify-self: center; margin-bottom: -12px; }
+}
+/* animação reduzida: parado, levemente de lado. "animation: none" é necessário porque a regra
+   global do site.css só encurta a duração (0.001ms), o que num giro infinito não o pararia. */
+@media (prefers-reduced-motion: reduce) {
+  .simbolo3d .moeda { animation: none !important; transform: rotateY(-14deg); }
+}
