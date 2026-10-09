@@ -304,6 +304,24 @@ Depois do merge: reenviar o sitemap no Search Console e pedir "Validar correçã
 - *Próxima frente sugerida:* busca com índice gerado (frente 2 do `INVENTARIO.md`).
 - *CSS antigo:* o botão verde flutuante (WhatsApp) pode cobrir o "próximo capítulo" da barra fixa.
 
+## Ponto de partida para terça (13/10/2026)
+
+**Onde paramos (09/10, noite)**
+- `main` no GitHub = `be928fb0` (merge do PR #5, símbolo 3D na home). Site no ar = `main`.
+- **PR #6 aberto, sem merge:** `docs/estado-09-10` → `main` (este `PLANO.md` com os estados de 08/10 e 09/10 + skills `seo-limpeza`, `lote-seguro`, `merge-deploy`). Só documentação; não muda o site.
+- **`feat/simbolo-at-nt`, só local (sem push, sem PR):** símbolo 3D nos 6 índices de testamento (PT `antigo-testamento/` e `08-novo-testamento/`; EN `old-testament/` e `en/`; ES `antiguo-testamento/` e `es/`). Commits `0f6c4495` (script `scripts/aplicar_simbolo_at_nt.py`) e `b212e3fa` (+21 linhas no fim do `simbolo-3d.css` e +15 linhas em cada página, 0 alteradas). Backup `_backups/simbolo-at-nt-20261009-170509.zip`. Testes feitos a 1280/1024/390/360 px: giro, movimento reduzido, sem rolagem horizontal, sem sobreposição com o texto, título na mesma posição da `main`, home inalterada. Desktop: 220 px (PT) e 180 px (EN/ES) à direita do hero; até 1100 px: canto superior direito, 60 px (PT) e 48 px (EN/ES). Índices de livro (79) e capítulos ficaram de fora por decisão do Wagner.
+
+**Primeiros passos de terça, nesta ordem (cada um só com OK do Wagner)**
+1. Revisar e mesclar o PR #6 (docs).
+2. Push da `feat/simbolo-at-nt` e PR para a `main`; depois do merge: acompanhar o deploy e conferir no ar com `curl ?v=` (6 páginas com o `<link>` e as 9 imagens; `simbolo-3d.css` com o bloco novo; home sem mudança).
+3. Search Console: pedir "Validar correção" no relatório de 404 (botões EN/ES); remover a linha `sitemap.xml.`; ler Indexação > Páginas e classificar os motivos restantes.
+4. Escolher a próxima frente: busca com índice gerado; acentos nos títulos ES/EN (contar e simular); cabeçalho `topbar` → menu central nas páginas EN/ES; modo claro em EN/ES.
+
+**Lembretes**
+- `redesign/preview-simbolo-3d.html` e `redesign/simbolo-365-anel.webp` continuam só no disco (fora do git).
+- O CSS embutido em `scripts/aplicar_simbolo_home.py` é a versão anterior ao ajuste do celular; vale o `assets/css/simbolo-3d.css`.
+- Rollbacks no ar: #2 `7ce48cd2`, #3 `71506aca`, #4 `760336d2`, #5 `be928fb0` (`git revert -m 1 <hash>`, só com ordem do Wagner).
+
 ## Tarefa de amanhã (06/10/2026): capa 3D de livro
 
 Criar uma **capa 3D de livro, só em CSS**, no topo das **páginas de abertura de cada livro** da Bíblia (não nos capítulos).
