@@ -74,3 +74,24 @@
 @media (prefers-reduced-motion: reduce) {
   .simbolo3d .moeda { animation: none !important; transform: rotateY(-14deg); }
 }
+
+/* ==========================================================================
+   Índices do Antigo e do Novo Testamento (09/10/2026)
+   PT: hero .page-hero.hub-hero (alinhado à esquerda); EN/ES: hero .lang-hero (centralizado).
+   O símbolo fica em position: absolute — não empurra o conteúdo em nenhuma largura.
+   ========================================================================== */
+.page-hero.hub-hero > .wrap,
+.lang-hero { position: relative; }
+.page-hero.hub-hero > .wrap > .simbolo3d,
+.lang-hero > .simbolo3d {
+  position: absolute; top: 50%; right: 4%;
+  margin: calc(var(--tam) / -2) 0 0;
+}
+.page-hero.hub-hero > .wrap > .simbolo3d { --tam: 220px; }
+.lang-hero > .simbolo3d { --tam: 180px; --espessura: 1.3px; }
+/* até 1100 px o texto ocupa a largura: o símbolo vai pequeno para o canto superior direito do hero */
+@media (max-width: 1100px) {
+  .page-hero.hub-hero > .wrap > .simbolo3d,
+  .lang-hero > .simbolo3d { --tam: 60px; --espessura: 0.5px; --brilho: 0.3; top: 0; right: 0; margin: 0; }
+  .lang-hero > .simbolo3d { right: 1rem; --tam: 48px; }
+}
