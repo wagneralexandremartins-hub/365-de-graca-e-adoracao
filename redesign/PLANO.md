@@ -223,6 +223,26 @@ Inventário somente leitura em `redesign/INVENTARIO.md` (commit `45c8381c`). Fre
 
 Depois do merge: reenviar o sitemap no Search Console e pedir "Validar correção" no relatório de 404.
 
+## CSS de leitura nos capítulos EN/ES (09/10/2026, branch `feat/css-capitulos-en-es`)
+
+**Diagnóstico.** As páginas de capítulo EN/ES nunca tiveram estilo no conteúdo (desde a criação, `896fb47e`, 26/03/2026): o HTML usa `chapter-main`, `chapter-header`, `verse-block` etc., que só ganharam CSS em `55c00f92` (05/10), restrito a `:root[lang|="pt"]`. Não foi regressão.
+
+**O que mudou (só `assets/css/bloco.css`, nenhuma página editada).**
+- As 21 regras `:root[lang|="pt"] .chapter-main …` passaram a valer também para `:root[lang|="en"]` e `:root[lang|="es"]` (lista de seletores; declarações iguais). Atinge as 2.212 páginas EN/ES com `<main class="chapter-main">` (1.106 por idioma).
+- Nova regra `:root[lang|="en"] body.bloco-ot, :root[lang|="es"] body.bloco-ot { --accent: #f5c542; --accent-rgb: 245, 197, 66; }`: os capítulos EN/ES do AT (1.980 com `bloco-ot`) não tinham `--accent`/`--accent-rgb`; o âmbar é o mesmo dos títulos inline dessas páginas.
+- Sem `?v=` no link: o GitHub Pages serve com `Cache-Control: max-age=600` e ETag.
+
+**Prova de que PT e o resto não mudaram.**
+- 4.153 páginas carregam `bloco.css` (pt-BR 1.647, en 1.252, es 1.252, 2 sem `lang`); nenhuma com outro idioma.
+- Declarações do `bloco.css` aplicadas a cada elemento (medida determinística, antes = `71506aca`, depois = branch): **iguais** em `lucas/capitulos/capitulo-14` (PT), `salmos/capitulos/salmo-023` (PT) e `en/old-testament` (página com `<style>` próprio), a 1280 e 390 px. HTML do Lucas 14 PT no ar = git, byte a byte.
+- As 58 páginas EN/ES com `<style>` próprio não usam `chapter-main` (56 nem carregam `bloco.css`); as 79 com `<body>` sem classe também não (stubs `es/john-N` e blocos do Pentateuco).
+- `en/luke-14`, `es/mateo-20`, `en/isaiah-53`: sem rolagem horizontal a 1280, 390 e 360 px, antes e depois.
+
+**Pendências.**
+- Trocar o cabeçalho antigo (`topbar`) das páginas EN/ES pelo menu central (`site-nav.js`), como no PT; hoje o seletor de idioma fica sobreposto no canto.
+- Modo claro: as páginas EN/ES não têm (o botão 🌙 das páginas do AT grava `data-theme` sem CSS correspondente).
+- Ajuste de tamanho/contraste do texto de leitura (`.verse-analysis` em `--muted`, 0,92rem), se o Wagner quiser, valendo para os três idiomas.
+
 ## Tarefa de amanhã (06/10/2026): capa 3D de livro
 
 Criar uma **capa 3D de livro, só em CSS**, no topo das **páginas de abertura de cada livro** da Bíblia (não nos capítulos).
