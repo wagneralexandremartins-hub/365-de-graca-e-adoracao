@@ -243,6 +243,32 @@ Depois do merge: reenviar o sitemap no Search Console e pedir "Validar correçã
 - Modo claro: as páginas EN/ES não têm (o botão 🌙 das páginas do AT grava `data-theme` sem CSS correspondente).
 - Ajuste de tamanho/contraste do texto de leitura (`.verse-analysis` em `--muted`, 0,92rem), se o Wagner quiser, valendo para os três idiomas.
 
+## Estado em 09/10 (fim do dia)
+
+**No ar (todos com merge commit e deploy "Deploy GitHub Pages" com sucesso, conferidos com curl)**
+| PR | O quê | Merge | Rollback (só com ordem do Wagner) |
+|---|---|---|---|
+| #2 | SEO técnico: busca, og-cover/og-image/favicon, `/styles.css`, sitemap = canonical, canonical de Mateus, hreflang (item 4) | `7ce48cd2` (08/10) | `git revert -m 1 7ce48cd2` |
+| #3 | Botões anterior/próximo EN/ES: 504 páginas, 918 botões | `71506aca` | `git revert -m 1 71506aca` |
+| #4 | CSS de leitura nos capítulos EN/ES (só `bloco.css`) | `760336d2` | `git revert -m 1 760336d2` |
+| #5 | Símbolo da Graça girando em 3D na home | `be928fb0` | `git revert -m 1 be928fb0` |
+
+**Símbolo 3D na home (PR #5).** Commits `ca31ba29` (`scripts/aplicar_simbolo_home.py`), `6b9aa161` (`assets/img/simbolo-365-anel.webp`, anel "365" recortado de `logo-365-graca-adoracao.png`, 440×440, 29.780 bytes) e `09c2ab40` (`assets/css/simbolo-3d.css` + 17 linhas inseridas no `index.html`). CSS puro: `perspective` + `rotateY`, 12 s por volta; 220 px no desktop, acima do cartão "Continue de onde parou"; 112 px no celular (até 600 px), no topo do hero, acima do título (`display: contents` + `order: -1`, sem mexer no HTML). `prefers-reduced-motion`: `animation: none`, parado (a regra global do `site.css` só encurta a duração). Sem deslocamento de layout; decorativo (`aria-hidden`). Original `logo-365-graca-adoracao.png` intacto (2.388 KB, SHA-256 `e515ad3b…`, conferido no ar). Backup local `_backups/simbolo-home-20261009-155720.zip`. Deploy run `37980063522`, 19:25 UTC. Observação: o CSS embutido no script do commit 1 é a versão anterior ao ajuste do celular; vale o `assets/css/simbolo-3d.css`.
+
+**Search Console.** Domínio verificado por TXT na Hostinger (manter os dois registros TXT) e sitemap `https://365gracaeadoracao.com/sitemap.xml` reenviado. Exportação de 404 de 09/10 analisada: 548 URLs eram os botões EN/ES (corrigidos no #3), 32 `/en|es/capitulo-NN.html` vêm da época do Vercel (mesma correção), 392 PT `/<bloco>/<livro>/capitulo-NN/` vêm do hreflang antigo (já corrigido no #2).
+
+**Pendências abertas**
+- *Search Console:* pedir "Validar correção" no relatório de 404; reenviar o sitemap depois de cada merge de SEO; remover a linha antiga `sitemap.xml.` (23/02/2026); ler Indexação > Páginas e classificar os demais motivos de não indexação.
+- *Branch `docs/plano-09-10`* (estado de 08/10 + skills `seo-limpeza`, `lote-seguro`, `merge-deploy`): no GitHub, ainda fora da `main`. Teste de merge com a `main` em 09/10: sem conflito.
+- *EN/ES:* botão central e de borda abrem o índice geral (`../index.html`), não o do livro (decisão do Wagner); trocar o cabeçalho `topbar` pelo menu central; modo claro (não existe); tamanho/contraste do texto de leitura nos três idiomas, se o Wagner quiser.
+- *Textos:* acentos faltando nos títulos ES/EN (contar e simular, sem alterar); revisar a qualidade dos textos ES, começando pelas páginas mais clicadas.
+- *SEO (decisões do Wagner):* 55 páginas sem canonical (27 EN `*-block-N`, 27 ES `*-bloque-N`, 1 Samuel 29); `/pasta/index` (299) × `/pasta/`; 88 URLs com `.html` no sitemap; Gênesis EN/ES sem pt-BR (100); hreflang de `estudos/` e home.
+- *Editorial (decisões do Wagner):* duplicatas Tobias, Judite e 1–2 Macabeus (`03-historicos` × `06-apocrifos`); reconstrução da 1 Samuel 29.
+- *Limpeza:* tirar os 61 arquivos de `_backups/` do git e pôr a pasta no `.gitignore` (via PR); branch antiga `(main)` (`501c8730`): renomear ou apagar.
+- *Prévia do símbolo:* `redesign/preview-simbolo-3d.html` e `redesign/simbolo-365-anel.webp` estão só no disco (fora do git); decidir se entram no repositório.
+- *Próxima frente sugerida:* busca com índice gerado (frente 2 do `INVENTARIO.md`).
+- *CSS antigo:* o botão verde flutuante (WhatsApp) pode cobrir o "próximo capítulo" da barra fixa.
+
 ## Tarefa de amanhã (06/10/2026): capa 3D de livro
 
 Criar uma **capa 3D de livro, só em CSS**, no topo das **páginas de abertura de cada livro** da Bíblia (não nos capítulos).
