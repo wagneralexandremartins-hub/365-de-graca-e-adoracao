@@ -198,6 +198,41 @@ Inventário somente leitura em `redesign/INVENTARIO.md` (commit `45c8381c`). Fre
 - **Pendência — Gênesis EN/ES sem link pt-BR:** as 100 páginas `en/genesis-1` a `50` e `es/genesis-1` a `50` perderam o hreflang pt-BR (H2) porque o PT de Gênesis só tem páginas por bloco (`02-pentateuco/genesis/bloco-01` a `06`), não por capítulo. Decisão do Wagner: criar páginas PT por capítulo, apontar para o bloco (não é equivalente 1:1, a regra não permite) ou deixar sem pt-BR.
 - **Pendência — 61 arquivos versionados em `_backups/`** (commits de 09/04/2026, anteriores ao redesign). Não vão ao ar: o `pages.yml` exclui `_backups/` do deploy, e `https://365gracaeadoracao.com/_backups/2026-04-15_10-51-26_blocos_index.html` responde 404 (checado em 08/10). O `.gitignore` só ignora `_backups/*.zip`, não a pasta inteira. Decisão do Wagner: tirar do repositório (`git rm --cached`, mantendo a cópia local) e ignorar `_backups/`, ou deixar como está.
 
+## Estado em 08/10 (fim do dia)
+
+**Entregue**
+- PR #2 mesclado na `main` com merge commit `7ce48cd2` (pais `6101ab89` + `8e3df475`; 20 commits, 4.379 arquivos). Workflow "Deploy GitHub Pages" (run 37843120886): build e deploy **success** às 20:56 UTC.
+- Conferência no ar, só com curl: hreflang do Salmo 23 em PT/EN/ES correto e recíproco; `sitemap.xml` com 4.152 URLs (88 ainda com `.html`), igual ao do repositório; canonical de Mateus 1 presente; `og-cover.jpg`, `og-image.jpg` e `favicon.png` com 200; 1 Samuel 29 continua abrindo (truncada, como estava).
+- Rollback: tag `pre-redesign` (`ec2c3181`) ou `git revert -m 1 7ce48cd2`, só com ordem do Wagner.
+
+**Search Console**
+- Domínio verificado via TXT na Hostinger: **manter os dois registros TXT**.
+- Sitemap `https://365gracaeadoracao.com/sitemap.xml` reenviado em 08/10.
+- Existe uma linha antiga com defeito (`sitemap.xml.`, com ponto no fim, de 23/02/2026): remover no Search Console.
+
+**Linha de base (08/10/2026)**
+- 1.483 cliques desde julho.
+- Últimos 28 dias: 585 cliques (+19%) e 48,3 mil impressões (+27%).
+- 3.693 páginas indexadas e 9.319 não indexadas.
+- Cliques por país: EUA 14%, Brasil 12%, México 12%, Venezuela 9%, Colômbia 8%.
+- Páginas mais clicadas são ES: 1 Crónicas 18, Ezequiel 16, Jeremías 6, Deuteronomio 3.
+
+**Novas pendências**
+- (a) Acentos faltando nos títulos ES (ex.: "Cronicas", "Dias de Gracia y Adoracion"): contar quantos títulos ES e EN são afetados, sem alterar nada, e propor simulação.
+- (b) Símbolo da Graça girando em CSS (`rotateY`) no hero da home, com `prefers-reduced-motion`, primeiro numa página de teste.
+- (c) Tirar os 61 arquivos de `_backups/` do git e pôr `_backups/` no `.gitignore` (via PR).
+- (d) Revisar a qualidade dos textos ES, começando pelas páginas mais clicadas.
+- (e) Ler a aba Indexação > Páginas do Search Console e classificar os motivos de não indexação.
+
+**Decisões do Wagner (não alterar texto sem OK)**
+- Macabeus, Tobias e Judite duplicados (`03-historicos` × `06-apocrifos`).
+- Reconstrução da 1 Samuel 29.
+- Gênesis EN/ES: 100 páginas sem pt-BR.
+- `/pasta/index` (299 índices PT) contra `/pasta/`.
+- 55 páginas sem canonical (27 EN `*-block-N`, 27 ES `*-bloque-N`, 1 Samuel 29).
+
+**Próximo passo de amanhã:** ler Indexação > Páginas no Search Console e escolher a próxima frente: símbolo girando, acentos ES ou busca com índice gerado.
+
 ## Próximos passos
 
 1. Acompanhar Search Console (erros de cobertura) e AdSense (anúncios aparecendo) a partir de 08/10; depois do próximo merge, reenviar o sitemap.
@@ -242,6 +277,55 @@ Depois do merge: reenviar o sitemap no Search Console e pedir "Validar correçã
 - Trocar o cabeçalho antigo (`topbar`) das páginas EN/ES pelo menu central (`site-nav.js`), como no PT; hoje o seletor de idioma fica sobreposto no canto.
 - Modo claro: as páginas EN/ES não têm (o botão 🌙 das páginas do AT grava `data-theme` sem CSS correspondente).
 - Ajuste de tamanho/contraste do texto de leitura (`.verse-analysis` em `--muted`, 0,92rem), se o Wagner quiser, valendo para os três idiomas.
+
+## Estado em 09/10 (fim do dia)
+
+**No ar (todos com merge commit e deploy "Deploy GitHub Pages" com sucesso, conferidos com curl)**
+| PR | O quê | Merge | Rollback (só com ordem do Wagner) |
+|---|---|---|---|
+| #2 | SEO técnico: busca, og-cover/og-image/favicon, `/styles.css`, sitemap = canonical, canonical de Mateus, hreflang (item 4) | `7ce48cd2` (08/10) | `git revert -m 1 7ce48cd2` |
+| #3 | Botões anterior/próximo EN/ES: 504 páginas, 918 botões | `71506aca` | `git revert -m 1 71506aca` |
+| #4 | CSS de leitura nos capítulos EN/ES (só `bloco.css`) | `760336d2` | `git revert -m 1 760336d2` |
+| #5 | Símbolo da Graça girando em 3D na home | `be928fb0` | `git revert -m 1 be928fb0` |
+
+**Símbolo 3D na home (PR #5).** Commits `ca31ba29` (`scripts/aplicar_simbolo_home.py`), `6b9aa161` (`assets/img/simbolo-365-anel.webp`, anel "365" recortado de `logo-365-graca-adoracao.png`, 440×440, 29.780 bytes) e `09c2ab40` (`assets/css/simbolo-3d.css` + 17 linhas inseridas no `index.html`). CSS puro: `perspective` + `rotateY`, 12 s por volta; 220 px no desktop, acima do cartão "Continue de onde parou"; 112 px no celular (até 600 px), no topo do hero, acima do título (`display: contents` + `order: -1`, sem mexer no HTML). `prefers-reduced-motion`: `animation: none`, parado (a regra global do `site.css` só encurta a duração). Sem deslocamento de layout; decorativo (`aria-hidden`). Original `logo-365-graca-adoracao.png` intacto (2.388 KB, SHA-256 `e515ad3b…`, conferido no ar). Backup local `_backups/simbolo-home-20261009-155720.zip`. Deploy run `37980063522`, 19:25 UTC. Observação: o CSS embutido no script do commit 1 é a versão anterior ao ajuste do celular; vale o `assets/css/simbolo-3d.css`.
+
+**Search Console.** Domínio verificado por TXT na Hostinger (manter os dois registros TXT) e sitemap `https://365gracaeadoracao.com/sitemap.xml` reenviado. Exportação de 404 de 09/10 analisada: 548 URLs eram os botões EN/ES (corrigidos no #3), 32 `/en|es/capitulo-NN.html` vêm da época do Vercel (mesma correção), 392 PT `/<bloco>/<livro>/capitulo-NN/` vêm do hreflang antigo (já corrigido no #2).
+
+**Pendências abertas**
+- *Search Console:* pedir "Validar correção" no relatório de 404; reenviar o sitemap depois de cada merge de SEO; remover a linha antiga `sitemap.xml.` (23/02/2026); ler Indexação > Páginas e classificar os demais motivos de não indexação.
+- *Branch `docs/plano-09-10`* (estado de 08/10 + skills `seo-limpeza`, `lote-seguro`, `merge-deploy`): no GitHub, ainda fora da `main`. Teste de merge com a `main` em 09/10: sem conflito.
+- *EN/ES:* botão central e de borda abrem o índice geral (`../index.html`), não o do livro (decisão do Wagner); trocar o cabeçalho `topbar` pelo menu central; modo claro (não existe); tamanho/contraste do texto de leitura nos três idiomas, se o Wagner quiser.
+- *Textos:* acentos faltando nos títulos ES/EN (contar e simular, sem alterar); revisar a qualidade dos textos ES, começando pelas páginas mais clicadas.
+- *SEO (decisões do Wagner):* 55 páginas sem canonical (27 EN `*-block-N`, 27 ES `*-bloque-N`, 1 Samuel 29); `/pasta/index` (299) × `/pasta/`; 88 URLs com `.html` no sitemap; Gênesis EN/ES sem pt-BR (100); hreflang de `estudos/` e home.
+- *Editorial (decisões do Wagner):* duplicatas Tobias, Judite e 1–2 Macabeus (`03-historicos` × `06-apocrifos`); reconstrução da 1 Samuel 29.
+- *Limpeza:* tirar os 61 arquivos de `_backups/` do git e pôr a pasta no `.gitignore` (via PR); branch antiga `(main)` (`501c8730`): renomear ou apagar.
+- *Prévia do símbolo:* `redesign/preview-simbolo-3d.html` e `redesign/simbolo-365-anel.webp` estão só no disco (fora do git); decidir se entram no repositório.
+- *Próxima frente sugerida:* busca com índice gerado (frente 2 do `INVENTARIO.md`).
+- *CSS antigo:* o botão verde flutuante (WhatsApp) pode cobrir o "próximo capítulo" da barra fixa.
+
+## Ponto de partida para terça (13/10/2026)
+
+**Onde paramos (09/10, noite)**
+- `main` no GitHub = `be928fb0` (merge do PR #5, símbolo 3D na home). Site no ar = `main`.
+- **PR #6 aberto, sem merge:** `docs/estado-09-10` → `main` (este `PLANO.md` com os estados de 08/10 e 09/10 + skills `seo-limpeza`, `lote-seguro`, `merge-deploy`). Só documentação; não muda o site.
+- **`feat/simbolo-at-nt`, só local (sem push, sem PR):** símbolo 3D nos 6 índices de testamento (PT `antigo-testamento/` e `08-novo-testamento/`; EN `old-testament/` e `en/`; ES `antiguo-testamento/` e `es/`). Commits `0f6c4495` (script `scripts/aplicar_simbolo_at_nt.py`) e `b212e3fa` (+21 linhas no fim do `simbolo-3d.css` e +15 linhas em cada página, 0 alteradas). Backup `_backups/simbolo-at-nt-20261009-170509.zip`. Testes feitos a 1280/1024/390/360 px: giro, movimento reduzido, sem rolagem horizontal, sem sobreposição com o texto, título na mesma posição da `main`, home inalterada. Desktop: 220 px (PT) e 180 px (EN/ES) à direita do hero; até 1100 px: canto superior direito, 60 px (PT) e 48 px (EN/ES). Índices de livro (79) e capítulos ficaram de fora por decisão do Wagner.
+
+**Primeiros passos de terça, nesta ordem (cada um só com OK do Wagner)**
+1. Revisar e mesclar o PR #6 (docs).
+2. Push da `feat/simbolo-at-nt` e PR para a `main`; depois do merge: acompanhar o deploy e conferir no ar com `curl ?v=` (6 páginas com o `<link>` e as 9 imagens; `simbolo-3d.css` com o bloco novo; home sem mudança).
+3. Search Console: pedir "Validar correção" no relatório de 404 (botões EN/ES); remover a linha `sitemap.xml.`; ler Indexação > Páginas e classificar os motivos restantes.
+4. Escolher a próxima frente: busca com índice gerado; acentos nos títulos ES/EN (contar e simular); cabeçalho `topbar` → menu central nas páginas EN/ES; modo claro em EN/ES.
+
+**Pendência registrada em 09/10 — deslocamento de 8 px no cabeçalho antigo EN/ES**
+- Nas páginas EN/ES, no celular (390/360 px), o conteúdo desce 8 px quando o logo do cabeçalho ainda não carregou: `<img class="brand-logo-img" style="height:42px;width:auto">` não reserva a largura, e sem a imagem o cabeçalho muda de altura.
+- **Já existe na `main`, sem o símbolo** (medido em `es/` e `en/old-testament/`: título em y 119 → 127 e 155 → 163, iguais na `main` e na `feat/simbolo-at-nt`). O símbolo não acrescenta deslocamento.
+- Será tratado na troca do cabeçalho `topbar` pelo menu central nas páginas EN/ES; não corrigir à parte antes disso.
+
+**Lembretes**
+- `redesign/preview-simbolo-3d.html` e `redesign/simbolo-365-anel.webp` continuam só no disco (fora do git).
+- O CSS embutido em `scripts/aplicar_simbolo_home.py` é a versão anterior ao ajuste do celular; vale o `assets/css/simbolo-3d.css`.
+- Rollbacks no ar: #2 `7ce48cd2`, #3 `71506aca`, #4 `760336d2`, #5 `be928fb0` (`git revert -m 1 <hash>`, só com ordem do Wagner).
 
 ## Tarefa de amanhã (06/10/2026): capa 3D de livro
 
