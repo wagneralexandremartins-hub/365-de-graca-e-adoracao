@@ -26,13 +26,22 @@ A lista atualizada fica em `redesign/PLANO.md`, seção "Limpeza prioritária". 
 Todo lote segue a skill `lote-seguro`.
 - **Formato oficial das URLs: sem `.html`** (decisão provisória do Wagner), como os canonicals atuais: capítulos PT sem extensão (`.../capitulo-01`), pastas com barra (`/en/genesis/`). As URLs antigas com `.html` continuam no ar (200); nada é apagado nem redirecionado.
 - **Sitemap alinhado ao canonical** (commit `07cee8bc`, script `scripts/sitemap_canonical.py`): cada `<loc>` usa exatamente o canonical lido do próprio arquivo, só quando há um canonical único, do domínio, sem `.html`, que resolve para a mesma página e não é pasta sem barra. 4.034 de 4.152 trocados; `lastmod`, `priority`, ordem e CRLF intactos. Para rodar de novo depois de mudar canonicals: simulação, OK, `--apply`.
-- **Regra do hreflang** (item 4, ainda não aplicado): só entre páginas que existem, sem redirect, realmente equivalentes (mesmo livro e capítulo/bloco), com a URL **igual ao canonical do alvo** e **recíprocas** (PT ↔ EN ↔ ES, cada uma declara as outras e a si mesma). Na dúvida, remover em vez de chutar. Sub-etapas: H1 corrigir os 1:1 (1.496 + 14 + 7 de nome de livro em inglês no NT), H2 remover os pendentes (Gênesis 100, 1–2 Macabeus 62), H3 hreflang de volta nas páginas PT.
+- ~~**Canonical de Mateus**~~: resolvido em 08/10 (commits `df0235e6` script `scripts/canonical_mateus.py`, `443900a1` 28 páginas; sitemap alinhado em `da33334b`).
+- ~~**Regra do hreflang** (item 4)~~: aplicado em 08/10 (commits `9da75802` script `scripts/hreflang_item4.py`, `e7158fff` 3.168 arquivos): H1 1.843 hrefs corrigidos, H2 164 alternates pt-BR removidos, H3 1.168 páginas PT com pt-BR/en/es. A regra continua valendo: só entre páginas que existem, sem redirect, realmente equivalentes (mesmo livro e capítulo/bloco), com a URL **igual ao canonical do alvo** e **recíprocas** (PT ↔ EN ↔ ES, cada uma declara as outras e a si mesma). Na dúvida, remover em vez de chutar.
 - **GitHub Pages:** `/pasta` sem barra final responde **301** para `/pasta/`. Esse formato não vai para sitemap, canonical nem hreflang.
 
 ### Pendências (decisão do Wagner; não corrigir sozinho)
-- **83 páginas sem canonical:** 27 EN `*-block-N`, 27 ES `*-bloque-N`, **28 capítulos de Mateus** (`08-novo-testamento/mateus/capitulos/capitulo-01` a `28`) e `03-historicos/1samuel/capitulos/capitulo-29.html`. No sitemap seguem com `.html`.
-- **`/pasta/index` em 299 índices PT:** é o canonical atual (200 no ar), mas atípico; o limpo seria `/pasta/`, o que exige editar o canonical das páginas e rodar o sitemap de novo.
-- **29 páginas de `estudos/`** com canonical `.../index.html` e **4 com canonical de pasta sem barra** (`autismo-e-fe`, `como-estudar-a-biblia`, `ebook-4-passos`, `loja-365`; 301 no ar). Somadas aos 83, são os **116 URLs que ficaram com `.html`** no sitemap.
+- **55 páginas sem canonical:** 27 EN `*-block-N`, 27 ES `*-bloque-N` e `03-historicos/1samuel/capitulos/capitulo-29.html`. No sitemap seguem com `.html`.
+- **`/pasta/index` em 299 índices PT:** é o canonical atual (200 no ar), mas atípico; o limpo seria `/pasta/`, o que exige editar o canonical das páginas. **Se `/pasta/index` mudar, rodar de novo `scripts/sitemap_canonical.py` e `scripts/hreflang_item4.py`** (simulação, OK, `--apply`).
+- **29 páginas de `estudos/`** com canonical `.../index.html` e **4 com canonical de pasta sem barra** (`autismo-e-fe`, `como-estudar-a-biblia`, `ebook-4-passos`, `loja-365`; 301 no ar). Somadas aos 55, são os **88 URLs que ficaram com `.html`** no sitemap.
+- **Gênesis EN/ES sem pt-BR:** as 100 páginas `en/genesis-1` a `50` e `es/genesis-1` a `50` perderam o hreflang pt-BR (H2), porque o PT de Gênesis só tem páginas por bloco (`02-pentateuco/genesis/bloco-01` a `06`). Opções: criar páginas PT por capítulo, apontar para o bloco (não é 1:1, a regra não permite) ou deixar sem pt-BR.
+- **hreflang de `estudos/` e home:** fora do item 4, não editados: 31 pt-BR com canonical `.html` e 64 sem reciprocidade com `en/estudos` e `es/estudios`.
+
+## Rotina do Search Console
+- Domínio verificado por TXT na Hostinger: **manter os dois registros TXT**.
+- **Depois de cada merge de SEO na `main`**, reenviar `https://365gracaeadoracao.com/sitemap.xml` (último envio: 08/10/2026).
+- Remover a linha antiga com defeito `sitemap.xml.` (com ponto no fim, de 23/02/2026).
+- Ler Indexação > Páginas e classificar os motivos de não indexação (linha de base de 08/10: 3.693 indexadas, 9.319 não indexadas). Só leitura; correções viram itens desta skill.
 
 ## Varredura de links (como foi feita no bloco B)
 - Escopo: todas as `*.html` fora de `en/`, `es/`, `_backups/`, `redesign/`, `scripts/`, `.claude/`, `.github/`, sem as páginas de redirecionamento (`http-equiv="refresh"`).
