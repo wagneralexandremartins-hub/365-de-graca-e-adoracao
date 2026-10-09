@@ -366,3 +366,10 @@ Estas páginas **não devem ser alteradas** até decisão do Wagner. Todas ficar
 - ~~**Bug no índice de busca** (`assets/js/nav.js`)~~: ✅ **Resolvido em 08/10/2026** (commit `bac53d98`). Todas as URLs dos dois índices (`nav.js` e `busca/index.html`) testadas contra o disco: 21 corrigidas, 0 quebradas restantes. A substituição dos índices manuais por um índice gerado é a próxima frente sugerida.
 - **Revisão das páginas com estilos inline** (2.933 com `<style>` próprio): checar visualmente, por amostragem, o conflito com Sora/Inter e com os tokens novos.
 - Itens já listados no briefing: modelo de introdução das cartas paulinas (piloto 1 Tessalonicenses ou Filemom), títulos "Capítulo N" em Romanos, "1 capitulos" em Filemom, menu do NT com 8 livros, "próximo" de Filemom → Hebreus 1, faixa de data de Gálatas, personagens que faltam (Timóteo, Tito, Onésimo, Barnabé, Silas, Priscila e Áquila).
+
+## Ideias futuras (registradas em 09/10/2026; não implementar sem decisão do Wagner)
+
+1. **Camada do idioma original:** hebraico no Antigo Testamento e grego koiné no Novo Testamento.
+   - Começar por um **piloto de poucas páginas** (ex.: Salmo 23 e João 3).
+   - Em cada página do piloto: o texto original, a transliteração e o significado das palavras-chave.
+2. **Versões completas em hebraico e/ou árabe:** possibilidade, **só depois** de haver revisores nativos e dados de demanda que justifiquem.
