@@ -317,6 +317,11 @@ Depois do merge: reenviar o sitemap no Search Console e pedir "Validar correçã
 3. Search Console: pedir "Validar correção" no relatório de 404 (botões EN/ES); remover a linha `sitemap.xml.`; ler Indexação > Páginas e classificar os motivos restantes.
 4. Escolher a próxima frente: busca com índice gerado; acentos nos títulos ES/EN (contar e simular); cabeçalho `topbar` → menu central nas páginas EN/ES; modo claro em EN/ES.
 
+**Pendência registrada em 09/10 — deslocamento de 8 px no cabeçalho antigo EN/ES**
+- Nas páginas EN/ES, no celular (390/360 px), o conteúdo desce 8 px quando o logo do cabeçalho ainda não carregou: `<img class="brand-logo-img" style="height:42px;width:auto">` não reserva a largura, e sem a imagem o cabeçalho muda de altura.
+- **Já existe na `main`, sem o símbolo** (medido em `es/` e `en/old-testament/`: título em y 119 → 127 e 155 → 163, iguais na `main` e na `feat/simbolo-at-nt`). O símbolo não acrescenta deslocamento.
+- Será tratado na troca do cabeçalho `topbar` pelo menu central nas páginas EN/ES; não corrigir à parte antes disso.
+
 **Lembretes**
 - `redesign/preview-simbolo-3d.html` e `redesign/simbolo-365-anel.webp` continuam só no disco (fora do git).
 - O CSS embutido em `scripts/aplicar_simbolo_home.py` é a versão anterior ao ajuste do celular; vale o `assets/css/simbolo-3d.css`.
