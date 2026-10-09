@@ -213,6 +213,16 @@ Inventário somente leitura em `redesign/INVENTARIO.md` (commit `45c8381c`). Fre
 9. Branches `(main)` e `(root)`: a antiga `(root)` aparece no GitHub como `(main)` (`501c8730`); decidir renomear ou apagar.
 10. EN/ES (etapa 7), só após aprovação.
 
+## Botões anterior/próximo EN/ES (09/10/2026, branch `fix/botoes-en-es`)
+
+**Descoberta.** No Search Console, a exportação de 404 (`Coverage-Drilldown-2026-10-09.xlsx`, 1.000 URLs de exemplo) mostrou **548 endereços** `/en|es/<livro>-<N>/capitulo-NN.html` (ex.: `/en/luke-14/capitulo-13.html`). Origem: no bloco `<nav class="chapter-nav">` do fim do artigo das páginas EN/ES do NT, os botões anterior/próximo usavam o link relativo `capitulo-NN.html`, que não existe em nenhuma pasta. Outros 32 endereços na raiz (`/en/capitulo-NN.html`, `/es/capitulo-NN.html`, 404 no ar) vêm, provavelmente, do mesmo botão na época do Vercel (`trailingSlash: false`, página servida sem barra final). Os links de baixo da página (`/en/luke-13/`) já estavam certos.
+
+**Correção.** `scripts/corrigir_botoes_en_es.py` (simulação por padrão, `--apply` com OK do Wagner em 09/10): **504 páginas** (EN 249, ES 255) e **918 botões**. Só o valor do href muda, para o capítulo vizinho no formato dos links de baixo (`capitulo-13.html` → `/en/luke-13/`), e só quando a pasta de destino existe. Em 500 páginas o novo href é igual ao link de baixo; as outras 4 (`en/romans-1` a `3`, `en/revelation-1`) não têm link embaixo. Prova byte a byte: 504/504 contra o backup `_backups/botoes-en-es-20261009-123925.zip`, CRLF preservado, nova simulação com 0 mudanças. Servidor local: botões de `en/luke-14`, `es/mateo-20`, `en/romans-2`, `en/luke-1` e `es/mateo-28` abrem com 200. Fora do lote, sem mudança: 106 botões de borda (52 `←` no capítulo 1 e 54 `→` no último) que apontam para `../index.html`; páginas EN/ES do AT (não têm esse bloco).
+
+**Decisão futura do Wagner.** Nas páginas EN/ES, o botão central ("Luke Index", "Índice de Mateo") e os botões de borda usam `../index.html`, que abre o **índice geral** (`/en/index.html`, `/es/index.html`), não o do livro. Não é 404, mas o rótulo promete outra coisa. Opções: manter, trocar o rótulo ou apontar para um índice do livro (hoje não existe página por livro em `en/` e `es/`).
+
+Depois do merge: reenviar o sitemap no Search Console e pedir "Validar correção" no relatório de 404.
+
 ## Tarefa de amanhã (06/10/2026): capa 3D de livro
 
 Criar uma **capa 3D de livro, só em CSS**, no topo das **páginas de abertura de cada livro** da Bíblia (não nos capítulos).
