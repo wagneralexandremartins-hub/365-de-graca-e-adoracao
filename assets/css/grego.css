@@ -1,0 +1,11 @@
+/* Camada do grego koiné (piloto: João 3 em PT, EN e ES) — inserida por scripts/aplicar_grego_jo3.py.
+   Bloco recolhido abaixo da citação; sem cores claras próprias (o modo claro inverte a página inteira). */
+.grego-tr { margin: 0.2rem 0 0.9rem; border: 1px solid var(--line, rgba(255,255,255,0.08)); border-radius: 8px; background: rgba(255,255,255,0.02); }
+.grego-tr > summary { cursor: pointer; padding: 0.5rem 0.9rem; font-family: var(--font-ui, system-ui, sans-serif); font-size: 0.85rem; font-weight: 600; color: var(--accent, #0ea5e9); }
+.grego-tr > summary:focus-visible { outline: 2px solid var(--accent, #0ea5e9); outline-offset: 2px; border-radius: 6px; }
+.grego-tr[open] > summary { border-bottom: 1px solid var(--line, rgba(255,255,255,0.08)); }
+.grego-texto { padding: 0.7rem 1rem 0.3rem; font-family: "Gentium Plus", "Noto Serif", "Times New Roman", serif; font-size: 1.18rem; font-style: normal; line-height: 1.8; color: #e2e8f0; }
+.grego-texto p { margin: 0 0 0.5rem; }
+.grego-texto sup { font-family: var(--font-ui, system-ui, sans-serif); font-size: 0.65em; font-weight: 700; color: var(--accent, #0ea5e9); margin-right: 0.3em; }
+.grego-credito { margin: 0; padding: 0 1rem 0.75rem; font-family: var(--font-ui, system-ui, sans-serif); font-size: 0.72rem; line-height: 1.5; color: #64748b; }
+.grego-credito a { color: inherit; text-decoration: underline; }

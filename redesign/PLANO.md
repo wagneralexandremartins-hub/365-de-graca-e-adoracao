@@ -294,6 +294,20 @@ Depois do merge: reenviar o sitemap no Search Console e pedir "Validar correçã
 
 **Fora deste lote (decisão do Wagner, 13/10).** Atos 26 EN/ES (o PT tem CSS próprio de página inteira); navegação e rodapé duplicados no fim das cartas EN/ES (ver no lote 3); Josué 16 e Juízes 9 com `lang` malformado.
 
+**No ar.** PR #10, merge `a2c025b8`, deploy run `38452157647` (success, 13/10 19:06 UTC). Conferido com curl: `bloco.css` no ar = `main` byte a byte (marca `cartas-en-es:v1`, 15 regras); HTML de `en/romans-8`, `es/romanos-8`, `en/revelation-1`, `es/hebreos-11` e Romanos 8 PT no ar = `main`. Rollback: `git revert -m 1 a2c025b8`.
+
+## Piloto do grego koiné em João 3 (13/10/2026, branch `feat/grego-jo3`)
+
+**Decisões do Wagner (13/10).** Texto-base: Textus Receptus de Scrivener (1894). Fonte digital: Door43 `STR/el-x-koine_trs` (CC BY-SA 4.0), a única politônica fiel ao Scrivener 1894 com licença clara (byztxt é domínio público mas ASCII sem acentos; eBible `grctr` é colação St1550/Elz1624/Scr1881; CrossWire TR é Stephanus 1550 com CC BY-NC-SA). Proposta A: grego recolhido abaixo de cada citação, em PT, EN e ES, fonte Gentium Plus. Rótulos e crédito aprovados.
+
+**O que mudou.** `08-novo-testamento/joao/capitulos/capitulo-03.html`, `en/john-3/index.html`, `es/juan-3/index.html` (+46 linhas cada, 0 removidas) e `assets/css/grego.css` (novo). Em cada página: 2 linhas no `<head>` (Gentium Plus + `grego.css`) e, logo depois de cada uma das 4 citações (3:1-3, 3:5-8, 3:16, 3:17-18), um `<details class="grego-tr">` fechado com o grego numerado (`lang="grc"`) e o crédito da licença; tudo entre `<!-- grego-tr:v1 -->`. Script: `scripts/aplicar_grego_jo3.py` (backup `_backups/grego-jo3-20261013-161828.zip`).
+
+**Fonte fixada.** `44-JHN.usfm` do commit `4107626c` do Door43 (SHA-256 `f93ebbc0…`). João 3 completo na fonte (36 versículos), UTF-8 NFC, politônico; comparado palavra a palavra com o byztxt (Robinson, domínio público): 0 diferenças de leitura (só grafia impressa: ἐστί/ἐστίν, οὕτω/οὕτως).
+
+**Prova.** Por página: novo menos os 5 trechos inseridos = original, byte a byte; só CRLF; as 4 citações e as imagens idênticas; arquivos gravados = simulação aprovada; nova simulação = 0 mudanças. No navegador (3 idiomas × 1280/768/390, aberto e fechado): 4 blocos por página, sem rolagem horizontal, Gentium Plus carregada quando o bloco abre (fechado, a fonte nem é baixada); modo claro do PT correto.
+
+**Próximos passos possíveis (só com decisão do Wagner).** Estender a outros capítulos; versão completa dos 36 versículos em `biblia/jo/jo-03.html` (proposta B).
+
 ## Estado em 09/10 (fim do dia)
 
 **No ar (todos com merge commit e deploy "Deploy GitHub Pages" com sucesso, conferidos com curl)**
