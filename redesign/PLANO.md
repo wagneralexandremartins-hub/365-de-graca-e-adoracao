@@ -308,6 +308,24 @@ Depois do merge: reenviar o sitemap no Search Console e pedir "Validar correçã
 
 **Próximos passos possíveis (só com decisão do Wagner).** Estender a outros capítulos; versão completa dos 36 versículos em `biblia/jo/jo-03.html` (proposta B).
 
+**No ar.** PR #11, merge `c48d4204`, deploy run `38463079906` (success, 13/10 20:28 UTC). Conferido com curl: as três páginas de João 3 no ar = `main` byte a byte; em cada idioma, 4 de 4 `<details class="grego-tr">` logo depois das citações, 10 de 10 versículos idênticos à Door43, rótulo, `lang="grc"` e crédito presentes; `grego.css` no ar = `main`; Gentium Plus (subconjuntos greek e greek-ext) respondendo 200. Rollback: `git revert -m 1 c48d4204`.
+
+## Estado em 13/10 (fim do dia)
+
+**No ar (merge commit e deploy "Deploy GitHub Pages" com sucesso, conferidos com curl)**
+| PR | O quê | Merge | Rollback (só com ordem do Wagner) |
+|---|---|---|---|
+| #10 | Lote 1 EN/ES: coluna de leitura nas cartas e no Apocalipse (só `bloco.css`) | `a2c025b8` | `git revert -m 1 a2c025b8` |
+| #11 | Piloto do grego koiné em João 3 (PT, EN e ES) | `c48d4204` | `git revert -m 1 c48d4204` |
+| #12 | Docs: diagnóstico do lote 3.5 (WhatsApp) | `15175bf4` | `git revert -m 1 15175bf4` |
+| #13 | Lote 3.5 parte A: WhatsApp e claro/escuro acima da barra inferior (só `bloco.css`) | `5bdf8d7b` | `git revert -m 1 5bdf8d7b` |
+
+**Pendências abertas**
+- *Lote 3.5 parte B* (botão "próximo" cortado no celular): simulada, aguardando aprovação do Wagner; se aprovada, vai em PR separado.
+- *Próximo lote da ordem:* 2 — `site-nav.js` em três idiomas (rótulos do menu em EN/ES dependem de aprovação).
+- *PRs de docs abertos:* #8 (hashes de rollback de 09/10) e #9 (ideias futuras: idioma original e versões HE/AR).
+- *Fora do lote 1 (decisão do Wagner):* Atos 26 EN/ES; navegação e rodapé duplicados no fim das cartas EN/ES; Josué 16 e Juízes 9 com `lang` malformado.
+
 ## Estado em 09/10 (fim do dia)
 
 **No ar (todos com merge commit e deploy "Deploy GitHub Pages" com sucesso, conferidos com curl)**
@@ -368,7 +386,7 @@ Criar uma **capa 3D de livro, só em CSS**, no topo das **páginas de abertura d
 - Nome, testamento e número de capítulos da capa devem vir de uma tabela única de livros, não do texto de cada página (Deuteronômio cita "187" antes da contagem real; Gênesis e Salmos não mostram a contagem no formato padrão).
 - Sem criar páginas novas. Mesmo procedimento das etapas anteriores: dry-run, confirmação, validação e commit separado.
 
-## Lote 3.5 — corrigir sobreposição do WhatsApp antes do lote 4 (diagnóstico de 13/10/2026; nada aplicado)
+## Lote 3.5 — corrigir sobreposição do WhatsApp antes do lote 4 (13/10/2026: parte A no ar; parte B simulada, aguardando aprovação)
 
 **Problema.** Nas páginas PT de capítulo do NT, o botão flutuante do WhatsApp (`#whatsapp-cta`, estilo inline `bottom: 20px`, 50 px) fica sobre o botão "próximo" da barra inferior fixa (`.chapter-nav-fixed`, 59 px de altura): em Atos 8, "Atos 9 →" aparece só como "Atos".
 
@@ -394,6 +412,8 @@ body:has(.chapter-nav-fixed) #dark-toggle { bottom: 132px; }
 **Problema à parte, já existente (não incluído).** No celular, o próprio botão "próximo" com nome longo passa da borda direita da tela: 8 páginas a 390 px (1–2 Ts, Cl) e 13 a 360 px (+ 1 Tm, Ap). Corrigir junto só com decisão do Wagner.
 
 **Parte A aplicada (13/10/2026, branch `fix/lote-3-5-whatsapp`, aprovada pelo Wagner).** As 4 regras acima foram acrescentadas no fim do `assets/css/bloco.css` (+11 linhas, 0 removidas), com `scripts/css_lote_3_5.py` (backup `_backups/lote-3-5a-20261013-175722.zip`). Gravado = simulação; nova simulação = 0 mudanças. Com o arquivo real: WhatsApp × "próximo" e claro/escuro × barra = 0 nas 260 páginas, em 1280, 768, 390 e 360 px. Verificação no Chrome das 4.153 páginas que carregam `bloco.css`: as regras novas casam com exatamente as 260 que têm a barra, nenhuma outra.
+
+**Parte A no ar.** PR #13, merge `5bdf8d7b`, deploy run `38471609374` (success, 13/10 21:36 UTC). Conferido com curl: `bloco.css` no ar = `main` byte a byte (marca `lote-3-5a:v1`, sem a parte B); HTML de Atos 8 e 1 Tessalonicenses 4 no ar = `main`; print da página real de Atos 8 a 1280 px com "Atos 9 →" inteiro e os botões flutuantes acima da barra. O registro do diagnóstico entrou antes, no PR #12 (merge `15175bf4`). Rollback: `git revert -m 1 5bdf8d7b`.
 
 **Parte B (botão "próximo" cortado no celular) — só simulada, aguardando aprovação do Wagner.** Até 600 px, a barra passa a ter duas linhas: "Capítulo X de 260 do NT" em cima; anterior/próximo embaixo, metade da largura cada, com quebra de linha; espaço reservado embaixo da página de 60 para 120 px. Simulação sobre a parte A real (260 páginas): botão fora da tela 8 → 0 a 390 px e 13 → 0 a 360 px; texto cortado 0; sobreposições 0; barra com 86 px (110 px quando o nome quebra em duas linhas); 1280/768 px sem mudança. Atenção para testes: os botões da barra têm `transition: all 0.15s`, então CSS injetado depois do carregamento precisa de espera antes de medir ou fotografar.
 
