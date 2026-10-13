@@ -393,6 +393,10 @@ body:has(.chapter-nav-fixed) #dark-toggle { bottom: 132px; }
 
 **Problema à parte, já existente (não incluído).** No celular, o próprio botão "próximo" com nome longo passa da borda direita da tela: 8 páginas a 390 px (1–2 Ts, Cl) e 13 a 360 px (+ 1 Tm, Ap). Corrigir junto só com decisão do Wagner.
 
+**Parte A aplicada (13/10/2026, branch `fix/lote-3-5-whatsapp`, aprovada pelo Wagner).** As 4 regras acima foram acrescentadas no fim do `assets/css/bloco.css` (+11 linhas, 0 removidas), com `scripts/css_lote_3_5.py` (backup `_backups/lote-3-5a-20261013-175722.zip`). Gravado = simulação; nova simulação = 0 mudanças. Com o arquivo real: WhatsApp × "próximo" e claro/escuro × barra = 0 nas 260 páginas, em 1280, 768, 390 e 360 px. Verificação no Chrome das 4.153 páginas que carregam `bloco.css`: as regras novas casam com exatamente as 260 que têm a barra, nenhuma outra.
+
+**Parte B (botão "próximo" cortado no celular) — só simulada, aguardando aprovação do Wagner.** Até 600 px, a barra passa a ter duas linhas: "Capítulo X de 260 do NT" em cima; anterior/próximo embaixo, metade da largura cada, com quebra de linha; espaço reservado embaixo da página de 60 para 120 px. Simulação sobre a parte A real (260 páginas): botão fora da tela 8 → 0 a 390 px e 13 → 0 a 360 px; texto cortado 0; sobreposições 0; barra com 86 px (110 px quando o nome quebra em duas linhas); 1280/768 px sem mudança. Atenção para testes: os botões da barra têm `transition: all 0.15s`, então CSS injetado depois do carregamento precisa de espera antes de medir ou fotografar.
+
 ## Limpeza prioritária (registrada em 05/10/2026; nada alterado ainda)
 
 Estas páginas **não devem ser alteradas** até decisão do Wagner. Todas ficaram fora do menu central.
