@@ -748,3 +748,14 @@ body:has(.modulos-grid) .intro-box p { margin-bottom: 0.7rem; line-height: 1.7; 
 :root:is([lang|="en"], [lang|="es"]) body.bloco-08:has(.chapter-hero):has(.versiculo-bloco) .breadcrumb { padding:0.75rem 1.5rem; font-size:0.85rem; color:#64748b; }
 :root:is([lang|="en"], [lang|="es"]) body.bloco-08:has(.chapter-hero):has(.versiculo-bloco) .breadcrumb a { color:var(--accent,#0ea5e9); text-decoration:none; }
 :root:is([lang|="en"], [lang|="es"]) body.bloco-08:has(.chapter-hero):has(.versiculo-bloco) .wrap { max-width:860px; margin:0 auto; padding:0 1.5rem 3rem; }
+
+/* lote-3-5a:v1 */
+/* ─── Lote 3.5 A: WhatsApp e claro/escuro acima da barra inferior (13/10/2026) ───
+   Só nas páginas com .chapter-nav-fixed (260 capítulos PT do NT). A barra tem 59 px no desktop
+   e até 104 px no celular (nomes longos quebram em várias linhas). Gerado por scripts/css_lote_3_5.py. */
+body:has(.chapter-nav-fixed) #whatsapp-cta { bottom: 72px !important; }
+body:has(.chapter-nav-fixed) #dark-toggle { bottom: 132px; }
+@media (max-width: 600px) {
+  body:has(.chapter-nav-fixed) #whatsapp-cta { bottom: 116px !important; }
+  body:has(.chapter-nav-fixed) #dark-toggle { bottom: 176px; }
+}
