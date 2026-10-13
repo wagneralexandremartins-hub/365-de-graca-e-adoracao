@@ -354,6 +354,31 @@ Criar uma **capa 3D de livro, só em CSS**, no topo das **páginas de abertura d
 - Nome, testamento e número de capítulos da capa devem vir de uma tabela única de livros, não do texto de cada página (Deuteronômio cita "187" antes da contagem real; Gênesis e Salmos não mostram a contagem no formato padrão).
 - Sem criar páginas novas. Mesmo procedimento das etapas anteriores: dry-run, confirmação, validação e commit separado.
 
+## Lote 3.5 — corrigir sobreposição do WhatsApp antes do lote 4 (diagnóstico de 13/10/2026; nada aplicado)
+
+**Problema.** Nas páginas PT de capítulo do NT, o botão flutuante do WhatsApp (`#whatsapp-cta`, estilo inline `bottom: 20px`, 50 px) fica sobre o botão "próximo" da barra inferior fixa (`.chapter-nav-fixed`, 59 px de altura): em Atos 8, "Atos 9 →" aparece só como "Atos".
+
+**Onde acontece (medido no navegador, as 260 páginas, 1280/768/390/360 px).**
+- A barra inferior só existe nos **260 capítulos PT do NT** (`08-novo-testamento/*/capitulos/`), todos com o mesmo código de botão, barra e claro/escuro. EN/ES não têm a barra: **0 páginas** afetadas.
+- WhatsApp sobre o "próximo": **260 de 260** em todas as larguras.
+- No celular, com nomes longos (1–2 Co, 1–2 Ts, 1 Tm, Fp, Cl, Ap), a barra quebra em várias linhas (até 104 px) e o botão claro/escuro (`#dark-toggle`, `bottom: 80px`) também encosta nela: 35 páginas a 390 px, 95 a 360 px.
+- As outras 4.575 páginas com WhatsApp (PT 2.592, EN 991, ES 991) não têm barra inferior; varredura estática e amostra no navegador: nenhuma sobreposição.
+
+**Correção proposta (só CSS, sem tocar em texto nem estrutura).** Em `assets/css/bloco.css` (as 260 páginas o carregam), restrita às páginas com a barra:
+```css
+body:has(.chapter-nav-fixed) #whatsapp-cta { bottom: 72px !important; }
+body:has(.chapter-nav-fixed) #dark-toggle { bottom: 132px; }
+@media (max-width: 600px) {
+  body:has(.chapter-nav-fixed) #whatsapp-cta { bottom: 116px !important; }
+  body:has(.chapter-nav-fixed) #dark-toggle { bottom: 176px; }
+}
+```
+`!important` só no WhatsApp, porque a posição dele vem do atributo `style` do próprio botão.
+
+**Simulação (CSS injetado só no navegador, 260 páginas × 4 larguras).** Depois: WhatsApp × "próximo" = 0; claro/escuro × barra/WhatsApp = 0, em 1280, 768, 390 e 360 px. Amostra sem barra (PT AT, estudos, EN, ES): sem mudança. Prints antes/depois de Atos 8 e 1 Tessalonicenses 4 (1280 e 390).
+
+**Problema à parte, já existente (não incluído).** No celular, o próprio botão "próximo" com nome longo passa da borda direita da tela: 8 páginas a 390 px (1–2 Ts, Cl) e 13 a 360 px (+ 1 Tm, Ap). Corrigir junto só com decisão do Wagner.
+
 ## Limpeza prioritária (registrada em 05/10/2026; nada alterado ainda)
 
 Estas páginas **não devem ser alteradas** até decisão do Wagner. Todas ficaram fora do menu central.
