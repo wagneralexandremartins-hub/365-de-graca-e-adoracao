@@ -278,6 +278,22 @@ Depois do merge: reenviar o sitemap no Search Console e pedir "Validar correçã
 - Modo claro: as páginas EN/ES não têm (o botão 🌙 das páginas do AT grava `data-theme` sem CSS correspondente).
 - Ajuste de tamanho/contraste do texto de leitura (`.verse-analysis` em `--muted`, 0,92rem), se o Wagner quiser, valendo para os três idiomas.
 
+## Padrão EN/ES do NT — lote 1: cartas e Apocalipse (13/10/2026, branch `feat/css-cartas-en-es`)
+
+**Decisões do Wagner (13/10).** Ordem dos lotes aprovada: 1) CSS das cartas EN/ES; 2) `site-nav.js` em três idiomas; 3) menu central nos 520 capítulos + homes + estudos EN/ES; 4) barra inferior, modo claro e WhatsApp; 5) homes EN/ES no layout novo (a home EN/ES continua sendo o hub do NT; nenhuma página nova de hub); 6) aberturas de livro EN/ES com capa 3D — fica para depois.
+
+**Diagnóstico.** As 143 páginas PT de capítulo das cartas e do Apocalipse (`.wrap` + `.chapter-hero` + `.versiculo-bloco`) recebem o visual de um `<style>` dentro de cada página; os equivalentes `en/<livro>-N/` e `es/<libro>-N/` não têm esse bloco e apareciam sem estilo (blocos de versículo, cabeçalho do capítulo e breadcrumb crus).
+
+**O que mudou (só `assets/css/bloco.css`, nenhuma página editada).** 15 regras acrescentadas no fim do arquivo (+23 linhas, 0 removidas), com as declarações do `<style>` do PT (sem a parte `.brand` do cabeçalho antigo). Escopo: `:root:is([lang|="en"], [lang|="es"]) body.bloco-08:has(.chapter-hero):has(.versiculo-bloco)`. Script: `scripts/css_cartas_en_es.py` (simulação por padrão; `--apply` com backup `_backups/css-cartas-en-es-20261013-154840.zip`).
+
+**Prova de que PT e o resto não mudaram.**
+- Só acréscimo: o arquivo antigo é prefixo exato do novo; só CRLF; o gravado é idêntico, byte a byte, à simulação aprovada; nova simulação depois do apply = 0 mudanças.
+- 4.153 páginas carregam `bloco.css` (pt-BR 1.647, en 1.252, es 1.252, 2 com `lang` malformado: Josué 16 e Juízes 9). Varredura do HTML e verificação no Chrome de **todas** as 4.153 (cada página carregada com o CSS novo, perguntando ao navegador quais elementos casam com as regras novas): casam 286 (143 EN + 143 ES), **0 PT**.
+- Estilo calculado EN/ES × PT nos elementos de leitura (Rm 8, Ap 1, Ap 22, 1 Jo 1, Hb 11, Fm 1, 2 Tm 4): idêntico; a única diferença é o próprio idioma (`-webkit-locale`).
+- Sem rolagem horizontal a 390 px em 6 cartas EN/ES, em João 3 EN e em Romanos 8 PT.
+
+**Fora deste lote (decisão do Wagner, 13/10).** Atos 26 EN/ES (o PT tem CSS próprio de página inteira); navegação e rodapé duplicados no fim das cartas EN/ES (ver no lote 3); Josué 16 e Juízes 9 com `lang` malformado.
+
 ## Estado em 09/10 (fim do dia)
 
 **No ar (todos com merge commit e deploy "Deploy GitHub Pages" com sucesso, conferidos com curl)**
