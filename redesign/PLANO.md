@@ -334,6 +334,18 @@ Depois do merge: reenviar o sitemap no Search Console e pedir "Validar correçã
 
 **Próximos passos (só com OK do Wagner).** Push e PR de Marcos; depois Lucas, com o mesmo ritual.
 
+**No ar.** PR #16 mesclado pelo Wagner, merge `364f54a9` (14/10 17:00 UTC). A 1ª tentativa do deploy (run `38602880121`) falhou no passo "Upload do artefato do Pages" por timeout do serviço de artefatos do GitHub (não do conteúdo); relançada com `gh run rerun 38602880121 --failed` (OK do Wagner), a 2ª tentativa deu success (17:21 UTC). Conferido com curl: Marcos 1, 8 e 16 em PT, EN e ES no ar = `main` byte a byte (200); 3/2/1 blocos `grego-tr` com crédito e `lang="grc"`; 1 link de `grego.css` e 1 da Gentium Plus no `<head>`; versículos = JSON (3/7/3); `grego.css` no ar = `main`; Gentium Plus (greek e greek-ext) 200. Rollback: `git revert -m 1 364f54a9`.
+
+## Grego koiné em Lucas (14/10/2026, branch `feat/grego-lucas`)
+
+**Decisões.** As mesmas de Mateus e Marcos (14/10): páginas de modelo fora, grego da faixa inteira do rótulo, um PR por Evangelho. Scripts sem mudança (`--livro lucas`).
+
+**O que mudou.** Commit `d0edaaad`: `scripts/dados/grego-tr-lucas.json` (121 versículos de 8 capítulos; contra o byztxt, 75 iguais, 46 só de grafia, 0 de leitura; Lc 10:32 normalizado em NFC, U+1FD3 → U+0390; o token vazio do USFM em Lc 2:37 fica fora das citações). Commit `321c4385`: 24 páginas (caps. 1, 2, 4, 10, 15, 19, 22, 24 × PT/EN/ES), 63 blocos, +963 linhas, 0 removidas (+124.995 B em LF; o diagnóstico previa 124.998, a diferença de 3 B é a normalização de Lc 10:32 nos 3 idiomas). Maiores blocos: Lc 24:13-27 (15 versículos) e Lc 15:11-24 (14). Backup `_backups/grego-lucas-20261014-142602.zip`. As 48 páginas de modelo (caps. 3, 5–9, 11–14, 16–18, 20, 21, 23: "N:1 — Contexto e introdução" + "O Salvador Universal") ficaram de fora; rótulos fora dos formatos: 0.
+
+**Prova.** Por página: novo menos os trechos inseridos = original, byte a byte; citações e `<img>` idênticas; quebra de linha preservada; grego lido da página = JSON. Gravado = simulação aprovada (24/24); backup = HEAD (24/24); nova simulação = 0 mudanças. Chrome: prints de Lc 15 e Lc 24 (PT/EN/ES, 1280 e 390 px, aberto e fechado; aberto em tela alta); a 390 px o bloco de Lc 24:13-27 aberto tem ~2.700 px de altura, sem cortes. 24 páginas a 390 e 360 px com todos os blocos abertos, sem rolagem horizontal, Gentium Plus carregada.
+
+**Próximos passos (só com OK do Wagner).** Push e PR de Lucas; depois do merge, conferir no ar (Lucas 1, 15 e 24). Com Lucas, os três sinóticos ficam completos nas páginas com citação real (84 páginas, 234 blocos). Em aberto: as 120 páginas de modelo dos três Evangelhos (40 por idioma) (editorial, "frente 0") e, se desejado, um "ver mais" para blocos longos (CSS novo).
+
 ## Estado em 13/10 (fim do dia)
 
 **No ar (merge commit e deploy "Deploy GitHub Pages" com sucesso, conferidos com curl)**
