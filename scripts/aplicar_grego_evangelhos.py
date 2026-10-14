@@ -1,4 +1,4 @@
-"""Camada do grego koiné nos Evangelhos sinóticos (PT, EN e ES) — generalização do piloto de João 3.
+"""Camada do grego koiné nos Evangelhos (PT, EN e ES) — generalização do piloto de João 3.
 
 O que muda (só acréscimos; nenhum texto bíblico ou de estudo existente é alterado), por livro (--livro):
   • nas páginas de capítulo PT, EN e ES que têm citações reais:
@@ -12,9 +12,10 @@ Texto grego: scripts/dados/grego-tr-<livro>.json, gerado por scripts/extrair_gre
 Door43 STR/el-x-koine_trs (Scrivener 1894, CC BY-SA 4.0), commit 4107626c, conferido contra o byztxt.
 
 Decisões do Wagner (14/10/2026): (a) páginas de modelo ("<Livro> N:1" = "Contexto e introdução ao
-capítulo N" + "<Livro> N — Teologia Central"/"O Servo Sofredor"/"O Salvador Universal") ficam de fora;
-(b) grego da faixa inteira do rótulo, mesmo com citação resumida; (c) um PR por Evangelho, começando
-por Mateus. Rótulos e crédito: os aprovados no piloto (13/10/2026), importados de aplicar_grego_jo3.py.
+capítulo N" + "<Livro> N — Teologia Central"/"O Servo Sofredor"/"O Salvador Universal"/"A Teologia
+Joanina") ficam de fora; (b) grego da faixa inteira do rótulo, mesmo com citação resumida; (c) um PR por
+Evangelho, começando por Mateus; João entra depois dos sinóticos, com o cap. 3 do piloto como "já tem".
+Rótulos e crédito: os aprovados no piloto (13/10/2026), importados de aplicar_grego_jo3.py.
 
 Fora do padrão, sem palpite (página pulada e listada como "decisão pendente"): rótulo fora dos formatos
 "<Livro> C:V" e "<Livro> C:V-W" do próprio capítulo, página mista (modelo + citação), faixas diferentes
@@ -49,6 +50,10 @@ LIVROS = {
     "lucas": dict(sigla="LUK", usfm="43-LUK.usfm", byz="LU.SCV", acf="lc", caps=24,
                   pt=("08-novo-testamento/lucas/capitulos/capitulo-{:02d}.html", "Lucas"),
                   en=("en/luke-{}/index.html", "Luke"), es=("es/lucas-{}/index.html", "Lucas")),
+    # João 3 já tem a camada do piloto (aplicar_grego_jo3.py): aparece como "já tem" e não é tocado.
+    "joao": dict(sigla="JHN", usfm="44-JHN.usfm", byz="JOH.SCV", acf="jo", caps=21,
+                 pt=("08-novo-testamento/joao/capitulos/capitulo-{:02d}.html", "João"),
+                 en=("en/john-{}/index.html", "John"), es=("es/juan-{}/index.html", "Juan")),
 }
 
 RX_REF = re.compile(rb'<div class="verse-ref">(.*?)</div>', re.S)

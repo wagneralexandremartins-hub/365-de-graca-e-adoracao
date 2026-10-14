@@ -346,6 +346,18 @@ Depois do merge: reenviar o sitemap no Search Console e pedir "Validar correçã
 
 **Próximos passos (só com OK do Wagner).** Push e PR de Lucas; depois do merge, conferir no ar (Lucas 1, 15 e 24). Com Lucas, os três sinóticos ficam completos nas páginas com citação real (84 páginas, 234 blocos). Em aberto: as 120 páginas de modelo dos três Evangelhos (40 por idioma) (editorial, "frente 0") e, se desejado, um "ver mais" para blocos longos (CSS novo).
 
+**No ar.** PR #17 mesclado pelo Wagner, merge `21af4857` (14/10 17:33 UTC), deploy run `38607723760` (success na 1ª tentativa, 17:35 UTC). Conferido com curl: Lucas 1, 15 e 24 em PT, EN e ES no ar = `main` byte a byte (200); 4/3/3 blocos `grego-tr` com crédito e `lang="grc"`; 1 link de `grego.css` e 1 da Gentium Plus no `<head>`; versículos = JSON (21/29/23); `grego.css` no ar = `main`; Gentium Plus (greek e greek-ext) 200. Rollback: `git revert -m 1 21af4857`.
+
+## Grego koiné em João (14/10/2026, branch `feat/grego-joao`)
+
+**Decisões do Wagner (14/10).** Estender a camada a João com o mesmo ritual; João 3 (piloto, PR #11) não é tocado. Aprovada a regra do "item vazio" de número composto (Jo 6:19, "εἰκοσιπέντε": o Door43 escreve o número inteiro numa palavra e acrescenta uma linha sem texto só com o lema πέντε). As junções οὐκέτι/μήτις na regra de grafia do extrator ficaram de fora por ora.
+
+**O que mudou.** Commit `5cb7c320`: scripts aceitam `--livro joao` (entrada `joao` em `aplicar_grego_evangelhos.py`; no extrator, SHA-256 do `JOH.SCV`, regra do item vazio — só quando as duas linhas são numerais e a anterior tem a forma escrita; os casos citados vão para `"itens_vazios_aceitos"` — e comparação do JSON sem o CR da cópia local). Regressão: os JSON de Mateus, Marcos e Lucas saem idênticos byte a byte. Commit `03a1e0fd`: `scripts/dados/grego-tr-joao.json` (103 versículos: 93 novos e os 10 de João 3, idênticos aos do piloto e não reaplicados; contra o byztxt, 76 iguais, 27 só de grafia, 0 de leitura; `"itens_vazios_aceitos": ["6:19"]`). Commit `873ca0bb`: 36 páginas (caps. 1, 4, 6, 10, 11, 13, 14, 15, 17, 19, 20, 21 × PT/EN/ES), 108 blocos, +1.287 linhas, 0 removidas (+144.159 B em LF, igual ao previsto). Backup `_backups/grego-joao-20261014-152259.zip`. As 24 páginas de modelo (caps. 2, 5, 7, 8, 9, 12, 16, 18: "N:1 — Contexto e introdução" + "A Teologia Joanina") ficaram de fora; João 3 aparece como "já tem" e segue idêntico; rótulos fora dos formatos: 0. Em João 6 os blocos estão na ordem 35 · 51-56 · 19-20 (fora da ordem dos versículos; o script lida com isso).
+
+**Prova.** Por página: novo menos os trechos inseridos = original, byte a byte; citações e `<img>` idênticas; quebra de linha preservada; grego lido da página = JSON. Gravado = simulação aprovada (36/36); backup = HEAD (36/36); nova simulação = 0 mudanças; João 3 sem nenhum diff. Chrome: prints de Jo 6:19-20 (simulado) e Jo 3:16 (controle, piloto) em PT/EN/ES, 1280 e 390 px, aberto e fechado; 36 páginas a 390 e 360 px com todos os blocos abertos, sem rolagem horizontal, Gentium Plus carregada.
+
+**Próximos passos (só com OK do Wagner).** Push e PR de João; depois do merge, conferir no ar (João 1, 6 e 21, e João 3 inalterado). Com João, os quatro Evangelhos ficam completos nas páginas com citação real (120 páginas novas + 3 do piloto). Em aberto: as 144 páginas de modelo dos Evangelhos (48 por idioma; editorial, "frente 0"), um "ver mais" para blocos longos (CSS novo) e, se desejado, as junções οὐκέτι/μήτις na regra de grafia do extrator.
+
 ## Estado em 13/10 (fim do dia)
 
 **No ar (merge commit e deploy "Deploy GitHub Pages" com sucesso, conferidos com curl)**
