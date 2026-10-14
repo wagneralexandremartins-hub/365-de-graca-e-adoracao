@@ -310,6 +310,18 @@ Depois do merge: reenviar o sitemap no Search Console e pedir "Validar correçã
 
 **No ar.** PR #11, merge `c48d4204`, deploy run `38463079906` (success, 13/10 20:28 UTC). Conferido com curl: as três páginas de João 3 no ar = `main` byte a byte; em cada idioma, 4 de 4 `<details class="grego-tr">` logo depois das citações, 10 de 10 versículos idênticos à Door43, rótulo, `lang="grc"` e crédito presentes; `grego.css` no ar = `main`; Gentium Plus (subconjuntos greek e greek-ext) respondendo 200. Rollback: `git revert -m 1 c48d4204`.
 
+## Grego koiné em Mateus (14/10/2026, branch `feat/grego-mateus`)
+
+**Decisões do Wagner (14/10).** Estender a camada do piloto de João 3 a Mateus, Marcos e Lucas, em PT, EN e ES, um PR por Evangelho, começando por Mateus. (a) Páginas de modelo ficam de fora: "N:1" com "Contexto e introdução ao capítulo N" e "N — Teologia Central" (em Marcos "O Servo Sofredor", em Lucas "O Salvador Universal"). (b) O grego mostra a faixa inteira do rótulo, mesmo quando a citação está resumida com reticências. Rótulos, crédito, `<head>` e marca `grego-tr:v1` são os do piloto.
+
+**Diagnóstico (só leitura).** Por idioma: Mateus 28 págs. (12 com citação real, 39 blocos), Marcos 16 (8, 18), Lucas 24 (8, 21); as outras 40 por idioma são de modelo. Rótulos só `C:V` e `C:V-W`; nenhum cruza capítulos. Nenhuma anomalia de estrutura (1 `</head>`, git em LF, cópia local em CRLF). Numeração idêntica no Door43, no byztxt e na ACF do site (`biblia/`) nos 68 capítulos; 0 diferenças de leitura Door43 × byztxt nos três livros. Acréscimo estimado: ~150 KB (Mateus), ~68 KB (Marcos), ~125 KB (Lucas), em LF.
+
+**O que mudou.** Commit `9724a50f`: `scripts/extrair_grego_door43.py` (gera os dados, com SHA-256 das fontes fixado, reprodução byte a byte dos 10 versículos do piloto e conferência contra o byztxt `6049a43b`), `scripts/aplicar_grego_evangelhos.py` (`--livro mateus|marcos|lucas`, simulação por padrão) e `scripts/dados/grego-tr-mateus.json` (94 versículos; 65 iguais ao byztxt, 29 só de grafia, 0 de leitura; Mt 3:3 normalizado em NFC, U+1FD3 → U+0390). Commit `b4777bd9`: 36 páginas (caps. 1–7, 13, 16, 26, 27, 28 × PT/EN/ES), 117 blocos, +1.362 linhas, 0 removidas. Backup `_backups/grego-mateus-20261014-130434.zip`. As 48 páginas de modelo (caps. 8–12, 14, 15, 17–25) ficaram de fora.
+
+**Prova.** Por página: novo menos os trechos inseridos = original, byte a byte; citações e `<img>` idênticas; quebra de linha preservada; grego lido da página = JSON. Gravado = simulação aprovada (36/36); backup = HEAD (36/36); nova simulação = 0 mudanças. Chrome: prints de Mateus 5 (PT/EN/ES, 1280 e 390 px, aberto e fechado) aprovados; 36 páginas a 390 e 360 px com todos os blocos abertos, sem rolagem horizontal, Gentium Plus carregada.
+
+**Próximos passos (só com OK do Wagner).** Push e PR de Mateus; depois Marcos e Lucas, cada um com `extrair_grego_door43.py --livro <livro>` e o mesmo ritual. As páginas de modelo dos três Evangelhos são assunto editorial (ver "frente 0" do plano das Perguntas).
+
 ## Estado em 13/10 (fim do dia)
 
 **No ar (merge commit e deploy "Deploy GitHub Pages" com sucesso, conferidos com curl)**
