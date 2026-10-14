@@ -358,6 +358,26 @@ Depois do merge: reenviar o sitemap no Search Console e pedir "Validar correçã
 
 **Próximos passos (só com OK do Wagner).** Push e PR de João; depois do merge, conferir no ar (João 1, 6 e 21, e João 3 inalterado). Com João, os quatro Evangelhos ficam completos nas páginas com citação real (120 páginas novas + 3 do piloto). Em aberto: as 144 páginas de modelo dos Evangelhos (48 por idioma; editorial, "frente 0"), um "ver mais" para blocos longos (CSS novo) e, se desejado, as junções οὐκέτι/μήτις na regra de grafia do extrator.
 
+**No ar.** PR #18 mesclado pelo Wagner, merge `476eede0` (14/10 18:31 UTC), deploy run `38615945866` (success na 1ª tentativa, 18:33 UTC). Conferido com curl: João 1, 6 e 21 em PT, EN e ES no ar = `main` byte a byte (200); 4/3/2 blocos `grego-tr` com crédito e `lang="grc"`; 1 link de `grego.css` e 1 da Gentium Plus no `<head>`; versículos = JSON (6/9/5, inclusive Jo 6:19); João 3 inalterado: nos 3 idiomas, 4 blocos e 10 versículos, no ar = `main`, e as 3 páginas no git idênticas à versão do piloto (`c48d4204`); `grego.css` no ar = `main`; Gentium Plus (greek e greek-ext) 200. Com isso, os quatro Evangelhos estão no ar nas páginas com citação real (120 páginas novas + 3 do piloto). Rollback: `git revert -m 1 476eede0`.
+
+## Grego em todos os versículos do NT (decisões de 14/10/2026; nada aplicado)
+
+**Objetivo (Wagner, 14/10, por sugestão dos professores).** Levar o grego koiné (Textus Receptus 1894 Scrivener, Door43, mesma versão fixada `4107626c`, conferida contra o byztxt `6049a43b`) a todos os versículos do Novo Testamento, e não só aos citados nos estudos, livro por livro, em PT, EN e ES.
+
+**Diagnóstico (somente leitura, 14/10).** 260 páginas da Bíblia ACF em `biblia/<sigla>/<sigla>-NN.html`, estrutura uniforme nas 260 (`<div class="verse">` com `verse-number` e `verse-text`, versículos em sequência); CSS próprio embutido, sem hreflang, fora do sitemap, sem links com os estudos. EN e ES não têm Bíblia completa, só os estudos. Numeração: ACF = Door43 em 7.958 versículos; única diferença Ap 12:18 (o Door43 tem 12:18; a ACF e o byztxt põem o texto no início de 13:1); o byztxt não tem 3 Jo 1:15 (junto com o 14). As 92 diferenças contra o byztxt não são variantes de texto: 18 pares de fronteira de versículo, junções (μή πως, οὐκ ἔτι, ἐκ περισσοῦ…), numerais com keraia no Apocalipse e as subscrições paulinas, que o Door43 põe dentro do último versículo (15 livros, de Romanos a Hebreus). Linhas sem texto ainda sem regra: Mc 13:9, Hb 3:6, 3:14, 6:3 e Ap 7:4. Peso nas 260 páginas: +2,25 MB sem compressão, gzip de 1,19 para 1,89 MB (+59%); de 4 a 13 KB por capítulo (maior: Mt 26, +19,8 KB); Gentium greek + greek-ext 26 KB, uma vez.
+
+**Decisões do Wagner (14/10).**
+1. Subscrições paulinas: nota discreta fora da numeração dos versículos.
+2. Ap 12:18 segue a ACF (o grego entra no versículo em que a ACF põe o texto), com nota sobre a numeração do Scrivener.
+3. Layout: uma linha de grego abaixo de cada versículo, visível por padrão, com um botão por capítulo para ocultar/mostrar; crédito da licença uma vez por capítulo, no fim dos versículos (mesmo texto do piloto).
+4. EN e ES: KJV e Reina-Valera 1909 (domínio público) aprovadas em princípio para a segunda frente, com conferência de numeração por livro. As citações atuais dos estudos (EN aparentemente ESV, ES RVR1960) têm copyright e não servem para capítulos inteiros.
+5. As páginas `biblia/` ficam fora do sitemap até o piloto de João 3 ser avaliado.
+
+**Plano em fases (cada fase e cada livro só com OK do Wagner, no ritual dos Evangelhos: simulação, prints, `--apply` com backup, um PR por livro).**
+- **Fase 1 — piloto em PT: `biblia/jo/jo-03.html`** (36 versículos). Prova: os 10 versículos do piloto saem idênticos ao JSON publicado; regras novas no `grego.css` (linha do versículo, botão, nota); avaliação no ar antes de seguir.
+- **Fase 2 — Proposta B em PT, livro por livro, do menor risco ao maior:** 2 Jo, Jd, Tg, 1 Pe, 2 Pe, 1 Jo; 3 Jo; cartas paulinas com a nota de subscrição (Fp, Cl, 2 Ts, Tt, Fm, 1 Ts, 1 Tm, 2 Tm, Gl, Ef, 1 Co, 2 Co, Rm); Hebreus (resolver as linhas sem texto); Jo, Mt, Lc, At, Mc (13:9); Apocalipse por último (12:18, numerais, 7:4). Dados num JSON por livro com todos os versículos (`scripts/dados/grego-nt/<livro>.json`); os JSON dos estudos não mudam.
+- **Fase 3 — segunda frente, EN e ES (só depois da Fase 2 avaliada):** 260 páginas novas em cada idioma com KJV e RV1909 de fonte fixada e o grego embaixo; links "Estudo deste capítulo" / "Ler o capítulo inteiro" (só marcação), hreflang entre as três versões, canonical próprio; sitemap decidido depois do piloto.
+
 ## Estado em 13/10 (fim do dia)
 
 **No ar (merge commit e deploy "Deploy GitHub Pages" com sucesso, conferidos com curl)**
