@@ -322,6 +322,18 @@ Depois do merge: reenviar o sitemap no Search Console e pedir "Validar correçã
 
 **Próximos passos (só com OK do Wagner).** Push e PR de Mateus; depois Marcos e Lucas, cada um com `extrair_grego_door43.py --livro <livro>` e o mesmo ritual. As páginas de modelo dos três Evangelhos são assunto editorial (ver "frente 0" do plano das Perguntas).
 
+**No ar.** PR #15 mesclado pelo Wagner, merge `418dea75` (14/10 16:12 UTC), deploy run `38596061047` (success, 16:14 UTC). Conferido com curl: Mateus 1, 5 e 26 em PT, EN e ES no ar = `main` byte a byte (200); 6/5/1 blocos `grego-tr` com crédito em cada um e `lang="grc"`; 1 link de `grego.css` e 1 da Gentium Plus no `<head>`; versículos = JSON (10/13/3); `grego.css` no ar = `main`; Gentium Plus respondendo 200 com os subconjuntos greek e greek-ext. Rollback: `git revert -m 1 418dea75`.
+
+## Grego koiné em Marcos (14/10/2026, branch `feat/grego-marcos`)
+
+**Decisões.** As mesmas de Mateus (14/10): páginas de modelo fora, grego da faixa inteira do rótulo, um PR por Evangelho. Scripts sem mudança (`extrair_grego_door43.py` e `aplicar_grego_evangelhos.py --livro marcos`).
+
+**O que mudou.** Commit `3aefc599`: `scripts/dados/grego-tr-marcos.json` (38 versículos de 8 capítulos; contra o byztxt, 23 iguais, 15 só de grafia, 0 de leitura; nenhum normalizado em NFC; o token vazio do USFM em Mc 13:9 fica fora das citações). Commit `5d090daf`: 24 páginas (caps. 1, 2, 4, 8, 10, 14, 15, 16 × PT/EN/ES), 54 blocos, +642 linhas, 0 removidas (+68.058 B em LF, igual ao previsto no diagnóstico). Backup `_backups/grego-marcos-20261014-135407.zip`. As 24 páginas de modelo (caps. 3, 5, 6, 7, 9, 11, 12, 13: "N:1 — Contexto e introdução" + "O Servo Sofredor") ficaram de fora; rótulos fora dos formatos: 0.
+
+**Prova.** Por página: novo menos os trechos inseridos = original, byte a byte; citações e `<img>` idênticas; quebra de linha preservada; grego lido da página = JSON. Gravado = simulação aprovada (24/24); backup = HEAD (24/24); nova simulação = 0 mudanças. Chrome: prints de Marcos 8 (bloco 8:29-33; PT/EN/ES, 1280 e 390 px, aberto e fechado) aprovados; 24 páginas a 390 e 360 px com todos os blocos abertos, sem rolagem horizontal, Gentium Plus carregada. Observação: em EN/ES a 390 px o seletor de idioma flutuante cobre o fim de alguns títulos; já era assim antes do grego.
+
+**Próximos passos (só com OK do Wagner).** Push e PR de Marcos; depois Lucas, com o mesmo ritual.
+
 ## Estado em 13/10 (fim do dia)
 
 **No ar (merge commit e deploy "Deploy GitHub Pages" com sucesso, conferidos com curl)**
