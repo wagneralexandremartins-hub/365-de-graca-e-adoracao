@@ -10,7 +10,11 @@ scripts/aplicar_grego_evangelhos.py; páginas de modelo ficam de fora — decis�
 
 Provas (se qualquer uma falhar, nada é gravado):
   • SHA-256 dos arquivos-fonte = os fixados abaixo;
-  • o USFM só tem os marcadores esperados; nenhum versículo extraído tem palavra vazia;
+  • o USFM só tem os marcadores esperados; nenhum versículo extraído tem palavra vazia — exceto o
+    "item vazio" de número composto (decisão do Wagner, 14/10/2026): o Door43 escreve o número inteiro
+    numa palavra (ex.: εἰκοσιπέντε, Jo 6:19) e acrescenta logo depois uma linha sem texto só com o 2º
+    lema (πέντε). É aceita apenas quando as duas linhas são numerais e a anterior tem a forma escrita;
+    o texto não muda e o caso fica listado em "itens_vazios_aceitos";
   • o mesmo método reproduz byte a byte os 10 versículos de João 3 do piloto;
   • todo versículo em NFC (só troca por equivalente canônico, listada em "normalizados_nfc"), sem &, < ou >;
   • nos capítulos citados, os números de versículo são os mesmos no Door43, no byztxt e na ACF do site (biblia/);
@@ -41,25 +45,41 @@ SHA256 = {
     "MT.SCV": "ac09657841358fe278cdc8e725b5f7301ca267f9427352a98ffd3f01c3091ace",
     "MR.SCV": "7fe8267676568ab61d1e97ae1e2cdcd605613fd5853b0e452473bb6bf3b19919",
     "LU.SCV": "98691cf08a155f742fed28e5e69b6bb92b1aa2c684f7b5c66cd2369d5ed8b00d",
+    "JOH.SCV": "8eeaea1cc32b7559d68691b408d45f69780eeee782aa05eb49b0526107d601b8",
 }
 RX_W = re.compile(r'^\\w ([^|]*)\|[^\\]*\\w\*(.*)$')
+RX_LEMA = re.compile(r'lemma="([^"]*)"')
 RX_CABECALHO = re.compile(r"^\\(id|usfm|ide|h|toc\d|mt) ")
+# numerais cardinais (lema), para reconhecer o "item vazio" de número composto
+NUMERAIS = {"εἷς", "δύο", "τρεῖς", "τέσσαρες", "πέντε", "ἕξ", "ἑπτά", "ὀκτώ", "ἐννέα", "δέκα", "δώδεκα",
+            "εἴκοσι", "τριάκοντα", "τεσσαράκοντα", "τεσσεράκοντα", "πεντήκοντα", "ἑξήκοντα", "ἑβδομήκοντα",
+            "ὀγδοήκοντα", "ἐνενήκοντα", "ἑκατόν", "διακόσιοι", "τριακόσιοι", "χίλιοι"}
 
 
 def le_usfm(path):
-    """{(cap, v): texto}, {(cap, v)} com palavra vazia, [linhas desconhecidas]."""
-    vs, vazios, estranhas, c, v = {}, set(), [], None, None
+    """{(cap, v): texto}, {(cap, v)} com palavra vazia, [linhas desconhecidas], {(cap, v)} com item vazio
+    de número composto aceito (a linha anterior, no mesmo versículo, é numeral com a forma escrita)."""
+    vs, vazios, estranhas, compostos, c, v = {}, set(), [], set(), None, None
+    anterior = None  # (forma, lema) da linha \w anterior no mesmo versículo
     for ln in open(path, encoding="utf-8").read().splitlines():
-        if ln.startswith("\\c "): c, v = int(ln[3:]), None
-        elif ln.startswith("\\v "): v = int(ln[3:]); vs[(c, v)] = []
+        if ln.startswith("\\c "): c, v, anterior = int(ln[3:]), None, None
+        elif ln.startswith("\\v "): v = int(ln[3:]); vs[(c, v)] = []; anterior = None
         elif ln.startswith("\\w "):
             m = RX_W.match(ln)
             if not m or v is None: estranhas.append(ln); continue
-            if not m.group(1): vazios.add((c, v)); continue
+            lema = RX_LEMA.search(ln)
+            lema = unicodedata.normalize("NFC", lema.group(1)) if lema else ""
+            if not m.group(1):
+                if anterior and anterior[0] and anterior[1] in NUMERAIS and lema in NUMERAIS:
+                    compostos.add((c, v))
+                else:
+                    vazios.add((c, v))
+                anterior = ("", lema); continue
             vs[(c, v)].append(m.group(1) + m.group(2).strip())
+            anterior = (m.group(1), lema)
         elif ln in ("\\p", "") or RX_CABECALHO.match(ln): pass
         else: estranhas.append(ln)
-    return {k: " ".join(w) for k, w in vs.items()}, vazios, estranhas
+    return {k: " ".join(w) for k, w in vs.items()}, vazios, estranhas, compostos
 
 
 TRANSLIT = dict(zip("αβγδεζηθικλμνξοπρστυφχψως", "abgdezhyiklmnxoprstufcqwv"))
@@ -107,7 +127,7 @@ def main():
         print("uso: --livro " + "|".join(ap.LIVROS) + " (--baixar PASTA | --fontes PASTA [--gravar])"); return 2
     livro = sys.argv[sys.argv.index("--livro") + 1]
     cfg = ap.LIVROS[livro]
-    arquivos = [cfg["usfm"], "44-JHN.usfm", cfg["byz"]]
+    arquivos = list(dict.fromkeys([cfg["usfm"], "44-JHN.usfm", cfg["byz"]]))  # em João, 44-JHN aparece uma vez só
     if "--baixar" in sys.argv:
         dest = os.path.abspath(sys.argv[sys.argv.index("--baixar") + 1])
         if dest.startswith(ROOT): print("--baixar precisa de pasta fora do repositório"); return 1
@@ -120,8 +140,8 @@ def main():
     fontes = os.path.abspath(sys.argv[sys.argv.index("--fontes") + 1])
     provas = {f"SHA-256 de {f} = fixado": sha(os.path.join(fontes, f)) == SHA256[f] for f in arquivos}
 
-    texto, vazios, estranhas = le_usfm(os.path.join(fontes, cfg["usfm"]))
-    jhn, _, estr_jhn = le_usfm(os.path.join(fontes, "44-JHN.usfm"))
+    texto, vazios, estranhas, compostos = le_usfm(os.path.join(fontes, cfg["usfm"]))
+    jhn, _, estr_jhn, _ = le_usfm(os.path.join(fontes, "44-JHN.usfm"))
     src = open(os.path.join(ROOT, "scripts", "aplicar_grego_jo3.py"), encoding="utf-8").read()
     piloto = ast.literal_eval(re.search(r"GREGO = (\{.*?\n\})", src, re.S).group(1))
     provas[f"USFM só com marcadores esperados ({len(estranhas)} linhas desconhecidas)"] = not estranhas and not estr_jhn
@@ -176,6 +196,9 @@ def main():
         "normalizados_nfc": normalizados,
         "versiculos": versos,
     }
+    aceitos = [f"{c}:{v}" for c, v in citados if (c, v) in compostos]
+    if aceitos:  # só aparece quando há caso citado (os JSON de Mateus, Marcos e Lucas não mudam)
+        dados = {k: dados[k] for k in list(dados)[:-1]} | {"itens_vazios_aceitos": aceitos, "versiculos": versos}
     dados["conferencia"]["so_grafia"] = [f"{c}:{v}" for c, v in dados["conferencia"]["so_grafia"]]
     dados["conferencia"]["diferencas_de_leitura"] = [f"{c}:{v}" for c, v in dados["conferencia"]["diferencas_de_leitura"]]
     saida = (json.dumps(dados, ensure_ascii=False, indent=1) + "\n").encode("utf-8")
@@ -192,11 +215,14 @@ def main():
     print(f"  byztxt (livro inteiro, só informativo): {len(texto)} versículos, {sum(r == 'igual' for r in cmp_livro.values())} iguais, "
           f"{sum(r == 'grafia' for r in cmp_livro.values())} só grafia, {len(lv)} outros (divisão de versículo/variante): "
           f"{[f'{c}:{v}' for c, v in sorted(lv)]}")
+    if compostos: print(f"  itens vazios de número composto (aceitos; texto completo na linha anterior): {sorted(compostos)}"
+                        + (f" — citados: {aceitos}" if aceitos else ""))
     if vazios: print(f"  palavras vazias no USFM (fora das citações): {sorted(vazios)}")
     if not all(provas.values()):
         print("Prova falhou: nada gravado."); return 1
     destino = ap.caminho_dados(livro)
-    atual = open(destino, "rb").read() if os.path.exists(destino) else None
+    # o git guarda LF; com core.autocrlf a cópia local pode estar em CRLF — compara sem o CR
+    atual = open(destino, "rb").read().replace(b"\r\n", b"\n") if os.path.exists(destino) else None
     print(f"\n{os.path.relpath(destino, ROOT)}: {len(saida)} bytes, "
           + ("idêntico ao existente" if atual == saida else "NOVO" if atual is None else "DIFERENTE do existente"))
     if "--gravar" not in sys.argv:
