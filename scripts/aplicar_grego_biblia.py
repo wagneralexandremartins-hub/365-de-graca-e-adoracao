@@ -69,6 +69,20 @@ LIVROS = {
                    (1, 20): [("Πνεύματι Ἁγίω", "Πνεύματι Ἁγίῳ", "falta o iota subscrito do dativo")],
                    (1, 22): [("διακρινομένοι", "διακρινόμενοι", "acento na sílaba errada (particípio -όμενοι)")],
                }),
+    # Fase 2, lote 2 (15/10/2026): Tiago, em PT
+    # numeração ACF = Door43 = byztxt nos 5 capítulos (sem nota); lista de correções conferida e aprovada pelo
+    # Wagner em 15/10/2026, incluindo 1:26 (mudança de sílaba do acento)
+    "tg": dict(sigla="tg", nome="Tiago", usfm="60-JAS.usfm", byz="JAS.SCV", caps=5, autorizados=[1, 2, 3, 4, 5],
+               correcoes={
+                   (1, 12): [("λήψεταί τὸν", "λήψεται τὸν", "agudo de enclítica antes de τόν, que não é enclítica")],
+                   (1, 26): [("θρησκὸς", "θρῆσκος", "acento na sílaba errada (forma dos léxicos: θρῆσκος)")],
+                   (2, 2): [("τήν συναγωγὴν", "τὴν συναγωγὴν", "agudo final antes de palavra (grave)")],
+                   (2, 18): [("κἀγώ δείξω", "κἀγὼ δείξω", "agudo final antes de palavra (grave)")],
+                   (3, 5): [("μεγάλαυχεῖ", "μεγαλαυχεῖ", "dois acentos na mesma palavra")],
+                   (3, 12): [("οὐδεμια", "οὐδεμία", "palavra sem acento")],
+                   (4, 13): [("τήν πόλιν", "τὴν πόλιν", "agudo final antes de palavra (grave)"),
+                             ("κερδήσομεν", "κερδήσομεν·", "versículo sem pontuação no fim (a frase continua no v. 14)")],
+               }),
 }
 # opção B do Wagner (15/10/2026): corrigir só acentos e pontuação desses versículos, com a lista para conferência.
 # Enquanto ele não conferir a lista, o --apply é recusado. Lista conferida e aprovada pelo Wagner em 15/10/2026.
@@ -81,6 +95,9 @@ SHA256 = dict(ex.SHA256, **{
     "2JO.SCV": "a1209c57cd8f58b40387edc3cb05f5684d8462f1d7159abf1a7cd2dd346de867",
     "3JO.SCV": "a53f4b694798fbe7280370721c32d29341236285fcebdf122f849b9b01825239",
     "JUDE.SCV": "dcb4d44026cf725f834af94158c936d0f422ab6fd465a1c383d25de7c313c480",
+    # lote 2 (15/10/2026); hash git conferido no Door43 (114dcf7a) e no GitHub (984262b0)
+    "60-JAS.usfm": "a8ef92440a13fed410ecb5233e914e015bee91f6b48aa197dc227fbec7fada17",
+    "JAS.SCV": "a3147f8c8e585428012b187c0cc8195b61a71374023b47831bbb1499585a332f",
 })
 
 MARCA_INI, MARCA_FIM = "<!-- grego-biblia:v1 -->", "<!-- /grego-biblia:v1 -->"
