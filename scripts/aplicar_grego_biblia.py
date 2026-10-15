@@ -1,0 +1,272 @@
+"""Grego koiné em todos os versículos de um capítulo da Bíblia ACF (biblia/<sigla>/<sigla>-NN.html).
+
+Decisões do Wagner (14/10/2026, redesign/PLANO.md, "Grego em todos os versículos do NT"):
+  • uma linha de grego abaixo de cada versículo, visível por padrão, com um botão por capítulo para
+    ocultar/mostrar; crédito da licença uma vez por capítulo, no fim dos versículos (texto do piloto);
+  • dados num JSON por livro com todos os versículos (scripts/dados/grego-nt/<livro>.json); os JSON dos
+    estudos (scripts/dados/grego-tr-*.json) não mudam;
+  • Fase 1 = piloto em PT só em biblia/jo/jo-03.html.
+
+Fonte: a mesma dos estudos (scripts/extrair_grego_door43.py) — Door43 STR/el-x-koine_trs, commit
+4107626c, Textus Receptus 1894 Scrivener, CC BY-SA 4.0; conferência no byztxt 6049a43b.
+
+O que muda (só com --apply):
+  • scripts/dados/grego-nt/<livro>.json — novo (gravado com 'xb');
+  • assets/js/grego-biblia.js — novo (botão ocultar/mostrar; sem JS o botão fica escondido e o grego visível);
+  • assets/css/grego.css — regras novas acrescentadas no fim (classes que nenhuma outra página usa);
+  • a página do capítulo: 1 bloco no <head>, o botão antes de <div class="verses">, 1 linha
+    <span class="verso-grego" lang="grc"> depois de cada <span class="verse-text">, o crédito depois
+    do fim de .verses. Nenhum byte do texto existente muda.
+
+Provas (se qualquer uma falhar, nada é gravado):
+  • SHA-256 das fontes = fixados; USFM sem marcadores desconhecidos;
+  • o livro inteiro sem palavra vazia nos capítulos aplicados; numeração ACF = Door43 = byztxt no capítulo;
+  • no capítulo, Door43 = byztxt (só diferenças de grafia);
+  • os versículos já publicados nos estudos (grego-tr-<livro>.json) saem idênticos;
+  • página: novo menos os trechos inseridos = original, byte a byte; quebra de linha preservada;
+    36 de 36 versículos com grego e na ordem; grego lido de volta da página = JSON;
+  • nova simulação depois de gravar = 0 mudanças (idempotente).
+
+Uso:
+  python -X utf8 scripts/aplicar_grego_biblia.py --livro joao --caps 3 --fontes PASTA            # simulação
+  python -X utf8 scripts/aplicar_grego_biblia.py --livro joao --caps 3 --fontes PASTA --apply    # grava (com backup)
+  (PASTA = a mesma do extrair_grego_door43.py --baixar, fora do repositório)
+"""
+import datetime, html, json, os, re, sys, unicodedata, zipfile
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(ROOT, "scripts"))
+import extrair_grego_door43 as ex
+import aplicar_grego_jo3 as piloto
+
+LIVROS = {
+    "joao": dict(sigla="jo", nome="João", usfm="44-JHN.usfm", byz="JOH.SCV", caps=21),
+}
+
+MARCA_INI, MARCA_FIM = "<!-- grego-biblia:v1 -->", "<!-- /grego-biblia:v1 -->"
+HEAD = [
+    MARCA_INI,
+    '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus&amp;display=swap">',
+    '<link rel="stylesheet" href="/assets/css/grego.css">',
+    '<script src="/assets/js/grego-biblia.js" defer></script>',
+    MARCA_FIM,
+]
+# rótulos do botão (regras-365: rótulo novo passa pelo Wagner) — aprovados em 15/10/2026
+ROTULO_OCULTAR, ROTULO_MOSTRAR = "Ocultar o grego", "Mostrar o grego"
+ROTULOS_APROVADOS = True
+CREDITO = piloto.PAGINAS["pt"]["credito"]  # aprovado em 13/10/2026
+
+CSS_MARCA = "/* grego-biblia:v1"
+CSS_NOVO = """/* grego-biblia:v1 — grego em todos os versículos da Bíblia ACF (biblia/), inserido por scripts/aplicar_grego_biblia.py.
+   Linha abaixo de cada versículo, visível por padrão; o botão (assets/js/grego-biblia.js) só aparece com JS. */
+.verso-grego { display: block; text-indent: 0; margin: 0.2rem 0 0; font-family: "Gentium Plus", "Noto Serif", "Times New Roman", serif; font-size: 1.08em; line-height: 1.7; color: #b4c0d3; }
+.verses.sem-grego .verso-grego { display: none; }
+.grego-alternar { display: block; margin: 0 0 1.4rem auto; padding: 0.4rem 0.9rem; font-family: var(--font-ui, system-ui, sans-serif); font-size: 0.85rem; font-weight: 600; color: #5dade2; background: transparent; border: 1px solid #5dade2; border-radius: 5px; cursor: pointer; }
+.grego-alternar:hover { background: rgba(93,173,226,0.12); }
+.grego-alternar:focus-visible { outline: 2px solid #5dade2; outline-offset: 2px; }
+.grego-alternar[hidden] { display: none; }
+.grego-credito.grego-capitulo { margin: 1.6rem 0 0; padding: 0.8rem 0 0; border-top: 1px solid #2a3f5f; }
+"""
+
+JS_NOVO = """/* grego-biblia:v1 — botão ocultar/mostrar o grego nos capítulos da Bíblia ACF (scripts/aplicar_grego_biblia.py).
+   Sem JS o botão fica escondido e o grego visível. */
+(function () {
+  var b = document.querySelector('[data-grego-alternar]');
+  var v = b && document.getElementById(b.getAttribute('aria-controls'));
+  if (!v) return;
+  b.hidden = false;
+  b.addEventListener('click', function () {
+    var oculto = v.classList.toggle('sem-grego');
+    b.setAttribute('aria-pressed', oculto ? 'true' : 'false');
+    b.textContent = oculto ? b.getAttribute('data-mostrar') : b.getAttribute('data-ocultar');
+  });
+})();
+"""
+
+RX_VERSO = re.compile(rb'(<div class="verse">\s*<span class="verse-number">(\d+)</span>\s*<span class="verse-text">.*?</span>)(\s*</div>)', re.S)
+ABRE_VERSES = b'<div class="verses">'
+
+
+def caminho_json(livro):
+    return os.path.join(ROOT, "scripts", "dados", "grego-nt", f"{livro}.json")
+
+
+def gera_json(livro, cfg, fontes, provas):
+    arquivos = [cfg["usfm"], cfg["byz"]]
+    for f in arquivos:
+        provas[f"SHA-256 de {f} = fixado"] = ex.sha(os.path.join(fontes, f)) == ex.SHA256[f]
+    texto, vazios, estranhas, compostos = ex.le_usfm(os.path.join(fontes, cfg["usfm"]))
+    provas["USFM só com marcadores esperados"] = not estranhas
+    byz = ex.le_scv(os.path.join(fontes, cfg["byz"]))
+    versos = {f"{c}:{v}": unicodedata.normalize("NFC", t) for (c, v), t in sorted(texto.items())}
+    provas["NFC só troca por equivalentes canônicos"] = all(
+        unicodedata.normalize("NFD", versos[f"{c}:{v}"]) == unicodedata.normalize("NFD", t) for (c, v), t in texto.items())
+    provas["sem &, < ou > no grego"] = all(not set(t) & set("&<>") for t in versos.values())
+    cmp = {k: ex.compara(ex.translit(t), byz.get(k, [])) for k, t in texto.items()}
+    fmt = lambda ks: [f"{c}:{v}" for c, v in sorted(ks)]
+    dados = {
+        "livro": livro,
+        "fonte": {"texto": "Textus Receptus 1894 Scrivener", "edicao": "Door43 STR/el-x-koine_trs",
+                  "licenca": "CC BY-SA 4.0", "url": "https://git.door43.org/STR/el-x-koine_trs",
+                  "commit": ex.DOOR43_COMMIT, "arquivo": cfg["usfm"], "sha256": ex.SHA256[cfg["usfm"]]},
+        "conferencia": {"texto": "byztxt greektext-scrivener (Robinson, domínio público)",
+                        "commit": ex.BYZ_COMMIT, "arquivo": "textonly/" + cfg["byz"], "sha256": ex.SHA256[cfg["byz"]],
+                        "versiculos": len(cmp), "iguais": sum(r == "igual" for r in cmp.values()),
+                        "so_grafia": sum(r == "grafia" for r in cmp.values()),
+                        "outros": fmt(k for k, r in cmp.items() if r == "leitura")},
+        "adaptacao": "só as palavras e a pontuação da fonte (sem lema, Strong e morfologia), Unicode NFC",
+        "normalizados_nfc": fmt(k for k, t in texto.items() if unicodedata.normalize("NFC", t) != t),
+        "itens_vazios_aceitos": fmt(compostos),
+        "palavras_vazias": fmt(vazios),
+        "versiculos": versos,
+    }
+    # os versículos já publicados nos estudos saem idênticos
+    estudos = json.load(open(os.path.join(ROOT, "scripts", "dados", f"grego-tr-{livro}.json"), encoding="utf-8"))["versiculos"]
+    provas[f"os {len(estudos)} versículos publicados nos estudos = JSON novo"] = all(versos.get(k) == t for k, t in estudos.items())
+    return dados, texto, byz, cmp, vazios
+
+
+def aplica_pagina(antigo, cap, versos_cap, pv):
+    """Devolve (novo, insercoes, ordem). insercoes = [(posição no original, bytes)]."""
+    nl = b"\r\n" if antigo.count(b"\r\n") == antigo.count(b"\n") else b"\n"
+    pv["quebra de linha uniforme"] = antigo.count(b"\r\n") in (0, antigo.count(b"\n"))
+    ins = []
+    i_head = antigo.find(nl + b"</head>")
+    pv["</head> único"] = antigo.count(b"</head>") == 1 and i_head > 0
+    ins.append((i_head + len(nl), nl.join(h.encode() for h in HEAD) + nl))
+    pv['<div class="verses"> único'] = antigo.count(ABRE_VERSES) == 1
+    i_vs = antigo.find(ABRE_VERSES)
+    recuo = antigo[antigo.rfind(b"\n", 0, i_vs) + 1:i_vs]
+    botao = (f'<button type="button" class="grego-alternar" data-grego-alternar aria-controls="versiculos" '
+             f'aria-pressed="false" data-ocultar="{ROTULO_OCULTAR}" data-mostrar="{ROTULO_MOSTRAR}" hidden>'
+             f'{ROTULO_OCULTAR}</button>').encode()
+    ins.append((i_vs, botao + nl + recuo))
+    ins.append((i_vs + len(b'<div class="verses"'), b' id="versiculos"'))
+    ordem = []
+    for m in RX_VERSO.finditer(antigo):
+        v = int(m.group(2)); ordem.append(v)
+        linha_txt = antigo[antigo.rfind(b"\n", 0, m.end(1)) + 1:m.end(1)]
+        recuo_v = re.match(rb"[ \t]*", linha_txt).group(0)
+        g = versos_cap.get(v)
+        if g is None: continue
+        ins.append((m.end(1), nl + recuo_v + f'<span class="verso-grego" lang="grc">{g}</span>'.encode()))
+    # crédito: logo depois do </div> que fecha .verses (o 1º "</div>" de mesma indentação depois do último versículo)
+    fim_ult = [m.end(3) for m in RX_VERSO.finditer(antigo)][-1]
+    fecha = nl + recuo + b"</div>"
+    i_fecha = antigo.find(fecha, fim_ult)
+    pv["fim de .verses encontrado logo depois do último versículo"] = i_fecha > 0 and antigo[fim_ult:i_fecha].strip() == b""
+    cred = nl + recuo + f'<p class="grego-credito grego-capitulo">{CREDITO}</p>'.encode()
+    ins.append((i_fecha + len(fecha), cred))
+    ins.sort(key=lambda t: t[0])
+    novo, pos = b"", 0
+    for p, b in ins:
+        novo += antigo[pos:p] + b; pos = p
+    novo += antigo[pos:]
+    # prova: no novo, cada trecho está onde deveria; tirando-os, volta o original byte a byte
+    partes, pos, desloc, no_lugar = [], 0, 0, True
+    for p, b in ins:
+        q = p + desloc
+        no_lugar &= novo[q:q + len(b)] == b
+        partes.append(novo[pos:q]); pos = q + len(b); desloc += len(b)
+    partes.append(novo[pos:])
+    pv["novo menos os trechos inseridos = original, byte a byte"] = no_lugar and b"".join(partes) == antigo
+    pv["quebra de linha preservada (sem CR novo fora do padrão)"] = (novo.count(b"\r\n") == novo.count(b"\n")) == (nl == b"\r\n") \
+        and (nl == b"\r\n" or novo.count(b"\r") == 0)
+    return novo, ins, ordem
+
+
+def main():
+    a = sys.argv
+    if "--livro" not in a or a[a.index("--livro") + 1] not in LIVROS or "--caps" not in a or "--fontes" not in a:
+        print("uso: --livro " + "|".join(LIVROS) + " --caps N[,N...] --fontes PASTA [--apply]"); return 2
+    livro = a[a.index("--livro") + 1]; cfg = LIVROS[livro]
+    caps = [int(c) for c in a[a.index("--caps") + 1].split(",")]
+    if livro == "joao" and caps != [3]:
+        print("Fase 1 (piloto): só João 3 está autorizado."); return 2
+    fontes = os.path.abspath(a[a.index("--fontes") + 1])
+    apply = "--apply" in a
+    provas = {}
+    dados, texto, byz, cmp, vazios = gera_json(livro, cfg, fontes, provas)
+    saida_json = (json.dumps(dados, ensure_ascii=False, indent=1) + "\n").encode("utf-8")
+    dest_json = caminho_json(livro)
+    atual_json = open(dest_json, "rb").read().replace(b"\r\n", b"\n") if os.path.exists(dest_json) else None
+    provas["JSON do livro novo ou idêntico ao existente"] = atual_json in (None, saida_json)
+
+    css_path = os.path.join(ROOT, "assets", "css", "grego.css")
+    css = open(css_path, "rb").read()
+    css_nl = b"\r\n" if css.count(b"\r\n") == css.count(b"\n") else b"\n"
+    css_tem = CSS_MARCA.encode() in css
+    css_novo = css if css_tem else css + CSS_NOVO.replace("\n", css_nl.decode()).encode("utf-8")
+    provas["grego.css: só acréscimo no fim (original = prefixo)"] = css_novo.startswith(css) and css.endswith(css_nl)
+    js_path = os.path.join(ROOT, "assets", "js", "grego-biblia.js")
+    js_atual = open(js_path, "rb").read().replace(b"\r\n", b"\n") if os.path.exists(js_path) else None
+    provas["grego-biblia.js novo ou idêntico"] = js_atual in (None, JS_NOVO.encode())
+
+    paginas, relatorio = {}, []
+    for cap in caps:
+        rel = f"biblia/{cfg['sigla']}/{cfg['sigla']}-{cap:02d}.html"
+        p = os.path.join(ROOT, rel)
+        antigo = open(p, "rb").read()
+        if MARCA_INI.encode() in antigo:
+            relatorio.append((rel, "já tem", 0, 0)); continue
+        acf = [int(n) for n in re.findall(rb'<span class="verse-number">(\d+)</span>', antigo)]
+        d43 = sorted(v for c, v in texto if c == cap); bz = sorted(v for c, v in byz if c == cap)
+        provas[f"{rel}: numeração ACF = Door43 = byztxt ({len(acf)} versículos)"] = acf == d43 == bz
+        provas[f"{rel}: nenhuma palavra vazia no capítulo"] = not any(c == cap for c, _ in vazios)
+        provas[f"{rel}: Door43 = byztxt no capítulo (0 diferenças de leitura)"] = all(
+            cmp[(c, v)] != "leitura" for c, v in texto if c == cap)
+        vc = {v: dados["versiculos"][f"{cap}:{v}"] for v in d43}
+        pv = {}
+        novo, ins, ordem = aplica_pagina(antigo, cap, vc, pv)
+        for k, ok in pv.items(): provas[f"{rel}: {k}"] = ok
+        lidos = [(int(n), html.unescape(g.decode())) for n, g in re.findall(
+            rb'<span class="verse-number">(\d+)</span>\s*<span class="verse-text">.*?</span>\s*<span class="verso-grego" lang="grc">(.*?)</span>', novo, re.S)]
+        provas[f"{rel}: {len(lidos)} de {len(acf)} versículos com grego, na ordem, = JSON"] = \
+            [v for v, _ in lidos] == ordem == acf and all(g == vc[v] for v, g in lidos)
+        provas[f"{rel}: 1 bloco no head, 1 botão, 1 crédito"] = (novo.count(MARCA_INI.encode()), novo.count(b"data-grego-alternar"),
+                                                                 novo.count(b"grego-capitulo")) == (1, 1, 1)
+        paginas[rel] = (antigo, novo)
+        relatorio.append((rel, "alvo", len(ins), len(novo) - len(antigo)))
+
+    print(f"Livro: {livro} — JSON com {len(dados['versiculos'])} versículos; byztxt: {dados['conferencia']['iguais']} iguais, "
+          f"{dados['conferencia']['so_grafia']} só grafia, outros (fronteira/variante, só informativo): {dados['conferencia']['outros']}")
+    print(f"  itens vazios aceitos: {dados['itens_vazios_aceitos']}; palavras vazias: {dados['palavras_vazias']}")
+    for k, ok in provas.items():
+        print(f"  [{'ok' if ok else 'FALHOU'}] {k}")
+    print(f"\n{os.path.relpath(dest_json, ROOT)}: {len(saida_json)} B, " + ("idêntico" if atual_json == saida_json else "NOVO"))
+    print(f"assets/css/grego.css: " + ("já tem as regras" if css_tem else f"+{len(css_novo) - len(css)} B no fim"))
+    print(f"assets/js/grego-biblia.js: " + ("idêntico" if js_atual == JS_NOVO.encode() else f"NOVO, {len(JS_NOVO.encode())} B"))
+    for rel, tipo, n, d in relatorio:
+        print(f"{rel}: {tipo}" + (f", {n} inserções, +{d} B" if tipo == "alvo" else ""))
+    if not all(provas.values()):
+        print("Prova falhou: nada gravado."); return 1
+    mudancas = (atual_json is None) + (not css_tem) + (js_atual is None) + len(paginas)
+    if not apply:
+        print(f"\nSimulação: {mudancas} arquivo(s) mudariam; nada gravado."); return 0
+    if not ROTULOS_APROVADOS:
+        print("\n--apply recusado: rótulos do botão ainda não aprovados (ROTULOS_APROVADOS = False)."); return 1
+    if mudancas == 0:
+        print("Nada a fazer."); return 0
+    ts = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+    zp = os.path.join(ROOT, "_backups", f"grego-biblia-{livro}-{ts}.zip")
+    with zipfile.ZipFile(zp, "x", zipfile.ZIP_DEFLATED) as z:
+        for rel, (antigo, _) in paginas.items(): z.writestr(rel, antigo)
+        if not css_tem: z.writestr("assets/css/grego.css", css)
+    print(f"Backup: {os.path.relpath(zp, ROOT)}")
+    if atual_json is None:
+        os.makedirs(os.path.dirname(dest_json), exist_ok=True)
+        with open(dest_json, "xb") as f: f.write(saida_json)
+    if js_atual is None:
+        with open(js_path, "xb") as f: f.write(JS_NOVO.encode())
+    if not css_tem:
+        with open(css_path, "wb") as f: f.write(css_novo)
+    for rel, (_, novo) in paginas.items():
+        with open(os.path.join(ROOT, rel), "wb") as f: f.write(novo)
+    with zipfile.ZipFile(zp) as z:
+        ok = all(z.read(rel) == antigo and open(os.path.join(ROOT, rel), "rb").read() == novo for rel, (antigo, novo) in paginas.items())
+    print("Gravado; conferido contra o backup: " + ("ok" if ok else "FALHOU"))
+    return 0 if ok else 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())
