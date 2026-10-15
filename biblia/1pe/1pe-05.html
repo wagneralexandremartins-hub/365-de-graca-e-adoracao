@@ -126,6 +126,11 @@
 <link rel="stylesheet" href="/assets/css/site-header.css">
 <script src="/assets/js/site-nav.js" defer></script>
 <!-- /site-nav:v1 -->
+<!-- grego-biblia:v1 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus&amp;display=swap">
+<link rel="stylesheet" href="/assets/css/grego.css">
+<script src="/assets/js/grego-biblia.js" defer></script>
+<!-- /grego-biblia:v1 -->
 </head>
 <body>
 <!-- site-nav:v1 -->
@@ -142,65 +147,81 @@
       <p class="chapter-subtitle">Almeida Corrigida Fiel (ACF)</p>
     </div>
 
-    <div class="verses">
+    <button type="button" class="grego-alternar" data-grego-alternar aria-controls="versiculos" aria-pressed="false" data-ocultar="Ocultar o grego" data-mostrar="Mostrar o grego" hidden>Ocultar o grego</button>
+    <div class="verses" id="versiculos">
         <div class="verse">
           <span class="verse-number">1</span>
           <span class="verse-text">Aos presbíteros, que estão entre vós, admoesto eu, que sou também presbítero com eles, e testemunha das aflições de Cristo, e participante da glória que se há de revelar:</span>
+          <span class="verso-grego" lang="grc">Πρεσβυτέρους τοὺς ἐν ὑμῖν παρακαλῶ ὁ συμπρεσβύτερος καὶ μάρτυς τῶν τοῦ Χριστοῦ παθημάτων, ὁ καὶ τῆς μελλούσης ἀποκαλύπτεσθαι δόξης κοινωνός·</span>
         </div>
         <div class="verse">
           <span class="verse-number">2</span>
           <span class="verse-text">Apascentai o rebanho de Deus, que está entre vós, tendo cuidado dele, não por força, mas voluntariamente; nem por torpe ganância, mas de ânimo pronto;</span>
+          <span class="verso-grego" lang="grc">ποιμάνατε τὸ ἐν ὑμῖν ποίμνιον τοῦ Θεοῦ, ἐπισκοποῦντες μὴ ἀναγκαστῶς, ἀλλ’ ἑκουσίως· μηδὲ αἰσχροκερδῶς, ἀλλὰ προθύμως,</span>
         </div>
         <div class="verse">
           <span class="verse-number">3</span>
           <span class="verse-text">Nem como tendo domínio sobre a herança de Deus, mas servindo de exemplo ao rebanho.</span>
+          <span class="verso-grego" lang="grc">μηδ’ ὡς κατακυριεύοντες τῶν κλήρων, ἀλλὰ τύποι γινόμενοι τοῦ ποιμνίου.</span>
         </div>
         <div class="verse">
           <span class="verse-number">4</span>
           <span class="verse-text">E, quando aparecer o Sumo Pastor, alcançareis a incorruptível coroa da glória.</span>
+          <span class="verso-grego" lang="grc">καὶ φανερωθέντος τοῦ ἀρχιποίμενος κομιεῖσθε τὸν ἀμαράντινον τῆς δόξης στέφανον.</span>
         </div>
         <div class="verse">
           <span class="verse-number">5</span>
           <span class="verse-text">Semelhantemente vós jovens, sede sujeitos aos anciãos; e sede todos sujeitos uns aos outros, e revesti-vos de humildade, porque Deus resiste aos soberbos, mas dá graça aos humildes.</span>
+          <span class="verso-grego" lang="grc">ὁμοίως, νεώτεροι, ὑποτάγητε πρεσβυτέροις· πάντες δὲ ἀλλήλοις ὑποτασσόμενοι, τὴν ταπεινοφροσύνην ἐγκομβώσασθε· ὅτι ὁ Θεὸς ὑπερηφάνοις ἀντιτάσσεται, ταπεινοῖς δὲ δίδωσι χάριν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">6</span>
           <span class="verse-text">Humilhai-vos, pois, debaixo da potente mão de Deus, para que a seu tempo vos exalte;</span>
+          <span class="verso-grego" lang="grc">ταπεινώθητε οὖν ὑπὸ τὴν κραταιὰν χεῖρα τοῦ Θεοῦ, ἵνα ὑμᾶς ὑψώσῃ ἐν καιρῷ,</span>
         </div>
         <div class="verse">
           <span class="verse-number">7</span>
           <span class="verse-text">Lançando sobre ele toda a vossa ansiedade, porque ele tem cuidado de vós.</span>
+          <span class="verso-grego" lang="grc">πᾶσαν τὴν μέριμναν ὑμῶν ἐπιρρίψαντες ἐπ’ αὐτόν, ὅτι αὐτῷ μέλει περὶ ὑμῶν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">8</span>
           <span class="verse-text">Sede sóbrios; vigiai; porque o diabo, vosso adversário, anda em derredor, bramando como leão, buscando a quem possa tragar;</span>
+          <span class="verso-grego" lang="grc">νήψατε, γρηγορήσατε, ὅτι ὁ ἀντίδικος ὑμῶν διάβολος, ὡς λέων ὠρυόμενος περιπατεῖ ζητῶν τινα καταπίῃ·</span>
         </div>
         <div class="verse">
           <span class="verse-number">9</span>
           <span class="verse-text">Ao qual resisti firmes na fé, sabendo que as mesmas aflições se cumprem entre os vossos irmãos no mundo.</span>
+          <span class="verso-grego" lang="grc">ᾧ ἀντίστητε στερεοὶ τῇ πίστει, εἰδότες τὰ αὐτὰ τῶν παθημάτων τῇ ἐν κόσμῳ ὑμῶν ἀδελφότητι ἐπιτελεῖσθαι.</span>
         </div>
         <div class="verse">
           <span class="verse-number">10</span>
           <span class="verse-text">E o Deus de toda a graça, que em Cristo Jesus nos chamou à sua eterna glória, depois de havemos padecido um pouco, ele mesmo vos aperfeiçoe, confirme, fortifique e estabeleça.</span>
+          <span class="verso-grego" lang="grc">ὁ δὲ Θεὸς πάσης χάριτος, ὁ καλέσας ἡμᾶς εἰς τὴν αἰώνιον αὐτοῦ δόξαν ἐν Χριστῷ Ἰησοῦ, ὀλίγον παθόντας αὐτὸς καταρτίσαι ὑμᾶς, στηρίξαι, σθενώσαι, θεμελιώσαι.</span>
         </div>
         <div class="verse">
           <span class="verse-number">11</span>
           <span class="verse-text">A ele seja a glória e o poderio para todo o sempre. Amém.</span>
+          <span class="verso-grego" lang="grc">αὐτῷ ἡ δόξα καὶ τὸ κράτος εἰς τοὺς αἰῶνας τῶν αἰώνων. ἀμήν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">12</span>
           <span class="verse-text">Por Silvano, vosso fiel irmão, como cuido, escrevi brevemente, exortando e testificando que esta é a verdadeira graça de Deus, na qual estais firmes.</span>
+          <span class="verso-grego" lang="grc">Διὰ Σιλουανοῦ ὑμῖν τοῦ πιστοῦ ἀδελφοῦ, ὡς λογίζομαι, δι’ ὀλίγων ἔγραψα, παρακαλῶν καὶ ἐπιμαρτυρῶν ταύτην εἶναι ἀληθῆ χάριν τοῦ Θεοῦ εἰς ἣν ἑστήκατε.</span>
         </div>
         <div class="verse">
           <span class="verse-number">13</span>
           <span class="verse-text">A vossa co-eleita em babilônia vos saúda, e meu filho Marcos.</span>
+          <span class="verso-grego" lang="grc">ἀσπάζεται ὑμᾶς ἡ ἐν Βαβυλῶνι συνεκλεκτὴ, καὶ Μᾶρκος ὁ υἱός μου.</span>
         </div>
         <div class="verse">
           <span class="verse-number">14</span>
           <span class="verse-text">Saudai-vos uns aos outros com ósculo de amor. Paz seja com todos vós que estais em Cristo Jesus. Amém.</span>
+          <span class="verso-grego" lang="grc">ἀσπάσασθε ἀλλήλους ἐν φιλήματι ἀγάπης. Εἰρήνη ὑμῖν πᾶσι τοῖς ἐν Χριστῷ Ἰησοῦ. ἀμὴν.</span>
         </div>
 
     </div>
+    <p class="grego-credito grego-capitulo">Texto grego: <a href="https://git.door43.org/STR/el-x-koine_trs" rel="noopener">Textus Receptus 1894 Scrivener</a>, Door43 World Missions Community, com Scriptorium e Dr. Maurice A. Robinson, sob a licença <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br" rel="license noopener">CC BY-SA 4.0</a>. Adaptado: só o texto, sem as marcações de morfologia, Strong e lema. Esta camada grega segue a mesma licença.</p>
 
     <div class="chapter-nav">
       <a href="1pe-04.html" class="nav-button">← Capítulo Anterior</a>
