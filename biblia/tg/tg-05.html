@@ -126,6 +126,11 @@
 <link rel="stylesheet" href="/assets/css/site-header.css">
 <script src="/assets/js/site-nav.js" defer></script>
 <!-- /site-nav:v1 -->
+<!-- grego-biblia:v1 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus&amp;display=swap">
+<link rel="stylesheet" href="/assets/css/grego.css">
+<script src="/assets/js/grego-biblia.js" defer></script>
+<!-- /grego-biblia:v1 -->
 </head>
 <body>
 <!-- site-nav:v1 -->
@@ -142,89 +147,111 @@
       <p class="chapter-subtitle">Almeida Corrigida Fiel (ACF)</p>
     </div>
 
-    <div class="verses">
+    <button type="button" class="grego-alternar" data-grego-alternar aria-controls="versiculos" aria-pressed="false" data-ocultar="Ocultar o grego" data-mostrar="Mostrar o grego" hidden>Ocultar o grego</button>
+    <div class="verses" id="versiculos">
         <div class="verse">
           <span class="verse-number">1</span>
           <span class="verse-text">Eia, pois, agora vós, ricos, chorai e pranteai, por vossas misérias, que sobre vós hão de vir.</span>
+          <span class="verso-grego" lang="grc">Ἄγε νῦν οἱ πλούσιοι, κλαύσατε ὀλολύζοντες ἐπὶ ταῖς ταλαιπωρίαις ὑμῶν ταῖς ἐπερχομέναις.</span>
         </div>
         <div class="verse">
           <span class="verse-number">2</span>
           <span class="verse-text">As vossas riquezas estão apodrecidas, e as vossas vestes estão comidas de traça.</span>
+          <span class="verso-grego" lang="grc">ὁ πλοῦτος ὑμῶν σέσηπε, καὶ τὰ ἱμάτια ὑμῶν σητόβρωτα γέγονεν·</span>
         </div>
         <div class="verse">
           <span class="verse-number">3</span>
           <span class="verse-text">O vosso ouro e a vossa prata se enferrujaram; e a sua ferrugem dará testemunho contra vós, e comerá como fogo a vossa carne. Entesourastes para os últimos dias.</span>
+          <span class="verso-grego" lang="grc">ὁ χρυσὸς ὑμῶν καὶ ὁ ἄργυρος κατίωται, καὶ ὁ ἰὸς αὐτῶν εἰς μαρτύριον ὑμῖν ἔσται, καὶ φάγεται τὰς σάρκας ὑμῶν ὡς πῦρ. ἐθησαυρίσατε ἐν ἐσχάταις ἡμέραις.</span>
         </div>
         <div class="verse">
           <span class="verse-number">4</span>
           <span class="verse-text">Eis que o jornal dos trabalhadores que ceifaram as vossas terras, e que por vós foi diminuído, clama; e os clamores dos que ceifaram entraram nos ouvidos do Senhor dos exércitos.</span>
+          <span class="verso-grego" lang="grc">ἰδοὺ ὁ μισθὸς τῶν ἐργατῶν τῶν ἀμησάντων τὰς χώρας ὑμῶν, ὁ ἀπεστερημένος ἀφ’ ὑμῶν κράζει· καὶ αἱ βοαὶ τῶν θερισάντων εἰς τὰ ὦτα Κυρίου Σαβαὼθ εἰσεληλύθασιν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">5</span>
           <span class="verse-text">Deliciosamente vivestes sobre a terra, e vos deleitastes; cevastes os vossos corações, como num dia de matança.</span>
+          <span class="verso-grego" lang="grc">ἐτρυφήσατε ἐπὶ τῆς γῆς, καὶ ἐσπαταλήσατε· ἐθρέψατε τὰς καρδίας ὑμῶν ὡς ἐν ἡμέρᾳ σφαγῆς,</span>
         </div>
         <div class="verse">
           <span class="verse-number">6</span>
           <span class="verse-text">Condenastes e matastes o justo; ele não vos resistiu.</span>
+          <span class="verso-grego" lang="grc">κατεδικάσατε, ἐφονεύσατε τὸν δίκαιον· οὐκ ἀντιτάσσεται ὑμῖν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">7</span>
           <span class="verse-text">Sede pois, irmãos, pacientes até à vinda do Senhor. Eis que o lavrador espera o precioso fruto da terra, aguardando-o com paciência, até que receba a chuva temporã e serôdia.</span>
+          <span class="verso-grego" lang="grc">μακροθυμήσατε οὖν, ἀδελφοί, ἕως τῆς παρουσίας τοῦ Κυρίου. ἰδοὺ, ὁ γεωργὸς ἐκδέχεται τὸν τίμιον καρπὸν τῆς γῆς, μακροθυμῶν ἐπ’ αὐτῷ, ἕως ἂν λάβῃ ὑετὸν πρώϊμον καὶ ὄψιμον.</span>
         </div>
         <div class="verse">
           <span class="verse-number">8</span>
           <span class="verse-text">Sede vós também pacientes, fortalecei os vossos corações; porque já a vinda do Senhor está próxima.</span>
+          <span class="verso-grego" lang="grc">μακροθυμήσατε καὶ ὑμεῖς, στηρίξατε τὰς καρδίας ὑμῶν, ὅτι ἡ παρουσία τοῦ Κυρίου ἤγγικε.</span>
         </div>
         <div class="verse">
           <span class="verse-number">9</span>
           <span class="verse-text">Irmãos, não vos queixeis uns contra os outros, para que não sejais condenados. Eis que o juiz está à porta.</span>
+          <span class="verso-grego" lang="grc">μὴ στενάζετε κατ’ ἀλλήλων, ἀδελφοί, ἵνα μὴ κατακριθῆτε· ἰδού, ὁ κριτὴς πρὸ τῶν θυρῶν ἕστηκεν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">10</span>
           <span class="verse-text">Meus irmãos, tomai por exemplo de aflição e paciência os profetas que falaram em nome do Senhor.</span>
+          <span class="verso-grego" lang="grc">ὑπόδειγμα λάβετε τῆς κακοπαθείας, ἀδελφοί μου, καὶ τῆς μακροθυμίας, τοὺς προφήτας, οἳ ἐλάλησαν τῷ ὀνόματι Κυρίου.</span>
         </div>
         <div class="verse">
           <span class="verse-number">11</span>
           <span class="verse-text">Eis que temos por bem-aventurados os que sofreram. Ouvistes qual foi a paciência de Jó, e vistes o fim que o Senhor lhe deu; porque o Senhor é muito misericordioso e piedoso.</span>
+          <span class="verso-grego" lang="grc">ἰδού, μακαρίζομεν τοὺς ὑπομένοντας· τὴν ὑπομονὴν Ἰὼβ ἠκούσατε, καὶ τὸ τέλος Κυρίου εἴδετε, ὅτι πολύσπλαγχνός ἐστιν ὁ Κύριος καὶ οἰκτίρμων.</span>
         </div>
         <div class="verse">
           <span class="verse-number">12</span>
           <span class="verse-text">Mas, sobretudo, meus irmãos, não jureis, nem pelo céu, nem pela terra, nem façais qualquer outro juramento; mas que a vossa palavra seja sim, sim, e não, não; para que não caiais em condenação.</span>
+          <span class="verso-grego" lang="grc">Πρὸ πάντων δέ, ἀδελφοί μου, μὴ ὀμνύετε, μήτε τὸν οὐρανὸν, μήτε τὴν γῆν, μήτε ἄλλον τινὰ ὅρκον· ἤτω δὲ ὑμῶν τὸ ναὶ, ναὶ, καὶ τὸ οὒ, οὔ· ἵνα μὴ ὑπὸ κρίσιν πέσητε.</span>
         </div>
         <div class="verse">
           <span class="verse-number">13</span>
           <span class="verse-text">Está alguém entre vós aflito? Ore. Está alguém contente? Cante louvores.</span>
+          <span class="verso-grego" lang="grc">Κακοπαθεῖ τις ἐν ὑμῖν; προσευχέσθω. εὐθυμεῖ τις; ψαλλέτω.</span>
         </div>
         <div class="verse">
           <span class="verse-number">14</span>
           <span class="verse-text">Está alguém entre vós doente? Chame os presbíteros da igreja, e orem sobre ele, ungindo-o com azeite em nome do Senhor;</span>
+          <span class="verso-grego" lang="grc">ἀσθενεῖ τις ἐν ὑμῖν; προσκαλεσάσθω τοὺς πρεσβυτέρους τῆς ἐκκλησίας, καὶ προσευξάσθωσαν ἐπ’ αὐτὸν, ἀλείψαντες αὐτὸν ἐλαίῳ ἐν τῷ ὀνόματι τοῦ Κυρίου·</span>
         </div>
         <div class="verse">
           <span class="verse-number">15</span>
           <span class="verse-text">E a oração da fé salvará o doente, e o Senhor o levantará; e, se houver cometido pecados, ser-lhe-ão perdoados.</span>
+          <span class="verso-grego" lang="grc">καὶ ἡ εὐχὴ τῆς πίστεως σώσει τὸν κάμνοντα, καὶ ἐγερεῖ αὐτὸν ὁ Κύριος· κἂν ἁμαρτίας ᾖ πεποιηκώς, ἀφεθήσεται αὐτῷ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">16</span>
           <span class="verse-text">Confessai as vossas culpas uns aos outros, e orai uns pelos outros, para que sareis. A oração feita por um justo pode muito em seus efeitos.</span>
+          <span class="verso-grego" lang="grc">ἐξομολογεῖσθε ἀλλήλοις τὰ παραπτώματα, καὶ εὔχεσθε ὑπὲρ ἀλλήλων, ὅπως ἰαθῆτε. πολὺ ἰσχύει δέησις δικαίου ἐνεργουμένη.</span>
         </div>
         <div class="verse">
           <span class="verse-number">17</span>
           <span class="verse-text">Elias era homem sujeito às mesmas paixões que nós e, orando, pediu que não chovesse e, por três anos e seis meses, não choveu sobre a terra.</span>
+          <span class="verso-grego" lang="grc">Ἠλίας ἄνθρωπος ἦν ὁμοιοπαθὴς ἡμῖν, καὶ προσευχῇ προσηύξατο τοῦ μὴ βρέξαι· καὶ οὐκ ἔβρεξεν ἐπὶ τῆς γῆς ἐνιαυτοὺς τρεῖς καὶ μῆνας ἕξ·</span>
         </div>
         <div class="verse">
           <span class="verse-number">18</span>
           <span class="verse-text">E orou outra vez, e o céu deu chuva, e a terra produziu o seu fruto.</span>
+          <span class="verso-grego" lang="grc">καὶ πάλιν προσηύξατο, καὶ ὁ οὐρανὸς ὑετὸν ἔδωκε, καὶ ἡ γῆ ἐβλάστησε τὸν καρπὸν αὐτῆς.</span>
         </div>
         <div class="verse">
           <span class="verse-number">19</span>
           <span class="verse-text">Irmãos, se algum dentre vós se tem desviado da verdade, e alguém o converter,</span>
+          <span class="verso-grego" lang="grc">Ἀδελφοί, ἐάν τις ἐν ὑμῖν πλανηθῇ ἀπὸ τῆς ἀληθείας, καὶ ἐπιστρέψῃ τις αὐτόν,</span>
         </div>
         <div class="verse">
           <span class="verse-number">20</span>
           <span class="verse-text">Saiba que aquele que fizer converter do erro do seu caminho um pecador, salvará da morte uma alma, e cobrirá uma multidão de pecados.</span>
+          <span class="verso-grego" lang="grc">γινωσκέτω ὅτι ὁ ἐπιστρέψας ἁμαρτωλὸν ἐκ πλάνης ὁδοῦ αὐτοῦ σώσει ψυχὴν ἐκ θανάτου, καὶ καλύψει πλῆθος ἁμαρτιῶν.</span>
         </div>
 
     </div>
+    <p class="grego-credito grego-capitulo">Texto grego: <a href="https://git.door43.org/STR/el-x-koine_trs" rel="noopener">Textus Receptus 1894 Scrivener</a>, Door43 World Missions Community, com Scriptorium e Dr. Maurice A. Robinson, sob a licença <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br" rel="license noopener">CC BY-SA 4.0</a>. Adaptado: só o texto, sem as marcações de morfologia, Strong e lema. Esta camada grega segue a mesma licença.</p>
 
     <div class="chapter-nav">
       <a href="tg-04.html" class="nav-button">← Capítulo Anterior</a>
