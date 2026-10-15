@@ -126,6 +126,11 @@
 <link rel="stylesheet" href="/assets/css/site-header.css">
 <script src="/assets/js/site-nav.js" defer></script>
 <!-- /site-nav:v1 -->
+<!-- grego-biblia:v1 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus&amp;display=swap">
+<link rel="stylesheet" href="/assets/css/grego.css">
+<script src="/assets/js/grego-biblia.js" defer></script>
+<!-- /grego-biblia:v1 -->
 </head>
 <body>
 <!-- site-nav:v1 -->
@@ -142,153 +147,191 @@
       <p class="chapter-subtitle">Almeida Corrigida Fiel (ACF)</p>
     </div>
 
-    <div class="verses">
+    <button type="button" class="grego-alternar" data-grego-alternar aria-controls="versiculos" aria-pressed="false" data-ocultar="Ocultar o grego" data-mostrar="Mostrar o grego" hidden>Ocultar o grego</button>
+    <div class="verses" id="versiculos">
         <div class="verse">
           <span class="verse-number">1</span>
           <span class="verse-text">E havia entre os fariseus um homem, chamado Nicodemos, príncipe dos judeus.</span>
+          <span class="verso-grego" lang="grc">Ἦν δὲ ἄνθρωπος ἐκ τῶν Φαρισαίων, Νικόδημος ὄνομα αὐτῷ, ἄρχων τῶν Ἰουδαίων·</span>
         </div>
         <div class="verse">
           <span class="verse-number">2</span>
           <span class="verse-text">Este foi ter de noite com Jesus, e disse-lhe: Rabi, bem sabemos que és Mestre, vindo de Deus; porque ninguém pode fazer estes sinais que tu fazes, se Deus não for com ele.</span>
+          <span class="verso-grego" lang="grc">οὗτος ἦλθε πρὸς τὸν Ἰησοῦν νυκτός, καὶ εἶπεν αὐτῷ, Ῥαββί, οἴδαμεν ὅτι ἀπὸ Θεοῦ ἐλήλυθας διδάσκαλος· οὐδεὶς γὰρ ταῦτα τὰ σημεῖα δύναται ποιεῖν ἃ σὺ ποιεῖς, ἐὰν μὴ ᾖ ὁ Θεὸς μετ’ αὐτοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">3</span>
           <span class="verse-text">Jesus respondeu, e disse-lhe: Na verdade, na verdade te digo que aquele que não nascer de novo, não pode ver o reino de Deus.</span>
+          <span class="verso-grego" lang="grc">Ἀπεκρίθη ὁ Ἰησοῦς καὶ εἶπεν αὐτῷ, Ἀμὴν ἀμὴν λέγω σοι, ἐὰν μή τις γεννηθῇ ἄνωθεν, οὐ δύναται ἰδεῖν τὴν βασιλείαν τοῦ Θεοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">4</span>
           <span class="verse-text">Disse-lhe Nicodemos: Como pode um homem nascer, sendo velho? Pode, porventura, tornar a entrar no ventre de sua mãe, e nascer?</span>
+          <span class="verso-grego" lang="grc">λέγει πρὸς αὐτὸν ὁ Νικόδημος, Πῶς δύναται ἄνθρωπος γεννηθῆναι γέρων ὤν; μὴ δύναται εἰς τὴν κοιλίαν τῆς μητρὸς αὐτοῦ δεύτερον εἰσελθεῖν καὶ γεννηθῆναι;</span>
         </div>
         <div class="verse">
           <span class="verse-number">5</span>
           <span class="verse-text">Jesus respondeu: Na verdade, na verdade te digo que aquele que não nascer da água e do Espírito, não pode entrar no reino de Deus.</span>
+          <span class="verso-grego" lang="grc">ἀπεκρίθη ὁ Ἰησοῦς, Ἀμὴν ἀμὴν λέγω σοι, ἐὰν μή τις γεννηθῇ ἐξ ὕδατος καὶ Πνεύματος, οὐ δύναται εἰσελθεῖν εἰς τὴν βασιλείαν τοῦ Θεοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">6</span>
           <span class="verse-text">O que é nascido da carne é carne, e o que é nascido do Espírito é espírito.</span>
+          <span class="verso-grego" lang="grc">τὸ γεγεννημένον ἐκ τῆς σαρκὸς σάρξ ἐστι· καὶ τὸ γεγεννημένον ἐκ τοῦ πνεύματος πνεῦμά ἐστι.</span>
         </div>
         <div class="verse">
           <span class="verse-number">7</span>
           <span class="verse-text">Não te maravilhes de te ter dito: Necessário vos é nascer de novo.</span>
+          <span class="verso-grego" lang="grc">μὴ θαυμάσῃς ὅτι εἶπόν σοι, Δεῖ ὑμᾶς γεννηθῆναι ἄνωθεν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">8</span>
           <span class="verse-text">O vento assopra onde quer, e ouves a sua voz, mas não sabes de onde vem, nem para onde vai; assim étodo aquele que é nascido do Espírito.</span>
+          <span class="verso-grego" lang="grc">τὸ πνεῦμα ὅπου θέλει πνεῖ, καὶ τὴν φωνὴν αὐτοῦ ἀκούεις, ἀλλ’ οὐκ οἶδας πόθεν ἔρχεται καὶ ποῦ ὑπάγει· οὕτως ἐστὶ πᾶς ὁ γεγεννημένος ἐκ τοῦ πνεύματος.</span>
         </div>
         <div class="verse">
           <span class="verse-number">9</span>
           <span class="verse-text">Nicodemos respondeu, e disse-lhe: Como pode ser isso?</span>
+          <span class="verso-grego" lang="grc">ἀπεκρίθη Νικόδημος καὶ εἶπεν αὐτῷ, Πῶς δύναται ταῦτα γενέσθαι;</span>
         </div>
         <div class="verse">
           <span class="verse-number">10</span>
           <span class="verse-text">Jesus respondeu, e disse-lhe: Tu és mestre de Israel, e não sabes isto?</span>
+          <span class="verso-grego" lang="grc">ἀπεκρίθη ὁ Ἰησοῦς καὶ εἶπεν αὐτῷ, Σὺ εἶ ὁ διδάσκαλος τοῦ Ἰσραήλ, καὶ ταῦτα οὐ γινώσκεις;</span>
         </div>
         <div class="verse">
           <span class="verse-number">11</span>
           <span class="verse-text">Na verdade, na verdade te digo que nós dizemos o que sabemos, e testificamos o que vimos; e não aceitais o nosso testemunho.</span>
+          <span class="verso-grego" lang="grc">ἀμὴν ἀμὴν λέγω σοι ὅτι ὃ οἴδαμεν λαλοῦμεν, καὶ ὃ ἑωράκαμεν μαρτυροῦμεν· καὶ τὴν μαρτυρίαν ἡμῶν οὐ λαμβάνετε.</span>
         </div>
         <div class="verse">
           <span class="verse-number">12</span>
           <span class="verse-text">Se vos falei de coisas terrestres, e não crestes, como crereis, se vos falar das celestiais?</span>
+          <span class="verso-grego" lang="grc">εἰ τὰ ἐπίγεια εἶπον ὑμῖν καὶ οὐ πιστεύετε, πῶς, ἐὰν εἴπω ὑμῖν τὰ ἐπουράνια, πιστεύσετε;</span>
         </div>
         <div class="verse">
           <span class="verse-number">13</span>
           <span class="verse-text">Ora, ninguém subiu ao céu, senão o que desceu do céu, o Filho do homem, que está no céu.</span>
+          <span class="verso-grego" lang="grc">καὶ οὐδεὶς ἀναβέβηκεν εἰς τὸν οὐρανόν, εἰ μὴ ὁ ἐκ τοῦ οὐρανοῦ καταβάς, ὁ υἱὸς τοῦ ἀνθρώπου ὁ ὤν ἐν τῷ οὐρανῷ</span>
         </div>
         <div class="verse">
           <span class="verse-number">14</span>
           <span class="verse-text">E, como Moisés levantou a serpente no deserto, assim importa que o Filho do homem seja levantado;</span>
+          <span class="verso-grego" lang="grc">καὶ καθὼς Μωσῆς ὕψωσε τὸν ὄφιν ἐν τῇ ἐρήμῳ, οὕτως ὑψωθῆναι δεῖ τὸν υἱὸν τοῦ ἀνθρώπου·</span>
         </div>
         <div class="verse">
           <span class="verse-number">15</span>
           <span class="verse-text">Para que todo aquele que nele crê não pereça, mas tenha a vida eterna.</span>
+          <span class="verso-grego" lang="grc">ἵνα πᾶς ὁ πιστεύων εἰς αὐτὸν μὴ ἀπόληται, ἀλλ’ ἔχῃ ζωὴν αἰώνιον.</span>
         </div>
         <div class="verse">
           <span class="verse-number">16</span>
           <span class="verse-text">Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna.</span>
+          <span class="verso-grego" lang="grc">Οὕτω γὰρ ἠγάπησεν ὁ Θεὸς τὸν κόσμον, ὥστε τὸν υἱὸν αὐτοῦ τὸν μονογενῆ ἔδωκεν, ἵνα πᾶς ὁ πιστεύων εἰς αὐτὸν μὴ ἀπόληται, ἀλλ’ ἔχῃ ζωὴν αἰώνιον.</span>
         </div>
         <div class="verse">
           <span class="verse-number">17</span>
           <span class="verse-text">Porque Deus enviou o seu Filho ao mundo, não para que condenasse o mundo, mas para que o mundo fosse salvo por ele.</span>
+          <span class="verso-grego" lang="grc">οὐ γὰρ ἀπέστειλεν ὁ Θεὸς τὸν υἱὸν αὐτοῦ εἰς τὸν κόσμον ἵνα κρίνῃ τὸν κόσμον, ἀλλ’ ἵνα σωθῇ ὁ κόσμος δι’ αὐτοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">18</span>
           <span class="verse-text">Quem crê nele não é condenado; mas quem não crê já está condenado, porquanto não crê no nome do unigênito Filho de Deus.</span>
+          <span class="verso-grego" lang="grc">ὁ πιστεύων εἰς αὐτὸν οὐ κρίνεται· ὁ δὲ μὴ πιστεύων ἤδη κέκριται, ὅτι μὴ πεπίστευκεν εἰς τὸ ὄνομα τοῦ μονογενοῦς υἱοῦ τοῦ Θεοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">19</span>
           <span class="verse-text">E a condenação é esta: Que a luz veio ao mundo, e os homens amaram mais as trevas do que a luz, porque as suas obras eram más.</span>
+          <span class="verso-grego" lang="grc">αὕτη δέ ἐστιν ἡ κρίσις, ὅτι τὸ φῶς ἐλήλυθεν εἰς τὸν κόσμον, καὶ ἠγάπησαν οἱ ἄνθρωποι μᾶλλον τὸ σκότος ἢ τὸ φῶς· ἦν γὰρ πονηρὰ αὐτῶν τὰ ἔργα.</span>
         </div>
         <div class="verse">
           <span class="verse-number">20</span>
           <span class="verse-text">Porque todo aquele que faz o mal odeia a luz, e não vem para a luz, para que as suas obras não sejam reprovadas.</span>
+          <span class="verso-grego" lang="grc">πᾶς γὰρ ὁ φαῦλα πράσσων μισεῖ τὸ φῶς, καὶ οὐκ ἔρχεται πρὸς τὸ φῶς, ἵνα μὴ ἐλεγχθῇ τὰ ἔργα αὐτοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">21</span>
           <span class="verse-text">Mas quem pratica a verdade vem para a luz, a fim de que as suas obras sejam manifestas, porque são feitas em Deus.</span>
+          <span class="verso-grego" lang="grc">ὁ δὲ ποιῶν τὴν ἀλήθειαν ἔρχεται πρὸς τὸ φῶς, ἵνα φανερωθῇ αὐτοῦ τὰ ἔργα, ὅτι ἐν Θεῷ ἐστιν εἰργασμένα.</span>
         </div>
         <div class="verse">
           <span class="verse-number">22</span>
           <span class="verse-text">Depois disto foi Jesus com os seus discípulos para a terra da Judéia; e estava ali com eles, e batizava.</span>
+          <span class="verso-grego" lang="grc">Μετὰ ταῦτα ἦλθεν ὁ Ἰησοῦς καὶ οἱ μαθηταὶ αὐτοῦ εἰς τὴν Ἰουδαίαν γῆν· καὶ ἐκεῖ διέτριβε μετ’ αὐτῶν καὶ ἐβάπτιζεν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">23</span>
           <span class="verse-text">Ora, João batizava também em Enom, junto a Salim, porque havia ali muitas águas; e vinham ali, e eram batizados.</span>
+          <span class="verso-grego" lang="grc">ἦν δὲ καὶ Ἰωάννης βαπτίζων ἐν Αἰνὼν ἐγγὺς τοῦ Σαλείμ, ὅτι ὕδατα πολλὰ ἦν ἐκεῖ· καὶ παρεγίνοντο καὶ ἐβαπτίζοντο.</span>
         </div>
         <div class="verse">
           <span class="verse-number">24</span>
           <span class="verse-text">Porque ainda João não tinha sido lançado na prisão.</span>
+          <span class="verso-grego" lang="grc">οὔπω γὰρ ἦν βεβλημένος εἰς τὴν φυλακὴν ὁ Ἰωάννης.</span>
         </div>
         <div class="verse">
           <span class="verse-number">25</span>
           <span class="verse-text">Houve então uma questão entre os discípulos de João e os judeus acerca da purificação.</span>
+          <span class="verso-grego" lang="grc">ἐγένετο οὖν ζήτησις ἐκ τῶν μαθητῶν Ἰωάννου μετὰ Ἰουδαίων περὶ καθαρισμοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">26</span>
           <span class="verse-text">E foram ter com João, e disseram-lhe: Rabi, aquele que estava contigo além do Jordão, do qual tu deste testemunho, ei-lo batizando, e todos vão ter com ele.</span>
+          <span class="verso-grego" lang="grc">καὶ ἦλθον πρὸς τὸν Ἰωάννην καὶ εἶπον αὐτῷ, Ῥαββί, ὃς ἦν μετὰ σοῦ πέραν τοῦ Ἰορδάνου, ᾧ σὺ μεμαρτύρηκας, ἴδε οὗτος βαπτίζει, καὶ πάντες ἔρχονται πρὸς αὐτόν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">27</span>
           <span class="verse-text">João respondeu, e disse: O homem não pode receber coisa alguma, se não lhe for dada do céu.</span>
+          <span class="verso-grego" lang="grc">ἀπεκρίθη Ἰωάννης καὶ εἶπεν, Οὐ δύναται ἄνθρωπος λαμβάνειν οὐδέν, ἐὰν μὴ ᾖ δεδομένον αὐτῷ ἐκ τοῦ οὐρανοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">28</span>
           <span class="verse-text">Vós mesmos me sois testemunhas de que disse: Eu não sou o Cristo, mas sou enviado adiante dele.</span>
+          <span class="verso-grego" lang="grc">αὐτοὶ ὑμεῖς μοι μαρτυρεῖτε ὅτι εἶπον, Οὐκ εἰμὶ ἐγὼ ὁ Χριστός, ἀλλ’ ὅτι ἀπεσταλμένος εἰμὶ ἔμπροσθεν ἐκείνου.</span>
         </div>
         <div class="verse">
           <span class="verse-number">29</span>
           <span class="verse-text">Aquele que tem a esposa é o esposo; mas o amigo do esposo, que lhe assiste e o ouve, alegra-se muito com a voz do esposo. Assim, pois, já este meu gozo está cumprido.</span>
+          <span class="verso-grego" lang="grc">ὁ ἔχων τὴν νύμφην, νυμφίος ἐστίν· ὁ δὲ φίλος τοῦ νυμφίου, ὁ ἑστηκὼς καὶ ἀκούων αὐτοῦ, χαρᾷ χαίρει διὰ τὴν φωνὴν τοῦ νυμφίου· αὕτη οὖν ἡ χαρὰ ἡ ἐμὴ πεπλήρωται.</span>
         </div>
         <div class="verse">
           <span class="verse-number">30</span>
           <span class="verse-text">É necessário que ele cresça e que eu diminua.</span>
+          <span class="verso-grego" lang="grc">ἐκεῖνον δεῖ αὐξάνειν, ἐμὲ δὲ ἐλαττοῦσθαι.</span>
         </div>
         <div class="verse">
           <span class="verse-number">31</span>
           <span class="verse-text">Aquele que vem de cima é sobre todos; aquele que vem da terra é da terra e fala da terra. Aquele que vem do céu é sobre todos.</span>
+          <span class="verso-grego" lang="grc">Ὁ ἄνωθεν ἐρχόμενος ἐπάνω πάντων ἐστίν. ὁ ὢν ἐκ τῆς γῆς, ἐκ τῆς γῆς ἐστι, καὶ ἐκ τῆς γῆς λαλεῖ· ὁ ἐκ τοῦ οὐρανοῦ ἐρχόμενος ἐπάνω πάντων ἐστί.</span>
         </div>
         <div class="verse">
           <span class="verse-number">32</span>
           <span class="verse-text">E aquilo que ele viu e ouviu isso testifica; e ninguém aceita o seu testemunho.</span>
+          <span class="verso-grego" lang="grc">καὶ ὃ ἑώρακε καὶ ἤκουσε, τοῦτο μαρτυρεῖ· καὶ τὴν μαρτυρίαν αὐτοῦ οὐδεὶς λαμβάνει.</span>
         </div>
         <div class="verse">
           <span class="verse-number">33</span>
           <span class="verse-text">Aquele que aceitou o seu testemunho, esse confirmou que Deus é verdadeiro.</span>
+          <span class="verso-grego" lang="grc">ὁ λαβὼν αὐτοῦ τὴν μαρτυρίαν ἐσφράγισεν ὅτι ὁ Θεὸς ἀληθής ἐστιν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">34</span>
           <span class="verse-text">Porque aquele que Deus enviou fala as palavras de Deus; pois não lhe dá Deus o Espírito por medida.</span>
+          <span class="verso-grego" lang="grc">ὃν γὰρ ἀπέστειλεν ὁ Θεός, τὰ ῥήματα τοῦ Θεοῦ λαλεῖ· οὐ γὰρ ἐκ μέτρου δίδωσιν ὁ Θεὸς τὸ Πνεῦμα.</span>
         </div>
         <div class="verse">
           <span class="verse-number">35</span>
           <span class="verse-text">O Pai ama o Filho, e todas as coisas entregou nas suas mãos.</span>
+          <span class="verso-grego" lang="grc">ὁ πατὴρ ἀγαπᾷ τὸν υἱόν, καὶ πάντα δέδωκεν ἐν τῇ χειρὶ αὐτοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">36</span>
           <span class="verse-text">Aquele que crê no Filho tem a vida eterna; mas aquele que não crê no Filho não verá a vida, mas a ira de Deus sobre ele permanece.</span>
+          <span class="verso-grego" lang="grc">ὁ πιστεύων εἰς τὸν υἱὸν ἔχει ζωὴν αἰώνιον· ὁ δὲ ἀπειθῶν τῷ υἱῷ, οὐκ ὄψεται ζωήν, ἀλλ’ ἡ ὀργὴ τοῦ Θεοῦ μένει ἐπ’ αὐτόν.</span>
         </div>
 
     </div>
+    <p class="grego-credito grego-capitulo">Texto grego: <a href="https://git.door43.org/STR/el-x-koine_trs" rel="noopener">Textus Receptus 1894 Scrivener</a>, Door43 World Missions Community, com Scriptorium e Dr. Maurice A. Robinson, sob a licença <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br" rel="license noopener">CC BY-SA 4.0</a>. Adaptado: só o texto, sem as marcações de morfologia, Strong e lema. Esta camada grega segue a mesma licença.</p>
 
     <div class="chapter-nav">
       <a href="jo-02.html" class="nav-button">← Capítulo Anterior</a>
