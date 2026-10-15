@@ -126,6 +126,11 @@
 <link rel="stylesheet" href="/assets/css/site-header.css">
 <script src="/assets/js/site-nav.js" defer></script>
 <!-- /site-nav:v1 -->
+<!-- grego-biblia:v1 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus&amp;display=swap">
+<link rel="stylesheet" href="/assets/css/grego.css">
+<script src="/assets/js/grego-biblia.js" defer></script>
+<!-- /grego-biblia:v1 -->
 </head>
 <body>
 <!-- site-nav:v1 -->
@@ -142,109 +147,136 @@
       <p class="chapter-subtitle">Almeida Corrigida Fiel (ACF)</p>
     </div>
 
-    <div class="verses">
+    <button type="button" class="grego-alternar" data-grego-alternar aria-controls="versiculos" aria-pressed="false" data-ocultar="Ocultar o grego" data-mostrar="Mostrar o grego" hidden>Ocultar o grego</button>
+    <div class="verses" id="versiculos">
         <div class="verse">
           <span class="verse-number">1</span>
           <span class="verse-text">Deixando, pois, toda a malícia, e todo o engano, e fingimentos, e invejas, e todas as murmurações,</span>
+          <span class="verso-grego" lang="grc">Ἀποθέμενοι οὖν πᾶσαν κακίαν καὶ πάντα δόλον καὶ ὑποκρίσεις καὶ φθόνους καὶ πάσας καταλαλιάς,</span>
         </div>
         <div class="verse">
           <span class="verse-number">2</span>
           <span class="verse-text">Desejai afetuosamente, como meninos novamente nascidos, o leite racional, não falsificado, para que por ele vades crescendo;</span>
+          <span class="verso-grego" lang="grc">ὡς ἀρτιγέννητα βρέφη, τὸ λογικὸν ἄδολον γάλα ἐπιποθήσατε, ἵνα ἐν αὐτῷ αὐξηθῆτε,</span>
         </div>
         <div class="verse">
           <span class="verse-number">3</span>
           <span class="verse-text">Se é que já provastes que o Senhor é benigno;</span>
+          <span class="verso-grego" lang="grc">εἴπερ ἐγεύσασθε ὅτι χρηστὸς ὁ Κύριος·</span>
         </div>
         <div class="verse">
           <span class="verse-number">4</span>
           <span class="verse-text">E, chegando-vos para ele, pedra viva, reprovada, na verdade, pelos homens, mas para com Deus eleita e preciosa,</span>
+          <span class="verso-grego" lang="grc">πρὸς ὃν προσερχόμενοι, λίθον ζῶντα, ὑπὸ ἀνθρώπων μὲν ἀποδεδοκιμασμένον, παρὰ δὲ Θεῷ ἐκλεκτὸν, ἔντιμον,</span>
         </div>
         <div class="verse">
           <span class="verse-number">5</span>
           <span class="verse-text">Vòs também, como pedras vivas, sois edificados casa espiritual e sacerdòcio santo, para oferecer sacrifícios espirituais agradáveis a Deus por Jesus Cristo.</span>
+          <span class="verso-grego" lang="grc">καὶ αὐτοὶ ὡς λίθοι ζῶντες οἰκοδομεῖσθε οἶκος πνευματικὸς, ἱεράτευμα ἅγιον, ἀνενέγκαι πνευματικὰς θυσίας εὐπροσδέκτους τῷ Θεῷ διὰ Ἰησοῦ Χριστοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">6</span>
           <span class="verse-text">Por isso também na Escritura se contém:Eis que ponho em Sião a pedra principal da esquina, eleita e preciosa;e quem nela crer não será confundido.</span>
+          <span class="verso-grego" lang="grc">διὸ καὶ περιέχει ἐν τῇ γραφῇ, Ἰδοὺ τίθημι ἐν Σιὼν λίθον ἀκρογωνιαῖον, ἐκλεκτὸν ἔντιμον· καὶ ὁ πιστεύων ἐπ’ αὐτῷ οὐ μὴ καταισχυνθῇ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">7</span>
           <span class="verse-text">E assim para vòs, os que credes, é preciosa, mas, para os rebeldes,a pedra que os edificadores reprovaram,essa foi a principal da esquina,</span>
+          <span class="verso-grego" lang="grc">ὑμῖν οὖν ἡ τιμὴ τοῖς πιστεύουσιν· ἀπειθοῦσι δὲ, Λίθον ὃν ἀπεδοκίμασαν οἱ οἰκοδομοῦντες, οὗτος ἐγενήθη εἰς κεφαλὴν γωνίας,</span>
         </div>
         <div class="verse">
           <span class="verse-number">8</span>
           <span class="verse-text">E uma pedra de tropeço e rocha de escândalo,para aqueles que tropeçam na palavra, sendo desobedientes; para o que também foram destinados.</span>
+          <span class="verso-grego" lang="grc">καὶ, Λίθος προσκόμματος, καὶ πέτρα σκανδάλου· οἳ προσκόπτουσι τῷ λόγῳ, ἀπειθοῦντες· εἰς ὃ καὶ ἐτέθησαν·</span>
         </div>
         <div class="verse">
           <span class="verse-number">9</span>
           <span class="verse-text">Mas vòs sois a geração eleita, o sacerdòcio real, a nação santa, o povo adquirido, para que anuncieis as virtudes daquele que vos chamou das trevas para a sua maravilhosa luz;</span>
+          <span class="verso-grego" lang="grc">ὑμεῖς δὲ γένος ἐκλεκτόν, βασίλειον ἱεράτευμα, ἔθνος ἅγιον, λαὸς εἰς περιποίησιν, ὅπως τὰς ἀρετὰς ἐξαγγείλητε τοῦ ἐκ σκότους ὑμᾶς καλέσαντος εἰς τὸ θαυμαστὸν αὐτοῦ φῶς·</span>
         </div>
         <div class="verse">
           <span class="verse-number">10</span>
           <span class="verse-text">Vós, que em outro tempo não éreis povo, mas agora sois povo de Deus; que não tínheis alcançado misericórdia, mas agora alcançastes misericórdia.</span>
+          <span class="verso-grego" lang="grc">οἵ ποτε οὐ λαὸς, νῦν δὲ λαὸς Θεοῦ· οἱ οὐκ ἠλεημένοι, νῦν δὲ ἐλεηθέντες.</span>
         </div>
         <div class="verse">
           <span class="verse-number">11</span>
           <span class="verse-text">Amados, peço-vos, como a peregrinos e forasteiros, que vos abstenhais das concupiscências carnais, que combatem contra a alma;</span>
+          <span class="verso-grego" lang="grc">Ἀγαπητοί, παρακαλῶ ὡς παροίκους καὶ παρεπιδήμους ἀπέχεσθαι τῶν σαρκικῶν ἐπιθυμιῶν, αἵτινες στρατεύονται κατὰ τῆς ψυχῆς·</span>
         </div>
         <div class="verse">
           <span class="verse-number">12</span>
           <span class="verse-text">Tendo o vosso viver honesto entre os gentios; para que, naquilo em que falam mal de vós, como de malfeitores, glorifiquem a Deus no dia da visitação, pelas boas obras que em vós observem.</span>
+          <span class="verso-grego" lang="grc">τὴν ἀναστροφὴν ὑμῶν ἐν τοῖς ἔθνεσιν ἔχοντες καλήν, ἵνα, ἐν ᾧ καταλαλοῦσιν ὑμῶν ὡς κακοποιῶν, ἐκ τῶν καλῶν ἔργων ἐποπτεύσαντες δοξάσωσι τὸν Θεὸν ἐν ἡμέρᾳ ἐπισκοπῆς.</span>
         </div>
         <div class="verse">
           <span class="verse-number">13</span>
           <span class="verse-text">Sujeitai-vos, pois, a toda a ordenação humana por amor do Senhor; quer ao rei, como superior;</span>
+          <span class="verso-grego" lang="grc">Ὑποτάγητε οὖν πάσῃ ἀνθρωπίνῃ κτίσει διὰ τὸν Κύριον· εἴτε βασιλεῖ, ὡς ὑπερέχοντι·</span>
         </div>
         <div class="verse">
           <span class="verse-number">14</span>
           <span class="verse-text">Quer aos governadores, como por ele enviados para castigo dos malfeitores, e para louvor dos que fazem o bem.</span>
+          <span class="verso-grego" lang="grc">εἴτε ἡγεμόσιν, ὡς δι’ αὐτοῦ πεμπομένοις εἰς ἐκδίκησιν μὲν κακοποιῶν, ἔπαινον δὲ ἀγαθοποιῶν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">15</span>
           <span class="verse-text">Porque assim é a vontade de Deus, que, fazendo bem, tapeis a boca à ignorância dos homens insensatos;</span>
+          <span class="verso-grego" lang="grc">ὅτι οὕτως ἐστὶ τὸ θέλημα τοῦ Θεοῦ, ἀγαθοποιοῦντας φιμοῦν τὴν τῶν ἀφρόνων ἀνθρώπων ἀγνωσίαν·</span>
         </div>
         <div class="verse">
           <span class="verse-number">16</span>
           <span class="verse-text">Como livres, e não tendo a liberdade por cobertura da malícia, mas como servos de Deus.</span>
+          <span class="verso-grego" lang="grc">ὡς ἐλεύθεροι, καὶ μὴ ὡς ἐπικάλυμμα ἔχοντες τῆς κακίας τὴν ἐλευθερίαν, ἀλλ’ ὡς δοῦλοι Θεοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">17</span>
           <span class="verse-text">Honrai a todos. Amai a fraternidade. Temei a Deus. Honrai ao rei.</span>
+          <span class="verso-grego" lang="grc">πάντας τιμήσατε. τὴν ἀδελφότητα ἀγαπᾶτε. τὸν Θεὸν φοβεῖσθε. τὸν βασιλέα τιμᾶτε.</span>
         </div>
         <div class="verse">
           <span class="verse-number">18</span>
           <span class="verse-text">Vós, servos, sujeitai-vos com todo o temor aos senhores, não somente aos bons e humanos, mas também aos maus.</span>
+          <span class="verso-grego" lang="grc">Οἱ οἰκέται ὑποτασσόμενοι ἐν παντὶ φόβῳ τοῖς δεσπόταις, οὐ μόνον τοῖς ἀγαθοῖς καὶ ἐπιεικέσιν, ἀλλὰ καὶ τοῖς σκολιοῖς.</span>
         </div>
         <div class="verse">
           <span class="verse-number">19</span>
           <span class="verse-text">Porque é coisa agradável, que alguém, por causa da consciência para com Deus, sofra agravos, padecendo injustamente.</span>
+          <span class="verso-grego" lang="grc">τοῦτο γὰρ χάρις, εἰ διὰ συνείδησιν Θεοῦ ὑποφέρει τις λύπας, πάσχων ἀδίκως.</span>
         </div>
         <div class="verse">
           <span class="verse-number">20</span>
           <span class="verse-text">Porque, que glória será essa, se, pecando, sois esbofeteados e sofreis? Mas se, fazendo o bem, sois afligidos e o sofreis, isso é agradável a Deus.</span>
+          <span class="verso-grego" lang="grc">ποῖον γὰρ κλέος, εἰ ἁμαρτάνοντες καὶ κολαφιζόμενοι ὑπομενεῖτε; ἀλλ’ εἰ ἀγαθοποιοῦντες καὶ πάσχοντες, ὑπομενεῖτε, τοῦτο χάρις παρὰ Θεῷ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">21</span>
           <span class="verse-text">Porque para isto sois chamados; pois também Cristo padeceu por nós, deixando-nos o exemplo, para que sigais as suas pisadas.</span>
+          <span class="verso-grego" lang="grc">εἰς τοῦτο γὰρ ἐκλήθητε, ὅτι καὶ Χριστὸς ἔπαθεν ὑπὲρ ἡμῶν, ἡμῖν ὑπολιμπάνων ὑπογραμμὸν, ἵνα ἐπακολουθήσητε τοῖς ἴχνεσιν αὐτοῦ·</span>
         </div>
         <div class="verse">
           <span class="verse-number">22</span>
           <span class="verse-text">O qual não cometeu pecado, nem na sua boca se achou engano.</span>
+          <span class="verso-grego" lang="grc">ὃς ἁμαρτίαν οὐκ ἐποίησεν, οὐδὲ εὑρέθη δόλος ἐν τῷ στόματι αὐτοῦ·</span>
         </div>
         <div class="verse">
           <span class="verse-number">23</span>
           <span class="verse-text">O qual, quando o injuriavam, não injuriava, e quando padecia não ameaçava, mas entregava-se àquele que julga justamente;</span>
+          <span class="verso-grego" lang="grc">ὃς λοιδορούμενος οὐκ ἀντελοιδόρει, πάσχων οὐκ ἠπείλει, παρεδίδου δὲ τῷ κρίνοντι δικαίως·</span>
         </div>
         <div class="verse">
           <span class="verse-number">24</span>
           <span class="verse-text">Levando ele mesmo em seu corpo os nossos pecados sobre o madeiro, para que, mortos para os pecados, pudéssemos viver para a justiça; e pelas suas feridas fostes sarados.</span>
+          <span class="verso-grego" lang="grc">ὃς τὰς ἁμαρτίας ἡμῶν αὐτὸς ἀνήνεγκεν ἐν τῷ σώματι αὐτοῦ ἐπὶ τὸ ξύλον, ἵνα, ταῖς ἁμαρτίαις ἀπογενόμενοι, τῇ δικαιοσύνῃ ζήσωμεν· οὗ τῷ μώλωπι αὐτοῦ ἰάθητε.</span>
         </div>
         <div class="verse">
           <span class="verse-number">25</span>
           <span class="verse-text">Porque éreis como ovelhas desgarradas; mas agora tendes voltado ao Pastor e Bispo das vossas almas.</span>
+          <span class="verso-grego" lang="grc">ἦτε γὰρ ὡς πρόβατα πλανώμενα· ἀλλ’ ἐπεστράφητε νῦν ἐπὶ τὸν ποιμένα καὶ ἐπίσκοπον τῶν ψυχῶν ὑμῶν.</span>
         </div>
 
     </div>
+    <p class="grego-credito grego-capitulo">Texto grego: <a href="https://git.door43.org/STR/el-x-koine_trs" rel="noopener">Textus Receptus 1894 Scrivener</a>, Door43 World Missions Community, com Scriptorium e Dr. Maurice A. Robinson, sob a licença <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br" rel="license noopener">CC BY-SA 4.0</a>. Adaptado: só o texto, sem as marcações de morfologia, Strong e lema. Esta camada grega segue a mesma licença.</p>
 
     <div class="chapter-nav">
       <a href="1pe-01.html" class="nav-button">← Capítulo Anterior</a>

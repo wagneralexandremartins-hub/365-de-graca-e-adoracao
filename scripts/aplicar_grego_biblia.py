@@ -83,6 +83,27 @@ LIVROS = {
                    (4, 13): [("τήν πόλιν", "τὴν πόλιν", "agudo final antes de palavra (grave)"),
                              ("κερδήσομεν", "κερδήσομεν·", "versículo sem pontuação no fim (a frase continua no v. 14)")],
                }),
+    # Fase 2, lote 3 (15/10/2026): 1 Pedro, em PT
+    # numeração ACF = Door43 = byztxt nos 5 capítulos (sem nota); lista de correções conferida e aprovada pelo
+    # Wagner em 15/10/2026 (1:7 confirmado: grave, antes de τιμιώτερον)
+    "1pe": dict(sigla="1pe", nome="1 Pedro", usfm="61-1PE.usfm", byz="1PE.SCV", caps=5, autorizados=[1, 2, 3, 4, 5],
+                correcoes={
+                    (1, 4): [("οὐρανοῖς εἰς ὑμᾶς", "οὐρανοῖς εἰς ὑμᾶς,", "versículo sem pontuação no fim (a frase continua no v. 5)")],
+                    (1, 7): [("πολυ τιμιώτερον", "πολὺ τιμιώτερον", "palavra sem acento (oxítona antes de palavra: grave)")],
+                    (1, 16): [("ἅγιος εἰμι", "ἅγιός εἰμι", "proparoxítona antes de enclítica ganha 2º acento")],
+                    (2, 6): [("ἐκλεκτόν ἔντιμον", "ἐκλεκτὸν ἔντιμον", "agudo final antes de palavra (grave)"),
+                             ("ἐπ αὐτῷ", "ἐπ’ αὐτῷ", "falta o apóstrofo da elisão")],
+                    (3, 1): [("κερδηθήσωνται", "κερδηθήσωνται,", "versículo sem pontuação no fim (a frase continua no v. 2)")],
+                    (3, 12): [("οἵ ὀφθαλμοὶ", "οἱ ὀφθαλμοὶ", "artigo não leva acento")],
+                    (3, 13): [("γένησθε", "γένησθε;", "pergunta sem ponto de interrogação grego")],
+                    (3, 15): [("μετά πραΰτητος καί φόβου", "μετὰ πραΰτητος καὶ φόβου·",
+                               "agudo final antes de palavra (grave), 2 vezes; versículo sem pontuação no fim")],
+                    (3, 16): [("ἀγαθήν ἵνα", "ἀγαθὴν ἵνα", "agudo final antes de palavra (grave)"),
+                              ("κακοποιων", "κακοποιῶν", "palavra sem acento"),
+                              ("ἀναστροφήν", "ἀναστροφήν.", "versículo sem pontuação no fim (o v. 17 abre frase nova)")],
+                    (4, 1): [("ἕν σαρκὶ", "ἐν σαρκὶ", "é a preposição ἐν, não o numeral ἕν")],
+                    (4, 8): [("ἥ ἀγάπη", "ἡ ἀγάπη", "artigo não leva acento")],
+                }),
 }
 # opção B do Wagner (15/10/2026): corrigir só acentos e pontuação desses versículos, com a lista para conferência.
 # Enquanto ele não conferir a lista, o --apply é recusado. Lista conferida e aprovada pelo Wagner em 15/10/2026.
@@ -98,6 +119,9 @@ SHA256 = dict(ex.SHA256, **{
     # lote 2 (15/10/2026); hash git conferido no Door43 (114dcf7a) e no GitHub (984262b0)
     "60-JAS.usfm": "a8ef92440a13fed410ecb5233e914e015bee91f6b48aa197dc227fbec7fada17",
     "JAS.SCV": "a3147f8c8e585428012b187c0cc8195b61a71374023b47831bbb1499585a332f",
+    # lote 3 (15/10/2026); hash git conferido no Door43 (a618528d) e no GitHub (563dab07)
+    "61-1PE.usfm": "6722ad5aee512b3ff271a5151bb38dc54fb2bc19a3fbdf814e184baff5790160",
+    "1PE.SCV": "de8c039b285b92f639b63bfc68ffe7181e6e1fda20e220ce5fc2e26bc37f203f",
 })
 
 MARCA_INI, MARCA_FIM = "<!-- grego-biblia:v1 -->", "<!-- /grego-biblia:v1 -->"
