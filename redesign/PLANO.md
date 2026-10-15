@@ -390,6 +390,36 @@ Depois do merge: reenviar o sitemap no Search Console e pedir "Validar correçã
 
 **Próximos passos (só com OK do Wagner).** Push e PR; depois do merge, conferir no ar (João 3 com 36 linhas de grego, `grego.css` e `grego-biblia.js` = `main`, Gentium 200) e avaliar o piloto antes da Fase 2.
 
+## Grego em todos os versículos do NT: andamento (registrado em 15/10/2026)
+
+Script único `scripts/aplicar_grego_biblia.py` (simulação por padrão, `--apply` com backup zip em `_backups/`), dados em `scripts/dados/grego-nt/<livro>.json`. Fonte fixada: Door43 `4107626c` (SHA-256 de cada arquivo no script, hash git conferido no Door43 e no GitHub), conferência no byztxt `6049a43b`. Em cada livro: diagnóstico, lista de correções aprovada pelo Wagner, dry-run com prova byte a byte, regressão dos livros já no ar (0 mudanças), prints a 1280/390/360 px no escuro e no claro, `--apply`, nova simulação com 0 mudanças, PR e conferência no ar com curl.
+
+| Etapa | Livros (PT) | PR | Merge | Deploy | Reversão |
+|---|---|---|---|---|---|
+| Fase 1 (piloto) | João 3 | #20 | `f00e0f3c` (15/10 17:40 UTC) | run `38779262665` ok | `git revert -m 1 f00e0f3c` |
+| Fase 2, lote 1 | 2 João, 3 João, Judas | #21 | `6847fa81` (15/10 18:41 UTC) | run `38787656179` ok | `git revert -m 1 6847fa81` |
+| Fase 2, lote 2 | Tiago (5 caps., 108 vers.) | #22 | `0598dd64` (15/10 19:33 UTC) | run `38794863761` ok | `git revert -m 1 0598dd64` |
+| Fase 2, lote 3 | 1 Pedro (5 caps., 105 vers.) | #23 | `a2395647` (15/10 20:49 UTC) | run `38805014793` ok | `git revert -m 1 a2395647` |
+
+Conferido no ar (curl, página no ar = `main` byte a byte): jo-03; 2jo, 3jo e jd; Tiago 1, 3 e 4; 1 Pedro 1, 3 e 4. Correções de acentuação no ar: 2 Jo 7; 3 Jo 9 e 15; Jd 20 e 22; Tg 1:12, 1:26, 2:2, 2:18, 3:5, 3:12 e 4:13; 1 Pe 1:4, 1:7, 1:16, 2:6, 3:1, 3:12, 3:13, 3:15, 3:16, 4:1 e 4:8.
+
+**Decisões do Wagner (15/10).**
+1. Correções de acentuação, opção B: só acentos e pontuação, com as letras iguais às do byztxt (prova no script); cada correção fica registrada no JSON do livro (`correcoes_de_acentuacao`: forma do Door43, forma publicada e motivo); a lista de cada livro passa pelo Wagner antes do `--apply`. O grave antes de vírgula é convenção da fonte e fica como está.
+2. A ACF manda na numeração; quando a fonte numera diferente, o grego segue a ACF, com nota discreta abaixo do grego (caso real: 3 Jo 15, texto aprovado; classe `.verso-nota`, bloco `grego-biblia-nota:v1` no `grego.css`).
+3. Rótulos do botão: "Ocultar o grego" / "Mostrar o grego".
+4. Um livro por PR, ou livros curtos juntos (como 2 Jo, 3 Jo e Jd).
+
+**Pendências.**
+- (a) Lote de correção das páginas já publicadas, em PR separado: Jd 1 `ἠγίασμένοις` → `ἡγιασμένοις`; Jd 17 `δέ ἀγαπητοί` → `δὲ ἀγαπητοί`; 2 Jo 12 `ᾗ` → `ᾖ` (subjuntivo); Jo 3:13 `ὁ ὤν ἐν` → `ὁ ὢν ἐν` e pontuação final (afeta também o estudo de João 3, que publica o mesmo versículo); dúvida em Jd 14 (`Ἑνὼχ` no Door43, com espírito áspero; `Ἐνώχ` no Robinson-Pierpont).
+- (b) Os botões flutuantes (modo claro e WhatsApp) cobrem parte do texto e do crédito no celular nas páginas de `biblia/`.
+- (c) `.chapter-nav` sem estilo nas 1.189 páginas de `biblia/` (ver o achado da Fase 1).
+- (d) Prévias do símbolo (`redesign/preview-simbolo-3d.html` e `redesign/simbolo-365-anel.webp`) fora do git, aguardando decisão.
+- (e) 61 arquivos de `_backups/` ainda versionados no git (o `.gitignore` só cobre `*.zip`), a resolver por PR.
+- (f) Próximos livros: 2 Pedro, 1 João e os demais, na ordem do plano em fases; depois EN/ES (KJV/RV1909), conferindo a numeração livro a livro.
+- (g) A frente 0 das páginas de modelo EN/ES e o plano das Perguntas (`redesign/plano-perguntas-biblia.md`, na branch `docs/plano-perguntas`) seguem pendentes do export do Search Console.
+
+A fila de frentes, com critério de pronto, está em `redesign/FILA.md`.
+
 ## Estado em 13/10 (fim do dia)
 
 **No ar (merge commit e deploy "Deploy GitHub Pages" com sucesso, conferidos com curl)**
