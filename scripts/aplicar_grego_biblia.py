@@ -5,7 +5,8 @@ Decisões do Wagner (14/10/2026, redesign/PLANO.md, "Grego em todos os versícul
     ocultar/mostrar; crédito da licença uma vez por capítulo, no fim dos versículos (texto do piloto);
   • dados num JSON por livro com todos os versículos (scripts/dados/grego-nt/<livro>.json); os JSON dos
     estudos (scripts/dados/grego-tr-*.json) não mudam;
-  • Fase 1 = piloto em PT só em biblia/jo/jo-03.html.
+  • Fase 1 = piloto em PT só em biblia/jo/jo-03.html (no ar desde 15/10/2026, PR #20);
+  • Fase 2, lote 1 (15/10/2026) = 2 João, 3 João e Judas, em PT.
 
 Fonte: a mesma dos estudos (scripts/extrair_grego_door43.py) — Door43 STR/el-x-koine_trs, commit
 4107626c, Textus Receptus 1894 Scrivener, CC BY-SA 4.0; conferência no byztxt 6049a43b.
@@ -17,10 +18,13 @@ O que muda (só com --apply):
   • a página do capítulo: 1 bloco no <head>, o botão antes de <div class="verses">, 1 linha
     <span class="verso-grego" lang="grc"> depois de cada <span class="verse-text">, o crédito depois
     do fim de .verses. Nenhum byte do texto existente muda.
+  • livros com "notas" (ex.: 3 Jo 15, numeração): 1 linha <span class="verso-nota"> abaixo do grego do
+    versículo, e o bloco CSS grego-biblia-nota:v1 no fim do grego.css (só na 1ª vez).
 
 Provas (se qualquer uma falhar, nada é gravado):
   • SHA-256 das fontes = fixados; USFM sem marcadores desconhecidos;
-  • o livro inteiro sem palavra vazia nos capítulos aplicados; numeração ACF = Door43 = byztxt no capítulo;
+  • o livro inteiro sem palavra vazia nos capítulos aplicados; numeração ACF = Door43 = byztxt no capítulo
+    (quando o byztxt junta versículos — 3 Jo 14-15 —, as palavras do Door43 juntas = as do byztxt);
   • no capítulo, Door43 = byztxt (só diferenças de grafia);
   • os versículos já publicados nos estudos (grego-tr-<livro>.json) saem idênticos;
   • página: novo menos os trechos inseridos = original, byte a byte; quebra de linha preservada;
@@ -39,9 +43,45 @@ sys.path.insert(0, os.path.join(ROOT, "scripts"))
 import extrair_grego_door43 as ex
 import aplicar_grego_jo3 as piloto
 
+# autorizados = capítulos liberados pelo Wagner; juncoes_byz = versículos que o byztxt junta num só
+# (a prova passa a ser: as palavras do Door43 nos versículos juntos = as do byztxt no versículo único);
+# pendente = decisão do Wagner ainda em aberto (a simulação roda, o --apply é recusado).
 LIVROS = {
-    "joao": dict(sigla="jo", nome="João", usfm="44-JHN.usfm", byz="JOH.SCV", caps=21),
+    "joao": dict(sigla="jo", nome="João", usfm="44-JHN.usfm", byz="JOH.SCV", caps=21, autorizados=[3]),
+    # Fase 2, lote 1 (15/10/2026): 2 João, 3 João e Judas, em PT
+    "2jo": dict(sigla="2jo", nome="2 João", usfm="64-2JN.usfm", byz="2JO.SCV", caps=1, autorizados=[1],
+                correcoes={(1, 7): [("εἰσῆλθόν εἰς", "εἰσῆλθον εἰς", "agudo de enclítica antes de εἰς, que não é enclítica")]}),
+    "3jo": dict(sigla="3jo", nome="3 João", usfm="65-3JN.usfm", byz="3JO.SCV", caps=1, autorizados=[1],
+                juncoes_byz={(1, 14): [14, 15]},
+                # decisão do Wagner (15/10/2026): o grego segue a numeração da ACF, com nota discreta
+                notas={(1, 15): "Nota: no Textus Receptus de Scrivener (1894), estas palavras fazem parte do "
+                                "v. 14; aqui o grego segue a numeração da ACF."},  # texto aprovado em 15/10/2026
+                correcoes={
+                    (1, 9): [("Ἔγραψά τῇ", "Ἔγραψα τῇ", "agudo de enclítica antes de τῇ, que não é enclítica")],
+                    (1, 15): [("εἰρήνῃ σοί ἀσπάζονταί σε οἵ φίλοι ἀσπάζου τούς φίλους κατ’ ὄνομα",
+                               "εἰρήνη σοι. ἀσπάζονταί σε οἱ φίλοι. ἀσπάζου τοὺς φίλους κατ’ ὄνομα.",
+                               "versículo sem pontuação e com acentos fora do padrão: εἰρήνῃ→εἰρήνη (nominativo), "
+                               "σοί→σοι (enclítica), οἵ→οἱ (artigo), τούς→τοὺς (grave antes de palavra); 3 pontos acrescentados "
+                               "(o versículo vinha sem pontuação)")],
+                }),
+    "jd": dict(sigla="jd", nome="Judas", usfm="66-JUD.usfm", byz="JUDE.SCV", caps=1, autorizados=[1],
+               correcoes={
+                   (1, 20): [("Πνεύματι Ἁγίω", "Πνεύματι Ἁγίῳ", "falta o iota subscrito do dativo")],
+                   (1, 22): [("διακρινομένοι", "διακρινόμενοι", "acento na sílaba errada (particípio -όμενοι)")],
+               }),
 }
+# opção B do Wagner (15/10/2026): corrigir só acentos e pontuação desses versículos, com a lista para conferência.
+# Enquanto ele não conferir a lista, o --apply é recusado. Lista conferida e aprovada pelo Wagner em 15/10/2026.
+CORRECOES_CONFERIDAS = True
+# SHA-256 dos arquivos-fonte que o extrator dos estudos não fixa (baixados em 15/10/2026 das URLs por commit)
+SHA256 = dict(ex.SHA256, **{
+    "64-2JN.usfm": "510ffd6920ddb662eb8247d82b3994474b8c803e86ae4ef7e3c1bb7e8bae824e",
+    "65-3JN.usfm": "6bcd5d449d18158360e61234cdaa95eb845b0e160eec072afe5f569b6d0f2da1",
+    "66-JUD.usfm": "cdfe4c52fb603aff854d6ff16a2464ecc40ee3712948727e837b96a4044be80a",
+    "2JO.SCV": "a1209c57cd8f58b40387edc3cb05f5684d8462f1d7159abf1a7cd2dd346de867",
+    "3JO.SCV": "a53f4b694798fbe7280370721c32d29341236285fcebdf122f849b9b01825239",
+    "JUDE.SCV": "dcb4d44026cf725f834af94158c936d0f422ab6fd465a1c383d25de7c313c480",
+})
 
 MARCA_INI, MARCA_FIM = "<!-- grego-biblia:v1 -->", "<!-- /grego-biblia:v1 -->"
 HEAD = [
@@ -66,6 +106,12 @@ CSS_NOVO = """/* grego-biblia:v1 — grego em todos os versículos da Bíblia AC
 .grego-alternar:focus-visible { outline: 2px solid #5dade2; outline-offset: 2px; }
 .grego-alternar[hidden] { display: none; }
 .grego-credito.grego-capitulo { margin: 1.6rem 0 0; padding: 0.8rem 0 0; border-top: 1px solid #2a3f5f; }
+"""
+# nota de numeração (só entra no grego.css quando um livro tem nota; o piloto de João não muda)
+CSS_NOTA_MARCA = "/* grego-biblia-nota:v1"
+CSS_NOTA = """/* grego-biblia-nota:v1 — nota discreta abaixo do grego (numeração/subscrição), some junto com o grego. */
+.verso-nota { display: block; text-indent: 0; margin: 0.15rem 0 0; font-family: var(--font-ui, system-ui, sans-serif); font-size: 0.75rem; line-height: 1.5; color: #7d8ba1; }
+.verses.sem-grego .verso-nota { display: none; }
 """
 
 JS_NOVO = """/* grego-biblia:v1 — botão ocultar/mostrar o grego nos capítulos da Bíblia ACF (scripts/aplicar_grego_biblia.py).
@@ -94,7 +140,7 @@ def caminho_json(livro):
 def gera_json(livro, cfg, fontes, provas):
     arquivos = [cfg["usfm"], cfg["byz"]]
     for f in arquivos:
-        provas[f"SHA-256 de {f} = fixado"] = ex.sha(os.path.join(fontes, f)) == ex.SHA256[f]
+        provas[f"SHA-256 de {f} = fixado"] = ex.sha(os.path.join(fontes, f)) == SHA256[f]
     texto, vazios, estranhas, compostos = ex.le_usfm(os.path.join(fontes, cfg["usfm"]))
     provas["USFM só com marcadores esperados"] = not estranhas
     byz = ex.le_scv(os.path.join(fontes, cfg["byz"]))
@@ -104,13 +150,22 @@ def gera_json(livro, cfg, fontes, provas):
     provas["sem &, < ou > no grego"] = all(not set(t) & set("&<>") for t in versos.values())
     cmp = {k: ex.compara(ex.translit(t), byz.get(k, [])) for k, t in texto.items()}
     fmt = lambda ks: [f"{c}:{v}" for c, v in sorted(ks)]
+    # versículos que o byztxt junta num só: compara as palavras do Door43 juntas com o versículo do byztxt
+    juncoes = {}
+    for (c, vb), partes in cfg.get("juncoes_byz", {}).items():
+        junto = ex.translit(" ".join(texto[(c, v)] for v in partes))
+        r = ex.compara(junto, byz.get((c, vb), []))
+        ok = r != "leitura" and all((c, v) not in byz for v in partes if v != vb)
+        provas[f"byztxt junta {c}:{partes[0]}-{partes[-1]} em {c}:{vb}: palavras do Door43 juntas = byztxt ({r})"] = ok
+        for v in partes: cmp[(c, v)] = "juncao" if ok else "leitura"
+        juncoes[f"{c}:{vb}"] = [f"{c}:{v}" for v in partes]
     dados = {
         "livro": livro,
         "fonte": {"texto": "Textus Receptus 1894 Scrivener", "edicao": "Door43 STR/el-x-koine_trs",
                   "licenca": "CC BY-SA 4.0", "url": "https://git.door43.org/STR/el-x-koine_trs",
-                  "commit": ex.DOOR43_COMMIT, "arquivo": cfg["usfm"], "sha256": ex.SHA256[cfg["usfm"]]},
+                  "commit": ex.DOOR43_COMMIT, "arquivo": cfg["usfm"], "sha256": SHA256[cfg["usfm"]]},
         "conferencia": {"texto": "byztxt greektext-scrivener (Robinson, domínio público)",
-                        "commit": ex.BYZ_COMMIT, "arquivo": "textonly/" + cfg["byz"], "sha256": ex.SHA256[cfg["byz"]],
+                        "commit": ex.BYZ_COMMIT, "arquivo": "textonly/" + cfg["byz"], "sha256": SHA256[cfg["byz"]],
                         "versiculos": len(cmp), "iguais": sum(r == "igual" for r in cmp.values()),
                         "so_grafia": sum(r == "grafia" for r in cmp.values()),
                         "outros": fmt(k for k, r in cmp.items() if r == "leitura")},
@@ -120,13 +175,41 @@ def gera_json(livro, cfg, fontes, provas):
         "palavras_vazias": fmt(vazios),
         "versiculos": versos,
     }
-    # os versículos já publicados nos estudos saem idênticos
-    estudos = json.load(open(os.path.join(ROOT, "scripts", "dados", f"grego-tr-{livro}.json"), encoding="utf-8"))["versiculos"]
-    provas[f"os {len(estudos)} versículos publicados nos estudos = JSON novo"] = all(versos.get(k) == t for k, t in estudos.items())
+    if juncoes:  # só aparece quando há junção (o JSON de João não muda)
+        dados["conferencia"]["juncoes_byztxt"] = juncoes
+    # correções de acentuação/pontuação (opção B): só diacríticos e pontuação, letras idênticas
+    letras = lambda s: "".join(c for c in unicodedata.normalize("NFD", s.lower()) if c.isalpha() and not unicodedata.combining(c))
+    correcoes = {}
+    for (c, v), trocas in sorted(cfg.get("correcoes", {}).items()):
+        k = f"{c}:{v}"; antes = versos[k]; depois = antes
+        for velho, novo, motivo in trocas:
+            velho, novo = unicodedata.normalize("NFC", velho), unicodedata.normalize("NFC", novo)
+            provas[f"correção {k}: forma do Door43 «{velho}» ocorre 1 vez"] = depois.count(velho) == 1
+            depois = depois.replace(velho, novo, 1)
+        provas[f"correção {k}: só acentos e pontuação (letras idênticas)"] = letras(antes) == letras(depois) and antes != depois
+        correcoes[k] = {"door43": antes, "publicado": depois, "motivo": "; ".join(m for _, _, m in trocas)}
+        versos[k] = depois
+    for vb, partes in juncoes.items():  # versículo corrigido continua = byztxt (também nos versículos juntos)
+        c = int(vb.split(":")[0])
+        if any(p in correcoes for p in partes):
+            r = ex.compara(ex.translit(" ".join(versos[p] for p in partes)), byz.get((c, int(vb.split(":")[1])), []))
+            provas[f"corrigidos {partes} juntos = byztxt {vb} ({r})"] = r != "leitura"
+    for k in correcoes:
+        c, v = map(int, k.split(":"))
+        if not any(k in ps for ps in juncoes.values()):
+            r = ex.compara(ex.translit(versos[k]), byz.get((c, v), []))
+            provas[f"corrigido {k} = byztxt ({r})"] = r != "leitura"
+    if correcoes:  # só aparece quando há correção (o JSON de João não muda)
+        dados = {k: x for k, x in dados.items() if k != "versiculos"} | {"correcoes_de_acentuacao": correcoes, "versiculos": versos}
+    # os versículos já publicados nos estudos saem idênticos (só nos livros que têm estudo com grego)
+    p_est = os.path.join(ROOT, "scripts", "dados", f"grego-tr-{livro}.json")
+    if os.path.exists(p_est):
+        estudos = json.load(open(p_est, encoding="utf-8"))["versiculos"]
+        provas[f"os {len(estudos)} versículos publicados nos estudos = JSON novo"] = all(versos.get(k) == t for k, t in estudos.items())
     return dados, texto, byz, cmp, vazios
 
 
-def aplica_pagina(antigo, cap, versos_cap, pv):
+def aplica_pagina(antigo, cap, versos_cap, pv, notas=None):
     """Devolve (novo, insercoes, ordem). insercoes = [(posição no original, bytes)]."""
     nl = b"\r\n" if antigo.count(b"\r\n") == antigo.count(b"\n") else b"\n"
     pv["quebra de linha uniforme"] = antigo.count(b"\r\n") in (0, antigo.count(b"\n"))
@@ -149,7 +232,10 @@ def aplica_pagina(antigo, cap, versos_cap, pv):
         recuo_v = re.match(rb"[ \t]*", linha_txt).group(0)
         g = versos_cap.get(v)
         if g is None: continue
-        ins.append((m.end(1), nl + recuo_v + f'<span class="verso-grego" lang="grc">{g}</span>'.encode()))
+        linha = nl + recuo_v + f'<span class="verso-grego" lang="grc">{g}</span>'.encode()
+        if notas and (cap, v) in notas:
+            linha += nl + recuo_v + f'<span class="verso-nota">{notas[(cap, v)]}</span>'.encode()
+        ins.append((m.end(1), linha))
     # crédito: logo depois do </div> que fecha .verses (o 1º "</div>" de mesma indentação depois do último versículo)
     fim_ult = [m.end(3) for m in RX_VERSO.finditer(antigo)][-1]
     fecha = nl + recuo + b"</div>"
@@ -181,8 +267,8 @@ def main():
         print("uso: --livro " + "|".join(LIVROS) + " --caps N[,N...] --fontes PASTA [--apply]"); return 2
     livro = a[a.index("--livro") + 1]; cfg = LIVROS[livro]
     caps = [int(c) for c in a[a.index("--caps") + 1].split(",")]
-    if livro == "joao" and caps != [3]:
-        print("Fase 1 (piloto): só João 3 está autorizado."); return 2
+    if not set(caps) <= set(cfg["autorizados"]):
+        print(f"{cfg['nome']}: só os capítulos {cfg['autorizados']} estão autorizados."); return 2
     fontes = os.path.abspath(a[a.index("--fontes") + 1])
     apply = "--apply" in a
     provas = {}
@@ -195,8 +281,11 @@ def main():
     css_path = os.path.join(ROOT, "assets", "css", "grego.css")
     css = open(css_path, "rb").read()
     css_nl = b"\r\n" if css.count(b"\r\n") == css.count(b"\n") else b"\n"
-    css_tem = CSS_MARCA.encode() in css
-    css_novo = css if css_tem else css + CSS_NOVO.replace("\n", css_nl.decode()).encode("utf-8")
+    css_novo = css
+    if CSS_MARCA.encode() not in css_novo: css_novo += CSS_NOVO.replace("\n", css_nl.decode()).encode("utf-8")
+    if cfg.get("notas") and CSS_NOTA_MARCA.encode() not in css_novo:
+        css_novo += CSS_NOTA.replace("\n", css_nl.decode()).encode("utf-8")
+    css_tem = css_novo == css
     provas["grego.css: só acréscimo no fim (original = prefixo)"] = css_novo.startswith(css) and css.endswith(css_nl)
     js_path = os.path.join(ROOT, "assets", "js", "grego-biblia.js")
     js_atual = open(js_path, "rb").read().replace(b"\r\n", b"\n") if os.path.exists(js_path) else None
@@ -211,13 +300,22 @@ def main():
             relatorio.append((rel, "já tem", 0, 0)); continue
         acf = [int(n) for n in re.findall(rb'<span class="verse-number">(\d+)</span>', antigo)]
         d43 = sorted(v for c, v in texto if c == cap); bz = sorted(v for c, v in byz if c == cap)
-        provas[f"{rel}: numeração ACF = Door43 = byztxt ({len(acf)} versículos)"] = acf == d43 == bz
+        # o byztxt pode juntar versículos (juncoes_byz): conta como os versículos do Door43 que ele junta
+        bz_exp = sorted({v for v in bz} | {v for (c, vb), ps in cfg.get("juncoes_byz", {}).items() if c == cap for v in ps})
+        juntos = "" if bz == d43 else f"; byztxt com {len(bz)}, junções declaradas"
+        provas[f"{rel}: numeração ACF = Door43 = byztxt ({len(acf)} versículos{juntos})"] = acf == d43 == bz_exp
         provas[f"{rel}: nenhuma palavra vazia no capítulo"] = not any(c == cap for c, _ in vazios)
         provas[f"{rel}: Door43 = byztxt no capítulo (0 diferenças de leitura)"] = all(
             cmp[(c, v)] != "leitura" for c, v in texto if c == cap)
         vc = {v: dados["versiculos"][f"{cap}:{v}"] for v in d43}
         pv = {}
-        novo, ins, ordem = aplica_pagina(antigo, cap, vc, pv)
+        notas = {k: t for k, t in cfg.get("notas", {}).items() if k[0] == cap}
+        novo, ins, ordem = aplica_pagina(antigo, cap, vc, pv, notas)
+        lidas = re.findall(rb'<span class="verso-grego" lang="grc">[^<]*</span>\s*<span class="verso-nota">(.*?)</span>', novo)
+        provas[f"{rel}: {len(notas)} nota(s), logo abaixo do grego do versículo certo"] = \
+            [t.decode() for t in lidas] == [notas[k] for k in sorted(notas)] and novo.count(b'class="verso-nota"') == len(notas) \
+            and all(re.search(rb'<span class="verse-number">%d</span>\s*<span class="verse-text">.*?</span>\s*<span class="verso-grego"[^>]*>[^<]*</span>\s*<span class="verso-nota">'
+                              % v, novo, re.S) for (_, v) in notas)
         for k, ok in pv.items(): provas[f"{rel}: {k}"] = ok
         lidos = [(int(n), html.unescape(g.decode())) for n, g in re.findall(
             rb'<span class="verse-number">(\d+)</span>\s*<span class="verse-text">.*?</span>\s*<span class="verso-grego" lang="grc">(.*?)</span>', novo, re.S)]
@@ -245,6 +343,10 @@ def main():
         print(f"\nSimulação: {mudancas} arquivo(s) mudariam; nada gravado."); return 0
     if not ROTULOS_APROVADOS:
         print("\n--apply recusado: rótulos do botão ainda não aprovados (ROTULOS_APROVADOS = False)."); return 1
+    if cfg.get("pendente"):
+        print(f"\n--apply recusado: decisão pendente em {cfg['nome']}: {cfg['pendente']}."); return 1
+    if cfg.get("correcoes") and not CORRECOES_CONFERIDAS:
+        print(f"\n--apply recusado: a lista de correções de {cfg['nome']} ainda não foi conferida pelo Wagner."); return 1
     if mudancas == 0:
         print("Nada a fazer."); return 0
     ts = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
