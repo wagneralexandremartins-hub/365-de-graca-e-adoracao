@@ -126,6 +126,11 @@
 <link rel="stylesheet" href="/assets/css/site-header.css">
 <script src="/assets/js/site-nav.js" defer></script>
 <!-- /site-nav:v1 -->
+<!-- grego-biblia:v1 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus&amp;display=swap">
+<link rel="stylesheet" href="/assets/css/grego.css">
+<script src="/assets/js/grego-biblia.js" defer></script>
+<!-- /grego-biblia:v1 -->
 </head>
 <body>
 <!-- site-nav:v1 -->
@@ -142,69 +147,87 @@
       <p class="chapter-subtitle">Almeida Corrigida Fiel (ACF)</p>
     </div>
 
-    <div class="verses">
+    <button type="button" class="grego-alternar" data-grego-alternar aria-controls="versiculos" aria-pressed="false" data-ocultar="Ocultar o grego" data-mostrar="Mostrar o grego" hidden>Ocultar o grego</button>
+    <div class="verses" id="versiculos">
         <div class="verse">
           <span class="verse-number">1</span>
           <span class="verse-text">O presbítero ao amado Gaio, a quem em verdade eu amo.</span>
+          <span class="verso-grego" lang="grc">Ὁ πρεσβύτερος Γαΐῳ τῷ ἀγαπητῷ, ὃν ἐγὼ ἀγαπῶ ἐν ἀληθείᾳ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">2</span>
           <span class="verse-text">Amado, desejo que te vá bem em todas as coisas, e que tenhas saúde, assim como bem vai a tua alma.</span>
+          <span class="verso-grego" lang="grc">Ἀγαπητέ, περὶ πάντων εὔχομαί σε εὐοδοῦσθαι καὶ ὑγιαίνειν, καθὼς εὐοδοῦταί σου ἡ ψυχή.</span>
         </div>
         <div class="verse">
           <span class="verse-number">3</span>
           <span class="verse-text">Porque muito me alegrei quando os irmãos vieram, e testificaram da tua verdade, como tu andas na verdade.</span>
+          <span class="verso-grego" lang="grc">ἐχάρην γὰρ λίαν, ἐρχομένων ἀδελφῶν, καὶ μαρτυρούντων σου τῇ ἀληθείᾳ, καθὼς σὺ ἐν ἀληθείᾳ περιπατεῖς.</span>
         </div>
         <div class="verse">
           <span class="verse-number">4</span>
           <span class="verse-text">Não tenho maior gozo do que este, o de ouvir que os meus filhos andam na verdade.</span>
+          <span class="verso-grego" lang="grc">μειζοτέραν τούτων οὐκ ἔχω χαράν, ἵνα ἀκούω τὰ ἐμὰ τέκνα ἐν ἀληθείᾳ περιπατοῦντα.</span>
         </div>
         <div class="verse">
           <span class="verse-number">5</span>
           <span class="verse-text">Amado, procedes fielmente em tudo o que fazes para com os irmãos, e para com os estranhos,</span>
+          <span class="verso-grego" lang="grc">Ἀγαπητέ, πιστὸν ποιεῖς ὃ ἐὰν ἐργάσῃ εἰς τοὺς ἀδελφοὺς καὶ εἰς τοὺς ξένους,</span>
         </div>
         <div class="verse">
           <span class="verse-number">6</span>
           <span class="verse-text">Que em presença da igreja testificaram do teu amor; aos quais, se conduzires como é digno para com Deus, bem farás;</span>
+          <span class="verso-grego" lang="grc">οἳ ἐμαρτύρησάν σου τῇ ἀγάπῃ ἐνώπιον ἐκκλησίας· οὓς καλῶς ποιήσεις προπέμψας ἀξίως τοῦ Θεοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">7</span>
           <span class="verse-text">Porque pelo seu Nome saíram, nada tomando dos gentios.</span>
+          <span class="verso-grego" lang="grc">ὑπὲρ γὰρ τοῦ ὀνόματος αὐτοῦ ἐξῆλθον μηδὲν λαμβάνοντες ἀπὸ τῶν ἐθνῶν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">8</span>
           <span class="verse-text">Portanto, aos tais devemos receber, para que sejamos cooperadores da verdade.</span>
+          <span class="verso-grego" lang="grc">ἡμεῖς οὖν ὀφείλομεν ἀπολαμβάνειν τοὺς τοιούτους, ἵνα συνεργοὶ γινώμεθα τῇ ἀληθείᾳ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">9</span>
           <span class="verse-text">Tenho escrito à igreja; mas Diótrefes, que procura ter entre eles o primado, não nos recebe.</span>
+          <span class="verso-grego" lang="grc">Ἔγραψα τῇ ἐκκλησίᾳ· ἀλλ’ ὁ φιλοπρωτεύων αὐτῶν Διοτρέφης οὐκ ἐπιδέχεται ἡμᾶς.</span>
         </div>
         <div class="verse">
           <span class="verse-number">10</span>
           <span class="verse-text">Por isso, se eu for, trarei à memória as obras que ele faz, proferindo contra nós palavras maliciosas; e, não contente com isto, não recebe os irmãos, e impede os que querem recebê-los, e os lança fora da igreja.</span>
+          <span class="verso-grego" lang="grc">διὰ τοῦτο, ἐὰν ἔλθω, ὑπομνήσω αὐτοῦ τὰ ἔργα ἃ ποιεῖ, λόγοις πονηροῖς φλυαρῶν ἡμᾶς· καὶ μὴ ἀρκούμενος ἐπὶ τούτοις, οὔτε αὐτὸς ἐπιδέχεται τοὺς ἀδελφοὺς, καὶ τοὺς βουλομένους κωλύει, καὶ ἐκ τῆς ἐκκλησίας ἐκβάλλει.</span>
         </div>
         <div class="verse">
           <span class="verse-number">11</span>
           <span class="verse-text">Amado, não sigas o mal, mas o bem. Quem faz o bem é de Deus; mas quem faz o mal não tem visto a Deus.</span>
+          <span class="verso-grego" lang="grc">ἀγαπητέ, μὴ μιμοῦ τὸ κακὸν, ἀλλὰ τὸ ἀγαθόν. ὁ ἀγαθοποιῶν ἐκ τοῦ Θεοῦ ἐστιν· ὁ δὲ κακοποιῶν οὐχ ἑώρακε τὸν Θεόν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">12</span>
           <span class="verse-text">Todos dão testemunho de Demétrio, até a mesma verdade; e também nós testemunhamos; e vós bem sabeis que o nosso testemunho é verdadeiro.</span>
+          <span class="verso-grego" lang="grc">Δημητρίῳ μεμαρτύρηται ὑπὸ πάντων, καὶ ὑπ’ αὐτῆς τῆς ἀληθείας· καὶ ἡμεῖς δὲ μαρτυροῦμεν, καὶ οἴδατε ὅτι ἡ μαρτυρία ἡμῶν ἀληθής ἐστι.</span>
         </div>
         <div class="verse">
           <span class="verse-number">13</span>
           <span class="verse-text">Tinha muito que escrever, mas não quero escrever-te com tinta e pena.</span>
+          <span class="verso-grego" lang="grc">Πολλὰ εἶχον γράφειν, ἀλλ’ οὐ θέλω διὰ μέλανος καὶ καλάμου σοι γράψαι·</span>
         </div>
         <div class="verse">
           <span class="verse-number">14</span>
           <span class="verse-text">Espero, porém, ver-te brevemente, e falaremos face a face.</span>
+          <span class="verso-grego" lang="grc">ἐλπίζω δὲ εὐθέως ἰδεῖν σε, καὶ στόμα πρὸς στόμα λαλήσομεν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">15</span>
           <span class="verse-text">Paz seja contigo. Os amigos te saúdam. Saúda os amigos por nome.</span>
+          <span class="verso-grego" lang="grc">εἰρήνη σοι. ἀσπάζονταί σε οἱ φίλοι. ἀσπάζου τοὺς φίλους κατ’ ὄνομα.</span>
+          <span class="verso-nota">Nota: no Textus Receptus de Scrivener (1894), estas palavras fazem parte do v. 14; aqui o grego segue a numeração da ACF.</span>
         </div>
 
     </div>
+    <p class="grego-credito grego-capitulo">Texto grego: <a href="https://git.door43.org/STR/el-x-koine_trs" rel="noopener">Textus Receptus 1894 Scrivener</a>, Door43 World Missions Community, com Scriptorium e Dr. Maurice A. Robinson, sob a licença <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br" rel="license noopener">CC BY-SA 4.0</a>. Adaptado: só o texto, sem as marcações de morfologia, Strong e lema. Esta camada grega segue a mesma licença.</p>
 
     <div class="chapter-nav">
       <span class="nav-button disabled">← Capítulo Anterior</span>
