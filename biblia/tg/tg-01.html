@@ -126,6 +126,11 @@
 <link rel="stylesheet" href="/assets/css/site-header.css">
 <script src="/assets/js/site-nav.js" defer></script>
 <!-- /site-nav:v1 -->
+<!-- grego-biblia:v1 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus&amp;display=swap">
+<link rel="stylesheet" href="/assets/css/grego.css">
+<script src="/assets/js/grego-biblia.js" defer></script>
+<!-- /grego-biblia:v1 -->
 </head>
 <body>
 <!-- site-nav:v1 -->
@@ -142,117 +147,146 @@
       <p class="chapter-subtitle">Almeida Corrigida Fiel (ACF)</p>
     </div>
 
-    <div class="verses">
+    <button type="button" class="grego-alternar" data-grego-alternar aria-controls="versiculos" aria-pressed="false" data-ocultar="Ocultar o grego" data-mostrar="Mostrar o grego" hidden>Ocultar o grego</button>
+    <div class="verses" id="versiculos">
         <div class="verse">
           <span class="verse-number">1</span>
           <span class="verse-text">Tiago, servo de Deus, e do Senhor Jesus Cristo, às doze tribos que andam dispersas, saúde.</span>
+          <span class="verso-grego" lang="grc">Ἰάκωβος, Θεοῦ καὶ Κυρίου Ἰησοῦ Χριστοῦ δοῦλος, ταῖς δώδεκα φυλαῖς ταῖς ἐν τῇ διασπορᾷ, χαίρειν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">2</span>
           <span class="verse-text">Meus irmãos, tende grande gozo quando cairdes em várias tentações;</span>
+          <span class="verso-grego" lang="grc">Πᾶσαν χαρὰν ἡγήσασθε, ἀδελφοί μου, ὅταν πειρασμοῖς περιπέσητε ποικίλοις,</span>
         </div>
         <div class="verse">
           <span class="verse-number">3</span>
           <span class="verse-text">Sabendo que a prova da vossa fé opera a paciência.</span>
+          <span class="verso-grego" lang="grc">γινώσκοντες ὅτι τὸ δοκίμιον ὑμῶν τῆς πίστεως κατεργάζεται ὑπομονήν·</span>
         </div>
         <div class="verse">
           <span class="verse-number">4</span>
           <span class="verse-text">Tenha, porém, a paciência a sua obra perfeita, para que sejais perfeitos e completos, sem faltar em coisa alguma.</span>
+          <span class="verso-grego" lang="grc">ἡ δὲ ὑπομονὴ ἔργον τέλειον ἐχέτω, ἵνα ἦτε τέλειοι καὶ ὁλόκληροι, ἐν μηδενὶ λειπόμενοι.</span>
         </div>
         <div class="verse">
           <span class="verse-number">5</span>
           <span class="verse-text">E, se algum de vós tem falta de sabedoria, peça-a a Deus, que a todos dá liberalmente, e o não lança em rosto, e ser-lhe-á dada.</span>
+          <span class="verso-grego" lang="grc">Εἰ δέ τις ὑμῶν λείπεται σοφίας, αἰτείτω παρὰ τοῦ διδόντος Θεοῦ πᾶσιν ἁπλῶς, καὶ μὴ ὀνειδίζοντος, καὶ δοθήσεται αὐτῷ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">6</span>
           <span class="verse-text">Peça-a, porém, com fé, em nada duvidando; porque o que duvida é semelhante à onda do mar, que é levada pelo vento, e lançada de uma para outra parte.</span>
+          <span class="verso-grego" lang="grc">αἰτείτω δὲ ἐν πίστει, μηδὲν διακρινόμενος· ὁ γὰρ διακρινόμενος ἔοικε κλύδωνι θαλάσσης ἀνεμιζομένῳ καὶ ῥιπιζομένῳ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">7</span>
           <span class="verse-text">Não pense tal homem que receberá do Senhor alguma coisa.</span>
+          <span class="verso-grego" lang="grc">μὴ γὰρ οἰέσθω ὁ ἄνθρωπος ἐκεῖνος ὅτι λήψεταί τι παρὰ τοῦ Κυρίου.</span>
         </div>
         <div class="verse">
           <span class="verse-number">8</span>
           <span class="verse-text">O homem de coração dobre é inconstante em todos os seus caminhos.</span>
+          <span class="verso-grego" lang="grc">ἀνὴρ δίψυχος, ἀκατάστατος ἐν πάσαις ταῖς ὁδοῖς αὐτοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">9</span>
           <span class="verse-text">Mas glorie-se o irmão abatido na sua exaltação,</span>
+          <span class="verso-grego" lang="grc">Καυχάσθω δὲ ὁ ἀδελφὸς ὁ ταπεινὸς ἐν τῷ ὕψει αὐτοῦ·</span>
         </div>
         <div class="verse">
           <span class="verse-number">10</span>
           <span class="verse-text">E o rico em seu abatimento; porque ele passará como a flor da erva.</span>
+          <span class="verso-grego" lang="grc">ὁ δὲ πλούσιος ἐν τῇ ταπεινώσει αὐτοῦ· ὅτι ὡς ἄνθος χόρτου παρελεύσεται.</span>
         </div>
         <div class="verse">
           <span class="verse-number">11</span>
           <span class="verse-text">Porque sai o sol com ardor, e a erva seca, e a sua flor cai, e a formosa aparência do seu aspecto perece; assim se murchará também o rico em seus caminhos.</span>
+          <span class="verso-grego" lang="grc">ἀνέτειλε γὰρ ὁ ἥλιος σὺν τῷ καύσωνι, καὶ ἐξήρανε τὸν χόρτον, καὶ τὸ ἄνθος αὐτοῦ ἐξέπεσε, καὶ ἡ εὐπρέπεια τοῦ προσώπου αὐτοῦ ἀπώλετο· οὕτω καὶ ὁ πλούσιος ἐν ταῖς πορείαις αὐτοῦ μαρανθήσεται.</span>
         </div>
         <div class="verse">
           <span class="verse-number">12</span>
           <span class="verse-text">Bem-aventurado o homem que sofre a tentação; porque, quando for provado, receberá a coroa da vida, a qual o Senhor tem prometido aos que o amam.</span>
+          <span class="verso-grego" lang="grc">Μακάριος ἀνὴρ ὃς ὑπομένει πειρασμόν· ὅτι δόκιμος γενόμενος λήψεται τὸν στέφανον τῆς ζωῆς, ὃν ἐπηγγείλατο ὁ Κύριος τοῖς ἀγαπῶσιν αὐτόν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">13</span>
           <span class="verse-text">Ninguém, sendo tentado, diga: De Deus sou tentado; porque Deus não pode ser tentado pelo mal, e a ninguém tenta.</span>
+          <span class="verso-grego" lang="grc">μηδεὶς πειραζόμενος λεγέτω ὅτι Ἀπὸ τοῦ Θεοῦ πειράζομαι· ὁ γὰρ Θεὸς ἀπείραστός ἐστι κακῶν, πειράζει δὲ αὐτὸς οὐδένα.</span>
         </div>
         <div class="verse">
           <span class="verse-number">14</span>
           <span class="verse-text">Mas cada um é tentado, quando atraído e engodado pela sua própria concupiscência.</span>
+          <span class="verso-grego" lang="grc">ἕκαστος δὲ πειράζεται, ὑπὸ τῆς ἰδίας ἐπιθυμίας ἐξελκόμενος καὶ δελεαζόμενος.</span>
         </div>
         <div class="verse">
           <span class="verse-number">15</span>
           <span class="verse-text">Depois, havendo a concupiscência concebido, dá à luz o pecado; e o pecado, sendo consumado, gera a morte.</span>
+          <span class="verso-grego" lang="grc">εἶτα ἡ ἐπιθυμία συλλαβοῦσα τίκτει ἁμαρτίαν· ἡ δὲ ἁμαρτία ἀποτελεσθεῖσα ἀποκύει θάνατον.</span>
         </div>
         <div class="verse">
           <span class="verse-number">16</span>
           <span class="verse-text">Não erreis, meus amados irmãos.</span>
+          <span class="verso-grego" lang="grc">μὴ πλανᾶσθε, ἀδελφοί μου ἀγαπητοί.</span>
         </div>
         <div class="verse">
           <span class="verse-number">17</span>
           <span class="verse-text">Toda a boa dádiva e todo o dom perfeito vem do alto, descendo do Pai das luzes, em quem não há mudança nem sombra de variação.</span>
+          <span class="verso-grego" lang="grc">πᾶσα δόσις ἀγαθὴ, καὶ πᾶν δώρημα τέλειον ἄνωθέν ἐστι, καταβαῖνον ἀπὸ τοῦ πατρὸς τῶν φώτων, παρ’ ᾧ οὐκ ἔνι παραλλαγὴ, ἢ τροπῆς ἀποσκίασμα.</span>
         </div>
         <div class="verse">
           <span class="verse-number">18</span>
           <span class="verse-text">Segundo a sua vontade, ele nos gerou pela palavra da verdade, para que fôssemos como primícias das suas criaturas.</span>
+          <span class="verso-grego" lang="grc">βουληθεὶς ἀπεκύησεν ἡμᾶς λόγῳ ἀληθείας, εἰς τὸ εἶναι ἡμᾶς ἀπαρχήν τινα τῶν αὐτοῦ κτισμάτων.</span>
         </div>
         <div class="verse">
           <span class="verse-number">19</span>
           <span class="verse-text">Portanto, meus amados irmãos, todo o homem seja pronto para ouvir, tardio para falar, tardio para se irar.</span>
+          <span class="verso-grego" lang="grc">Ὥστε, ἀδελφοί μου ἀγαπητοί, ἔστω πᾶς ἄνθρωπος ταχὺς εἰς τὸ ἀκοῦσαι, βραδὺς εἰς τὸ λαλῆσαι, βραδὺς εἰς ὀργήν·</span>
         </div>
         <div class="verse">
           <span class="verse-number">20</span>
           <span class="verse-text">Porque a ira do homem não opera a justiça de Deus.</span>
+          <span class="verso-grego" lang="grc">ὀργὴ γὰρ ἀνδρὸς δικαιοσύνην Θεοῦ οὐ κατεργάζεται.</span>
         </div>
         <div class="verse">
           <span class="verse-number">21</span>
           <span class="verse-text">Por isso, rejeitando toda a imundícia e superfluidade de malícia, recebei com mansidão a palavra em vós enxertada, a qual pode salvar as vossas almas.</span>
+          <span class="verso-grego" lang="grc">διὸ ἀποθέμενοι πᾶσαν ῥυπαρίαν καὶ περισσείαν κακίας, ἐν πραΰτητι δέξασθε τὸν ἔμφυτον λόγον, τὸν δυνάμενον σῶσαι τὰς ψυχὰς ὑμῶν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">22</span>
           <span class="verse-text">E sede cumpridores da palavra, e não somente ouvintes, enganando-vos a vós mesmos.</span>
+          <span class="verso-grego" lang="grc">γίνεσθε δὲ ποιηταὶ λόγου, καὶ μὴ μόνον ἀκροαταὶ, παραλογιζόμενοι ἑαυτούς.</span>
         </div>
         <div class="verse">
           <span class="verse-number">23</span>
           <span class="verse-text">Porque, se alguém é ouvinte da palavra, e não cumpridor, é semelhante ao homem que contempla ao espelho o seu rosto natural;</span>
+          <span class="verso-grego" lang="grc">ὅτι εἴ τις ἀκροατὴς λόγου ἐστὶ καὶ οὐ ποιητής, οὗτος ἔοικεν ἀνδρὶ κατανοοῦντι τὸ πρόσωπον τῆς γενέσεως αὐτοῦ ἐν ἐσόπτρῳ·</span>
         </div>
         <div class="verse">
           <span class="verse-number">24</span>
           <span class="verse-text">Porque se contempla a si mesmo, e vai-se, e logo se esquece de como era.</span>
+          <span class="verso-grego" lang="grc">κατενόησε γὰρ ἑαυτὸν, καὶ ἀπελήλυθε, καὶ εὐθέως ἐπελάθετο ὁποῖος ἦν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">25</span>
           <span class="verse-text">Aquele, porém, que atenta bem para a lei perfeita da liberdade, e nisso persevera, não sendo ouvinte esquecediço, mas fazedor da obra, este tal será bem-aventurado no seu feito.</span>
+          <span class="verso-grego" lang="grc">ὁ δὲ παρακύψας εἰς νόμον τέλειον τὸν τῆς ἐλευθερίας καὶ παραμείνας, οὗτος οὐκ ἀκροατὴς ἐπιλησμονῆς γενόμενος ἀλλὰ ποιητὴς ἔργου, οὗτος μακάριος ἐν τῇ ποιήσει αὐτοῦ ἔσται.</span>
         </div>
         <div class="verse">
           <span class="verse-number">26</span>
           <span class="verse-text">Se alguém entre vós cuida ser religioso, e não refreia a sua língua, antes engana o seu coração, a religião desse é vã.</span>
+          <span class="verso-grego" lang="grc">εἴ τις δοκεῖ θρῆσκος εἶναι ἐν ὑμῖν, μὴ χαλιναγωγῶν γλῶσσαν αὐτοῦ, ἀλλ’ ἀπατῶν καρδίαν αὐτοῦ, τούτου μάταιος ἡ θρησκεία.</span>
         </div>
         <div class="verse">
           <span class="verse-number">27</span>
           <span class="verse-text">A religião pura e imaculada para com Deus e Pai, é esta: Visitar os órfãos e as viúvas nas suas tribulações, e guardar-se da corrupção do mundo.</span>
+          <span class="verso-grego" lang="grc">θρησκεία καθαρὰ καὶ ἀμίαντος παρὰ τῷ Θεῷ καὶ πατρὶ αὕτη ἐστίν, ἐπισκέπτεσθαι ὀρφανοὺς καὶ χήρας ἐν τῇ θλίψει αὐτῶν, ἄσπιλον ἑαυτὸν τηρεῖν ἀπὸ τοῦ κόσμου.</span>
         </div>
 
     </div>
+    <p class="grego-credito grego-capitulo">Texto grego: <a href="https://git.door43.org/STR/el-x-koine_trs" rel="noopener">Textus Receptus 1894 Scrivener</a>, Door43 World Missions Community, com Scriptorium e Dr. Maurice A. Robinson, sob a licença <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br" rel="license noopener">CC BY-SA 4.0</a>. Adaptado: só o texto, sem as marcações de morfologia, Strong e lema. Esta camada grega segue a mesma licença.</p>
 
     <div class="chapter-nav">
       <span class="nav-button disabled">← Capítulo Anterior</span>
