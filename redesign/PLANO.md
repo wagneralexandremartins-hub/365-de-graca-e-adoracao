@@ -378,6 +378,18 @@ Depois do merge: reenviar o sitemap no Search Console e pedir "Validar correçã
 - **Fase 2 — Proposta B em PT, livro por livro, do menor risco ao maior:** 2 Jo, Jd, Tg, 1 Pe, 2 Pe, 1 Jo; 3 Jo; cartas paulinas com a nota de subscrição (Fp, Cl, 2 Ts, Tt, Fm, 1 Ts, 1 Tm, 2 Tm, Gl, Ef, 1 Co, 2 Co, Rm); Hebreus (resolver as linhas sem texto); Jo, Mt, Lc, At, Mc (13:9); Apocalipse por último (12:18, numerais, 7:4). Dados num JSON por livro com todos os versículos (`scripts/dados/grego-nt/<livro>.json`); os JSON dos estudos não mudam.
 - **Fase 3 — segunda frente, EN e ES (só depois da Fase 2 avaliada):** 260 páginas novas em cada idioma com KJV e RV1909 de fonte fixada e o grego embaixo; links "Estudo deste capítulo" / "Ler o capítulo inteiro" (só marcação), hreflang entre as três versões, canonical próprio; sitemap decidido depois do piloto.
 
+## Grego em todos os versículos do NT — Fase 1: piloto em `biblia/jo/jo-03.html` (15/10/2026, branch `feat/grego-biblia-jo3`)
+
+**Decisões do Wagner (15/10).** Rótulos do botão aprovados: "Ocultar o grego" / "Mostrar o grego". O botão não lembra a escolha entre capítulos (pode entrar depois, se desejado).
+
+**O que mudou.** Commit `89cc1ae6`: `scripts/aplicar_grego_biblia.py` (simulação por padrão; `--apply` com backup; por ora só autoriza João 3). Commit `419ee8b7`: `scripts/dados/grego-nt/joao.json`, João inteiro (879 versículos; contra o byztxt 633 iguais, 237 só grafia, 9 de fronteira/variante, nenhum em João 3; itens vazios de número composto aceitos: 6:19 e 21:11); `grego-tr-joao.json` dos estudos não muda. Commit `b0c000dc`: `biblia/jo/jo-03.html` (bloco `grego-biblia:v1` no `<head>` com Gentium Plus, `grego.css` e `grego-biblia.js`; botão antes dos versículos; uma linha `<span class="verso-grego" lang="grc">` em cada um dos 36 versículos; crédito CC BY-SA 4.0 uma vez no fim, texto do piloto), `assets/css/grego.css` (+9 linhas no fim, classes que nenhuma das 123 páginas de estudo usa) e `assets/js/grego-biblia.js` (novo; sem JS o botão fica escondido e o grego visível). A classe da nota (subscrições, Ap 12:18) fica para a Fase 2, quando houver caso real. Backup `_backups/grego-biblia-joao-20261015-141909.zip`.
+
+**Prova.** SHA-256 das fontes = fixados; numeração ACF = Door43 = byztxt (36 versículos); 0 diferenças de leitura no capítulo; os 103 versículos publicados nos estudos (inclusive os 10 do piloto de João 3) saem idênticos no JSON novo; novo menos os trechos inseridos = original, byte a byte (texto ACF intacto); grego lido da página = JSON, 36/36 na ordem; gravado = simulação aprovada; nova simulação = 0 mudanças. Chrome: 1280, 390 e 360 px, escuro e claro, sem rolagem horizontal, Gentium Plus carregada, botão alterna e `aria-pressed` acompanha.
+
+**Achado antigo (não alterado).** A barra "← Capítulo Anterior / Índice da Bíblia / Próximo Capítulo →" (`.chapter-nav`, `.nav-button`) não tem CSS nas 1.189 páginas de `biblia/` e aparece como links azuis crus. Já era assim antes do piloto; tratar à parte, só com ordem do Wagner.
+
+**Próximos passos (só com OK do Wagner).** Push e PR; depois do merge, conferir no ar (João 3 com 36 linhas de grego, `grego.css` e `grego-biblia.js` = `main`, Gentium 200) e avaliar o piloto antes da Fase 2.
+
 ## Estado em 13/10 (fim do dia)
 
 **No ar (merge commit e deploy "Deploy GitHub Pages" com sucesso, conferidos com curl)**
