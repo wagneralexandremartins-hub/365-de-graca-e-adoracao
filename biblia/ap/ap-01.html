@@ -126,6 +126,11 @@
 <link rel="stylesheet" href="/assets/css/site-header.css">
 <script src="/assets/js/site-nav.js" defer></script>
 <!-- /site-nav:v1 -->
+<!-- grego-biblia:v1 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus&amp;display=swap">
+<link rel="stylesheet" href="/assets/css/grego.css">
+<script src="/assets/js/grego-biblia.js" defer></script>
+<!-- /grego-biblia:v1 -->
 </head>
 <body>
 <!-- site-nav:v1 -->
@@ -142,89 +147,111 @@
       <p class="chapter-subtitle">Almeida Corrigida Fiel (ACF)</p>
     </div>
 
-    <div class="verses">
+    <button type="button" class="grego-alternar" data-grego-alternar aria-controls="versiculos" aria-pressed="false" data-ocultar="Ocultar o grego" data-mostrar="Mostrar o grego" hidden>Ocultar o grego</button>
+    <div class="verses" id="versiculos">
         <div class="verse">
           <span class="verse-number">1</span>
           <span class="verse-text">Revelação de Jesus Cristo, a qual Deus lhe deu, para mostrar aos seus servos as coisas que brevemente devem acontecer; e pelo seu anjo as enviou, e as notificou a João seu servo;</span>
+          <span class="verso-grego" lang="grc">Ἀποκάλυψις Ἰησοῦ Χριστοῦ, ἣν ἔδωκεν αὐτῷ ὁ Θεός, δεῖξαι τοῖς δούλοις αὐτοῦ, ἃ δεῖ γενέσθαι ἐν τάχει, καὶ ἐσήμανεν ἀποστείλας διὰ τοῦ ἀγγέλου αὐτοῦ τῷ δούλῳ αὐτοῦ Ἰωάννῃ,</span>
         </div>
         <div class="verse">
           <span class="verse-number">2</span>
           <span class="verse-text">O qual testificou da palavra de Deus, e do testemunho de Jesus Cristo, e de tudo o que tem visto.</span>
+          <span class="verso-grego" lang="grc">ὃς ἐμαρτύρησε τὸν λόγον τοῦ Θεοῦ, καὶ τὴν μαρτυρίαν Ἰησοῦ Χριστοῦ, ὅσα τε εἶδε.</span>
         </div>
         <div class="verse">
           <span class="verse-number">3</span>
           <span class="verse-text">Bem-aventurado aquele que lê, e os que ouvem as palavras desta profecia, e guardam as coisas que nela estão escritas; porque o tempo está próximo.</span>
+          <span class="verso-grego" lang="grc">μακάριος ὁ ἀναγινώσκων, καὶ οἱ ἀκούοντες τοὺς λόγους τῆς προφητείας. καὶ τηροῦντες τὰ ἐν αὐτῇ γεγραμμένα· ὁ γὰρ καιρὸς ἐγγύς.</span>
         </div>
         <div class="verse">
           <span class="verse-number">4</span>
           <span class="verse-text">João, às sete igrejas que estão na Ásia: Graça e paz seja convosco da parte daquele que é, e que era, e que há de vir, e da dos sete espíritos que estão diante do seu trono;</span>
+          <span class="verso-grego" lang="grc">Ἰωάννης ταῖς ἑπτὰ ἐκκλησίαις ταῖς ἐν τῇ Ἀσίᾳ· χάρις ὑμῖν καὶ εἰρήνη ἀπὸ τοῦ ὁ ὢν καὶ ὁ ἦν καὶ ὁ ἐρχόμενος· καὶ ἀπὸ τῶν ἑπτὰ πνευμάτων, ἅ ἐστιν ἐνώπιον τοῦ θρόνου αὐτοῦ·</span>
         </div>
         <div class="verse">
           <span class="verse-number">5</span>
           <span class="verse-text">E da parte de Jesus Cristo, que é a fiel testemunha, o primogênito dentre os mortos e o príncipe dos reis da terra. Àquele que nos amou, e em seu sangue nos lavou dos nossos pecados,</span>
+          <span class="verso-grego" lang="grc">καὶ ἀπὸ Ἰησοῦ Χριστοῦ, ὁ μάρτυς ὁ πιστός, ὁ πρωτότοκος ἐκ τῶν νεκρῶν καὶ ὁ ἄρχων τῶν βασιλέων τῆς γῆς. τῷ ἀγαπήσαντι ἡμᾶς, καὶ λούσαντι ἡμᾶς ἀπὸ τῶν ἁμαρτιῶν ἡμῶν ἐν τῷ αἵματι αὐτοῦ·</span>
         </div>
         <div class="verse">
           <span class="verse-number">6</span>
           <span class="verse-text">E nos fez reis e sacerdotes para Deus e seu Pai; a ele glória e poder para todo o sempre. Amém.</span>
+          <span class="verso-grego" lang="grc">καὶ ἐποίησεν ἡμᾶς βασιλεῖς καὶ ἱερεῖς τῷ Θεῷ καὶ πατρὶ αὐτοῦ· αὐτῷ ἡ δόξα καὶ τὸ κράτος εἰς τοὺς αἰῶνας τῶν αἰώνων. ἀμήν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">7</span>
           <span class="verse-text">Eis que vem com as nuvens, e todo o olho o verá, até os mesmos que o traspassaram; e todas as tribos da terra se lamentarão sobre ele. Sim. Amém.</span>
+          <span class="verso-grego" lang="grc">ἰδοὺ ἔρχεται μετὰ τῶν νεφελῶν, καὶ ὄψεται αὐτὸν πᾶς ὀφθαλμός, καὶ οἵτινες αὐτὸν ἐξεκέντησαν· καὶ κόψονται ἐπ’ αὐτὸν πᾶσαι αἱ φυλαὶ τῆς γῆς. ναί, ἀμήν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">8</span>
           <span class="verse-text">Eu sou o Alfa e o Ômega, o princípio e o fim, diz o Senhor, que é, e que era, e que há de vir, o Todo-Poderoso.</span>
+          <span class="verso-grego" lang="grc">Ἐγώ εἰμι τὸ Α καὶ τὸ Ω, ἀρχὴ καὶ τέλος, λέγει ὁ Κύριος, ὁ ὢν καὶ ὁ ἦν καὶ ὁ ἐρχόμενος, ὁ παντοκράτωρ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">9</span>
           <span class="verse-text">Eu, João, que também sou vosso irmão, e companheiro na aflição, e no reino, e paciência de Jesus Cristo, estava na ilha chamada Patmos, por causa da palavra de Deus, e pelo testemunho de Jesus Cristo.</span>
+          <span class="verso-grego" lang="grc">Ἐγὼ Ἰωάννης, ὁ καὶ ἀδελφὸς ὑμῶν, καὶ συγκοινωνὸς ἐν τῇ θλίψει καὶ ἐν τῇ βασιλείᾳ καὶ ὑπομονῇ Ἰησοῦ Χριστοῦ, ἐγενόμην ἐν τῇ νήσῳ τῇ καλουμένῃ Πάτμῳ, διὰ τὸν λόγον τοῦ Θεοῦ καὶ διὰ τὴν μαρτυρίαν Ἰησοῦ Χριστοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">10</span>
           <span class="verse-text">Eu fui arrebatado no Espírito no dia do Senhor, e ouvi detrás de mim uma grande voz, como de trombeta,</span>
+          <span class="verso-grego" lang="grc">ἐγενόμην ἐν Πνεύματι ἐν τῇ Κυριακῇ ἡμέρᾳ· καὶ ἤκουσα ὀπίσω μου φωνὴν μεγάλην ὡς σάλπιγγος,</span>
         </div>
         <div class="verse">
           <span class="verse-number">11</span>
           <span class="verse-text">Que dizia: Eu sou o Alfa e o Ômega, o primeiro e o derradeiro; e o que vês, escreve-o num livro, e envia-o às sete igrejas que estão na Ásia: a Éfeso, e a Esmirna, e a Pérgamo, e a Tiatira, e a Sardes, e a Filadélfia, e a Laodicéia.</span>
+          <span class="verso-grego" lang="grc">λεγούσης, Ἐγώ εἰμι τὸ Α καὶ τὸ Ω, ὁ πρῶτος καὶ ὁ ἔσχατος· καὶ Ὃ βλέπεις γράψον, εἰς βιβλίον, καὶ πέμψον ταῖς ἑπτὰ ἐκκλησίαις ταῖς ἐν Ἀσίᾳ, εἰς Ἔφεσον, καὶ εἰς Σμύρναν, καὶ εἰς Πέργαμον, καὶ εἰς Θυάτειρα, καὶ εἰς Σάρδεις, καὶ εἰς Φιλαδέλφειαν, καὶ εἰς Λαοδίκειαν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">12</span>
           <span class="verse-text">E virei-me para ver quem falava comigo. E, virando-me, vi sete castiçais de ouro;</span>
+          <span class="verso-grego" lang="grc">καὶ ἐπέστρεψα βλέπειν τὴν φωνὴν ἥτις ἐλάλησε μετ’ ἐμοῦ. καὶ ἐπιστρέψας εἶδον ἑπτὰ λυχνίας χρυσᾶς,</span>
         </div>
         <div class="verse">
           <span class="verse-number">13</span>
           <span class="verse-text">E no meio dos sete castiçais um semelhante ao Filho do homem, vestido até aos pés de uma roupa comprida, e cingido pelos peitos com um cinto de ouro.</span>
+          <span class="verso-grego" lang="grc">καὶ ἐν μέσῳ τῶν ἑπτὰ λυχνιῶν ὅμοιον υἱῷ ἀνθρώπου, ἐνδεδυμένον ποδήρη καὶ περιεζωσμένον πρὸς τοῖς μαστοῖς ζώνην χρυσῆν·</span>
         </div>
         <div class="verse">
           <span class="verse-number">14</span>
           <span class="verse-text">E a sua cabeça e cabelos eram brancos como lã branca, como a neve, e os seus olhos como chama de fogo;</span>
+          <span class="verso-grego" lang="grc">ἡ δὲ κεφαλὴ αὐτοῦ καὶ αἱ τρίχες λευκαὶ ὡσεὶ ἔριον λευκόν, ὡς χιών· καὶ οἱ ὀφθαλμοὶ αὐτοῦ ὡς φλὸξ πυρός,</span>
         </div>
         <div class="verse">
           <span class="verse-number">15</span>
           <span class="verse-text">E os seus pés, semelhantes a latão reluzente, como se tivessem sido refinados numa fornalha, e a sua voz como a voz de muitas águas.</span>
+          <span class="verso-grego" lang="grc">καὶ οἱ πόδες αὐτοῦ ὅμοιοι χαλκολιβάνῳ ὡς ἐν καμίνῳ πεπυρωμένοι· καὶ ἡ φωνὴ αὐτοῦ ὡς φωνὴ ὑδάτων πολλῶν·</span>
         </div>
         <div class="verse">
           <span class="verse-number">16</span>
           <span class="verse-text">E ele tinha na sua destra sete estrelas; e da sua boca saía uma aguda espada de dois fios; e o seu rosto era como o sol, quando na sua força resplandece.</span>
+          <span class="verso-grego" lang="grc">καὶ ἔχων ἐν τῇ δεξιᾷ αὐτοῦ χειρὶ ἀστέρας ἑπτά, καὶ ἐκ τοῦ στόματος αὐτοῦ ῥομφαία δίστομος ὀξεῖα ἐκπορευομένη· καὶ ἡ ὄψις αὐτοῦ, ὡς ὁ ἥλιος φαίνει ἐν τῇ δυνάμει αὐτοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">17</span>
           <span class="verse-text">E eu, quando o vi, caí a seus pés como morto; e ele pôs sobre mim a sua destra, dizendo-me: Não temas; Eu sou o primeiro e o último;</span>
+          <span class="verso-grego" lang="grc">καὶ ὅτε εἶδον αὐτόν, ἔπεσα πρὸς τοὺς πόδας αὐτοῦ ὡς νεκρός· καὶ ἐπέθηκε τὴν δεξιὰν αὐτοῦ χεῖρα ἐπ’ ἐμὲ λέγων μοι, Μὴ φοβοῦ· ἐγώ εἰμι ὁ πρῶτος καὶ ὁ ἔσχατος,</span>
         </div>
         <div class="verse">
           <span class="verse-number">18</span>
           <span class="verse-text">E o que vivo e fui morto, mas eis aqui estou vivo para todo o sempre. Amém. E tenho as chaves da morte e do inferno.</span>
+          <span class="verso-grego" lang="grc">καὶ ὁ ζῶν· καὶ ἐγενόμην νεκρὸς καὶ ἰδού, ζῶν εἰμι εἰς τοὺς αἰῶνας τῶν αἰώνων, ἀμήν· καὶ ἔχω τὰς κλεῖς τοῦ ᾅδου καὶ τοῦ θανάτου.</span>
         </div>
         <div class="verse">
           <span class="verse-number">19</span>
           <span class="verse-text">Escreve as coisas que tens visto, e as que são, e as que depois destas hão de acontecer;</span>
+          <span class="verso-grego" lang="grc">γράψον ἃ εἶδες, καὶ ἃ εἰσί, καὶ ἃ μέλλει γινέσθαι μετὰ ταῦτα·</span>
         </div>
         <div class="verse">
           <span class="verse-number">20</span>
           <span class="verse-text">O mistério das sete estrelas, que viste na minha destra, e dos sete castiçais de ouro. As sete estrelas são os anjos das sete igrejas, e os sete castiçais, que viste, são as sete igrejas.</span>
+          <span class="verso-grego" lang="grc">τὸ μυστήριον τῶν ἑπτὰ· ἀστέρων ὧν εἶδες ἐπὶ τῆς δεξιᾶς μου, καὶ τὰς ἑπτὰ λυχνίας τὰς χρυσᾶς. οἱ ἑπτὰ ἀστέρες ἄγγελοι τῶν ἑπτὰ ἐκκλησιῶν εἰσι· καὶ αἱ ἑπτὰ λυχνίαι ἃς εἶδες ἑπτὰ ἐκκλησίαι εἰσί.</span>
         </div>
 
     </div>
+    <p class="grego-credito grego-capitulo">Texto grego: <a href="https://git.door43.org/STR/el-x-koine_trs" rel="noopener">Textus Receptus 1894 Scrivener</a>, Door43 World Missions Community, com Scriptorium e Dr. Maurice A. Robinson, sob a licença <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br" rel="license noopener">CC BY-SA 4.0</a>. Adaptado: só o texto, sem as marcações de morfologia, Strong e lema. Esta camada grega segue a mesma licença.</p>
 
     <div class="chapter-nav">
       <span class="nav-button disabled">← Capítulo Anterior</span>
