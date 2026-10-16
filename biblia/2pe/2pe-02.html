@@ -126,6 +126,11 @@
 <link rel="stylesheet" href="/assets/css/site-header.css">
 <script src="/assets/js/site-nav.js" defer></script>
 <!-- /site-nav:v1 -->
+<!-- grego-biblia:v1 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus&amp;display=swap">
+<link rel="stylesheet" href="/assets/css/grego.css">
+<script src="/assets/js/grego-biblia.js" defer></script>
+<!-- /grego-biblia:v1 -->
 </head>
 <body>
 <!-- site-nav:v1 -->
@@ -142,97 +147,121 @@
       <p class="chapter-subtitle">Almeida Corrigida Fiel (ACF)</p>
     </div>
 
-    <div class="verses">
+    <button type="button" class="grego-alternar" data-grego-alternar aria-controls="versiculos" aria-pressed="false" data-ocultar="Ocultar o grego" data-mostrar="Mostrar o grego" hidden>Ocultar o grego</button>
+    <div class="verses" id="versiculos">
         <div class="verse">
           <span class="verse-number">1</span>
           <span class="verse-text">E também houve entre o povo falsos profetas, como entre vós haverá também falsos doutores, que introduzirão encobertamente heresias de perdição, e negarão o Senhor que os resgatou, trazendo sobre si mesmos repentina perdição.</span>
+          <span class="verso-grego" lang="grc">Ἐγένοντο δὲ καὶ ψευδοπροφῆται ἐν τῷ λαῷ, ὡς καὶ ἐν ὑμῖν ἔσονται ψευδοδιδάσκαλοι, οἵτινες παρεισάξουσιν αἱρέσεις ἀπωλείας, καὶ τὸν ἀγοράσαντα αὐτοὺς δεσπότην ἀρνούμενοι, ἐπάγοντες ἑαυτοῖς ταχινὴν ἀπώλειαν,</span>
         </div>
         <div class="verse">
           <span class="verse-number">2</span>
           <span class="verse-text">E muitos seguirão as suas dissoluções, pelos quais será blasfemado o caminho da verdade.</span>
+          <span class="verso-grego" lang="grc">καὶ πολλοὶ ἐξακολουθήσουσιν αὐτῶν ταῖς ἀπωλείαις, δι’ οὓς ἡ ὁδὸς τῆς ἀληθείας βλασφημηθήσεται,</span>
         </div>
         <div class="verse">
           <span class="verse-number">3</span>
           <span class="verse-text">E por avareza farão de vós negócio com palavras fingidas; sobre os quais já de largo tempo não será tardia a sentença, e a sua perdição não dormita.</span>
+          <span class="verso-grego" lang="grc">καὶ ἐν πλεονεξίᾳ πλαστοῖς λόγοις ὑμᾶς ἐμπορεύσονται· οἷς τὸ κρίμα ἔκπαλαι οὐκ ἀργεῖ, καὶ ἡ ἀπώλεια αὐτῶν οὐ νυστάζει.</span>
         </div>
         <div class="verse">
           <span class="verse-number">4</span>
           <span class="verse-text">Porque, se Deus não perdoou aos anjos que pecaram, mas, havendo-os lançado no inferno, os entregou às cadeias da escuridão, ficando reservados para o juízo;</span>
+          <span class="verso-grego" lang="grc">εἰ γὰρ ὁ Θεὸς ἀγγέλων ἁμαρτησάντων οὐκ ἐφείσατο, ἀλλὰ σειραῖς ζόφου ταρταρώσας παρέδωκεν εἰς κρίσιν τετηρημένους·</span>
         </div>
         <div class="verse">
           <span class="verse-number">5</span>
           <span class="verse-text">E não perdoou ao mundo antigo, mas guardou a Noé, a oitava pessoa, o pregoeiro da justiça, ao trazer o dilúvio sobre o mundo dos ímpios;</span>
+          <span class="verso-grego" lang="grc">καὶ ἀρχαίου κόσμου οὐκ ἐφείσατο, ἀλλ’ ὄγδοον Νῶε δικαιοσύνης κήρυκα ἐφύλαξε, κατακλυσμὸν κόσμῳ ἀσεβῶν ἐπάξας·</span>
         </div>
         <div class="verse">
           <span class="verse-number">6</span>
           <span class="verse-text">E condenou à destruição as cidades de Sodoma e Gomorra, reduzindo-as a cinza, e pondo-as para exemplo aos que vivessem impiamente;</span>
+          <span class="verso-grego" lang="grc">καὶ πόλεις Σοδόμων καὶ Γομόρρας τεφρώσας καταστροφῇ κατέκρινεν, ὑπόδειγμα μελλόντων ἀσεβεῖν τεθεικώς·</span>
         </div>
         <div class="verse">
           <span class="verse-number">7</span>
           <span class="verse-text">E livrou o justo Ló, enfadado da vida dissoluta dos homens abomináveis</span>
+          <span class="verso-grego" lang="grc">καὶ δίκαιον Λώτ, καταπονούμενον ὑπὸ τῆς τῶν ἀθέσμων ἐν ἀσελγείᾳ ἀναστροφῆς, ἐρρύσατο</span>
         </div>
         <div class="verse">
           <span class="verse-number">8</span>
           <span class="verse-text">(Porque este justo, habitando entre eles, afligia todos os dias a sua alma justa, por isso via e ouvia sobre as suas obras injustas);</span>
+          <span class="verso-grego" lang="grc">βλέμματι γὰρ καὶ ἀκοῇ ὁ δίκαιος, ἐγκατοικῶν ἐν αὐτοῖς, ἡμέραν ἐξ ἡμέρας ψυχὴν δικαίαν ἀνόμοις ἔργοις ἐβασάνιζεν·</span>
         </div>
         <div class="verse">
           <span class="verse-number">9</span>
           <span class="verse-text">Assim, sabe o Senhor livrar da tentação os piedosos, e reservar os injustos para o dia do juízo, para serem castigados;</span>
+          <span class="verso-grego" lang="grc">οἶδε Κύριος εὐσεβεῖς ἐκ πειρασμῶν ῥύεσθαι, ἀδίκους δὲ εἰς ἡμέραν κρίσεως κολαζομένους τηρεῖν·</span>
         </div>
         <div class="verse">
           <span class="verse-number">10</span>
           <span class="verse-text">Mas principalmente aqueles que segundo a carne andam em concupiscências de imundícia, e desprezam as autoridades; atrevidos, obstinados, não receando blasfemar das dignidades;</span>
+          <span class="verso-grego" lang="grc">μάλιστα δὲ τοὺς ὀπίσω σαρκὸς ἐν ἐπιθυμίᾳ μιασμοῦ πορευομένους, καὶ κυριότητος καταφρονοῦντας. τολμηταί, αὐθάδεις, δόξας οὐ τρέμουσι βλασφημοῦντες·</span>
         </div>
         <div class="verse">
           <span class="verse-number">11</span>
           <span class="verse-text">Enquanto os anjos, sendo maiores em força e poder, não pronunciam contra eles juízo blasfemo diante do Senhor.</span>
+          <span class="verso-grego" lang="grc">ὅπου ἄγγελοι, ἰσχύϊ καὶ δυνάμει μείζονες ὄντες, οὐ φέρουσι κατ’ αὐτῶν παρὰ Κυρίῳ βλάσφημον κρίσιν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">12</span>
           <span class="verse-text">Mas estes, como animais irracionais, que seguem a natureza, feitos para serem presos e mortos, blasfemando do que não entendem, perecerão na sua corrupção,</span>
+          <span class="verso-grego" lang="grc">οὗτοι δέ, ὡς ἄλογα ζῶα φυσικὰ γεγενημένα εἰς ἅλωσιν καὶ φθοράν, ἐν οἷς ἀγνοοῦσι βλασφημοῦντες, ἐν τῇ φθορᾷ αὐτῶν καταφθαρήσονται,</span>
         </div>
         <div class="verse">
           <span class="verse-number">13</span>
           <span class="verse-text">Recebendo o galardão da injustiça; pois que tais homens têm prazer nos deleites quotidianos; nódoas são eles e máculas, deleitando-se em seus enganos, quando se banqueteiam convosco;</span>
+          <span class="verso-grego" lang="grc">κομιούμενοι μισθὸν ἀδικίας, ἡδονὴν ἡγούμενοι τὴν ἐν ἡμέρᾳ τρυφήν, σπίλοι καὶ μῶμοι ἐντρυφῶντες ἐν ταῖς ἀπάταις αὐτῶν συνευωχούμενοι ὑμῖν,</span>
         </div>
         <div class="verse">
           <span class="verse-number">14</span>
           <span class="verse-text">Tendo os olhos cheios de adultério, e não cessando de pecar, engodando as almas inconstantes, tendo o coração exercitado na avareza, filhos de maldição;</span>
+          <span class="verso-grego" lang="grc">ὀφθαλμοὺς ἔχοντες μεστοὺς μοιχαλίδος, καὶ ἀκαταπαύστους ἁμαρτίας, δελεάζοντες ψυχὰς ἀστηρίκτους, καρδίαν γεγυμνασμένην πλεονεξίαις ἔχοντες, κατάρας τέκνα·</span>
         </div>
         <div class="verse">
           <span class="verse-number">15</span>
           <span class="verse-text">Os quais, deixando o caminho direito, erraram seguindo o caminho de Balaão, filho de Beor, que amou o prêmio da injustiça;</span>
+          <span class="verso-grego" lang="grc">καταλίποντες τὴν εὐθεῖαν ὁδὸν ἐπλανήθησαν, ἐξακολουθήσαντες τῇ ὁδῷ τοῦ Βαλαὰμ τοῦ Βοσόρ, ὃς μισθὸν ἀδικίας ἠγάπησεν,</span>
         </div>
         <div class="verse">
           <span class="verse-number">16</span>
           <span class="verse-text">Mas teve a repreensão da sua transgressão; o mudo jumento, falando com voz humana, impediu a loucura do profeta.</span>
+          <span class="verso-grego" lang="grc">ἔλεγξιν δὲ ἔσχεν ἰδίας παρανομίας· ὑποζύγιον ἄφωνον, ἐν ἀνθρώπου φωνῇ φθεγξάμενον ἐκώλυσε τὴν τοῦ προφήτου παραφρονίαν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">17</span>
           <span class="verse-text">Estes são fontes sem água, nuvens levadas pela força do vento, para os quais a escuridão das trevas eternamente se reserva.</span>
+          <span class="verso-grego" lang="grc">οὗτοί εἰσι πηγαὶ ἄνυδροι, νεφέλαι ὑπὸ λαίλαπος ἐλαυνόμεναι, οἷς ὁ ζόφος τοῦ σκότους εἰς αἰῶνα τετήρηται.</span>
         </div>
         <div class="verse">
           <span class="verse-number">18</span>
           <span class="verse-text">Porque, falando coisas mui arrogantes de vaidades, engodam com as concupiscências da carne, e com dissoluções, aqueles que se estavam afastando dos que andam em erro,</span>
+          <span class="verso-grego" lang="grc">ὑπέρογκα γὰρ ματαιότητος φθεγγόμενοι, δελεάζουσιν ἐν ἐπιθυμίαις σαρκὸς ἐν ἀσελγείαις, τοὺς ὄντως ἀποφύγοντας τοὺς ἐν πλάνῃ ἀναστρεφομένους,</span>
         </div>
         <div class="verse">
           <span class="verse-number">19</span>
           <span class="verse-text">Prometendo-lhes liberdade, sendo eles mesmos servos da corrupção. Porque de quem alguém é vencido, do tal faz-se também servo.</span>
+          <span class="verso-grego" lang="grc">ἐλευθερίαν αὐτοῖς ἐπαγγελλόμενοι, αὐτοὶ δοῦλοι ὑπάρχοντες τῆς φθορᾶς· ᾧ γάρ τις ἥττηται, τούτῳ καὶ δεδούλωται.</span>
         </div>
         <div class="verse">
           <span class="verse-number">20</span>
           <span class="verse-text">Porquanto se, depois de terem escapado das corrupções do mundo, pelo conhecimento do Senhor e Salvador Jesus Cristo, forem outra vez envolvidos nelas e vencidos, tornou-se-lhes o último estado pior do que o primeiro.</span>
+          <span class="verso-grego" lang="grc">εἰ γὰρ ἀποφυγόντες τὰ μιάσματα τοῦ κόσμου ἐν ἐπιγνώσει τοῦ Κυρίου καὶ σωτῆρος Ἰησοῦ Χριστοῦ, τούτοις δὲ πάλιν ἐμπλακέντες ἡττῶνται, γέγονεν αὐτοῖς τὰ ἔσχατα χείρονα τῶν πρώτων.</span>
         </div>
         <div class="verse">
           <span class="verse-number">21</span>
           <span class="verse-text">Porque melhor lhes fora não conhecerem o caminho da justiça, do que, conhecendo-o, desviarem-se do santo mandamento que lhes fora dado;</span>
+          <span class="verso-grego" lang="grc">κρεῖττον γὰρ ἦν αὐτοῖς μὴ ἐπεγνωκέναι τὴν ὁδὸν τῆς δικαιοσύνης, ἢ ἐπιγνοῦσιν ἐπιστρέψαι ἐκ τῆς παραδοθείσης αὐτοῖς ἁγίας ἐντολῆς.</span>
         </div>
         <div class="verse">
           <span class="verse-number">22</span>
           <span class="verse-text">Deste modo sobreveio-lhes o que por um verdadeiro provérbio se diz: O cão voltou ao seu próprio vômito, e a porca lavada ao espojadouro de lama.</span>
+          <span class="verso-grego" lang="grc">συμβέβηκε δὲ αὐτοῖς τὸ τῆς ἀληθοῦς παροιμίας, Κύων ἐπιστρέψας ἐπὶ τὸ ἴδιον ἐξέραμα· καί, ὗς λουσαμένη εἰς κύλισμα βορβόρου.</span>
         </div>
 
     </div>
+    <p class="grego-credito grego-capitulo">Texto grego: <a href="https://git.door43.org/STR/el-x-koine_trs" rel="noopener">Textus Receptus 1894 Scrivener</a>, Door43 World Missions Community, com Scriptorium e Dr. Maurice A. Robinson, sob a licença <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br" rel="license noopener">CC BY-SA 4.0</a>. Adaptado: só o texto, sem as marcações de morfologia, Strong e lema. Esta camada grega segue a mesma licença.</p>
 
     <div class="chapter-nav">
       <a href="2pe-01.html" class="nav-button">← Capítulo Anterior</a>
