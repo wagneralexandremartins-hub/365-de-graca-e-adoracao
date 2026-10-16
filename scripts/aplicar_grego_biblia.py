@@ -123,6 +123,38 @@ LIVROS = {
                     (3, 11): [("οὺν", "οὖν", "οὖν leva circunflexo, não grave")],
                     (3, 16): [("γραφὰς,", "γραφάς,", "grave antes de vírgula (agudo)")],
                 }),
+    # Fase 2, lote 5 (16/10/2026): 1 João, em PT
+    # numeração ACF = Door43 = byztxt nos 5 capítulos (sem nota); 5:7 (Comma Johanneum) está no Door43, no byztxt
+    # (greektext-scrivener) e na ACF. Lista de correções conferida e aprovada pelo Wagner em 16/10/2026. Decisões:
+    # 1:1 e 3:13 ficam como na fonte; pontuação de 2:13-15, θεοῦ minúsculo em 2:14 e ἀγαπᾷν em 4:20 ficam como na
+    # fonte, porque o byztxt (textonly, sem acentos, pontuação nem maiúsculas) não confirma a forma proposta.
+    "1jo": dict(sigla="1jo", nome="1 João", usfm="63-1JN.usfm", byz="1JO.SCV", caps=5, autorizados=[1, 2, 3, 4, 5],
+                correcoes={
+                    (1, 5): [("αὕτη ἔστιν", "αὕτη ἐστὶν", "enclítica depois de paroxítona: acento na última (ἔστιν só no uso enfático)")],
+                    (1, 10): [("αὐτὸν,", "αὐτόν,", "grave antes de vírgula (agudo)")],
+                    (2, 7): [("παλαιὰν,", "παλαιάν,", "grave antes de vírgula (agudo)")],
+                    (2, 11): [("ἐστὶ,", "ἐστί,", "grave antes de vírgula (agudo)")],
+                    (2, 14): [("ἀπ ἀρχῆς", "ἀπ’ ἀρχῆς", "falta o apóstrofo da elisão")],
+                    (2, 16): [("σαρκὸς,", "σαρκός,", "grave antes de vírgula (agudo)")],
+                    (2, 24): [("οὐν", "οὖν", "palavra sem acento")],
+                    (2, 28): [("ἔχῶμεν", "ἔχωμεν", "dois acentos na mesma palavra")],
+                    (3, 3): [("ἑαυτὸν,", "ἑαυτόν,", "grave antes de vírgula (agudo)")],
+                    (3, 6): [("αὐτὸν,", "αὐτόν,", "grave antes de vírgula (agudo)")],
+                    (3, 14): [("ἀδελφόν μένει", "ἀδελφὸν μένει", "agudo final antes de palavra (grave)")],
+                    (3, 16): [("εκεῖνος", "ἐκεῖνος", "falta o espírito brando")],
+                    (3, 17): [("ὅς δ’", "ὃς δ’", "agudo final antes de palavra (grave), como em 2:5")],
+                    (4, 6): [("Θεὸν,", "Θεόν,", "grave antes de vírgula (agudo)")],
+                    (4, 12): [("τετελειωμένη ἐστιν", "τετελειωμένη ἐστὶν", "enclítica dissílaba depois de paroxítona mantém o acento")],
+                    (4, 19): [("αὐτὸν,", "αὐτόν,", "grave antes de vírgula (agudo)")],
+                    (4, 21): [("Θεὸν,", "Θεόν,", "grave antes de vírgula (agudo)")],
+                    (5, 7): [("μαρτυροῦντες εν τῷ", "μαρτυροῦντες ἐν τῷ", "preposição ἐν sem espírito brando")],
+                    (5, 9): [("ἥν μεμαρτύρηκε", "ἣν μεμαρτύρηκε", "agudo final antes de palavra (grave)")],
+                    (5, 12): [("υἱὸν,", "υἱόν,", "grave antes de vírgula (agudo)")],
+                    (5, 13): [("ὑιοῦ", "υἱοῦ", "espírito e acento na vogal errada do ditongo υι")],
+                    (5, 18): [("ἐαυτὸν,", "ἑαυτόν,", "espírito brando no lugar do áspero; grave antes de vírgula (agudo)")],
+                    (5, 20): [("Θεὸς,", "Θεός,", "grave antes de vírgula (agudo)"),
+                              ("ἥ ζωὴ", "ἡ ζωὴ", "artigo não leva acento")],
+                }),
 }
 # opção B do Wagner (15/10/2026): corrigir só acentos e pontuação desses versículos, com a lista para conferência.
 # Enquanto ele não conferir a lista, o --apply é recusado. Lista conferida e aprovada pelo Wagner em 15/10/2026.
@@ -144,6 +176,9 @@ SHA256 = dict(ex.SHA256, **{
     # lote 4 (16/10/2026); hash git conferido no Door43 (cc4f3a89) e no GitHub (3f9b1b9b)
     "62-2PE.usfm": "d1642c113122bf778f82c64470edcecbe8563199190df8050cbb6d1cce93428e",
     "2PE.SCV": "205c5f82d62cb44c557021b01330f748c001002173394ec6b657fdd21982bfcf",
+    # lote 5 (16/10/2026); hash git conferido no Door43 (ce19ad36) e no GitHub (91e1f86b)
+    "63-1JN.usfm": "a4be44f25c079d9004a81c79d7d05b9e37195d4cce8f324038555df4563a318b",
+    "1JO.SCV": "7699f58795392da58a1fa5b434bbc0857d5e5a59f9c872fb3c612cc2f7f3064d",
 })
 
 MARCA_INI, MARCA_FIM = "<!-- grego-biblia:v1 -->", "<!-- /grego-biblia:v1 -->"

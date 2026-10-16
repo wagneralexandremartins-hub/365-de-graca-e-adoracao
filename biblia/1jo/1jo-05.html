@@ -126,6 +126,11 @@
 <link rel="stylesheet" href="/assets/css/site-header.css">
 <script src="/assets/js/site-nav.js" defer></script>
 <!-- /site-nav:v1 -->
+<!-- grego-biblia:v1 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus&amp;display=swap">
+<link rel="stylesheet" href="/assets/css/grego.css">
+<script src="/assets/js/grego-biblia.js" defer></script>
+<!-- /grego-biblia:v1 -->
 </head>
 <body>
 <!-- site-nav:v1 -->
@@ -142,93 +147,116 @@
       <p class="chapter-subtitle">Almeida Corrigida Fiel (ACF)</p>
     </div>
 
-    <div class="verses">
+    <button type="button" class="grego-alternar" data-grego-alternar aria-controls="versiculos" aria-pressed="false" data-ocultar="Ocultar o grego" data-mostrar="Mostrar o grego" hidden>Ocultar o grego</button>
+    <div class="verses" id="versiculos">
         <div class="verse">
           <span class="verse-number">1</span>
           <span class="verse-text">Todo aquele que crê que Jesus é o Cristo, é nascido de Deus; e todo aquele que ama ao que o gerou também ama ao que dele é nascido.</span>
+          <span class="verso-grego" lang="grc">Πᾶς ὁ πιστεύων ὅτι Ἰησοῦς ἐστιν ὁ Χριστὸς ἐκ τοῦ Θεοῦ γεγέννηται· καὶ πᾶς ὁ ἀγαπῶν τὸν γεννήσαντα ἀγαπᾷ καὶ τὸν γεγεννημένον ἐξ αὐτοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">2</span>
           <span class="verse-text">Nisto conhecemos que amamos os filhos de Deus, quando amamos a Deus e guardamos os seus mandamentos.</span>
+          <span class="verso-grego" lang="grc">ἐν τούτῳ γινώσκομεν ὅτι ἀγαπῶμεν τὰ τέκνα τοῦ Θεοῦ, ὅταν τὸν Θεὸν ἀγαπῶμεν, καὶ τὰς ἐντολὰς αὐτοῦ τηρῶμεν·</span>
         </div>
         <div class="verse">
           <span class="verse-number">3</span>
           <span class="verse-text">Porque este é o amor de Deus: que guardemos os seus mandamentos; e os seus mandamentos não são pesados.</span>
+          <span class="verso-grego" lang="grc">αὕτη γάρ ἐστιν ἡ ἀγάπη τοῦ Θεοῦ, ἵνα τὰς ἐντολὰς αὐτοῦ τηρῶμεν· καὶ αἱ ἐντολαὶ αὐτοῦ βαρεῖαι οὐκ εἰσίν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">4</span>
           <span class="verse-text">Porque todo o que é nascido de Deus vence o mundo; e esta é a vitória que vence o mundo, a nossa fé.</span>
+          <span class="verso-grego" lang="grc">ὅτι πᾶν τὸ γεγεννημένον ἐκ τοῦ Θεοῦ νικᾷ τὸν κόσμον· καὶ αὕτη ἐστὶν ἡ νίκη ἡ νικήσασα τὸν κόσμον, ἡ πίστις ἡμῶν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">5</span>
           <span class="verse-text">Quem é que vence o mundo, senão aquele que crê que Jesus é o Filho de Deus?</span>
+          <span class="verso-grego" lang="grc">τίς ἐστιν ὁ νικῶν τὸν κόσμον, εἰ μὴ ὁ πιστεύων ὅτι Ἰησοῦς ἐστιν ὁ υἱὸς τοῦ Θεοῦ;</span>
         </div>
         <div class="verse">
           <span class="verse-number">6</span>
           <span class="verse-text">Este é aquele que veio por água e sangue, isto é, Jesus Cristo; não só por água, mas por água e por sangue. E o Espírito é o que testifica, porque o Espírito é a verdade.</span>
+          <span class="verso-grego" lang="grc">οὗτός ἐστιν ὁ ἐλθὼν δι’ ὕδατος καὶ αἵματος, Ἰησοῦς ὁ Χριστός· οὐκ ἐν τῷ ὕδατι μόνον, ἀλλ’ ἐν τῷ ὕδατι καὶ τῷ αἵματι καὶ τὸ Πνεῦμά ἐστι τὸ μαρτυροῦν, ὅτι τὸ Πνεῦμά ἐστιν ἡ ἀλήθεια.</span>
         </div>
         <div class="verse">
           <span class="verse-number">7</span>
           <span class="verse-text">Porque três são os que testificam no céu: o Pai, a Palavra, e o Espírito Santo; e estes três são um.</span>
+          <span class="verso-grego" lang="grc">ὅτι τρεῖς εἰσιν οἱ μαρτυροῦντες ἐν τῷ οὐρανῷ, ὁ πατήρ, ὁ λόγος, καὶ τὸ Ἅγιον Πνεῦμα· καὶ οὗτοι οἱ τρεῖς ἕν εἰσι.</span>
         </div>
         <div class="verse">
           <span class="verse-number">8</span>
           <span class="verse-text">E três são os que testificam na terra: o Espírito, e a água e o sangue; e estes três concordam num.</span>
+          <span class="verso-grego" lang="grc">καὶ τρεῖς εἰσὶν οἱ μαρτυροῦντες ἐν τῇ γῇ, τὸ Πνεῦμα, καὶ τὸ ὕδωρ, καὶ τὸ αἷμα· καὶ οἱ τρεῖς εἰς τὸ ἕν εἰσιν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">9</span>
           <span class="verse-text">Se recebemos o testemunho dos homens, o testemunho de Deus é maior; porque o testemunho de Deus é este, que de seu Filho testificou.</span>
+          <span class="verso-grego" lang="grc">εἰ τὴν μαρτυρίαν τῶν ἀνθρώπων λαμβάνομεν, ἡ μαρτυρία τοῦ Θεοῦ μείζων ἐστίν· ὅτι αὕτη ἐστὶν ἡ μαρτυρία τοῦ Θεοῦ, ἣν μεμαρτύρηκε περὶ τοῦ υἱοῦ αὐτοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">10</span>
           <span class="verse-text">Quem crê no Filho de Deus, em si mesmo tem o testemunho; quem a Deus não crê mentiroso o fez, porquanto não creu no testemunho que Deus de seu Filho deu.</span>
+          <span class="verso-grego" lang="grc">ὁ πιστεύων εἰς τὸν υἱὸν τοῦ Θεοῦ ἔχει τὴν μαρτυρίαν ἐν ἑαυτῷ· ὁ μὴ πιστεύων τῷ Θεῷ, ψεύστην πεποίηκεν αὐτόν, ὅτι οὐ πεπίστευκεν εἰς τὴν μαρτυρίαν, ἣν μεμαρτύρηκεν ὁ Θεὸς περὶ τοῦ υἱοῦ αὐτοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">11</span>
           <span class="verse-text">E o testemunho é este: que Deus nos deu a vida eterna; e esta vida está em seu Filho.</span>
+          <span class="verso-grego" lang="grc">καὶ αὕτη ἐστὶν ἡ μαρτυρία, ὅτι ζωὴν αἰώνιον ἔδωκεν ἡμῖν ὁ Θεός, καὶ αὕτη ἡ ζωὴ ἐν τῷ υἱῷ αὐτοῦ ἐστιν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">12</span>
           <span class="verse-text">Quem tem o Filho tem a vida; quem não tem o Filho de Deus não tem a vida.</span>
+          <span class="verso-grego" lang="grc">ὁ ἔχων τὸν υἱόν, ἔχει τὴν ζωήν· ὁ μὴ ἔχων τὸν υἱὸν τοῦ Θεοῦ τὴν ζωὴν οὐκ ἔχει.</span>
         </div>
         <div class="verse">
           <span class="verse-number">13</span>
           <span class="verse-text">Estas coisas vos escrevi a vós, os que credes no nome do Filho de Deus, para que saibais que tendes a vida eterna, e para que creiais no nome do Filho de Deus.</span>
+          <span class="verso-grego" lang="grc">Ταῦτα ἔγραψα ὑμῖν, τοῖς πιστεύουσιν εἰς τὸ ὄνομα τοῦ υἱοῦ τοῦ Θεοῦ, ἵνα εἰδῆτε ὅτι ζωὴν ἔχετε αἰώνιον, καὶ ἵνα πιστεύητε εἰς τὸ ὄνομα τοῦ υἱοῦ τοῦ Θεοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">14</span>
           <span class="verse-text">E esta é a confiança que temos nele, que, se pedirmos alguma coisa, segundo a sua vontade, ele nos ouve.</span>
+          <span class="verso-grego" lang="grc">καὶ αὕτη ἐστὶν ἡ παρρησία ἣν ἔχομεν πρὸς αὐτόν, ὅτι ἐάν τι αἰτώμεθα κατὰ τὸ θέλημα αὐτοῦ, ἀκούει ἡμῶν·</span>
         </div>
         <div class="verse">
           <span class="verse-number">15</span>
           <span class="verse-text">E, se sabemos que nos ouve em tudo o que pedimos, sabemos que alcançamos as petições que lhe fizemos.</span>
+          <span class="verso-grego" lang="grc">καὶ ἐὰν οἴδαμεν ὅτι ἀκούει ἡμῶν, ὃ ἂν αἰτώμεθα, οἴδαμεν ὅτι ἔχομεν τὰ αἰτήματα ἃ ᾐτήκαμεν παρ’ αὐτοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">16</span>
           <span class="verse-text">Se alguém vir pecar seu irmão, pecado que não é para morte, orará, e Deus dará a vida àqueles que não pecarem para morte. Há pecado para morte, e por esse não digo que ore.</span>
+          <span class="verso-grego" lang="grc">ἐάν τις ἴδῃ τὸν ἀδελφὸν αὐτοῦ ἁμαρτάνοντα ἁμαρτίαν μὴ πρὸς θάνατον, αἰτήσει, καὶ δώσει αὐτῷ ζωήν, τοῖς ἁμαρτάνουσι μὴ πρὸς θάνατον. ἔστιν ἁμαρτία πρὸς θάνατον· οὐ περὶ ἐκείνης λέγω ἵνα ἐρωτήσῃ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">17</span>
           <span class="verse-text">Toda a iniqüidade é pecado, e há pecado que não é para morte.</span>
+          <span class="verso-grego" lang="grc">πᾶσα ἀδικία ἁμαρτία ἐστί· καὶ ἔστιν ἁμαρτία οὐ πρὸς θάνατον.</span>
         </div>
         <div class="verse">
           <span class="verse-number">18</span>
           <span class="verse-text">Sabemos que todo aquele que é nascido de Deus não peca; mas o que de Deus é gerado conserva-se a si mesmo, e o maligno não lhe toca.</span>
+          <span class="verso-grego" lang="grc">Οἴδαμεν ὅτι πᾶς ὁ γεγεννημένος ἐκ τοῦ Θεοῦ οὐχ ἁμαρτάνει· ἀλλ’ ὁ γεννηθεὶς ἐκ τοῦ Θεοῦ τηρεῖ ἑαυτόν, καὶ ὁ πονηρὸς οὐχ ἅπτεται αὐτοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">19</span>
           <span class="verse-text">Sabemos que somos de Deus, e que todo o mundo está no maligno.</span>
+          <span class="verso-grego" lang="grc">οἴδαμεν ὅτι ἐκ τοῦ Θεοῦ ἐσμεν, καὶ ὁ κόσμος ὅλος ἐν τῷ πονηρῷ κεῖται.</span>
         </div>
         <div class="verse">
           <span class="verse-number">20</span>
           <span class="verse-text">E sabemos que já o Filho de Deus é vindo, e nos deu entendimento para que conheçamos ao Verdadeiro; e no que é verdadeiro estamos, isto é, em seu Filho Jesus Cristo. Este é o verdadeiro Deus e a vida eterna.</span>
+          <span class="verso-grego" lang="grc">οἴδαμεν δὲ ὅτι ὁ υἱὸς τοῦ Θεοῦ ἥκει, καὶ δέδωκεν ἡμῖν διάνοιαν ἵνα γινώσκωμεν τὸν ἀληθινόν· καὶ ἐσμὲν ἐν τῷ ἀληθινῷ, ἐν τῷ υἱῷ αὐτοῦ Ἰησοῦ Χριστῷ. οὗτός ἐστιν ὁ ἀληθινὸς Θεός, καὶ ἡ ζωὴ αἰώνιος.</span>
         </div>
         <div class="verse">
           <span class="verse-number">21</span>
           <span class="verse-text">Filhinhos, guardai-vos dos ídolos. Amém.</span>
+          <span class="verso-grego" lang="grc">Τεκνία, φυλάξατε ἑαυτοὺς ἀπὸ τῶν εἰδώλων. ἀμήν.</span>
         </div>
 
     </div>
+    <p class="grego-credito grego-capitulo">Texto grego: <a href="https://git.door43.org/STR/el-x-koine_trs" rel="noopener">Textus Receptus 1894 Scrivener</a>, Door43 World Missions Community, com Scriptorium e Dr. Maurice A. Robinson, sob a licença <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br" rel="license noopener">CC BY-SA 4.0</a>. Adaptado: só o texto, sem as marcações de morfologia, Strong e lema. Esta camada grega segue a mesma licença.</p>
 
     <div class="chapter-nav">
       <a href="1jo-04.html" class="nav-button">← Capítulo Anterior</a>
