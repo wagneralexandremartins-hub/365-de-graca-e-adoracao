@@ -126,6 +126,11 @@
 <link rel="stylesheet" href="/assets/css/site-header.css">
 <script src="/assets/js/site-nav.js" defer></script>
 <!-- /site-nav:v1 -->
+<!-- grego-biblia:v1 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus&amp;display=swap">
+<link rel="stylesheet" href="/assets/css/grego.css">
+<script src="/assets/js/grego-biblia.js" defer></script>
+<!-- /grego-biblia:v1 -->
 </head>
 <body>
 <!-- site-nav:v1 -->
@@ -142,65 +147,81 @@
       <p class="chapter-subtitle">Almeida Corrigida Fiel (ACF)</p>
     </div>
 
-    <div class="verses">
+    <button type="button" class="grego-alternar" data-grego-alternar aria-controls="versiculos" aria-pressed="false" data-ocultar="Ocultar o grego" data-mostrar="Mostrar o grego" hidden>Ocultar o grego</button>
+    <div class="verses" id="versiculos">
         <div class="verse">
           <span class="verse-number">1</span>
           <span class="verse-text">E vi na destra do que estava assentado sobre o trono um livro escrito por dentro e por fora, selado com sete selos.</span>
+          <span class="verso-grego" lang="grc">Καὶ εἶδον ἐπὶ τὴν δεξιὰν τοῦ καθημένου ἐπὶ τοῦ θρόνου βιβλίον γεγραμμένον ἔσωθεν καὶ ὄπισθεν, κατεσφραγισμένον σφραγῖσιν ἑπτά.</span>
         </div>
         <div class="verse">
           <span class="verse-number">2</span>
           <span class="verse-text">E vi um anjo forte, bradando com grande voz: Quem é digno de abrir o livro e de desatar os seus selos?</span>
+          <span class="verso-grego" lang="grc">καὶ εἶδον ἄγγελον ἰσχυρὸν κηρύσσοντα φωνῇ μεγάλῃ, Τίς ἐστιν ἄξιος ἀνοῖξαι τὸ βιβλίον, καὶ λῦσαι τὰς σφραγῖδας αὐτοῦ;</span>
         </div>
         <div class="verse">
           <span class="verse-number">3</span>
           <span class="verse-text">E ninguém no céu, nem na terra, nem debaixo da terra, podia abrir o livro, nem olhar para ele.</span>
+          <span class="verso-grego" lang="grc">καὶ οὐδεὶς ἠδύνατο ἐν τῷ οὐρανῷ, οὐδὲ ἐπὶ τῆς γῆς, οὐδὲ ὑποκάτω τῆς γῆς, ἀνοῖξαι τὸ βιβλίον, οὐδὲ βλέπειν αὐτό.</span>
         </div>
         <div class="verse">
           <span class="verse-number">4</span>
           <span class="verse-text">E eu chorava muito, porque ninguém fora achado digno de abrir o livro, nem de o ler, nem de olhar para ele.</span>
+          <span class="verso-grego" lang="grc">καὶ ἐγὼ ἔκλαιον πολλά, ὅτι οὐδεὶς ἄξιος εὑρέθη ἀνοῖξαι καὶ ἀναγνῶναι τὸ βιβλίον, οὔτε βλέπειν αὐτό.</span>
         </div>
         <div class="verse">
           <span class="verse-number">5</span>
           <span class="verse-text">E disse-me um dos anciãos: Não chores; eis aqui o Leão da tribo de Judá, a raiz de Davi, que venceu, para abrir o livro e desatar os seus sete selos.</span>
+          <span class="verso-grego" lang="grc">καὶ εἷς ἐκ τῶν πρεσβυτέρων λέγει μοι, Μὴ κλαῖε· ἰδού, ἐνίκησεν ὁ λέων ὁ ὢν ἐκ τῆς φυλῆς Ἰούδα, ἡ ῥίζα Δαβίδ, ἀνοῖξαι τὸ βιβλίον καὶ λῦσαι τὰς ἑπτὰ σφραγῖδας αὐτοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">6</span>
           <span class="verse-text">E olhei, e eis que estava no meio do trono e dos quatro animais viventes e entre os anciãos um Cordeiro, como havendo sido morto, e tinha sete pontas e sete olhos, que são os sete espíritos de Deus enviados a toda a terra.</span>
+          <span class="verso-grego" lang="grc">καὶ εἶδον, καὶ ἰδού, ἐν μέσῳ τοῦ θρόνου καὶ τῶν τεσσάρων ζώων καὶ ἐν μέσῳ τῶν πρεσβυτέρων, ἀρνίον ἑστηκὸς ὡς ἐσφαγμένον, ἔχον κέρατα ἑπτὰ καὶ ὀφθαλμοὺς ἑπτά, οἵ εἰσι τὰ ἑπτὰ τοῦ Θεοῦ πνεύματα τὰ ἀπεσταλμένα εἰς πᾶσαν τὴν γῆν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">7</span>
           <span class="verse-text">E veio, e tomou o livro da destra do que estava assentado no trono.</span>
+          <span class="verso-grego" lang="grc">καὶ ἦλθε, καὶ εἴληφε τὸ βιβλίον ἐκ τῆς δεξιᾶς τοῦ καθημένου ἐπὶ τοῦ θρόνου.</span>
         </div>
         <div class="verse">
           <span class="verse-number">8</span>
           <span class="verse-text">E, havendo tomado o livro, os quatro animais e os vinte e quatro anciãos prostraram-se diante do Cordeiro, tendo todos eles harpas e salvas de ouro cheias de incenso, que são as orações dos santos.</span>
+          <span class="verso-grego" lang="grc">καὶ ὅτε ἔλαβε τὸ βιβλίον, τὰ τέσσαρα ζῶα καὶ οἱ εἴκοσιτέσσαρες πρεσβύτεροι ἔπεσον ἐνώπιον τοῦ ἀρνίου, ἔχοντες ἕκαστος κιθάρας, καὶ φιάλας χρυσᾶς γεμούσας θυμιαμάτων, αἵ εἰσιν αἱ προσευχαὶ τῶν ἁγίων.</span>
         </div>
         <div class="verse">
           <span class="verse-number">9</span>
           <span class="verse-text">E cantavam um novo cântico, dizendo: Digno és de tomar o livro, e de abrir os seus selos; porque foste morto, e com o teu sangue nos compraste para Deus de toda a tribo, e língua, e povo, e nação;</span>
+          <span class="verso-grego" lang="grc">καὶ ᾄδουσιν ᾠδὴν καινήν, λέγοντες, Ἄξιος εἶ λαβεῖν τὸ βιβλίον, καὶ ἀνοῖξαι τὰς σφραγῖδας αὐτοῦ, ὅτι ἐσφάγης, καὶ ἠγόρασας τῷ Θεῷ ἡμᾶς ἐν τῷ αἵματί σου ἐκ πάσης φυλῆς καὶ γλώσσης καὶ λαοῦ καὶ ἔθνους,</span>
         </div>
         <div class="verse">
           <span class="verse-number">10</span>
           <span class="verse-text">E para o nosso Deus nos fizeste reis e sacerdotes; e reinaremos sobre a terra.</span>
+          <span class="verso-grego" lang="grc">καὶ ἐποίησας ἡμᾶς τῷ Θεῷ ἡμῶν βασιλεῖς καὶ ἱερεῖς, καὶ βασιλεύσομεν ἐπὶ τῆς γῆς.</span>
         </div>
         <div class="verse">
           <span class="verse-number">11</span>
           <span class="verse-text">E olhei, e ouvi a voz de muitos anjos ao redor do trono, e dos animais, e dos anciãos; e era o número deles milhões de milhões, e milhares de milhares,</span>
+          <span class="verso-grego" lang="grc">καὶ εἶδον, καὶ ἤκουσα φωνὴν ἀγγέλων πολλῶν κυκλόθεν τοῦ θρόνου καὶ τῶν ζώων καὶ τῶν πρεσβυτέρων· καὶ ἦν ὁ ἀριθμὸς αὐτῶν μυριάδες μυριάδων, καὶ χιλιάδες χιλιάδων,</span>
         </div>
         <div class="verse">
           <span class="verse-number">12</span>
           <span class="verse-text">Que com grande voz diziam: Digno é o Cordeiro, que foi morto, de receber o poder, e riquezas, e sabedoria, e força, e honra, e glória, e ações de graças.</span>
+          <span class="verso-grego" lang="grc">λέγοντες φωνῇ μεγάλῃ, Ἄξιόν ἐστι τὸ ἀρνίον τὸ ἐσφαγμένον λαβεῖν τὴν δύναμιν καὶ πλοῦτον καὶ σοφίαν καὶ ἰσχὺν καὶ τιμὴν καὶ δόξαν καὶ εὐλογίαν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">13</span>
           <span class="verse-text">E ouvi a toda a criatura que está no céu, e na terra, e debaixo da terra, e que estão no mar, e a todas as coisas que neles há, dizer: Ao que está assentado sobre o trono, e ao Cordeiro, sejam dadas ações de graças, e honra, e glória, e poder para todo o sempre.</span>
+          <span class="verso-grego" lang="grc">καὶ πᾶν κτίσμα ὅ ἐστιν ἐν τῷ οὐρανῷ, καὶ ἐν τῇ γῇ, καὶ ὑποκάτω τῆς γῆς, καὶ ἐπὶ τῆς θαλάσσης ἅ ἐστι, καὶ τὰ ἐν αὐτοῖς πάντα, ἤκουσα λέγοντας, Τῷ καθημένῳ ἐπὶ τοῦ θρόνου καὶ τῷ ἀρνίῳ ἡ εὐλογία καὶ ἡ τιμὴ καὶ ἡ δόξα καὶ τὸ κράτος εἰς τοὺς αἰῶνας τῶν αἰώνων.</span>
         </div>
         <div class="verse">
           <span class="verse-number">14</span>
           <span class="verse-text">E os quatro animais diziam: Amém. E os vinte e quatro anciãos prostraram-se, e adoraram ao que vive para todo o sempre.</span>
+          <span class="verso-grego" lang="grc">καὶ τὰ τέσσαρα ζῶα ἔλεγον, Ἀμήν. καὶ οἱ εἴκοσιτέσσαρες πρεσβύτεροι ἔπεσαν, καὶ προσεκύνησαν ζῶντι εἰς τοὺς αἰῶνας τῶν αἰώνων.</span>
         </div>
 
     </div>
+    <p class="grego-credito grego-capitulo">Texto grego: <a href="https://git.door43.org/STR/el-x-koine_trs" rel="noopener">Textus Receptus 1894 Scrivener</a>, Door43 World Missions Community, com Scriptorium e Dr. Maurice A. Robinson, sob a licença <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br" rel="license noopener">CC BY-SA 4.0</a>. Adaptado: só o texto, sem as marcações de morfologia, Strong e lema. Esta camada grega segue a mesma licença.</p>
 
     <div class="chapter-nav">
       <a href="ap-04.html" class="nav-button">← Capítulo Anterior</a>

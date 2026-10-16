@@ -126,6 +126,11 @@
 <link rel="stylesheet" href="/assets/css/site-header.css">
 <script src="/assets/js/site-nav.js" defer></script>
 <!-- /site-nav:v1 -->
+<!-- grego-biblia:v1 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus&amp;display=swap">
+<link rel="stylesheet" href="/assets/css/grego.css">
+<script src="/assets/js/grego-biblia.js" defer></script>
+<!-- /grego-biblia:v1 -->
 </head>
 <body>
 <!-- site-nav:v1 -->
@@ -142,97 +147,121 @@
       <p class="chapter-subtitle">Almeida Corrigida Fiel (ACF)</p>
     </div>
 
-    <div class="verses">
+    <button type="button" class="grego-alternar" data-grego-alternar aria-controls="versiculos" aria-pressed="false" data-ocultar="Ocultar o grego" data-mostrar="Mostrar o grego" hidden>Ocultar o grego</button>
+    <div class="verses" id="versiculos">
         <div class="verse">
           <span class="verse-number">1</span>
           <span class="verse-text">E ao anjo da igreja que está em Sardes escreve: Isto diz o que tem os sete espíritos de Deus, e as sete estrelas: Conheço as tuas obras, que tens nome de que vives, e estás morto.</span>
+          <span class="verso-grego" lang="grc">Καὶ τῷ ἀγγέλῳ τῆς ἐν Σάρδεσιν ἐκκλησίας γράψον, Τάδε λέγει ὁ ἔχων τὰ ἑπτὰ πνεύματα τοῦ Θεοῦ, καὶ τοὺς ἑπτὰ ἀστέρας· Οἶδά σου τὰ ἔργα, ὅτι τὸ ὄνομα ἔχεις ὅτι ζῇς, καὶ νεκρὸς εἶ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">2</span>
           <span class="verse-text">Sê vigilante, e confirma os restantes, que estavam para morrer; porque não achei as tuas obras perfeitas diante de Deus.</span>
+          <span class="verso-grego" lang="grc">γίνου γρηγορῶν, καὶ στήριξον τὰ λοιπὰ ἃ μέλλει ἀποθανεῖν· οὐ γὰρ εὕρηκά σου τὰ ἔργα πεπληρωμένα ἐνώπιον τοῦ Θεοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">3</span>
           <span class="verse-text">Lembra-te, pois, do que tens recebido e ouvido, e guarda-o, e arrepende-te. E, se não vigiares, virei sobre ti como um ladrão, e não saberás a que hora sobre ti virei.</span>
+          <span class="verso-grego" lang="grc">μνημόνευε οὖν πῶς εἴληφας καὶ ἤκουσας, καὶ τήρει, καὶ μετανόησον. ἐὰν οὖν μὴ γρηγορήσῃς, ἥξω ἐπὶ σε ὡς κλέπτης, καὶ οὐ μὴ γνῷς ποίαν ὥραν ἥξω ἐπὶ σε.</span>
         </div>
         <div class="verse">
           <span class="verse-number">4</span>
           <span class="verse-text">Mas também tens em Sardes algumas poucas pessoas que não contaminaram suas vestes, e comigo andarão de branco; porquanto são dignas disso.</span>
+          <span class="verso-grego" lang="grc">ἔχεις ὀλίγα ὀνόματα καὶ ἐν Σάρδεσιν, ἃ οὐκ ἐμόλυναν τὰ ἱμάτια αὐτῶν· καὶ περιπατήσουσι μετ’ ἐμοῦ ἐν λευκοῖς, ὅτι ἄξιοί εἰσιν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">5</span>
           <span class="verse-text">O que vencer será vestido de vestes brancas, e de maneira nenhuma riscarei o seu nome do livro da vida; e confessarei o seu nome diante de meu Pai e diante dos seus anjos.</span>
+          <span class="verso-grego" lang="grc">ὁ νικῶν, οὗτος περιβαλεῖται ἐν ἱματίοις λευκοῖς· καὶ οὐ μὴ ἐξαλείψω τὸ ὄνομα αὐτοῦ ἐκ τῆς βίβλου τῆς ζωῆς, καὶ ἐξομολογήσομαι τὸ ὄνομα αὐτοῦ ἐνώπιον τοῦ πατρός μου, καὶ ἐνώπιον τῶν ἀγγέλων αὐτοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">6</span>
           <span class="verse-text">Quem tem ouvidos, ouça o que o Espírito diz às igrejas.</span>
+          <span class="verso-grego" lang="grc">ὁ ἔχων οὖς ἀκουσάτω τί τὸ Πνεῦμα λέγει ταῖς ἐκκλησίαις.</span>
         </div>
         <div class="verse">
           <span class="verse-number">7</span>
           <span class="verse-text">E ao anjo da igreja que está em Filadélfia escreve: Isto diz o que é santo, o que é verdadeiro, o que tem a chave de Davi; o que abre, e ninguém fecha; e fecha, e ninguém abre:</span>
+          <span class="verso-grego" lang="grc">Καὶ τῷ ἀγγέλῳ τῆς ἐν Φιλαδελφείᾳ ἐκκλησίας γράψον, Τάδε λέγει ὁ ἅγιος, ὁ ἀληθινός, ὁ ἔχων τὴν κλεῖδα τοῦ Δαβίδ, ὁ ἀνοίγων καὶ οὐδεὶς κλείει, καὶ κλείει καὶ οὐδεὶς ἀνοίγει·</span>
         </div>
         <div class="verse">
           <span class="verse-number">8</span>
           <span class="verse-text">Conheço as tuas obras; eis que diante de ti pus uma porta aberta, e ninguém a pode fechar; tendo pouca força, guardaste a minha palavra, e não negaste o meu nome.</span>
+          <span class="verso-grego" lang="grc">Οἶδά σου τὰ ἔργα ἰδού, δέδωκα ἐνώπιόν σου θύραν ἀνεῳγμένην, καὶ οὐδεὶς δύναται κλεῖσαι αὐτήν, ὅτι μικρὰν ἔχεις δύναμιν, καὶ ἐτήρησάς μου τὸν λόγον, καὶ οὐκ ἠρνήσω τὸ ὄνομά μου.</span>
         </div>
         <div class="verse">
           <span class="verse-number">9</span>
           <span class="verse-text">Eis que eu farei aos da sinagoga de Satanás, aos que se dizem judeus, e não são, mas mentem: eis que eu farei que venham, e adorem prostrados a teus pés, e saibam que eu te amo.</span>
+          <span class="verso-grego" lang="grc">ἰδοὺ δίδωμι ἐκ τῆς συναγωγῆς τοῦ Σατανᾶ, τῶν λεγόντων ἑαυτοὺς Ἰουδαίους εἶναι, καὶ οὐκ εἰσίν, ἀλλὰ ψεύδονται· ἰδοὺ ποιήσω αὐτούς, ἵνα ἥξωσι καὶ προσκυνήσωσιν ἐνώπιον τῶν ποδῶν σου, καὶ γνῶσιν ὅτι ἐγὼ ἠγάπησά σε.</span>
         </div>
         <div class="verse">
           <span class="verse-number">10</span>
           <span class="verse-text">Como guardaste a palavra da minha paciência, também eu te guardarei da hora da tentação que há de vir sobre todo o mundo, para tentar os que habitam na terra.</span>
+          <span class="verso-grego" lang="grc">ὅτι ἐτήρησας τὸν λόγον τῆς ὑπομονῆς μου, κἀγώ σε τηρήσω ἐκ τῆς ὥρας τοῦ πειρασμοῦ τῆς μελλούσης ἔρχεσθαι ἐπὶ τῆς οἰκουμένης ὅλης, πειράσαι τοὺς κατοικοῦντας ἐπὶ τῆς γῆς.</span>
         </div>
         <div class="verse">
           <span class="verse-number">11</span>
           <span class="verse-text">Eis que venho sem demora; guarda o que tens, para que ninguém tome a tua coroa.</span>
+          <span class="verso-grego" lang="grc">ἰδού, ἔρχομαι ταχύ· κράτει ὃ ἔχεις, ἵνα μηδεὶς λάβῃ τὸν στέφανόν σου.</span>
         </div>
         <div class="verse">
           <span class="verse-number">12</span>
           <span class="verse-text">A quem vencer, eu o farei coluna no templo do meu Deus, e dele nunca sairá; e escreverei sobre ele o nome do meu Deus, e o nome da cidade do meu Deus, a nova Jerusalém, que desce do céu, do meu Deus, e também o meu novo nome.</span>
+          <span class="verso-grego" lang="grc">ὁ νικῶν, ποιήσω αὐτὸν στῦλον ἐν τῷ ναῷ τοῦ Θεοῦ μου, καὶ ἔξω οὐ μὴ ἐξέλθῃ ἔτι, καὶ γράψω ἐπ’ αὐτὸν τὸ ὄνομα τοῦ Θεοῦ μου, καὶ τὸ ὄνομα τῆς πόλεως τοῦ Θεοῦ μου. τῆς καινῆς Ἰερουσαλήμ, ἣ καταβαίνει ἐκ τοῦ οὐρανοῦ ἀπὸ τοῦ Θεοῦ μου, καὶ τὸ ὄνομά μου τὸ καινόν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">13</span>
           <span class="verse-text">Quem tem ouvidos, ouça o que o Espírito diz às igrejas.</span>
+          <span class="verso-grego" lang="grc">ὁ ἔχων οὖς ἀκουσάτω τί τὸ Πνεῦμα λέγει ταῖς ἐκκλησίαις.</span>
         </div>
         <div class="verse">
           <span class="verse-number">14</span>
           <span class="verse-text">E ao anjo da igreja de Laodicéia escreve: Isto diz o Amém, a testemunha fiel e verdadeira, o princípio da criação de Deus:</span>
+          <span class="verso-grego" lang="grc">Καὶ τῷ ἀγγέλῳ τῆς ἐκκλησίας Λαοδικέων γράψον, Τάδε λέγει ὁ Ἀμήν, ὁ μάρτυς ὁ πιστὸς καὶ ἀληθινός, ἡ ἀρχὴ τῆς κτίσεως τοῦ Θεοῦ·</span>
         </div>
         <div class="verse">
           <span class="verse-number">15</span>
           <span class="verse-text">Conheço as tuas obras, que nem és frio nem quente; quem dera foras frio ou quente!</span>
+          <span class="verso-grego" lang="grc">Οἶδά σου τὰ ἔργα, ὅτι οὔτε ψυχρὸς εἶ οὔτε ζεστός. ὄφελον ψυχρὸς εἴης ἢ ζεστός.</span>
         </div>
         <div class="verse">
           <span class="verse-number">16</span>
           <span class="verse-text">Assim, porque és morno, e não és frio nem quente, vomitar-te-ei da minha boca.</span>
+          <span class="verso-grego" lang="grc">οὕτως, ὅτι χλιαρὸς εἶ, καὶ οὔτε ψυχρὸς οὔτε ζεστός, μέλλω σε ἐμέσαι ἐκ τοῦ στόματός μου.</span>
         </div>
         <div class="verse">
           <span class="verse-number">17</span>
           <span class="verse-text">Como dizes: Rico sou, e estou enriquecido, e de nada tenho falta; e não sabes que és um desgraçado, e miserável, e pobre, e cego, e nu;</span>
+          <span class="verso-grego" lang="grc">ὅτι λέγεις, ὅτι Πλούσιός εἰμι, καὶ πεπλούτηκα καὶ οὐδενὸς χρείαν ἔχω, καὶ οὐκ οἶδας ὅτι σὺ εἶ ὁ ταλαίπωρος καὶ ἐλεεινὸς καὶ πτωχὸς καὶ τυφλὸς καὶ γυμνός·</span>
         </div>
         <div class="verse">
           <span class="verse-number">18</span>
           <span class="verse-text">Aconselho-te que de mim compres ouro provado no fogo, para que te enriqueças; e roupas brancas, para que te vistas, e não apareça a vergonha da tua nudez; e que unjas os teus olhos com colírio, para que vejas.</span>
+          <span class="verso-grego" lang="grc">συμβουλεύω σοι ἀγοράσαι παρ’ ἐμοῦ χρυσίον πεπυρωμένον ἐκ πυρός, ἵνα πλουτήσῃς· καὶ ἱμάτια λευκά, ἵνα περιβάλῃ, καὶ μὴ φανερωθῇ ἡ αἰσχύνη τῆς γυμνότητός σου· καὶ κολλούριον ἐγχρῖσον τοὺς ὀφθαλμούς σου, ἵνα βλέπῃς.</span>
         </div>
         <div class="verse">
           <span class="verse-number">19</span>
           <span class="verse-text">Eu repreendo e castigo a todos quantos amo; sê pois zeloso, e arrepende-te.</span>
+          <span class="verso-grego" lang="grc">ἐγὼ ὅσους ἐὰν φιλῶ, ἐλέγχω καὶ παιδεύω. ζήλωσον οὖν καὶ μετανόησον.</span>
         </div>
         <div class="verse">
           <span class="verse-number">20</span>
           <span class="verse-text">Eis que estou à porta, e bato; se alguém ouvir a minha voz, e abrir a porta, entrarei em sua casa, e com ele cearei, e ele comigo.</span>
+          <span class="verso-grego" lang="grc">ἰδού, ἕστηκα ἐπὶ τὴν θύραν καὶ κρούω· ἐάν τις ἀκούσῃ τῆς φωνῆς μου, καὶ ἀνοίξῃ τὴν θύραν, εἰσελεύσομαι πρὸς αὐτόν, καὶ δειπνήσω μετ’ αὐτοῦ, καὶ αὐτὸς μετ’ ἐμοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">21</span>
           <span class="verse-text">Ao que vencer lhe concederei que se assente comigo no meu trono; assim como eu venci, e me assentei com meu Pai no seu trono.</span>
+          <span class="verso-grego" lang="grc">ὁ νικῶν, δώσω αὐτῷ καθίσαι μετ’ ἐμοῦ ἐν τῷ θρόνῳ μου, ὡς κἀγὼ ἐνίκησα, καὶ ἐκάθισα μετὰ τοῦ πατρός μου ἐν τῷ θρόνῳ αὐτοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">22</span>
           <span class="verse-text">Quem tem ouvidos, ouça o que o Espírito diz às igrejas.</span>
+          <span class="verso-grego" lang="grc">ὁ ἔχων οὖς ἀκουσάτω τί τὸ Πνεῦμα λέγει ταῖς ἐκκλησίαις.</span>
         </div>
 
     </div>
+    <p class="grego-credito grego-capitulo">Texto grego: <a href="https://git.door43.org/STR/el-x-koine_trs" rel="noopener">Textus Receptus 1894 Scrivener</a>, Door43 World Missions Community, com Scriptorium e Dr. Maurice A. Robinson, sob a licença <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br" rel="license noopener">CC BY-SA 4.0</a>. Adaptado: só o texto, sem as marcações de morfologia, Strong e lema. Esta camada grega segue a mesma licença.</p>
 
     <div class="chapter-nav">
       <a href="ap-02.html" class="nav-button">← Capítulo Anterior</a>

@@ -155,6 +155,88 @@ LIVROS = {
                     (5, 20): [("Θεὸς,", "Θεός,", "grave antes de vírgula (agudo)"),
                               ("ἥ ζωὴ", "ἡ ζωὴ", "artigo não leva acento")],
                 }),
+    # Fase 3, Apocalipse em 3 lotes (16/10/2026); lote 1 = capítulos 1 a 7, em PT
+    # numeração ACF = Door43 = byztxt nos capítulos 1 a 7 (sem nota). Decisões do Wagner (16/10/2026):
+    # D1 a keraia dos números (ιβʹ) sai só da comparação com o byztxt, o texto fica como na fonte;
+    # D2 em 7:4 o numeral ρμδʹ (144) tem duas linhas vazias de lema, aceitas (o texto não muda);
+    # D3 em 5:8 troca de letra, separada das de acento (εἴκοσιιτέσσαρες, com ι a mais; letras = byztxt).
+    # 67 correções de acento e espírito em 49 versículos, aprovadas pelo Wagner. Ficam como na fonte, para revisão
+    # futura: 3:3 (ἐπὶ σε, 2x); pontuação de 1:3, 1:20, 2:13, 2:27, 2:28, 3:12 e 7:7. O JSON só leva os
+    # capítulos autorizados (json_por_lote).
+    "ap": dict(sigla="ap", nome="Apocalipse", usfm="67-REV.usfm", byz="RE.SCV", caps=22, autorizados=[1, 2, 3, 4, 5, 6, 7],
+               json_por_lote=True, ignorar_keraia=True,
+               vazios_aceitos={(7, 4): "numeral ρμδʹ (144) em três partes; o Door43 deixa duas linhas vazias de lema"},
+               correcoes_de_letra={(5, 8): [("εἴκοσιιτέσσαρες", "εἴκοσιτέσσαρες",
+                                             "ι a mais (forma de 5:14; letras = byztxt eikositessarev)")]},
+               correcoes={
+                    (1, 4): [("ἃ ἐστιν", "ἅ ἐστιν", "oxítona antes de enclítica mantém o agudo")],
+                    (1, 7): [("ὀφθαλμὸς,", "ὀφθαλμός,", "grave antes de pontuação (agudo)")],
+                    (1, 11): [("Ἐγώ ἐιμι", "Ἐγώ εἰμι", "espírito e acento na vogal errada do ditongo ει")],
+                    (1, 13): [("ὑιῷ", "υἱῷ", "espírito e acento na vogal errada do ditongo υι")],
+                    (1, 14): [("ὡσει ἔριον", "ὡσεὶ ἔριον", "palavra sem acento (oxítona antes de palavra: grave)")],
+                    (1, 18): [("ἰδοὺ,", "ἰδού,", "grave antes de pontuação (agudo)")],
+                    (1, 19): [("εἰσὶ,", "εἰσί,", "grave antes de pontuação (agudo)")],
+                    (1, 20): [("ὦν εἶδες", "ὧν εἶδες", "relativo ὧν: espírito áspero"),
+                              ("ἅς εἶδες", "ἃς εἶδες", "agudo final antes de palavra (grave)")],
+                    (2, 1): [("Ἐφέσίνης", "Ἐφεσίνης", "dois acentos na mesma palavra")],
+                    (2, 3): [("ἐβὰστασας", "ἐβάστασας", "grave no meio da palavra (agudo)")],
+                    (2, 7): [("μέσῶ", "μέσῳ", "dois acentos e falta o iota subscrito do dativo")],
+                    (2, 9): [("εἰσὶν,", "εἰσίν,", "grave antes de pontuação (agudo)")],
+                    (2, 10): [("φυλακὴν,", "φυλακήν,", "grave antes de pontuação (agudo)")],
+                    (2, 15): [("ὅ μισῶ", "ὃ μισῶ", "agudo final antes de palavra (grave)")],
+                    (2, 17): [("λευκὴν,", "λευκήν,", "grave antes de pontuação (agudo)")],
+                    (2, 21): [("εκ’ τῆς", "ἐκ τῆς", "preposição ἐκ sem espírito e com apóstrofo indevido (não há elisão)")],
+                    (2, 27): [("κἀγώ εἴληφα", "κἀγὼ εἴληφα", "agudo final antes de palavra (grave)"),
+                              ("παρά τοῦ", "παρὰ τοῦ", "agudo final antes de palavra (grave)")],
+                    (3, 2): [("μὲλλει", "μέλλει", "grave no meio da palavra (agudo)")],
+                    (3, 5): [("οὕτος", "οὗτος", "οὗτος leva circunflexo")],
+                    (3, 9): [("διδωμι", "δίδωμι", "palavra sem acento"),
+                             ("εἰσὶν,", "εἰσίν,", "grave antes de pontuação (agudo)"),
+                             ("αὐτοὺς,", "αὐτούς,", "grave antes de pontuação (agudo)")],
+                    (3, 12): [("ἡ καταβαίνει", "ἣ καταβαίνει", "é o relativo ἥ (grave antes de palavra), não o artigo")],
+                    (3, 18): [("πυρὸς,", "πυρός,", "grave antes de pontuação (agudo)"),
+                              ("λευκὰ,", "λευκά,", "grave antes de pontuação (agudo)")],
+                    (3, 20): [("ἰδοὺ,", "ἰδού,", "grave antes de pontuação (agudo)"),
+                              ("αὐτὸν,", "αὐτόν,", "grave antes de pontuação (agudo)")],
+                    (4, 1): [("ἰδοὺ,", "ἰδού,", "grave antes de pontuação (agudo)")],
+                    (4, 2): [("ἰδοὺ,", "ἰδού,", "grave antes de pontuação (agudo)")],
+                    (4, 3): [("ὅμοία", "ὁμοία", "dois acentos na mesma palavra (ὁμοία, como em 4:6)")],
+                    (4, 4): [("εἴδον", "εἶδον", "εἶδον leva circunflexo")],
+                    (4, 5): [("βρονταί καὶ", "βρονταὶ καὶ", "agudo final antes de palavra (grave)"),
+                             ("φωναὶ.", "φωναί.", "grave antes de pontuação (agudo)")],
+                    (4, 8): [("εἴχον", "εἶχον", "εἶχον leva circunflexo"),
+                             ("ἕξ κυκλόθεν", "ἓξ κυκλόθεν", "agudo final antes de palavra (grave)"),
+                             ("νυκτὸς,", "νυκτός,", "grave antes de pontuação (agudo)")],
+                    (4, 10): [("βαλλοῦσι", "βάλλουσι", "presente βάλλουσι (com λλ); acento fora do lugar")],
+                    (4, 11): [("ἐισὶ", "εἰσὶ", "espírito e acento na vogal errada do ditongo ει")],
+                    (5, 4): [("πολλὰ,", "πολλά,", "grave antes de pontuação (agudo)")],
+                    (5, 5): [("ἰδοὺ,", "ἰδού,", "grave antes de pontuação (agudo)")],
+                    (5, 9): [("καινὴν,", "καινήν,", "grave antes de pontuação (agudo)")],
+                    (5, 11): [("κύκλοθεν", "κυκλόθεν", "acento na sílaba errada (κυκλόθεν, como em 4:3)")],
+                    (5, 13): [("ὃ ἐστιν", "ὅ ἐστιν", "oxítona antes de enclítica mantém o agudo"),
+                              ("θρόνοῦ", "θρόνου", "dois acentos na mesma palavra")],
+                    (5, 14): [("αἰωνας", "αἰῶνας", "palavra sem acento")],
+                    (6, 1): [("φωνὴς", "φωνῆς", "genitivo φωνῆς leva circunflexo")],
+                    (6, 2): [("ἰδοὺ,", "ἰδού,", "grave antes de pontuação (agudo)")],
+                    (6, 5): [("ἰδοὺ,", "ἰδού,", "grave antes de pontuação (agudo)")],
+                    (6, 11): [("λευκαὶ,", "λευκαί,", "grave antes de pontuação (agudo)"),
+                              ("πληρωσονται", "πληρώσονται", "palavra sem acento")],
+                    (6, 15): [("δυνατοὶ,", "δυνατοί,", "grave antes de pontuação (agudo)")],
+                    (7, 5): [("Ῥουβήν, ιβʹ χιλιάδες εσφραγισμένοι", "Ῥουβήν, ιβʹ χιλιάδες ἐσφραγισμένοι", "falta o espírito brando"),
+                             ("Γάδ, ιβʹ χιλιάδες εσφραγισμένοι", "Γάδ, ιβʹ χιλιάδες ἐσφραγισμένοι", "falta o espírito brando")],
+                    (7, 6): [("Ἀσὴρ, ιβʹ χιλιάδες εσφραγισμένοι", "Ἀσήρ, ιβʹ χιλιάδες ἐσφραγισμένοι", "grave antes de pontuação (agudo); falta o espírito brando"),
+                             ("Νεφθαλείμ, ιβʹ χιλιάδες εσφραγισμένοι", "Νεφθαλείμ, ιβʹ χιλιάδες ἐσφραγισμένοι", "falta o espírito brando"),
+                             ("Μανασσῆ, ιβʹ χιλιάδες εσφραγισμένοι", "Μανασσῆ, ιβʹ χιλιάδες ἐσφραγισμένοι", "falta o espírito brando")],
+                    (7, 7): [("Συμεών, ιβʹ χιλιάδες εσφραγισμένοι", "Συμεών, ιβʹ χιλιάδες ἐσφραγισμένοι", "falta o espírito brando"),
+                             ("Λευΐ, ιβʹ χιλιάδες, εσφραγισμένοι", "Λευΐ, ιβʹ χιλιάδες, ἐσφραγισμένοι", "falta o espírito brando"),
+                             ("Ἰσαχάρ, ιβʹ χιλιάδες εσφραγισμένοι", "Ἰσαχάρ, ιβʹ χιλιάδες ἐσφραγισμένοι", "falta o espírito brando")],
+                    (7, 8): [("Ζαβουλών, ιβʹ χιλιάδες εσφραγισμένοι", "Ζαβουλών, ιβʹ χιλιάδες ἐσφραγισμένοι", "falta o espírito brando"),
+                             ("Ἰωσήφ, ιβʹ χιλιάδες εσφραγισμένοι", "Ἰωσήφ, ιβʹ χιλιάδες ἐσφραγισμένοι", "falta o espírito brando")],
+                    (7, 9): [("ἰδοὺ,", "ἰδού,", "grave antes de pontuação (agudo)")],
+                    (7, 13): [("λευκὰς,", "λευκάς,", "grave antes de pontuação (agudo)"),
+                              ("εἰσὶ,", "εἰσί,", "grave antes de pontuação (agudo)")],
+                    (7, 14): [("Κύριέ,", "Κύριε,", "acento a mais antes de vírgula (vocativo Κύριε)")],
+               }),
 }
 # opção B do Wagner (15/10/2026): corrigir só acentos e pontuação desses versículos, com a lista para conferência.
 # Enquanto ele não conferir a lista, o --apply é recusado. Lista conferida e aprovada pelo Wagner em 15/10/2026.
@@ -179,6 +261,9 @@ SHA256 = dict(ex.SHA256, **{
     # lote 5 (16/10/2026); hash git conferido no Door43 (ce19ad36) e no GitHub (91e1f86b)
     "63-1JN.usfm": "a4be44f25c079d9004a81c79d7d05b9e37195d4cce8f324038555df4563a318b",
     "1JO.SCV": "7699f58795392da58a1fa5b434bbc0857d5e5a59f9c872fb3c612cc2f7f3064d",
+    # Apocalipse (16/10/2026); hash git conferido no Door43 (e12499e8) e no GitHub (ab9e32e6)
+    "67-REV.usfm": "3254b03513a5e6b4e7bd8a8c2a83b13fa6120828bf9be3a20d2fd3473d199510",
+    "RE.SCV": "fdaef7bc014830b5d82596eef5a27cf0d1dc174d2a1b9825d7a2bdf696ad562b",
 })
 
 MARCA_INI, MARCA_FIM = "<!-- grego-biblia:v1 -->", "<!-- /grego-biblia:v1 -->"
@@ -242,16 +327,43 @@ def gera_json(livro, cfg, fontes, provas):
     texto, vazios, estranhas, compostos = ex.le_usfm(os.path.join(fontes, cfg["usfm"]))
     provas["USFM só com marcadores esperados"] = not estranhas
     byz = ex.le_scv(os.path.join(fontes, cfg["byz"]))
+    # ignorar_keraia (D1, Apocalipse): o Door43 escreve números com keraia (ιβʹ, U+0374) e o byztxt sem (ib);
+    # a keraia sai só da comparação, o texto publicado fica como na fonte
+    tl = (lambda s: ex.translit(s.replace("\u0374", "").replace("\u02b9", ""))) if cfg.get("ignorar_keraia") else ex.translit
+    # json_por_lote (Apocalipse, em 3 lotes): o JSON só leva os capítulos autorizados
+    if cfg.get("json_por_lote"):
+        no_lote = set(cfg["autorizados"])
+        texto = {k: t for k, t in texto.items() if k[0] in no_lote}
+        vazios = {k for k in vazios if k[0] in no_lote}
+        compostos = {k for k in compostos if k[0] in no_lote}
+    # vazios_aceitos (D2): linhas vazias de numeral aceitas por decisão do Wagner, versículo a versículo
+    for (c, v), motivo in cfg.get("vazios_aceitos", {}).items():
+        provas[f"{c}:{v}: linhas vazias aceitas por decisão ({motivo}) estão no USFM"] = (c, v) in vazios
+    vazios = vazios - set(cfg.get("vazios_aceitos", {}))
     versos = {f"{c}:{v}": unicodedata.normalize("NFC", t) for (c, v), t in sorted(texto.items())}
     provas["NFC só troca por equivalentes canônicos"] = all(
         unicodedata.normalize("NFD", versos[f"{c}:{v}"]) == unicodedata.normalize("NFD", t) for (c, v), t in texto.items())
     provas["sem &, < ou > no grego"] = all(not set(t) & set("&<>") for t in versos.values())
-    cmp = {k: ex.compara(ex.translit(t), byz.get(k, [])) for k, t in texto.items()}
+    cmp = {k: ex.compara(tl(t), byz.get(k, [])) for k, t in texto.items()}
     fmt = lambda ks: [f"{c}:{v}" for c, v in sorted(ks)]
+    # correcoes_de_letra (D3): troca de letra autorizada pelo Wagner, separada das de acento; prova: o versículo
+    # diferia do byztxt e passa a bater com ele
+    correcoes_letra = {}
+    for (c, v), trocas in sorted(cfg.get("correcoes_de_letra", {}).items()):
+        k = f"{c}:{v}"; antes = versos[k]; depois = antes
+        for velho, novo, motivo in trocas:
+            velho, novo = unicodedata.normalize("NFC", velho), unicodedata.normalize("NFC", novo)
+            provas[f"correção de letra {k}: forma do Door43 «{velho}» ocorre 1 vez"] = depois.count(velho) == 1
+            depois = depois.replace(velho, novo, 1)
+        r = ex.compara(tl(depois), byz.get((c, v), []))
+        provas[f"correção de letra {k}: antes ≠ byztxt, depois = byztxt ({r})"] = cmp[(c, v)] == "leitura" and r != "leitura"
+        provas[f"correção de letra {k}: versículo sem correção de acento na mesma lista"] = (c, v) not in cfg.get("correcoes", {})
+        correcoes_letra[k] = {"door43": antes, "publicado": depois, "motivo": "; ".join(m for _, _, m in trocas)}
+        versos[k] = depois; cmp[(c, v)] = r
     # versículos que o byztxt junta num só: compara as palavras do Door43 juntas com o versículo do byztxt
     juncoes = {}
     for (c, vb), partes in cfg.get("juncoes_byz", {}).items():
-        junto = ex.translit(" ".join(texto[(c, v)] for v in partes))
+        junto = tl(" ".join(texto[(c, v)] for v in partes))
         r = ex.compara(junto, byz.get((c, vb), []))
         ok = r != "leitura" and all((c, v) not in byz for v in partes if v != vb)
         provas[f"byztxt junta {c}:{partes[0]}-{partes[-1]} em {c}:{vb}: palavras do Door43 juntas = byztxt ({r})"] = ok
@@ -290,15 +402,23 @@ def gera_json(livro, cfg, fontes, provas):
     for vb, partes in juncoes.items():  # versículo corrigido continua = byztxt (também nos versículos juntos)
         c = int(vb.split(":")[0])
         if any(p in correcoes for p in partes):
-            r = ex.compara(ex.translit(" ".join(versos[p] for p in partes)), byz.get((c, int(vb.split(":")[1])), []))
+            r = ex.compara(tl(" ".join(versos[p] for p in partes)), byz.get((c, int(vb.split(":")[1])), []))
             provas[f"corrigidos {partes} juntos = byztxt {vb} ({r})"] = r != "leitura"
     for k in correcoes:
         c, v = map(int, k.split(":"))
         if not any(k in ps for ps in juncoes.values()):
-            r = ex.compara(ex.translit(versos[k]), byz.get((c, v), []))
+            r = ex.compara(tl(versos[k]), byz.get((c, v), []))
             provas[f"corrigido {k} = byztxt ({r})"] = r != "leitura"
     if correcoes:  # só aparece quando há correção (o JSON de João não muda)
         dados = {k: x for k, x in dados.items() if k != "versiculos"} | {"correcoes_de_acentuacao": correcoes, "versiculos": versos}
+    # D3 e D2: só aparecem quando existem (os JSON dos livros já publicados não mudam)
+    extras = {}
+    if correcoes_letra:
+        extras["correcoes_de_letra"] = correcoes_letra
+    if cfg.get("vazios_aceitos"):
+        extras["vazios_aceitos_por_decisao"] = {f"{c}:{v}": m for (c, v), m in sorted(cfg["vazios_aceitos"].items())}
+    if extras:
+        dados = {k: x for k, x in dados.items() if k != "versiculos"} | extras | {"versiculos": versos}
     # os versículos já publicados nos estudos saem idênticos (só nos livros que têm estudo com grego)
     p_est = os.path.join(ROOT, "scripts", "dados", f"grego-tr-{livro}.json")
     if os.path.exists(p_est):

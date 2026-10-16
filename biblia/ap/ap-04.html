@@ -126,6 +126,11 @@
 <link rel="stylesheet" href="/assets/css/site-header.css">
 <script src="/assets/js/site-nav.js" defer></script>
 <!-- /site-nav:v1 -->
+<!-- grego-biblia:v1 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus&amp;display=swap">
+<link rel="stylesheet" href="/assets/css/grego.css">
+<script src="/assets/js/grego-biblia.js" defer></script>
+<!-- /grego-biblia:v1 -->
 </head>
 <body>
 <!-- site-nav:v1 -->
@@ -142,53 +147,66 @@
       <p class="chapter-subtitle">Almeida Corrigida Fiel (ACF)</p>
     </div>
 
-    <div class="verses">
+    <button type="button" class="grego-alternar" data-grego-alternar aria-controls="versiculos" aria-pressed="false" data-ocultar="Ocultar o grego" data-mostrar="Mostrar o grego" hidden>Ocultar o grego</button>
+    <div class="verses" id="versiculos">
         <div class="verse">
           <span class="verse-number">1</span>
           <span class="verse-text">Depois destas coisas, olhei, e eis que estava uma porta aberta no céu; e a primeira voz, que como de trombeta ouvira falar comigo, disse: Sobe aqui, e mostrar-te-ei as coisas que depois destas devem acontecer.</span>
+          <span class="verso-grego" lang="grc">Μετὰ ταῦτα εἶδον, καὶ ἰδού, θύρα ἠνεῳγμένη ἐν τῷ οὐρανῷ, καὶ ἡ φωνὴ ἡ πρώτη ἣν ἤκουσα ὡς σάλπιγγος λαλούσης μετ’ ἐμοῦ, λέγουσα, Ἀνάβα ὧδε, καὶ δείξω σοι ἃ δεῖ γενέσθαι μετὰ ταῦτα.</span>
         </div>
         <div class="verse">
           <span class="verse-number">2</span>
           <span class="verse-text">E logo fui arrebatado em espírito, e eis que um trono estava posto no céu, e um assentado sobre o trono.</span>
+          <span class="verso-grego" lang="grc">καὶ εὐθέως ἐγενόμην ἐν πνεύματι· καὶ ἰδού, θρόνος ἔκειτο ἐν τῷ οὐρανῷ, καὶ ἐπὶ τοῦ θρόνου καθήμενος·</span>
         </div>
         <div class="verse">
           <span class="verse-number">3</span>
           <span class="verse-text">E o que estava assentado era, na aparência, semelhante à pedra jaspe e sardônica; e o arco celeste estava ao redor do trono, e parecia semelhante à esmeralda.</span>
+          <span class="verso-grego" lang="grc">καὶ ὁ καθήμενος ἦν ὅμοιος ὁράσει λίθῳ ἰάσπιδι καὶ σαρδίνῳ· καὶ ἶρις κυκλόθεν τοῦ θρόνου ὁμοία ὁράσει σμαραγδίνῳ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">4</span>
           <span class="verse-text">E ao redor do trono havia vinte e quatro tronos; e vi assentados sobre os tronos vinte e quatro anciãos vestidos de vestes brancas; e tinham sobre suas cabeças coroas de ouro.</span>
+          <span class="verso-grego" lang="grc">καὶ κυκλόθεν τοῦ θρόνου θρόνοι εἴκοσι καὶ τέσσαρες· καὶ ἐπὶ τοὺς θρόνους εἶδον τοὺς εἴκοσι καὶ τέσσαρας πρεσβυτέρους καθημένους, περιβεβλημένους ἐν ἱματίοις λευκοῖς, καὶ ἔσχον ἐπὶ τὰς κεφαλὰς αὐτῶν στεφάνους χρυσοῦς.</span>
         </div>
         <div class="verse">
           <span class="verse-number">5</span>
           <span class="verse-text">E do trono saíam relâmpagos, e trovões, e vozes; e diante do trono ardiam sete lâmpadas de fogo, as quais são os sete espíritos de Deus.</span>
+          <span class="verso-grego" lang="grc">καὶ ἐκ τοῦ θρόνου ἐκπορεύονται ἀστραπαὶ καὶ βρονταὶ καὶ φωναί. καὶ ἑπτὰ λαμπάδες πυρὸς καιόμεναι ἐνώπιον τοῦ θρόνου, αἵ εἰσι τὰ ἑπτὰ πνεύματα τοῦ Θεοῦ·</span>
         </div>
         <div class="verse">
           <span class="verse-number">6</span>
           <span class="verse-text">E havia diante do trono um como mar de vidro, semelhante ao cristal. E no meio do trono, e ao redor do trono, quatro animais cheios de olhos, por diante e por detrás.</span>
+          <span class="verso-grego" lang="grc">καὶ ἐνώπιον τοῦ θρόνου θάλασσα ὑαλίνη, ὁμοία κρυστάλλῳ. καὶ ἐν μέσῳ τοῦ θρόνου καὶ κύκλῳ τοῦ θρόνου τέσσαρα ζῶα γέμοντα ὀφθαλμῶν ἔμπροσθεν καὶ ὄπισθεν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">7</span>
           <span class="verse-text">E o primeiro animal era semelhante a um leão, e o segundo animal semelhante a um bezerro, e tinha o terceiro animal o rosto como de homem, e o quarto animal era semelhante a uma águia voando.</span>
+          <span class="verso-grego" lang="grc">καὶ τὸ ζῶον τὸ πρῶτον ὅμοιον λέοντι, καὶ τὸ δεύτερον ζῶον ὅμοιον μόσχῳ, καὶ τὸ τρίτον ζῶον ἔχον τὸ πρόσωπον ὡς ἄνθρωπος, καὶ τὸ τέταρτον ζῶον ὅμοιον ἀετῷ πετωμένῳ·</span>
         </div>
         <div class="verse">
           <span class="verse-number">8</span>
           <span class="verse-text">E os quatro animais tinham, cada um de per si, seis asas, e ao redor, e por dentro, estavam cheios de olhos; e não descansam nem de dia nem de noite, dizendo: Santo, Santo, Santo, é o Senhor Deus, o Todo-Poderoso, que era, e que é, e que há de vir.</span>
+          <span class="verso-grego" lang="grc">καὶ τέσσαρα ζῶα, ἓν καθ’ ἑαυτὸ εἶχον ἀνὰ πτέρυγας ἓξ κυκλόθεν, καὶ ἔσωθεν γέμοντα ὀφθαλμῶν, καὶ ἀνάπαυσιν οὐκ ἔχουσιν ἡμέρας καὶ νυκτός, λέγοντα, Ἅγιος, ἅγιος, ἅγιος, Κύριος ὁ Θεὸς ὁ παντοκράτωρ, ὁ ἦν καὶ ὁ ὢν καὶ ὁ ἐρχόμενος.</span>
         </div>
         <div class="verse">
           <span class="verse-number">9</span>
           <span class="verse-text">E, quando os animais davam glória, e honra, e ações de graças ao que estava assentado sobre o trono, ao que vive para todo o sempre,</span>
+          <span class="verso-grego" lang="grc">καὶ ὅταν δώσουσι τὰ ζῶα δόξαν καὶ τιμὴν καὶ εὐχαριστίαν τῷ καθημένῳ ἐπὶ τοῦ θρόνου, τῷ ζῶντι εἰς τοὺς αἰῶνας τῶν αἰώνων,</span>
         </div>
         <div class="verse">
           <span class="verse-number">10</span>
           <span class="verse-text">Os vinte e quatro anciãos prostravam-se diante do que estava assentado sobre o trono, e adoravam o que vive para todo o sempre; e lançavam as suas coroas diante do trono, dizendo:</span>
+          <span class="verso-grego" lang="grc">πεσοῦνται οἱ εἴκοσι καὶ τέσσαρες πρεσβύτεροι ἐνώπιον τοῦ καθημένου ἐπὶ τοῦ θρόνου, καὶ προσκυνοῦσι τῷ ζῶντι εἰς τοὺς αἰῶνας τῶν αἰώνων, καὶ βάλλουσι τοὺς στεφάνους αὐτῶν ἐνώπιον τοῦ θρόνου, λέγοντες,</span>
         </div>
         <div class="verse">
           <span class="verse-number">11</span>
           <span class="verse-text">Digno és, Senhor, de receber glória, e honra, e poder; porque tu criaste todas as coisas, e por tua vontade são e foram criadas.</span>
+          <span class="verso-grego" lang="grc">Ἄξιος εἶ, Κύριε, λαβεῖν τὴν δόξαν, καὶ τὴν τιμὴν καὶ τὴν δύναμιν· ὅτι σὺ ἔκτισας τὰ πάντα, καὶ διὰ τὸ θέλημά σου εἰσὶ καὶ ἐκτίσθησαν.</span>
         </div>
 
     </div>
+    <p class="grego-credito grego-capitulo">Texto grego: <a href="https://git.door43.org/STR/el-x-koine_trs" rel="noopener">Textus Receptus 1894 Scrivener</a>, Door43 World Missions Community, com Scriptorium e Dr. Maurice A. Robinson, sob a licença <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br" rel="license noopener">CC BY-SA 4.0</a>. Adaptado: só o texto, sem as marcações de morfologia, Strong e lema. Esta camada grega segue a mesma licença.</p>
 
     <div class="chapter-nav">
       <a href="ap-03.html" class="nav-button">← Capítulo Anterior</a>
