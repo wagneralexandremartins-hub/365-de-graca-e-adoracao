@@ -104,6 +104,25 @@ LIVROS = {
                     (4, 1): [("ἕν σαρκὶ", "ἐν σαρκὶ", "é a preposição ἐν, não o numeral ἕν")],
                     (4, 8): [("ἥ ἀγάπη", "ἡ ἀγάπη", "artigo não leva acento")],
                 }),
+    # Fase 2, lote 4 (16/10/2026): 2 Pedro, em PT
+    # numeração ACF = Door43 = byztxt nos 3 capítulos (sem nota); lista de correções conferida e aprovada pelo
+    # Wagner em 16/10/2026 (1:17 só o grave, sem vírgula; 2:7 sem pontuação no fim, como na fonte)
+    "2pe": dict(sigla="2pe", nome="2 Pedro", usfm="62-2PE.usfm", byz="2PE.SCV", caps=3, autorizados=[1, 2, 3],
+                correcoes={
+                    (1, 12): [("ἀει ὑπομιμνήσκειν", "ἀεὶ ὑπομιμνήσκειν", "palavra sem acento (oxítona antes de palavra: grave)")],
+                    (1, 17): [("Οὕτος ἐστιν", "Οὗτός ἐστιν", "οὗτος leva circunflexo; antes de enclítica ganha 2º acento"),
+                              ("ἀγαπητός εἰς", "ἀγαπητὸς εἰς", "agudo final antes de palavra (grave)")],
+                    (1, 21): [("ποτέ προφητεία", "ποτὲ προφητεία", "agudo final antes de palavra (grave)")],
+                    (2, 2): [("δἰ οὓς", "δι’ οὓς", "elisão grafada com espírito em vez de apóstrofo")],
+                    (2, 7): [("Λὼτ,", "Λώτ,", "grave antes de vírgula (agudo)")],
+                    (2, 22): [("κὺλισμα", "κύλισμα", "grave no meio da frase em palavra paroxítona (agudo)")],
+                    (3, 3): [("ἐμπαικται", "ἐμπαῖκται", "palavra sem acento")],
+                    (3, 7): [("εἰσὶ,", "εἰσί,", "grave antes de vírgula (agudo)"),
+                             ("πυρί τηρούμενοι", "πυρὶ τηρούμενοι", "agudo final antes de palavra (grave)")],
+                    (3, 10): [("νυκτὶ,", "νυκτί,", "grave antes de vírgula (agudo)")],
+                    (3, 11): [("οὺν", "οὖν", "οὖν leva circunflexo, não grave")],
+                    (3, 16): [("γραφὰς,", "γραφάς,", "grave antes de vírgula (agudo)")],
+                }),
 }
 # opção B do Wagner (15/10/2026): corrigir só acentos e pontuação desses versículos, com a lista para conferência.
 # Enquanto ele não conferir a lista, o --apply é recusado. Lista conferida e aprovada pelo Wagner em 15/10/2026.
@@ -122,6 +141,9 @@ SHA256 = dict(ex.SHA256, **{
     # lote 3 (15/10/2026); hash git conferido no Door43 (a618528d) e no GitHub (563dab07)
     "61-1PE.usfm": "6722ad5aee512b3ff271a5151bb38dc54fb2bc19a3fbdf814e184baff5790160",
     "1PE.SCV": "de8c039b285b92f639b63bfc68ffe7181e6e1fda20e220ce5fc2e26bc37f203f",
+    # lote 4 (16/10/2026); hash git conferido no Door43 (cc4f3a89) e no GitHub (3f9b1b9b)
+    "62-2PE.usfm": "d1642c113122bf778f82c64470edcecbe8563199190df8050cbb6d1cce93428e",
+    "2PE.SCV": "205c5f82d62cb44c557021b01330f748c001002173394ec6b657fdd21982bfcf",
 })
 
 MARCA_INI, MARCA_FIM = "<!-- grego-biblia:v1 -->", "<!-- /grego-biblia:v1 -->"

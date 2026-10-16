@@ -126,6 +126,11 @@
 <link rel="stylesheet" href="/assets/css/site-header.css">
 <script src="/assets/js/site-nav.js" defer></script>
 <!-- /site-nav:v1 -->
+<!-- grego-biblia:v1 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus&amp;display=swap">
+<link rel="stylesheet" href="/assets/css/grego.css">
+<script src="/assets/js/grego-biblia.js" defer></script>
+<!-- /grego-biblia:v1 -->
 </head>
 <body>
 <!-- site-nav:v1 -->
@@ -142,93 +147,116 @@
       <p class="chapter-subtitle">Almeida Corrigida Fiel (ACF)</p>
     </div>
 
-    <div class="verses">
+    <button type="button" class="grego-alternar" data-grego-alternar aria-controls="versiculos" aria-pressed="false" data-ocultar="Ocultar o grego" data-mostrar="Mostrar o grego" hidden>Ocultar o grego</button>
+    <div class="verses" id="versiculos">
         <div class="verse">
           <span class="verse-number">1</span>
           <span class="verse-text">Simão Pedro, servo e apóstolo de Jesus Cristo, aos que conosco alcançaram fé igualmente preciosa pela justiça do nosso Deus e Salvador Jesus Cristo:</span>
+          <span class="verso-grego" lang="grc">Σίμων Πέτρος, δοῦλος καὶ ἀπόστολος Ἰησοῦ Χριστοῦ, τοῖς ἰσότιμον ἡμῖν λαχοῦσι πίστιν ἐν δικαιοσύνῃ τοῦ Θεοῦ ἡμῶν καὶ σωτῆρος ἡμῶν Ἰησοῦ Χριστοῦ·</span>
         </div>
         <div class="verse">
           <span class="verse-number">2</span>
           <span class="verse-text">Graça e paz vos sejam multiplicadas, pelo conhecimento de Deus, e de Jesus nosso Senhor;</span>
+          <span class="verso-grego" lang="grc">χάρις ὑμῖν καὶ εἰρήνη πληθυνθείη ἐν ἐπιγνώσει τοῦ Θεοῦ καὶ Ἰησοῦ τοῦ Κυρίου ἡμῶν·</span>
         </div>
         <div class="verse">
           <span class="verse-number">3</span>
           <span class="verse-text">Visto como o seu divino poder nos deu tudo o que diz respeito à vida e piedade, pelo conhecimento daquele que nos chamou pela sua glória e virtude;</span>
+          <span class="verso-grego" lang="grc">ὡς πάντα ἡμῖν τῆς θείας δυνάμεως αὐτοῦ τὰ πρὸς ζωὴν καὶ εὐσέβειαν δεδωρημένης, διὰ τῆς ἐπιγνώσεως τοῦ καλέσαντος ἡμᾶς διὰ δόξης καὶ ἀρετῆς·</span>
         </div>
         <div class="verse">
           <span class="verse-number">4</span>
           <span class="verse-text">Pelas quais ele nos tem dado grandíssimas e preciosas promessas, para que por elas fiqueis participantes da natureza divina, havendo escapado da corrupção, que pela concupiscência há no mundo.</span>
+          <span class="verso-grego" lang="grc">δι’ ὧν τὰ μέγιστα ἡμῖν καὶ τίμια ἐπαγγέλματα δεδώρηται, ἵνα διὰ τούτων γένησθε θείας κοινωνοὶ φύσεως, ἀποφυγόντες τῆς ἐν κόσμῳ ἐν ἐπιθυμίᾳ φθορᾶς.</span>
         </div>
         <div class="verse">
           <span class="verse-number">5</span>
           <span class="verse-text">E vós também, pondo nisto mesmo toda a diligência, acrescentai à vossa fé a virtude, e à virtude a ciência,</span>
+          <span class="verso-grego" lang="grc">καὶ αὐτὸ τοῦτο δὲ σπουδὴν πᾶσαν παρεισενέγκαντες, ἐπιχορηγήσατε ἐν τῇ πίστει ὑμῶν τὴν ἀρετήν, ἐν δὲ τῇ ἀρετῇ τὴν γνῶσιν,</span>
         </div>
         <div class="verse">
           <span class="verse-number">6</span>
           <span class="verse-text">E à ciência a temperança, e à temperança a paciência, e à paciência a piedade,</span>
+          <span class="verso-grego" lang="grc">ἐν δὲ τῇ γνώσει τὴν ἐγκράτειαν, ἐν δὲ τῇ ἐγκρατείᾳ τὴν ὑπομονήν, ἐν δὲ τῇ ὑπομονῇ τὴν εὐσέβειαν,</span>
         </div>
         <div class="verse">
           <span class="verse-number">7</span>
           <span class="verse-text">E à piedade o amor fraternal, e ao amor fraternal a caridade.</span>
+          <span class="verso-grego" lang="grc">ἐν δὲ τῇ εὐσεβείᾳ τὴν φιλαδελφίαν, ἐν δὲ τῇ φιλαδελφίᾳ τὴν ἀγάπην.</span>
         </div>
         <div class="verse">
           <span class="verse-number">8</span>
           <span class="verse-text">Porque, se em vós houver e abundarem estas coisas, não vos deixarão ociosos nem estéreis no conhecimento de nosso Senhor Jesus Cristo.</span>
+          <span class="verso-grego" lang="grc">ταῦτα γὰρ ὑμῖν ὑπάρχοντα, καὶ πλεονάζοντα, οὐκ ἀργοὺς οὐδὲ ἀκάρπους καθίστησιν εἰς τὴν τοῦ Κυρίου ἡμῶν Ἰησοῦ Χριστοῦ ἐπίγνωσιν·</span>
         </div>
         <div class="verse">
           <span class="verse-number">9</span>
           <span class="verse-text">Pois aquele em quem não há estas coisas é cego, nada vendo ao longe, havendo-se esquecido da purificação dos seus antigos pecados.</span>
+          <span class="verso-grego" lang="grc">ᾧ γὰρ μὴ πάρεστι ταῦτα, τυφλός ἐστι μυωπάζων, λήθην λαβὼν τοῦ καθαρισμοῦ τῶν πάλαι αὐτοῦ ἁμαρτιῶν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">10</span>
           <span class="verse-text">Portanto, irmãos, procurai fazer cada vez mais firme a vossa vocação e eleição; porque, fazendo isto, nunca jamais tropeçareis.</span>
+          <span class="verso-grego" lang="grc">διὸ μᾶλλον, ἀδελφοί, σπουδάσατε βεβαίαν ὑμῶν τὴν κλῆσιν καὶ ἐκλογὴν ποιεῖσθαι· ταῦτα γὰρ ποιοῦντες οὐ μὴ πταίσητέ ποτε·</span>
         </div>
         <div class="verse">
           <span class="verse-number">11</span>
           <span class="verse-text">Porque assim vos será amplamente concedida a entrada no reino eterno de nosso Senhor e Salvador Jesus Cristo.</span>
+          <span class="verso-grego" lang="grc">οὕτω γὰρ πλουσίως ἐπιχορηγηθήσεται ὑμῖν ἡ εἴσοδος εἰς τὴν αἰώνιον βασιλείαν τοῦ Κυρίου ἡμῶν καὶ σωτῆρος Ἰησοῦ Χριστοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">12</span>
           <span class="verse-text">Por isso não deixarei de exortar-vos sempre acerca destas coisas, ainda que bem as saibais, e estejais confirmados na presente verdade.</span>
+          <span class="verso-grego" lang="grc">Διὸ οὐκ ἀμελήσω ὑμᾶς ἀεὶ ὑπομιμνήσκειν περὶ τούτων, καίπερ εἰδότας, καὶ ἐστηριγμένους ἐν τῇ παρούσῃ ἀληθείᾳ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">13</span>
           <span class="verse-text">E tenho por justo, enquanto estiver neste tabernáculo, despertar-vos com admoestações,</span>
+          <span class="verso-grego" lang="grc">δίκαιον δὲ ἡγοῦμαι, ἐφ’ ὅσον εἰμὶ ἐν τούτῳ τῷ σκηνώματι, διεγείρειν ὑμᾶς ἐν ὑπομνήσει·</span>
         </div>
         <div class="verse">
           <span class="verse-number">14</span>
           <span class="verse-text">Sabendo que brevemente hei de deixar este meu tabernáculo, como também nosso Senhor Jesus Cristo já mo tem revelado.</span>
+          <span class="verso-grego" lang="grc">εἰδὼς ὅτι ταχινή ἐστιν ἡ ἀπόθεσις τοῦ σκηνώματός μου, καθὼς καὶ ὁ Κύριος ἡμῶν Ἰησοῦς Χριστὸς ἐδήλωσέ μοι.</span>
         </div>
         <div class="verse">
           <span class="verse-number">15</span>
           <span class="verse-text">Mas também eu procurarei em toda a ocasião que depois da minha morte tenhais lembrança destas coisas.</span>
+          <span class="verso-grego" lang="grc">Σπουδάσω δὲ καὶ ἑκάστοτε ἔχειν ὑμᾶς μετὰ τὴν ἐμὴν ἔξοδον τὴν τούτων μνήμην ποιεῖσθαι.</span>
         </div>
         <div class="verse">
           <span class="verse-number">16</span>
           <span class="verse-text">Porque não vos fizemos saber a virtude e a vinda de nosso Senhor Jesus Cristo, seguindo fábulas artificialmente compostas; mas nós mesmos vimos a sua majestade.</span>
+          <span class="verso-grego" lang="grc">οὐ γὰρ σεσοφισμένοις μύθοις ἐξακολουθήσαντες ἐγνωρίσαμεν ὑμῖν τὴν τοῦ Κυρίου ἡμῶν Ἰησοῦ Χριστοῦ δύναμιν καὶ παρουσίαν, ἀλλ’ ἐπόπται γενηθέντες τῆς ἐκείνου μεγαλειότητος.</span>
         </div>
         <div class="verse">
           <span class="verse-number">17</span>
           <span class="verse-text">Porquanto ele recebeu de Deus Pai honra e glória, quando da magnífica glória lhe foi dirigida a seguinte voz: Este é o meu Filho amado, em quem me tenho comprazido.</span>
+          <span class="verso-grego" lang="grc">λαβὼν γὰρ παρὰ Θεοῦ πατρὸς τιμὴν καὶ δόξαν, φωνῆς ἐνεχθείσης αὐτῷ τοιᾶσδε ὑπὸ τῆς μεγαλοπρεποῦς δόξης, Οὗτός ἐστιν ὁ υἱός μου ὁ ἀγαπητὸς εἰς ὃν ἐγὼ εὐδόκησα·</span>
         </div>
         <div class="verse">
           <span class="verse-number">18</span>
           <span class="verse-text">E ouvimos esta voz dirigida do céu, estando nós com ele no monte santo;</span>
+          <span class="verso-grego" lang="grc">καὶ ταύτην τὴν φωνὴν ἡμεῖς ἠκούσαμεν ἐξ οὐρανοῦ ἐνεχθεῖσαν, σὺν αὐτῷ ὄντες ἐν τῷ ὄρει τῷ ἁγίῳ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">19</span>
           <span class="verse-text">E temos, mui firme, a palavra dos profetas, à qual bem fazeis em estar atentos, como a uma luz que alumia em lugar escuro, até que o dia amanheça, e a estrela da alva apareça em vossos corações.</span>
+          <span class="verso-grego" lang="grc">καὶ ἔχομεν βεβαιότερον τὸν προφητικὸν λόγον, ᾧ καλῶς ποιεῖτε προσέχοντες ὡς λύχνῳ φαίνοντι ἐν αὐχμηρῷ τόπῳ, ἕως οὗ ἡμέρα διαυγάσῃ, καὶ φωσφόρος ἀνατείλῃ ἐν ταῖς καρδίαις ὑμῶν·</span>
         </div>
         <div class="verse">
           <span class="verse-number">20</span>
           <span class="verse-text">Sabendo primeiramente isto: que nenhuma profecia da Escritura é de particular interpretação.</span>
+          <span class="verso-grego" lang="grc">τοῦτο πρῶτον γινώσκοντες, ὅτι πᾶσα προφητεία, γραφῆς ἰδίας ἐπιλύσεως οὐ γίνεται.</span>
         </div>
         <div class="verse">
           <span class="verse-number">21</span>
           <span class="verse-text">Porque a profecia nunca foi produzida por vontade de homem algum, mas os homens santos de Deus falaram inspirados pelo Espírito Santo.</span>
+          <span class="verso-grego" lang="grc">οὐ γὰρ θελήματι ἀνθρώπου ἠνέχθη ποτὲ προφητεία, ἀλλ’ ὑπὸ Πνεύματος Ἁγίου φερόμενοι ἐλάλησαν ἅγιοι Θεοῦ ἄνθρωποι.</span>
         </div>
 
     </div>
+    <p class="grego-credito grego-capitulo">Texto grego: <a href="https://git.door43.org/STR/el-x-koine_trs" rel="noopener">Textus Receptus 1894 Scrivener</a>, Door43 World Missions Community, com Scriptorium e Dr. Maurice A. Robinson, sob a licença <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br" rel="license noopener">CC BY-SA 4.0</a>. Adaptado: só o texto, sem as marcações de morfologia, Strong e lema. Esta camada grega segue a mesma licença.</p>
 
     <div class="chapter-nav">
       <span class="nav-button disabled">← Capítulo Anterior</span>
