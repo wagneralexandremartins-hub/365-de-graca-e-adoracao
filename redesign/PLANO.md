@@ -402,10 +402,14 @@ Script único `scripts/aplicar_grego_biblia.py` (simulação por padrão, `--app
 | Fase 2, lote 3 | 1 Pedro (5 caps., 105 vers.) | #23 | `a2395647` (15/10 20:49 UTC) | run `38805014793` ok | `git revert -m 1 a2395647` |
 | Fase 2, lote 4 | 2 Pedro (3 caps., 61 vers.) | #25 | `ecb64b70` (16/10 13:35 UTC) | run `38908996391` ok | `git revert -m 1 ecb64b70` |
 | Fase 2, lote 5 | 1 João (5 caps., 105 vers.) | #26 | `2596d9e9` (16/10 14:38 UTC) | run `38917342360` ok | `git revert -m 1 2596d9e9` |
+| Fase 3, Apocalipse lote 1 | Apocalipse 1 a 7 (130 vers.) | #28 | `5f43bbf5` (16/10 20:07 UTC) | run `38959961702` ok | `git revert -m 1 5f43bbf5` |
+| Fase 3, Apocalipse lote 2 | Apocalipse 8 a 14 (119 vers.) | #29 | `983dc74f` (19/10 17:58 UTC) | run `39298667028` ok | `git revert -m 1 983dc74f` |
 
 **Marco (16/10/2026): cartas gerais completas em PT.** Grego em todos os versículos de `biblia/` em Tiago, 1 e 2 Pedro, 1, 2 e 3 João e Judas, mais o piloto de João 3. Ainda **sem** grego em todos os versículos: Evangelhos (Mateus, Marcos, Lucas e João, exceto João 3), Atos, cartas paulinas, Hebreus e Apocalipse. Nos Evangelhos existe só o grego dos versículos citados nos estudos (`scripts/dados/grego-tr-*.json`, 14/10), que é outra coisa.
 
 Conferido no ar (curl, página no ar = `main` byte a byte): jo-03; 2jo, 3jo e jd; Tiago 1, 3 e 4; 1 Pedro 1, 3 e 4; 2 Pedro 1, 2 e 3; 1 João 1 a 5. Correções de acentuação no ar: 2 Jo 7; 3 Jo 9 e 15; Jd 20 e 22; Tg 1:12, 1:26, 2:2, 2:18, 3:5, 3:12 e 4:13; 1 Pe 1:4, 1:7, 1:16, 2:6, 3:1, 3:12, 3:13, 3:15, 3:16, 4:1 e 4:8; 2 Pe 1:12, 1:17, 1:21, 2:2, 2:7, 2:22, 3:3, 3:7, 3:10, 3:11 e 3:16 (13 trocas); 1 Jo 1:5, 1:10, 2:7, 2:11, 2:14, 2:16, 2:24, 2:28, 3:3, 3:6, 3:14, 3:16, 3:17, 4:6, 4:12, 4:19, 4:21, 5:7, 5:9, 5:12, 5:13, 5:18 e 5:20 (24 trocas).
+
+Apocalipse (frente nº 2 da FILA, 3 lotes, 22 capítulos): lote 1 (1 a 7) e lote 2 (8 a 14) no ar. Conferido no ar: ap-01 a ap-07 = `main` (20/29/22/11/14/17/17 linhas de grego); ap-08 a ap-14 = `main` (13/21/11/19/17/18/20 linhas; nota só no 13:1), com 1 botão e 1 crédito por página; controles 1jo-01, 2 Pedro e Tiago inalterados. Correções no Apocalipse: lote 1, 67 trocas registradas (68 palavras) em 49 versículos, mais a troca de letra de 5:8 (D3); lote 2, 41 trocas em 31 versículos (lista A 37, lista B 4). O `ap.json` cresce lote a lote (só os capítulos autorizados): 130 versículos e 75.577 B no lote 1, 249 versículos e 135.818 B no lote 2; o script prova que os versículos e as correções já publicados ficam idênticos. Backups: `_backups/grego-biblia-ap-20261016-162754.zip` e `_backups/grego-biblia-ap-20261019-142001.zip`.
 
 **Decisões do Wagner (15/10).**
 1. Correções de acentuação, opção B: só acentos e pontuação, com as letras iguais às do byztxt (prova no script); cada correção fica registrada no JSON do livro (`correcoes_de_acentuacao`: forma do Door43, forma publicada e motivo); a lista de cada livro passa pelo Wagner antes do `--apply`. O grave antes de vírgula é convenção da fonte e fica como está.
@@ -419,15 +423,33 @@ Conferido no ar (curl, página no ar = `main` byte a byte): jo-03; 2jo, 3jo e jd
 7. Propostas de pontuação, maiúscula ou grafia só entram se o byztxt confirmar a forma exata; o byztxt fixado (`textonly`) é transliterado, sem acentos, pontuação nem maiúsculas, então nesses casos fica a forma da fonte.
 8. 1 Jo 5:7 (Comma Johanneum): está no Door43, no byztxt (`greektext-scrivener`, o próprio Scrivener 1894) e na ACF; numeração igual nas três fontes, sem nota. Única correção no trecho: `εν` → `ἐν`.
 
+**Decisões do Wagner (16/10, Apocalipse, lote 1).**
+9. D1: a keraia dos números (`ιβʹ`) sai só da comparação com o byztxt; o texto publicado fica como na fonte.
+10. D2: Ap 7:4, as duas linhas vazias do numeral `ρμδʹ` (144) no USFM são aceitas; o texto não muda (`vazios_aceitos_por_decisao` no JSON).
+11. D3: Ap 5:8, troca de letra `εἴκοσιιτέσσαρες` → `εἴκοσιτέσσαρες` (ι a mais; forma de 5:14; letras = byztxt), em seção própria (`correcoes_de_letra`), separada das de acento.
+12. O `ap.json` cresce lote a lote (só os capítulos autorizados); o script prova que o que já está publicado fica idêntico.
+
+**Decisões do Wagner (19/10, Apocalipse, lote 2).**
+13. D4: Ap 13:18, o Door43 escreve 666 com estigma (`χξϛʹ`) e o byztxt `cxv`; o estigma vira sigma final só na comparação. O texto publicado mantém `χξϛʹ`.
+14. D5: Ap 14:1 e 14:3, `τεσσαράκοντατέσσαρες` fica junto, como no Door43 (o byztxt separa); o par é juntado só na comparação.
+15. D6: Ap 14:13, `ἀπ’ ἄρτι` fica separado, como no Door43 (o byztxt junta); o par é juntado só na comparação.
+16. Ap 12:18 → 13:1 (decidido em 14/10, nota aprovada em 19/10): o grego segue a numeração da ACF. As palavras que o Door43 numera como 12:18 (`καὶ ἐστάθην ἐπὶ τὴν ἄμμον τῆς θαλάσσης.`) abrem o 13:1; o byztxt também não tem 12:18, e o 13:1 juntado = byztxt 13:1. Nota no 13:1: "Nota: no Textus Receptus de Scrivener (1894), as primeiras palavras deste versículo formam o v. 18 do capítulo 12; aqui o grego segue a numeração da ACF."
+17. Ap 12:15: `εκ’` → `ἐκ` (sem apóstrofo), mesmo precedente de 2:21. Lista B (acento que muda a palavra): 10:4 `ταῦτα`, 12:15 `ταύτην`, 14:4 `οὗτοί εἰσιν`, 14:15 `ἦλθέ σοι`.
+18. O que fica "para revisão futura" é registrado no script e no PLANO (pendência i), não no JSON.
+
 **Pendências.**
 - (a) Lote de correção das páginas já publicadas, em PR separado: Jd 1 `ἠγίασμένοις` → `ἡγιασμένοις`; Jd 17 `δέ ἀγαπητοί` → `δὲ ἀγαπητοί`; 2 Jo 12 `ᾗ` → `ᾖ` (subjuntivo); Jo 3:13 `ὁ ὤν ἐν` → `ὁ ὢν ἐν` e pontuação final (afeta também o estudo de João 3, que publica o mesmo versículo); dúvida em Jd 14 (`Ἑνὼχ` no Door43, com espírito áspero; `Ἐνώχ` no Robinson-Pierpont).
 - (b) Os botões flutuantes (modo claro e WhatsApp) cobrem parte do texto e do crédito no celular nas páginas de `biblia/`.
 - (c) `.chapter-nav` sem estilo nas 1.189 páginas de `biblia/` (ver o achado da Fase 1).
 - (d) Prévias do símbolo (`redesign/preview-simbolo-3d.html` e `redesign/simbolo-365-anel.webp`) fora do git, aguardando decisão.
 - (e) 61 arquivos de `_backups/` ainda versionados no git (o `.gitignore` só cobre `*.zip`), a resolver por PR.
-- (f) Cartas gerais concluídas (16/10). Apocalipse em PT é a frente nº 2 da FILA (aberta, 3 lotes, 22 capítulos); Evangelhos, Atos, cartas paulinas e Hebreus ficam em "Frentes futuras", sem prioridade; depois EN/ES (KJV/RV1909), conferindo a numeração livro a livro.
+- (f) Cartas gerais concluídas (16/10). Apocalipse em PT é a frente nº 2 da FILA (aberta, 3 lotes, 22 capítulos): lote 1 (1 a 7) no ar em 16/10 (#28), lote 2 (8 a 14) no ar em 19/10 (#29); próximo: lote 3 (15 a 22). Depois, a frente nº 3 (lote de correção, pendência a). Evangelhos, Atos, cartas paulinas e Hebreus ficam em "Frentes futuras", sem prioridade; depois EN/ES (KJV/RV1909), conferindo a numeração livro a livro.
 - (g) A frente 0 das páginas de modelo EN/ES e o plano das Perguntas (`redesign/plano-perguntas-biblia.md`, na branch `docs/plano-perguntas`) seguem pendentes do export do Search Console.
 - (h) Para revisão futura em 1 João, deixados como na fonte porque o byztxt não confirma a forma proposta (PR #26): **A** 2:13 sem vírgulas no vocativo nem pontuação no fim; **B** 2:14 sem pontuação interna nem final; **C** 2:14 `τοῦ θεοῦ` em minúscula (único caso no livro); **D** 2:15 vírgula solta em `τοῦ πατρὸς, ἐν αὐτῷ`; **E** 4:20 `ἀγαπᾷν` (grafia antiga), enquanto 4:11 tem `ἀγαπᾶν`.
+- (i) Para revisão futura no Apocalipse, deixados como na fonte porque o byztxt fixado não tem acentos nem pontuação e não confirma a forma. Lote 1 (PR #28): 3:3 `ἐπὶ σε` (2 vezes); pontuação de 1:3 (ponto em `προφητείας. καὶ`), 1:20 (`ἑπτὰ· ἀστέρων`), 2:13 (`πίστιν, μου`), 2:27 e 2:28 (sem pontuação no fim), 3:12 (ponto antes de `τῆς καινῆς Ἰερουσαλήμ`) e 7:7 (vírgula a mais em `χιλιάδες, ἐσφραγισμένοι`). Lote 2 (PR #29): 9:4 `θεοῦ` minúsculo; 9:19 falta pontuação antes de `αἱ γὰρ`; 13:4 `τίς` minúsculo; 13:13 ponto em `γῆν. ἐνώπιον`; 14:8 pontuação; 14:13 pontuação entre `ἄρτι` e `ναί`; 14:3 `ζώων` sem iota subscrito.
+
+**Melhorias futuras do script.**
+- Tornar `CORRECOES_CONFERIDAS` por livro (hoje é uma chave única, já `True`, em `scripts/aplicar_grego_biblia.py`; com uma chave por livro em `LIVROS`, a lista de correções de um livro novo não passa no `--apply` sem a conferência do Wagner).
 
 A fila de frentes, com critério de pronto, está em `redesign/FILA.md`.
 

@@ -3,12 +3,12 @@
 Uma frente aberta por vez; a próxima só começa depois do "Pronto" do Wagner. Só o Wagner marca "Pronto".
 Situação: **na fila**, **aberta** ou **pronta**. Detalhes de cada frente em `redesign/PLANO.md`.
 
-Criada em 15/10/2026. Atualizada em 16/10/2026 (frente 1 pronta).
+Criada em 15/10/2026. Atualizada em 16/10/2026 (frente 1 pronta) e em 19/10/2026 (frente 2: lotes 1 e 2 do Apocalipse no ar).
 
 | Nº | Frente | Critério de pronto | Situação | Dependência | PR |
 |---|---|---|---|---|---|
 | 1 | Grego em todos os versículos do NT em PT: 2 Pedro e 1 João | 2 Pedro e 1 João no ar, com a lista de correções aprovada, prova byte a byte, regressão com 0 mudanças, prints aprovados e conferência no ar com curl | **pronta** (Wagner, 16/10/2026) | — | #25 (2 Pedro), #26 (1 João); anteriores: #20, #21, #22, #23 |
-| 2 | Grego em todos os versículos do Apocalipse em PT (3 lotes, 22 capítulos) | Os 3 lotes no ar, com os 22 capítulos, a lista de acentos aprovada pelo Wagner, provas byte a byte, regressão com 0 mudanças, prints aprovados e conferência no ar | aberta | — | — |
+| 2 | Grego em todos os versículos do Apocalipse em PT (3 lotes, 22 capítulos) | Os 3 lotes no ar, com os 22 capítulos, a lista de acentos aprovada pelo Wagner, provas byte a byte, regressão com 0 mudanças, prints aprovados e conferência no ar | aberta: lotes 1 (caps. 1–7) e 2 (caps. 8–14) no ar; próximo: lote 3 (caps. 15–22) | — | #28 (lote 1, caps. 1–7), #29 (lote 2, caps. 8–14) |
 | 3 | Lote de correção das páginas já publicadas (Jd 1, Jd 17, 2 Jo 12, Jo 3:13; dúvida em Jd 14) | Lista aprovada pelo Wagner, correções no ar (JSON e páginas, inclusive o estudo de João 3), prova de letras iguais às do byztxt e conferência no ar | na fila | 1 | — |
 | 4 | Export do Search Console (16 meses: consultas, páginas, países, filtros de perguntas, Indexação > Páginas) | Arquivos exportados pelo Wagner e lidos, com resumo registrado no PLANO | na fila | Wagner | — |
 | 5 | Decisão da frente 0 (páginas de modelo EN/ES: tradução revisada, noindex ou manter) | Decisão do Wagner registrada no PLANO | na fila | 4 | — |
