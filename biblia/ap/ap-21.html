@@ -126,6 +126,11 @@
 <link rel="stylesheet" href="/assets/css/site-header.css">
 <script src="/assets/js/site-nav.js" defer></script>
 <!-- /site-nav:v1 -->
+<!-- grego-biblia:v1 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus&amp;display=swap">
+<link rel="stylesheet" href="/assets/css/grego.css">
+<script src="/assets/js/grego-biblia.js" defer></script>
+<!-- /grego-biblia:v1 -->
 </head>
 <body>
 <!-- site-nav:v1 -->
@@ -142,117 +147,146 @@
       <p class="chapter-subtitle">Almeida Corrigida Fiel (ACF)</p>
     </div>
 
-    <div class="verses">
+    <button type="button" class="grego-alternar" data-grego-alternar aria-controls="versiculos" aria-pressed="false" data-ocultar="Ocultar o grego" data-mostrar="Mostrar o grego" hidden>Ocultar o grego</button>
+    <div class="verses" id="versiculos">
         <div class="verse">
           <span class="verse-number">1</span>
           <span class="verse-text">E vi um novo céu, e uma nova terra. Porque já o primeiro céu e a primeira terra passaram, e o mar já não existe.</span>
+          <span class="verso-grego" lang="grc">Καὶ εἶδον οὐρανὸν καινὸν καὶ γῆν καινήν· ὁ γὰρ πρῶτος οὐρανὸς καὶ ἡ πρώτη γῆ παρῆλθε, καὶ ἡ θάλασσα οὐκ ἔστιν ἔτι.</span>
         </div>
         <div class="verse">
           <span class="verse-number">2</span>
           <span class="verse-text">E eu, João, vi a santa cidade, a nova Jerusalém, que de Deus descia do céu, adereçada como uma esposa ataviada para o seu marido.</span>
+          <span class="verso-grego" lang="grc">καὶ ἐγὼ Ἰωάννης εἶδον τὴν πόλιν τὴν ἁγίαν Ἰερουσαλὴμ καινήν, καταβαίνουσαν ἀπὸ τοῦ Θεοῦ ἐκ τοῦ οὐρανοῦ, ἡτοιμασμένην ὡς νύμφην κεκοσμημένην τῷ ἀνδρὶ αὐτῆς.</span>
         </div>
         <div class="verse">
           <span class="verse-number">3</span>
           <span class="verse-text">E ouvi uma grande voz do céu, que dizia: Eis aqui o tabernáculo de Deus com os homens, pois com eles habitará, e eles serão o seu povo, e o mesmo Deus estará com eles, e será o seu Deus.</span>
+          <span class="verso-grego" lang="grc">καὶ ἤκουσα φωνῆς μεγάλης ἐκ τοῦ οὐρανοῦ, λεγούσης, Ἰδού, ἡ σκηνὴ τοῦ Θεοῦ μετὰ τῶν ἀνθρώπων, καὶ σκηνώσει μετ’ αὐτῶν, καὶ αὐτοὶ λαοὶ αὐτοῦ ἔσονται, καὶ αὐτὸς ὁ Θεὸς ἔσται μετ’ αὐτῶν, Θεὸς αὐτῶν·</span>
         </div>
         <div class="verse">
           <span class="verse-number">4</span>
           <span class="verse-text">E Deus limpará de seus olhos toda a lágrima; e não haverá mais morte, nem pranto, nem clamor, nem dor; porque já as primeiras coisas são passadas.</span>
+          <span class="verso-grego" lang="grc">καὶ ἐξαλείψει ὁ Θεὸς πᾶν δάκρυον ἀπὸ τῶν ὀφθαλμῶν αὐτῶν, καὶ ὁ θάνατος οὐκ ἔσται ἔτι· οὔτε πένθος, οὔτε κραυγή, οὔτε πόνος, οὐκ ἔσται ἔτι· ὅτι τὰ πρῶτα ἀπῆλθον.</span>
         </div>
         <div class="verse">
           <span class="verse-number">5</span>
           <span class="verse-text">E o que estava assentado sobre o trono disse: Eis que faço novas todas as coisas. E disse-me: Escreve; porque estas palavras são verdadeiras e fiéis.</span>
+          <span class="verso-grego" lang="grc">καὶ εἶπεν ὁ καθήμενος ἐπὶ τοῦ θρόνου, Ἰδού, καινὰ πάντα ποιῶ. καὶ λέγει μοι, Γράψον· ὅτι οὗτοι οἱ λόγοι ἀληθινοὶ καὶ πιστοί εἰσι.</span>
         </div>
         <div class="verse">
           <span class="verse-number">6</span>
           <span class="verse-text">E disse-me mais: Está cumprido. Eu sou o Alfa e o Ômega, o princípio e o fim. A quem quer que tiver sede, de graça lhe darei da fonte da água da vida.</span>
+          <span class="verso-grego" lang="grc">καὶ εἶπέ μοι, Γέγονε. ἐγώ εἰμι τὸ Α καὶ τὸ Ὦ, ἡ ἀρχὴ καὶ τὸ τέλος. ἐγὼ τῷ διψῶντι δώσω ἐκ τῆς πηγῆς τοῦ ὕδατος τῆς ζωῆς δωρεάν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">7</span>
           <span class="verse-text">Quem vencer, herdará todas as coisas; e eu serei seu Deus, e ele será meu filho.</span>
+          <span class="verso-grego" lang="grc">ὁ νικῶν κληρονομήσει πάντα, καὶ ἔσομαι αὐτῷ Θεός, καὶ αὐτὸς ἔσται μοι ὁ υἱός.</span>
         </div>
         <div class="verse">
           <span class="verse-number">8</span>
           <span class="verse-text">Mas, quanto aos tímidos, e aos incrédulos, e aos abomináveis, e aos homicidas, e aos que se prostituem, e aos feiticeiros, e aos idólatras e a todos os mentirosos, a sua parte será no lago que arde com fogo e enxofre; o que é a segunda morte.</span>
+          <span class="verso-grego" lang="grc">δειλοῖς δὲ καὶ ἀπίστοις καὶ ἐβδελυγμένοις καὶ φονεῦσι καὶ πόρνοις καὶ φαρμακεῦσι καὶ εἰδωλολάτραις καὶ πᾶσι τοῖς ψευδέσι τὸ μέρος αὐτῶν ἐν τῇ λίμνῃ τῇ καιομένῃ πυρὶ καὶ θείῳ, ὅ ἐστι δεύτερος θάνατος.</span>
         </div>
         <div class="verse">
           <span class="verse-number">9</span>
           <span class="verse-text">E veio a mim um dos sete anjos que tinham as sete taças cheias das últimas sete pragas, e falou comigo, dizendo: Vem, mostrar-te-ei a esposa, a mulher do Cordeiro.</span>
+          <span class="verso-grego" lang="grc">Καὶ ἦλθε πρός με εἷς τῶν ἑπτὰ ἀγγέλων τῶν ἐχόντων τὰς ἑπτὰ φιάλας τὰς γεμούσας τῶν ἑπτὰ πληγῶν τῶν ἐσχάτων, καὶ ἐλάλησε μετ’ ἐμοῦ, λέγων, Δεῦρο, δείξω σοι τὴν νύμφην τοῦ ἀρνίου τὴν γυναῖκα.</span>
         </div>
         <div class="verse">
           <span class="verse-number">10</span>
           <span class="verse-text">E levou-me em espírito a um grande e alto monte, e mostrou-me a grande cidade, a santa Jerusalém, que de Deus descia do céu.</span>
+          <span class="verso-grego" lang="grc">καὶ ἀπήνεγκέ με ἐν Πνεύματι ἐπ’ ὄρος μέγα καὶ ὑψηλόν, καὶ ἔδειξέ μοι τὴν πόλιν τὴν μεγάλην, τὴν ἁγίαν Ἰερουσαλήμ, καταβαίνουσαν ἐκ τοῦ οὐρανοῦ ἀπὸ τοῦ Θεοῦ,</span>
         </div>
         <div class="verse">
           <span class="verse-number">11</span>
           <span class="verse-text">E tinha a glória de Deus; e a sua luz era semelhante a uma pedra preciosíssima, como a pedra de jaspe, como o cristal resplandecente.</span>
+          <span class="verso-grego" lang="grc">ἔχουσαν τὴν δόξαν τοῦ Θεοῦ· καὶ ὁ φωστὴρ αὐτῆς ὅμοιος λίθῳ τιμιωτάτῳ ὡς λίθῳ ἰάσπιδι κρυσταλλίζοντι·</span>
         </div>
         <div class="verse">
           <span class="verse-number">12</span>
           <span class="verse-text">E tinha um grande e alto muro com doze portas, e nas portas doze anjos, e nomes escritos sobre elas, que são os nomes das doze tribos dos filhos de Israel.</span>
+          <span class="verso-grego" lang="grc">ἔχουσάν τε τεῖχος μέγα καὶ ὑψηλόν, ἔχουσαν πυλῶνας δώδεκα, καὶ ἐπὶ τοῖς πυλῶσιν ἀγγέλους δώδεκα, καὶ ὀνόματα ἐπιγεγραμμένα, ἅ ἐστι τῶν δώδεκα φυλῶν τῶν υἱῶν Ἰσραήλ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">13</span>
           <span class="verse-text">Do lado do levante tinha três portas, do lado do norte, três portas, do lado do sul, três portas, do lado do poente, três portas.</span>
+          <span class="verso-grego" lang="grc">ἀπ’ ἀνατολῆς πυλῶνες τρεῖς· ἀπὸ βορρᾶ, πυλῶνες τρεῖς· ἀπὸ νότου, πυλῶνες τρεῖς· καὶ ἀπὸ δυσμῶν, πυλῶνες τρεῖς.</span>
         </div>
         <div class="verse">
           <span class="verse-number">14</span>
           <span class="verse-text">E o muro da cidade tinha doze fundamentos, e neles os nomes dos doze apóstolos do Cordeiro.</span>
+          <span class="verso-grego" lang="grc">καὶ τὸ τεῖχος τῆς πόλεως ἔχον θεμελίους δώδεκα, καὶ ἐν αὐτοῖς ὀνόματα τῶν δώδεκα ἀποστόλων τοῦ ἀρνίου.</span>
         </div>
         <div class="verse">
           <span class="verse-number">15</span>
           <span class="verse-text">E aquele que falava comigo tinha uma cana de ouro, para medir a cidade, e as suas portas, e o seu muro.</span>
+          <span class="verso-grego" lang="grc">καὶ ὁ λαλῶν μετ’ ἐμοῦ εἶχε κάλαμον χρυσοῦν, ἵνα μετρήσῃ τὴν πόλιν, καὶ τοὺς πυλῶνας αὐτῆς, καὶ τὸ τεῖχος αὐτῆς.</span>
         </div>
         <div class="verse">
           <span class="verse-number">16</span>
           <span class="verse-text">E a cidade estava situada em quadrado; e o seu comprimento era tanto como a sua largura. E mediu a cidade com a cana até doze mil estádios; e o seu comprimento, largura e altura eram iguais.</span>
+          <span class="verso-grego" lang="grc">καὶ ἡ πόλις τετράγωνος κεῖται, καὶ τὸ μῆκος αὐτῆς τοσοῦτόν ἐστιν ὅσον καὶ τὸ πλάτος. καὶ ἐμέτρησε τὴν πόλιν τῷ καλάμῳ ἐπὶ σταδίων δώδεκα χιλιάδων· τὸ μῆκος καὶ τὸ πλάτος καὶ τὸ ὕψος αὐτῆς ἴσα ἐστί.</span>
         </div>
         <div class="verse">
           <span class="verse-number">17</span>
           <span class="verse-text">E mediu o seu muro, de cento e quarenta e quatro côvados, conforme à medida de homem, que é a de um anjo.</span>
+          <span class="verso-grego" lang="grc">καὶ ἐμέτρησε τὸ τεῖχος αὐτῆς ἑκατὸν τεσσαράκοντατεσσάρων πηχῶν, μέτρον ἀνθρώπου, ὅ ἐστιν ἀγγέλου.</span>
         </div>
         <div class="verse">
           <span class="verse-number">18</span>
           <span class="verse-text">E a construção do seu muro era de jaspe, e a cidade de ouro puro, semelhante a vidro puro.</span>
+          <span class="verso-grego" lang="grc">καὶ ἦν ἡ ἐνδόμησις τοῦ τείχους αὐτῆς, ἴασπις· καὶ ἡ πόλις χρυσίον καθαρόν, ὅμοια ὑάλῳ καθαρῷ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">19</span>
           <span class="verse-text">E os fundamentos do muro da cidade estavam adornados de toda a pedra preciosa. O primeiro fundamento era jaspe; o segundo, safira; o terceiro, calcedônia; o quarto, esmeralda;</span>
+          <span class="verso-grego" lang="grc">καὶ οἱ θεμέλιοι τοῦ τείχους τῆς πόλεως παντὶ λίθῳ τιμίῳ κεκοσμημένοι. ὁ θεμέλιος ὁ πρῶτος, ἴασπις· ὁ δεύτερος, σάπφειρος· ὁ τρίτος, χαλκηδών· ὁ τέταρτος, σμάραγδος·</span>
         </div>
         <div class="verse">
           <span class="verse-number">20</span>
           <span class="verse-text">O quinto, sardônica; o sexto, sárdio; o sétimo, crisólito; o oitavo, berilo; o nono, topázio; o décimo, crisópraso; o undécimo, jacinto; o duodécimo, ametista.</span>
+          <span class="verso-grego" lang="grc">ὁ πέμπτος, σαρδόνυξ· ὁ ἕκτος, σάρδιος· ὁ ἕβδομος, χρυσόλιθος· ὁ ὄγδοος, βήρυλλος· ὁ ἔννατος, τοπάζιον· ὁ δέκατος, χρυσόπρασος· ὁ ἑνδέκατος, ὑάκινθος· ὁ δωδέκατος, ἀμέθυστος.</span>
         </div>
         <div class="verse">
           <span class="verse-number">21</span>
           <span class="verse-text">E as doze portas eram doze pérolas; cada uma das portas era uma pérola; e a praça da cidade de ouro puro, como vidro transparente.</span>
+          <span class="verso-grego" lang="grc">καὶ οἱ δώδεκα πυλῶνες, δώδεκα μαργαρῖται· ἀνὰ εἷς ἕκαστος τῶν πυλώνων ἦν ἐξ ἑνὸς μαργαρίτου· καὶ ἡ πλατεῖα τῆς πόλεως χρυσίον καθαρόν, ὡς ὕαλος διαφανής.</span>
         </div>
         <div class="verse">
           <span class="verse-number">22</span>
           <span class="verse-text">E nela não vi templo, porque o seu templo é o Senhor Deus Todo-Poderoso, e o Cordeiro.</span>
+          <span class="verso-grego" lang="grc">καὶ ναὸν οὐκ εἶδον ἐν αὐτῇ· ὁ γὰρ Κύριος ὁ Θεὸς ὁ παντοκράτωρ ναὸς αὐτῆς ἐστι, καὶ τὸ ἀρνίον.</span>
         </div>
         <div class="verse">
           <span class="verse-number">23</span>
           <span class="verse-text">E a cidade não necessita de sol nem de lua, para que nela resplandeçam, porque a glória de Deus a tem iluminado, e o Cordeiro é a sua lâmpada.</span>
+          <span class="verso-grego" lang="grc">καὶ ἡ πόλις οὐ χρείαν ἔχει τοῦ ἡλίου, οὐδὲ τῆς σελήνης, ἵνα φαίνωσιν ἐν αὐτῇ· ἡ γὰρ δόξα τοῦ Θεοῦ ἐφώτισεν αὐτήν, καὶ ὁ λύχνος αὐτῆς τὸ ἀρνίον·</span>
         </div>
         <div class="verse">
           <span class="verse-number">24</span>
           <span class="verse-text">E as nações dos salvos andarão à sua luz; e os reis da terra trarão para ela a sua glória e honra.</span>
+          <span class="verso-grego" lang="grc">καὶ τὰ ἔθνη τῶν σωζομένων ἐν τῷ φωτὶ αὐτῆς περιπατήσουσι· καὶ οἱ βασιλεῖς τῆς γῆς φέρουσι τὴν δόξαν καὶ τὴν τιμὴν αὐτῶν εἰς αὐτήν·</span>
         </div>
         <div class="verse">
           <span class="verse-number">25</span>
           <span class="verse-text">E as suas portas não se fecharão de dia, porque ali não haverá noite.</span>
+          <span class="verso-grego" lang="grc">καὶ οἱ πυλῶνες αὐτῆς οὐ μὴ κλεισθῶσιν ἡμέρας νὺξ γὰρ οὐκ ἔσται ἐκεῖ·</span>
         </div>
         <div class="verse">
           <span class="verse-number">26</span>
           <span class="verse-text">E a ela trarão a glória e honra das nações.</span>
+          <span class="verso-grego" lang="grc">καὶ οἴσουσι τὴν δόξαν καὶ τὴν τιμὴν τῶν ἐθνῶν εἰς αὐτήν·</span>
         </div>
         <div class="verse">
           <span class="verse-number">27</span>
           <span class="verse-text">E não entrará nela coisa alguma que contamine, e cometa abominação e mentira; mas só os que estão inscritos no livro da vida do Cordeiro.</span>
+          <span class="verso-grego" lang="grc">καὶ οὐ μὴ εἰσέλθῃ εἰς αὐτὴν πᾶν κοινοῦν, καὶ ποιοῦν βδέλυγμα καὶ ψεῦδος· εἰ μὴ οἱ γεγραμμένοι ἐν τῷ βιβλίῳ τῆς ζωῆς τοῦ ἀρνίου.</span>
         </div>
 
     </div>
+    <p class="grego-credito grego-capitulo">Texto grego: <a href="https://git.door43.org/STR/el-x-koine_trs" rel="noopener">Textus Receptus 1894 Scrivener</a>, Door43 World Missions Community, com Scriptorium e Dr. Maurice A. Robinson, sob a licença <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br" rel="license noopener">CC BY-SA 4.0</a>. Adaptado: só o texto, sem as marcações de morfologia, Strong e lema. Esta camada grega segue a mesma licença.</p>
 
     <div class="chapter-nav">
       <a href="ap-20.html" class="nav-button">← Capítulo Anterior</a>

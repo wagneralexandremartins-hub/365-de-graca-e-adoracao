@@ -126,6 +126,11 @@
 <link rel="stylesheet" href="/assets/css/site-header.css">
 <script src="/assets/js/site-nav.js" defer></script>
 <!-- /site-nav:v1 -->
+<!-- grego-biblia:v1 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus&amp;display=swap">
+<link rel="stylesheet" href="/assets/css/grego.css">
+<script src="/assets/js/grego-biblia.js" defer></script>
+<!-- /grego-biblia:v1 -->
 </head>
 <body>
 <!-- site-nav:v1 -->
@@ -142,81 +147,101 @@
       <p class="chapter-subtitle">Almeida Corrigida Fiel (ACF)</p>
     </div>
 
-    <div class="verses">
+    <button type="button" class="grego-alternar" data-grego-alternar aria-controls="versiculos" aria-pressed="false" data-ocultar="Ocultar o grego" data-mostrar="Mostrar o grego" hidden>Ocultar o grego</button>
+    <div class="verses" id="versiculos">
         <div class="verse">
           <span class="verse-number">1</span>
           <span class="verse-text">E veio um dos sete anjos que tinham as sete taças, e falou comigo, dizendo-me: Vem, mostrar-te-ei a condenação da grande prostituta que está assentada sobre muitas águas;</span>
+          <span class="verso-grego" lang="grc">Καὶ ἦλθεν εἷς ἐκ τῶν ἑπτὰ ἀγγέλων τῶν ἐχόντων τὰς ἑπτὰ φιάλας, καὶ ἐλάλησε μετ’ ἐμοῦ, λέγων μοι, Δεῦρο, δείξω σοι τὸ κρίμα τῆς πόρνης τῆς μεγάλης, τῆς καθημένης ἐπὶ τῶν ὑδάτων τῶν πολλῶν</span>
         </div>
         <div class="verse">
           <span class="verse-number">2</span>
           <span class="verse-text">Com a qual fornicaram os reis da terra; e os que habitam na terra se embebedaram com o vinho da sua fornicação.</span>
+          <span class="verso-grego" lang="grc">μεθ’ ἧς ἐπόρνευσαν οἱ βασιλεῖς τῆς γῆς, καὶ ἐμεθύσθησαν ἐκ τοῦ οἴνου τῆς πορνείας αὐτῆς οἱ κατοικοῦντες τὴν γῆν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">3</span>
           <span class="verse-text">E levou-me em espírito a um deserto, e vi uma mulher assentada sobre uma besta de cor de escarlata, que estava cheia de nomes de blasfêmia, e tinha sete cabeças e dez chifres.</span>
+          <span class="verso-grego" lang="grc">καὶ ἀπήνεγκέ με εἰς ἔρημον ἐν Πνεύματι· καὶ εἶδον γυναῖκα καθημένην ἐπὶ θηρίον κόκκινον, γέμον ὀνομάτων βλασφημίας, ἔχον κεφαλὰς ἑπτὰ καὶ κέρατα δέκα.</span>
         </div>
         <div class="verse">
           <span class="verse-number">4</span>
           <span class="verse-text">E a mulher estava vestida de púrpura e de escarlata, e adornada com ouro, e pedras preciosas e pérolas; e tinha na sua mão um cálice de ouro cheio das abominações e da imundícia da sua fornicação;</span>
+          <span class="verso-grego" lang="grc">καὶ ἡ γυνὴ ἦν περιβεβλημένη πορφύρᾳ καὶ κόκκινῳ, καὶ κεχρυσωμένη χρυσῷ καὶ λίθῳ τιμίῳ καὶ μαργαρίταις, ἔχουσα χρυσοῦν ποτήριον ἐν τῇ χειρὶ αὐτῆς, γέμον βδελυγμάτων καὶ ἀκάθαρτητος πορνείας αὐτῆς,</span>
         </div>
         <div class="verse">
           <span class="verse-number">5</span>
           <span class="verse-text">E na sua testa estava escrito o nome: Mistério, a grande babilônia, a mãe das prostituições e abominações da terra.</span>
+          <span class="verso-grego" lang="grc">καὶ ἐπὶ τὸ μέτωπον αὐτῆς ὄνομα γεγραμμένον, Μυστήριον, Βαβυλὼν ἡ μεγάλη, ἡ μήτηρ τῶν πορνῶν καὶ τῶν βδελυγμάτων τῆς γῆς.</span>
         </div>
         <div class="verse">
           <span class="verse-number">6</span>
           <span class="verse-text">E vi que a mulher estava embriagada do sangue dos santos, e do sangue das testemunhas de Jesus. E, vendo-a eu, maravilhei-me com grande admiração.</span>
+          <span class="verso-grego" lang="grc">καὶ εἶδον τὴν γυναῖκα μεθύουσαν ἐκ τοῦ αἵματος τῶν ἁγίων, καὶ ἐκ τοῦ αἵματος τῶν μαρτύρων Ἰησοῦ. καὶ ἐθαύμασα ἰδὼν αὐτὴν θαῦμα μέγα.</span>
         </div>
         <div class="verse">
           <span class="verse-number">7</span>
           <span class="verse-text">E o anjo me disse: Por que te admiras? Eu te direi o mistério da mulher, e da besta que a traz, a qual tem sete cabeças e dez chifres.</span>
+          <span class="verso-grego" lang="grc">καὶ εἶπέ μοι ὁ ἄγγελος, Διατί ἐθαύμασας; ἐγώ σοι ἐρῶ τὸ μυστήριον τῆς γυναικός, καὶ τοῦ θηρίου τοῦ βαστάζοντος αὐτήν, τοῦ ἔχοντος τὰς ἑπτὰ κεφαλὰς καὶ τὰ δέκα κέρατα.</span>
         </div>
         <div class="verse">
           <span class="verse-number">8</span>
           <span class="verse-text">A besta que viste foi e já não é, e há de subir do abismo, e irá à perdição; e os que habitam na terra (cujos nomes não estão escritos no livro da vida, desde a fundação do mundo) se admirarão, vendo a besta que era e já não é, ainda que é.</span>
+          <span class="verso-grego" lang="grc">τὸ θηρίον, ὃ εἶδες, ἦν, καὶ οὐκ ἔστι, καὶ μέλλει ἀναβαίνειν ἐκ τῆς ἀβύσσου, καὶ εἰς ἀπώλειαν ὑπάγειν· καὶ θαυμάσονται οἱ κατοικοῦντες ἐπὶ τῆς γῆς, ὧν οὐ γέγραπται τὰ ὀνόματα ἐπὶ τὸ βιβλίον τῆς ζωῆς, ἀπὸ καταβολῆς κόσμου, βλέποντες τὸ θηρίον ὅ, τι ἦν, καὶ οὐκ ἔστι, καίπερ ἔστιν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">9</span>
           <span class="verse-text">Aqui o sentido, que tem sabedoria. As sete cabeças são sete montes, sobre os quais a mulher está assentada.</span>
+          <span class="verso-grego" lang="grc">ὧδε ὁ νοῦς ὁ ἔχων σοφίαν. αἱ ἑπτὰ κεφαλαὶ ὄρη εἰσίν ἑπτὰ ὅπου ἡ γυνὴ κάθηται ἐπ’ αὐτῶν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">10</span>
           <span class="verse-text">E são também sete reis; cinco já caíram, e um existe; outro ainda não é vindo; e, quando vier, convém que dure um pouco de tempo.</span>
+          <span class="verso-grego" lang="grc">καὶ βασιλεῖς ἑπτά εἰσιν οἱ πέντε ἔπεσαν καὶ ὁ εἷς ἔστιν ὁ ἄλλος οὔπω ἦλθε καὶ ὅταν ἔλθῃ ὀλίγον αὐτὸν δεῖ μεῖναι</span>
         </div>
         <div class="verse">
           <span class="verse-number">11</span>
           <span class="verse-text">E a besta que era e já não é, é ela também o oitavo, e é dos sete, e vai à perdição.</span>
+          <span class="verso-grego" lang="grc">καὶ τὸ θηρίον ὃ ἦν, καὶ οὐκ ἔστι, καὶ αὐτὸς ὄγδοός ἐστι, καὶ ἐκ τῶν ἑπτά ἐστι, καὶ εἰς ἀπώλειαν ὑπάγει.</span>
         </div>
         <div class="verse">
           <span class="verse-number">12</span>
           <span class="verse-text">E os dez chifres que viste são dez reis, que ainda não receberam o reino, mas receberão poder como reis por uma hora, juntamente com a besta.</span>
+          <span class="verso-grego" lang="grc">καὶ τὰ δέκα κέρατα, ἃ εἶδες, δέκα βασιλεῖς εἰσιν, οἵτινες βασιλείαν οὔπω ἔλαβον, ἀλλ’ ἐξουσίαν ὡς βασιλεῖς μίαν ὥραν λαμβάνουσι μετὰ τοῦ θηρίου.</span>
         </div>
         <div class="verse">
           <span class="verse-number">13</span>
           <span class="verse-text">Estes têm um mesmo intento, e entregarão o seu poder e autoridade à besta.</span>
+          <span class="verso-grego" lang="grc">οὗτοι μίαν γνώμην ἔχουσι, καὶ τὴν δύναμιν καὶ τὴν ἐξουσίαν ἑαυτῶν τῷ θηρίῳ διαδιδώσουσιν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">14</span>
           <span class="verse-text">Estes combaterão contra o Cordeiro, e o Cordeiro os vencerá, porque é o Senhor dos senhores e o Rei dos reis; vencerão os que estão com ele, chamados, e eleitos, e fiéis.</span>
+          <span class="verso-grego" lang="grc">οὗτοι μετὰ τοῦ ἀρνίου πολεμήσουσι, καὶ τὸ ἀρνίον νικήσει αὐτούς, ὅτι Κύριος κυρίων ἐστὶ καὶ βασιλεὺς βασιλέων, καὶ οἱ μετ’ αὐτοῦ κλητοὶ καὶ ἐκλεκτοὶ καὶ πιστοί.</span>
         </div>
         <div class="verse">
           <span class="verse-number">15</span>
           <span class="verse-text">E disse-me: As águas que viste, onde se assenta a prostituta, são povos, e multidões, e nações, e línguas.</span>
+          <span class="verso-grego" lang="grc">καὶ λέγει μοι, Τὰ ὕδατα ἃ εἶδες, οὗ ἡ πόρνη κάθηται, λαοὶ καὶ ὄχλοι εἰσί, καὶ ἔθνη καὶ γλῶσσαι.</span>
         </div>
         <div class="verse">
           <span class="verse-number">16</span>
           <span class="verse-text">E os dez chifres que viste na besta são os que odiarào a prostituta, e a colocarão desolada e nua, e comerão a sua carne, e a queimarão no fogo.</span>
+          <span class="verso-grego" lang="grc">καὶ τὰ δέκα κέρατα, ἃ εἶδες ἐπὶ τὸ θηρίον, οὗτοι μισήσουσι τὴν πόρνην, καὶ ἠρημωμένην ποιήσουσιν αὐτὴν καὶ γυμνήν, καὶ τὰς σάρκας αὐτῆς φάγονται, καὶ αὐτὴν κατακαύσουσιν ἐν πυρί.</span>
         </div>
         <div class="verse">
           <span class="verse-number">17</span>
           <span class="verse-text">Porque Deus tem posto em seus corações, que cumpram o seu intento, e tenham uma mesma idéia, e que dêem à besta o seu reino, até que se cumpram as palavras de Deus.</span>
+          <span class="verso-grego" lang="grc">ὁ γὰρ Θεὸς ἔδωκεν εἰς τὰς καρδίας αὐτῶν ποιῆσαι τὴν γνώμην αὐτοῦ, καὶ ποιῆσαι μίαν γνώμην, καὶ δοῦναι τὴν βασιλείαν αὐτῶν τῷ θηρίῳ, ἄχρι τελεσθῇ τὰ ῥήματα τοῦ Θεοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">18</span>
           <span class="verse-text">E a mulher que viste é a grande cidade que reina sobre os reis da terra.</span>
+          <span class="verso-grego" lang="grc">καὶ ἡ γυνή, ἣν εἶδες, ἔστιν ἡ πόλις ἡ μεγάλη ἡ ἔχουσα βασιλείαν ἐπὶ τῶν βασιλέων τῆς γῆς.</span>
         </div>
 
     </div>
+    <p class="grego-credito grego-capitulo">Texto grego: <a href="https://git.door43.org/STR/el-x-koine_trs" rel="noopener">Textus Receptus 1894 Scrivener</a>, Door43 World Missions Community, com Scriptorium e Dr. Maurice A. Robinson, sob a licença <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br" rel="license noopener">CC BY-SA 4.0</a>. Adaptado: só o texto, sem as marcações de morfologia, Strong e lema. Esta camada grega segue a mesma licença.</p>
 
     <div class="chapter-nav">
       <a href="ap-16.html" class="nav-button">← Capítulo Anterior</a>

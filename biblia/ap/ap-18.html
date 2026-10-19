@@ -126,6 +126,11 @@
 <link rel="stylesheet" href="/assets/css/site-header.css">
 <script src="/assets/js/site-nav.js" defer></script>
 <!-- /site-nav:v1 -->
+<!-- grego-biblia:v1 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus&amp;display=swap">
+<link rel="stylesheet" href="/assets/css/grego.css">
+<script src="/assets/js/grego-biblia.js" defer></script>
+<!-- /grego-biblia:v1 -->
 </head>
 <body>
 <!-- site-nav:v1 -->
@@ -142,105 +147,131 @@
       <p class="chapter-subtitle">Almeida Corrigida Fiel (ACF)</p>
     </div>
 
-    <div class="verses">
+    <button type="button" class="grego-alternar" data-grego-alternar aria-controls="versiculos" aria-pressed="false" data-ocultar="Ocultar o grego" data-mostrar="Mostrar o grego" hidden>Ocultar o grego</button>
+    <div class="verses" id="versiculos">
         <div class="verse">
           <span class="verse-number">1</span>
           <span class="verse-text">E depois destas coisas vi descer do céu outro anjo, que tinha grande poder, e a terra foi iluminada com a sua glória.</span>
+          <span class="verso-grego" lang="grc">Καὶ μετὰ ταῦτα εἶδον ἄλλον ἄγγελον καταβαίνοντα ἐκ τοῦ οὐρανοῦ, ἔχοντα ἐξουσίαν μεγάλην· καὶ ἡ γῆ ἐφωτίσθη ἐκ τῆς δόξης αὐτοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">2</span>
           <span class="verse-text">E clamou fortemente com grande voz, dizendo: Caiu, caiu a grande Babilônia, e se tornou morada de demônios, e coito de todo espírito imundo, e coito de toda ave imunda e odiável.</span>
+          <span class="verso-grego" lang="grc">καὶ ἔκραξεν ἐν ἰσχύϊ, φωνῇ μεγάλῃ λέγων, Ἔπεσεν ἔπεσε Βαβυλὼν ἡ μεγάλη, καὶ ἐγένετο κατοικητήριον δαιμόνων, καὶ φυλακὴ παντὸς πνεύματος ἀκαθάρτου, καὶ φυλακὴ παντὸς ὀρνέου ἀκαθάρτου καὶ μεμισημένου.</span>
         </div>
         <div class="verse">
           <span class="verse-number">3</span>
           <span class="verse-text">Porque todas as nações beberam do vinho da ira da sua fornicação, e os reis da terra fornicaram com ela; e os mercadores da terra se enriqueceram com a abundância de suas delícias.</span>
+          <span class="verso-grego" lang="grc">ὅτι ἐκ τοῦ οἴνου τοῦ θυμοῦ τῆς πορνείας αὐτῆς πέπωκε πάντα τὰ ἔθνη, καὶ οἱ βασιλεῖς τῆς γῆς μετ’ αὐτῆς ἐπόρνευσαν, καὶ οἱ ἔμποροι τῆς γῆς ἐκ τῆς δυνάμεως τοῦ στρήνους αὐτῆς ἐπλούτησαν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">4</span>
           <span class="verse-text">E ouvi outra voz do céu, que dizia: Sai dela, povo meu, para que não sejas participante dos seus pecados, e para que não incorras nas suas pragas.</span>
+          <span class="verso-grego" lang="grc">Καὶ ἤκουσα ἄλλην φωνὴν ἐκ τοῦ οὐρανοῦ, λέγουσαν, Ἐξέλθετε ἐξ αὐτῆς, ὁ λαός μου, ἵνα μὴ συγκοινωνήσητε ταῖς ἁμαρτίαις αὐτῆς, καὶ ἵνα μὴ λάβητε ἐκ τῶν πληγῶν αὐτῆς·</span>
         </div>
         <div class="verse">
           <span class="verse-number">5</span>
           <span class="verse-text">Porque já os seus pecados se acumularam até ao céu, e Deus se lembrou das iniqüidades dela.</span>
+          <span class="verso-grego" lang="grc">ὅτι ἐκολλήθησαν αὐτῆς αἱ ἁμαρτίαι ἄχρι τοῦ οὐρανοῦ, καὶ ἐμνημόνευσεν ὁ Θεὸς τὰ ἀδικήματα αὐτῆς.</span>
         </div>
         <div class="verse">
           <span class="verse-number">6</span>
           <span class="verse-text">Tornai-lhe a dar como ela vos tem dado, e retribuí-lhe em dobro conforme as suas obras; no cálice em que vos deu de beber, dai-lhe a ela em dobro.</span>
+          <span class="verso-grego" lang="grc">ἀπόδοτε αὐτῇ ὡς καὶ αὐτὴ ἀπέδωκεν ὑμῖν, καὶ διπλώσατε αὐτῇ διπλᾶ κατὰ τὰ ἔργα αὐτῆς· ἐν τῷ ποτηρίῳ ᾧ ἐκέρασε, κεράσατε αὐτῇ διπλοῦν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">7</span>
           <span class="verse-text">Quanto ela se glorificou, e em delícias esteve, foi-lhe outro tanto de tormento e pranto; porque diz em seu coração: Estou assentada como rainha, e não sou viúva, e não verei o pranto.</span>
+          <span class="verso-grego" lang="grc">ὅσα ἐδόξασεν ἑαυτήν, καὶ ἐστρηνίασε, τοσοῦτον δότε αὐτῇ βασανισμὸν καὶ πένθος· ὅτι ἐν τῇ καρδίᾳ αὐτῆς λέγει, Κάθημαι βασίλισσα, καὶ χήρα οὐκ εἰμί, καὶ πένθος οὐ μὴ ἴδω.</span>
         </div>
         <div class="verse">
           <span class="verse-number">8</span>
           <span class="verse-text">Portanto, num dia virão as suas pragas, a morte, e o pranto, e a fome; e será queimada no fogo; porque é forte o Senhor Deus que a julga.</span>
+          <span class="verso-grego" lang="grc">διὰ τοῦτο ἐν μιᾷ ἡμέρᾳ ἥξουσιν αἱ πληγαὶ αὐτῆς, θάνατος καὶ πένθος καὶ λιμός, καὶ ἐν πυρὶ κατακαυθήσεται, ὅτι ἰσχυρὸς Κύριος ὁ Θεὸς ὁ κρίνων αὐτήν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">9</span>
           <span class="verse-text">E os reis da terra, que fornicaram com ela, e viveram em delícias, a chorarão, e sobre ela prantearão, quando virem a fumaça do seu incêndio;</span>
+          <span class="verso-grego" lang="grc">καὶ κλαύσονται αὐτήν, καὶ κόψονται ἐπ’ αὐτῇ οἱ βασιλεῖς τῆς γῆς οἱ μετ’ αὐτῆς πορνεύσαντες καὶ στρηνιάσαντες, ὅταν βλέπωσι τὸν καπνὸν τῆς πυρώσεως αὐτῆς,</span>
         </div>
         <div class="verse">
           <span class="verse-number">10</span>
           <span class="verse-text">Estando de longe pelo temor do seu tormento, dizendo: Ai! ai daquela grande cidade de Babilônia, aquela forte cidade! pois em uma hora veio o seu juízo.</span>
+          <span class="verso-grego" lang="grc">ἀπὸ μακρόθεν ἑστηκότες διὰ τὸν φόβον τοῦ βασανισμοῦ αὐτῆς, λέγοντες, Οὐαί, οὐαί, ἡ πόλις ἡ μεγάλη, Βαβυλών, ἡ πόλις ἡ ἰσχυρά, ὅτι ἐν μιᾷ ὥρᾳ ἦλθεν ἡ κρίσις σου.</span>
         </div>
         <div class="verse">
           <span class="verse-number">11</span>
           <span class="verse-text">E sobre ela choram e lamentam os mercadores da terra; porque ninguém mais compra as suas mercadorias:</span>
+          <span class="verso-grego" lang="grc">καὶ οἱ ἔμποροι τῆς γῆς κλαίουσι καὶ πενθοῦσιν ἐπ’ αὐτῇ, ὅτι τὸν γόμον αὐτῶν οὐδεὶς ἀγοράζει οὐκέτι·</span>
         </div>
         <div class="verse">
           <span class="verse-number">12</span>
           <span class="verse-text">Mercadorias de ouro, e de prata, e de pedras preciosas, e de pérolas, e de linho fino, e de púrpura, e de seda, e de escarlata; e toda a madeira odorífera, e todo o vaso de marfim, e todo o vaso de madeira preciosíssima, de bronze e de ferro, e de mármore;</span>
+          <span class="verso-grego" lang="grc">γόμον χρυσοῦ, καὶ ἀργύρου, καὶ λίθου τιμίου, καὶ μαργαρίτου, καὶ βύσσου, καὶ πορφύρας, καὶ σηρικοῦ, καὶ κοκκίνου· καὶ πᾶν ξύλον θύϊνον, καὶ πᾶν σκεῦος ἐλεφάντινον, καὶ πᾶν σκεῦος ἐκ ξύλου τιμιωτάτου, καὶ χαλκοῦ, καὶ σιδήρου, καὶ μαρμάρου·</span>
         </div>
         <div class="verse">
           <span class="verse-number">13</span>
           <span class="verse-text">E canela, e perfume, e mirra, e incenso, e vinho, e azeite, e flor de farinha, e trigo, e gado, e ovelhas; e cavalos, e carros, e corpos e almas de homens.</span>
+          <span class="verso-grego" lang="grc">καὶ κινάμωμον, καὶ θυμιάματα, καὶ μύρον, καὶ λίβανον, καὶ οἶνον, καὶ ἔλαιον, καὶ σεμίδαλιν, καὶ σῖτον, καὶ κτήνη, καὶ πρόβατα· καὶ ἵππων, καὶ ῥεδῶν, καὶ σωμάτων, καὶ ψυχὰς ἀνθρώπων.</span>
         </div>
         <div class="verse">
           <span class="verse-number">14</span>
           <span class="verse-text">E o fruto do desejo da tua alma foi-se de ti; e todas as coisas gostosas e excelentes se foram de ti, e não mais as acharás.</span>
+          <span class="verso-grego" lang="grc">καὶ ἡ ὀπώρα τῆς ἐπιθυμίας τῆς ψυχῆς σου ἀπῆλθεν ἀπὸ σοῦ, καὶ πάντα τὰ λιπαρὰ καὶ τὰ λαμπρὰ ἀπῆλθεν ἀπὸ σοῦ, καὶ οὐκέτι οὐ μὴ εὑρήσῃς αὐτά.</span>
         </div>
         <div class="verse">
           <span class="verse-number">15</span>
           <span class="verse-text">Os mercadores destas coisas, que dela se enriqueceram, estarão de longe, pelo temor do seu tormento, chorando e lamentando,</span>
+          <span class="verso-grego" lang="grc">οἱ ἔμποροι τούτων, οἱ πλουτήσαντες ἀπ’ αὐτῆς, ἀπὸ μακρόθεν στήσονται διὰ τὸν φόβον τοῦ βασανισμοῦ αὐτῆς, κλαίοντες καὶ πενθοῦντες,</span>
         </div>
         <div class="verse">
           <span class="verse-number">16</span>
           <span class="verse-text">E dizendo: Ai, ai daquela grande cidade! que estava vestida de linho fino, de púrpura, de escarlata; e adornada com ouro e pedras preciosas e pérolas! porque numa hora foram assoladas tantas riquezas.</span>
+          <span class="verso-grego" lang="grc">καὶ λέγοντες, Οὐαί, οὐαί, ἡ πόλις ἡ μεγάλη, ἡ περιβεβλημένη βύσσινον καὶ πορφυροῦν καὶ κόκκινον, καὶ κεχρυσωμένη ἐν χρυσῷ καὶ λίθῳ τιμίῳ καὶ μαργαρίταις·</span>
         </div>
         <div class="verse">
           <span class="verse-number">17</span>
           <span class="verse-text">E todo piloto, e todo o que navega em naus, e todo marinheiro, e todos os que negociam no mar se puseram de longe;</span>
+          <span class="verso-grego" lang="grc">ὅτι μιᾷ ὥρᾳ ἠρημώθη ὁ τοσοῦτος πλοῦτος. καὶ πᾶς κυβερνήτης, καὶ πᾶς ἐπὶ τῶν πλοίων ὁ ὅμιλος, καὶ ναῦται, καὶ ὅσοι τὴν θάλασσαν ἐργάζονται ἀπὸ μακρόθεν ἔστησαν,</span>
         </div>
         <div class="verse">
           <span class="verse-number">18</span>
           <span class="verse-text">E, vendo a fumaça do seu incêndio, clamaram, dizendo: Que cidade é semelhante a esta grande cidade?</span>
+          <span class="verso-grego" lang="grc">καὶ ἔκραζον ὁρῶντες τὸν καπνὸν τῆς πυρώσεως αὐτῆς, λέγοντες, Τίς ὁμοία τῇ πόλει τῇ μεγάλῃ;</span>
         </div>
         <div class="verse">
           <span class="verse-number">19</span>
           <span class="verse-text">E lançaram pó sobre as suas cabeças, e clamaram, chorando, e lamentando, e dizendo: Ai, ai daquela grande cidade! na qual todos os que tinham naus no mar se enriqueceram em razão da sua opulência; porque numa hora foi assolada.</span>
+          <span class="verso-grego" lang="grc">καὶ ἔβαλον χοῦν ἐπὶ τὰς κεφαλὰς αὐτῶν, καὶ ἔκραζον κλαίοντες καὶ πενθοῦντες, λέγοντες, Οὐαὶ οὐαί, ἡ πόλις ἡ μεγάλη, ἐν ᾗ ἐπλούτησαν πάντες οἱ ἔχοντες πλοῖα ἐν τῇ θαλάσσῃ ἐκ τῆς τιμιότητος αὐτῆς, ὅτι μιᾷ ὥρᾳ ἠρημώθη.</span>
         </div>
         <div class="verse">
           <span class="verse-number">20</span>
           <span class="verse-text">Alegra-te sobre ela, ó céu, e vós, santos apóstolos e profetas; porque já Deus julgou a vossa causa quanto a ela.</span>
+          <span class="verso-grego" lang="grc">εὐφραίνου ἐπ’ αὐτήν, οὐρανέ, καὶ οἱ ἅγιοι ἀπόστολοι καὶ οἱ προφῆται, ὅτι ἔκρινεν ὁ Θεὸς τὸ κρίμα ὑμῶν ἐξ αὐτῆς.</span>
         </div>
         <div class="verse">
           <span class="verse-number">21</span>
           <span class="verse-text">E um forte anjo levantou uma pedra como uma grande mó, e lançou-a no mar, dizendo: Com igual ímpeto será lançada babilônia, aquela grande cidade, e não será jamais achada.</span>
+          <span class="verso-grego" lang="grc">Καὶ ἦρεν εἷς ἄγγελος ἰσχυρὸς λίθον ὡς μύλον μέγαν, καὶ ἔβαλεν εἰς τὴν θάλασσαν, λέγων, Οὕτως ὁρμήματι βληθήσεται Βαβυλὼν ἡ μεγάλη πόλις, καὶ οὐ μὴ εὑρεθῇ ἔτι.</span>
         </div>
         <div class="verse">
           <span class="verse-number">22</span>
           <span class="verse-text">E em ti não se ouvirá mais a voz de harpistas, e de músicos, e de flautistas, e de trombeteiros, e nenhum artífice de arte alguma se achará mais em ti; e ruído de mó em ti não se ouvirá mais;</span>
+          <span class="verso-grego" lang="grc">καὶ φωνὴ κιθαρῳδῶν καὶ μουσικῶν καὶ αὐλητῶν καὶ σαλπιστῶν οὐ μὴ ἀκουσθῇ ἐν σοὶ ἔτι, καὶ πᾶς τεχνίτης πάσης τέχνης οὐ μὴ εὑρεθῇ ἐν σοὶ ἔτι, καὶ φωνὴ μύλου οὐ μὴ ἀκουσθῇ ἐν σοὶ ἔτι,</span>
         </div>
         <div class="verse">
           <span class="verse-number">23</span>
           <span class="verse-text">E luz de candeia não mais luzirá em ti, e voz de esposo e de esposa não mais em ti se ouvirá; porque os teus mercadores eram os grandes da terra; porque todas as nações foram enganadas pelas tuas feitiçarias.</span>
+          <span class="verso-grego" lang="grc">καὶ φῶς λύχνου οὐ μὴ φάνῃ ἐν σοὶ ἔτι, καὶ φωνὴ νυμφίου καὶ νύμφης οὐ μὴ ἀκουσθῇ ἐν σοὶ ἔτι· ὅτι οἱ ἔμποροί σου ἦσαν οἱ μεγιστᾶνες τῆς γῆς· ὅτι ἐν τῇ φαρμακείᾳ σου ἐπλανήθησαν πάντα τὰ ἔθνη,</span>
         </div>
         <div class="verse">
           <span class="verse-number">24</span>
           <span class="verse-text">E nela se achou o sangue dos profetas, e dos santos, e de todos os que foram mortos na terra.</span>
+          <span class="verso-grego" lang="grc">καὶ ἐν αὐτῇ αἷμα προφητῶν καὶ ἁγίων εὑρέθη, καὶ πάντων τῶν ἐσφαγμένων ἐπὶ τῆς γῆς.</span>
         </div>
 
     </div>
+    <p class="grego-credito grego-capitulo">Texto grego: <a href="https://git.door43.org/STR/el-x-koine_trs" rel="noopener">Textus Receptus 1894 Scrivener</a>, Door43 World Missions Community, com Scriptorium e Dr. Maurice A. Robinson, sob a licença <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br" rel="license noopener">CC BY-SA 4.0</a>. Adaptado: só o texto, sem as marcações de morfologia, Strong e lema. Esta camada grega segue a mesma licença.</p>
 
     <div class="chapter-nav">
       <a href="ap-17.html" class="nav-button">← Capítulo Anterior</a>
