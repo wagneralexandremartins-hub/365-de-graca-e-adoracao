@@ -126,6 +126,11 @@
 <link rel="stylesheet" href="/assets/css/site-header.css">
 <script src="/assets/js/site-nav.js" defer></script>
 <!-- /site-nav:v1 -->
+<!-- grego-biblia:v1 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus&amp;display=swap">
+<link rel="stylesheet" href="/assets/css/grego.css">
+<script src="/assets/js/grego-biblia.js" defer></script>
+<!-- /grego-biblia:v1 -->
 </head>
 <body>
 <!-- site-nav:v1 -->
@@ -142,77 +147,96 @@
       <p class="chapter-subtitle">Almeida Corrigida Fiel (ACF)</p>
     </div>
 
-    <div class="verses">
+    <button type="button" class="grego-alternar" data-grego-alternar aria-controls="versiculos" aria-pressed="false" data-ocultar="Ocultar o grego" data-mostrar="Mostrar o grego" hidden>Ocultar o grego</button>
+    <div class="verses" id="versiculos">
         <div class="verse">
           <span class="verse-number">1</span>
           <span class="verse-text">E viu-se um grande sinal no céu: uma mulher vestida do sol, tendo a lua debaixo dos seus pés, e uma coroa de doze estrelas sobre a sua cabeça.</span>
+          <span class="verso-grego" lang="grc">Καὶ σημεῖον μέγα ὤφθη ἐν τῷ οὐρανῷ, γυνὴ περιβεβλημένη τὸν ἥλιον, καὶ ἡ σελήνη ὑποκάτω τῶν ποδῶν αὐτῆς, καὶ ἐπὶ τῆς κεφαλῆς αὐτῆς στέφανος ἀστέρων δώδεκα·</span>
         </div>
         <div class="verse">
           <span class="verse-number">2</span>
           <span class="verse-text">E estava grávida, e com dores de parto, e gritava com ânsias de dar à luz.</span>
+          <span class="verso-grego" lang="grc">καὶ ἐν γαστρὶ ἔχουσα, κράζει ὠδίνουσα, καὶ βασανιζομένη τεκεῖν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">3</span>
           <span class="verse-text">E viu-se outro sinal no céu; e eis que era um grande dragão vermelho, que tinha sete cabeças e dez chifres, e sobre as suas cabeças sete diademas.</span>
+          <span class="verso-grego" lang="grc">καὶ ὤφθη ἄλλο σημεῖον ἐν τῷ οὐρανῷ, καὶ ἰδοὺ δράκων μέγας πυρρός, ἔχων κεφαλὰς ἑπτὰ καὶ κέρατα δέκα, καὶ ἐπὶ τὰς κεφαλὰς αὐτοῦ διαδήματα ἑπτά.</span>
         </div>
         <div class="verse">
           <span class="verse-number">4</span>
           <span class="verse-text">E a sua cauda levou após si a terça parte das estrelas do céu, e lançou-as sobre a terra; e o dragão parou diante da mulher que havia de dar à luz, para que, dando ela à luz, lhe tragasse o filho.</span>
+          <span class="verso-grego" lang="grc">καὶ ἡ οὐρὰ αὐτοῦ σύρει τὸ τρίτον τῶν ἀστέρων τοῦ οὐρανοῦ, καὶ ἔβαλεν αὐτοὺς εἰς τὴν γῆν· καὶ ὁ δράκων ἕστηκεν ἐνώπιον τῆς γυναικὸς τῆς μελλούσης τεκεῖν, ἵνα, ὅταν τέκῃ τὸ τέκνον αὐτῆς. καταφάγῃ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">5</span>
           <span class="verse-text">E deu à luz um filho homem que há de reger todas as nações com vara de ferro; e o seu filho foi arrebatado para Deus e para o seu trono.</span>
+          <span class="verso-grego" lang="grc">καὶ ἔτεκεν υἱόν, ἄρρενα, ὃς μέλλει ποιμαίνειν πάντα τὰ ἔθνη ἐν ῥάβδῳ σιδηρᾷ· καὶ ἡρπάσθη τὸ τέκνον αὐτῆς πρὸς τὸν Θεὸν καὶ τὸν θρόνον αὐτοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">6</span>
           <span class="verse-text">E a mulher fugiu para o deserto, onde já tinha lugar preparado por Deus, para que ali fosse alimentada durante mil duzentos e sessenta dias.</span>
+          <span class="verso-grego" lang="grc">καὶ ἡ γυνὴ ἔφυγεν εἰς τὴν ἔρημον, ὅπου ἔχει τόπον ἡτοιμασμένον ἀπὸ τοῦ Θεοῦ, ἵνα ἐκεῖ τρέφωσιν αὐτὴν ἡμέρας χιλίας διακοσίας ἑξήκοντα.</span>
         </div>
         <div class="verse">
           <span class="verse-number">7</span>
           <span class="verse-text">E houve batalha no céu; Miguel e os seus anjos batalhavam contra o dragão, e batalhavam o dragão e os seus anjos;</span>
+          <span class="verso-grego" lang="grc">Καὶ ἐγένετο πόλεμος ἐν τῷ οὐρανῷ· ὁ Μιχαὴλ καὶ οἱ ἄγγελοι αὐτοῦ ἐπολέμησαν κατὰ τοῦ δράκοντος· καὶ ὁ δράκων ἐπολέμησε καὶ οἱ ἄγγελοι αὐτοῦ,</span>
         </div>
         <div class="verse">
           <span class="verse-number">8</span>
           <span class="verse-text">Mas não prevaleceram, nem mais o seu lugar se achou nos céus.</span>
+          <span class="verso-grego" lang="grc">καὶ οὐκ ἴσχυσαν, οὐτὲ τόπος εὑρέθη αὐτῶν ἔτι ἐν τῷ οὐρανῷ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">9</span>
           <span class="verse-text">E foi precipitado o grande dragão, a antiga serpente, chamada o Diabo, e Satanás, que engana todo o mundo; ele foi precipitado na terra, e os seus anjos foram lançados com ele.</span>
+          <span class="verso-grego" lang="grc">καὶ ἐβλήθη ὁ δράκων ὁ μέγας, ὁ ὄφις ὁ ἀρχαῖος, ὁ καλούμενος διάβολος καὶ ὁ Σατανᾶς, ὁ πλανῶν τὴν οἰκουμένην ὅλην· ἐβλήθη εἰς τὴν γῆν, καὶ οἱ ἄγγελοι αὐτοῦ μετ’ αὐτοῦ ἐβλήθησαν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">10</span>
           <span class="verse-text">E ouvi uma grande voz no céu, que dizia: Agora é chegada a salvação, e a força, e o reino do nosso Deus, e o poder do seu Cristo; porque já o acusador de nossos irmãos é derrubado, o qual diante do nosso Deus os acusava de dia e de noite.</span>
+          <span class="verso-grego" lang="grc">καὶ ἤκουσα φωνὴν μεγάλην λέγουσαν, ἐν τῷ οὐρανῷ, Ἄρτι ἐγένετο ἡ σωτηρία καὶ ἡ δύναμις καὶ ἡ βασιλεία τοῦ Θεοῦ ἡμῶν, καὶ ἡ ἐξουσία τοῦ Χριστοῦ αὐτοῦ· ὅτι κατεβλήθη ὁ κατήγορος τῶν ἀδελφῶν ἡμῶν, ὁ κατηγορῶν αὐτῶν ἐνώπιον τοῦ Θεοῦ ἡμῶν ἡμέρας καὶ νυκτός.</span>
         </div>
         <div class="verse">
           <span class="verse-number">11</span>
           <span class="verse-text">E eles o venceram pelo sangue do Cordeiro e pela palavra do seu testemunho; e não amaram as suas vidas até à morte.</span>
+          <span class="verso-grego" lang="grc">καὶ αὐτοὶ ἐνίκησαν αὐτὸν διὰ τὸ αἷμα τοῦ ἀρνίου καὶ διὰ τὸν λόγον τῆς μαρτυρίας αὐτῶν, καὶ οὐκ ἠγάπησαν τὴν ψυχὴν αὐτῶν ἄχρι θανάτου.</span>
         </div>
         <div class="verse">
           <span class="verse-number">12</span>
           <span class="verse-text">Por isso alegrai-vos, ó céus, e vós que neles habitais. Ai dos que habitam na terra e no mar; porque o diabo desceu a vós, e tem grande ira, sabendo que já tem pouco tempo.</span>
+          <span class="verso-grego" lang="grc">διὰ τοῦτο εὐφραίνεσθε, οἱ οὐρανοὶ καὶ οἱ ἐν αὐτοῖς σκηνοῦντες. οὐαὶ τοῖς κατοικοῦσι τὴν γῆν καὶ τὴν θάλασσαν, ὅτι κατέβη ὁ διάβολος πρὸς ὑμᾶς ἔχων θυμὸν μέγαν, εἰδὼς ὅτι ὀλίγον καιρὸν ἔχει.</span>
         </div>
         <div class="verse">
           <span class="verse-number">13</span>
           <span class="verse-text">E, quando o dragão viu que fora lançado na terra, perseguiu a mulher que dera à luz o filho homem.</span>
+          <span class="verso-grego" lang="grc">Καὶ ὅτε εἶδεν ὁ δράκων ὅτι ἐβλήθη εἰς τὴν γῆν, ἐδίωξε τὴν γυναῖκα ἥτις ἔτεκε τὸν ἄρρενα.</span>
         </div>
         <div class="verse">
           <span class="verse-number">14</span>
           <span class="verse-text">E foram dadas à mulher duas asas de grande águia, para que voasse para o deserto, ao seu lugar, onde é sustentada por um tempo, e tempos, e metade de um tempo, fora da vista da serpente.</span>
+          <span class="verso-grego" lang="grc">καὶ ἐδόθησαν τῇ γυναικὶ δύο πτέρυγες τοῦ ἀετοῦ τοῦ μεγάλου, ἵνα πέτηται εἰς τὴν ἔρημον εἰς τὸν τόπον αὐτῆς, ὅπου τρέφεται ἐκεῖ καιρόν, καὶ καιροὺς καὶ ἥμισυ καιροῦ, ἀπὸ προσώπου τοῦ ὄφεως.</span>
         </div>
         <div class="verse">
           <span class="verse-number">15</span>
           <span class="verse-text">E a serpente lançou da sua boca, atrás da mulher, água como um rio, para que pela corrente a fizesse arrebatar.</span>
+          <span class="verso-grego" lang="grc">καὶ ἔβαλεν ὁ ὄφις ὀπίσω τῆς γυναικὸς ἐκ τοῦ στόματος αὐτοῦ ὕδωρ ὡς ποταμόν, ἵνα ταύτην ποταμοφόρητον ποιήσῃ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">16</span>
           <span class="verse-text">E a terra ajudou a mulher; e a terra abriu a sua boca, e tragou o rio que o dragão lançara da sua boca.</span>
+          <span class="verso-grego" lang="grc">καὶ ἐβοήθησεν ἡ γῆ τῇ γυναικί, καὶ ἤνοιξεν ἡ γῆ τὸ στόμα αὐτῆς, καὶ κατέπιε τὸν ποταμὸν ὃν ἔβαλεν ὁ δράκων ἐκ τοῦ στόματος αὐτοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">17</span>
           <span class="verse-text">E o dragão irou-se contra a mulher, e foi fazer guerra ao remanescente da sua semente, os que guardam os mandamentos de Deus, e têm o testemunho de Jesus Cristo.</span>
+          <span class="verso-grego" lang="grc">καὶ ὠργίσθη ὁ δράκων ἐπὶ τῇ γυναικί, καὶ ἀπῆλθε ποιῆσαι πόλεμον μετὰ τῶν λοιπῶν τοῦ σπέρματος αὐτῆς, τῶν τηρούντων τὰς ἐντολὰς τοῦ Θεοῦ καὶ ἐχόντων τὴν μαρτυρίαν τοῦ Ἰησοῦ Χριστοῦ.</span>
         </div>
 
     </div>
+    <p class="grego-credito grego-capitulo">Texto grego: <a href="https://git.door43.org/STR/el-x-koine_trs" rel="noopener">Textus Receptus 1894 Scrivener</a>, Door43 World Missions Community, com Scriptorium e Dr. Maurice A. Robinson, sob a licença <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br" rel="license noopener">CC BY-SA 4.0</a>. Adaptado: só o texto, sem as marcações de morfologia, Strong e lema. Esta camada grega segue a mesma licença.</p>
 
     <div class="chapter-nav">
       <a href="ap-11.html" class="nav-button">← Capítulo Anterior</a>
