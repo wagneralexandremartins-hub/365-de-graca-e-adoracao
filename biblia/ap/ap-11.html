@@ -126,6 +126,11 @@
 <link rel="stylesheet" href="/assets/css/site-header.css">
 <script src="/assets/js/site-nav.js" defer></script>
 <!-- /site-nav:v1 -->
+<!-- grego-biblia:v1 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus&amp;display=swap">
+<link rel="stylesheet" href="/assets/css/grego.css">
+<script src="/assets/js/grego-biblia.js" defer></script>
+<!-- /grego-biblia:v1 -->
 </head>
 <body>
 <!-- site-nav:v1 -->
@@ -142,85 +147,106 @@
       <p class="chapter-subtitle">Almeida Corrigida Fiel (ACF)</p>
     </div>
 
-    <div class="verses">
+    <button type="button" class="grego-alternar" data-grego-alternar aria-controls="versiculos" aria-pressed="false" data-ocultar="Ocultar o grego" data-mostrar="Mostrar o grego" hidden>Ocultar o grego</button>
+    <div class="verses" id="versiculos">
         <div class="verse">
           <span class="verse-number">1</span>
           <span class="verse-text">E foi-me dada uma cana semelhante a uma vara; e chegou o anjo, e disse: Levanta-te, e mede o templo de Deus, e o altar, e os que nele adoram.</span>
+          <span class="verso-grego" lang="grc">Καὶ ἐδόθη μοι κάλαμος ὅμοιος ῥάβδῳ καὶ ὁ ἄγγελος εἰστήκει λέγων, Ἔγειραι, καὶ μέτρησον τὸν ναὸν τοῦ Θεοῦ, καὶ τὸ θυσιαστήριον, καὶ τοὺς προσκυνοῦντας ἐν αὐτῷ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">2</span>
           <span class="verse-text">E deixa o átrio que está fora do templo, e não o meças; porque foi dado às nações, e pisarão a cidade santa por quarenta e dois meses.</span>
+          <span class="verso-grego" lang="grc">καὶ τὴν αὐλὴν τὴν ἔξωθεν τοῦ ναοῦ ἔκβαλε ἔξω, καὶ μὴ αὐτὴν μετρήσῃς, ὅτι ἐδόθη τοῖς ἔθνεσι· καὶ τὴν πόλιν τὴν ἁγίαν πατήσουσι μῆνας τεσσαράκοντα δύο.</span>
         </div>
         <div class="verse">
           <span class="verse-number">3</span>
           <span class="verse-text">E darei poder às minhas duas testemunhas, e profetizarão por mil duzentos e sessenta dias, vestidas de saco.</span>
+          <span class="verso-grego" lang="grc">καὶ δώσω τοῖς δυσὶ μάρτυσί μου, καὶ προφητεύσουσιν ἡμέρας χιλίας διακοσίας ἑξήκοντα, περιβεβλημένοι σάκκους.</span>
         </div>
         <div class="verse">
           <span class="verse-number">4</span>
           <span class="verse-text">Estas são as duas oliveiras e os dois castiçais que estão diante do Deus da terra.</span>
+          <span class="verso-grego" lang="grc">οὗτοί εἰσιν αἱ δύο ἐλαῖαι, καὶ αἱ δύο λυχνίαι αἱ ἐνώπιον τοῦ Θεοῦ τῆς γῆς ἑστῶσαι.</span>
         </div>
         <div class="verse">
           <span class="verse-number">5</span>
           <span class="verse-text">E, se alguém lhes quiser fazer mal, fogo sairá da sua boca, e devorará os seus inimigos; e, se alguém lhes quiser fazer mal, importa que assim seja morto.</span>
+          <span class="verso-grego" lang="grc">καὶ εἴ τις αὐτοὺς θέλῃ ἀδικῆσαι, πῦρ ἐκπορεύεται ἐκ τοῦ στόματος αὐτῶν, καὶ κατεσθίει τοὺς ἐχθροὺς αὐτῶν· καὶ εἴ τις αὐτοὺς θέλῃ ἀδικῆσαι, οὕτω δεῖ αὐτὸν ἀποκτανθῆναι.</span>
         </div>
         <div class="verse">
           <span class="verse-number">6</span>
           <span class="verse-text">Estes têm poder para fechar o céu, para que não chova, nos dias da sua profecia; e têm poder sobre as águas para convertê-las em sangue, e para ferir a terra com toda a sorte de pragas, todas quantas vezes quiserem.</span>
+          <span class="verso-grego" lang="grc">οὗτοι ἔχουσιν ἐξουσίαν κλεῖσαι τὸν οὐρανόν, ἵνα μὴ βρέχῃ ὑετὸς ἐν ἡμέραις αὐτῶν τῆς προφητείας, καὶ ἐξουσίαν ἔχουσιν ἐπὶ τῶν ὑδάτων, στρέφειν αὐτὰ εἰς αἷμα, καὶ πατάξαι τὴν γῆν πάσῃ πληγῇ, ὁσάκις ἐὰν θελήσωσι.</span>
         </div>
         <div class="verse">
           <span class="verse-number">7</span>
           <span class="verse-text">E, quando acabarem o seu testemunho, a besta que sobe do abismo lhes fará guerra, e os vencerá, e os matará.</span>
+          <span class="verso-grego" lang="grc">καὶ ὅταν τελέσωσι τὴν μαρτυρίαν αὐτῶν, τὸ θηρίον τὸ ἀναβαῖνον ἐκ τῆς ἀβύσσου ποιήσει πόλεμον μετ’ αὐτῶν, καὶ νικήσει αὐτούς, καὶ ἀποκτενεῖ αὐτούς.</span>
         </div>
         <div class="verse">
           <span class="verse-number">8</span>
           <span class="verse-text">E jazerão os seus corpos mortos na praça da grande cidade que espiritualmente se chama Sodoma e Egito, onde o nosso Senhor também foi crucificado.</span>
+          <span class="verso-grego" lang="grc">καὶ τὰ πτῶματα αὐτῶν ἐπὶ τῆς πλατείας πόλεως τῆς μεγάλης, ἥτις καλεῖται πνευματικῶς Σόδομα καὶ Αἴγυπτος, ὅπου καὶ ὁ Κύριος ἡμῶν ἐσταυρώθη.</span>
         </div>
         <div class="verse">
           <span class="verse-number">9</span>
           <span class="verse-text">E homens de vários povos, e tribos, e línguas, e nações verão seus corpos mortos por três dias e meio, e não permitirão que os seus corpos mortos sejam postos em sepulcros.</span>
+          <span class="verso-grego" lang="grc">καὶ βλέψουσιν ἐκ τῶν λαῶν καὶ φυλῶν καὶ γλωσσῶν καὶ ἐθνῶν τὰ πτώματα αὐτῶν ἡμέρας τρεῖς καὶ ἥμισυ, καὶ τὰ πτώματα αὐτῶν οὐκ ἀφήσουσι τεθῆναι εἰς μνῆματα.</span>
         </div>
         <div class="verse">
           <span class="verse-number">10</span>
           <span class="verse-text">E os que habitam na terra se regozijarão sobre eles, e se alegrarão, e mandarão presentes uns aos outros; porquanto estes dois profetas tinham atormentado os que habitam sobre a terra.</span>
+          <span class="verso-grego" lang="grc">καὶ οἱ κατοικοῦντες ἐπὶ τῆς γῆς χάρουσιν ἐπ’ αὐτοῖς καὶ εὐφρανθήσονται, καὶ δῶρα πέμψουσιν ἀλλήλοις, ὅτι οὗτοι οἱ δύο προφῆται ἐβασάνισαν τοὺς κατοικοῦντας ἐπὶ τῆς γῆς.</span>
         </div>
         <div class="verse">
           <span class="verse-number">11</span>
           <span class="verse-text">E depois daqueles três dias e meio o espírito de vida, vindo de Deus, entrou neles; e puseram-se sobre seus pés, e caiu grande temor sobre os que os viram.</span>
+          <span class="verso-grego" lang="grc">καὶ μετὰ τὰς τρεῖς ἡμέρας καὶ ἥμισυ, πνεῦμα ζωῆς ἐκ τοῦ Θεοῦ εἰσῆλθεν ἐπ’ αὐτούς, καὶ ἔστησαν ἐπὶ τοὺς πόδας αὐτῶν, καὶ φόβος μέγας ἔπεσεν ἐπὶ τοὺς θεωροῦντας αὐτούς.</span>
         </div>
         <div class="verse">
           <span class="verse-number">12</span>
           <span class="verse-text">E ouviram uma grande voz do céu, que lhes dizia: Subi para aqui. E subiram ao céu em uma nuvem; e os seus inimigos os viram.</span>
+          <span class="verso-grego" lang="grc">καὶ ἤκουσαν φωνὴν μεγάλην ἐκ τοῦ οὐρανοῦ, λέγουσαν αὐτοῖς, Ἀνάβητε ὧδε. καὶ ἀνέβησαν εἰς τὸν οὐρανὸν ἐν τῇ νεφέλῃ. καὶ ἐθεώρησαν αὐτοὺς οἱ ἐχθροὶ αὐτῶν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">13</span>
           <span class="verse-text">E naquela mesma hora houve um grande terremoto, e caiu a décima parte da cidade, e no terremoto foram mortos sete mil homens; e os demais ficaram muito atemorizados, e deram glória ao Deus do céu.</span>
+          <span class="verso-grego" lang="grc">καὶ ἐν ἐκείνῃ τῇ ὥρᾳ ἐγένετο σεισμὸς μέγας, καὶ τὸ δέκατον τῆς πόλεως ἔπεσε, καὶ ἀπεκτάνθησαν ἐν τῷ σεισμῷ ὀνόματα ἀνθρώπων, χιλιάδες ἑπτά· καὶ οἱ λοιποὶ ἔμφοβοι ἐγένοντο, καὶ ἔδωκαν δόξαν τῷ Θεῷ τοῦ οὐρανοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">14</span>
           <span class="verse-text">É passado o segundo ai; eis que o terceiro ai cedo virá.</span>
+          <span class="verso-grego" lang="grc">Ἡ οὐαὶ ἡ δευτέρα ἀπῆλθεν· καὶ ἰδού, ἡ οὐαὶ ἡ τρίτη ἔρχεται ταχύ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">15</span>
           <span class="verse-text">E o sétimo anjo tocou a sua trombeta, e houve no céu grandes vozes, que diziam: Os reinos do mundo vieram a ser de nosso Senhor e do seu Cristo, e ele reinará para todo o sempre.</span>
+          <span class="verso-grego" lang="grc">Καὶ ὁ ἕβδομος ἄγγελος ἐσάλπισε, καὶ ἐγένοντο φωναὶ μεγάλαι ἐν τῷ οὐρανῷ, λέγουσαι, Ἐγένοντο αἱ βασιλεῖαι τοῦ κόσμου, τοῦ Κυρίου ἡμῶν, καὶ τοῦ Χριστοῦ αὐτοῦ, καὶ βασιλεύσει εἰς τοὺς αἰῶνας τῶν αἰώνων.</span>
         </div>
         <div class="verse">
           <span class="verse-number">16</span>
           <span class="verse-text">E os vinte e quatro anciãos, que estão assentados em seus tronos diante de Deus, prostraram-se sobre seus rostos e adoraram a Deus,</span>
+          <span class="verso-grego" lang="grc">καὶ οἱ εἴκοσι καὶ τέσσαρες πρεσβύτεροι οἱ ἐνώπιον τοῦ Θεοῦ καθήμενοι ἐπὶ τοὺς θρόνους αὐτῶν, ἔπεσαν ἐπὶ τὰ πρόσωπα αὐτῶν, καὶ προσεκύνησαν τῷ Θεῷ,</span>
         </div>
         <div class="verse">
           <span class="verse-number">17</span>
           <span class="verse-text">Dizendo: Graças te damos, Senhor Deus Todo-Poderoso, que és, e que eras, e que hás de vir, que tomaste o teu grande poder, e reinaste.</span>
+          <span class="verso-grego" lang="grc">λέγοντες, Εὐχαριστοῦμέν σοι, Κύριε ὁ Θεὸς ὁ παντοκράτωρ, ὁ ὢν καὶ ὁ ἦν καὶ ὁ ἐρχόμενος, ὅτι εἴληφας τὴν δύναμίν σου τὴν μεγάλην, καὶ ἐβασίλευσας.</span>
         </div>
         <div class="verse">
           <span class="verse-number">18</span>
           <span class="verse-text">E iraram-se as nações, e veio a tua ira, e o tempo dos mortos, para que sejam julgados, e o tempo de dares o galardão aos profetas, teus servos, e aos santos, e aos que temem o teu nome, a pequenos e a grandes, e o tempo de destruíres os que destroem a terra.</span>
+          <span class="verso-grego" lang="grc">καὶ τὰ ἔθνη ὠργίσθησαν, καὶ ἦλθεν ἡ ὀργή σου, καὶ ὁ καιρὸς τῶν νεκρῶν κριθῆναι, καὶ δοῦναι τὸν μισθὸν τοῖς δούλοις σου τοῖς προφήταις καὶ τοῖς ἁγίοις καὶ τοῖς φοβουμένοις τὸ ὄνομά σου, τοῖς μικροῖς καὶ τοῖς μεγάλοις, καὶ διαφθεῖραι τοὺς διαφθείροντας τὴν γῆν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">19</span>
           <span class="verse-text">E abriu-se no céu o templo de Deus, e a arca da sua aliança foi vista no seu templo; e houve relâmpagos, e vozes, e trovões, e terremotos e grande saraiva.</span>
+          <span class="verso-grego" lang="grc">Καὶ ἠνοίγη ὁ ναὸς τοῦ Θεοῦ ἐν τῷ οὐρανῷ, καὶ ὤφθη ἡ κιβωτὸς τῆς διαθήκης αὐτοῦ ἐν τῷ ναῷ αὐτοῦ· καὶ ἐγένοντο ἀστραπαὶ καὶ φωναὶ καὶ βρονταὶ καὶ σεισμὸς καὶ χάλαζα μεγάλη.</span>
         </div>
 
     </div>
+    <p class="grego-credito grego-capitulo">Texto grego: <a href="https://git.door43.org/STR/el-x-koine_trs" rel="noopener">Textus Receptus 1894 Scrivener</a>, Door43 World Missions Community, com Scriptorium e Dr. Maurice A. Robinson, sob a licença <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br" rel="license noopener">CC BY-SA 4.0</a>. Adaptado: só o texto, sem as marcações de morfologia, Strong e lema. Esta camada grega segue a mesma licença.</p>
 
     <div class="chapter-nav">
       <a href="ap-10.html" class="nav-button">← Capítulo Anterior</a>

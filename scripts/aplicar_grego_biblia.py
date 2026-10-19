@@ -163,8 +163,20 @@ LIVROS = {
     # 67 correções de acento e espírito em 49 versículos, aprovadas pelo Wagner. Ficam como na fonte, para revisão
     # futura: 3:3 (ἐπὶ σε, 2x); pontuação de 1:3, 1:20, 2:13, 2:27, 2:28, 3:12 e 7:7. O JSON só leva os
     # capítulos autorizados (json_por_lote).
-    "ap": dict(sigla="ap", nome="Apocalipse", usfm="67-REV.usfm", byz="RE.SCV", caps=22, autorizados=[1, 2, 3, 4, 5, 6, 7],
+    # Lote 2 = capítulos 8 a 14, aprovado pelo Wagner em 19/10/2026: lista A (acento e espírito), lista B (acento que
+    # muda a palavra), D4 a D6 e o texto da nota de 13:1.
+    # D4 ignorar_estigma: χξϛʹ (13:18) × byztxt cxv, só na comparação. D5/D6 fronteiras_ignoradas: τεσσαράκοντατέσσαρες
+    # (14:1, 14:3; byztxt separa) e ἀπ’ ἄρτι (14:13; byztxt junta), só na comparação; o texto fica como na fonte.
+    # mover: 12:18 do Door43 → início de 13:1 (ACF e byztxt), com nota (decisão do Wagner de 14/10/2026).
+    # Ficam como na fonte, para revisão futura: 9:4 θεοῦ minúsculo; 9:19 falta pontuação antes de αἱ γὰρ; 13:4 τίς
+    # minúsculo; 13:13 ponto em γῆν. ἐνώπιον; 14:8 pontuação; 14:13 pontuação entre ἄρτι e ναί; 14:3 ζώων sem iota subscrito.
+    "ap": dict(sigla="ap", nome="Apocalipse", usfm="67-REV.usfm", byz="RE.SCV", caps=22, autorizados=list(range(1, 15)),
                json_por_lote=True, ignorar_keraia=True,
+               ignorar_estigma=True,
+               fronteiras_ignoradas=[("tessarakonta", "tessarev"), ("ap", "arti")],
+               mover={(12, 18): (13, 1)},
+               notas={(13, 1): "Nota: no Textus Receptus de Scrivener (1894), as primeiras palavras deste versículo "
+                               "formam o v. 18 do capítulo 12; aqui o grego segue a numeração da ACF."},
                vazios_aceitos={(7, 4): "numeral ρμδʹ (144) em três partes; o Door43 deixa duas linhas vazias de lema"},
                correcoes_de_letra={(5, 8): [("εἴκοσιιτέσσαρες", "εἴκοσιτέσσαρες",
                                              "ι a mais (forma de 5:14; letras = byztxt eikositessarev)")]},
@@ -236,6 +248,48 @@ LIVROS = {
                     (7, 13): [("λευκὰς,", "λευκάς,", "grave antes de pontuação (agudo)"),
                               ("εἰσὶ,", "εἰσί,", "grave antes de pontuação (agudo)")],
                     (7, 14): [("Κύριέ,", "Κύριε,", "acento a mais antes de vírgula (vocativo Κύριε)")],
+                    # lote 2, lista A: acento e espírito
+                    (8, 3): [("πολλὰ,", "πολλά,", "grave antes de pontuação (agudo)")],
+                    (8, 6): [("εαὐτοὺς", "ἑαυτοὺς", "espírito e acento na vogal errada do ditongo ευ")],
+                    (8, 13): [("Οὐαὶ,", "Οὐαί,", "grave antes de pontuação (agudo)"),
+                              ("οὐαὶ, οὐαὶ τοῖς", "οὐαί, οὐαὶ τοῖς", "grave antes de pontuação (agudo)")],
+                    (9, 4): [("χλωρὸν,", "χλωρόν,", "grave antes de pontuação (agudo)")],
+                    (9, 11): [("Ἀβαδδὼν,", "Ἀβαδδών,", "grave antes de pontuação (agudo)")],
+                    (9, 14): [("ὅς εἴχε", "ὃς εἴχε", "agudo final antes de palavra (grave)"),
+                              ("εἴχε", "εἶχε", "εἶχε leva circunflexo")],
+                    (9, 19): [("κεφαλάς καὶ", "κεφαλὰς καὶ", "agudo final antes de palavra (grave)")],
+                    (10, 4): [("βρονταί τὰς", "βρονταὶ τὰς", "agudo final antes de palavra (grave)"),
+                              ("ταὐτὰ", "ταῦτα", "lista B: ταῦτα (estas coisas), não ταὐτά (as mesmas coisas)")],
+                    (10, 5): [("οὐρανὸν,", "οὐρανόν,", "grave antes de pontuação (agudo)")],
+                    (10, 6): [("έτι·", "ἔτι·", "falta o espírito brando")],
+                    (11, 7): [("αὐτοὺς,", "αὐτούς,", "grave antes de pontuação (agudo)")],
+                    (11, 9): [("τὰ πτῶματα", "τὰ πτώματα", "proparoxítona leva agudo (como no mesmo versículo)")],
+                    (11, 14): [("ἰδοὺ,", "ἰδού,", "grave antes de pontuação (agudo)")],
+                    (12, 10): [("κατἐβλήθη", "κατεβλήθη", "espírito no meio da palavra"),
+                               ("αυτῶν", "αὐτῶν", "falta o espírito brando")],
+                    (12, 14): [("καιρὸν,", "καιρόν,", "grave antes de pontuação (agudo)")],
+                    (12, 15): [("εκ’", "ἐκ", "preposição ἐκ sem espírito e com apóstrofo indevido (como em 2:21)"),
+                               ("ταὐτὴν", "ταύτην", "lista B: ταύτην (esta), não ταὐτήν (a mesma)")],
+                    (13, 1): [("ἑπτά καὶ", "ἑπτὰ καὶ", "agudo final antes de palavra (grave)"),
+                              ("ὀνόμα", "ὄνομα", "acento na sílaba errada")],
+                    (13, 4): [("τόν δράκοντα", "τὸν δράκοντα", "agudo final antes de palavra (grave)"),
+                              ("ὅς ἔδωκεν", "ὃς ἔδωκεν", "agudo final antes de palavra (grave)")],
+                    (13, 10): [("ἀποκτενει,", "ἀποκτενεῖ,", "palavra sem acento"),
+                               ("αὐτον", "αὐτὸν", "palavra sem acento")],
+                    (13, 13): [("γην.", "γῆν.", "palavra sem acento")],
+                    (13, 17): [("ἤ τὸ", "ἢ τὸ", "agudo final antes de palavra (grave)")],
+                    (14, 1): [("ἰδοὺ,", "ἰδού,", "grave antes de pontuação (agudo)")],
+                    (14, 3): [("ᾠδὴν,", "ᾠδήν,", "grave antes de pontuação (agudo)")],
+                    (14, 4): [("οὗτοι εἰσιν οἱ", "οὗτοί εἰσιν οἱ", "lista B: properispómena antes de enclítica (como no início do versículo)")],
+                    (14, 5): [("ἄμωμοί γάρ", "ἄμωμοι γάρ", "acento a mais (γάρ não é enclítica)")],
+                    (14, 7): [("Θεὸν,", "Θεόν,", "grave antes de pontuação (agudo)")],
+                    (14, 11): [("νυκτός οἱ", "νυκτὸς οἱ", "agudo final antes de palavra (grave)")],
+                    (14, 13): [("ἄρτί", "ἄρτι", "dois acentos na mesma palavra")],
+                    (14, 14): [("ἰδοὺ,", "ἰδού,", "grave antes de pontuação (agudo)"),
+                               ("υιῷ", "υἱῷ", "falta o espírito áspero")],
+                    (14, 15): [("ἦλθε σοι", "ἦλθέ σοι", "lista B: properispómena antes de enclítica")],
+                    (14, 18): [("τὸ ὀξὺ, λέγων", "τὸ ὀξύ, λέγων", "grave antes de pontuação (agudo)"),
+                               ("τὸ ὀξὺ, καὶ", "τὸ ὀξύ, καὶ", "grave antes de pontuação (agudo)")],
                }),
 }
 # opção B do Wagner (15/10/2026): corrigir só acentos e pontuação desses versículos, com a lista para conferência.
@@ -330,12 +384,42 @@ def gera_json(livro, cfg, fontes, provas):
     # ignorar_keraia (D1, Apocalipse): o Door43 escreve números com keraia (ιβʹ, U+0374) e o byztxt sem (ib);
     # a keraia sai só da comparação, o texto publicado fica como na fonte
     tl = (lambda s: ex.translit(s.replace("\u0374", "").replace("\u02b9", ""))) if cfg.get("ignorar_keraia") else ex.translit
+    # ignorar_estigma (D4, Ap 13:18): o Door43 escreve 666 com estigma (χξϛʹ) e o byztxt com sigma final (cxv);
+    # o estigma vira sigma final só na comparação, o texto publicado fica como na fonte
+    if cfg.get("ignorar_estigma"):
+        tl0 = tl
+        tl = lambda s: tl0(s.replace("ϛ", "ς"))
+    # fronteiras_ignoradas (D5 e D6, Ap 14:1, 14:3 e 14:13): pares de palavras que uma fonte escreve junto e a
+    # outra separado; o par é juntado nos dois lados só na comparação, o texto publicado fica como na fonte
+    pares = [tuple(p) for p in cfg.get("fronteiras_ignoradas", [])]
+
+    def junta(ws):
+        ws, out, i = list(ws), [], 0
+        while i < len(ws):
+            if i + 1 < len(ws) and (ws[i], ws[i + 1]) in pares:
+                out.append(ws[i] + ws[i + 1]); i += 2
+            else:
+                out.append(ws[i]); i += 1
+        return out
+
+    compara = (lambda a, b: ex.compara(junta(a), junta(b))) if pares else ex.compara
     # json_por_lote (Apocalipse, em 3 lotes): o JSON só leva os capítulos autorizados
     if cfg.get("json_por_lote"):
         no_lote = set(cfg["autorizados"])
         texto = {k: t for k, t in texto.items() if k[0] in no_lote}
         vazios = {k for k in vazios if k[0] in no_lote}
         compostos = {k for k in compostos if k[0] in no_lote}
+    # mover (Ap 12:18 → 13:1, decisão do Wagner de 14/10/2026): o grego segue a numeração da ACF; as palavras que
+    # o Door43 numera à parte vão para o início do versículo seguinte, e o versículo junto tem de bater com o byztxt
+    movidos = {}
+    for (c, v), (c2, v2) in sorted(cfg.get("mover", {}).items()):
+        if (c, v) not in texto or (c2, v2) not in texto:
+            continue
+        provas[f"mover {c}:{v} → {c2}:{v2}: o byztxt não tem o {c}:{v}"] = (c, v) not in byz
+        texto[(c2, v2)] = texto.pop((c, v)) + " " + texto[(c2, v2)]
+        r = compara(tl(texto[(c2, v2)]), byz.get((c2, v2), []))
+        provas[f"mover {c}:{v} → {c2}:{v2}: versículo junto = byztxt {c2}:{v2} ({r})"] = r != "leitura"
+        movidos[f"{c}:{v}"] = f"{c2}:{v2}"
     # vazios_aceitos (D2): linhas vazias de numeral aceitas por decisão do Wagner, versículo a versículo
     for (c, v), motivo in cfg.get("vazios_aceitos", {}).items():
         provas[f"{c}:{v}: linhas vazias aceitas por decisão ({motivo}) estão no USFM"] = (c, v) in vazios
@@ -344,7 +428,7 @@ def gera_json(livro, cfg, fontes, provas):
     provas["NFC só troca por equivalentes canônicos"] = all(
         unicodedata.normalize("NFD", versos[f"{c}:{v}"]) == unicodedata.normalize("NFD", t) for (c, v), t in texto.items())
     provas["sem &, < ou > no grego"] = all(not set(t) & set("&<>") for t in versos.values())
-    cmp = {k: ex.compara(tl(t), byz.get(k, [])) for k, t in texto.items()}
+    cmp = {k: compara(tl(t), byz.get(k, [])) for k, t in texto.items()}
     fmt = lambda ks: [f"{c}:{v}" for c, v in sorted(ks)]
     # correcoes_de_letra (D3): troca de letra autorizada pelo Wagner, separada das de acento; prova: o versículo
     # diferia do byztxt e passa a bater com ele
@@ -355,7 +439,7 @@ def gera_json(livro, cfg, fontes, provas):
             velho, novo = unicodedata.normalize("NFC", velho), unicodedata.normalize("NFC", novo)
             provas[f"correção de letra {k}: forma do Door43 «{velho}» ocorre 1 vez"] = depois.count(velho) == 1
             depois = depois.replace(velho, novo, 1)
-        r = ex.compara(tl(depois), byz.get((c, v), []))
+        r = compara(tl(depois), byz.get((c, v), []))
         provas[f"correção de letra {k}: antes ≠ byztxt, depois = byztxt ({r})"] = cmp[(c, v)] == "leitura" and r != "leitura"
         provas[f"correção de letra {k}: versículo sem correção de acento na mesma lista"] = (c, v) not in cfg.get("correcoes", {})
         correcoes_letra[k] = {"door43": antes, "publicado": depois, "motivo": "; ".join(m for _, _, m in trocas)}
@@ -364,7 +448,7 @@ def gera_json(livro, cfg, fontes, provas):
     juncoes = {}
     for (c, vb), partes in cfg.get("juncoes_byz", {}).items():
         junto = tl(" ".join(texto[(c, v)] for v in partes))
-        r = ex.compara(junto, byz.get((c, vb), []))
+        r = compara(junto, byz.get((c, vb), []))
         ok = r != "leitura" and all((c, v) not in byz for v in partes if v != vb)
         provas[f"byztxt junta {c}:{partes[0]}-{partes[-1]} em {c}:{vb}: palavras do Door43 juntas = byztxt ({r})"] = ok
         for v in partes: cmp[(c, v)] = "juncao" if ok else "leitura"
@@ -387,6 +471,8 @@ def gera_json(livro, cfg, fontes, provas):
     }
     if juncoes:  # só aparece quando há junção (o JSON de João não muda)
         dados["conferencia"]["juncoes_byztxt"] = juncoes
+    if movidos:  # só aparece quando há versículo movido (Ap 12:18 → 13:1)
+        dados["conferencia"]["movidos_para_a_numeracao_acf"] = movidos
     # correções de acentuação/pontuação (opção B): só diacríticos e pontuação, letras idênticas
     letras = lambda s: "".join(c for c in unicodedata.normalize("NFD", s.lower()) if c.isalpha() and not unicodedata.combining(c))
     correcoes = {}
@@ -402,12 +488,12 @@ def gera_json(livro, cfg, fontes, provas):
     for vb, partes in juncoes.items():  # versículo corrigido continua = byztxt (também nos versículos juntos)
         c = int(vb.split(":")[0])
         if any(p in correcoes for p in partes):
-            r = ex.compara(tl(" ".join(versos[p] for p in partes)), byz.get((c, int(vb.split(":")[1])), []))
+            r = compara(tl(" ".join(versos[p] for p in partes)), byz.get((c, int(vb.split(":")[1])), []))
             provas[f"corrigidos {partes} juntos = byztxt {vb} ({r})"] = r != "leitura"
     for k in correcoes:
         c, v = map(int, k.split(":"))
         if not any(k in ps for ps in juncoes.values()):
-            r = ex.compara(tl(versos[k]), byz.get((c, v), []))
+            r = compara(tl(versos[k]), byz.get((c, v), []))
             provas[f"corrigido {k} = byztxt ({r})"] = r != "leitura"
     if correcoes:  # só aparece quando há correção (o JSON de João não muda)
         dados = {k: x for k, x in dados.items() if k != "versiculos"} | {"correcoes_de_acentuacao": correcoes, "versiculos": versos}
@@ -494,7 +580,21 @@ def main():
     saida_json = (json.dumps(dados, ensure_ascii=False, indent=1) + "\n").encode("utf-8")
     dest_json = caminho_json(livro)
     atual_json = open(dest_json, "rb").read().replace(b"\r\n", b"\n") if os.path.exists(dest_json) else None
-    provas["JSON do livro novo ou idêntico ao existente"] = atual_json in (None, saida_json)
+    cresce_json = False
+    if cfg.get("json_por_lote") and atual_json not in (None, saida_json):
+        # Apocalipse em lotes: o JSON cresce (ex.: 1–7 → 1–14); prova que tudo o que já está publicado fica idêntico
+        velho, novo_j = json.loads(atual_json), dados
+        vv, vn = velho["versiculos"], novo_j["versiculos"]
+        provas[f"JSON cresce: os {len(vv)} versículos já publicados ficam idênticos"] = all(vn.get(k) == t for k, t in vv.items())
+        provas["JSON cresce: só acrescenta versículos"] = set(vv) < set(vn)
+        for campo in ("correcoes_de_acentuacao", "correcoes_de_letra", "vazios_aceitos_por_decisao"):
+            antes, depois = velho.get(campo, {}), novo_j.get(campo, {})
+            provas[f"JSON cresce: {campo} do lote anterior ({len(antes)}) idênticos"] = all(depois.get(k) == x for k, x in antes.items())
+        provas["JSON cresce: itens_vazios_aceitos do lote anterior mantidos"] = set(velho["itens_vazios_aceitos"]) <= set(novo_j["itens_vazios_aceitos"])
+        provas["JSON cresce: fonte e livro iguais"] = velho["fonte"] == novo_j["fonte"] and velho["livro"] == novo_j["livro"]
+        cresce_json = True
+    else:
+        provas["JSON do livro novo ou idêntico ao existente"] = atual_json in (None, saida_json)
 
     css_path = os.path.join(ROOT, "assets", "css", "grego.css")
     css = open(css_path, "rb").read()
@@ -549,14 +649,15 @@ def main():
     print(f"  itens vazios aceitos: {dados['itens_vazios_aceitos']}; palavras vazias: {dados['palavras_vazias']}")
     for k, ok in provas.items():
         print(f"  [{'ok' if ok else 'FALHOU'}] {k}")
-    print(f"\n{os.path.relpath(dest_json, ROOT)}: {len(saida_json)} B, " + ("idêntico" if atual_json == saida_json else "NOVO"))
+    print(f"\n{os.path.relpath(dest_json, ROOT)}: {len(saida_json)} B, " + ("idêntico" if atual_json == saida_json else
+          f"CRESCE ({len(atual_json)} → {len(saida_json)} B)" if cresce_json else "NOVO"))
     print(f"assets/css/grego.css: " + ("já tem as regras" if css_tem else f"+{len(css_novo) - len(css)} B no fim"))
     print(f"assets/js/grego-biblia.js: " + ("idêntico" if js_atual == JS_NOVO.encode() else f"NOVO, {len(JS_NOVO.encode())} B"))
     for rel, tipo, n, d in relatorio:
         print(f"{rel}: {tipo}" + (f", {n} inserções, +{d} B" if tipo == "alvo" else ""))
     if not all(provas.values()):
         print("Prova falhou: nada gravado."); return 1
-    mudancas = (atual_json is None) + (not css_tem) + (js_atual is None) + len(paginas)
+    mudancas = (atual_json is None) + cresce_json + (not css_tem) + (js_atual is None) + len(paginas)
     if not apply:
         print(f"\nSimulação: {mudancas} arquivo(s) mudariam; nada gravado."); return 0
     if not ROTULOS_APROVADOS:
@@ -572,10 +673,13 @@ def main():
     with zipfile.ZipFile(zp, "x", zipfile.ZIP_DEFLATED) as z:
         for rel, (antigo, _) in paginas.items(): z.writestr(rel, antigo)
         if not css_tem: z.writestr("assets/css/grego.css", css)
+        if cresce_json: z.writestr(os.path.relpath(dest_json, ROOT).replace(os.sep, "/"), open(dest_json, "rb").read())
     print(f"Backup: {os.path.relpath(zp, ROOT)}")
     if atual_json is None:
         os.makedirs(os.path.dirname(dest_json), exist_ok=True)
         with open(dest_json, "xb") as f: f.write(saida_json)
+    if cresce_json:
+        with open(dest_json, "wb") as f: f.write(saida_json)
     if js_atual is None:
         with open(js_path, "xb") as f: f.write(JS_NOVO.encode())
     if not css_tem:

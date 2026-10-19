@@ -126,6 +126,11 @@
 <link rel="stylesheet" href="/assets/css/site-header.css">
 <script src="/assets/js/site-nav.js" defer></script>
 <!-- /site-nav:v1 -->
+<!-- grego-biblia:v1 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus&amp;display=swap">
+<link rel="stylesheet" href="/assets/css/grego.css">
+<script src="/assets/js/grego-biblia.js" defer></script>
+<!-- /grego-biblia:v1 -->
 </head>
 <body>
 <!-- site-nav:v1 -->
@@ -142,61 +147,76 @@
       <p class="chapter-subtitle">Almeida Corrigida Fiel (ACF)</p>
     </div>
 
-    <div class="verses">
+    <button type="button" class="grego-alternar" data-grego-alternar aria-controls="versiculos" aria-pressed="false" data-ocultar="Ocultar o grego" data-mostrar="Mostrar o grego" hidden>Ocultar o grego</button>
+    <div class="verses" id="versiculos">
         <div class="verse">
           <span class="verse-number">1</span>
           <span class="verse-text">E, havendo aberto o sétimo selo, fez-se silêncio no céu quase por meia hora.</span>
+          <span class="verso-grego" lang="grc">Καὶ ὅτε ἤνοιξε τὴν σφραγῖδα τὴν ἑβδόμην, ἐγένετο σιγὴ ἐν τῷ οὐρανῷ ὡς ἡμιώριον.</span>
         </div>
         <div class="verse">
           <span class="verse-number">2</span>
           <span class="verse-text">E vi os sete anjos, que estavam diante de Deus, e foram-lhes dadas sete trombetas.</span>
+          <span class="verso-grego" lang="grc">καὶ εἶδον τοὺς ἑπτὰ ἀγγέλους, οἳ ἐνώπιον τοῦ Θεοῦ ἑστήκασι, καὶ ἐδόθησαν αὐτοῖς ἑπτὰ σάλπιγγες.</span>
         </div>
         <div class="verse">
           <span class="verse-number">3</span>
           <span class="verse-text">E veio outro anjo, e pôs-se junto ao altar, tendo um incensário de ouro; e foi-lhe dado muito incenso, para o pôr com as orações de todos os santos sobre o altar de ouro, que está diante do trono.</span>
+          <span class="verso-grego" lang="grc">Καὶ ἄλλος ἄγγελος ἦλθε, καὶ ἐστάθη ἐπὶ τὸ θυσιαστήριον, ἔχων λιβανωτὸν χρυσοῦν, καὶ ἐδόθη αὐτῷ θυμιάματα πολλά, ἵνα δώσῃ ταῖς προσευχαῖς τῶν ἁγίων πάντων ἐπὶ τὸ θυσιαστήριον τὸ χρυσοῦν τὸ ἐνώπιον τοῦ θρόνου.</span>
         </div>
         <div class="verse">
           <span class="verse-number">4</span>
           <span class="verse-text">E a fumaça do incenso subiu com as orações dos santos desde a mão do anjo até diante de Deus.</span>
+          <span class="verso-grego" lang="grc">καὶ ἀνέβη ὁ καπνὸς τῶν θυμιαμάτων ταῖς προσευχαῖς τῶν ἁγίων, ἐκ χειρὸς τοῦ ἀγγέλου ἐνώπιον τοῦ Θεοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">5</span>
           <span class="verse-text">E o anjo tomou o incensário, e o encheu do fogo do altar, e o lançou sobre a terra; e houve depois vozes, e trovões, e relâmpagos e terremotos.</span>
+          <span class="verso-grego" lang="grc">καὶ εἴληφεν ὁ ἄγγελος τὸ λιβανωτόν, καὶ ἐγέμισεν αὐτὸ ἐκ τοῦ πυρὸς τοῦ θυσιαστηρίου, καὶ ἔβαλεν εἰς τὴν γῆν· καὶ ἐγένοντο φωναὶ καὶ βρονταὶ καὶ ἀστραπαὶ καὶ σεισμός.</span>
         </div>
         <div class="verse">
           <span class="verse-number">6</span>
           <span class="verse-text">E os sete anjos, que tinham as sete trombetas, prepararam-se para tocá-las.</span>
+          <span class="verso-grego" lang="grc">Καὶ οἱ ἑπτὰ ἄγγελοι οἱ ἔχοντες τὰς ἑπτὰ σάλπιγγας ἡτοίμασαν ἑαυτοὺς ἵνα σαλπίσωσι.</span>
         </div>
         <div class="verse">
           <span class="verse-number">7</span>
           <span class="verse-text">E o primeiro anjo tocou a sua trombeta, e houve saraiva e fogo misturado com sangue, e foram lançados na terra, que foi queimada na sua terça parte; queimou-se a terça parte das árvores, e toda a erva verde foi queimada.</span>
+          <span class="verso-grego" lang="grc">Καὶ ὁ πρῶτος ἄγγελος ἐσάλπισε, καὶ ἐγένετο χάλαζα καὶ πῦρ μεμιγμένα αἵματι, καὶ ἐβλήθη εἰς τὴν γῆν· καὶ τὸ τρίτον τῶν δένδρων κατεκάη, καὶ πᾶς χόρτος χλωρὸς κατεκάη.</span>
         </div>
         <div class="verse">
           <span class="verse-number">8</span>
           <span class="verse-text">E o segundo anjo tocou a trombeta; e foi lançada no mar uma coisa como um grande monte ardendo em fogo, e tornou-se em sangue a terça parte do mar.</span>
+          <span class="verso-grego" lang="grc">Καὶ ὁ δεύτερος ἄγγελος ἐσάλπισε, καὶ ὡς ὄρος μέγα πυρὶ καιόμενον ἐβλήθη εἰς τὴν θάλασσαν· καὶ ἐγένετο τὸ τρίτον τῆς θαλάσσης, αἷμα·</span>
         </div>
         <div class="verse">
           <span class="verse-number">9</span>
           <span class="verse-text">E morreu a terça parte das criaturas que tinham vida no mar; e perdeu-se a terça parte das naus.</span>
+          <span class="verso-grego" lang="grc">καὶ ἀπέθανε τὸ τρίτον τῶν κτισμάτων τῶν ἐν τῇ θαλάσσῃ, τὰ ἔχοντα ψυχάς, καὶ τὸ τρίτον τῶν πλοίων διεφθάρη.</span>
         </div>
         <div class="verse">
           <span class="verse-number">10</span>
           <span class="verse-text">E o terceiro anjo tocou a sua trombeta, e caiu do céu uma grande estrela ardendo como uma tocha, e caiu sobre a terça parte dos rios, e sobre as fontes das águas.</span>
+          <span class="verso-grego" lang="grc">Καὶ ὁ τρίτος ἄγγελος ἐσάλπισε, καὶ ἔπεσεν ἐκ τοῦ οὐρανοῦ ἀστὴρ μέγας καιόμενος ὡς λαμπάς, καὶ ἔπεσεν ἐπὶ τὸ τρίτον τῶν ποταμῶν, καὶ ἐπὶ τὰς πηγὰς ὑδάτων.</span>
         </div>
         <div class="verse">
           <span class="verse-number">11</span>
           <span class="verse-text">E o nome da estrela era Absinto, e a terça parte das águas tornou-se em absinto, e muitos homens morreram das águas, porque se tornaram amargas.</span>
+          <span class="verso-grego" lang="grc">καὶ τὸ ὄνομα τοῦ ἀστέρος λέγεται Ἄψινθος· καὶ γίνεται τὸ τρίτον τῶν ὑδάτων εἰς ἄψινθον, καὶ πολλοὶ ἀνθρώπων ἀπέθανον ἐκ τῶν ὑδάτων, ὅτι ἐπικράνθησαν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">12</span>
           <span class="verse-text">E o quarto anjo tocou a sua trombeta, e foi ferida a terça parte do sol, e a terça parte da lua, e a terça parte das estrelas; para que a terça parte deles se escurecesse, e a terça parte do dia não brilhasse, e semelhantemente a noite.</span>
+          <span class="verso-grego" lang="grc">Καὶ ὁ τέταρτος ἄγγελος ἐσάλπισε, καὶ ἐπλήγη τὸ τρίτον τοῦ ἡλίου καὶ τὸ τρίτον τῆς σελήνης καὶ τὸ τρίτον τῶν ἀστέρων, ἵνα σκοτισθῇ τὸ τρίτον αὐτῶν, καὶ ἡ ἡμέρα μὴ φαίνῃ τὸ τρίτον αὐτῆς, καὶ ἡ νὺξ ὁμοίως.</span>
         </div>
         <div class="verse">
           <span class="verse-number">13</span>
           <span class="verse-text">E olhei, e ouvi um anjo voar pelo meio do céu, dizendo com grande voz: Ai! ai! ai! dos que habitam sobre a terra! por causa das outras vozes das trombetas dos três anjos que hão de ainda tocar.</span>
+          <span class="verso-grego" lang="grc">Καὶ εἶδον, καὶ ἤκουσα ἑνὸς ἀγγέλου πετωμένου ἐν μεσουρανήματι, λέγοντος φωνῇ μεγάλῃ, Οὐαί, οὐαί, οὐαὶ τοῖς κατοικοῦσιν ἐπὶ τῆς γῆς, ἐκ τῶν λοιπῶν φωνῶν τῆς σάλπιγγος τῶν τριῶν ἀγγέλων τῶν μελλόντων σαλπίζειν.</span>
         </div>
 
     </div>
+    <p class="grego-credito grego-capitulo">Texto grego: <a href="https://git.door43.org/STR/el-x-koine_trs" rel="noopener">Textus Receptus 1894 Scrivener</a>, Door43 World Missions Community, com Scriptorium e Dr. Maurice A. Robinson, sob a licença <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br" rel="license noopener">CC BY-SA 4.0</a>. Adaptado: só o texto, sem as marcações de morfologia, Strong e lema. Esta camada grega segue a mesma licença.</p>
 
     <div class="chapter-nav">
       <a href="ap-07.html" class="nav-button">← Capítulo Anterior</a>
