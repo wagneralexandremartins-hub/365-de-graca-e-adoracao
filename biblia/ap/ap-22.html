@@ -126,6 +126,11 @@
 <link rel="stylesheet" href="/assets/css/site-header.css">
 <script src="/assets/js/site-nav.js" defer></script>
 <!-- /site-nav:v1 -->
+<!-- grego-biblia:v1 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus&amp;display=swap">
+<link rel="stylesheet" href="/assets/css/grego.css">
+<script src="/assets/js/grego-biblia.js" defer></script>
+<!-- /grego-biblia:v1 -->
 </head>
 <body>
 <!-- site-nav:v1 -->
@@ -142,93 +147,116 @@
       <p class="chapter-subtitle">Almeida Corrigida Fiel (ACF)</p>
     </div>
 
-    <div class="verses">
+    <button type="button" class="grego-alternar" data-grego-alternar aria-controls="versiculos" aria-pressed="false" data-ocultar="Ocultar o grego" data-mostrar="Mostrar o grego" hidden>Ocultar o grego</button>
+    <div class="verses" id="versiculos">
         <div class="verse">
           <span class="verse-number">1</span>
           <span class="verse-text">E mostrou-me o rio puro da água da vida, claro como cristal, que procedia do trono de Deus e do Cordeiro.</span>
+          <span class="verso-grego" lang="grc">καὶ ἔδειξέ μοι καθαρὸν ποταμὸν ὕδατος ζωῆς, λαμπρὸν ὡς κρύσταλλον, ἐκπορευόμενον ἐκ τοῦ θρόνου τοῦ Θεοῦ, καὶ τοῦ ἀρνίου.</span>
         </div>
         <div class="verse">
           <span class="verse-number">2</span>
           <span class="verse-text">No meio da sua praça, e de um e de outro lado do rio, estava a árvore da vida, que produz doze frutos, dando seu fruto de mês em mês; e as folhas da árvore são para a saúde das nações.</span>
+          <span class="verso-grego" lang="grc">ἐν μέσῳ τῆς πλατείας αὐτῆς, καὶ τοῦ ποταμοῦ ἐντεῦθεν καὶ ἐντεῦθεν, ξύλον ζωῆς, ποιοῦν καρποὺς δώδεκα, κατὰ μῆνα ἕνα ἕκαστον ἀποδιδοῦν τὸν καρπὸν αὐτοῦ· καὶ τὰ φύλλα τοῦ ξύλου εἰς θεραπείαν τῶν ἐθνῶν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">3</span>
           <span class="verse-text">E ali nunca mais haverá maldição contra alguém; e nela estará o trono de Deus e do Cordeiro, e os seus servos o servirão.</span>
+          <span class="verso-grego" lang="grc">καὶ πᾶν κατανάθεμα οὐκ ἔσται ἔτι· καὶ ὁ θρόνος τοῦ Θεοῦ καὶ τοῦ ἀρνίου ἐν αὐτῇ ἔσται· καὶ οἱ δοῦλοι αὐτοῦ λατρεύσουσιν αὐτῷ,</span>
         </div>
         <div class="verse">
           <span class="verse-number">4</span>
           <span class="verse-text">E verão o seu rosto, e nas suas testas estará o seu nome.</span>
+          <span class="verso-grego" lang="grc">καὶ ὄψονται τὸ πρόσωπον αὐτοῦ· καὶ τὸ ὄνομα αὐτοῦ ἐπὶ τῶν μετώπων αὐτῶν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">5</span>
           <span class="verse-text">E ali não haverá mais noite, e não necessitarão de lâmpada nem de luz do sol, porque o Senhor Deus os ilumina; e reinarão para todo o sempre.</span>
+          <span class="verso-grego" lang="grc">καὶ νὺξ οὐκ ἔσται ἐκεῖ, καὶ χρείαν οὐκ ἔχουσι λύχνου καὶ φωτὸς ἡλίου, ὅτι Κύριος ὁ Θεὸς φωτίζει αὐτούς· καὶ βασιλεύσουσιν εἰς τοὺς αἰῶνας τῶν αἰώνων.</span>
         </div>
         <div class="verse">
           <span class="verse-number">6</span>
           <span class="verse-text">E disse-me: Estas palavras são fiéis e verdadeiras; e o Senhor, o Deus dos santos profetas, enviou o seu anjo, para mostrar aos seus servos as coisas que em breve hão de acontecer.</span>
+          <span class="verso-grego" lang="grc">Καὶ εἶπέ μοι, Οὗτοι οἱ λόγοι πιστοὶ καὶ ἀληθινοί· καὶ Κύριος ὁ Θεὸς τῶν ἁγίων προφητῶν· ἀπέστειλε τὸν ἄγγελον αὐτοῦ δεῖξαι τοῖς δούλοις αὐτοῦ ἃ δεῖ γενέσθαι ἐν τάχει.</span>
         </div>
         <div class="verse">
           <span class="verse-number">7</span>
           <span class="verse-text">Eis que presto venho: Bem-aventurado aquele que guarda as palavras da profecia deste livro.</span>
+          <span class="verso-grego" lang="grc">ἰδού, ἔρχομαι ταχύ. μακάριος ὁ τηρῶν τοὺς λόγους τῆς προφητείας τοῦ βιβλίου τούτου.</span>
         </div>
         <div class="verse">
           <span class="verse-number">8</span>
           <span class="verse-text">E eu, João, sou aquele que vi e ouvi estas coisas. E, havendo-as ouvido e visto, prostrei-me aos pés do anjo que mas mostrava para o adorar.</span>
+          <span class="verso-grego" lang="grc">Καὶ ἐγὼ Ἰωάννης ὁ βλέπων ταῦτα καὶ ἀκούων. καὶ ὅτε ἤκουσα καὶ ἔβλεψα, ἔπεσα προσκυνῆσαι ἔμπροσθεν τῶν ποδῶν τοῦ ἀγγέλου τοῦ δεικνύοντός μοι ταῦτα.</span>
         </div>
         <div class="verse">
           <span class="verse-number">9</span>
           <span class="verse-text">E disse-me: Olha, não faças tal; porque eu sou conservo teu e de teus irmãos, os profetas, e dos que guardam as palavras deste livro. Adora a Deus.</span>
+          <span class="verso-grego" lang="grc">καὶ λέγει μοι, Ὅρα μή· σύνδουλός σου γάρ εἰμι, καὶ τῶν ἀδελφῶν σου τῶν προφητῶν, καὶ τῶν τηρούντων τοὺς λόγους τοῦ βιβλίου τούτου· τῷ Θεῷ προσκύνησον.</span>
         </div>
         <div class="verse">
           <span class="verse-number">10</span>
           <span class="verse-text">E disse-me: Não seles as palavras da profecia deste livro; porque próximo está o tempo.</span>
+          <span class="verso-grego" lang="grc">Καὶ λέγει μοι, Μὴ σφραγίσῃς τοὺς λόγους τῆς προφητείας τοῦ βιβλίου τούτου· ὅτι ὁ καιρὸς ἐγγύς ἐστιν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">11</span>
           <span class="verse-text">Quem é injusto, seja injusto ainda; e quem é sujo, seja sujo ainda; e quem é justo, seja justificado ainda; e quem é santo, seja santificado ainda.</span>
+          <span class="verso-grego" lang="grc">ὁ ἀδικῶν ἀδικησάτω ἔτι, καὶ ὁ ῥυπῶν ῥυπωσάτω ἔτι· καὶ ὁ δίκαιος δικαιωθήτω ἔτι· καὶ ὁ ἅγιος ἁγιασθήτω ἔτι.</span>
         </div>
         <div class="verse">
           <span class="verse-number">12</span>
           <span class="verse-text">E, eis que cedo venho, e o meu galardão está comigo, para dar a cada um segundo a sua obra.</span>
+          <span class="verso-grego" lang="grc">καὶ ἰδού, ἔρχομαι ταχύ, καὶ ὁ μισθός μου μετ’ ἐμοῦ, ἀποδοῦναι ἑκάστῳ ὡς τὸ ἔργον αὐτοῦ ἔσται.</span>
         </div>
         <div class="verse">
           <span class="verse-number">13</span>
           <span class="verse-text">Eu sou o Alfa e o Ômega, o princípio e o fim, o primeiro e o derradeiro.</span>
+          <span class="verso-grego" lang="grc">ἐγώ εἰμι τὸ Α καὶ τὸ Ω, ἀρχὴ καὶ τέλος, ὁ πρῶτος καὶ ὁ ἔσχατος.</span>
         </div>
         <div class="verse">
           <span class="verse-number">14</span>
           <span class="verse-text">Bem-aventurados aqueles que guardam os seus mandamentos, para que tenham direito à árvore da vida, e possam entrar na cidade pelas portas.</span>
+          <span class="verso-grego" lang="grc">μακάριοι οἱ ποιοῦντες τὰς ἐντολὰς αὐτοῦ, ἵνα ἔσται ἡ ἐξουσία αὐτῶν ἐπὶ τὸ ξύλον τῆς ζωῆς, καὶ τοῖς πυλῶσιν εἰσέλθωσιν εἰς τὴν πόλιν·</span>
         </div>
         <div class="verse">
           <span class="verse-number">15</span>
           <span class="verse-text">Mas, ficarão de fora os cães e os feiticeiros, e os que se prostituem, e os homicidas, e os idólatras, e qualquer que ama e comete a mentira.</span>
+          <span class="verso-grego" lang="grc">ἔξω δὲ οἱ κύνες καὶ οἱ φάρμακοι καὶ οἱ πόρνοι καὶ οἱ φονεῖς καὶ οἱ εἰδωλολάτραι, καὶ πᾶς ὁ φιλῶν καὶ ποιῶν ψεῦδος.</span>
         </div>
         <div class="verse">
           <span class="verse-number">16</span>
           <span class="verse-text">Eu, Jesus, enviei o meu anjo, para vos testificar estas coisas nas igrejas. Eu sou a raiz e a geração de Davi, a resplandecente estrela da manhã.</span>
+          <span class="verso-grego" lang="grc">Ἐγὼ Ἰησοῦς ἔπεμψα τὸν ἄγγελόν μου μαρτυρῆσαι ὑμῖν ταῦτα ἐπὶ ταῖς ἐκκλησίαις. ἐγώ εἰμι ἡ ῥίζα καὶ τὸ γένος τοῦ Δαβίδ, ὁ ἀστὴρ ὁ λαμπρὸς καὶ ὀρθρινός.</span>
         </div>
         <div class="verse">
           <span class="verse-number">17</span>
           <span class="verse-text">E o Espírito e a esposa dizem: Vem. E quem ouve, diga: Vem. E quem tem sede, venha; e quem quiser, tome de graça da água da vida.</span>
+          <span class="verso-grego" lang="grc">καὶ τὸ Πνεῦμα καὶ ἡ νύμφη λέγουσιν, Ἐλθέ. καὶ ὁ ἀκούων εἰπάτω, Ἐλθέ. καὶ ὁ διψῶν ἐλθέτω· καὶ ὁ θέλων λαμβανέτω τὸ ὕδωρ ζωῆς δωρεάν.</span>
         </div>
         <div class="verse">
           <span class="verse-number">18</span>
           <span class="verse-text">Porque eu testifico a todo aquele que ouvir as palavras da profecia deste livro que, se alguém lhes acrescentar alguma coisa, Deus fará vir sobre ele as pragas que estão escritas neste livro;</span>
+          <span class="verso-grego" lang="grc">Συμμαρτυροῦμαι γὰρ παντὶ ἀκούοντι τοὺς λόγους τῆς προφητείας τοῦ βιβλίου τούτου, ἐάν τις ἐπιτιθῇ πρὸς ταῦτα, ἐπιθήσει ὁ Θεὸς ἐπ’ αὐτὸν τὰς πληγὰς τὰς γεγραμμένας ἐν βιβλίῳ τούτῳ·</span>
         </div>
         <div class="verse">
           <span class="verse-number">19</span>
           <span class="verse-text">E, se alguém tirar quaisquer palavras do livro desta profecia, Deus tirará a sua parte do livro da vida, e da cidade santa, e das coisas que estão escritas neste livro.</span>
+          <span class="verso-grego" lang="grc">καὶ ἐάν τις ἀφαιρῇ ἀπὸ τῶν λόγων βίβλου τῆς προφητείας ταύτης, ἀφαιρήσει ὁ Θεὸς τὸ μέρος αὐτοῦ ἀπὸ βίβλου τῆς ζωῆς, καὶ ἐκ τῆς πόλεως τῆς ἁγίας, καὶ τῶν γεγραμμένων ἐν βιβλίῳ τούτῳ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">20</span>
           <span class="verse-text">Aquele que testifica estas coisas diz: Certamente cedo venho. Amém. Ora vem, Senhor Jesus.</span>
+          <span class="verso-grego" lang="grc">λέγει ὁ μαρτυρῶν ταῦτα, ναί, ἔρχομαι ταχύ. ἀμήν. Ναί ἔρχου, Κύριε Ἰησοῦ.</span>
         </div>
         <div class="verse">
           <span class="verse-number">21</span>
           <span class="verse-text">A graça de nosso Senhor Jesus Cristo seja com todos vós. Amém.</span>
+          <span class="verso-grego" lang="grc">Ἡ χάρις τοῦ Κυρίου ἡμῶν Ἰησοῦ Χριστοῦ μετὰ πάντων ὑμῶν. ἀμήν.</span>
         </div>
 
     </div>
+    <p class="grego-credito grego-capitulo">Texto grego: <a href="https://git.door43.org/STR/el-x-koine_trs" rel="noopener">Textus Receptus 1894 Scrivener</a>, Door43 World Missions Community, com Scriptorium e Dr. Maurice A. Robinson, sob a licença <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br" rel="license noopener">CC BY-SA 4.0</a>. Adaptado: só o texto, sem as marcações de morfologia, Strong e lema. Esta camada grega segue a mesma licença.</p>
 
     <div class="chapter-nav">
       <a href="ap-21.html" class="nav-button">← Capítulo Anterior</a>
